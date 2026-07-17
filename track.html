@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Your Order, DecoMuse</title>
+  <meta name="description" content="Track your DecoMuse order using your order number, email or phone. Follow your pieces from our Melbourne warehouse to your door, Australia-wide.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .track-tabs { display: flex; gap: 8px; margin-bottom: 20px; }
+    .track-tabs button { flex: 1; padding: 12px; border: 1.5px solid var(--line); background: #fff; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.85rem; color: var(--ink); cursor: pointer; transition: all var(--tr); }
+    .track-tabs button.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+    /* Timeline */
+    .tl { list-style: none; padding: 0; margin: 26px 0 0; }
+    .tl li { position: relative; padding: 0 0 30px 40px; }
+    .tl li::before { content: ""; position: absolute; left: 11px; top: 22px; bottom: -4px; width: 2px; background: var(--line); }
+    .tl li:last-child::before { display: none; }
+    .tl .dot { position: absolute; left: 0; top: 2px; width: 24px; height: 24px; border-radius: 50%; background: #fff;
+      border: 2px solid var(--line); display: grid; place-items: center; font-size: 0.8rem; color: var(--muted); }
+    .tl li.done .dot { background: var(--forest); border-color: var(--forest); color: #fff; }
+    .tl li.current .dot { background: var(--rose); border-color: var(--rose); color: #fff; box-shadow: 0 0 0 4px rgba(182,114,128,0.18); }
+    .tl h4 { margin: 0 0 3px; font-family: var(--font-body); font-size: 1rem; color: var(--muted); font-weight: 600; }
+    .tl li.done h4, .tl li.current h4 { color: var(--ink); }
+    .tl small { color: var(--muted); font-size: 0.84rem; }
+    .track-summary { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 14px; margin: 4px 0 8px; }
+    .track-stat { background: var(--cream); border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px; }
+    .track-stat .l { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .track-stat .v { font-weight: 600; color: var(--ink); margin-top: 3px; }
+  </style>
+</head>
+<body data-page="track.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Track your order</div>
+      <span class="eyebrow">📦 Order tracking</span>
+      <h1>Track your order</h1>
+      <p>Enter your order number, email or phone used at checkout, and follow your pieces from our Melbourne warehouse to your door.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:720px">
+      <div class="form-card reveal" id="trackFormCard">
+        <div class="track-tabs" id="trackTabs">
+          <button class="active" data-mode="order">Order number</button>
+          <button data-mode="email">Email</button>
+          <button data-mode="phone">Phone</button>
+        </div>
+        <form id="trackForm">
+          <div class="field" id="trackFieldWrap">
+            <label id="trackLabel">Order number</label>
+            <input id="trackInput" placeholder="e.g. DM-100482" required>
+          </div>
+          <div class="field" id="verifyWrap">
+            <label>Verify with email or phone used at checkout</label>
+            <input id="verifyInput" placeholder="Email or phone">
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">Track my order →</button>
+          <p class="form-note">Tip: your order number is in your confirmation email (starts with <strong>DM-</strong>).</p>
+        </form>
+      </div>
+
+      <div id="trackResult" style="margin-top:26px"></div>
+
+      <div class="ai-note" style="margin-top:26px;text-align:center">
+        💡 This is a live demo tracker, enter anything to see how it works. Connect it to Australia Post / Aramex / Shippit (or your Shopify orders) to show real tracking.
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let mode = "order";
+    const LABELS = { order: "Order number", email: "Email address", phone: "Phone number" };
+    const PLACEH = { order: "e.g. DM-100482", email: "you@email.com", phone: "04XX XXX XXX" };
+
+    document.getElementById("trackTabs").addEventListener("click", (e) => {
+      const btn = e.target.closest("button"); if (!btn) return;
+      mode = btn.dataset.mode;
+      [...document.querySelectorAll("#trackTabs button")].forEach(b => b.classList.toggle("active", b === btn));
+      document.getElementById("trackLabel").textContent = LABELS[mode];
+      document.getElementById("trackInput").placeholder = PLACEH[mode];
+      document.getElementById("trackInput").type = mode === "email" ? "email" : "text";
+      // hide the secondary verify field when searching by email/phone (already identifying)
+      document.getElementById("verifyWrap").style.display = mode === "order" ? "block" : "none";
+    });
+
+    // Simple deterministic hash so the same input always shows the same status
+    function hash(str){ let h = 0; for (let i=0;i<str.length;i++){ h = (h*31 + str.charCodeAt(i)) >>> 0; } return h; }
+
+    const AU_STATES = ["SA","VIC","NSW","QLD","WA","TAS","ACT","NT"];
+    const COURIERS = ["Australia Post", "Aramex", "Team Global Express", "DecoMuse Local (Uber)"];
+
+    const STEPS = [
+      { key: "placed",   title: "Order placed",                 note: "We received your order and payment." },
+      { key: "packed",   title: "Packed with care",             note: "Your pieces were hand-packed at our Melbourne warehouse." },
+      { key: "shipped",  title: "Shipped from Melbourne",       note: "Handed to the courier for delivery." },
+      { key: "transit",  title: "In transit",                   note: "On its way across Australia." },
+      { key: "out",      title: "Out for delivery",             note: "With your local driver today." },
+      { key: "delivered",title: "Delivered",                    note: "Enjoy, we'd love to see it styled!" }
+    ];
+
+    document.getElementById("trackForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const val = document.getElementById("trackInput").value.trim();
+      if (!val) return;
+      const h = hash(val.toLowerCase());
+      const stage = h % STEPS.length;                 // 0..5 how far along
+      const orderNo = mode === "order" && /dm-/i.test(val) ? val.toUpperCase() : "DM-" + (100000 + (h % 899999));
+      const state = AU_STATES[h % AU_STATES.length];
+      const courier = COURIERS[h % COURIERS.length];
+      const trackNo = (courier === "Australia Post" ? "AP" : "AX") + (h % 9000000 + 1000000);
+      const daysOut = STEPS.length - 1 - stage;
+      const eta = stage >= STEPS.length - 1 ? "Delivered" : (daysOut <= 1 ? "Today to Tomorrow" : daysOut + " to " + (daysOut + 1) + " business days");
+
+      const timeline = STEPS.map((s, i) => {
+        const cls = i < stage ? "done" : (i === stage ? "current" : "");
+        const mark = i < stage ? "✓" : (i === stage ? "●" : (i + 1));
+        return `<li class="${cls}"><span class="dot">${mark}</span><h4>${s.title}</h4><small>${i <= stage ? s.note : "Pending"}</small></li>`;
+      }).join("");
+
+      document.getElementById("trackResult").innerHTML = `
+        <div class="form-card reveal">
+          <span class="eyebrow">${stage >= STEPS.length - 1 ? "Delivered ✓" : "In progress"}</span>
+          <h2 style="font-size:1.8rem;margin-bottom:4px">Order ${orderNo}</h2>
+          <p style="color:var(--muted);margin-bottom:18px">Shipping to ${state}, Australia · from our Melbourne warehouse</p>
+          <div class="track-summary">
+            <div class="track-stat"><div class="l">Status</div><div class="v">${STEPS[stage].title}</div></div>
+            <div class="track-stat"><div class="l">Est. delivery</div><div class="v">${eta}</div></div>
+            <div class="track-stat"><div class="l">Courier</div><div class="v">${courier}</div></div>
+            <div class="track-stat"><div class="l">Tracking #</div><div class="v">${trackNo}</div></div>
+          </div>
+          <ul class="tl">${timeline}</ul>
+          <div class="btn-row" style="margin-top:8px">
+            <a class="btn btn--outline btn--sm" href="contact.html">Need help with this order?</a>
+            <a class="btn btn--primary btn--sm" href="shop.html">Continue shopping</a>
+          </div>
+        </div>`;
+      document.getElementById("trackResult").scrollIntoView({ behavior: "smooth", block: "start" });
+      initReveal();
+    });
+  </script>
+</body>
+</html>

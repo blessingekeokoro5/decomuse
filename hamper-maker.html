@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Hamper Maker, Build Your Own | DecoMuse</title>
+  <meta name="description" content="Build your own luxury gift hamper with DecoMuse, choose a box, add treats, drinks, pamper & home touches, write a gift note and send it beautifully.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .hm-grid { display: grid; grid-template-columns: 1fr 360px; gap: 34px; align-items: start; }
+    .hm-item { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line);
+      border-radius: var(--radius-sm); padding: 14px; transition: all var(--tr); }
+    .hm-item.in-box { border-color: var(--rose); box-shadow: 0 0 0 2px rgba(182,114,128,0.12); }
+    .hm-item .emo { width: 48px; height: 48px; border-radius: 10px; background: var(--cream-2); display: grid; place-items: center; font-size: 1.5rem; flex: none; }
+    .hm-item .info { flex: 1; min-width: 0; }
+    .hm-item .info h4 { font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; margin: 0; color: var(--ink); }
+    .hm-item .info .p { color: var(--rose-deep); font-weight: 600; font-size: 0.9rem; }
+    .hm-box { position: sticky; top: 150px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
+    .hm-box-head { background: var(--forest); color: #fff; padding: 18px 20px; }
+    .hm-box-head h3 { color: #fff; margin: 0; }
+    .hm-box-head small { color: #d7e0cd; }
+    .hm-box-body { padding: 18px 20px; max-height: 320px; overflow-y: auto; }
+    .hm-line { display: flex; justify-content: space-between; gap: 8px; padding: 8px 0; border-bottom: 1px dashed var(--line); font-size: 0.9rem; }
+    .hm-line:last-child { border-bottom: none; }
+    .hm-line .x { background: none; border: none; color: var(--muted); cursor: pointer; font-size: 0.9rem; }
+    .hm-line .x:hover { color: var(--rose); }
+    .hm-empty { text-align: center; color: var(--muted); padding: 24px 8px; font-size: 0.9rem; }
+    .hm-box-foot { padding: 18px 20px; border-top: 1px solid var(--line); background: var(--cream); }
+    .hm-progress { height: 7px; background: var(--cream-2); border-radius: 999px; overflow: hidden; margin-bottom: 6px; }
+    .hm-progress span { display: block; height: 100%; background: var(--rose); width: 0; transition: width 0.4s ease; }
+    .hm-total { display: flex; justify-content: space-between; font-family: var(--font-head); font-size: 1.5rem; color: var(--ink); font-weight: 600; margin: 10px 0 14px; }
+    @media (max-width: 860px){ .hm-grid { grid-template-columns: 1fr; } .hm-box { position: static; } }
+  </style>
+</head>
+<body data-page="hamper-maker.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="hampers.html">Gifting</a> / Hamper Maker</div>
+      <span class="eyebrow">🎁 Build Your Own</span>
+      <h1>Gift Hamper Maker</h1>
+      <p>Choose a box, then fill it with treats, drinks, pamper &amp; home touches. Watch it come together, add a gift note, and we'll wrap it beautifully.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="hm-grid">
+        <!-- Item picker -->
+        <div>
+          <div class="pills" id="hmPills"></div>
+          <div class="grid grid-2" id="hmItems"></div>
+        </div>
+
+        <!-- Live box -->
+        <aside class="hm-box">
+          <div class="hm-box-head">
+            <h3>Your hamper</h3>
+            <small id="hmCount">0 items</small>
+          </div>
+          <div class="hm-box-body" id="hmBoxBody">
+            <div class="hm-empty">Your hamper is empty, start adding some lovely things ✦</div>
+          </div>
+          <div class="hm-box-foot">
+            <div class="hm-progress"><span id="hmBar"></span></div>
+            <small id="hmMinNote" style="color:var(--muted)">Minimum hamper $60</small>
+            <div class="hm-total"><span>Total</span><span id="hmTotal">$0</span></div>
+            <div class="field" style="margin-bottom:12px">
+              <label>Gift note (optional)</label>
+              <textarea id="hmNote" placeholder="Write a message for the card…" style="min-height:70px"></textarea>
+            </div>
+            <button class="btn btn--primary btn--block" id="hmAdd" disabled onclick="addHamper()">Add hamper to cart</button>
+            <div class="form-success" id="hmSuccess" style="margin-top:10px"></div>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const HM_CATS = ["The Box", "Sweet", "Savoury", "Drinks", "Pamper", "Home Touch", "Finishing"];
+    let hmCat = "The Box";
+    const box = {}; // id -> qty
+
+    function renderPills() {
+      document.getElementById("hmPills").innerHTML = HM_CATS.map(c =>
+        `<button class="pill ${c === hmCat ? 'active' : ''}" onclick="setCat('${c}')">${c}</button>`).join("");
+    }
+    function setCat(c){ hmCat = c; renderPills(); renderItems(); }
+
+    function renderItems() {
+      const list = HAMPER_ITEMS.filter(i => i.cat === hmCat);
+      document.getElementById("hmItems").innerHTML = list.map(i => {
+        const qty = box[i.id] || 0;
+        return `<div class="hm-item ${qty ? 'in-box' : ''}">
+          <div class="emo">${i.emoji}</div>
+          <div class="info"><h4>${i.name}</h4><div class="p">${money(i.price)}</div></div>
+          ${qty
+            ? `<div class="qty"><button onclick="chg('${i.id}',-1)">−</button><span>${qty}</span><button onclick="chg('${i.id}',1)">+</button></div>`
+            : `<button class="btn btn--outline btn--sm" onclick="chg('${i.id}',1)">Add</button>`}
+        </div>`;
+      }).join("");
+    }
+
+    function chg(id, d) {
+      box[id] = Math.max(0, (box[id] || 0) + d);
+      if (box[id] === 0) delete box[id];
+      renderItems(); renderBox();
+    }
+
+    function hmItemsList(){ return Object.keys(box).map(id => ({ item: HAMPER_ITEMS.find(x => x.id === id), qty: box[id] })); }
+    function hmTotal(){ return hmItemsList().reduce((n, l) => n + l.item.price * l.qty, 0); }
+    function hmCount(){ return hmItemsList().reduce((n, l) => n + l.qty, 0); }
+
+    function renderBox() {
+      const lines = hmItemsList();
+      const body = document.getElementById("hmBoxBody");
+      body.innerHTML = lines.length
+        ? lines.map(l => `<div class="hm-line"><span>${l.item.emoji} ${l.item.name}${l.qty > 1 ? ' ×' + l.qty : ''}</span><span>${money(l.item.price * l.qty)} <button class="x" onclick="chg('${l.item.id}',-${l.qty})">✕</button></span></div>`).join("")
+        : `<div class="hm-empty">Your hamper is empty, start adding some lovely things ✦</div>`;
+      const total = hmTotal();
+      document.getElementById("hmTotal").textContent = money(total);
+      document.getElementById("hmCount").textContent = hmCount() + (hmCount() === 1 ? " item" : " items");
+      document.getElementById("hmBar").style.width = Math.min(100, (total / HAMPER_MIN) * 100) + "%";
+      const ok = total >= HAMPER_MIN;
+      document.getElementById("hmAdd").disabled = !ok;
+      document.getElementById("hmMinNote").innerHTML = ok
+        ? "✓ Ready to gift!"
+        : `Add ${money(HAMPER_MIN - total)} more to reach the $${HAMPER_MIN} minimum`;
+      document.getElementById("hmMinNote").style.color = ok ? "var(--forest)" : "var(--muted)";
+    }
+
+    function addHamper() {
+      const lines = hmItemsList();
+      if (!lines.length) return;
+      const note = document.getElementById("hmNote").value.trim();
+      const contents = lines.map(l => l.qty > 1 ? `${l.item.name} ×${l.qty}` : l.item.name).join(", ");
+      const cart = getCart();
+      cart.push({
+        id: "hamper-" + Date.now(),
+        name: "Custom Gift Hamper (" + hmCount() + " items)",
+        price: hmTotal(),
+        cat: "Gift Hamper" + (note ? " · Note added" : ""),
+        ph: "rose",
+        qty: 1,
+        contents
+      });
+      saveCart(cart);
+      showToast("Your custom hamper was added to the cart 🎁");
+      const s = document.getElementById("hmSuccess");
+      s.classList.add("show");
+      s.innerHTML = `Added! <a href="cart.html" style="text-decoration:underline">View cart →</a>`;
+      // reset builder
+      for (const k in box) delete box[k];
+      document.getElementById("hmNote").value = "";
+      renderItems(); renderBox();
+    }
+
+    renderPills(); renderItems(); renderBox();
+  </script>
+</body>
+</html>

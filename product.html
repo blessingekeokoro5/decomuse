@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product, DecoMuse</title>
+  <meta name="description" content="Shop this DecoMuse piece, curated home décor & lifestyle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
+    .pdp-gallery .main { aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
+    .pdp-thumbs { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 10px; }
+    .pdp-thumbs .ph { aspect-ratio: 1/1; border-radius: 8px; cursor: pointer; }
+    .pdp .cat { color: var(--rose-deep); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; }
+    .pdp h1 { font-size: clamp(2rem,4vw,2.8rem); margin: 8px 0 12px; }
+    .pdp .price { font-size: 1.9rem; }
+    .pdp-detail-list { list-style: none; padding: 0; margin: 22px 0; }
+    .pdp-detail-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 0.92rem; }
+    .pdp-detail-list li span:first-child { color: var(--muted); }
+    .pdp-buy { display: flex; gap: 12px; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; }
+    .pdp-trust { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; font-size: 0.85rem; color: var(--body); }
+    .pdp-trust span { display: flex; align-items: center; gap: 7px; }
+    @media (max-width: 860px){ .pdp { grid-template-columns: 1fr; gap: 28px; } }
+    .pdp-brand { color: var(--rose-deep); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; }
+    .pdp .main { position: relative; }
+    .pdp-save { position: absolute; top: 14px; left: 14px; z-index: 3; background: var(--rose); color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 0.85rem; line-height: 1; padding: 12px 12px; border-radius: 14px; box-shadow: var(--shadow-sm); }
+    /* You may also like carousel */
+    .rel-carousel { position: relative; }
+    .rel-track { display: flex; gap: 20px; overflow-x: auto; scroll-behavior: smooth; padding: 4px 2px 10px; scrollbar-width: none; }
+    .rel-track::-webkit-scrollbar { display: none; }
+    .rel-track .card { flex: 0 0 240px; }
+    .rel-arrow { position: absolute; top: 40%; transform: translateY(-50%); width: 42px; height: 42px; border-radius: 50%; background: #fff; border: 1px solid var(--line); box-shadow: var(--shadow-sm); cursor: pointer; font-size: 1.4rem; color: var(--ink); z-index: 2; display: grid; place-items: center; }
+    .rel-arrow:hover { background: var(--rose); color: #fff; border-color: var(--rose); }
+    .rel-arrow.prev { left: -14px; } .rel-arrow.next { right: -14px; }
+    @media (max-width: 720px){ .rel-arrow { display: none; } .rel-track .card { flex: 0 0 200px; } }
+  </style>
+</head>
+<body data-page="product.html">
+  <div id="site-header"></div>
+
+  <section class="section" style="padding-top:40px">
+    <div class="container">
+      <div class="breadcrumb" id="pdpCrumb"><a href="index.html">Home</a> / <a href="shop.html">Shop</a></div>
+      <div id="pdpWrap"></div>
+    </div>
+  </section>
+
+  <section class="section bg-cream2" id="relatedSection" style="display:none">
+    <div class="container">
+      <h2 style="margin-bottom:22px">You may also like</h2>
+      <div class="rel-carousel">
+        <button class="rel-arrow prev" aria-label="Previous" onclick="scrollRel(-1)">‹</button>
+        <div class="rel-track" id="relatedGrid"></div>
+        <button class="rel-arrow next" aria-label="Next" onclick="scrollRel(1)">›</button>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let pdpQty = 1;
+    function blurb(p) {
+      const materials = { "Living/Indoor":"crafted for everyday comfort and effortless style",
+        "Bedroom":"designed to bring calm and warmth to your space",
+        "Dining & Kitchen":"made to gather around and enjoy for years",
+        "Decor":"a considered finishing touch that ties a room together" };
+      return `The ${p.name} is one of our most-loved DecoMuse pieces, ${materials[p.cat] || "beautifully made and built to last"}. Thoughtfully selected for quality and timeless appeal, it's the kind of piece that makes a house feel like home.`;
+    }
+    function render() {
+      const id = new URLSearchParams(location.search).get("id");
+      const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
+      const wrap = document.getElementById("pdpWrap");
+      if (!p) {
+        wrap.innerHTML = `<div class="empty-state"><div class="em">🔍</div><h2>Product not found</h2><p>This piece may have sold out or moved.</p><a class="btn btn--primary" href="shop.html" style="margin-top:16px">Back to shop</a></div>`;
+        return;
+      }
+      document.title = p.name + ", DecoMuse";
+      document.getElementById("pdpCrumb").innerHTML = `<a href="index.html">Home</a> / <a href="shop.html">Shop</a> / ${p.name}`;
+      const was = p.was ? `<small>${money(p.was)}</small>` : "";
+      const saved = isWishlisted(p.id);
+      wrap.innerHTML = `
+        <div class="pdp">
+          <div class="pdp-gallery">
+            <div class="main">${p.was ? `<span class="pdp-save">SAVE ${Math.round((1 - p.price / p.was) * 100)}%</span>` : ""}<div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></div>
+            <div class="pdp-thumbs">
+              <div class="ph ${p.ph}" data-label="">${prodImgTag(p)}</div>
+              <div class="ph" data-label=""></div>
+              <div class="ph ${p.ph}" data-label="">${prodImgTag(p)}</div>
+              <div class="ph" data-label=""></div>
+            </div>
+          </div>
+          <div class="pdp-info">
+            ${p.brand ? `<div class="pdp-brand">${p.brand}</div>` : `<span class="cat">${p.cat}</span>`}
+            <h1>${p.name}</h1>
+            <div class="stars" style="margin-bottom:10px">★★★★★ <span style="color:var(--muted);font-size:0.85rem">(24 reviews)</span></div>
+            <div class="price">${money(p.price)}${was}</div>
+            <p style="margin-top:16px">${p.desc || blurb(p)}</p>
+            <ul class="pdp-detail-list">
+              ${p.brand ? `<li><span>Brand</span><span>${p.brand}</span></li>` : ""}
+              <li><span>Category</span><span>${p.cat}</span></li>
+              <li><span>SKU</span><span>${p.sku || "DM-" + p.id.toUpperCase()}</span></li>
+              ${p.custom ? `<li><span>Made to order</span><span style="color:var(--rose-deep)">Customisable · allow extra time</span></li>` : ""}
+              <li><span>Availability</span><span style="color:var(--forest)">In stock</span></li>
+            </ul>
+            <div class="pdp-buy">
+              <div class="qty">
+                <button onclick="setPdpQty(-1)">−</button><span id="pdpQty">1</span><button onclick="setPdpQty(1)">+</button>
+              </div>
+              <button class="btn btn--primary" onclick="addToCart('${p.id}', pdpQty)">Add to cart</button>
+              <button class="btn btn--outline" onclick="toggleWishlist('${p.id}', this)">${saved ? "♥ Saved" : "♡ Save"}</button>
+            </div>
+            <div class="pdp-trust">
+              <span>🚚 Free shipping over $300</span><span>↩️ 30-day returns</span><span>🔒 Secure checkout</span>
+            </div>
+          </div>
+        </div>`;
+
+      let related = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id);
+      related = related.concat(PRODUCTS.filter(x => x.cat !== p.cat && x.id !== p.id));
+      related = related.slice(0, 10);
+      document.getElementById("relatedSection").style.display = "block";
+      renderProducts("relatedGrid", related);
+    }
+    function scrollRel(dir){ const t = document.getElementById("relatedGrid"); if (t) t.scrollBy({ left: dir * 280, behavior: "smooth" }); }
+    function setPdpQty(d){ pdpQty = Math.max(1, pdpQty + d); document.getElementById("pdpQty").textContent = pdpQty; }
+    render();
+  </script>
+</body>
+</html>

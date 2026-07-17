@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop Home Décor, DecoMuse</title>
+  <meta name="description" content="Shop DecoMuse curated home décor, furniture, lighting, rugs, candles and finishing touches for every room. Australian home décor & lifestyle studio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="shop.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Shop</div>
+      <span class="eyebrow">The Décor Shop</span>
+      <h1>Curated pieces for a beautiful home</h1>
+      <p>Fragrance, wellness, home and lifestyle pieces, curated for quality and everyday joy, and easy to shop by category.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pills" id="shopPills"></div>
+      <div class="shop-bar">
+        <span id="shopCount" class="shop-count"></span>
+        <label class="shop-sort">Sort
+          <select id="shopSort" onchange="filterShop(currentCat)">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </label>
+      </div>
+      <div class="grid grid-4" id="shopGrid"></div>
+      <div id="shopEmpty" class="empty-state" style="display:none">
+        <div class="em">🔍</div>
+        <h3>Nothing in this edit just yet</h3>
+        <p>Try another category or browse the full shop.</p>
+        <button class="btn btn--outline btn--pill" onclick="filterShop('All')">Reset filters</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Create-your-own / hamper CTA -->
+  <section class="section bg-cream2">
+    <div class="container">
+      <div class="split reveal">
+        <div class="media"><div class="ph rose" data-label="Muse Stylist AI"></div></div>
+        <div>
+          <span class="eyebrow">Not sure where to start?</span>
+          <h2>Let the Muse Stylist AI style your room</h2>
+          <p class="lead">Upload a photo of your space and get instant, shoppable décor recommendations chosen to match your room, then add your favourites straight to the cart.</p>
+          <div class="btn-row" style="margin-top:24px">
+            <a class="btn btn--primary" href="stylist.html">✦ Try Muse Stylist AI</a>
+            <a class="btn btn--outline" href="shop.html">Browse the shop</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const CATS = ["All", "Home & Décor", "Health & Wellness", "Fragrance", "Lifestyle"];
+    let currentCat = "All";
+
+    function renderPills() {
+      document.getElementById("shopPills").innerHTML = CATS.map(c =>
+        `<button class="pill ${c === currentCat ? 'active' : ''}" onclick="filterShop('${c.replace(/'/g,"\\'")}')">${c}</button>`).join("");
+    }
+    function filterShop(cat) {
+      currentCat = cat;
+      renderPills();
+      let list = cat === "All" ? PRODUCTS.slice() : PRODUCTS.filter(p => p.cat === cat);
+      const sort = (document.getElementById("shopSort") || {}).value || "featured";
+      if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
+      else if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
+      else if (sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
+      renderProducts("shopGrid", list);
+      const c = document.getElementById("shopCount");
+      if (c) c.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"}`;
+      document.getElementById("shopEmpty").style.display = list.length ? "none" : "block";
+      document.getElementById("shopGrid").style.display = list.length ? "grid" : "none";
+    }
+
+    // Honour ?cat= from mega-menu; map loosely to our demo categories
+    const params = new URLSearchParams(location.search);
+    const wanted = params.get("cat");
+    if (wanted && CATS.includes(wanted)) currentCat = wanted;
+    filterShop(currentCat);
+    initReveal();
+  </script>
+</body>
+</html>

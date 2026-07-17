@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecoMuse Policies, FAQ, Delivery, Returns, Privacy & Terms</title>
+  <meta name="description" content="DecoMuse policies, FAQ, Delivery & Order Tracking, Returns & Refund, Privacy and Terms & Conditions, aligned with Australian Consumer Law and the Privacy Act 1988.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .pol-grid { display: grid; grid-template-columns: 240px 1fr; gap: 44px; align-items: start; }
+    .pol-nav { position: sticky; top: 150px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 12px; box-shadow: var(--shadow-sm); }
+    .pol-nav a { display: block; padding: 11px 14px; border-radius: 8px; font-size: 0.9rem; color: var(--ink); }
+    .pol-nav a:hover { background: var(--cream-2); }
+    .pol-nav a.active { background: var(--rose); color: #fff; }
+    .pol-content h2 { margin-bottom: 6px; }
+    .pol-updated { color: var(--muted); font-size: 0.85rem; margin-bottom: 8px; }
+    .pol-intro { font-size: 1.08rem; color: var(--body); border-left: 3px solid var(--rose-soft); padding-left: 18px; margin: 18px 0 30px; }
+    .pol-content h3 { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; color: var(--ink); margin: 28px 0 8px; }
+    .pol-content ul { padding-left: 20px; }
+    .pol-content li { margin-bottom: 6px; }
+    .pol-disclaimer { background: var(--cream-2); border-radius: var(--radius-sm); padding: 16px 18px; font-size: 0.85rem; color: var(--muted); margin-top: 34px; }
+    /* FAQ accordion */
+    .faq-item { border: 1px solid var(--line); border-radius: var(--radius-sm); background: #fff; margin-bottom: 12px; overflow: hidden; }
+    .faq-q { width: 100%; text-align: left; background: none; border: none; padding: 18px 20px; font-family: var(--font-body); font-weight: 600; font-size: 1rem; color: var(--ink); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 14px; }
+    .faq-q .pm { color: var(--rose); font-size: 1.3rem; flex: none; transition: transform var(--tr); }
+    .faq-item.open .pm { transform: rotate(45deg); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height var(--tr); }
+    .faq-a-inner { padding: 0 20px 18px; color: var(--body); font-size: 0.94rem; }
+    .faq-a a { color: var(--rose-deep); text-decoration: underline; }
+    @media (max-width: 860px){ .pol-grid { grid-template-columns: 1fr; } .pol-nav { position: static; } }
+  </style>
+</head>
+<body data-page="policy.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / DecoMuse Policy</div>
+      <span class="eyebrow">DecoMuse Policy</span>
+      <h1 id="polTitle">Our policies</h1>
+      <p>Everything you need to know about shopping with DecoMuse, written to Australian standards.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="pol-grid">
+        <nav class="pol-nav" id="polNav"></nav>
+        <div class="pol-content" id="polContent"></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/policies.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function getDoc() {
+      const d = new URLSearchParams(location.search).get("doc");
+      return POLICY_ORDER.some(p => p.slug === d) ? d : "faq";
+    }
+    function renderNav(active) {
+      document.getElementById("polNav").innerHTML = POLICY_ORDER.map(p =>
+        `<a href="policy.html?doc=${p.slug}" class="${p.slug === active ? 'active' : ''}">${p.label}</a>`).join("");
+    }
+    function renderFAQ() {
+      return `<h2>Frequently asked questions</h2>
+        <p class="pol-updated">Last updated: ${POLICY_UPDATED}</p>
+        <p class="pol-intro">Quick answers about shipping, returns, delivery, hampers and services. Can't find it? <a href="contact.html">Contact us</a> or ask the MuseStylist chat.</p>
+        <div>${FAQ_ITEMS.map((f, i) => `
+          <div class="faq-item" data-i="${i}">
+            <button class="faq-q" onclick="toggleFaq(${i})">${f.q}<span class="pm">+</span></button>
+            <div class="faq-a"><div class="faq-a-inner">${f.a}</div></div>
+          </div>`).join("")}</div>`;
+    }
+    function renderPolicy(slug) {
+      const p = POLICIES[slug];
+      return `<h2>${p.title}</h2>
+        <p class="pol-updated">Last updated: ${POLICY_UPDATED}</p>
+        <p class="pol-intro">${p.intro}</p>
+        ${p.body}
+        <div class="pol-disclaimer">These policies are provided as a general guide aligned with Australian law. They are not legal advice, we recommend having them reviewed by a qualified Australian legal professional for your business.</div>`;
+    }
+    function toggleFaq(i) {
+      const item = document.querySelector(`.faq-item[data-i="${i}"]`);
+      const a = item.querySelector(".faq-a");
+      const open = item.classList.toggle("open");
+      a.style.maxHeight = open ? a.querySelector(".faq-a-inner").scrollHeight + 40 + "px" : "0";
+    }
+    function render() {
+      const doc = getDoc();
+      renderNav(doc);
+      const el = document.getElementById("polContent");
+      el.innerHTML = doc === "faq" ? renderFAQ() : renderPolicy(doc);
+      const label = POLICY_ORDER.find(p => p.slug === doc).label;
+      document.getElementById("polTitle").textContent = label;
+      document.title = "DecoMuse, " + label;
+    }
+    render();
+  </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout, DecoMuse</title>
+  <meta name="description" content="Secure checkout at DecoMuse, pay safely with Stripe.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="checkout.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner" style="padding-bottom:40px">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="cart.html">Cart</a> / Checkout</div>
+      <span class="eyebrow">🔒 Secure checkout</span>
+      <h1>Checkout</h1>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+    <div class="container">
+      <div id="checkoutWrap"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <!-- Load Stripe.js only if a publishable key is configured (kept optional/self-contained) -->
+  <script>
+    if (window.DECOMUSE && DECOMUSE.stripe && DECOMUSE.stripe.publishableKey) {
+      var s = document.createElement("script"); s.src = "https://js.stripe.com/v3/"; document.head.appendChild(s);
+    }
+  </script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

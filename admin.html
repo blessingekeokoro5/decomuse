@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Product — DecoMuse Admin</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .admin-wrap { max-width: 1100px; margin: 0 auto; padding: 30px 24px 80px; }
+    .admin-head { text-align: center; margin-bottom: 30px; }
+    .admin-grid { display: grid; grid-template-columns: 1fr 380px; gap: 30px; align-items: start; }
+    .prev-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .prev-media { aspect-ratio: 1/1; position: relative; }
+    .prev-tag { position: absolute; top: 12px; left: 12px; background: var(--forest); color: #fff; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; z-index: 2; }
+    .prev-tag.sale { background: var(--rose); }
+    .prev-body { padding: 22px; }
+    .prev-cat { color: var(--rose-deep); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+    .prev-name { font-family: var(--font-head); font-size: 1.1rem; color: var(--ink); margin: 5px 0 6px; }
+    .prev-price { font-family: var(--font-head); font-size: 1.3rem; color: var(--ink); font-weight: 600; }
+    .prev-price small { font-size: 0.8rem; color: var(--muted); text-decoration: line-through; margin-left: 7px; font-family: var(--font-body); font-weight: 400; }
+    .prev-free { color: var(--forest); font-size: 0.72rem; font-weight: 500; margin-top: 6px; }
+    .sticky-side { position: sticky; top: 20px; }
+    .admin-list { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .admin-list th, .admin-list td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 0.88rem; }
+    .admin-list th { color: var(--muted); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
+    .admin-code { width: 100%; min-height: 130px; font-family: ui-monospace, "Consolas", monospace; font-size: 0.8rem; padding: 14px; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: #2b2320; color: #e5d7cd; resize: vertical; }
+    .x-btn { background: none; border: none; color: var(--muted); cursor: pointer; text-decoration: underline; font-size: 0.82rem; }
+    .x-btn:hover { color: var(--rose); }
+    .admin-note { background: var(--cream-2); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 0.88rem; color: var(--body); margin-bottom: 20px; }
+    @media (max-width: 860px){ .admin-grid { grid-template-columns: 1fr; } .sticky-side { position: static; } }
+  </style>
+</head>
+<body style="background:var(--cream)">
+  <div class="admin-wrap">
+    <div class="admin-head">
+      <span class="eyebrow">DecoMuse Admin</span>
+      <h1 style="font-size:2.2rem">Add a product</h1>
+      <p style="color:var(--muted)">Fill in the details, preview it, then save to your device or copy the code into <strong>js/data.js</strong>.</p>
+    </div>
+
+    <div class="admin-note">
+      🔒 This page is for you only (not linked in the menu). Products you <strong>“Save to this device”</strong> show live in your browser instantly. To make them permanent for everyone, use <strong>Copy code</strong> and paste it into <code>js/data.js</code> — or just send me the code and I'll add it.
+    </div>
+
+    <div class="admin-grid">
+      <!-- Form -->
+      <div class="form-card">
+        <form id="prodForm">
+          <div class="field"><label>Product name *</label><input id="pName" required placeholder="e.g. Rose & Vanilla Perfume"></div>
+          <div class="field-row">
+            <div class="field"><label>Category *</label>
+              <select id="pCat">
+                <option>Fragrance</option><option>Health & Wellness</option><option>Home & Décor</option><option>Lifestyle</option>
+              </select>
+            </div>
+            <div class="field"><label>Price ($) *</label><input id="pPrice" type="number" min="1" step="0.01" required placeholder="95"></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Was price ($) — if on sale</label><input id="pWas" type="number" min="1" step="0.01" placeholder="optional"></div>
+            <div class="field"><label>Badge</label>
+              <select id="pTag"><option value="">None</option><option>New</option><option>Sale</option><option>Bestseller</option><option>Loved</option></select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Placeholder colour</label>
+              <select id="pPh"><option value="rose">Rose</option><option value="forest">Forest</option><option value="espresso">Espresso</option><option value="">Blush (default)</option></select>
+            </div>
+            <div class="field"><label>Product ID (auto)</label><input id="pId" placeholder="auto-generated"></div>
+          </div>
+          <label class="lead" style="display:flex;align-items:center;gap:10px;font-size:0.92rem;margin-bottom:18px">
+            <input type="checkbox" id="pFree" style="width:auto;accent-color:var(--rose)"> Show a “Free shipping” badge
+          </label>
+          <div class="btn-row">
+            <button type="submit" class="btn btn--primary">＋ Add to list</button>
+            <button type="button" class="btn btn--outline" onclick="resetForm()">Clear form</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Live preview -->
+      <div class="sticky-side">
+        <span class="eyebrow">Live preview</span>
+        <div class="prev-card" id="prevCard" style="margin-top:8px"></div>
+      </div>
+    </div>
+
+    <!-- Session list -->
+    <div style="margin-top:40px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+        <h2 style="font-size:1.5rem;margin:0">Products to add (<span id="count">0</span>)</h2>
+        <div class="btn-row">
+          <button class="btn btn--forest btn--sm" onclick="saveToDevice()">💾 Save to this device (show live)</button>
+          <button class="btn btn--outline btn--sm" onclick="clearDrafts()">Clear device drafts</button>
+        </div>
+      </div>
+      <table class="admin-list" id="listTable"><thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Badge</th><th></th></tr></thead><tbody></tbody></table>
+      <p id="emptyMsg" style="color:var(--muted);padding:14px 0">No products added yet — fill the form above and click “Add to list”.</p>
+    </div>
+
+    <!-- Generated code -->
+    <div style="margin-top:34px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
+        <h2 style="font-size:1.5rem;margin:0">Code for js/data.js</h2>
+        <button class="btn btn--primary btn--sm" onclick="copyCode()">📋 Copy code</button>
+      </div>
+      <p style="color:var(--muted);font-size:0.88rem;margin:8px 0">Paste these line(s) inside the <code>const PRODUCTS = [ … ]</code> list in <code>js/data.js</code> (before the closing <code>];</code>). Each line ends with a comma.</p>
+      <textarea class="admin-code" id="codeOut" readonly placeholder="Your product code appears here…"></textarea>
+    </div>
+
+    <div style="text-align:center;margin-top:30px"><a class="btn btn--outline" href="index.html">← Back to site</a></div>
+  </div>
+
+  <script src="js/data.js"></script>
+  <script>
+    const money = (n) => "$" + Number(n).toLocaleString("en-AU");
+    let draft = [];
+
+    // Suggest a unique ID from category prefix + next number
+    function suggestId(cat) {
+      const prefix = { "Fragrance": "f", "Health & Wellness": "h", "Home & Décor": "p", "Lifestyle": "l" }[cat] || "x";
+      const all = PRODUCTS.concat(draft);
+      let n = 1;
+      while (all.some(p => p.id === prefix + String(n).padStart(2, "0"))) n++;
+      return prefix + String(n).padStart(2, "0");
+    }
+
+    function currentProduct() {
+      const name = document.getElementById("pName").value.trim();
+      const cat = document.getElementById("pCat").value;
+      const price = parseFloat(document.getElementById("pPrice").value);
+      const was = parseFloat(document.getElementById("pWas").value);
+      const tag = document.getElementById("pTag").value;
+      const ph = document.getElementById("pPh").value;
+      const free = document.getElementById("pFree").checked;
+      let id = document.getElementById("pId").value.trim() || suggestId(cat);
+      const p = { id, name, cat, price };
+      if (was) p.was = was;
+      if (tag) p.tag = tag;
+      p.ph = ph;
+      if (free) p.freeship = true;
+      return p;
+    }
+
+    function renderPreview() {
+      const p = currentProduct();
+      const tag = p.tag ? `<span class="prev-tag ${/sale/i.test(p.tag) ? "sale" : ""}">${p.tag}</span>` : "";
+      const was = p.was ? `<small>${money(p.was)}</small>` : "";
+      document.getElementById("prevCard").innerHTML = `
+        <div class="prev-media">${tag}<div class="ph ${p.ph}" data-label="${p.name || "Product name"}"></div></div>
+        <div class="prev-body">
+          <div class="prev-cat">${p.cat}</div>
+          <div class="prev-name">${p.name || "Product name"}</div>
+          <div class="prev-price">${p.price ? money(p.price) : "$0"}${was}</div>
+          ${p.freeship ? `<div class="prev-free">🚚 Free shipping</div>` : ""}
+        </div>`;
+      // keep the ID field showing the suggestion
+      const idField = document.getElementById("pId");
+      if (!idField.value.trim()) idField.placeholder = suggestId(p.cat);
+    }
+
+    function renderList() {
+      const tb = document.querySelector("#listTable tbody");
+      document.getElementById("count").textContent = draft.length;
+      document.getElementById("emptyMsg").style.display = draft.length ? "none" : "block";
+      document.getElementById("listTable").style.display = draft.length ? "table" : "none";
+      tb.innerHTML = draft.map((p, i) => `<tr>
+        <td>${p.id}</td><td>${p.name}</td><td>${p.cat}</td><td>${money(p.price)}</td><td>${p.tag || "–"}</td>
+        <td><button class="x-btn" onclick="removeDraft(${i})">remove</button></td></tr>`).join("");
+      renderCode();
+    }
+
+    function codeLine(p) {
+      let s = `  { id: "${p.id}", name: ${JSON.stringify(p.name)}, cat: ${JSON.stringify(p.cat)}, price: ${p.price}`;
+      if (p.was) s += `, was: ${p.was}`;
+      if (p.tag) s += `, tag: ${JSON.stringify(p.tag)}`;
+      s += `, ph: ${JSON.stringify(p.ph || "")}`;
+      if (p.freeship) s += `, freeship: true`;
+      s += ` },`;
+      return s;
+    }
+    function renderCode() {
+      document.getElementById("codeOut").value = draft.map(codeLine).join("\n");
+    }
+
+    function removeDraft(i) { draft.splice(i, 1); renderList(); }
+
+    document.getElementById("prodForm").addEventListener("submit", (e) => {
+      e.preventDefault();
+      const p = currentProduct();
+      if (!p.name || !p.price) return;
+      if (draft.some(x => x.id === p.id) || PRODUCTS.some(x => x.id === p.id)) { alert("That ID is already used — clear the ID field to auto-generate a new one."); return; }
+      draft.push(p);
+      renderList();
+      resetForm();
+    });
+
+    function resetForm() {
+      document.getElementById("prodForm").reset();
+      document.getElementById("pId").value = "";
+      renderPreview();
+    }
+
+    function saveToDevice() {
+      if (!draft.length) { alert("Add at least one product to the list first."); return; }
+      let existing = [];
+      try { existing = JSON.parse(localStorage.getItem("dm_admin_products") || "[]"); } catch (e) {}
+      const merged = existing.concat(draft.filter(p => !existing.some(x => x.id === p.id)));
+      localStorage.setItem("dm_admin_products", JSON.stringify(merged));
+      alert("Saved! These " + draft.length + " product(s) now show live on this device. Open the Shop to see them.\n\nTo make them permanent for all visitors, use ‘Copy code’ and paste into js/data.js.");
+    }
+    function clearDrafts() {
+      if (confirm("Remove all products you saved to this device? (Your permanent ones in data.js are untouched.)")) {
+        localStorage.removeItem("dm_admin_products");
+        alert("Device drafts cleared. Refresh the shop to update.");
+      }
+    }
+    function copyCode() {
+      const el = document.getElementById("codeOut");
+      if (!el.value) { alert("Add a product to the list first."); return; }
+      el.select();
+      if (navigator.clipboard) navigator.clipboard.writeText(el.value).then(() => alert("Code copied! Paste it into the PRODUCTS list in js/data.js."));
+      else { document.execCommand("copy"); alert("Code copied!"); }
+    }
+
+    ["pName","pCat","pPrice","pWas","pTag","pPh","pFree","pId"].forEach(id =>
+      document.getElementById(id).addEventListener("input", renderPreview));
+    renderPreview(); renderList();
+  </script>
+</body>
+</html>

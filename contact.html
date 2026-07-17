@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Booking, DecoMuse</title>
+  <meta name="description" content="Contact DecoMuse, help with products, orders, gifting or general enquiries. Australian home, lifestyle & fragrance store. Email or message us on WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="contact.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Contact &amp; Booking</div>
+      <span class="eyebrow">Let's talk</span>
+      <h1>Contact &amp; booking</h1>
+      <p>Ask about a product, an order or a gift, or request a callback. The DecoMuse team is here to help.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="split" style="align-items:flex-start;gap:48px">
+        <!-- Booking form -->
+        <div>
+          <div class="form-card reveal">
+            <span class="eyebrow">Booking &amp; enquiries</span>
+            <h2 style="font-size:1.9rem">Send us a message</h2>
+            <form data-demo-form data-success-msg="Thank you! Your enquiry has been received, the DecoMuse team will be in touch within 2 business hours.">
+              <div class="field-row">
+                <div class="field"><label>Name</label><input required></div>
+                <div class="field"><label>Email</label><input type="email" required></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label>Phone</label><input type="tel"></div>
+                <div class="field"><label>Topic</label>
+                  <select id="serviceSelect">
+                    <option>General enquiry</option>
+                    <option>Shop / order help</option>
+                    <option>Fragrance</option>
+                    <option>Health &amp; Wellness</option>
+                    <option>Home &amp; Décor</option>
+                    <option>Gifting &amp; Hampers</option>
+                    <option>Muse Stylist AI</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field"><label>Message</label><textarea required placeholder="Tell us what you're after…"></textarea></div>
+              <button type="submit" class="btn btn--primary">Send my enquiry</button>
+              <div class="form-success"></div>
+            </form>
+          </div>
+
+          <!-- Quick links -->
+          <div class="grid grid-2" style="margin-top:22px">
+            <a class="card reveal" href="shop.html" style="text-decoration:none">
+              <div class="card-body"><div class="service-icon">🛍️</div><h3 style="font-size:1.15rem">Shop the collection</h3><p>Fragrance, wellness, home &amp; lifestyle →</p></div>
+            </a>
+            <a class="card reveal" href="track.html" style="text-decoration:none">
+              <div class="card-body"><div class="service-icon">📦</div><h3 style="font-size:1.15rem">Track my order</h3><p>Order number, email or phone →</p></div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact details -->
+        <div>
+          <div class="contact-forest reveal" style="padding:40px">
+            <span class="eyebrow">Reach us directly</span>
+            <h2 style="font-size:1.9rem">DecoMuse HQ</h2>
+            <div class="footer-contact" style="color:#e4dbcf;font-size:1rem;line-height:2.1">
+              <div>🇦🇺 <strong style="color:#fff">Australia</strong></div>
+              <div>✉️ <a style="color:#fff" href="mailto:Decormuseofficial@outlook.com">Decormuseofficial@outlook.com</a></div>
+              <div>💬 <a style="color:#fff" href="https://wa.me/61451609398" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+              <div style="margin-top:8px;font-size:0.82rem;letter-spacing:0.08em">ABN 41 991 812 955</div>
+            </div>
+            <div style="display:flex;gap:12px;margin-top:22px">
+              <a class="btn btn--light btn--sm" href="mailto:Decormuseofficial@outlook.com">✉️ Email us</a>
+              <a class="btn btn--ghost btn--sm" href="https://wa.me/61451609398" target="_blank" rel="noopener">💬 WhatsApp</a>
+            </div>
+            <hr style="border:none;border-top:1px solid rgba(255,255,255,0.15);margin:26px 0">
+            <span class="eyebrow">Opening hours</span>
+            <div style="color:#e4dbcf">
+              <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Mon to Fri</span><span>9:00 to 5:30</span></div>
+              <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Saturday</span><span>10:00 to 4:00</span></div>
+              <div style="display:flex;justify-content:space-between;padding:4px 0"><span>Sunday</span><span>Closed</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Pre-select the service from ?subject= (e.g. Wholesale)
+    (function () {
+      const subj = new URLSearchParams(location.search).get("subject");
+      if (!subj) return;
+      const sel = document.getElementById("serviceSelect");
+      [...sel.options].forEach(o => { if (o.textContent.toLowerCase().includes(subj.toLowerCase())) sel.value = o.value; });
+    })();
+  </script>
+</body>
+</html>

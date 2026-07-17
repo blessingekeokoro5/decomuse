@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gift Cards, DecoMuse</title>
+  <meta name="description" content="DecoMuse digital gift cards, the perfect present for décor lovers. Choose an amount, add a message and send instantly by email.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .gc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
+    .gc-visual { background: linear-gradient(140deg, var(--rose), var(--rose-deep)); color: #fff; border-radius: var(--radius-lg);
+      padding: 40px; aspect-ratio: 1.6/1; display: flex; flex-direction: column; justify-content: space-between; box-shadow: var(--shadow); }
+    .gc-visual .brand-lg { font-family: var(--font-head); font-size: 2rem; }
+    .gc-visual .amt { font-family: var(--font-head); font-size: 3.4rem; font-weight: 700; }
+    .gc-visual small { letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.7rem; opacity: 0.85; }
+    .gc-amounts { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 8px 0 18px; }
+    .gc-amt { padding: 16px; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: #fff; cursor: pointer;
+      font-family: var(--font-head); font-size: 1.3rem; font-weight: 600; color: var(--ink); transition: all var(--tr); }
+    .gc-amt.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+    @media (max-width: 860px){ .gc-grid { grid-template-columns: 1fr; gap: 28px; } }
+  </style>
+</head>
+<body data-page="gift-cards.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Gift Cards</div>
+      <span class="eyebrow">🎁 The perfect present</span>
+      <h1>DecoMuse gift cards</h1>
+      <p>Give the gift of beautiful spaces. Digital gift cards are delivered by email and can be used on décor and services, never expires.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="gc-grid">
+        <div class="gc-visual reveal">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <span class="brand-lg">DecoMuse</span><span>🎁</span>
+          </div>
+          <div>
+            <small>Gift card</small>
+            <div class="amt" id="gcPreview">$100</div>
+          </div>
+          <small>Redeemable on décor &amp; services · never expires</small>
+        </div>
+
+        <div class="form-card reveal">
+          <div class="field"><label>Choose an amount</label>
+            <div class="gc-amounts" id="gcAmounts"></div>
+            <input type="number" id="gcCustom" min="10" placeholder="Or enter a custom amount ($)" style="width:100%;padding:13px 15px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Recipient name</label><input id="gcTo"></div>
+            <div class="field"><label>Recipient email</label><input id="gcEmail" type="email"></div>
+          </div>
+          <div class="field"><label>Personal message (optional)</label><textarea id="gcMsg" placeholder="Happy birthday! Enjoy something lovely for your home…" style="min-height:90px"></textarea></div>
+          <button class="btn btn--primary btn--block" onclick="addGiftCard()">Add gift card to cart</button>
+          <p class="form-note" style="text-align:center">Delivered by email after checkout · redeemable online &amp; in-studio</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const GC_AMOUNTS = [25, 50, 100, 200, 500];
+    let gcAmount = 100;
+    function renderAmounts() {
+      document.getElementById("gcAmounts").innerHTML = GC_AMOUNTS.map(a =>
+        `<button type="button" class="gc-amt ${a === gcAmount ? "active" : ""}" onclick="setGc(${a})">$${a}</button>`).join("");
+      document.getElementById("gcPreview").textContent = "$" + gcAmount;
+    }
+    function setGc(a){ gcAmount = a; document.getElementById("gcCustom").value = ""; renderAmounts(); }
+    document.getElementById("gcCustom").addEventListener("input", (e) => {
+      const v = parseInt(e.target.value, 10);
+      if (v >= 10) { gcAmount = v; document.querySelectorAll(".gc-amt").forEach(b => b.classList.remove("active")); document.getElementById("gcPreview").textContent = "$" + v; }
+    });
+    function addGiftCard() {
+      const to = document.getElementById("gcTo").value.trim();
+      const email = document.getElementById("gcEmail").value.trim();
+      const msg = document.getElementById("gcMsg").value.trim();
+      const cart = getCart();
+      cart.push({
+        id: "giftcard-" + Date.now(),
+        name: `DecoMuse Gift Card ($${gcAmount})`,
+        price: gcAmount, cat: "Gift Card", ph: "rose", qty: 1,
+        contents: [to ? "To: " + to : "", email ? "Email: " + email : "", msg ? "“" + msg + "”" : ""].filter(Boolean).join(" · ")
+      });
+      saveCart(cart);
+      showToast("Gift card added to your cart 🎁");
+    }
+    renderAmounts();
+  </script>
+</body>
+</html>

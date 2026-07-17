@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Account, DecoMuse</title>
+  <meta name="description" content="Log in or sign up to your DecoMuse account, manage your membership, view your 20% welcome coupon and saved favourites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .acc-tabs { display: flex; gap: 8px; margin-bottom: 22px; }
+    .acc-tabs button { flex: 1; padding: 12px; border: 1.5px solid var(--line); background: #fff; border-radius: var(--radius-sm);
+      font-family: var(--font-body); font-size: 0.9rem; color: var(--ink); cursor: pointer; transition: all var(--tr); }
+    .acc-tabs button.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+    /* Membership card */
+    .mcard { background: linear-gradient(140deg, var(--forest), var(--forest-2)); color: #fff; border-radius: var(--radius-lg);
+      padding: 34px; position: relative; overflow: hidden; box-shadow: var(--shadow); }
+    .mcard::after { content: "✦"; position: absolute; right: 24px; top: 18px; font-size: 5rem; opacity: 0.14; }
+    .mcard .tier { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-soft); }
+    .mcard h2 { color: #fff; margin: 6px 0 4px; }
+    .mcard .since { color: #d7e0cd; font-size: 0.88rem; }
+    .coupon { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.12);
+      border: 1px dashed rgba(255,255,255,0.5); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 24px; }
+    .coupon .code { font-family: var(--font-head); font-size: 1.5rem; letter-spacing: 0.08em; color: #fff; }
+    .coupon small { display: block; color: #d7e0cd; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .acc-links { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 12px; margin-top: 24px; }
+    .acc-link { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px; text-align: center; color: var(--ink); }
+    .acc-link:hover { background: var(--cream-2); }
+    .acc-link .ic { font-size: 1.5rem; }
+  </style>
+</head>
+<body data-page="account.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / My Account</div>
+      <span class="eyebrow">Your account</span>
+      <h1 id="accTitle">My account</h1>
+      <p id="accSub">Log in or create a free account to manage your membership, coupon and saved favourites.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:760px">
+      <div id="accWrap"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let accMode = "signup";
+
+    function render() {
+      const acc = getAccount();
+      const wrap = document.getElementById("accWrap");
+      if (acc && acc.email) { renderDashboard(acc); return; }
+
+      document.getElementById("accTitle").textContent = "My account";
+      wrap.innerHTML = `
+        <div class="form-card reveal">
+          <div class="acc-tabs">
+            <button class="${accMode==='signup'?'active':''}" onclick="setMode('signup')">Sign up</button>
+            <button class="${accMode==='login'?'active':''}" onclick="setMode('login')">Log in</button>
+          </div>
+          <div id="accForm"></div>
+        </div>`;
+      renderForm();
+      initReveal();
+    }
+
+    function setMode(m){ accMode = m; render(); }
+
+    function renderForm() {
+      const el = document.getElementById("accForm");
+      if (accMode === "signup") {
+        el.innerHTML = `
+          <div style="background:var(--blush);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px;font-size:0.9rem;color:var(--rose-deep)">
+            🎉 Join free and get <strong>20% off your first order</strong> plus member perks.
+          </div>
+          <form onsubmit="return doSignup(event)">
+            <div class="field"><label>Full name</label><input id="suName" required></div>
+            <div class="field"><label>Email</label><input id="suEmail" type="email" required></div>
+            <div class="field"><label>Create a password</label><input id="suPass" type="password" required></div>
+            <button type="submit" class="btn btn--primary btn--block">Create my account &amp; get 20% off</button>
+          </form>`;
+      } else {
+        el.innerHTML = `
+          <form onsubmit="return doLogin(event)">
+            <div class="field"><label>Email</label><input id="liEmail" type="email" required></div>
+            <div class="field"><label>Password</label><input id="liPass" type="password" required></div>
+            <button type="submit" class="btn btn--primary btn--block">Log in</button>
+            <p class="form-note" style="text-align:center;margin-top:12px">New here? <a href="#" onclick="setMode('signup');return false;">Create an account</a> for 20% off.</p>
+          </form>`;
+      }
+    }
+
+    function doSignup(e) {
+      e.preventDefault();
+      const name = document.getElementById("suName").value.trim();
+      const email = document.getElementById("suEmail").value.trim();
+      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20" });
+      try { localStorage.setItem("dm_member","1"); } catch(err){}
+      showToast("Welcome to DecoMuse! Your 20% code is ready 🎉");
+      render();
+      return false;
+    }
+    function doLogin(e) {
+      e.preventDefault();
+      const email = document.getElementById("liEmail").value.trim();
+      const existing = getAccount();
+      // Demo: log into existing account, or create a lightweight member on the fly
+      const acc = (existing && existing.email) ? existing
+        : { name: "", email, member: true, memberSince: todayAU(), coupon: "WELCOME20" };
+      acc.email = email;
+      saveAccount(acc);
+      showToast("Welcome back! 👋");
+      render();
+      return false;
+    }
+
+    function renderDashboard(acc) {
+      document.getElementById("accTitle").textContent = acc.name ? `Hello, ${acc.name.split(" ")[0]} 👋` : "My account";
+      document.getElementById("accSub").textContent = "Manage your membership, coupon and saved favourites.";
+      const wishN = wishlistCount();
+      document.getElementById("accWrap").innerHTML = `
+        <div class="mcard reveal">
+          <div class="tier">DecoMuse Member</div>
+          <h2>${acc.name || acc.email}</h2>
+          <div class="since">Member since ${acc.memberSince || "today"} · ${acc.email}</div>
+          <div class="coupon">
+            <div>
+              <small>Your welcome reward, 20% off</small>
+              <span class="code" id="couponCode">${acc.coupon || "WELCOME20"}</span>
+            </div>
+            <button class="btn btn--light btn--sm" onclick="copyCoupon()">Copy code</button>
+          </div>
+        </div>
+
+        <div class="acc-links">
+          <a class="acc-link" href="wishlist.html"><div class="ic">♡</div><strong>Wishlist</strong><div style="color:var(--muted);font-size:0.85rem">${wishN} saved</div></a>
+          <a class="acc-link" href="track.html"><div class="ic">📦</div><strong>Track order</strong><div style="color:var(--muted);font-size:0.85rem">View status</div></a>
+          <a class="acc-link" href="cart.html"><div class="ic">🛒</div><strong>My cart</strong><div style="color:var(--muted);font-size:0.85rem">${cartCount()} items</div></a>
+          <a class="acc-link" href="shop.html"><div class="ic">🛍️</div><strong>Shop</strong><div style="color:var(--muted);font-size:0.85rem">Keep browsing</div></a>
+        </div>
+
+        <div style="text-align:center;margin-top:28px">
+          <button class="btn btn--outline btn--sm" onclick="doLogout()">Log out</button>
+        </div>`;
+      initReveal();
+    }
+
+    function copyCoupon() {
+      const code = document.getElementById("couponCode").textContent;
+      if (navigator.clipboard) navigator.clipboard.writeText(code).then(() => showToast("Coupon " + code + " copied! ✦"));
+      else showToast("Your code is " + code);
+    }
+    function doLogout() { logoutAccount(); showToast("You've been logged out"); render(); }
+
+    render();
+  </script>
+</body>
+</html>

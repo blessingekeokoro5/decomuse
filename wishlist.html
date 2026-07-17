@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Wishlist, DecoMuse</title>
+  <meta name="description" content="Your saved DecoMuse favourites.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="wishlist.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Wishlist</div>
+      <span class="eyebrow">♡ Saved by you</span>
+      <h1>My wishlist</h1>
+      <p>Your favourite pieces, saved for later. Add them to your cart whenever you're ready.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div id="wishWrap"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function renderWishlistPage() {
+      const wrap = document.getElementById("wishWrap");
+      const ids = getWishlist();
+      const items = ids.map(findProduct).filter(Boolean);
+      if (!items.length) {
+        wrap.innerHTML = `
+          <div class="empty-state">
+            <div class="em">♡</div>
+            <h2>No favourites saved yet</h2>
+            <p>Tap the ♡ on any product to save it here for later.</p>
+            <div class="btn-row" style="justify-content:center;margin-top:20px">
+              <a class="btn btn--primary" href="shop.html">Explore the shop</a>
+              <a class="btn btn--outline" href="stylist.html">✦ Try Muse Stylist AI</a>
+            </div>
+          </div>`;
+        return;
+      }
+      wrap.innerHTML = `
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:28px">
+          <p style="margin:0;color:var(--muted)">${items.length} saved ${items.length === 1 ? "piece" : "pieces"}</p>
+          <button class="btn btn--outline btn--sm" onclick="addAllWishToCart()">Add all to cart</button>
+        </div>
+        <div class="grid grid-4" id="wishGrid"></div>`;
+      renderProducts("wishGrid", items);
+      initReveal();
+    }
+    function addAllWishToCart() {
+      getWishlist().forEach(id => {
+        const p = findProduct(id); if (!p) return;
+        const cart = getCart(); const line = cart.find(i => i.id === id);
+        if (line) line.qty += 1; else cart.push({ id: p.id, name: p.name, price: p.price, cat: p.cat, ph: p.ph, qty: 1 });
+        saveCart(cart);
+      });
+      showToast("Your saved pieces were added to the cart 🛒");
+    }
+    renderWishlistPage();
+  </script>
+</body>
+</html>

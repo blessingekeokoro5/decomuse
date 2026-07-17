@@ -1,0 +1,16 @@
+{
+  "name": "decomuse",
+  "version": "1.0.0",
+  "description": "DecoMuse — home décor, lifestyle & fragrance retail (static site + Stripe serverless checkout)",
+  "private": true,
+  "scripts": {
+    "dev": "node _preview-server.js",
+    "start": "node _preview-server.js"
+  },
+  "dependencies": {
+    "stripe": "^17.5.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
