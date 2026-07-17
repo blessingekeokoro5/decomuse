@@ -314,6 +314,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .hero-logo .logo-card { display: block; background: var(--cream); border-radius: 22px; padding: 24px 22px;
   box-shadow: 0 14px 34px rgba(71,86,59,0.28); animation: floatGift 6s ease-in-out infinite; }
 .hero-logo img { display: block; width: 100%; max-width: 260px; mix-blend-mode: multiply; }
+.hero-logo .brand-emblem { display: block; width: 100%; max-width: 280px; height: auto; }
 @media (prefers-reduced-motion: reduce) { .hero-logo .logo-card { animation: none; } }
 .hero-gift { position: absolute; inset: 0; display: grid; place-items: center; z-index: 2; }
 .hero-gift svg { width: 44%; color: #fff; filter: drop-shadow(0 10px 22px rgba(120,60,70,0.35)); animation: floatGift 6s ease-in-out infinite; }
