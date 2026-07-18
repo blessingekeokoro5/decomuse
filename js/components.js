@@ -39,6 +39,15 @@ const NAV_LINKS = [
   { label: "Contact", href: "contact.html" }
 ];
 
+// Category photos used in the mega-menu dropdown promo panels
+const CAT_IMG = {
+  home:      "assets/cat-home-decor.jpg",
+  health:    "assets/cat-wellness.png",
+  hampers:   "assets/cat-gifting.png",
+  fragrance: "assets/cat-fragrance.png",
+  lifestyle: "assets/cat-lifestyle.png"
+};
+
 function buildHeader() {
   const page = document.body.dataset.page || "";
 
@@ -60,7 +69,7 @@ function buildHeader() {
             <div class="mega-cols">${cols}</div>
           </div>
           <div class="mega-promo">
-            <div class="ph" data-label="decormuse"></div>
+            <div class="ph" data-label="decormuse">${CAT_IMG[cat.key] ? `<img class="ph-img" src="${CAT_IMG[cat.key]}" alt="${cat.label}" loading="lazy" onerror="this.remove()">` : ""}</div>
             <div class="mega-promo-actions">
               <a href="#">Rewards</a><a href="#">Referrals</a>
             </div>
