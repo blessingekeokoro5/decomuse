@@ -575,7 +575,8 @@ function initCountry() {
   sel.addEventListener("change", updateCountryNote);
 
   const save = (code) => { try { localStorage.setItem("dm_region", code); } catch (e) {} updateRegionFlag(); closeCountry();
-    showToast(`Shopping ${REGIONS[code].flag} ${REGIONS[code].name} · prices in AUD`); };
+    // Confirmation toast on desktop only; hidden on mobile phones (prices are always AUD).
+    if (window.innerWidth > 768) showToast(`Shopping ${REGIONS[code].flag} ${REGIONS[code].name} · prices in AUD`); };
   document.getElementById("countryConfirm").addEventListener("click", () => save(sel.value));
   document.getElementById("countryStay").addEventListener("click", () => save(HOME_REGION));
   document.getElementById("countryClose").addEventListener("click", closeCountry);
