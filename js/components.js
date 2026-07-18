@@ -72,12 +72,19 @@ function buildHeader() {
   const catTabs = MEGA_MENU.map(cat =>
     `<li data-cat="${cat.key}"><a>${cat.label} ${IC.caret}</a></li>`).join("");
 
-  const navMain = NAV_LINKS.map(l => {
-    const active = (l.href === page) ? "active" : "";
-    return `<li><a class="${active}" href="${l.href}">${l.label}</a></li>`;
-  }).join("")
-    + MEGA_MENU.map(c => `<li><a href="shop.html?cat=${encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
-    + `<li><a href="support.html">Assistance &amp; Contact</a></li>`;
+  // Mobile drawer mirrors the desktop category nav order:
+  // categories first, then Styling & Design, About, Contact.
+  const mobilePlain = [
+    { label: "Styling &amp; Design", href: "staging.html" },
+    { label: "About", href: "about.html" },
+    { label: "Contact", href: "contact.html" }
+  ];
+  const navMain = MEGA_MENU.map(c =>
+      `<li><a href="shop.html?cat=${encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
+    + mobilePlain.map(l => {
+      const active = (l.href === page) ? "active" : "";
+      return `<li><a class="${active}" href="${l.href}">${l.label}</a></li>`;
+    }).join("");
 
   return `
   <div class="announce"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span></div>
