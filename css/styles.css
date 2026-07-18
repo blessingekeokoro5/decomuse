@@ -286,7 +286,10 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* ---- Hero ---- */
 .hero { background: var(--cream); position: relative; overflow: hidden; }
-.hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; justify-items: center; text-align: center; padding: 92px 0 96px; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 0;
+  background: linear-gradient(rgba(246,238,232,0.58), rgba(246,238,232,0.72)), url('../assets/hero.jpg') center/cover no-repeat; }
+.hero .container { position: relative; z-index: 1; }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; justify-items: center; text-align: center; min-height: 74vh; padding: 92px 0 96px; }
 .hero-eyebrow { color: var(--rose-deep); letter-spacing: 0.3em; font-size: 0.78rem; text-transform: uppercase; margin-bottom: 22px; display: block; }
 .hero h1 { margin-bottom: 22px; font-size: clamp(3rem, 6.5vw, 5rem); }
 .hero h1 em { display: block; }
