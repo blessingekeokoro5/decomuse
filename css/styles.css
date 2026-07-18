@@ -259,7 +259,8 @@ em { font-style: italic; color: var(--rose-deep); }
 .mega-col li a:hover { color: var(--rose-deep); }
 .mega-col .sale a { color: var(--rose-deep); font-weight: 500; }
 .mega-promo { border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
-.mega-promo .ph { flex: 1; min-height: 210px; }
+.mega-promo .ph { flex: 1; min-height: 200px; max-height: 300px; }
+.mega-promo .ph-img { object-position: center; }
 .mega-promo-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 8px; }
 .mega-promo-actions a { text-align: center; padding: 12px; background: #fff; border: 1px solid var(--line);
   border-radius: 8px; font-size: 0.82rem; font-weight: 500; color: var(--ink); }
