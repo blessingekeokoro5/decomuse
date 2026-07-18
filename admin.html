@@ -56,7 +56,7 @@
           <div class="field-row">
             <div class="field"><label>Category *</label>
               <select id="pCat">
-                <option>Fragrance</option><option>Health & Wellness</option><option>Home & Décor</option><option>Lifestyle</option>
+                <option>Fragrance</option><option>Health & Wellness</option><option>Home Décor</option><option>Lifestyle</option>
               </select>
             </div>
             <div class="field"><label>Price ($) *</label><input id="pPrice" type="number" min="1" step="0.01" required placeholder="95"></div>
@@ -123,7 +123,7 @@
 
     // Suggest a unique ID from category prefix + next number
     function suggestId(cat) {
-      const prefix = { "Fragrance": "f", "Health & Wellness": "h", "Home & Décor": "p", "Lifestyle": "l" }[cat] || "x";
+      const prefix = { "Fragrance": "f", "Health & Wellness": "h", "Home Décor": "p", "Lifestyle": "l" }[cat] || "x";
       const all = PRODUCTS.concat(draft);
       let n = 1;
       while (all.some(p => p.id === prefix + String(n).padStart(2, "0"))) n++;

@@ -527,7 +527,7 @@ function buildCountryModal() {
     <div class="country-card" role="dialog" aria-label="Confirm your country">
       <button class="country-close" id="countryClose" aria-label="Close">✕</button>
       <h3>Confirm your country</h3>
-      <p>You're shopping the <strong>DecoMuse Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship worldwide, confirm your region for delivery &amp; pricing info.</p>
+      <p>You're shopping the <strong>DecoMuse Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to Australia &amp; New Zealand, confirm your region for delivery &amp; pricing info.</p>
       <div class="country-detected" id="countryDetected"></div>
       <label class="country-select-label">Shopping from another country?
         <select id="countrySelect">${options}</select>
@@ -823,10 +823,10 @@ function chatReply(text) {
     html = `We'd love to style your space! ✦ Book a <strong>home styling, staging or interior design</strong> consultation (in-home or virtual, worldwide) on our ${link("staging.html#book", "Styling & Design")} page, or try the free ${link("stylist.html", "Muse Stylist AI")}.`;
 
   else if (has(/\b(style|styling|room|décor|decor|design|interior|furniture|\bhome\b|makeover|colour|color|theme|vibe|aesthetic|lamp|rug|mirror|sofa|cushion|vase)\b/))
-    html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Muse Stylist AI")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home & Décor"), "Home & Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
+    html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Muse Stylist AI")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "Home Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
 
   else if (has(/\b(ship|shipping|deliver|delivery|post|postage|freight|worldwide|international|country|countries|how long|when.*(arrive|get|receive)|dispatch)\b/) && !has(/\buber\b/))
-    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship worldwide too, Australia, NZ, USA, Canada, Netherlands, Morocco, China, Germany, Switzerland & UAE. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
+    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $300</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>Australia &amp; New Zealand</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
 
   else if (has(/\b(lifestyle|candle|throw|cushion|linen|homeware|kitchen|dining|stationery|everyday|essential)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Lifestyle")} edit is full of everyday beautiful things, candles, textiles, kitchen & dining and little essentials ✦.`;

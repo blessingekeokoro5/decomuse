@@ -22,12 +22,14 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const SITE_URL = process.env.SITE_URL || "https://decomuse.com.au";
 
-// Countries we ship to (matches the site's stated shipping regions)
-const SHIP_COUNTRIES = ["AU", "NZ", "US", "CA", "GB", "NL", "DE", "CH", "AE", "MA", "CN"];
+// Countries we ship to
+const SHIP_COUNTRIES = ["AU", "NZ"];
 
-// Shipping rules (AUD). Free over the threshold, else a flat rate.
-const FREE_SHIPPING_OVER = 300;
-const FLAT_SHIPPING = 19;
+// Shipping rates (AUD) by destination. Free over the threshold, else a flat rate.
+const SHIP_RATES = {
+  "Australia":   { flat: 19, freeOver: 300 },
+  "New Zealand": { flat: 39, freeOver: 500 }
+};
 
 function jsonResponse(statusCode, obj) {
   return {
@@ -77,8 +79,9 @@ exports.handler = async (event) => {
       };
     });
 
-    // Server-side shipping (don't trust the client's shipping amount)
-    const shipAmount = subtotal >= FREE_SHIPPING_OVER ? 0 : FLAT_SHIPPING;
+    // Server-side shipping by destination country (don't trust the client's amount)
+    const rate = SHIP_RATES[customer.country] || SHIP_RATES["Australia"];
+    const shipAmount = subtotal >= rate.freeOver ? 0 : rate.flat;
     const shipping_options = [
       {
         shipping_rate_data: {

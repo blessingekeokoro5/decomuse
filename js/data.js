@@ -29,7 +29,7 @@ const DECOMUSE = {
 /* ---- Mega-menu categories (retail) ---- */
 const MEGA_MENU = [
   {
-    key: "home", label: "Home & Décor",
+    key: "home", label: "Home Décor",
     columns: [
       { title: "Shop", links: ["Shop All Home", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Living", links: ["Sofas & Seating", "Coffee & Side Tables", "Rugs", "Lighting", "Mirrors"] },
@@ -92,14 +92,14 @@ const PRODUCTS = [
   { id: "h05", name: "Shea Hand & Body Cream", cat: "Health & Wellness", price: 22, ph: "rose" },
   { id: "h06", name: "Sleep & Calm Pillow Mist", cat: "Health & Wellness", price: 27, tag: "New", ph: "", room: ["bedroom"] },
 
-  // Home & Décor
-  { id: "p01", name: "Arched Rattan Floor Mirror", cat: "Home & Décor", price: 289, was: 349, tag: "Bestseller", ph: "rose", room: ["bedroom","living"] },
-  { id: "p02", name: "Bouclé Accent Armchair", cat: "Home & Décor", price: 549, tag: "New", ph: "", room: ["living","bedroom"] },
-  { id: "p03", name: "Travertine Coffee Table", cat: "Home & Décor", price: 699, ph: "espresso", room: ["living"], freeship: true },
-  { id: "p05", name: "Handwoven Jute Rug 2×3m", cat: "Home & Décor", price: 329, was: 399, tag: "Sale", ph: "", room: ["living"], freeship: true },
-  { id: "p06", name: "Ceramic Vase Set of 3", cat: "Home & Décor", price: 89, ph: "rose", room: ["living","dining"] },
-  { id: "p09", name: "Rattan Pendant Light", cat: "Home & Décor", price: 179, ph: "", room: ["living","dining"] },
-  { id: "p08", name: "Oak Sideboard Buffet", cat: "Home & Décor", price: 899, tag: "New", ph: "espresso", room: ["dining","living"], freeship: true },
+  // Home Décor
+  { id: "p01", name: "Arched Rattan Floor Mirror", cat: "Home Décor", price: 289, was: 349, tag: "Bestseller", ph: "rose", room: ["bedroom","living"] },
+  { id: "p02", name: "Bouclé Accent Armchair", cat: "Home Décor", price: 549, tag: "New", ph: "", room: ["living","bedroom"] },
+  { id: "p03", name: "Travertine Coffee Table", cat: "Home Décor", price: 699, ph: "espresso", room: ["living"], freeship: true },
+  { id: "p05", name: "Handwoven Jute Rug 2×3m", cat: "Home Décor", price: 329, was: 399, tag: "Sale", ph: "", room: ["living"], freeship: true },
+  { id: "p06", name: "Ceramic Vase Set of 3", cat: "Home Décor", price: 89, ph: "rose", room: ["living","dining"] },
+  { id: "p09", name: "Rattan Pendant Light", cat: "Home Décor", price: 179, ph: "", room: ["living","dining"] },
+  { id: "p08", name: "Oak Sideboard Buffet", cat: "Home Décor", price: 899, tag: "New", ph: "espresso", room: ["dining","living"], freeship: true },
 
   // Lifestyle
   { id: "l01", name: "Wattle Soy Candle Trio", cat: "Lifestyle", price: 59, tag: "Loved", ph: "rose", room: ["living","bedroom","dining"] },
@@ -166,8 +166,8 @@ const HAMPER_MIN = 60;
 
 /* ---- Rotating announcement bar ---- */
 const ANNOUNCEMENTS = [
-  "✦ Free shipping on orders over $500, Australia-wide",
-  "🌏 We ship worldwide, Australia, NZ, USA, Canada, Netherlands, Morocco, China, Germany, Switzerland &amp; UAE",
+  "✦ Free shipping on orders over $300, Australia-wide",
+  "🌏 We ship to Australia &amp; New Zealand",
   "🌸 New fragrances &amp; home arrivals added weekly",
   "💝 Members save 20% on their first order, join free",
   "⭐ Loved by 500+ Australian homes · 4.7★ average review",

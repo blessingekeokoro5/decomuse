@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(curl -sL -o /dev/null -w \"HTTP %{http_code}  \\(%{size_download} bytes\\)\\\\n\" \"https://www.decomuse.com.au/assets/hero.jpg\")",
+      "Bash(git -c user.name=DecoMuse -c user.email=Decormuseofficial@outlook.com commit -q -m 'Use interior photo in styling page '\\\\''Styled interior'\\\\'' panel *)",
+      "Bash(git -c user.name=DecoMuse -c user.email=Decormuseofficial@outlook.com commit -q -m 'Reorder hero: CTAs first, descriptive copy below *)"
+    ]
+  }
+}

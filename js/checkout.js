@@ -4,14 +4,37 @@
    pays via Stripe Checkout when configured, else demo mode.
    ============================================================ */
 
+// Delivery is calculated from the destination country.
+const SHIP_RATES = {
+  "Australia":   { flat: 19, freeOver: 300 },
+  "New Zealand": { flat: 39, freeOver: 500 }
+};
+function shipCountry() {
+  const el = document.getElementById("coCountry");
+  return (el && SHIP_RATES[el.value]) ? el.value : "Australia";
+}
+
 function checkoutTotals() {
   const sub = cartTotal();
   const disc = orderDiscount(sub);
   const discount = disc.amount;
-  const shipping = (sub - discount) >= 300 ? 0 : (sub > 0 ? 19 : 0);
-  const total = sub - discount + shipping;
+  const afterDisc = sub - discount;
+  const rate = SHIP_RATES[shipCountry()];
+  const shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
+  const total = afterDisc + shipping;
   const gst = Math.round((total / 11)); // GST component of a GST-inclusive total
-  return { sub, discount, discLabel: disc.label, shipping, total, gst, coupon: window._coupon };
+  return { sub, discount, discLabel: disc.label, shipping, total, gst, coupon: window._coupon, country: shipCountry() };
+}
+
+function updateTotalsUI() {
+  const t = checkoutTotals();
+  const shipTxt = t.shipping === 0 ? "Free" : money(t.shipping);
+  const line = document.getElementById("coShipLine");
+  if (line) line.innerHTML = `<strong>Standard</strong> · ${shipTxt} · 3 to 8 business days`;
+  const s = document.getElementById("sumShip"); if (s) s.textContent = shipTxt;
+  const tot = document.getElementById("sumTotal"); if (tot) tot.textContent = money(t.total);
+  const g = document.getElementById("sumGst"); if (g) g.textContent = money(t.gst);
+  const btn = document.getElementById("payBtn"); if (btn) btn.textContent = `Pay ${money(t.total)} securely →`;
 }
 
 function renderCheckout() {
@@ -55,12 +78,12 @@ function renderCheckout() {
           </div>
           <div class="field-row">
             <div class="field"><label>Country</label>
-              <select id="coCountry"><option>Australia</option><option>New Zealand</option><option>United States</option><option>Canada</option><option>United Kingdom</option><option>Other</option></select></div>
+              <select id="coCountry"><option>Australia</option><option>New Zealand</option></select></div>
             <div class="field"><label>Phone</label><input id="coPhone" type="tel"></div>
           </div>
 
           <div class="co-section">Delivery</div>
-          <label class="co-radio"><input type="radio" name="ship" checked> <span><strong>Standard</strong>, ${t.shipping === 0 ? "Free" : money(19)} · 3 to 8 business days</span></label>
+          <label class="co-radio"><input type="radio" name="ship" checked> <span id="coShipLine"><strong>Standard</strong> · ${t.shipping === 0 ? "Free" : money(t.shipping)} · 3 to 8 business days</span></label>
 
           <div class="co-section">Payment</div>
           <div class="co-pay">
@@ -78,14 +101,16 @@ function renderCheckout() {
         <div class="co-lines">${lines}</div>
         <div class="summary-row"><span>Subtotal</span><span>${money(t.sub)}</span></div>
         ${t.discount ? `<div class="summary-row" style="color:var(--forest)"><span>${t.discLabel}</span><span>−${money(t.discount)}</span></div>` : ""}
-        <div class="summary-row"><span>Shipping</span><span>${t.shipping === 0 ? "Free" : money(t.shipping)}</span></div>
-        <div class="summary-row total"><span>Total</span><span>${money(t.total)}</span></div>
-        <div style="font-size:0.8rem;color:var(--muted);margin-top:4px">Includes GST ${money(t.gst)}</div>
+        <div class="summary-row"><span>Shipping</span><span id="sumShip">${t.shipping === 0 ? "Free" : money(t.shipping)}</span></div>
+        <div class="summary-row total"><span>Total</span><span id="sumTotal">${money(t.total)}</span></div>
+        <div style="font-size:0.8rem;color:var(--muted);margin-top:4px">Includes GST <span id="sumGst">${money(t.gst)}</span></div>
         <a href="cart.html" class="link-arrow" style="margin-top:16px;display:inline-flex">← Back to cart</a>
       </aside>
     </div>`;
 
   document.getElementById("checkoutForm").addEventListener("submit", startPayment);
+  const cc = document.getElementById("coCountry");
+  if (cc) cc.addEventListener("change", updateTotalsUI);
 }
 
 async function startPayment(e) {
