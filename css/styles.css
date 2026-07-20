@@ -1125,3 +1125,18 @@ em { font-style: italic; color: var(--rose-deep); }
 .pdp-trade { display: flex; align-items: center; gap: 10px; margin-top: 16px; padding: 12px 14px; border: 1px dashed #cbb6ab; border-radius: 10px; background: var(--cream); color: var(--body); font-size: 0.9rem; }
 .pdp-trade strong { color: var(--ink); }
 .pdp-trade:hover { border-color: var(--rose); color: var(--ink); }
+
+/* Chat: MuseStylist / Text-me-back tabs */
+.chat-tabs { display: flex; background: #fff; border-bottom: 1px solid var(--line); }
+.chat-tab { flex: 1; padding: 11px 8px; background: none; border: none; cursor: pointer; font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; transition: color var(--tr); }
+.chat-tab.active { color: var(--rose-deep); border-bottom-color: var(--rose); }
+.chat-view { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.chat-view[hidden] { display: none; }
+.chat-textback { padding: 16px 16px 18px; overflow-y: auto; background: var(--cream); }
+.ctb-intro { font-size: 0.9rem; color: var(--body); margin: 0 0 14px; }
+.chat-textback .field { margin-bottom: 12px; }
+.chat-textback label { display: block; font-size: 0.8rem; color: var(--muted); margin-bottom: 5px; }
+.chat-textback input, .chat-textback textarea { width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px; font-family: var(--font-body); font-size: 0.9rem; color: var(--ink); background: #fff; }
+.chat-textback input:focus, .chat-textback textarea:focus { outline: none; border-color: var(--rose); }
+.ctb-consent { font-size: 0.68rem; color: var(--muted); margin-top: 12px; line-height: 1.55; }
+.ctb-consent a { color: var(--rose-deep); text-decoration: underline; }

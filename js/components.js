@@ -299,12 +299,29 @@ function buildFloating() {
         </div>
         <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
       </div>
-      <div class="chat-body" id="chatBody"></div>
-      <div class="chat-quick" id="chatQuick"></div>
-      <form class="chat-input" id="chatForm">
-        <input type="text" id="chatText" placeholder="Ask me anything…" autocomplete="off">
-        <button type="submit" aria-label="Send">${IC.arrow}</button>
-      </form>
+      <div class="chat-tabs" id="chatTabs">
+        <button type="button" class="chat-tab active" data-tab="chat">✦ MuseStylist</button>
+        <button type="button" class="chat-tab" data-tab="text">💬 Text me back</button>
+      </div>
+      <div class="chat-view" id="chatViewChat">
+        <div class="chat-body" id="chatBody"></div>
+        <div class="chat-quick" id="chatQuick"></div>
+        <form class="chat-input" id="chatForm">
+          <input type="text" id="chatText" placeholder="Ask me anything…" autocomplete="off">
+          <button type="submit" aria-label="Send">${IC.arrow}</button>
+        </form>
+      </div>
+      <div class="chat-view chat-textback" id="chatViewText" hidden>
+        <p class="ctb-intro">💬 Enter your details and our team will <strong>text you back</strong> shortly, usually within business hours.</p>
+        <form id="ctbForm">
+          <div class="field"><label>Name</label><input id="ctbName" required></div>
+          <div class="field"><label>Mobile phone</label><input id="ctbPhone" type="tel" placeholder="04XX XXX XXX" required></div>
+          <div class="field"><label>Message</label><textarea id="ctbMsg" placeholder="How can we help?" style="min-height:70px"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--block" id="ctbSend">Send</button>
+          <div class="form-success" id="ctbSuccess"></div>
+          <p class="ctb-consent">By submitting, you authorise DecoMuse to text or call the number above about your enquiry. Message &amp; data rates may apply; message frequency varies. Consent is not a condition of purchase. See our <a href="policy.html?doc=privacy">privacy policy</a>.</p>
+        </form>
+      </div>
     </div>`;
 }
 
@@ -1004,6 +1021,35 @@ function initChat() {
   quick.querySelectorAll("button").forEach(b => b.addEventListener("click", () => chatSend(b.dataset.q)));
 
   form.addEventListener("submit", (e) => { e.preventDefault(); chatSend(input.value); input.value = ""; });
+
+  // Tabs: MuseStylist chat  <>  Text me back
+  const tabs = panel.querySelectorAll(".chat-tab");
+  const viewChat = document.getElementById("chatViewChat");
+  const viewText = document.getElementById("chatViewText");
+  tabs.forEach(t => t.addEventListener("click", () => {
+    tabs.forEach(x => x.classList.toggle("active", x === t));
+    const showText = t.dataset.tab === "text";
+    if (viewChat) viewChat.hidden = showText;
+    if (viewText) viewText.hidden = !showText;
+  }));
+
+  // Text-back request form
+  const ctb = document.getElementById("ctbForm");
+  if (ctb) ctb.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("ctbSend");
+    const ok = document.getElementById("ctbSuccess");
+    const data = [
+      ["Name", document.getElementById("ctbName").value],
+      ["Mobile phone", document.getElementById("ctbPhone").value],
+      ["Message", document.getElementById("ctbMsg").value]
+    ].filter(d => d[1]);
+    btn.disabled = true; btn.textContent = "Sending…";
+    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Text-back request (please text this customer)"); } catch (err) {}
+    ok.classList.add("show");
+    ok.innerHTML = "Thank you! Our team will text you back shortly. 💬";
+    ctb.reset(); btn.disabled = false; btn.textContent = "Send";
+  });
 }
 
 /* ---- Rotating announcement ticker ---- */
