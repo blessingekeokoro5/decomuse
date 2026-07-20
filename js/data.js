@@ -76,46 +76,20 @@ const MEGA_MENU = [
 
 /* ---- Products (AUD) ---- */
 const PRODUCTS = [
-  // Fragrance
-  { id: "f01", name: "Amber & Oud Eau de Parfum", cat: "Fragrance", price: 129, tag: "Bestseller", ph: "espresso", room: ["living","bedroom"] },
-  { id: "f02", name: "Neroli & Rose Eau de Parfum", cat: "Fragrance", price: 115, was: 139, tag: "Sale", ph: "rose", room: ["bedroom"] },
-  { id: "f03", name: "Citrus Bloom Eau de Toilette", cat: "Fragrance", price: 89, tag: "New", ph: "", room: ["living"] },
-  { id: "f04", name: "Wild Fig Reed Diffuser", cat: "Fragrance", price: 49, ph: "forest", room: ["living","dining"] },
-  { id: "f05", name: "Sandalwood Room Spray", cat: "Fragrance", price: 35, ph: "espresso", room: ["living","bedroom"] },
-  { id: "f06", name: "Discovery Set, 5 Scents", cat: "Fragrance", price: 45, tag: "Loved", ph: "rose" },
+  // ── Home Décor ──
+  { id: "hd01", name: "Kiyoshi Alcyon Teardrop Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
+    desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
+  { id: "hd02", name: "Soren Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
+    desc: "An artful glass vase with a fluid, hand-formed silhouette. Equally striking styled with a single stem or left empty, it's a quiet statement piece for a console, mantel or dining table." },
 
-  // Health & Wellness
-  { id: "h01", name: "Magnesium Bath Soak", cat: "Health & Wellness", price: 24, tag: "Loved", ph: "forest", room: ["bedroom"] },
-  { id: "h02", name: "Rosehip Facial Oil", cat: "Health & Wellness", price: 39, ph: "rose" },
-  { id: "h03", name: "Vitamin C Daily Supplement", cat: "Health & Wellness", price: 29, ph: "" },
-  { id: "h04", name: "Lavender Aromatherapy Roll-on", cat: "Health & Wellness", price: 19, ph: "forest", room: ["bedroom"] },
-  { id: "h05", name: "Shea Hand & Body Cream", cat: "Health & Wellness", price: 22, ph: "rose" },
-  { id: "h06", name: "Sleep & Calm Pillow Mist", cat: "Health & Wellness", price: 27, tag: "New", ph: "", room: ["bedroom"] },
-
-  // Home Décor
-  { id: "p01", name: "Arched Rattan Floor Mirror", cat: "Home Décor", price: 289, was: 349, tag: "Bestseller", ph: "rose", room: ["bedroom","living"] },
-  { id: "p02", name: "Bouclé Accent Armchair", cat: "Home Décor", price: 549, tag: "New", ph: "", room: ["living","bedroom"] },
-  { id: "p03", name: "Travertine Coffee Table", cat: "Home Décor", price: 699, ph: "espresso", room: ["living"], freeship: true },
-  { id: "p05", name: "Handwoven Jute Rug 2×3m", cat: "Home Décor", price: 329, was: 399, tag: "Sale", ph: "", room: ["living"], freeship: true },
-  { id: "p06", name: "Ceramic Vase Set of 3", cat: "Home Décor", price: 89, ph: "rose", room: ["living","dining"] },
-  { id: "p09", name: "Rattan Pendant Light", cat: "Home Décor", price: 179, ph: "", room: ["living","dining"] },
-  { id: "p08", name: "Oak Sideboard Buffet", cat: "Home Décor", price: 899, tag: "New", ph: "espresso", room: ["dining","living"], freeship: true },
-
-  // Lifestyle
-  { id: "l01", name: "Wattle Soy Candle Trio", cat: "Lifestyle", price: 59, tag: "Loved", ph: "rose", room: ["living","bedroom","dining"] },
-  { id: "l02", name: "Waffle Cotton Throw", cat: "Lifestyle", price: 99, ph: "", room: ["bedroom","living"] },
-  { id: "l03", name: "Linen Euro Cushion Pair", cat: "Lifestyle", price: 79, ph: "rose", room: ["bedroom","living"] },
-  { id: "l04", name: "Stoneware Dinner Set 16pc", cat: "Lifestyle", price: 199, tag: "Bestseller", ph: "", room: ["dining"] },
-  { id: "l05", name: "Linen Coaster Set", cat: "Lifestyle", price: 14, ph: "forest", room: ["dining"] },
-
-  // Beauty & personal care
-  { id: "f07", name: "Tommy Girl Eau de Toilette 100mL", brand: "Tommy Hilfiger", cat: "Fragrance", price: 95, tag: "New", ph: "",
+  // ── Beauty & personal care ──
+  { id: "f07", name: "Tommy Girl Eau de Toilette 100mL", brand: "Tommy Hilfiger", cat: "Fragrance", price: 95, tag: "New", sku: "DM-10103", ph: "",
     desc: "A crisp, uplifting blend of fresh florals and bright citrus. Effortlessly cool, clean and confident, it's the kind of everyday scent that feels like a breath of fresh air, morning to night." },
-  { id: "h07", name: "Skin Renewing Vitamin C Serum 30mL", brand: "CeraVe", cat: "Health & Wellness", price: 44.99, ph: "",
+  { id: "h07", name: "Skin Renewing Vitamin C Serum 30mL", brand: "CeraVe", cat: "Health & Wellness", price: 44.99, sku: "DM-10104", ph: "",
     desc: "A brightening daily serum that helps even skin tone and restore a healthy glow. Lightweight, fast-absorbing and beautifully gentle, it's the fresh-faced pick-me-up your routine has been missing." },
-  { id: "h08", name: "Clear Skincare Lightening Cream 90g", brand: "Clear Skincare", cat: "Health & Wellness", price: 50, ph: "rose",
+  { id: "h08", name: "Clear Skincare Lightening Cream 90g", brand: "Clear Skincare", cat: "Health & Wellness", price: 50, sku: "DM-10105", ph: "rose",
     desc: "A targeted brightening cream that helps soften the look of dark spots and uneven tone. Use daily for a clearer, more even and radiant-looking complexion." },
-  { id: "h09", name: "Curl Jelly Scrunching Jelly 200mL", brand: "Umberto Giannini", cat: "Health & Wellness", price: 19, tag: "Loved", ph: "rose",
+  { id: "h09", name: "Curl Jelly Scrunching Jelly 200mL", brand: "Umberto Giannini", cat: "Health & Wellness", price: 19, tag: "Loved", sku: "DM-10106", ph: "rose",
     desc: "Define, hydrate and tame frizz with a bouncy styling jelly that leaves curls soft, springy and full of life. No crunch, just gloss and gorgeous movement." },
   { id: "h10", name: "Nude by Nature Complexion Essentials Starter Kit (Light)", brand: "Nude by Nature", cat: "Health & Wellness", price: 45.99, sku: "DM-32145", ph: "espresso", img: "assets/products/h10.png",
     desc: "Your complexion, perfected in four easy steps. This mineral starter kit brings together a luminous foundation, finishing veil, soft blush and pro brushes in a chic travel case, for a natural, flawless glow wherever you go." },

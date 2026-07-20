@@ -1043,3 +1043,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .rv-fill { display: block; height: 100%; background: var(--forest-soft); border-radius: 20px; }
 .rv-count { width: 36px; font-size: 0.9rem; color: var(--body); }
 .rv-note { margin-top: 20px; color: var(--muted); font-size: 0.82rem; }
+
+/* Member price */
+.member-price { color: var(--rose-deep); font-weight: 500; font-size: 0.9rem; margin-top: 4px; }
+.member-price a { color: var(--rose-deep); text-decoration: underline; }

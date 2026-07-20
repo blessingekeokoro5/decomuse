@@ -153,6 +153,7 @@
             <h1>${p.name}</h1>
             <div class="stars" style="margin-bottom:10px">★★★★★ <span style="color:var(--muted);font-size:0.85rem">${rev.avg.toFixed(1)} · ${rev.total} reviews</span></div>
             <div class="price">${money(p.price)}${was}</div>
+            ${p.memberPrice ? `<div class="member-price" style="margin-top:6px">✦ Members price ${money(p.memberPrice)} <a href="#" onclick="if(typeof openMemberModal==='function')openMemberModal();return false;" style="font-size:0.82rem">Join free →</a></div>` : ""}
             <p style="margin-top:16px">${p.desc || blurb(p)}</p>
             <ul class="pdp-detail-list">
               ${p.brand ? `<li><span>Brand</span><span>${p.brand}</span></li>` : ""}

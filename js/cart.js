@@ -139,6 +139,7 @@ function productCard(p) {
         <span class="cat">${p.cat}</span>
         <h3><a href="product.html?id=${p.id}">${p.name}</a></h3>
         <div class="price">${money(p.price)}${was}</div>
+        ${p.memberPrice ? `<div class="member-price">✦ Members ${money(p.memberPrice)}</div>` : ""}
         ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
         <div class="product-foot">
           <span class="stars">★★★★★</span>
