@@ -188,8 +188,8 @@ function buildFooter() {
   ];
   const infoLinks = [
     { t: "Frequent Questions", h: "policy.html?doc=faq" },
+    { t: "Trade & Commercial", h: "trade.html" },
     { t: "Customer reviews", h: "index.html#reviews" },
-    { t: "Sustainability", h: "about.html" },
     { t: "Delivery & Shipping", h: "policy.html?doc=delivery" },
     { t: "Track your order", h: "track.html" }
   ];

@@ -60,7 +60,7 @@
           <div class="thumb"><div class="ph ${i.ph}" data-label="${i.name}"></div></div>
           <div>
             <div style="color:var(--rose-deep);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase">${i.cat}</div>
-            <h3 style="font-size:1.1rem;margin:2px 0 6px">${i.name}</h3>
+            <h3 style="font-size:1.1rem;margin:2px 0 6px">${i.name}${i.colour ? ` <small style="color:var(--muted);font-weight:400">· ${i.colour}</small>` : ""}</h3>
             ${i.contents ? `<p style="font-size:0.8rem;color:var(--muted);margin:0 0 8px;max-width:380px">${i.contents}</p>` : ""}
             <div class="qty">
               <button onclick="setQty('${i.id}', ${i.qty - 1})">−</button>

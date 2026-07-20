@@ -17,15 +17,15 @@ function cartTotal() { return getCart().reduce((n, i) => n + i.price * i.qty, 0)
 
 function findProduct(id) { return PRODUCTS.find(p => p.id === id); }
 
-function addToCart(id, qty = 1) {
+function addToCart(id, qty = 1, colour = null) {
   const p = findProduct(id);
   if (!p) return;
   const cart = getCart();
   const line = cart.find(i => i.id === id);
-  if (line) line.qty += qty;
-  else cart.push({ id: p.id, name: p.name, price: p.price, cat: p.cat, ph: p.ph, qty });
+  if (line) { line.qty += qty; if (colour) line.colour = colour; }
+  else cart.push({ id: p.id, name: p.name, price: p.price, cat: p.cat, ph: p.ph, qty, colour: colour || undefined });
   saveCart(cart);
-  showToast(`Added “${p.name}” to your cart`);
+  showToast(`Added “${p.name}${colour ? " · " + colour : ""}” to your cart`);
   if (typeof renderCartPage === "function") renderCartPage();
 }
 function removeFromCart(id) {
