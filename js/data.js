@@ -104,9 +104,7 @@ const PRODUCTS = [
   { id: "h10", name: "Nude by Nature Complexion Essentials Starter Kit (Light)", brand: "Nude by Nature", cat: "Health & Wellness", price: 45.99, sku: "DM-32145", ph: "espresso", img: "assets/products/h10.png",
     desc: "Your complexion, perfected in four easy steps. This mineral starter kit brings together a luminous foundation, finishing veil, soft blush and pro brushes in a chic travel case, for a natural, flawless glow wherever you go." },
   { id: "h11", name: "Nude by Nature Glow & Perfect Christmas Gift Set", brand: "Nude by Nature", cat: "Health & Wellness", price: 25.01, tag: "New", sku: "DM-11234", ph: "rose", img: "assets/products/h11.png",
-    desc: "A radiant little gift set to glow and go. A beautifully boxed edit of mineral favourites that leaves skin luminous and naturally perfected, the perfect present, or a treat for yourself, this festive season." },
-  { id: "l06", name: "Personalised Bridesmaid Floral Tumbler Flute", cat: "Lifestyle", price: 15.15, tag: "Loved", sku: "DM-12344", custom: true, ph: "forest", img: "assets/products/l06.png",
-    desc: "A keepsake they'll treasure. This elegant floral tumbler flute is personalised just for your bridal party, a thoughtful wedding favour or bridesmaid gift that's as pretty as it is practical. Made to order and fully customisable, so please allow a few extra days for delivery." }
+    desc: "A radiant little gift set to glow and go. A beautifully boxed edit of mineral favourites that leaves skin luminous and naturally perfected, the perfect present, or a treat for yourself, this festive season." }
 ];
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).
