@@ -997,3 +997,28 @@ em { font-style: italic; color: var(--rose-deep); }
   font-size: 0.74rem; font-weight: 500; padding: 6px 2px; display: inline-block; transition: color var(--tr); }
 .room-nav-list a:hover { color: var(--rose-soft); }
 @media (max-width: 600px) { .room-nav-list { gap: 4px 20px; } .room-nav-list a { font-size: 0.68rem; letter-spacing: 0.12em; } }
+
+/* Product image zoom (magnifier button + lightbox) */
+.zoom-btn { position: absolute; bottom: 10px; right: 10px; z-index: 4; width: 34px; height: 34px;
+  border-radius: 50%; background: rgba(255,255,255,0.92); border: none; cursor: pointer; display: none;
+  place-items: center; color: var(--ink); opacity: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.14);
+  transition: opacity var(--tr), background var(--tr), color var(--tr); }
+.card-media.has-img .zoom-btn { display: grid; }
+.card-media.has-img:hover .zoom-btn { opacity: 1; }
+.zoom-btn svg { width: 17px; height: 17px; }
+.zoom-btn:hover { background: #fff; color: var(--rose-deep); }
+
+.zoom-lightbox { position: fixed; inset: 0; background: rgba(28,22,19,0.92); z-index: 9999;
+  display: none; align-items: center; justify-content: center; }
+.zoom-lightbox.open { display: flex; }
+.zoom-stage { max-width: 92vw; max-height: 82vh; overflow: hidden; display: grid; place-items: center; cursor: zoom-in; }
+.zoom-stage img { max-width: 92vw; max-height: 82vh; transition: transform 0.12s ease-out;
+  transform-origin: center center; user-select: none; -webkit-user-drag: none; }
+.zoom-close { position: absolute; top: 18px; right: 24px; background: none; border: none; color: #fff;
+  font-size: 2rem; line-height: 1; cursor: pointer; }
+.zoom-close:hover { color: var(--rose-soft); }
+.zoom-controls { position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%); display: flex; gap: 10px; }
+.zoom-ctrl { background: rgba(255,255,255,0.94); border: none; border-radius: 30px; padding: 9px 16px;
+  min-width: 44px; font-size: 1.05rem; font-weight: 500; cursor: pointer; color: var(--ink); }
+.zoom-ctrl:hover { background: #fff; color: var(--rose-deep); }
+@media (max-width: 480px) { .card-media.has-img .zoom-btn { opacity: 1; } }

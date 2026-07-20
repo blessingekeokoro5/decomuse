@@ -114,7 +114,7 @@ const money = (n) => DECOMUSE.currency + n.toLocaleString("en-AU");
 /* ---- Product image: uses assets/products/<id>.jpg (or .png/.webp), else placeholder ---- */
 function prodImgTag(p) {
   const first = p.img || ("assets/products/" + p.id + ".jpg");
-  return `<img class="ph-img" src="${first}" alt="${p.name}" data-pid="${p.id}" data-i="${p.img ? 99 : 0}" onerror="nextProdImg(this)">`;
+  return `<img class="ph-img" src="${first}" alt="${p.name}" data-pid="${p.id}" data-i="${p.img ? 99 : 0}" onload="this.closest('.card-media')&&this.closest('.card-media').classList.add('has-img')" onerror="nextProdImg(this)">`;
 }
 function nextProdImg(img) {
   const exts = ["jpg", "png", "jpeg", "webp"];
@@ -133,6 +133,7 @@ function productCard(p) {
         ${tag}
         <button class="wish ${isWishlisted(p.id) ? "on" : ""}" aria-label="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}</button>
         <a href="product.html?id=${p.id}" aria-label="${p.name}"><div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></a>
+        <button class="zoom-btn" type="button" aria-label="Zoom image" onclick="openZoom(event, this)">${IC.search}</button>
       </div>
       <div class="card-body">
         <span class="cat">${p.cat}</span>

@@ -150,3 +150,82 @@ document.addEventListener("DOMContentLoaded", () => {
   initReveal();
   initForms();
 });
+
+/* ============================================================
+   Product image zoom lightbox (shop, product & other grids)
+   ============================================================ */
+let _zoomState = { scale: 1, x: 0, y: 0, drag: false, sx: 0, sy: 0 };
+
+function openZoom(e, btn) {
+  if (e) { e.preventDefault(); e.stopPropagation(); }
+  const media = btn.closest(".card-media") || btn.closest(".product-gallery") || document;
+  const img = media.querySelector("img.ph-img") || media.querySelector("img");
+  if (!img || !img.getAttribute("src")) return;
+  showZoom(img.currentSrc || img.src, img.alt || "");
+}
+
+function _zoomApply() {
+  const img = document.getElementById("zoomImg");
+  if (img) img.style.transform = `translate(${_zoomState.x}px, ${_zoomState.y}px) scale(${_zoomState.scale})`;
+}
+function _zoomSet(s) {
+  _zoomState.scale = Math.min(5, Math.max(1, Math.round(s * 10) / 10));
+  if (_zoomState.scale === 1) { _zoomState.x = 0; _zoomState.y = 0; }
+  const stage = document.querySelector(".zoom-stage");
+  if (stage) stage.style.cursor = _zoomState.scale > 1 ? "grab" : "zoom-in";
+  _zoomApply();
+}
+function closeZoom() {
+  const lb = document.getElementById("zoomLightbox");
+  if (lb) { lb.classList.remove("open"); document.body.style.overflow = ""; }
+}
+function showZoom(src, alt) {
+  let lb = document.getElementById("zoomLightbox");
+  if (!lb) {
+    lb = document.createElement("div");
+    lb.id = "zoomLightbox";
+    lb.className = "zoom-lightbox";
+    lb.innerHTML =
+      '<button class="zoom-close" aria-label="Close">✕</button>' +
+      '<div class="zoom-stage"><img id="zoomImg" alt="" draggable="false"></div>' +
+      '<div class="zoom-controls">' +
+        '<button class="zoom-ctrl" data-z="out" aria-label="Zoom out">−</button>' +
+        '<button class="zoom-ctrl" data-z="reset" aria-label="Reset zoom">Reset</button>' +
+        '<button class="zoom-ctrl" data-z="in" aria-label="Zoom in">+</button>' +
+      '</div>';
+    document.body.appendChild(lb);
+    lb.querySelector(".zoom-close").addEventListener("click", closeZoom);
+    lb.addEventListener("click", (ev) => { if (ev.target === lb) closeZoom(); });
+    lb.querySelectorAll(".zoom-ctrl").forEach((b) => b.addEventListener("click", () => {
+      const z = b.dataset.z;
+      if (z === "in") _zoomSet(_zoomState.scale + 0.5);
+      else if (z === "out") _zoomSet(_zoomState.scale - 0.5);
+      else _zoomSet(1);
+    }));
+    const stage = lb.querySelector(".zoom-stage");
+    stage.addEventListener("wheel", (ev) => { ev.preventDefault(); _zoomSet(_zoomState.scale + (ev.deltaY < 0 ? 0.3 : -0.3)); }, { passive: false });
+    stage.addEventListener("dblclick", () => _zoomSet(_zoomState.scale > 1 ? 1 : 2));
+    stage.addEventListener("mousedown", (ev) => {
+      if (_zoomState.scale <= 1) return;
+      _zoomState.drag = true; _zoomState.sx = ev.clientX - _zoomState.x; _zoomState.sy = ev.clientY - _zoomState.y;
+      stage.style.cursor = "grabbing";
+    });
+    window.addEventListener("mousemove", (ev) => {
+      if (!_zoomState.drag) return;
+      _zoomState.x = ev.clientX - _zoomState.sx; _zoomState.y = ev.clientY - _zoomState.sy; _zoomApply();
+    });
+    window.addEventListener("mouseup", () => {
+      if (!_zoomState.drag) return;
+      _zoomState.drag = false;
+      const st = document.querySelector(".zoom-stage");
+      if (st) st.style.cursor = _zoomState.scale > 1 ? "grab" : "zoom-in";
+    });
+    document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") closeZoom(); });
+  }
+  const zi = lb.querySelector("#zoomImg");
+  zi.src = src; zi.alt = alt;
+  _zoomState = { scale: 1, x: 0, y: 0, drag: false, sx: 0, sy: 0 };
+  _zoomApply();
+  lb.classList.add("open");
+  document.body.style.overflow = "hidden";
+}
