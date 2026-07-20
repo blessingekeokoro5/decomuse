@@ -78,9 +78,19 @@ const MEGA_MENU = [
 const PRODUCTS = [
   // ── Home Décor ──
   { id: "hd01", name: "Kiyoshi Alcyon Teardrop Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
+    imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
-  { id: "hd02", name: "Soren Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
-    desc: "An artful glass vase with a fluid, hand-formed silhouette. Equally striking styled with a single stem or left empty, it's a quiet statement piece for a console, mantel or dining table." },
+  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
+    imgs: ["assets/products/hd02.png", "assets/products/hd02-2.png", "assets/products/hd02-3.png", "assets/products/hd02-4.png"],
+    desc: "The Fleur glass vase brings sculptural charm to any room with a wavy silhouette that resembles an open flower. This visual statement piece is a work of art and enhances any floral arrangement you choose. Made from glass and designed for tabletop display, it suits both real and everlasting flowers. Place it on a dining table, bedside table, coffee table or kitchen bench to create an effortless centrepiece, or let it stand alone to add sculptural interest to a living space and brighten your home.",
+    features: [
+      "Displays a wavy silhouette that resembles an open flower, making it a visual statement piece",
+      "A true work of art that enhances any floral arrangement of your choosing",
+      "Great for presenting both real & everlasting flowers, for a stunning display around the home",
+      "A classic addition to any dining table, bedside table, coffee table, kitchen bench & more"
+    ],
+    specs: { "Type": "Vase", "Location": "Tabletop", "Material": "Glass", "Primary Colour": "Blue" },
+    dimensions: "26cm H x 23cm W x 23cm D", weight: "1.97 kg", boxContents: "1 x vase", care: "Wipe clean with a dry cloth" },
 
   // ── Beauty & personal care ──
   { id: "f07", name: "Tommy Girl Eau de Toilette 100mL", brand: "Tommy Hilfiger", cat: "Fragrance", price: 95, tag: "New", sku: "DM-10103", ph: "",

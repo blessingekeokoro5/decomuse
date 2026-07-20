@@ -1047,3 +1047,31 @@ em { font-style: italic; color: var(--rose-deep); }
 /* Member price */
 .member-price { color: var(--rose-deep); font-weight: 500; font-size: 0.9rem; margin-top: 4px; }
 .member-price a { color: var(--rose-deep); text-decoration: underline; }
+
+/* Product detail page: layout, gallery, thumbnails, specs */
+.pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
+.pdp-gallery { display: flex; flex-direction: column; gap: 12px; }
+.pdp-gallery .main { position: relative; border-radius: var(--radius); overflow: hidden; aspect-ratio: 1/1; background: #fff; box-shadow: var(--shadow); }
+.pdp-gallery .main .ph { width: 100%; height: 100%; }
+.pdp-save { position: absolute; top: 12px; left: 12px; z-index: 3; background: var(--rose); color: #fff; font-size: 0.7rem; letter-spacing: 0.08em; padding: 5px 11px; border-radius: 20px; }
+.pdp-gallery .main .zoom-btn { display: grid; opacity: 0; }
+.pdp-gallery .main:hover .zoom-btn { opacity: 1; }
+.pdp-thumbs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+.pdp-thumb { padding: 0; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; cursor: pointer; background: #fff; aspect-ratio: 1/1; transition: border-color var(--tr); }
+.pdp-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.pdp-thumb.active { border-color: var(--rose); box-shadow: 0 0 0 1px var(--rose); }
+.pdp-brand { text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.78rem; color: var(--rose-deep); margin-bottom: 6px; }
+.pdp-detail-list { list-style: none; padding: 0; margin: 18px 0; }
+.pdp-detail-list li { display: flex; justify-content: space-between; gap: 20px; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 0.92rem; }
+.pdp-detail-list li span:first-child { color: var(--muted); }
+.pdp-buy { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin: 22px 0; }
+.pdp-buy .qty { display: flex; align-items: center; border: 1px solid #cbb6ab; border-radius: 30px; }
+.pdp-buy .qty button { width: 38px; height: 42px; background: none; border: none; cursor: pointer; font-size: 1.15rem; color: var(--ink); }
+.pdp-buy .qty span { min-width: 24px; text-align: center; }
+.pdp-trust { display: flex; gap: 18px; flex-wrap: wrap; color: var(--muted); font-size: 0.85rem; margin-top: 6px; }
+.pdp-specs { margin-top: 46px; padding-top: 32px; border-top: 1px solid var(--line); display: grid; gap: 28px; }
+.pdp-specs h3 { font-size: 1.15rem; margin-bottom: 12px; }
+.pdp-highlights { margin: 0; padding-left: 20px; }
+.pdp-highlights li { margin-bottom: 8px; color: var(--body); }
+.pdp-spec-block p { color: var(--body); margin: 0; }
+@media (max-width: 760px) { .pdp { grid-template-columns: 1fr; gap: 28px; } }

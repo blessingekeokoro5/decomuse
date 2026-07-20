@@ -124,6 +124,32 @@
       </section>`;
     }
 
+    function productSpecs(p) {
+      let html = "";
+      if (p.features && p.features.length)
+        html += `<div class="pdp-spec-block"><h3>Highlights</h3><ul class="pdp-highlights">${p.features.map(f => `<li>${f}</li>`).join("")}</ul></div>`;
+      if (p.dimensions || p.weight) {
+        html += `<div class="pdp-spec-block"><h3>Dimensions &amp; Weights</h3><ul class="pdp-detail-list">`;
+        if (p.dimensions) html += `<li><span>Overall</span><span>${p.dimensions}</span></li>`;
+        if (p.weight) html += `<li><span>Product weight</span><span>${p.weight}</span></li>`;
+        html += `</ul></div>`;
+      }
+      if (p.specs) {
+        const rows = Object.keys(p.specs).map(k => `<li><span>${k}</span><span>${p.specs[k]}</span></li>`).join("");
+        html += `<div class="pdp-spec-block"><h3>Specifications</h3><ul class="pdp-detail-list">${rows}</ul></div>`;
+      }
+      if (p.boxContents) html += `<div class="pdp-spec-block"><h3>Box contents</h3><p>${p.boxContents}</p></div>`;
+      if (p.care) html += `<div class="pdp-spec-block"><h3>Care instructions</h3><p>${p.care}</p></div>`;
+      return html ? `<section class="pdp-specs">${html}</section>` : "";
+    }
+
+    function pdpSetImg(src, btn) {
+      const m = document.getElementById("pdpMainImg");
+      if (m) m.src = src;
+      document.querySelectorAll(".pdp-thumb").forEach((t) => t.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+    }
+
     function render() {
       const id = new URLSearchParams(location.search).get("id");
       const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
@@ -137,17 +163,24 @@
       document.getElementById("pdpCrumb").innerHTML = `<a href="index.html">Home</a> / <a href="shop.html">Shop</a> / ${p.name}`;
       const was = p.was ? `<small>${money(p.was)}</small>` : "";
       const saved = isWishlisted(p.id);
+      const gimgs = (p.imgs && p.imgs.length) ? p.imgs : (p.img ? [p.img] : []);
+      const saveBadge = p.was ? `<span class="pdp-save">SAVE ${Math.round((1 - p.price / p.was) * 100)}%</span>` : "";
+      let galleryHtml;
+      if (gimgs.length) {
+        galleryHtml = `
+          <div class="pdp-gallery">
+            <div class="main">${saveBadge}
+              <div class="ph" data-label="${p.name}"><img class="ph-img" id="pdpMainImg" src="${gimgs[0]}" alt="${p.name}"></div>
+              <button class="zoom-btn" type="button" aria-label="Zoom image" data-name="${(p.name || '').replace(/"/g, '&quot;')}" onclick="showZoom(document.getElementById('pdpMainImg').src, this.getAttribute('data-name'))">${IC.search}</button>
+            </div>
+            ${gimgs.length > 1 ? `<div class="pdp-thumbs">${gimgs.map((s, i) => `<button type="button" class="pdp-thumb ${i === 0 ? 'active' : ''}" onclick="pdpSetImg('${s}', this)"><img src="${s}" alt=""></button>`).join("")}</div>` : ""}
+          </div>`;
+      } else {
+        galleryHtml = `<div class="pdp-gallery"><div class="main">${saveBadge}<div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></div></div>`;
+      }
       wrap.innerHTML = `
         <div class="pdp">
-          <div class="pdp-gallery">
-            <div class="main">${p.was ? `<span class="pdp-save">SAVE ${Math.round((1 - p.price / p.was) * 100)}%</span>` : ""}<div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></div>
-            <div class="pdp-thumbs">
-              <div class="ph ${p.ph}" data-label="">${prodImgTag(p)}</div>
-              <div class="ph" data-label=""></div>
-              <div class="ph ${p.ph}" data-label="">${prodImgTag(p)}</div>
-              <div class="ph" data-label=""></div>
-            </div>
-          </div>
+          ${galleryHtml}
           <div class="pdp-info">
             ${p.brand ? `<div class="pdp-brand">${p.brand}</div>` : `<span class="cat">${p.cat}</span>`}
             <h1>${p.name}</h1>
@@ -175,7 +208,7 @@
           </div>
         </div>`;
 
-      wrap.insertAdjacentHTML("beforeend", productReviews(p));
+      wrap.insertAdjacentHTML("beforeend", productSpecs(p) + productReviews(p));
 
       let related = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id);
       related = related.concat(PRODUCTS.filter(x => x.cat !== p.cat && x.id !== p.id));
