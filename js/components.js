@@ -182,6 +182,7 @@ function buildFooter() {
   const decomuseLinks = [
     { t: "About Us", h: "about.html" },
     { t: "Home Styling & Design", h: "staging.html" },
+    { t: "Portfolio", h: "portfolio.html" },
     { t: "Assistance & Contact", h: "support.html" },
     { t: "Contact us", h: "contact.html" },
     { t: "Muse Stylist AI", h: "stylist.html" }
