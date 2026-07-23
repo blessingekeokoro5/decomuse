@@ -108,7 +108,7 @@ const PRODUCTS = [
     boxContents: ["1 × vaporiser", "1 × user manual"], warranty: "1 Year",
     care: "Use a damp cloth to wipe the vaporiser bowl after use.",
     about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." },
-  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, dontPay: 25.99, sku: "DM-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
+  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, sku: "DM-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
     imgs: ["assets/products/hd04.png", "assets/products/hd04-2.png", "assets/products/hd04-3.png", "assets/products/hd04-4.png", "assets/products/hd04-5.png", "assets/products/hd04-6.png", "assets/products/hd04-7.png"],
     colours: [{ name: "Beige", hex: "#d9c7a8" }, { name: "Cerulean", hex: "#2a7fba" }, { name: "Forest Green", hex: "#33513a" }, { name: "Grey", hex: "#9b9b9b" }, { name: "Navy", hex: "#232f4d" }, { name: "Orange", hex: "#d5843a" }, { name: "Rosy Brown", hex: "#bc8f8f" }, { name: "Turquoise", hex: "#3fb8ad" }],
     sizes: [{ label: "30 × 50 cm", price: 15.99 }, { label: "45 × 45 cm", price: 18.99 }, { label: "50 × 50 cm", price: 21.99 }],
@@ -124,7 +124,7 @@ const PRODUCTS = [
     care: "Machine wash cold on a gentle cycle with like colours; do not tumble dry; cool iron if needed." },
 
   // ── Lifestyle ──
-  { id: "l07", name: "Soft Cotton Face Washer Towels — 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, dontPay: 45.99, sku: "DM-10105", tag: "New", ph: "", img: "assets/products/l07.png",
+  { id: "l07", name: "Soft Cotton Face Washer Towels — 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, sku: "DM-10105", tag: "New", ph: "", img: "assets/products/l07.png",
     imgs: ["assets/products/l07.png", "assets/products/l07-2.png", "assets/products/l07-3.png", "assets/products/l07-4.png", "assets/products/l07-5.png", "assets/products/l07-6.png"],
     colours: [{ name: "Teal", hex: "#2a8d8d" }, { name: "Navy", hex: "#1f2a44" }, { name: "Blue Suede", hex: "#6a7fa0" }, { name: "Pea Pod", hex: "#a3b18a" }, { name: "Coral", hex: "#e0897a" }, { name: "Burgundy", hex: "#7b2d3a" }, { name: "Chocolate Brown", hex: "#4a3428" }, { name: "Charcoal", hex: "#4a4a4f" }, { name: "Linen", hex: "#d9cbb2" }, { name: "Silver", hex: "#c7c7c7" }, { name: "White", hex: "#f2f0ea" }],
     desc: "Wrap your everyday routine in softness with this set of 10 premium 450GSM cotton face washers. Beautifully plush yet quick-drying, with a satin-finish border and double-stitched hems that hold their shape wash after wash. Gentle on skin and endlessly useful for face, hands and travel, in a rich palette of eleven colours to suit any bathroom.",
