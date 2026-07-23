@@ -77,10 +77,10 @@ const MEGA_MENU = [
 /* ---- Products (AUD) ---- */
 const PRODUCTS = [
   // ── Home Décor ──
-  { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, dontPay: 229, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
+  { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
-  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, dontPay: 279, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
+  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
     imgs: ["assets/products/hd02.png", "assets/products/hd02-2.png", "assets/products/hd02-3.png", "assets/products/hd02-4.png"],
     desc: "The Fleur glass vase brings sculptural charm to any room with a wavy silhouette that resembles an open flower. This visual statement piece is a work of art and enhances any floral arrangement you choose. Made from glass and designed for tabletop display, it suits both real and everlasting flowers. Place it on a dining table, bedside table, coffee table or kitchen bench to create an effortless centrepiece, or let it stand alone to add sculptural interest to a living space and brighten your home.",
     features: [
@@ -91,7 +91,7 @@ const PRODUCTS = [
     ],
     specs: { "Type": "Vase", "Location": "Tabletop", "Material": "Glass", "Primary Colour": "Blue" },
     dimensions: "26cm H x 23cm W x 23cm D", weight: "1.97 kg", boxContents: "1 x vase", care: "Wipe clean with a dry cloth" },
-  { id: "hd03", name: "Ceramic Electric Oil Vaporiser", cat: "Home Décor", price: 98.90, memberPrice: 78.95, dontPay: 129, sku: "DM-10103", tag: "New", ph: "", img: "assets/products/hd03.png",
+  { id: "hd03", name: "Ceramic Electric Oil Vaporiser", cat: "Home Décor", price: 98.90, memberPrice: 78.95, sku: "DM-10103", tag: "New", ph: "", img: "assets/products/hd03.png",
     imgs: ["assets/products/hd03.png", "assets/products/hd03-2.png", "assets/products/hd03-3.png", "assets/products/hd03-4.png", "assets/products/hd03-5.png"],
     colours: [{ name: "Black", hex: "#1c1c1c" }, { name: "Natural", hex: "#cbb291" }, { name: "White", hex: "#f2efe9" }],
     desc: "Bring a subtle, calming fragrance to any room with this ceramic electric oil vaporiser that gently warms essential oils without harming them. Designed to run safely for long periods, it emits heat only from the recessed bowl, so the outer surface stays cool to the touch. No water is needed, making it a drip-free option ideal for aromatherapy at night or when hosting friends, creating a calm, fragrant atmosphere in living areas, bedrooms and for quiet evenings.",
