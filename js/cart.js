@@ -142,6 +142,7 @@ function productCard(p) {
         <span class="cat">${p.cat}</span>
         <h3><a href="product.html?id=${p.id}">${p.name}</a></h3>
         <div class="price">${p.sizes && p.sizes.length ? "from " : ""}${money(p.price)}${was}</div>
+        ${p.dontPay ? `<div class="dont-pay"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
         ${p.memberPrice ? `<div class="member-price">✦ Members ${money(p.memberPrice)}</div>` : ""}
         ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
         <div class="product-foot">

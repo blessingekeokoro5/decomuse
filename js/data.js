@@ -77,10 +77,10 @@ const MEGA_MENU = [
 /* ---- Products (AUD) ---- */
 const PRODUCTS = [
   // ── Home Décor ──
-  { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
+  { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, dontPay: 229, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
-  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
+  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, dontPay: 279, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
     imgs: ["assets/products/hd02.png", "assets/products/hd02-2.png", "assets/products/hd02-3.png", "assets/products/hd02-4.png"],
     desc: "The Fleur glass vase brings sculptural charm to any room with a wavy silhouette that resembles an open flower. This visual statement piece is a work of art and enhances any floral arrangement you choose. Made from glass and designed for tabletop display, it suits both real and everlasting flowers. Place it on a dining table, bedside table, coffee table or kitchen bench to create an effortless centrepiece, or let it stand alone to add sculptural interest to a living space and brighten your home.",
     features: [
@@ -91,7 +91,7 @@ const PRODUCTS = [
     ],
     specs: { "Type": "Vase", "Location": "Tabletop", "Material": "Glass", "Primary Colour": "Blue" },
     dimensions: "26cm H x 23cm W x 23cm D", weight: "1.97 kg", boxContents: "1 x vase", care: "Wipe clean with a dry cloth" },
-  { id: "hd03", name: "Ceramic Electric Oil Vaporiser", cat: "Home Décor", price: 98.90, memberPrice: 78.95, sku: "DM-10103", tag: "New", ph: "", img: "assets/products/hd03.png",
+  { id: "hd03", name: "Ceramic Electric Oil Vaporiser", cat: "Home Décor", price: 98.90, memberPrice: 78.95, dontPay: 129, sku: "DM-10103", tag: "New", ph: "", img: "assets/products/hd03.png",
     imgs: ["assets/products/hd03.png", "assets/products/hd03-2.png", "assets/products/hd03-3.png", "assets/products/hd03-4.png", "assets/products/hd03-5.png"],
     colours: [{ name: "Black", hex: "#1c1c1c" }, { name: "Natural", hex: "#cbb291" }, { name: "White", hex: "#f2efe9" }],
     desc: "Bring a subtle, calming fragrance to any room with this ceramic electric oil vaporiser that gently warms essential oils without harming them. Designed to run safely for long periods, it emits heat only from the recessed bowl, so the outer surface stays cool to the touch. No water is needed, making it a drip-free option ideal for aromatherapy at night or when hosting friends, creating a calm, fragrant atmosphere in living areas, bedrooms and for quiet evenings.",
@@ -108,7 +108,7 @@ const PRODUCTS = [
     boxContents: ["1 × vaporiser", "1 × user manual"], warranty: "1 Year",
     care: "Use a damp cloth to wipe the vaporiser bowl after use.",
     about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." },
-  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, sku: "DM-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
+  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, dontPay: 25.99, sku: "DM-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
     imgs: ["assets/products/hd04.png", "assets/products/hd04-2.png", "assets/products/hd04-3.png", "assets/products/hd04-4.png", "assets/products/hd04-5.png", "assets/products/hd04-6.png", "assets/products/hd04-7.png"],
     colours: [{ name: "Beige", hex: "#d9c7a8" }, { name: "Cerulean", hex: "#2a7fba" }, { name: "Forest Green", hex: "#33513a" }, { name: "Grey", hex: "#9b9b9b" }, { name: "Navy", hex: "#232f4d" }, { name: "Orange", hex: "#d5843a" }, { name: "Rosy Brown", hex: "#bc8f8f" }, { name: "Turquoise", hex: "#3fb8ad" }],
     sizes: [{ label: "30 × 50 cm", price: 15.99 }, { label: "45 × 45 cm", price: 18.99 }, { label: "50 × 50 cm", price: 21.99 }],
@@ -121,7 +121,22 @@ const PRODUCTS = [
       "Cushion cover only, insert not included"
     ],
     specs: { "Type": "Cushion cover", "Material": "Velvet", "Style": "Diamond quilted", "Closure": "Hidden zip" },
-    care: "Machine wash cold on a gentle cycle with like colours; do not tumble dry; cool iron if needed." }
+    care: "Machine wash cold on a gentle cycle with like colours; do not tumble dry; cool iron if needed." },
+
+  // ── Lifestyle ──
+  { id: "l07", name: "Soft Cotton Face Washer Towels — 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, dontPay: 45.99, sku: "DM-10105", tag: "New", ph: "", img: "assets/products/l07.png",
+    imgs: ["assets/products/l07.png", "assets/products/l07-2.png", "assets/products/l07-3.png", "assets/products/l07-4.png", "assets/products/l07-5.png", "assets/products/l07-6.png"],
+    colours: [{ name: "Teal", hex: "#2a8d8d" }, { name: "Navy", hex: "#1f2a44" }, { name: "Blue Suede", hex: "#6a7fa0" }, { name: "Pea Pod", hex: "#a3b18a" }, { name: "Coral", hex: "#e0897a" }, { name: "Burgundy", hex: "#7b2d3a" }, { name: "Chocolate Brown", hex: "#4a3428" }, { name: "Charcoal", hex: "#4a4a4f" }, { name: "Linen", hex: "#d9cbb2" }, { name: "Silver", hex: "#c7c7c7" }, { name: "White", hex: "#f2f0ea" }],
+    desc: "Wrap your everyday routine in softness with this set of 10 premium 450GSM cotton face washers. Beautifully plush yet quick-drying, with a satin-finish border and double-stitched hems that hold their shape wash after wash. Gentle on skin and endlessly useful for face, hands and travel, in a rich palette of eleven colours to suit any bathroom.",
+    features: [
+      "Set of 10 soft, absorbent 450GSM cotton face washers",
+      "Satin-process border for an elegant, simple finish",
+      "Double-stitched hemmed edges for lasting durability",
+      "Quick-drying and gentle on skin, ideal for face, hands & travel",
+      "Available in 11 versatile colours"
+    ],
+    specs: { "Material": "100% Cotton", "Weight": "450 GSM", "Pack size": "10 pieces", "Type": "Face washer / flannel" },
+    care: "Machine wash cold and separately before first use. Gentle cycle; wash dark colours separately. Do not bleach. Tumble dry low. Do not iron. Do not dry clean." }
 ];
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).

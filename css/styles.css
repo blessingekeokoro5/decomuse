@@ -1239,3 +1239,17 @@ em { font-style: italic; color: var(--rose-deep); }
 .pdp-size .ps-price { font-size: 0.8rem; color: var(--rose-deep); }
 .pdp-size:hover { border-color: var(--rose-soft); }
 .pdp-size.active { border-color: var(--rose); box-shadow: 0 0 0 1px var(--rose); }
+
+/* "Don't Pay" comparison price + info modal */
+.dont-pay { display: flex; align-items: center; gap: 7px; font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+.dp-tag { background: var(--ink); color: #fff; font-size: 0.62rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 3px 7px; border-radius: 5px; }
+.dont-pay s { color: var(--body); }
+.dp-info { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 0.95rem; padding: 0; line-height: 1; }
+.dp-info:hover { color: var(--rose-deep); }
+.dp-modal { position: fixed; inset: 0; z-index: 9998; display: none; align-items: center; justify-content: center; padding: 20px; }
+.dp-modal.open { display: flex; }
+.dp-overlay { position: absolute; inset: 0; background: rgba(43,35,32,0.55); }
+.dp-box { position: relative; z-index: 1; background: #fff; border-radius: 14px; max-width: 420px; padding: 28px 26px; box-shadow: var(--shadow); }
+.dp-box h4 { font-size: 1.15rem; margin: 0 0 10px; }
+.dp-box p { color: var(--body); font-size: 0.9rem; margin: 0; line-height: 1.6; }
+.dp-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--muted); }

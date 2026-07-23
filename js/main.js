@@ -229,3 +229,27 @@ function showZoom(src, alt) {
   lb.classList.add("open");
   document.body.style.overflow = "hidden";
 }
+
+/* ---- "Don't Pay" comparison-price info popup ---- */
+function showDontPayInfo(e) {
+  if (e) { e.preventDefault(); e.stopPropagation(); }
+  let m = document.getElementById("dontPayModal");
+  if (!m) {
+    m = document.createElement("div");
+    m.id = "dontPayModal";
+    m.className = "dp-modal";
+    m.innerHTML =
+      '<div class="dp-overlay"></div>' +
+      '<div class="dp-box" role="dialog" aria-label="About the Don\'t Pay price">' +
+        '<button class="dp-close" aria-label="Close">✕</button>' +
+        '<h4>About the “Don’t Pay” price</h4>' +
+        '<p>The <strong>Don’t Pay</strong> price is the price at which the same, or a nearly identical, item is being offered for sale, or has been offered for sale recently. It may refer to our own price elsewhere, or to the price of another seller. DecoMuse assumes sole responsibility for ensuring the accuracy of this price.</p>' +
+      '</div>';
+    document.body.appendChild(m);
+    const close = () => m.classList.remove("open");
+    m.querySelector(".dp-overlay").addEventListener("click", close);
+    m.querySelector(".dp-close").addEventListener("click", close);
+    document.addEventListener("keydown", (ev) => { if (ev.key === "Escape") close(); });
+  }
+  m.classList.add("open");
+}
