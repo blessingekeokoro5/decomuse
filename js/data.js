@@ -107,13 +107,7 @@ const PRODUCTS = [
     dimensions: "4cm H x 6.7cm W x 5.5cm D", weight: "0.55 kg",
     boxContents: ["1 × vaporiser", "1 × user manual"], warranty: "1 Year",
     care: "Use a damp cloth to wipe the vaporiser bowl after use.",
-    about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." },
-
-  // ── Health & Wellness ──
-  { id: "h10", name: "Nude by Nature Complexion Essentials Starter Kit (Light)", brand: "Nude by Nature", cat: "Health & Wellness", price: 45.99, sku: "DM-32145", ph: "espresso", img: "assets/products/h10.png",
-    desc: "Your complexion, perfected in four easy steps. This mineral starter kit brings together a luminous foundation, finishing veil, soft blush and pro brushes in a chic travel case, for a natural, flawless glow wherever you go." },
-  { id: "h11", name: "Nude by Nature Glow & Perfect Christmas Gift Set", brand: "Nude by Nature", cat: "Health & Wellness", price: 25.01, tag: "New", sku: "DM-11234", ph: "rose", img: "assets/products/h11.png",
-    desc: "A radiant little gift set to glow and go. A beautifully boxed edit of mineral favourites that leaves skin luminous and naturally perfected, the perfect present, or a treat for yourself, this festive season." }
+    about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." }
 ];
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).
