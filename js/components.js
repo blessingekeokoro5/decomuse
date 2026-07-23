@@ -78,8 +78,10 @@ function buildHeader() {
       </div>`;
   }).join("");
 
-  const catTabs = MEGA_MENU.map(cat =>
-    `<li data-cat="${cat.key}"><a>${cat.label} ${IC.caret}</a></li>`).join("");
+  const catTabs = MEGA_MENU.map(cat => {
+    const href = cat.key === "hampers" ? "hampers.html" : "";
+    return `<li data-cat="${cat.key}"><a${href ? ` href="${href}"` : ""}>${cat.label} ${IC.caret}</a></li>`;
+  }).join("");
 
   // Mobile drawer mirrors the desktop category nav order:
   // categories first, then Styling & Design, About, Contact.
@@ -89,7 +91,7 @@ function buildHeader() {
     { label: "Contact", href: "contact.html" }
   ];
   const navMain = MEGA_MENU.map(c =>
-      `<li><a href="shop.html?cat=${encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
+      `<li><a href="${c.key === "hampers" ? "hampers.html" : "shop.html?cat=" + encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
     + mobilePlain.map(l => {
       const active = (l.href === page) ? "active" : "";
       return `<li><a class="${active}" href="${l.href}">${l.label}</a></li>`;
@@ -730,25 +732,20 @@ function buildMemberModal() {
   return `
   <div class="member-modal" id="memberModal" aria-hidden="true">
     <div class="member-overlay" id="memberOverlay"></div>
-    <div class="member-card single" role="dialog" aria-label="Join the DecoMuse Membership">
-      <button class="member-close" id="memberClose" aria-label="Close">✕</button>
+    <div class="member-card" role="dialog" aria-label="Join the DecoMuse Membership">
+      <div class="member-visual" style="background-image:url('assets/member-bg.jpg')"></div>
       <div class="member-body">
-        <span class="eyebrow">✦ The DecoMuse Membership</span>
-        <h3 class="member-title">Join the <em>Membership</em></h3>
-        <p>Become a DecoMuse member for <strong>member-only pricing</strong>, early access to every new collection, and a little treat on your birthday.</p>
-        <ul class="member-benefits">
-          <li><span class="mb-check">✓</span> Member-only pricing &amp; 20% off your first order</li>
-          <li><span class="mb-check">✓</span> A complimentary Muse Stylist AI session</li>
-          <li><span class="mb-check">✓</span> Early access to new collections &amp; seasonal edits</li>
-          <li><span class="mb-check">✓</span> Member offers, styling tips &amp; a birthday treat</li>
-        </ul>
-        <p class="member-join-note">Join free, just add your email and we'll set up your membership.</p>
+        <button class="member-close" id="memberClose" aria-label="Close">✕</button>
+        <span class="member-eyebrow">✦ DecoMuse Membership</span>
+        <h3 class="member-title">Get the <em>inside scoop</em></h3>
+        <p class="member-offer">Subscribe &amp; receive <strong>20% off</strong> your first order</p>
+        <p class="member-sub">Plus member-only pricing, early access to new collections, styling tips and a little birthday treat.</p>
         <form id="memberForm" class="member-form">
-          <input type="email" placeholder="Your email address" aria-label="Email" required>
-          <button type="submit" class="btn btn--primary btn--block">Join →</button>
+          <input type="email" placeholder="Enter your email address" aria-label="Email" required>
+          <button type="submit" class="btn btn--primary btn--block">Subscribe</button>
         </form>
-        <button class="member-later" id="memberLater">Maybe later</button>
-        <p class="member-terms">Standard DecoMuse <a href="policy.html?doc=terms">Terms &amp; Conditions</a> apply</p>
+        <p class="member-terms">By subscribing you agree to receive DecoMuse emails; unsubscribe anytime. See our <a href="policy.html?doc=privacy">Privacy Policy</a> &amp; <a href="policy.html?doc=terms">Terms</a>. *T&amp;C's apply.</p>
+        <button class="member-later" id="memberLater">No thanks</button>
       </div>
     </div>
   </div>`;
@@ -1099,6 +1096,7 @@ function wireNav() {
       li.addEventListener("mouseenter", () => openMega(li.dataset.cat));
       li.addEventListener("mouseleave", closeMega);
       li.querySelector("a").addEventListener("click", (e) => {
+        if (e.currentTarget.getAttribute("href")) return; // real link (Gift Baskets & Hampers → hampers.html)
         e.preventDefault();
         window.location.href = "shop.html?cat=" + encodeURIComponent(MEGA_MENU.find(m => m.key === li.dataset.cat).label);
       });

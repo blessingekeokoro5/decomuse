@@ -1185,3 +1185,13 @@ em { font-style: italic; color: var(--rose-deep); }
 .cc-line { width: 62px; height: 1px; background: rgba(255,255,255,0.75); margin: 12px 0; }
 .cc-sub { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500;
   letter-spacing: 0.08em; font-size: clamp(1.15rem, 2.6vw, 1.7rem); }
+
+/* Membership modal — two-panel "inside scoop" style */
+.member-visual { background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 360px; padding: 0; }
+.member-body { position: relative; text-align: center; }
+.member-eyebrow { display: block; text-transform: uppercase; letter-spacing: 0.26em; font-size: 0.72rem; color: var(--rose-deep); margin-bottom: 14px; }
+.member-body .member-offer { font-size: 1.1rem; color: var(--ink); margin: 0 0 10px; }
+.member-body .member-offer strong { color: var(--rose-deep); }
+.member-body .member-sub { color: var(--muted); font-size: 0.9rem; margin: 0 0 20px; }
+.member-terms { text-transform: none; letter-spacing: normal; font-size: 0.68rem; text-align: center; margin-top: 14px; line-height: 1.5; }
+.member-terms a { color: var(--rose-deep); }
