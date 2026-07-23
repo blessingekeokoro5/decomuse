@@ -258,6 +258,20 @@ function buildFooter() {
         </div>
       </div>
 
+      <div class="app-soon">
+        <div class="app-soon-copy">
+          <span class="app-badge">📱 Coming soon</span>
+          <h4>The DecoMuse app is on its way</h4>
+          <p>Shop, style and get inspired on the go. Got an idea or a feature you'd love? Tell us, we're building it for you.</p>
+        </div>
+        <form class="app-soon-form" data-demo-form data-subject="DecoMuse App — suggestion" data-success-msg="Thank you! Your app suggestion has been sent, we really appreciate it. 💛">
+          <input type="email" placeholder="Your email (optional)" aria-label="Email">
+          <textarea placeholder="Your suggestion for the DecoMuse app…" aria-label="App suggestion" required></textarea>
+          <button type="submit" class="btn btn--primary">Send suggestion</button>
+          <div class="form-success"></div>
+        </form>
+      </div>
+
       <div class="pay-chips">
         ${payments.map(p => `<span class="pay-chip">${p}</span>`).join("")}
       </div>

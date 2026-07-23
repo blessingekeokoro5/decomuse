@@ -1195,3 +1195,21 @@ em { font-style: italic; color: var(--rose-deep); }
 .member-body .member-sub { color: var(--muted); font-size: 0.9rem; margin: 0 0 20px; }
 .member-terms { text-transform: none; letter-spacing: normal; font-size: 0.68rem; text-align: center; margin-top: 14px; line-height: 1.5; }
 .member-terms a { color: var(--rose-deep); }
+
+/* Footer: DecoMuse app coming soon + suggestion box */
+.app-soon { display: grid; grid-template-columns: 1fr 1.1fr; gap: 34px; align-items: center;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 16px;
+  padding: 26px 30px; margin: 8px 0 30px; }
+.app-badge { display: inline-block; background: var(--rose); color: #fff; font-size: 0.7rem; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 5px 12px; border-radius: 20px; }
+.app-soon-copy h4 { color: #fff; font-size: 1.3rem; margin: 12px 0 6px; }
+.app-soon-copy p { color: #ddccc2; font-size: 0.9rem; margin: 0; max-width: 420px; }
+.app-soon-form { display: grid; gap: 10px; }
+.app-soon-form input, .app-soon-form textarea { width: 100%; border: 1px solid rgba(255,255,255,0.22);
+  border-radius: 10px; padding: 11px 14px; font-family: var(--font-body); font-size: 0.9rem;
+  background: rgba(255,255,255,0.08); color: #fff; }
+.app-soon-form input::placeholder, .app-soon-form textarea::placeholder { color: rgba(255,255,255,0.55); }
+.app-soon-form textarea { min-height: 72px; resize: vertical; }
+.app-soon-form input:focus, .app-soon-form textarea:focus { outline: none; border-color: var(--rose-soft); }
+.app-soon-form button { justify-self: start; }
+@media (max-width: 700px) { .app-soon { grid-template-columns: 1fr; gap: 18px; padding: 22px; } }
