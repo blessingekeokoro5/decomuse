@@ -76,6 +76,14 @@
       document.querySelectorAll(".pdp-swatch").forEach((s) => s.classList.remove("active"));
       if (btn) btn.classList.add("active");
     }
+    let pdpSize = null, pdpSizePrice = null;
+    function pdpSetSize(label, price, btn) {
+      pdpSize = label; pdpSizePrice = price;
+      const nm = document.getElementById("pdpSizeName"); if (nm) nm.textContent = label;
+      const pe = document.getElementById("pdpPrice"); if (pe) pe.textContent = money(price);
+      document.querySelectorAll(".pdp-size").forEach((s) => s.classList.remove("active"));
+      if (btn) btn.classList.add("active");
+    }
     function blurb(p) {
       const materials = { "Living/Indoor":"crafted for everyday comfort and effortless style",
         "Bedroom":"designed to bring calm and warmth to your space",
@@ -174,6 +182,8 @@
       document.title = p.name + ", DecoMuse";
       const rev = reviewStats(p);
       pdpColour = (p.colours && p.colours.length) ? p.colours[0].name : null;
+      pdpSize = (p.sizes && p.sizes.length) ? p.sizes[0].label : null;
+      pdpSizePrice = (p.sizes && p.sizes.length) ? p.sizes[0].price : null;
       document.getElementById("pdpCrumb").innerHTML = `<a href="index.html">Home</a> / <a href="shop.html">Shop</a> / ${p.name}`;
       const was = p.was ? `<small>${money(p.was)}</small>` : "";
       const saved = isWishlisted(p.id);
@@ -199,7 +209,7 @@
             ${p.brand ? `<div class="pdp-brand">${p.brand}</div>` : `<span class="cat">${p.cat}</span>`}
             <h1>${p.name}</h1>
             <div class="stars" style="margin-bottom:10px">★★★★★ <span style="color:var(--muted);font-size:0.85rem">${rev.avg.toFixed(1)} · ${rev.total} reviews</span></div>
-            <div class="price">${money(p.price)}${was}</div>
+            <div class="price" id="pdpPrice">${money((p.sizes && p.sizes.length) ? p.sizes[0].price : p.price)}${was}</div>
             ${p.memberPrice ? `<div class="member-price" style="margin-top:6px">✦ Members price ${money(p.memberPrice)} <a href="#" onclick="if(typeof openMemberModal==='function')openMemberModal();return false;" style="font-size:0.82rem">Join free →</a></div>` : ""}
             <p style="margin-top:16px">${p.desc || blurb(p)}</p>
             <ul class="pdp-detail-list">
@@ -209,6 +219,10 @@
               ${p.custom ? `<li><span>Made to order</span><span style="color:var(--rose-deep)">Customisable · allow extra time</span></li>` : ""}
               <li><span>Availability</span><span style="color:var(--forest)">In stock</span></li>
             </ul>
+            ${p.sizes && p.sizes.length ? `<div class="pdp-sizes">
+              <div class="pdp-size-label">Size: <strong id="pdpSizeName">${p.sizes[0].label}</strong></div>
+              <div class="pdp-size-opts">${p.sizes.map((s, i) => `<button type="button" class="pdp-size ${i === 0 ? 'active' : ''}" onclick="pdpSetSize('${s.label.replace(/'/g, "\\'")}', ${s.price}, this)"><span>${s.label}</span><span class="ps-price">${money(s.price)}</span></button>`).join("")}</div>
+            </div>` : ""}
             ${p.colours && p.colours.length ? `<div class="pdp-colours">
               <div class="pdp-colour-label">Colour: <strong id="pdpColourName">${p.colours[0].name}</strong></div>
               <div class="pdp-swatches">${p.colours.map((c, i) => `<button type="button" class="pdp-swatch ${i === 0 ? 'active' : ''}" style="background:${c.hex}" aria-label="${c.name}" title="${c.name}" onclick="pdpSetColour('${c.name.replace(/'/g, "\\'")}', this)"></button>`).join("")}</div>
@@ -217,11 +231,11 @@
               <div class="qty">
                 <button onclick="setPdpQty(-1)">−</button><span id="pdpQty">1</span><button onclick="setPdpQty(1)">+</button>
               </div>
-              <button class="btn btn--primary" onclick="addToCart('${p.id}', pdpQty, pdpColour)">Add to cart</button>
+              <button class="btn btn--primary" onclick="addToCart('${p.id}', pdpQty, pdpColour, pdpSize, pdpSizePrice)">Add to cart</button>
               <button class="btn btn--outline" onclick="toggleWishlist('${p.id}', this)">${saved ? "♥ Saved" : "♡ Save"}</button>
             </div>
             <div class="pdp-trust">
-              <span>🚚 Free shipping over $300</span><span>↩️ 30-day returns</span><span>🔒 Secure checkout</span>
+              <span>🚚 Free shipping over $500</span><span>↩️ 30-day returns</span><span>🔒 Secure checkout</span>
             </div>
             <a class="pdp-trade" href="trade.html">🧳 <span><strong>Shopping for a business?</strong> Join our Trade &amp; Commercial Program for exclusive trade pricing →</span></a>
           </div>

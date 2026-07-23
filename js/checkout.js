@@ -6,7 +6,7 @@
 
 // Delivery is calculated from the destination country.
 const SHIP_RATES = {
-  "Australia":   { flat: 19, freeOver: 300 },
+  "Australia":   { flat: 19, freeOver: 500 },
   "New Zealand": { flat: 39, freeOver: 500 }
 };
 function shipCountry() {
@@ -55,7 +55,7 @@ function renderCheckout() {
   const lines = cart.map(i => `
     <div class="co-line">
       <span class="co-thumb"><span class="ph ${i.ph}" data-label="${i.name}"></span><span class="co-qty">${i.qty}</span></span>
-      <span class="co-name">${i.name}${i.colour ? ` · ${i.colour}` : ""}${i.contents ? `<small>${i.contents}</small>` : ""}</span>
+      <span class="co-name">${i.name}${(i.colour || i.size) ? ` · ${[i.colour, i.size].filter(Boolean).join(" · ")}` : ""}${i.contents ? `<small>${i.contents}</small>` : ""}</span>
       <span class="co-price">${money(i.price * i.qty)}</span>
     </div>`).join("");
 
@@ -138,7 +138,7 @@ async function startPayment(e) {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          items: cart.map(i => ({ id: i.id, name: i.colour ? i.name + " (" + i.colour + ")" : i.name, price: i.price, qty: i.qty })),
+          items: cart.map(i => { const v = [i.colour, i.size].filter(Boolean).join(", "); return { id: i.id, name: v ? i.name + " (" + v + ")" : i.name, price: i.price, qty: i.qty }; }),
           coupon: t.coupon, shipping: t.shipping, customer
         })
       });

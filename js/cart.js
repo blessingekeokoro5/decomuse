@@ -17,24 +17,27 @@ function cartTotal() { return getCart().reduce((n, i) => n + i.price * i.qty, 0)
 
 function findProduct(id) { return PRODUCTS.find(p => p.id === id); }
 
-function addToCart(id, qty = 1, colour = null) {
+// Cart lines are keyed by product + colour + size so variants are separate lines.
+function addToCart(id, qty = 1, colour = null, size = null, price = null) {
   const p = findProduct(id);
   if (!p) return;
+  const unitPrice = (price != null) ? price : p.price;
+  const key = [id, colour || "", size || ""].join("|");
   const cart = getCart();
-  const line = cart.find(i => i.id === id);
-  if (line) { line.qty += qty; if (colour) line.colour = colour; }
-  else cart.push({ id: p.id, name: p.name, price: p.price, cat: p.cat, ph: p.ph, qty, colour: colour || undefined });
+  const line = cart.find(i => (i.key || i.id) === key);
+  if (line) line.qty += qty;
+  else cart.push({ id: p.id, key, name: p.name, price: unitPrice, cat: p.cat, ph: p.ph, qty, colour: colour || undefined, size: size || undefined });
   saveCart(cart);
-  showToast(`Added “${p.name}${colour ? " · " + colour : ""}” to your cart`);
+  showToast(`Added “${p.name}${colour ? " · " + colour : ""}${size ? " · " + size : ""}” to your cart`);
   if (typeof renderCartPage === "function") renderCartPage();
 }
-function removeFromCart(id) {
-  saveCart(getCart().filter(i => i.id !== id));
+function removeFromCart(key) {
+  saveCart(getCart().filter(i => (i.key || i.id) !== key));
   if (typeof renderCartPage === "function") renderCartPage();
 }
-function setQty(id, qty) {
+function setQty(key, qty) {
   const cart = getCart();
-  const line = cart.find(i => i.id === id);
+  const line = cart.find(i => (i.key || i.id) === key);
   if (!line) return;
   line.qty = Math.max(1, qty);
   saveCart(cart);
@@ -138,7 +141,7 @@ function productCard(p) {
       <div class="card-body">
         <span class="cat">${p.cat}</span>
         <h3><a href="product.html?id=${p.id}">${p.name}</a></h3>
-        <div class="price">${money(p.price)}${was}</div>
+        <div class="price">${p.sizes && p.sizes.length ? "from " : ""}${money(p.price)}${was}</div>
         ${p.memberPrice ? `<div class="member-price">✦ Members ${money(p.memberPrice)}</div>` : ""}
         ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
         <div class="product-foot">

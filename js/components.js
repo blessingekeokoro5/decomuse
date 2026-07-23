@@ -86,7 +86,7 @@ function buildHeader() {
   // Mobile drawer mirrors the desktop category nav order:
   // categories first, then Styling & Design, About, Contact.
   const mobilePlain = [
-    { label: "Styling &amp; Design", href: "staging.html" },
+    { label: "Our Services", href: "staging.html" },
     { label: "About", href: "about.html" },
     { label: "Contact", href: "contact.html" }
   ];
@@ -100,7 +100,7 @@ function buildHeader() {
   return `
   <div class="top-utility">
     <div class="container top-utility-inner">
-      <div class="tu-left"><a href="policy.html?doc=returns">✓ 30-Day Returns · Free shipping over $300</a></div>
+      <div class="tu-left"><a href="policy.html?doc=returns">✓ 30-Day Returns · Free shipping over $500</a></div>
       <div class="tu-right">
         <a href="staging.html#book">Book Consult</a>
         <a href="support.html">Help Centre</a>
@@ -176,7 +176,7 @@ function buildHeader() {
     <div class="nav-cats-row" id="navCatsRow">
       <div class="container">
         <ul class="nav-cats" id="navCats">${catTabs}
-          <li class="nav-cat-plain"><a href="staging.html">Styling &amp; Design</a></li>
+          <li class="nav-cat-plain"><a href="staging.html">Our Services</a></li>
         </ul>
       </div>
       ${megaMarkup}
@@ -875,7 +875,7 @@ function chatReply(text) {
     html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Muse Stylist AI")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "Home Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
 
   else if (has(/\b(ship|shipping|deliver|delivery|post|postage|freight|worldwide|international|country|countries|how long|when.*(arrive|get|receive)|dispatch)\b/) && !has(/\buber\b/))
-    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $300</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>Australia &amp; New Zealand</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
+    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>Australia &amp; New Zealand</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
 
   else if (has(/\b(lifestyle|candle|throw|cushion|linen|homeware|kitchen|dining|stationery|everyday|essential)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Lifestyle")} edit is full of everyday beautiful things, candles, textiles, kitchen & dining and little essentials ✦.`;

@@ -27,7 +27,7 @@ const SHIP_COUNTRIES = ["AU", "NZ"];
 
 // Shipping rates (AUD) by destination. Free over the threshold, else a flat rate.
 const SHIP_RATES = {
-  "Australia":   { flat: 19, freeOver: 300 },
+  "Australia":   { flat: 19, freeOver: 500 },
   "New Zealand": { flat: 39, freeOver: 500 }
 };
 

@@ -54,23 +54,23 @@
       const sub = cartTotal();
       const disc = orderDiscount(sub);
       const discount = disc.amount;
-      const shipping = (sub - discount) >= 300 ? 0 : 19;
+      const shipping = (sub - discount) >= 500 ? 0 : 19;
       const lines = cart.map(i => `
         <div class="cart-line">
           <div class="thumb"><div class="ph ${i.ph}" data-label="${i.name}"></div></div>
           <div>
             <div style="color:var(--rose-deep);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase">${i.cat}</div>
-            <h3 style="font-size:1.1rem;margin:2px 0 6px">${i.name}${i.colour ? ` <small style="color:var(--muted);font-weight:400">· ${i.colour}</small>` : ""}</h3>
+            <h3 style="font-size:1.1rem;margin:2px 0 6px">${i.name}${(i.colour || i.size) ? ` <small style="color:var(--muted);font-weight:400">· ${[i.colour, i.size].filter(Boolean).join(" · ")}</small>` : ""}</h3>
             ${i.contents ? `<p style="font-size:0.8rem;color:var(--muted);margin:0 0 8px;max-width:380px">${i.contents}</p>` : ""}
             <div class="qty">
-              <button onclick="setQty('${i.id}', ${i.qty - 1})">−</button>
+              <button onclick="setQty('${i.key || i.id}', ${i.qty - 1})">−</button>
               <span>${i.qty}</span>
-              <button onclick="setQty('${i.id}', ${i.qty + 1})">+</button>
+              <button onclick="setQty('${i.key || i.id}', ${i.qty + 1})">+</button>
             </div>
           </div>
           <div style="text-align:right">
             <div class="price">${money(i.price * i.qty)}</div>
-            <button class="link-remove" onclick="removeFromCart('${i.id}')">Remove</button>
+            <button class="link-remove" onclick="removeFromCart('${i.key || i.id}')">Remove</button>
           </div>
         </div>`).join("");
 
@@ -84,7 +84,7 @@
             <div class="summary-row"><span>Subtotal</span><span>${money(sub)}</span></div>
             ${discount ? `<div class="summary-row" style="color:var(--forest)"><span>${disc.label}</span><span>−${money(discount)}</span></div>` : ""}
             <div class="summary-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
-            ${shipping !== 0 ? `<div style="font-size:0.82rem;color:var(--muted)">Free shipping over $300</div>` : ""}
+            ${shipping !== 0 ? `<div style="font-size:0.82rem;color:var(--muted)">Free shipping over $500</div>` : ""}
             <div class="summary-row total"><span>Total</span><span>${money(sub - discount + shipping)}</span></div>
 
             <div style="display:flex;gap:8px;margin:16px 0 6px">

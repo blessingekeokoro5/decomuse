@@ -1228,3 +1228,14 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* Region flag: top-utility on desktop, header on mobile (avoid duplicate) */
 @media (min-width: 821px) { .region-btn { display: none; } }
+
+/* Product size selector */
+.pdp-sizes { margin: 6px 0 4px; }
+.pdp-size-label { font-size: 0.92rem; color: var(--body); margin-bottom: 9px; }
+.pdp-size-opts { display: flex; flex-wrap: wrap; gap: 10px; }
+.pdp-size { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; background: #fff;
+  border: 1.5px solid var(--line); border-radius: 10px; padding: 9px 14px; cursor: pointer;
+  font-family: var(--font-body); font-size: 0.9rem; color: var(--ink); min-width: 104px; transition: border-color var(--tr); }
+.pdp-size .ps-price { font-size: 0.8rem; color: var(--rose-deep); }
+.pdp-size:hover { border-color: var(--rose-soft); }
+.pdp-size.active { border-color: var(--rose); box-shadow: 0 0 0 1px var(--rose); }

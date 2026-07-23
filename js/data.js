@@ -107,7 +107,21 @@ const PRODUCTS = [
     dimensions: "4cm H x 6.7cm W x 5.5cm D", weight: "0.55 kg",
     boxContents: ["1 × vaporiser", "1 × user manual"], warranty: "1 Year",
     care: "Use a damp cloth to wipe the vaporiser bowl after use.",
-    about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." }
+    about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." },
+  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, sku: "DM-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
+    imgs: ["assets/products/hd04.png", "assets/products/hd04-2.png", "assets/products/hd04-3.png", "assets/products/hd04-4.png", "assets/products/hd04-5.png", "assets/products/hd04-6.png", "assets/products/hd04-7.png"],
+    colours: [{ name: "Beige", hex: "#d9c7a8" }, { name: "Cerulean", hex: "#2a7fba" }, { name: "Forest Green", hex: "#33513a" }, { name: "Grey", hex: "#9b9b9b" }, { name: "Navy", hex: "#232f4d" }, { name: "Orange", hex: "#d5843a" }, { name: "Rosy Brown", hex: "#bc8f8f" }, { name: "Turquoise", hex: "#3fb8ad" }],
+    sizes: [{ label: "30 × 50 cm", price: 15.99 }, { label: "45 × 45 cm", price: 18.99 }, { label: "50 × 50 cm", price: 21.99 }],
+    desc: "Add instant warmth and texture to any sofa, bed or reading nook with this diamond-quilted velvet cushion cover. Irresistibly soft with a subtle sheen and a plush, tactile finish, it layers beautifully with linen, knits and neutrals, and comes in a curated palette of eight rich colours to suit any space. Choose your size and shade, and style your own way.",
+    features: [
+      "Plush diamond-quilted velvet with a soft, subtle sheen",
+      "Available in 8 curated colours and 3 versatile sizes",
+      "Hidden zip closure for a clean, seamless finish",
+      "Layers beautifully on sofas, beds and armchairs",
+      "Cushion cover only, insert not included"
+    ],
+    specs: { "Type": "Cushion cover", "Material": "Velvet", "Style": "Diamond quilted", "Closure": "Hidden zip" },
+    care: "Machine wash cold on a gentle cycle with like colours; do not tumble dry; cool iron if needed." }
 ];
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).
@@ -151,7 +165,7 @@ const HAMPER_MIN = 60;
 
 /* ---- Rotating announcement bar ---- */
 const ANNOUNCEMENTS = [
-  "✦ Free shipping on orders over $300, Australia-wide",
+  "✦ Free shipping on orders over $500, Australia-wide",
   "🌏 We ship to Australia &amp; New Zealand",
   "🌸 New fragrances &amp; home arrivals added weekly",
   "💝 Members save 20% on their first order, join free",
