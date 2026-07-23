@@ -106,7 +106,7 @@ function buildHeader() {
         <a href="support.html">Help Centre</a>
         <a href="about.html">About Us</a>
         <a href="trade.html">Trade</a>
-        <a href="account.html">Login</a>
+        <a href="contact.html">Contact Us</a>
         <button class="tu-region" type="button" aria-label="Choose your region" onclick="openCountryModal()"><span id="tuFlag">${DECOMUSE.flag}</span> AU ${IC.caret}</button>
       </div>
     </div>
@@ -177,8 +177,6 @@ function buildHeader() {
       <div class="container">
         <ul class="nav-cats" id="navCats">${catTabs}
           <li class="nav-cat-plain"><a href="staging.html">Styling &amp; Design</a></li>
-          <li class="nav-cat-plain"><a href="about.html">About</a></li>
-          <li class="nav-cat-plain"><a href="contact.html">Contact</a></li>
         </ul>
       </div>
       ${megaMarkup}
