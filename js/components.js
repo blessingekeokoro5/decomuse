@@ -87,8 +87,11 @@ function buildHeader() {
   // categories first, then Styling & Design, About, Contact.
   const mobilePlain = [
     { label: "Our Services", href: "staging.html" },
-    { label: "About", href: "about.html" },
-    { label: "Contact", href: "contact.html" }
+    { label: "Book Consult", href: "staging.html#book" },
+    { label: "Help Centre", href: "support.html" },
+    { label: "About Us", href: "about.html" },
+    { label: "Trade", href: "trade.html" },
+    { label: "Contact Us", href: "contact.html" }
   ];
   const navMain = MEGA_MENU.map(c =>
       `<li><a href="${c.key === "hampers" ? "hampers.html" : "shop.html?cat=" + encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
