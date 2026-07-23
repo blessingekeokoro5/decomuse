@@ -1174,3 +1174,14 @@ em { font-style: italic; color: var(--rose-deep); }
 @media (max-width: 560px) { .pf-grid { grid-template-columns: 1fr; } }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+/* About page: "DecoMuse Home Collectives" image overlay */
+.about-collective .ph { position: relative; }
+.collective-caption { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; color: #fff; padding: 20px;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.5); background: linear-gradient(rgba(40,30,25,0.12), rgba(40,30,25,0.44)); }
+.cc-brand { font-family: 'Playfair Display', Georgia, serif; font-weight: 600; letter-spacing: 0.05em;
+  font-size: clamp(2rem, 4.5vw, 3rem); line-height: 1; }
+.cc-line { width: 62px; height: 1px; background: rgba(255,255,255,0.75); margin: 12px 0; }
+.cc-sub { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500;
+  letter-spacing: 0.08em; font-size: clamp(1.15rem, 2.6vw, 1.7rem); }
