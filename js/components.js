@@ -98,6 +98,19 @@ function buildHeader() {
     }).join("");
 
   return `
+  <div class="top-utility">
+    <div class="container top-utility-inner">
+      <div class="tu-left"><a href="policy.html?doc=returns">✓ 30-Day Returns · Free shipping over $300</a></div>
+      <div class="tu-right">
+        <a href="staging.html#book">Book Consult</a>
+        <a href="support.html">Help Centre</a>
+        <a href="about.html">About Us</a>
+        <a href="trade.html">Trade</a>
+        <a href="account.html">Login</a>
+        <button class="tu-region" type="button" aria-label="Choose your region" onclick="openCountryModal()"><span id="tuFlag">${DECOMUSE.flag}</span> AU ${IC.caret}</button>
+      </div>
+    </div>
+  </div>
   <div class="announce"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span></div>
   <header class="site-header">
     <div class="container nav-utility">
