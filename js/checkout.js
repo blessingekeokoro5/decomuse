@@ -21,9 +21,13 @@ function checkoutTotals() {
   const afterDisc = sub - discount;
   const rate = SHIP_RATES[shipCountry()];
   const shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
-  const total = afterDisc + shipping;
+  const preGift = afterDisc + shipping;
+  const gc = window._giftCard || null;
+  // A gift card can be used online only when it covers the whole order.
+  const giftCard = (gc && gc.amount >= preGift && preGift > 0) ? preGift : 0;
+  const total = preGift - giftCard;
   const gst = Math.round((total / 11)); // GST component of a GST-inclusive total
-  return { sub, discount, discLabel: disc.label, shipping, total, gst, coupon: window._coupon, country: shipCountry() };
+  return { sub, discount, discLabel: disc.label, shipping, preGift, giftCard, giftCode: gc ? gc.code : null, total, gst, coupon: window._coupon, country: shipCountry() };
 }
 
 function updateTotalsUI() {
@@ -32,9 +36,31 @@ function updateTotalsUI() {
   const line = document.getElementById("coShipLine");
   if (line) line.innerHTML = `<strong>Standard</strong> · ${shipTxt} · 3 to 8 business days`;
   const s = document.getElementById("sumShip"); if (s) s.textContent = shipTxt;
+  const gr = document.getElementById("sumGiftRow"); if (gr) gr.style.display = t.giftCard ? "flex" : "none";
+  const gv = document.getElementById("sumGift"); if (gv) gv.textContent = "−" + money(t.giftCard);
   const tot = document.getElementById("sumTotal"); if (tot) tot.textContent = money(t.total);
   const g = document.getElementById("sumGst"); if (g) g.textContent = money(t.gst);
-  const btn = document.getElementById("payBtn"); if (btn) btn.textContent = `Pay ${money(t.total)} securely →`;
+  const btn = document.getElementById("payBtn"); if (btn) btn.textContent = t.total <= 0 ? "Complete order (gift card) →" : `Pay ${money(t.total)} securely →`;
+}
+
+function applyGiftCardCheckout() {
+  const msg = document.getElementById("coGiftMsg");
+  const code = (document.getElementById("coGiftInput").value || "").trim().toUpperCase();
+  const acc = getAccount();
+  if (!acc || !acc.email) { msg.style.color = "var(--rose-deep)"; msg.textContent = "Please log in to use your gift card / refund credit."; return; }
+  const gc = (acc.giftCards || []).find(g => (g.code || "").toUpperCase() === code && g.balance > 0);
+  if (!gc) { window._giftCard = null; msg.style.color = "var(--rose-deep)"; msg.textContent = "Gift card not found on your account, or it has no balance."; updateTotalsUI(); return; }
+  window._giftCard = { code: gc.code, amount: gc.balance };
+  const t = checkoutTotals();
+  if (t.giftCard <= 0) {
+    window._giftCard = null;
+    msg.style.color = "var(--rose-deep)";
+    msg.textContent = `Your gift card (${money(gc.balance)}) doesn't cover this order (${money(t.preGift)}). Reduce your cart to at or under your balance, or contact us for part-payment.`;
+    updateTotalsUI(); return;
+  }
+  msg.style.color = "var(--forest)";
+  msg.textContent = `✓ Gift card applied — ${money(gc.balance)} available.`;
+  updateTotalsUI();
 }
 
 function renderCheckout() {
@@ -106,8 +132,17 @@ function renderCheckout() {
         <div class="summary-row"><span>Subtotal</span><span>${money(t.sub)}</span></div>
         ${t.discount ? `<div class="summary-row" style="color:var(--forest)"><span>${t.discLabel}</span><span>−${money(t.discount)}</span></div>` : ""}
         <div class="summary-row"><span>Shipping</span><span id="sumShip">${t.shipping === 0 ? "Free" : money(t.shipping)}</span></div>
+        <div class="summary-row" id="sumGiftRow" style="color:var(--forest);${t.giftCard ? "display:flex" : "display:none"}"><span>Gift card</span><span id="sumGift">−${money(t.giftCard)}</span></div>
         <div class="summary-row total"><span>Total</span><span id="sumTotal">${money(t.total)}</span></div>
         <div style="font-size:0.8rem;color:var(--muted);margin-top:4px">Includes GST <span id="sumGst">${money(t.gst)}</span></div>
+        <div style="margin-top:14px">
+          <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:6px">🎁 Gift card / refund credit (log in to use)</label>
+          <div style="display:flex;gap:8px">
+            <input id="coGiftInput" placeholder="DMGC-…" style="flex:1;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
+            <button type="button" class="btn btn--outline btn--sm" onclick="applyGiftCardCheckout()">Apply</button>
+          </div>
+          <div id="coGiftMsg" style="font-size:0.8rem;margin-top:6px"></div>
+        </div>
         <a href="cart.html" class="link-arrow" style="margin-top:16px;display:inline-flex">← Back to cart</a>
       </aside>
     </div>`;
@@ -123,6 +158,17 @@ async function startPayment(e) {
   const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE.stripe) || {};
   const cart = getCart();
   const t = checkoutTotals();
+
+  // Gift card covers the whole order → complete without Stripe (uses refund credit)
+  if (t.giftCard > 0 && t.total <= 0) {
+    const acc = getAccount();
+    if (acc) { const gc = (acc.giftCards || []).find(g => g.code === t.giftCode); if (gc) { gc.balance = Math.max(0, +(gc.balance - t.giftCard).toFixed(2)); saveAccount(acc); } }
+    localStorage.setItem("dm_last_order", JSON.stringify({ orderNo: "DM-" + (100000 + Math.floor(Math.random() * 899999)), total: 0, email: (acc && acc.email) || "" }));
+    localStorage.removeItem(CART_KEY); localStorage.removeItem("dm_coupon"); window._giftCard = null;
+    location.href = "order-confirmed.html";
+    return;
+  }
+
   const customer = {
     email: document.getElementById("coEmail").value,
     name: document.getElementById("coFirst").value + " " + document.getElementById("coLast").value,
