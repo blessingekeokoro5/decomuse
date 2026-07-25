@@ -21,6 +21,9 @@ const IC = {
   arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
 };
 
+/* Australian flag as inline SVG — renders everywhere (Windows can't draw the 🇦🇺 emoji). */
+const AU_FLAG_SVG = '<svg class="au-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><clipPath id="auJack"><rect width="30" height="20"/></clipPath><g clip-path="url(#auJack)"><path d="M0,0 30,20 M30,0 0,20" stroke="#fff" stroke-width="4"/><path d="M0,0 30,20 M30,0 0,20" stroke="#E4002B" stroke-width="2"/><rect x="13" width="4" height="20" fill="#fff"/><rect y="8" width="30" height="4" fill="#fff"/><rect x="13.75" width="2.5" height="20" fill="#E4002B"/><rect y="8.75" width="30" height="2.5" fill="#E4002B"/></g><circle cx="15" cy="30" r="2.6" fill="#fff"/><circle cx="46" cy="9" r="1.7" fill="#fff"/><circle cx="53" cy="19" r="1.7" fill="#fff"/><circle cx="46" cy="30" r="1.7" fill="#fff"/><circle cx="39" cy="19" r="1.7" fill="#fff"/><circle cx="46" cy="19.5" r="1" fill="#fff"/></svg>';
+
 /* ---- Logo loader: try common formats before falling back to the drawn mark ---- */
 const LOGO_SRCS = ["assets/logo.png", "assets/logo.jpg", "assets/logo.jpeg", "assets/logo.webp", "assets/logo.svg"];
 function nextLogo(img) {
@@ -110,7 +113,7 @@ function buildHeader() {
         <a href="about.html">About Us</a>
         <a href="trade.html">Trade</a>
         <a href="contact.html">Contact Us</a>
-        <button class="tu-region" type="button" aria-label="Choose your region" onclick="openCountryModal()"><span id="tuFlag">${DECOMUSE.flag}</span> AU ${IC.caret}</button>
+        <button class="tu-region" type="button" aria-label="Choose your region" onclick="openCountryModal()">${AU_FLAG_SVG}<span>AU</span> ${IC.caret}</button>
       </div>
     </div>
   </div>
