@@ -1022,11 +1022,24 @@ function initChat() {
   const nudgeX = document.getElementById("nudgeX");
   if (!fab || !panel) return;
 
-  let opened = false;
+  let opened = false, gated = false;
   const hideNudge = () => nudge && nudge.classList.remove("show");
+  const isMember = () => { const a = (typeof getAccount === "function") ? getAccount() : null; return !!(a && a.email); };
   const open = () => {
     panel.classList.add("open"); panel.setAttribute("aria-hidden", "false");
     fab.classList.add("engaged"); hideNudge();
+    if (!isMember()) {
+      // MuseStylist AI is a member perk — gate the chat until logged in
+      if (form) form.style.display = "none";
+      if (quick) quick.style.display = "none";
+      if (!gated) {
+        gated = true;
+        chatAppend("bot", `✦ <strong>MuseStylist AI</strong> is a member perk. ${link("account.html", "Log in or create a free account")} to start styling your space with me, it's free to join and only takes a minute! 💛`);
+      }
+      return;
+    }
+    if (form) form.style.display = "";
+    if (quick) quick.style.display = "";
     if (!opened) {
       opened = true;
       chatAppend("bot", `Hi, I'm the <strong>MuseStylist</strong> ✦ your personal shopping assistant. I can help you find a fragrance, wellness pick or home piece, build a gift hamper, or track an order, how can I help today?`);
