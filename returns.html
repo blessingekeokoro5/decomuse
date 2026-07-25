@@ -69,7 +69,7 @@
       <!-- LODGE -->
       <div class="rt-panel active" id="panel-lodge">
         <div class="rt-card">
-          <div class="rt-note">📦 <strong>How it works:</strong> submit your details, reason and photos → we generate a <strong>reference barcode</strong> → print it and attach it to your parcel → post it back <strong>at your own cost</strong> → once we receive it, choose a <strong>refund to your gift card</strong> or a <strong>replacement</strong>.</div>
+          <div class="rt-note">📦 <strong>How it works:</strong> submit your details, reason and photos → we generate a <strong>reference barcode</strong> → print it and attach it to your parcel → post it back <strong>at your own cost</strong> → once we receive it, choose whatever suits you: a <strong>refund to your original payment</strong>, an <strong>instant gift card</strong>, or an <strong>exchange / replacement</strong>. Flexible &amp; hassle-free. 💛</div>
           <div class="rt-note">🇦🇺 <strong>How to send it back:</strong> we accept returns via <strong>Australia Post</strong> for most items. For <strong>heavy or bulky items, please don't post them yet</strong> — we'll email you the best return method and address once your return has been reviewed.</div>
           <div class="form-card">
             <form id="returnForm">
@@ -82,6 +82,14 @@
                 <div class="field"><label>Reason for return</label>
                   <select id="rReason"><option>Faulty / damaged</option><option>Not as described</option><option>Changed my mind</option><option>Wrong item received</option><option>Other</option></select></div>
                 <div class="field"><label>Amount paid (for refund)</label><input id="rAmount" type="number" step="0.01" placeholder="e.g. 225.00"></div>
+              </div>
+              <div class="field"><label>Preferred resolution — choose what works for you</label>
+                <select id="rResolution">
+                  <option value="original">💳 Refund to my original payment method</option>
+                  <option value="giftcard">🎁 Refund to a gift card — instant, +5% bonus</option>
+                  <option value="exchange">🔀 Exchange for a different item</option>
+                  <option value="replacement">🔁 Replacement of the same item</option>
+                </select>
               </div>
               <div class="field"><label>Tell us more</label><textarea id="rComments" placeholder="Describe the issue so we can help quickly…" style="min-height:80px"></textarea></div>
               <div class="field"><label>Upload photos of the product</label>
@@ -149,6 +157,14 @@
       return `<div class="barcode">${bars}</div><div class="bc-num">${ref}</div>`;
     }
 
+    // The four flexible resolution options
+    const RES_LABELS = {
+      original: "Refund to original payment method",
+      giftcard: "Instant gift card (+5% bonus)",
+      exchange: "Exchange for a different item",
+      replacement: "Replacement of the same item"
+    };
+
     const STAGES = [
       { key: "received", label: "Ticket received" },
       { key: "review", label: "Under review" },
@@ -175,6 +191,7 @@
         product: document.getElementById("rProduct").value,
         reason: document.getElementById("rReason").value,
         amount: parseFloat(document.getElementById("rAmount").value) || 0,
+        preferred: document.getElementById("rResolution").value,
         comments: document.getElementById("rComments").value,
         photos: photoCount,
         status: "received",
@@ -187,7 +204,9 @@
       const data = [
         ["Reference", ref], ["Order", ticket.orderNo], ["Email", ticket.email],
         ["Product", ticket.product], ["Reason", ticket.reason],
-        ["Amount", ticket.amount ? money(ticket.amount) : ""], ["Photos attached", photoCount + ""],
+        ["Amount", ticket.amount ? money(ticket.amount) : ""],
+        ["Preferred resolution", RES_LABELS[ticket.preferred] || ticket.preferred],
+        ["Photos attached", photoCount + ""],
         ["Comments", ticket.comments]
       ].filter(d => d[1]);
       try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Return request " + ref); } catch (err) {}
@@ -222,14 +241,18 @@
           ${t.status === "item_received" && !t.resolution ? `
             <div class="resolve-box">
               <strong>Your item's arrived! How would you like to resolve it?</strong>
-              <p style="color:var(--muted);font-size:0.86rem;margin:6px 0 0">Refund goes to a gift card on your account that never expires, or we'll send a similar replacement.</p>
-              <div class="btn-row">
-                <button class="btn btn--primary" onclick="resolveReturn('${t.ref}','refund')">💳 Refund to gift card</button>
-                <button class="btn btn--outline" onclick="resolveReturn('${t.ref}','replace')">🔁 Replace with similar</button>
+              <p style="color:var(--muted);font-size:0.86rem;margin:6px 0 4px">${t.preferred ? `You asked for <strong>${RES_LABELS[t.preferred] || t.preferred}</strong> — confirm below, or switch to another. 💛` : "Choose whatever suits you best — we keep it flexible. 💛"}</p>
+              <div class="btn-row" style="flex-wrap:wrap;justify-content:center;gap:10px">
+                <button class="btn ${t.preferred === "original" ? "btn--primary" : "btn--outline"}" onclick="resolveReturn('${t.ref}','original')">💳 Refund to original payment</button>
+                <button class="btn ${t.preferred === "giftcard" ? "btn--primary" : "btn--outline"}" onclick="resolveReturn('${t.ref}','giftcard')">🎁 Instant gift card +5%</button>
+                <button class="btn ${t.preferred === "exchange" ? "btn--primary" : "btn--outline"}" onclick="resolveReturn('${t.ref}','exchange')">🔀 Exchange for another item</button>
+                <button class="btn ${t.preferred === "replacement" ? "btn--primary" : "btn--outline"}" onclick="resolveReturn('${t.ref}','replacement')">🔁 Replacement, same item</button>
               </div>
             </div>` : ""}
-          ${t.resolution === "refund" ? `<div class="resolve-box"><strong>✓ Refund issued to your gift card</strong><p style="font-size:0.86rem;margin:6px 0 0">${money(t.amount)} added to a gift card on your account. Log in with <strong>${t.email}</strong> — your gift card code was emailed to you and is in <a href="account.html">My account</a>. Use it at checkout anytime; it never expires.</p></div>` : ""}
-          ${t.resolution === "replace" ? `<div class="resolve-box"><strong>✓ Replacement requested</strong><p style="font-size:0.86rem;margin:6px 0 0">We'll be in touch to arrange a similar replacement for your ${t.product}.</p></div>` : ""}
+          ${t.resolution === "original" ? `<div class="resolve-box"><strong>✓ Refund to your original payment method</strong><p style="font-size:0.86rem;margin:6px 0 0">${money(t.amount)} will be refunded to your original payment method within <strong>5 to 10 business days</strong>. We've received your request for <strong>${t.product}</strong>.</p></div>` : ""}
+          ${t.resolution === "giftcard" ? `<div class="resolve-box"><strong>✓ Instant gift card issued</strong><p style="font-size:0.86rem;margin:6px 0 0">${money(t.giftAmount || t.amount)} added to a gift card on your account (includes a little 5% thank-you bonus). Log in with <strong>${t.email}</strong> — your code was emailed to you and is in <a href="account.html">My account</a>. Use it at checkout anytime; it never expires.</p></div>` : ""}
+          ${t.resolution === "exchange" ? `<div class="resolve-box"><strong>✓ Exchange requested</strong><p style="font-size:0.86rem;margin:6px 0 0">We'll email you options to exchange your <strong>${t.product}</strong> for a different item of equal value.</p></div>` : ""}
+          ${t.resolution === "replacement" ? `<div class="resolve-box"><strong>✓ Replacement requested</strong><p style="font-size:0.86rem;margin:6px 0 0">We'll arrange a brand-new replacement of your <strong>${t.product}</strong> and be in touch shortly.</p></div>` : ""}
           ${t.status !== "resolved" ? `<p style="text-align:center;margin-top:14px"><button class="btn btn--ghost btn--sm" onclick="advanceReturn('${t.ref}')">▶ Simulate next step (demo)</button></p>` : ""}
         </div>`).join("");
     }
@@ -245,23 +268,39 @@
       saveReturns(all); trackReturns();
     }
 
-    // Resolve: refund to gift card, or replace
+    // Resolve: refund to original payment, instant gift card, or exchange/replacement
     function resolveReturn(ref, choice) {
       const all = getReturns();
       const t = all.find(x => x.ref === ref); if (!t) return;
       const acc = getAccount();
-      if (!acc || !acc.email) { showToast("Please log in to receive your gift card refund"); location.href = "account.html"; return; }
+
+      if (choice === "giftcard") {
+        // Gift card credit is tied to an account, so it needs a login.
+        if (!acc || !acc.email) { showToast("Please log in to receive your gift card"); location.href = "account.html"; return; }
+      }
       t.resolution = choice; t.status = "resolved";
-      if (choice === "refund") {
+
+      if (choice === "original") {
+        const data = [["Refund to", "Original payment method"], ["Amount", money(t.amount)], ["Customer", t.email], ["Return", ref], ["Product", t.product]];
+        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Refund to original payment " + ref); } catch (e) {}
+        showToast("Refund to your original payment requested 💳");
+      } else if (choice === "giftcard") {
+        // A small 5% bonus to encourage keeping the value with us.
+        t.giftAmount = +(t.amount * 1.05).toFixed(2);
         const code = "DMGC-" + Math.floor(100000 + Math.random() * 899999);
         acc.giftCards = acc.giftCards || [];
-        acc.giftCards.push({ code, balance: t.amount, issued: todayAU(), from: ref });
+        acc.giftCards.push({ code, balance: t.giftAmount, issued: todayAU(), from: ref });
         saveAccount(acc);
-        // Notify team / "email" the gift card
-        const data = [["Gift card issued", code], ["Amount", money(t.amount)], ["To", t.email], ["From return", ref]];
+        const data = [["Gift card issued", code], ["Amount (incl. 5% bonus)", money(t.giftAmount)], ["To", t.email], ["From return", ref]];
         try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Gift card refund " + code); } catch (e) {}
-        showToast("Refund added to your gift card 💳");
+        showToast("Instant gift card added 🎁 (+5% bonus)");
+      } else if (choice === "exchange") {
+        const data = [["Resolution", "Exchange for a different item"], ["Customer", t.email], ["Return", ref], ["Product", t.product]];
+        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Exchange request " + ref); } catch (e) {}
+        showToast("Exchange requested 🔀");
       } else {
+        const data = [["Resolution", "Replacement of the same item"], ["Customer", t.email], ["Return", ref], ["Product", t.product]];
+        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Replacement request " + ref); } catch (e) {}
         showToast("Replacement requested 🔁");
       }
       saveReturns(all); trackReturns();

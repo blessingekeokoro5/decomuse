@@ -268,7 +268,7 @@ function buildFooter() {
         <div class="fcol footer-trust">
           <h4>Rating &amp; trust</h4>
           <div class="ft-stars">★★★★★</div>
-          <div class="ft-score">4.7 / 5</div>
+          <div class="ft-score">4.9 / 5</div>
           <a class="ft-reviews" href="index.html#reviews">Read our customer reviews →</a>
           <div class="ft-abn">ABN ${DECOMUSE.abn}</div>
         </div>

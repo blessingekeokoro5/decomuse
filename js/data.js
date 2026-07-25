@@ -184,7 +184,7 @@ const ANNOUNCEMENTS = [
   "🌏 We ship to Australia &amp; New Zealand",
   "🌸 New fragrances &amp; home arrivals added weekly",
   "💝 Members save 20% on their first order, join free",
-  "⭐ Loved by 500+ Australian homes · 4.7★ average review",
+  "⭐ Loved by 500+ Australian homes · 4.9★ average review",
   "🎁 Build your own luxury hamper, gifting made effortless",
   "💡 Tip: tap the ♡ on any piece to save it to your wishlist for later",
   "💬 For enquiries, message us on WhatsApp · Proudly Australian 🇦🇺"
