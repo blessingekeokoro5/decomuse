@@ -15,7 +15,7 @@ const DECOMUSE = {
   currency: "$",
   formEmail: "decormuseofficial@outlook.com",
   formEndpoint: "",
-  formAccessKey: "",
+  formAccessKey: "f59d2f99-262b-46a0-987c-d94bcfe4b1bb",
   stripe: { publishableKey: "", checkoutEndpoint: "/.netlify/functions/create-checkout-session" },
   bookingsUrl: "",
   availability: { 0: null, 1: [9, 17], 2: [9, 17], 3: [9, 17], 4: [9, 17], 5: [9, 17], 6: [10, 16] },
