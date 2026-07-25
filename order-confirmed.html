@@ -44,6 +44,35 @@
       } catch (e) {}
       updateCartCount();
     })();
+
+    /* Email any purchased gift cards to their recipients (once, after payment). */
+    (async function sendGiftCards() {
+      let cart = [];
+      try { cart = getCart(); } catch (e) { return; }
+      const cards = cart.filter(i => i.giftCard && i.giftCard.code && i.giftCard.email);
+      if (!cards.length) return;
+
+      let sent = [];
+      try { sent = JSON.parse(localStorage.getItem("dm_giftcards_sent") || "[]"); } catch (e) {}
+      const endpoint = ((typeof DECOMUSE !== "undefined" && DECOMUSE.giftCardEndpoint) || "/.netlify/functions/send-gift-card");
+
+      for (const item of cards) {
+        const gc = item.giftCard;
+        if (sent.indexOf(gc.code) !== -1) continue;          // already emailed
+        try {
+          const res = await fetch(endpoint, {
+            method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+            body: JSON.stringify(gc)
+          });
+          const data = await res.json().catch(() => ({}));
+          if (res.ok && data.ok) { sent.push(gc.code); }
+        } catch (e) { /* leave unsent; will retry if page reloads */ }
+      }
+      localStorage.setItem("dm_giftcards_sent", JSON.stringify(sent));
+
+      // Gift cards are delivered — clear the cart now that the order is complete.
+      if (sent.length) { try { localStorage.removeItem(CART_KEY); updateCartCount(); } catch (e) {} }
+    })();
   </script>
 </body>
 </html>

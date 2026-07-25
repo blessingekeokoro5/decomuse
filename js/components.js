@@ -257,7 +257,6 @@ function buildFooter() {
             <a href="${DECOMUSE.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
             <a href="${DECOMUSE.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>
             <a href="mailto:${DECOMUSE.email}" aria-label="Email">${IC.mail}</a>
-            <a href="${DECOMUSE.socials.whatsapp}" target="_blank" rel="noopener" aria-label="WhatsApp">${IC.wa}</a>
           </div>
         </div>
 
