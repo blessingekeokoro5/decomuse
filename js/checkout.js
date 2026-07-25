@@ -52,12 +52,16 @@ function renderCheckout() {
   }
   const t = checkoutTotals();
   const acc = getAccount() || {};
-  const lines = cart.map(i => `
+  const lines = cart.map(i => {
+    const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
+    const src = (prod && (prod.img || (prod.imgs && prod.imgs[0]))) || ("assets/products/" + i.id + ".jpg");
+    return `
     <div class="co-line">
-      <span class="co-thumb"><span class="ph ${i.ph}" data-label="${i.name}"></span><span class="co-qty">${i.qty}</span></span>
+      <span class="co-thumb"><span class="ph ${i.ph}" data-label="${i.name}"><img class="ph-img" src="${src}" alt="${i.name}" onerror="this.remove()"></span><span class="co-qty">${i.qty}</span></span>
       <span class="co-name">${i.name}${(i.colour || i.size) ? ` · ${[i.colour, i.size].filter(Boolean).join(" · ")}` : ""}${i.contents ? `<small>${i.contents}</small>` : ""}</span>
       <span class="co-price">${money(i.price * i.qty)}</span>
-    </div>`).join("");
+    </div>`;
+  }).join("");
 
   wrap.innerHTML = `
     <div class="co-grid">

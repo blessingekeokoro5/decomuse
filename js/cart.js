@@ -159,3 +159,16 @@ function renderProducts(targetId, list) {
 }
 
 document.addEventListener("DOMContentLoaded", () => { updateCartCount(); updateWishCount(); });
+
+/* ---- Email my shopping list (opens the shopper's email app, pre-filled) ---- */
+function emailMyBag() {
+  const cart = getCart();
+  if (!cart.length) { showToast("Your shopping list is empty"); return; }
+  const origin = (location.origin && location.origin.indexOf("http") === 0) ? location.origin : "https://www.decomuse.com.au";
+  const lines = cart.map(i => {
+    const variant = [i.colour, i.size].filter(Boolean).join(", ");
+    return `• ${i.qty} x ${i.name}${variant ? " (" + variant + ")" : ""} — ${money(i.price * i.qty)}\n  ${origin}/product.html?id=${i.id}`;
+  }).join("\n\n");
+  const body = `Here's my DecoMuse shopping list 🛍️\n\n${lines}\n\nSubtotal: ${money(cartTotal())}\n\nShop the collection anytime: ${origin}/shop.html`;
+  window.location.href = "mailto:?subject=" + encodeURIComponent("My DecoMuse shopping list") + "&body=" + encodeURIComponent(body);
+}
