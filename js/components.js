@@ -117,6 +117,7 @@ function buildHeader() {
   <div class="announce"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span></div>
   <header class="site-header">
     <div class="container nav-utility">
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
       <a class="brand" href="index.html" aria-label="DecoMuse home">
         <img class="brand-logo-full" src="assets/logo.png" data-i="0" alt="DecoMuse" onload="this.closest('.brand').classList.add('has-logo')" onerror="nextLogo(this)">
         <span class="brand-mark">
@@ -150,6 +151,7 @@ function buildHeader() {
       </form>
       <div class="nav-utility-right">
         <button class="region-btn" id="regionBtn" aria-label="Choose region" title="Choose your region"><span id="regionFlag">🇦🇺</span></button>
+        <a class="icon-btn wish-link" href="wishlist.html" aria-label="Wishlist">${IC.heart}</a>
         <div class="account-menu" id="accountMenu">
           <a class="account-trigger" href="account.html">
             <span class="acc-label">My account</span>${IC.user}
@@ -172,7 +174,6 @@ function buildHeader() {
           </div>
         </div>
         <a class="icon-btn" href="cart.html" aria-label="Cart" title="Cart">${IC.bag}<span class="cart-count" id="cartCount">0</span></a>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
       </div>
     </div>
     <ul class="nav-main" id="navMain">${navMain}</ul>
