@@ -179,9 +179,11 @@
         <span class="eyebrow">Loved by our community</span>
         <h2>Customer reviews</h2>
         <div class="stars">★★★★★</div>
-        <div class="score">4.9 / 5 · 6 reviews</div>
+        <div class="score">4.9 / 5 · loved by 500+ Australian homes</div>
       </div>
-      <div class="grid grid-3 reveal" id="reviewsGrid"></div>
+    </div>
+    <div class="review-marquee reveal">
+      <div class="review-track" id="reviewsGrid"></div>
     </div>
   </section>
 
@@ -224,13 +226,16 @@
   <script>
     // Featured products (first 4 with tags) + reviews
     renderProducts("featuredGrid", PRODUCTS.filter(p => p.tag).slice(0, 4));
-    document.getElementById("reviewsGrid").innerHTML = REVIEWS.map(r => `
+    const reviewCard = r => `
       <article class="testi">
         <div class="stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</div>
         <h3>${r.title}</h3>
         <p>“${r.body}”</p>
         <div class="who">${r.who}</div>
-      </article>`).join("");
+      </article>`;
+    // Render the set twice so the marquee loops seamlessly (translateX -50%).
+    const shuffled = REVIEWS.slice().sort(() => Math.random() - 0.5);
+    document.getElementById("reviewsGrid").innerHTML = shuffled.map(reviewCard).join("") + shuffled.map(reviewCard).join("");
   </script>
 </body>
 </html>

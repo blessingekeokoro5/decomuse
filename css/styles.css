@@ -657,6 +657,19 @@ em { font-style: italic; color: var(--rose-deep); }
 .testi p { color: var(--body); font-size: 0.96rem; }
 .testi .who { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); margin-top: 16px; }
 .reviews-summary { text-align: center; margin-bottom: 44px; }
+
+/* Continuously sliding reviews marquee (homepage) */
+.review-marquee { overflow: hidden; position: relative; width: 100%;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.review-track { display: flex; gap: 24px; width: max-content; padding: 8px 12px;
+  animation: reviewScroll 80s linear infinite; }
+.review-marquee:hover .review-track { animation-play-state: paused; }
+.review-track .testi { flex: 0 0 330px; width: 330px; margin: 0; display: flex; flex-direction: column; }
+.review-track .testi p { flex: 1; }
+@keyframes reviewScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) { .review-track { animation: none; } }
+@media (max-width: 600px) { .review-track .testi { flex-basis: 275px; width: 275px; } .review-track { gap: 16px; } }
 .reviews-summary .stars { font-size: 1.3rem; }
 .reviews-summary .score { color: var(--muted); font-size: 0.95rem; margin-top: 8px; }
 
