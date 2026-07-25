@@ -170,10 +170,12 @@ function renderProducts(targetId, list) {
 
 document.addEventListener("DOMContentLoaded", () => { updateCartCount(); updateWishCount(); });
 
-/* ---- Email my shopping list (opens the shopper's email app, pre-filled) ---- */
-function emailMyBag() {
-  const cart = getCart();
-  if (!cart.length) { showToast("Your shopping list is empty"); return; }
+/* ---- Email my shopping list ----
+   If the Brevo email service is configured (server env var BREVO_API_KEY),
+   the list is sent FROM decormuseofficial@outlook.com TO the shopper, with
+   a copy to the business inbox. If not configured, it gracefully falls back
+   to opening the shopper's own email app pre-filled. */
+function bagMailtoFallback(cart) {
   const origin = (location.origin && location.origin.indexOf("http") === 0) ? location.origin : "https://www.decomuse.com.au";
   const lines = cart.map(i => {
     const variant = [i.colour, i.size].filter(Boolean).join(", ");
@@ -181,4 +183,33 @@ function emailMyBag() {
   }).join("\n\n");
   const body = `Here's my DecoMuse shopping list 🛍️\n\n${lines}\n\nSubtotal: ${money(cartTotal())}\n\nShop the collection anytime: ${origin}/shop.html`;
   window.location.href = "mailto:?subject=" + encodeURIComponent("My DecoMuse shopping list") + "&body=" + encodeURIComponent(body);
+}
+
+async function emailMyBag() {
+  const cart = getCart();
+  if (!cart.length) { showToast("Your shopping list is empty"); return; }
+
+  const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE) || {};
+  const endpoint = cfg.emailListEndpoint || "/.netlify/functions/send-shopping-list";
+
+  // Pre-fill with the logged-in member's email if we have one.
+  const acct = (typeof getAccount === "function" && getAccount()) || null;
+  const to = window.prompt("Enter the email address to send your shopping list to:", (acct && acct.email) || "");
+  if (to === null) return;                 // cancelled
+  if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(to.trim())) { showToast("Please enter a valid email address"); return; }
+
+  const items = cart.map(i => ({ id: i.id, name: i.name, qty: i.qty, price: i.price, colour: i.colour, size: i.size }));
+  showToast("Sending your shopping list…");
+  try {
+    const res = await fetch(endpoint, {
+      method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ to: to.trim(), items, subtotal: cartTotal() })
+    });
+    const data = await res.json().catch(() => ({}));
+    if (res.ok && data.ok) { showToast("Your shopping list is on its way ✉️"); return; }
+    // Service not configured yet → fall back to the shopper's email app.
+    bagMailtoFallback(cart);
+  } catch (e) {
+    bagMailtoFallback(cart);
+  }
 }
