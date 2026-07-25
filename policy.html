@@ -86,8 +86,7 @@
       return `<h2>${p.title}</h2>
         <p class="pol-updated">Last updated: ${POLICY_UPDATED}</p>
         <p class="pol-intro">${p.intro}</p>
-        ${p.body}
-        <div class="pol-disclaimer">These policies are provided as a general guide aligned with Australian law. They are not legal advice, we recommend having them reviewed by a qualified Australian legal professional for your business.</div>`;
+        ${p.body}`;
     }
     function toggleFaq(i) {
       const item = document.querySelector(`.faq-item[data-i="${i}"]`);
