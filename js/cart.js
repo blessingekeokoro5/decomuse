@@ -126,14 +126,24 @@ function nextProdImg(img) {
   else img.remove();
 }
 
+/* Stable per-product "Selling fast" flag (same subset every load).
+   Set p.hot = true/false on a product to force it on/off. */
+function sellingFast(p) {
+  if (typeof p.hot === "boolean") return p.hot;
+  let h = 0;
+  for (let i = 0; i < p.id.length; i++) h = (h * 31 + p.id.charCodeAt(i)) >>> 0;
+  return (h % 10) < 4; // ~a third to a half of products
+}
+
 /* ---- Product card markup ---- */
 function productCard(p) {
   const tag = p.tag ? `<span class="tag ${/sale/i.test(p.tag) ? 'sale' : ''}">${p.tag}</span>` : "";
+  const hot = sellingFast(p) ? `<span class="badge-hot">⚡ Selling fast</span>` : "";
   const was = p.was ? `<small>${money(p.was)}</small>` : "";
   return `
     <article class="card product" data-cat="${p.cat}">
       <div class="card-media">
-        ${tag}
+        <div class="card-badges">${hot}${tag}</div>
         <button class="wish ${isWishlisted(p.id) ? "on" : ""}" aria-label="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}</button>
         <a href="product.html?id=${p.id}" aria-label="${p.name}"><div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></a>
         <button class="zoom-btn" type="button" aria-label="Zoom image" onclick="openZoom(event, this)">${IC.search}</button>
