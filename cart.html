@@ -55,9 +55,12 @@
       const disc = orderDiscount(sub);
       const discount = disc.amount;
       const shipping = (sub - discount) >= 500 ? 0 : 19;
-      const lines = cart.map(i => `
+      const lines = cart.map(i => {
+        const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
+        const src = (prod && (prod.img || (prod.imgs && prod.imgs[0]))) || ("assets/products/" + i.id + ".jpg");
+        return `
         <div class="cart-line">
-          <div class="thumb"><div class="ph ${i.ph}" data-label="${i.name}"></div></div>
+          <div class="thumb"><div class="ph ${i.ph}" data-label="${i.name}"><img class="ph-img" src="${src}" alt="${i.name}" onerror="this.remove()"></div></div>
           <div>
             <div style="color:var(--rose-deep);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase">${i.cat}</div>
             <h3 style="font-size:1.1rem;margin:2px 0 6px">${i.name}${(i.colour || i.size) ? ` <small style="color:var(--muted);font-weight:400">· ${[i.colour, i.size].filter(Boolean).join(" · ")}</small>` : ""}</h3>
@@ -72,7 +75,8 @@
             <div class="price">${money(i.price * i.qty)}</div>
             <button class="link-remove" onclick="removeFromCart('${i.key || i.id}')">Remove</button>
           </div>
-        </div>`).join("");
+        </div>`;
+      }).join("");
 
       wrap.innerHTML = `
         <div class="split" style="align-items:flex-start;gap:44px">

@@ -213,6 +213,7 @@ function buildFooter() {
   ];
   const policyLinks = [
     { t: "General Conditions", h: "policy.html?doc=terms" },
+    { t: "Lodge a Return", h: "returns.html" },
     { t: "Returns & Warranty", h: "policy.html?doc=returns" },
     { t: "Delivery & Shipping", h: "policy.html?doc=delivery" },
     { t: "Privacy Policy", h: "policy.html?doc=privacy" },

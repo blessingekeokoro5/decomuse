@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Returns & Refunds — Lodge a Return | DecoMuse</title>
+  <meta name="description" content="Lodge a DecoMuse return, get a reference barcode, track your return status, and choose a refund to your gift card or a replacement.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .rt-tabs { display: flex; gap: 8px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+    .rt-panel { display: none; } .rt-panel.active { display: block; }
+    .rt-card { max-width: 720px; margin: 0 auto; }
+    .rt-note { background: var(--blush); border-radius: 10px; padding: 12px 16px; font-size: 0.88rem; color: var(--ink); margin: 0 0 20px; }
+    .rt-photos { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 10px; }
+    .rt-photos img { width: 64px; height: 64px; object-fit: cover; border-radius: 8px; border: 1px solid var(--line); }
+    /* Reference + barcode */
+    .rt-ref { text-align: center; background: #fff; border: 2px dashed var(--rose-soft); border-radius: 14px; padding: 26px; margin-top: 8px; }
+    .rt-ref h3 { margin: 0 0 4px; }
+    .barcode { display: flex; align-items: flex-end; justify-content: center; height: 66px; gap: 0; margin: 14px 0 6px; }
+    .bc-bar { background: var(--ink); height: 100%; display: inline-block; }
+    .bc-gap { background: #fff; height: 100%; display: inline-block; }
+    .bc-num { font-family: 'Jost', monospace; letter-spacing: 0.28em; font-size: 0.95rem; color: var(--ink); }
+    /* Status bar */
+    .status-bar { display: flex; justify-content: space-between; position: relative; margin: 26px 0 8px; }
+    .status-bar::before { content: ""; position: absolute; top: 15px; left: 6%; right: 6%; height: 3px; background: var(--line); z-index: 0; }
+    .status-step { position: relative; z-index: 1; text-align: center; flex: 1; }
+    .status-dot { width: 32px; height: 32px; border-radius: 50%; background: #fff; border: 3px solid var(--line); margin: 0 auto 8px; display: grid; place-items: center; font-size: 0.85rem; color: var(--muted); }
+    .status-step.done .status-dot { background: var(--forest); border-color: var(--forest); color: #fff; }
+    .status-step.current .status-dot { border-color: var(--rose); color: var(--rose-deep); }
+    .status-step small { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.02em; }
+    .status-step.done small, .status-step.current small { color: var(--ink); }
+    .resolve-box { background: var(--cream-2); border-radius: 12px; padding: 20px; margin-top: 22px; text-align: center; }
+    .resolve-box .btn-row { justify-content: center; margin-top: 14px; }
+    .rt-ticket { border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; margin-bottom: 16px; background: #fff; }
+    .rt-ticket-head { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+    .rt-pill { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; padding: 4px 10px; border-radius: 20px; background: var(--blush); color: var(--rose-deep); }
+    @media print { body > *:not(#printArea) { display: none; } }
+  </style>
+</head>
+<body data-page="returns.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Returns &amp; Refunds</div>
+      <span class="eyebrow">Returns · Refunds · Replacements</span>
+      <h1>Returns &amp; Refunds</h1>
+      <p>Lodge a return, get your reference barcode to attach to the parcel, track its progress, and choose a refund to your gift card or a replacement. Returns are sent at the customer's own cost.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="rt-tabs">
+        <button class="pill active" data-tab="lodge">Lodge a return</button>
+        <button class="pill" data-tab="track">Track a return</button>
+      </div>
+
+      <!-- LODGE -->
+      <div class="rt-panel active" id="panel-lodge">
+        <div class="rt-card">
+          <div class="rt-note">📦 <strong>How it works:</strong> submit your details, reason and photos → we generate a <strong>reference barcode</strong> → print it and attach it to your parcel → post it back <strong>at your own cost</strong> → once we receive it, choose a <strong>refund to your gift card</strong> or a <strong>replacement</strong>.</div>
+          <div class="form-card">
+            <form id="returnForm">
+              <div class="field-row">
+                <div class="field"><label>Order number</label><input id="rOrder" placeholder="DM-123456" required></div>
+                <div class="field"><label>Email (used at checkout)</label><input id="rEmail" type="email" required></div>
+              </div>
+              <div class="field"><label>Product being returned</label><input id="rProduct" placeholder="e.g. Fleur Sculptural Glass Vase" required></div>
+              <div class="field-row">
+                <div class="field"><label>Reason for return</label>
+                  <select id="rReason"><option>Faulty / damaged</option><option>Not as described</option><option>Changed my mind</option><option>Wrong item received</option><option>Other</option></select></div>
+                <div class="field"><label>Amount paid (for refund)</label><input id="rAmount" type="number" step="0.01" placeholder="e.g. 225.00"></div>
+              </div>
+              <div class="field"><label>Tell us more</label><textarea id="rComments" placeholder="Describe the issue so we can help quickly…" style="min-height:80px"></textarea></div>
+              <div class="field"><label>Upload photos of the product</label>
+                <input id="rPhotos" type="file" accept="image/*" multiple>
+                <div class="rt-photos" id="rPhotoPreview"></div>
+              </div>
+              <button type="submit" class="btn btn--primary btn--block" id="rSubmit">Lodge return &amp; generate barcode</button>
+              <div class="form-success" id="rSuccess"></div>
+            </form>
+          </div>
+          <div id="rResult"></div>
+        </div>
+      </div>
+
+      <!-- TRACK -->
+      <div class="rt-panel" id="panel-track">
+        <div class="rt-card">
+          <div class="form-card" style="margin-bottom:22px">
+            <div class="field-row">
+              <div class="field"><label>Reference or email</label><input id="tSearch" placeholder="RMA-… or your email"></div>
+              <div class="field" style="display:flex;align-items:flex-end"><button class="btn btn--primary btn--block" onclick="trackReturns()">Track return</button></div>
+            </div>
+          </div>
+          <div id="tResult"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    const RET_KEY = "dm_returns";
+    function getReturns() { try { return JSON.parse(localStorage.getItem(RET_KEY)) || []; } catch (e) { return []; } }
+    function saveReturns(r) { localStorage.setItem(RET_KEY, JSON.stringify(r)); }
+
+    // Tabs
+    document.querySelector(".rt-tabs").addEventListener("click", (e) => {
+      const b = e.target.closest("button"); if (!b) return;
+      document.querySelectorAll(".rt-tabs .pill").forEach(x => x.classList.toggle("active", x === b));
+      document.querySelectorAll(".rt-panel").forEach(p => p.classList.remove("active"));
+      document.getElementById("panel-" + b.dataset.tab).classList.add("active");
+    });
+
+    // Photo previews
+    const photoPrev = document.getElementById("rPhotoPreview");
+    document.getElementById("rPhotos").addEventListener("change", (e) => {
+      photoPrev.innerHTML = "";
+      [...e.target.files].slice(0, 6).forEach(f => {
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(f); photoPrev.appendChild(img);
+      });
+    });
+
+    // Barcode (visual, from the reference string)
+    function makeBarcode(ref) {
+      let bars = "";
+      for (let i = 0; i < ref.length; i++) {
+        const c = ref.charCodeAt(i);
+        bars += `<span class="bc-bar" style="width:${(c % 4) + 1}px"></span><span class="bc-gap" style="width:${(c % 3) + 1}px"></span>`;
+      }
+      return `<div class="barcode">${bars}</div><div class="bc-num">${ref}</div>`;
+    }
+
+    const STAGES = [
+      { key: "received", label: "Ticket received" },
+      { key: "review", label: "Under review" },
+      { key: "item_received", label: "Item received" },
+      { key: "resolved", label: "Resolved" }
+    ];
+    function statusBar(status) {
+      const idx = STAGES.findIndex(s => s.key === status);
+      return `<div class="status-bar">${STAGES.map((s, i) => {
+        const cls = i < idx ? "done" : (i === idx ? "current" : "");
+        return `<div class="status-step ${cls}"><div class="status-dot">${i < idx ? "✓" : i + 1}</div><small>${s.label}</small></div>`;
+      }).join("")}</div>`;
+    }
+
+    // Lodge a return
+    document.getElementById("returnForm").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const ref = "RMA-" + new Date().toISOString().slice(2, 10).replace(/-/g, "") + "-" + Math.floor(1000 + Math.random() * 8999);
+      const photoCount = document.getElementById("rPhotos").files.length;
+      const ticket = {
+        ref,
+        orderNo: document.getElementById("rOrder").value,
+        email: document.getElementById("rEmail").value.trim().toLowerCase(),
+        product: document.getElementById("rProduct").value,
+        reason: document.getElementById("rReason").value,
+        amount: parseFloat(document.getElementById("rAmount").value) || 0,
+        comments: document.getElementById("rComments").value,
+        photos: photoCount,
+        status: "received",
+        resolution: null,
+        date: todayAU()
+      };
+      const all = getReturns(); all.unshift(ticket); saveReturns(all);
+
+      // Email the returns request to the team
+      const data = [
+        ["Reference", ref], ["Order", ticket.orderNo], ["Email", ticket.email],
+        ["Product", ticket.product], ["Reason", ticket.reason],
+        ["Amount", ticket.amount ? money(ticket.amount) : ""], ["Photos attached", photoCount + ""],
+        ["Comments", ticket.comments]
+      ].filter(d => d[1]);
+      try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Return request " + ref); } catch (err) {}
+
+      document.getElementById("rSuccess").classList.add("show");
+      document.getElementById("rSuccess").innerHTML = "Return lodged! Your reference is below — please print it and attach it to your parcel.";
+      document.getElementById("rResult").innerHTML = `
+        <div class="rt-ref" id="printArea">
+          <h3>Return reference</h3>
+          <p style="color:var(--muted);font-size:0.88rem">Attach this to your parcel. Post it back at your own cost to the address we email you.</p>
+          ${makeBarcode(ref)}
+          ${statusBar("received")}
+          <button class="btn btn--outline btn--sm" style="margin-top:12px" onclick="window.print()">🖨️ Print barcode</button>
+        </div>`;
+      e.target.reset(); photoPrev.innerHTML = "";
+      document.getElementById("rResult").scrollIntoView({ behavior: "smooth" });
+    });
+
+    // Track returns
+    function trackReturns() {
+      const q = (document.getElementById("tSearch").value || "").trim().toLowerCase();
+      const all = getReturns();
+      const list = all.filter(t => t.ref.toLowerCase() === q || t.email === q);
+      const box = document.getElementById("tResult");
+      if (!q) { box.innerHTML = `<p class="rt-note">Enter your reference (RMA-…) or the email you lodged with.</p>`; return; }
+      if (!list.length) { box.innerHTML = `<div class="empty-state"><div class="em">🔎</div><h3>No returns found</h3><p>Check your reference or email, or lodge a new return.</p></div>`; return; }
+      box.innerHTML = list.map(t => `
+        <div class="rt-ticket">
+          <div class="rt-ticket-head"><strong>${t.ref}</strong><span class="rt-pill">${t.status.replace("_", " ")}</span></div>
+          <p style="color:var(--muted);font-size:0.86rem;margin:6px 0 0">${t.product} · ${t.reason} · lodged ${t.date}</p>
+          ${statusBar(t.status)}
+          ${t.status === "item_received" && !t.resolution ? `
+            <div class="resolve-box">
+              <strong>Your item's arrived! How would you like to resolve it?</strong>
+              <p style="color:var(--muted);font-size:0.86rem;margin:6px 0 0">Refund goes to a gift card on your account that never expires, or we'll send a similar replacement.</p>
+              <div class="btn-row">
+                <button class="btn btn--primary" onclick="resolveReturn('${t.ref}','refund')">💳 Refund to gift card</button>
+                <button class="btn btn--outline" onclick="resolveReturn('${t.ref}','replace')">🔁 Replace with similar</button>
+              </div>
+            </div>` : ""}
+          ${t.resolution === "refund" ? `<div class="resolve-box"><strong>✓ Refund issued to your gift card</strong><p style="font-size:0.86rem;margin:6px 0 0">${money(t.amount)} added to a gift card on your account. Log in with <strong>${t.email}</strong> — your gift card code was emailed to you and is in <a href="account.html">My account</a>. Use it at checkout anytime; it never expires.</p></div>` : ""}
+          ${t.resolution === "replace" ? `<div class="resolve-box"><strong>✓ Replacement requested</strong><p style="font-size:0.86rem;margin:6px 0 0">We'll be in touch to arrange a similar replacement for your ${t.product}.</p></div>` : ""}
+          ${t.status !== "resolved" ? `<p style="text-align:center;margin-top:14px"><button class="btn btn--ghost btn--sm" onclick="advanceReturn('${t.ref}')">▶ Simulate next step (demo)</button></p>` : ""}
+        </div>`).join("");
+    }
+
+    // Demo: advance a ticket's status (in production, staff update this)
+    function advanceReturn(ref) {
+      const all = getReturns();
+      const t = all.find(x => x.ref === ref); if (!t) return;
+      const order = STAGES.map(s => s.key);
+      const i = order.indexOf(t.status);
+      if (i < order.length - 1 && !(t.status === "item_received" && !t.resolution)) t.status = order[i + 1];
+      else if (t.status === "item_received" && !t.resolution) { showToast("Choose refund or replacement first"); }
+      saveReturns(all); trackReturns();
+    }
+
+    // Resolve: refund to gift card, or replace
+    function resolveReturn(ref, choice) {
+      const all = getReturns();
+      const t = all.find(x => x.ref === ref); if (!t) return;
+      const acc = getAccount();
+      if (!acc || !acc.email) { showToast("Please log in to receive your gift card refund"); location.href = "account.html"; return; }
+      t.resolution = choice; t.status = "resolved";
+      if (choice === "refund") {
+        const code = "DMGC-" + Math.floor(100000 + Math.random() * 899999);
+        acc.giftCards = acc.giftCards || [];
+        acc.giftCards.push({ code, balance: t.amount, issued: todayAU(), from: ref });
+        saveAccount(acc);
+        // Notify team / "email" the gift card
+        const data = [["Gift card issued", code], ["Amount", money(t.amount)], ["To", t.email], ["From return", ref]];
+        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Gift card refund " + code); } catch (e) {}
+        showToast("Refund added to your gift card 💳");
+      } else {
+        showToast("Replacement requested 🔁");
+      }
+      saveReturns(all); trackReturns();
+    }
+
+    if (typeof initReveal === "function") initReveal();
+  </script>
+</body>
+</html>
