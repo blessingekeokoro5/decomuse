@@ -73,6 +73,10 @@
             </div>
             <div class="field"><label>Product ID (auto)</label><input id="pId" placeholder="auto-generated"></div>
           </div>
+          <div class="field"><label>Product photo</label>
+            <input id="pImg" type="file" accept="image/*">
+            <small style="color:var(--muted);display:block;margin-top:6px">A square photo looks best. It's saved to this device so it shows instantly on the shop, cart &amp; checkout. To make it permanent for all visitors, also save the file as <code>assets/products/&lt;id&gt;.jpg</code>.</small>
+          </div>
           <label class="lead" style="display:flex;align-items:center;gap:10px;font-size:0.92rem;margin-bottom:18px">
             <input type="checkbox" id="pFree" style="width:auto;accent-color:var(--rose)"> Show a “Free shipping” badge
           </label>
@@ -120,6 +124,24 @@
   <script>
     const money = (n) => "$" + Number(n).toLocaleString("en-AU");
     let draft = [];
+    let currentImgData = "";
+
+    // Resize an uploaded photo to keep localStorage light, then return a JPEG data URL.
+    function fileToResizedDataURL(file, maxW, cb) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const img = new Image();
+        img.onload = () => {
+          const scale = Math.min(1, maxW / img.width);
+          const w = Math.round(img.width * scale), h = Math.round(img.height * scale);
+          const c = document.createElement("canvas"); c.width = w; c.height = h;
+          c.getContext("2d").drawImage(img, 0, 0, w, h);
+          cb(c.toDataURL("image/jpeg", 0.82));
+        };
+        img.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
 
     // Suggest a unique ID from category prefix + next number
     function suggestId(cat) {
@@ -144,6 +166,7 @@
       if (tag) p.tag = tag;
       p.ph = ph;
       if (free) p.freeship = true;
+      if (currentImgData) p.img = currentImgData;
       return p;
     }
 
@@ -151,8 +174,11 @@
       const p = currentProduct();
       const tag = p.tag ? `<span class="prev-tag ${/sale/i.test(p.tag) ? "sale" : ""}">${p.tag}</span>` : "";
       const was = p.was ? `<small>${money(p.was)}</small>` : "";
+      const media = p.img
+        ? `${tag}<div class="ph ${p.ph}" data-label="${p.name || "Product name"}"><img class="ph-img" src="${p.img}" alt="${p.name || "Product"}"></div>`
+        : `${tag}<div class="ph ${p.ph}" data-label="${p.name || "Product name"}"></div>`;
       document.getElementById("prevCard").innerHTML = `
-        <div class="prev-media">${tag}<div class="ph ${p.ph}" data-label="${p.name || "Product name"}"></div></div>
+        <div class="prev-media">${media}</div>
         <div class="prev-body">
           <div class="prev-cat">${p.cat}</div>
           <div class="prev-name">${p.name || "Product name"}</div>
@@ -180,6 +206,7 @@
       if (p.was) s += `, was: ${p.was}`;
       if (p.tag) s += `, tag: ${JSON.stringify(p.tag)}`;
       s += `, ph: ${JSON.stringify(p.ph || "")}`;
+      if (p.img) { const imgPath = p.img.indexOf("data:") === 0 ? `assets/products/${p.id}.jpg` : p.img; s += `, img: ${JSON.stringify(imgPath)}`; }
       if (p.freeship) s += `, freeship: true`;
       s += ` },`;
       return s;
@@ -203,8 +230,15 @@
     function resetForm() {
       document.getElementById("prodForm").reset();
       document.getElementById("pId").value = "";
+      currentImgData = "";
       renderPreview();
     }
+
+    document.getElementById("pImg").addEventListener("change", (e) => {
+      const f = e.target.files && e.target.files[0];
+      if (!f) { currentImgData = ""; renderPreview(); return; }
+      fileToResizedDataURL(f, 900, (data) => { currentImgData = data; renderPreview(); });
+    });
 
     function saveToDevice() {
       if (!draft.length) { alert("Add at least one product to the list first."); return; }

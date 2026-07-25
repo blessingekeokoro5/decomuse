@@ -80,7 +80,7 @@ function renderCheckout() {
   const acc = getAccount() || {};
   const lines = cart.map(i => {
     const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
-    const src = (prod && (prod.img || (prod.imgs && prod.imgs[0]))) || ("assets/products/" + i.id + ".jpg");
+    const src = i.img || (prod && (prod.img || (prod.imgs && prod.imgs[0]))) || ("assets/products/" + i.id + ".jpg");
     return `
     <div class="co-line">
       <span class="co-thumb"><span class="ph ${i.ph}" data-label="${i.name}"><img class="ph-img" src="${src}" alt="${i.name}" onerror="this.remove()"></span><span class="co-qty">${i.qty}</span></span>

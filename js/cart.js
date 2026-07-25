@@ -26,7 +26,7 @@ function addToCart(id, qty = 1, colour = null, size = null, price = null) {
   const cart = getCart();
   const line = cart.find(i => (i.key || i.id) === key);
   if (line) line.qty += qty;
-  else cart.push({ id: p.id, key, name: p.name, price: unitPrice, cat: p.cat, ph: p.ph, qty, colour: colour || undefined, size: size || undefined });
+  else cart.push({ id: p.id, key, name: p.name, price: unitPrice, cat: p.cat, ph: p.ph, img: p.img || (p.imgs && p.imgs[0]) || undefined, qty, colour: colour || undefined, size: size || undefined });
   saveCart(cart);
   showToast(`Added “${p.name}${colour ? " · " + colour : ""}${size ? " · " + size : ""}” to your cart`);
   if (typeof renderCartPage === "function") renderCartPage();
