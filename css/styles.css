@@ -601,7 +601,7 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* Animated promo banner (home-décor member offer) */
 .promo-banner { position: relative; overflow: hidden; border-radius: var(--radius-lg); color: #fff;
-  display: block; padding: 34px 44px; margin-bottom: 42px;
+  display: block; padding: 40px 44px; margin: 0 auto; max-width: 1100px;
   background: linear-gradient(120deg, #3a4a30 0%, var(--forest) 55%, #2b3626 100%);
   box-shadow: 0 24px 48px -24px rgba(40,55,35,0.6); }
 .promo-banner::after { content: ""; position: absolute; inset: 0; pointer-events: none;
