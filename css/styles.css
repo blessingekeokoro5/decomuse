@@ -601,7 +601,7 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* Animated promo banner (home-décor member offer) */
 .promo-banner { position: relative; overflow: hidden; border-radius: var(--radius-lg); color: #fff;
-  display: grid; grid-template-columns: 1.6fr 1fr; align-items: center; gap: 24px; padding: 42px 48px; margin-bottom: 42px;
+  display: block; padding: 34px 44px; margin-bottom: 42px;
   background: linear-gradient(120deg, #3a4a30 0%, var(--forest) 55%, #2b3626 100%);
   box-shadow: 0 24px 48px -24px rgba(40,55,35,0.6); }
 .promo-banner::after { content: ""; position: absolute; inset: 0; pointer-events: none;
@@ -611,29 +611,26 @@ em { font-style: italic; color: var(--rose-deep); }
 .promo-copy { position: relative; z-index: 1; }
 .promo-copy .eyebrow { color: var(--rose-soft); }
 .promo-copy h2 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); line-height: 1.06; text-transform: uppercase; letter-spacing: 0.01em; margin: 8px 0 10px; color: #fff; }
-.promo-copy p { color: #e4dbcf; margin-bottom: 20px; max-width: 470px; }
-.promo-visual { position: relative; z-index: 1; display: flex; justify-content: center; }
+.promo-copy p { color: #e4dbcf; margin-bottom: 22px; max-width: 640px; }
 
-/* Rotating seal badge (echoes the sale burst, but on-brand & elegant) */
-.promo-seal { position: relative; width: 210px; height: 210px; display: grid; place-items: center; text-align: center; }
-.promo-seal .ring { position: absolute; inset: 0; border: 2px dashed var(--gold); border-radius: 50%; animation: sealSpin 22s linear infinite; }
-.promo-seal .ring2 { position: absolute; inset: 12px; border: 1px solid rgba(255,255,255,0.35); border-radius: 50%; }
-.promo-seal .core { position: absolute; inset: 18px; border-radius: 50%;
-  background: radial-gradient(circle at 50% 40%, rgba(198,161,91,0.28), rgba(0,0,0,0) 72%); animation: sealPulse 3.4s ease-in-out infinite; }
-/* Rotating messages inside the seal */
-.seal-rotator { position: absolute; inset: 28px; z-index: 1; }
-.seal-slide { position: absolute; inset: 0; display: grid; place-content: center; align-content: center; text-align: center; padding: 0 6px;
-  opacity: 0; transform: scale(0.9); transition: opacity 0.6s ease, transform 0.6s ease; pointer-events: none; }
-.seal-slide.active { opacity: 1; transform: scale(1); }
-.seal-slide .s-ic { font-size: 2rem; line-height: 1; margin-bottom: 7px; }
-.seal-slide b { display: block; font-family: var(--font-head); font-size: 2.6rem; line-height: 1; color: var(--gold); }
-.seal-slide strong { display: block; color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 0.92rem; line-height: 1.25; }
-.seal-slide small { display: block; color: #e4dbcf; font-size: 0.65rem; letter-spacing: 0.03em; margin-top: 5px; line-height: 1.3; }
-.seal-slide.gold small { color: #fff; letter-spacing: 0.16em; text-transform: uppercase; }
-@keyframes sealSpin { to { transform: rotate(360deg); } }
-@keyframes sealPulse { 0%, 100% { transform: scale(1); opacity: 0.8; } 50% { transform: scale(1.08); opacity: 1; } }
-@media (prefers-reduced-motion: reduce){ .trust-item .ic, .promo-banner::after, .promo-seal .ring, .promo-seal .core { animation: none; } }
-@media (max-width: 720px){ .promo-banner { grid-template-columns: 1fr; text-align: center; padding: 32px 26px; } .promo-copy p { margin-left: auto; margin-right: auto; } .promo-visual { margin-top: 8px; } }
+/* Bottom row: button + thin rotating strip */
+.promo-actions { position: relative; z-index: 1; display: flex; align-items: center; gap: 20px; flex-wrap: wrap; }
+.promo-actions .btn { flex: 0 0 auto; }
+
+/* Thin rotating strip (replaces the big seal — compact & uniform) */
+.promo-ticker { position: relative; flex: 1 1 260px; min-width: 240px; height: 62px; overflow: hidden;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(198,161,91,0.45); border-radius: 12px; }
+.promo-slide { position: absolute; inset: 0; display: flex; align-items: center; gap: 13px; padding: 0 20px;
+  opacity: 0; transform: translateY(8px); transition: opacity 0.5s ease, transform 0.5s ease; pointer-events: none; }
+.promo-slide.active { opacity: 1; transform: translateY(0); }
+.promo-slide .s-ic { font-size: 1.55rem; line-height: 1; flex: 0 0 auto; }
+.promo-slide.gold .s-ic { font-family: var(--font-head); font-weight: 700; font-size: 1.9rem; color: var(--gold); }
+.promo-slide .txt { min-width: 0; }
+.promo-slide .txt strong { display: block; color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 0.9rem; line-height: 1.2; }
+.promo-slide .txt small { display: block; color: #e4dbcf; font-size: 0.68rem; letter-spacing: 0.02em; margin-top: 2px; line-height: 1.25; }
+.promo-slide.gold .txt small { letter-spacing: 0.14em; text-transform: uppercase; }
+@media (prefers-reduced-motion: reduce){ .trust-item .ic, .promo-banner::after { animation: none; } }
+@media (max-width: 560px){ .promo-banner { padding: 28px 24px; } .promo-actions .btn, .promo-ticker { width: 100%; } }
 
 /* ---- Cookie settings modal ---- */
 .cookie-modal { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 260; display: none; justify-content: center; }

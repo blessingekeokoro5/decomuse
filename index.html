@@ -73,20 +73,17 @@
       <div class="promo-banner reveal">
         <div class="promo-copy">
           <span class="eyebrow">Members save</span>
-          <h2>Refresh your space<br>for less</h2>
+          <h2>Refresh your space for less</h2>
           <p>Join the DecoMuse membership free and take <strong>20% off your first order</strong> across décor, fragrance &amp; lifestyle, plus member pricing every time you shop.</p>
-          <a class="btn btn--primary" href="account.html">Join free &amp; save →</a>
         </div>
-        <div class="promo-visual">
-          <div class="promo-seal">
-            <span class="ring"></span><span class="ring2"></span><span class="core"></span>
-            <div class="seal-rotator" id="sealRotator">
-              <div class="seal-slide gold active"><b>20%</b><small>Off 1st order</small></div>
-              <div class="seal-slide"><div class="s-ic">🚚</div><strong>Free shipping over $500</strong><small>Australia-wide · worldwide delivery</small></div>
-              <div class="seal-slide"><div class="s-ic">🔒</div><strong>Secure checkout</strong><small>Stripe · Card · Apple &amp; Google Pay</small></div>
-              <div class="seal-slide"><div class="s-ic">↩️</div><strong>30-day returns</strong><small>Shop with confidence</small></div>
-              <div class="seal-slide"><div class="s-ic">🌿</div><strong>Australian owned</strong><small>Curated with hands-on care</small></div>
-            </div>
+        <div class="promo-actions">
+          <a class="btn btn--primary" href="account.html">Join free &amp; save →</a>
+          <div class="promo-ticker" id="sealRotator">
+            <div class="promo-slide gold active"><span class="s-ic">20%</span><span class="txt"><strong>Off your first order</strong><small>Members save</small></span></div>
+            <div class="promo-slide"><span class="s-ic">🚚</span><span class="txt"><strong>Free shipping over $500</strong><small>Australia-wide · worldwide delivery</small></span></div>
+            <div class="promo-slide"><span class="s-ic">🔒</span><span class="txt"><strong>Secure checkout</strong><small>Stripe · Card · Apple &amp; Google Pay</small></span></div>
+            <div class="promo-slide"><span class="s-ic">↩️</span><span class="txt"><strong>30-day returns</strong><small>Shop with confidence</small></span></div>
+            <div class="promo-slide"><span class="s-ic">🌿</span><span class="txt"><strong>Australian owned</strong><small>Curated with hands-on care</small></span></div>
           </div>
         </div>
       </div>
@@ -254,7 +251,7 @@
 
     // Rotate the promo seal through the offer + trust points
     (function () {
-      const slides = document.querySelectorAll("#sealRotator .seal-slide");
+      const slides = document.querySelectorAll("#sealRotator .promo-slide");
       if (slides.length < 2) return;
       let i = 0;
       setInterval(() => {
