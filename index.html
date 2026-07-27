@@ -78,19 +78,17 @@
           <a class="btn btn--primary" href="account.html">Join free &amp; save →</a>
         </div>
         <div class="promo-visual">
-          <div class="promo-seal" aria-hidden="true">
+          <div class="promo-seal">
             <span class="ring"></span><span class="ring2"></span><span class="core"></span>
-            <span class="seal-txt"><b>20%</b><span>Off 1st order</span></span>
+            <div class="seal-rotator" id="sealRotator">
+              <div class="seal-slide gold active"><b>20%</b><small>Off 1st order</small></div>
+              <div class="seal-slide"><div class="s-ic">🚚</div><strong>Free shipping over $500</strong><small>Australia-wide · worldwide delivery</small></div>
+              <div class="seal-slide"><div class="s-ic">🔒</div><strong>Secure checkout</strong><small>Stripe · Card · Apple &amp; Google Pay</small></div>
+              <div class="seal-slide"><div class="s-ic">↩️</div><strong>30-day returns</strong><small>Shop with confidence</small></div>
+              <div class="seal-slide"><div class="s-ic">🌿</div><strong>Australian owned</strong><small>Curated with hands-on care</small></div>
+            </div>
           </div>
         </div>
-      </div>
-
-      <!-- Animated trust strip -->
-      <div class="trust-strip reveal">
-        <div class="trust-item"><div class="ic">🚚</div><strong>Free shipping over $500</strong><span>Australia-wide · worldwide delivery</span></div>
-        <div class="trust-item"><div class="ic">🔒</div><strong>Secure checkout</strong><span>Stripe · Card · Apple &amp; Google Pay</span></div>
-        <div class="trust-item"><div class="ic">↩️</div><strong>30-day returns</strong><span>Shop with confidence</span></div>
-        <div class="trust-item"><div class="ic">🌿</div><strong>Australian owned</strong><span>Curated with hands-on care</span></div>
       </div>
     </div>
   </section>
@@ -253,6 +251,18 @@
     // Render the set twice so the marquee loops seamlessly (translateX -50%).
     const shuffled = REVIEWS.slice().sort(() => Math.random() - 0.5);
     document.getElementById("reviewsGrid").innerHTML = shuffled.map(reviewCard).join("") + shuffled.map(reviewCard).join("");
+
+    // Rotate the promo seal through the offer + trust points
+    (function () {
+      const slides = document.querySelectorAll("#sealRotator .seal-slide");
+      if (slides.length < 2) return;
+      let i = 0;
+      setInterval(() => {
+        slides[i].classList.remove("active");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("active");
+      }, 2800);
+    })();
   </script>
 </body>
 </html>
