@@ -70,20 +70,16 @@
   <section class="section--tight bg-cream2">
     <div class="container">
       <!-- Animated member-offer banner (promotes the genuine 20% first-order member deal) -->
-      <div class="promo-banner reveal">
-        <div class="promo-copy">
+      <div class="member-banner reveal">
+        <div class="member-copy">
           <span class="eyebrow">Members save</span>
           <h2>Refresh your space for less</h2>
           <p>Join the DecoMuse membership free and take <strong>20% off your first order</strong> across décor, fragrance &amp; lifestyle, plus member pricing every time you shop.</p>
         </div>
-        <div class="promo-actions">
+        <div class="member-actions">
           <a class="btn btn--primary" href="account.html">Join free &amp; save →</a>
-          <div class="promo-ticker" id="sealRotator">
-            <div class="promo-slide gold active"><span class="s-ic">20%</span><span class="txt"><strong>Off your first order</strong><small>Members save</small></span></div>
-            <div class="promo-slide"><span class="s-ic">🚚</span><span class="txt"><strong>Free shipping over $500</strong><small>Australia-wide · worldwide delivery</small></span></div>
-            <div class="promo-slide"><span class="s-ic">🔒</span><span class="txt"><strong>Secure checkout</strong><small>Stripe · Card · Apple &amp; Google Pay</small></span></div>
-            <div class="promo-slide"><span class="s-ic">↩️</span><span class="txt"><strong>30-day returns</strong><small>Shop with confidence</small></span></div>
-            <div class="promo-slide"><span class="s-ic">🌿</span><span class="txt"><strong>Australian owned</strong><small>Curated with hands-on care</small></span></div>
+          <div class="member-ticker">
+            <div class="member-track" id="memberTrack"></div>
           </div>
         </div>
       </div>
@@ -249,16 +245,21 @@
     const shuffled = REVIEWS.slice().sort(() => Math.random() - 0.5);
     document.getElementById("reviewsGrid").innerHTML = shuffled.map(reviewCard).join("") + shuffled.map(reviewCard).join("");
 
-    // Rotate the promo seal through the offer + trust points
+    // Build the moving member strip (offer + trust points), duplicated for a seamless loop
     (function () {
-      const slides = document.querySelectorAll("#sealRotator .promo-slide");
-      if (slides.length < 2) return;
-      let i = 0;
-      setInterval(() => {
-        slides[i].classList.remove("active");
-        i = (i + 1) % slides.length;
-        slides[i].classList.add("active");
-      }, 2800);
+      const track = document.getElementById("memberTrack");
+      if (!track) return;
+      const items = [
+        { cls: "gold", ic: "20%", t: "Off your first order", s: "Members save" },
+        { ic: "🚚", t: "Free shipping over $500", s: "Australia-wide · worldwide delivery" },
+        { ic: "🔒", t: "Secure checkout", s: "Stripe · Card · Apple &amp; Google Pay" },
+        { ic: "↩️", t: "30-day returns", s: "Shop with confidence" },
+        { ic: "🌿", t: "Australian owned", s: "Curated with hands-on care" }
+      ];
+      const html = items.map(x =>
+        `<span class="member-item ${x.cls || ""}"><span class="s-ic">${x.ic}</span>` +
+        `<span class="txt"><strong>${x.t}</strong><small>${x.s}</small></span></span>`).join("");
+      track.innerHTML = html + html;
     })();
   </script>
 </body>

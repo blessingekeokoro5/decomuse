@@ -599,38 +599,40 @@ em { font-style: italic; color: var(--rose-deep); }
 .trust-item:hover .ic { animation-play-state: paused; }
 @keyframes trustFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-7px); } }
 
-/* Animated promo banner (home-décor member offer) */
-.promo-banner { position: relative; overflow: hidden; border-radius: var(--radius-lg); color: #fff;
+/* Animated member-offer banner (unique classes to avoid the floating .promo-banner popup) */
+.member-banner { position: relative; overflow: hidden; border-radius: var(--radius-lg); color: #fff;
   display: block; padding: 40px 44px; margin: 0 auto; max-width: 1100px;
   background: linear-gradient(120deg, #3a4a30 0%, var(--forest) 55%, #2b3626 100%);
   box-shadow: 0 24px 48px -24px rgba(40,55,35,0.6); }
-.promo-banner::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+.member-banner::after { content: ""; position: absolute; inset: 0; pointer-events: none;
   background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,0.10) 50%, transparent 65%);
-  transform: translateX(-120%); animation: promoShimmer 7s ease-in-out infinite; }
-@keyframes promoShimmer { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
-.promo-copy { position: relative; z-index: 1; text-align: center; }
-.promo-copy .eyebrow { color: var(--rose-soft); }
-.promo-copy h2 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); line-height: 1.06; text-transform: uppercase; letter-spacing: 0.01em; margin: 8px 0 10px; color: #fff; }
-.promo-copy p { color: #e4dbcf; margin: 0 auto 22px; max-width: 640px; }
+  transform: translateX(-120%); animation: memberShimmer 7s ease-in-out infinite; }
+@keyframes memberShimmer { 0%, 55% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+.member-copy { position: relative; z-index: 1; text-align: center; }
+.member-copy .eyebrow { color: var(--rose-soft); }
+.member-copy h2 { font-size: clamp(1.7rem, 3.2vw, 2.6rem); line-height: 1.06; text-transform: uppercase; letter-spacing: 0.01em; margin: 8px 0 10px; color: #fff; }
+.member-copy p { color: #e4dbcf; margin: 0 auto 22px; max-width: 640px; }
 
-/* Bottom row: button + thin rotating strip (centred) */
-.promo-actions { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
-.promo-actions .btn { flex: 0 0 auto; }
+/* Bottom row: button + moving marquee strip (centred) */
+.member-actions { position: relative; z-index: 1; display: flex; align-items: center; justify-content: center; gap: 20px; flex-wrap: wrap; }
+.member-actions .btn { flex: 0 0 auto; }
 
-/* Thin rotating strip (replaces the big seal — compact & uniform) */
-.promo-ticker { position: relative; flex: 0 0 320px; min-width: 240px; height: 62px; overflow: hidden;
-  background: rgba(255,255,255,0.06); border: 1px solid rgba(198,161,91,0.45); border-radius: 12px; }
-.promo-slide { position: absolute; inset: 0; display: flex; align-items: center; gap: 13px; padding: 0 20px;
-  opacity: 0; transform: translateY(8px); transition: opacity 0.5s ease, transform 0.5s ease; pointer-events: none; }
-.promo-slide.active { opacity: 1; transform: translateY(0); }
-.promo-slide .s-ic { font-size: 1.55rem; line-height: 1; flex: 0 0 auto; }
-.promo-slide.gold .s-ic { font-family: var(--font-head); font-weight: 700; font-size: 1.9rem; color: var(--gold); }
-.promo-slide .txt { min-width: 0; }
-.promo-slide .txt strong { display: block; color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 0.9rem; line-height: 1.2; }
-.promo-slide .txt small { display: block; color: #e4dbcf; font-size: 0.68rem; letter-spacing: 0.02em; margin-top: 2px; line-height: 1.25; }
-.promo-slide.gold .txt small { letter-spacing: 0.14em; text-transform: uppercase; }
-@media (prefers-reduced-motion: reduce){ .trust-item .ic, .promo-banner::after { animation: none; } }
-@media (max-width: 560px){ .promo-banner { padding: 28px 24px; } .promo-actions .btn, .promo-ticker { width: 100%; } }
+/* Moving strip — items scroll continuously from one end to the other */
+.member-ticker { position: relative; flex: 1 1 360px; min-width: 0; max-width: 420px; height: 62px; overflow: hidden;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(198,161,91,0.45); border-radius: 12px;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent); }
+.member-track { display: flex; align-items: center; height: 100%; width: max-content; animation: memberScroll 22s linear infinite; }
+.member-ticker:hover .member-track { animation-play-state: paused; }
+.member-item { flex: 0 0 auto; display: flex; align-items: center; gap: 12px; padding: 0 24px; white-space: nowrap; }
+.member-item .s-ic { font-size: 1.5rem; line-height: 1; flex: 0 0 auto; }
+.member-item.gold .s-ic { font-family: var(--font-head); font-weight: 700; font-size: 1.75rem; color: var(--gold); }
+.member-item strong { display: block; color: #fff; font-family: var(--font-body); font-weight: 600; font-size: 0.88rem; line-height: 1.2; }
+.member-item small { display: block; color: #e4dbcf; font-size: 0.66rem; letter-spacing: 0.02em; margin-top: 2px; line-height: 1.2; }
+.member-item.gold small { letter-spacing: 0.12em; text-transform: uppercase; }
+@keyframes memberScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce){ .trust-item .ic, .member-banner::after, .member-track { animation: none; } }
+@media (max-width: 560px){ .member-banner { padding: 28px 22px; } .member-actions { flex-direction: column; } .member-actions .btn, .member-ticker { width: 100%; max-width: 100%; flex-basis: auto; } }
 
 /* ---- Cookie settings modal ---- */
 .cookie-modal { position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 260; display: none; justify-content: center; }
