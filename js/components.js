@@ -18,7 +18,9 @@ const IC = {
   mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>',
   wa: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.4A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.5-4-4.7-4.1-.1-.2-1-1.4-1-2.6 0-1.3.7-1.9.9-2.1.2-.2.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5c-.2.2-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.4.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.7-.1 1.2z"/></svg>',
   box: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 8 12 3 3 8l9 5 9-5z"/><path d="M3 8v8l9 5 9-5V8"/></svg>',
-  arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>'
+  arrow: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="width:16px;height:16px"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+  mic: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0"/><path d="M12 18v3"/></svg>',
+  camera: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.2"/></svg>'
 };
 
 /* Australian flag as inline SVG — renders everywhere (Windows can't draw the 🇦🇺 emoji). */
@@ -150,6 +152,9 @@ function buildHeader() {
         <button type="button" class="hs-tag" onclick="location.href='stylist.html'">Get inspired</button>
         <button type="button" class="hs-tag" onclick="location.href='shop.html'">🎁 Promotions</button>
         <input type="search" id="headerSearchInput" placeholder="What are you looking for?" aria-label="Search products" autocomplete="off">
+        <button type="button" class="hs-icon" id="hsVoice" aria-label="Search by voice" title="Search by voice">${IC.mic}</button>
+        <button type="button" class="hs-icon" id="hsCamera" aria-label="Search by photo" title="Search by photo">${IC.camera}</button>
+        <input type="file" id="hsCameraInput" accept="image/*" capture="environment" hidden>
         <button type="submit" class="hs-btn" aria-label="Search">${IC.search}</button>
       </form>
       <div class="nav-utility-right">
@@ -689,6 +694,47 @@ function initSearch() {
   // Header search bar drives the overlay
   if (hsForm) hsForm.addEventListener("submit", (e) => { e.preventDefault(); input.value = hsInput.value; open(); });
   if (hsInput) hsInput.addEventListener("input", () => { if (hsInput.value.trim()) { input.value = hsInput.value; if (!overlay.classList.contains("open")) open(); else renderResults(input.value); } });
+
+  // Voice search — Web Speech API fills the search and runs it
+  const voiceBtn = document.getElementById("hsVoice");
+  if (voiceBtn) {
+    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!SR) { voiceBtn.style.display = "none"; }
+    else {
+      voiceBtn.addEventListener("click", () => {
+        const rec = new SR();
+        rec.lang = "en-AU"; rec.interimResults = false; rec.maxAlternatives = 1;
+        voiceBtn.classList.add("listening");
+        showToast("Listening… say what you're looking for 🎙️");
+        rec.onresult = (ev) => {
+          const said = ev.results[0][0].transcript || "";
+          if (hsInput) hsInput.value = said;
+          input.value = said; open(); renderResults(said);
+        };
+        rec.onerror = () => showToast("Couldn't hear that — please try again");
+        rec.onend = () => voiceBtn.classList.remove("listening");
+        try { rec.start(); } catch (e) { voiceBtn.classList.remove("listening"); }
+      });
+    }
+  }
+
+  // Photo search — snap/upload a photo, hand it to Muse Stylist for visual matching
+  const camBtn = document.getElementById("hsCamera");
+  const camInput = document.getElementById("hsCameraInput");
+  if (camBtn && camInput) {
+    camBtn.addEventListener("click", () => camInput.click());
+    camInput.addEventListener("change", () => {
+      const file = camInput.files && camInput.files[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        try { sessionStorage.setItem("dm_visual_search", e.target.result); } catch (err) {}
+        showToast("Finding pieces to match your photo ✦");
+        location.href = "stylist.html";
+      };
+      reader.readAsDataURL(file);
+    });
+  }
   close.addEventListener("click", closeFn);
   overlay.addEventListener("click", (e) => { if (e.target === overlay) closeFn(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeFn(); });

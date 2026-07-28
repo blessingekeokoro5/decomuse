@@ -33,6 +33,12 @@ function initStylist() {
   const input = document.getElementById("fileInput");
   if (!zone || !input) return;
 
+  // Photo handed over from the header "search by photo" camera button
+  try {
+    const fromCam = sessionStorage.getItem("dm_visual_search");
+    if (fromCam) { sessionStorage.removeItem("dm_visual_search"); uploadedImage = fromCam; showPreview(); return; }
+  } catch (e) {}
+
   zone.addEventListener("click", () => input.click());
   zone.addEventListener("dragover", (e) => { e.preventDefault(); zone.classList.add("drag"); });
   zone.addEventListener("dragleave", () => zone.classList.remove("drag"));
