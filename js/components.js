@@ -145,7 +145,7 @@ function buildHeader() {
         <a href="about.html">About Us</a>
         <a href="trade.html">Trade</a>
         <a href="contact.html">Contact Us</a>
-        <button class="tu-region" type="button" aria-label="Choose your region, currency and language" onclick="openCountryModal()">${AU_FLAG_SVG}<span>AUD&nbsp;$</span><span class="tu-dot">·</span>${UK_FLAG_SVG}<span>English</span> ${IC.caret}</button>
+        <button class="tu-region" type="button" aria-label="Choose your region, currency and language" onclick="openCountryModal()">${AU_FLAG_SVG}<span>${(typeof curLabel === "function" ? curLabel() : "AUD $")}</span><span class="tu-dot">·</span>${UK_FLAG_SVG}<span>English</span> ${IC.caret}</button>
       </div>
     </div>
   </div>
@@ -642,8 +642,8 @@ function updateCountryNote() {
   const sel = document.getElementById("countrySelect");
   const r = REGIONS[sel.value];
   const note = document.getElementById("countryNote");
-  if (r.cur === "AUD") note.innerHTML = `✓ Prices shown in AUD · free shipping over $500.`;
-  else note.innerHTML = `We ship to ${r.flag} <strong>${r.name}</strong>. Prices are shown in <strong>AUD</strong>; your bank converts to ${r.cur} at checkout. International delivery times &amp; any duties apply.`;
+  if (r.cur === "AUD") note.innerHTML = `✓ Prices shown in <strong>AUD $</strong> · free shipping over $500.`;
+  else note.innerHTML = `Prices will display in <strong>${r.cur}</strong> at today's exchange rate. Orders are processed in <strong>AUD</strong> at checkout — your bank applies the final conversion. International delivery times &amp; any duties may apply.`;
 }
 
 function updateRegionFlag() {
@@ -671,9 +671,11 @@ function initCountry() {
   updateCountryNote();
   sel.addEventListener("change", updateCountryNote);
 
-  const save = (code) => { try { localStorage.setItem("dm_region", code); } catch (e) {} updateRegionFlag(); closeCountry();
-    // Confirmation toast on desktop only; hidden on mobile phones (prices are always AUD).
-    if (window.innerWidth > 768) showToast(`Shopping ${REGIONS[code].flag} ${REGIONS[code].name} · prices in AUD`); };
+  const save = (code) => {
+    try { localStorage.setItem("dm_region", code); } catch (e) {}
+    const cur = (REGIONS[code] && REGIONS[code].cur) || "AUD";
+    applyCurrency(cur); // saves currency + reloads so every price re-renders in the new currency
+  };
   document.getElementById("countryConfirm").addEventListener("click", () => save(sel.value));
   document.getElementById("countryStay").addEventListener("click", () => save(HOME_REGION));
   document.getElementById("countryClose").addEventListener("click", closeCountry);

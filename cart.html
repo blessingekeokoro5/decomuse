@@ -90,6 +90,7 @@
             <div class="summary-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
             ${shipping !== 0 ? `<div style="font-size:0.82rem;color:var(--muted)">Free shipping over $500</div>` : ""}
             <div class="summary-row total"><span>Total</span><span>${money(sub - discount + shipping)}</span></div>
+            ${(typeof DM_CUR !== "undefined" && DM_CUR !== "AUD") ? `<div style="font-size:0.8rem;color:var(--muted);margin-top:2px">≈ converted · charged in AUD: <strong>${moneyAud(sub - discount + shipping)}</strong></div>` : ""}
             ${bnplBadge(sub - discount + shipping)}
 
             <div style="display:flex;gap:8px;margin:16px 0 6px">

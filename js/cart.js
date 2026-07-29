@@ -120,7 +120,62 @@ function showToast(msg) {
   toastTimer = setTimeout(() => t.classList.remove("show"), 2600);
 }
 
-const money = (n) => DECOMUSE.currency + n.toLocaleString("en-AU");
+/* ============================================================
+   Multi-currency (DISPLAY only). Internal amounts & Stripe
+   charges always stay in AUD — this just converts what the
+   shopper SEES, using live exchange rates.
+   ============================================================ */
+const DM_CUR_INFO = {
+  AUD: { symbol: "$", locale: "en-AU" }, NZD: { symbol: "$", locale: "en-NZ" },
+  USD: { symbol: "$", locale: "en-US" }, GBP: { symbol: "£", locale: "en-GB" },
+  EUR: { symbol: "€", locale: "en-IE" }, CAD: { symbol: "$", locale: "en-CA" },
+  AED: { symbol: "AED ", locale: "en-AE" }
+};
+let DM_CUR = "AUD";
+let DM_FX = {};   // rates relative to AUD, e.g. { NZD: 1.09, USD: 0.66 }
+try {
+  DM_CUR = localStorage.getItem("dm_currency") || "AUD";
+  const c = JSON.parse(localStorage.getItem("dm_fx") || "null");
+  if (c && c.rates) DM_FX = c.rates;
+} catch (e) {}
+if (!DM_CUR_INFO[DM_CUR]) DM_CUR = "AUD";
+
+function dmRate(code) { return code === "AUD" ? 1 : (DM_FX[code] || null); }
+function fmtCur(amount, code) {
+  const info = DM_CUR_INFO[code] || DM_CUR_INFO.AUD;
+  const val = Math.round(amount * 100) / 100;
+  return info.symbol + val.toLocaleString(info.locale, { minimumFractionDigits: (val % 1 ? 2 : 0), maximumFractionDigits: 2 });
+}
+// Displayed price in the selected currency (falls back to AUD if no rate yet).
+const money = (n) => {
+  const r = dmRate(DM_CUR);
+  if (DM_CUR === "AUD" || !r) return fmtCur(Number(n) || 0, "AUD");
+  return fmtCur((Number(n) || 0) * r, DM_CUR);
+};
+// Always-AUD formatter (for the "charged in AUD" clarifier at cart/checkout).
+const moneyAud = (n) => fmtCur(Number(n) || 0, "AUD").replace(/^\$/, "A$");
+// Short label for the header, e.g. "AUD $", "GBP £".
+function curLabel() { const c = (typeof DM_CUR !== "undefined") ? DM_CUR : "AUD"; return c + " " + (DM_CUR_INFO[c] || DM_CUR_INFO.AUD).symbol.trim(); }
+
+// Fetch live rates (free, no key), cache for a day.
+async function refreshFx() {
+  try {
+    const c = JSON.parse(localStorage.getItem("dm_fx") || "null");
+    if (c && c.ts && (Date.now() - c.ts) < 86400000 && c.rates) { DM_FX = c.rates; return; }
+    const res = await fetch("https://open.er-api.com/v6/latest/AUD");
+    const data = await res.json();
+    if (data && data.rates) { DM_FX = data.rates; localStorage.setItem("dm_fx", JSON.stringify({ ts: Date.now(), rates: DM_FX })); }
+  } catch (e) {}
+}
+// Switch currency: ensure rates, save, reload so every price re-renders.
+async function applyCurrency(code) {
+  if (!DM_CUR_INFO[code]) code = "AUD";
+  try { localStorage.setItem("dm_currency", code); } catch (e) {}
+  if (code !== "AUD") await refreshFx();
+  location.reload();
+}
+// Keep rates fresh in the background (also enables conversion on next load).
+if (typeof window !== "undefined") { refreshFx(); }
 
 /* ---- Product image: uses assets/products/<id>.jpg (or .png/.webp), else placeholder ---- */
 function prodImgTag(p) {

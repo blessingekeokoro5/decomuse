@@ -40,7 +40,7 @@ function updateTotalsUI() {
   const gv = document.getElementById("sumGift"); if (gv) gv.textContent = "−" + money(t.giftCard);
   const tot = document.getElementById("sumTotal"); if (tot) tot.textContent = money(t.total);
   const g = document.getElementById("sumGst"); if (g) g.textContent = money(t.gst);
-  const btn = document.getElementById("payBtn"); if (btn) btn.textContent = t.total <= 0 ? "Complete order (gift card) →" : `Pay ${money(t.total)} securely →`;
+  const btn = document.getElementById("payBtn"); if (btn) btn.textContent = t.total <= 0 ? "Complete order (gift card) →" : `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`;
 }
 
 function applyGiftCardCheckout() {
@@ -122,7 +122,7 @@ function renderCheckout() {
             <p class="form-note">You'll enter your card details on Stripe's secure checkout. We never see or store your card number.</p>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--block" id="payBtn" style="margin-top:12px">Pay ${money(t.total)} securely →</button>
+          <button type="submit" class="btn btn--primary btn--block" id="payBtn" style="margin-top:12px">Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →</button>
           <p class="form-note" style="text-align:center;margin-top:10px">🔒 Encrypted checkout · GST included where applicable</p>
         </form>
       </div>
@@ -135,6 +135,7 @@ function renderCheckout() {
         <div class="summary-row"><span>Shipping</span><span id="sumShip">${t.shipping === 0 ? "Free" : money(t.shipping)}</span></div>
         <div class="summary-row" id="sumGiftRow" style="color:var(--forest);${t.giftCard ? "display:flex" : "display:none"}"><span>Gift card</span><span id="sumGift">−${money(t.giftCard)}</span></div>
         <div class="summary-row total"><span>Total</span><span id="sumTotal">${money(t.total)}</span></div>
+        ${(typeof DM_CUR !== "undefined" && DM_CUR !== "AUD") ? `<div style="font-size:0.8rem;color:var(--muted);margin-top:2px">≈ shown in ${DM_CUR} · you'll be charged <strong>${moneyAud(t.total)}</strong> (AUD)</div>` : ""}
         <div style="font-size:0.8rem;color:var(--muted);margin-top:4px">Includes GST <span id="sumGst">${money(t.gst)}</span></div>
         <div style="margin-top:14px">
           <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:6px">🎁 Gift card / refund credit (log in to use)</label>
@@ -209,7 +210,7 @@ async function startPayment(e) {
       }
       throw new Error("No session returned");
     } catch (err) {
-      btn.disabled = false; btn.textContent = `Pay ${money(t.total)} securely →`;
+      btn.disabled = false; btn.textContent = `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`;
       showToast("Couldn't reach payment server. Please try again or contact us.");
       return;
     }
