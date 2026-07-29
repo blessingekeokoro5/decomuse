@@ -726,6 +726,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .pkg h3 { margin-bottom: 6px; }
 .pkg .amount { font-family: var(--font-head); font-size: 2.4rem; color: var(--ink); font-weight: 600; margin: 10px 0; }
 .pkg .amount span { font-size: 0.9rem; color: var(--muted); font-family: var(--font-body); }
+.pkg .amount--quote { font-size: 1.35rem; color: var(--rose-deep); }
 .pkg ul { list-style: none; padding: 0; margin: 16px 0 28px; flex: 1; }
 .pkg li { padding: 9px 0 9px 28px; position: relative; color: var(--body); font-size: 0.94rem; border-bottom: 1px dashed var(--line); }
 .pkg li:last-child { border-bottom: none; }

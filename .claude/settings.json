@@ -7,7 +7,8 @@
       "Bash(node --check js/cart.js)",
       "Bash(git -c user.name=\"DecoMuse\" -c user.email=\"Decormuseofficial@outlook.com\" commit -q -m \"Remove demo products; add real Home Decor products \\(diffuser, vase\\) with codes DM-10101/2 + member pricing\" -m \"Co-Authored-By: Claude Opus 4.8 <noreply@anthropic.com>\")",
       "Bash(curl -s \"https://www.decomuse.com.au/js/data.js\")",
-      "Bash(git commit -q -m 'SEO: consolidate homepage canonical/og:url/JSON-LD to www \\(fixes apex vs www split in Google results\\) *)"
+      "Bash(git commit -q -m 'SEO: consolidate homepage canonical/og:url/JSON-LD to www \\(fixes apex vs www split in Google results\\) *)",
+      "Bash(git commit -q -m 'Styling packages: remove fixed prices, show '\\\\''Price on enquiry'\\\\'' \\(quote per client\\); keep packages, features & buttons *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
