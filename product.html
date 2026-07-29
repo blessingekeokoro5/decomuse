@@ -86,6 +86,7 @@
       pdpSize = label; pdpSizePrice = price;
       const nm = document.getElementById("pdpSizeName"); if (nm) nm.textContent = label;
       const pe = document.getElementById("pdpPrice"); if (pe) pe.textContent = money(price);
+      const be = document.getElementById("pdpBnpl"); if (be) be.innerHTML = bnplBadge(price);
       document.querySelectorAll(".pdp-size").forEach((s) => s.classList.remove("active"));
       if (btn) btn.classList.add("active");
     }
@@ -215,6 +216,7 @@
             <h1>${p.name}</h1>
             <div class="stars" style="margin-bottom:10px">★★★★★ <span style="color:var(--muted);font-size:0.85rem">${rev.avg.toFixed(1)} · ${rev.total} reviews</span></div>
             <div class="price" id="pdpPrice">${money((p.sizes && p.sizes.length) ? p.sizes[0].price : p.price)}${was}</div>
+            <div id="pdpBnpl">${bnplBadge((p.sizes && p.sizes.length) ? p.sizes[0].price : p.price)}</div>
             ${p.dontPay ? `<div class="dont-pay" style="margin-top:8px"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why should I not pay more?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
             ${p.memberPrice ? `<div class="member-price" style="margin-top:6px">✦ Members price ${money(p.memberPrice)} <a href="#" onclick="if(typeof openMemberModal==='function')openMemberModal();return false;" style="font-size:0.82rem">Join free →</a></div>` : ""}
             <p style="margin-top:16px">${p.desc || blurb(p)}</p>

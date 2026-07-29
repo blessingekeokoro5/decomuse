@@ -90,6 +90,7 @@
             <div class="summary-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
             ${shipping !== 0 ? `<div style="font-size:0.82rem;color:var(--muted)">Free shipping over $500</div>` : ""}
             <div class="summary-row total"><span>Total</span><span>${money(sub - discount + shipping)}</span></div>
+            ${bnplBadge(sub - discount + shipping)}
 
             <div style="display:flex;gap:8px;margin:16px 0 6px">
               <input id="couponInput" placeholder="Promo code (try WELCOME20)" value="${window._coupon || ""}"

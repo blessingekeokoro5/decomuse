@@ -135,6 +135,15 @@ function sellingFast(p) {
   return (h % 10) < 4; // ~a third to a half of products
 }
 
+/* ---- "Pay in 4" badge (Afterpay + Zip) ---- */
+function bnplBadge(price) {
+  const p = Number(price);
+  if (!isFinite(p) || p < 1) return "";
+  const q = (p / 4).toFixed(2);
+  return `<div class="bnpl">4 interest-free payments of <strong>$${q}</strong> with `
+    + `<span class="bnpl-tag bnpl-ap">afterpay</span><span class="bnpl-tag bnpl-zip">zip</span></div>`;
+}
+
 /* ---- Product card markup ---- */
 function productCard(p) {
   const tag = p.tag ? `<span class="tag ${/sale/i.test(p.tag) ? 'sale' : ''}">${p.tag}</span>` : "";

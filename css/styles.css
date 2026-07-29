@@ -545,6 +545,12 @@ em { font-style: italic; color: var(--rose-deep); }
 .price { font-family: var(--font-head); font-size: 1.3rem; color: var(--ink); font-weight: 600; }
 .price small { font-size: 0.8rem; color: var(--muted); text-decoration: line-through; margin-left: 7px; font-family: var(--font-body); font-weight: 400; }
 .freeship-tag { display: inline-flex; align-items: center; gap: 5px; color: var(--forest); font-size: 0.72rem; font-weight: 500; margin-top: 6px; }
+/* Pay-in-4 (Afterpay + Zip) badge */
+.bnpl { display: inline-flex; align-items: center; gap: 7px; flex-wrap: wrap; font-size: 0.82rem; color: var(--muted); margin-top: 10px; line-height: 1.4; }
+.bnpl strong { color: var(--ink); font-weight: 600; }
+.bnpl-tag { font-weight: 700; font-size: 0.72rem; line-height: 1; padding: 3px 8px; border-radius: 5px; letter-spacing: 0.01em; }
+.bnpl-ap { background: #b2fce4; color: #06060a; }
+.bnpl-zip { background: #1a1a1a; color: #fff; }
 .product-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; }
 
 /* Service card */
