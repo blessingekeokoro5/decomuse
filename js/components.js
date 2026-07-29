@@ -3,6 +3,20 @@
    Injected into every page for a single source of truth.
    ============================================================ */
 
+/* ---- Canonical URL (points every page at the www host; keeps only meaningful params) ---- */
+(function () {
+  if (document.querySelector('link[rel="canonical"]')) return;
+  const keep = ["id", "doc", "post", "cat"];
+  const sp = new URLSearchParams(location.search);
+  const out = new URLSearchParams();
+  keep.forEach((k) => { if (sp.get(k)) out.set(k, sp.get(k)); });
+  const qs = out.toString();
+  const link = document.createElement("link");
+  link.rel = "canonical";
+  link.href = "https://www.decomuse.com.au" + location.pathname + (qs ? "?" + qs : "");
+  document.head.appendChild(link);
+})();
+
 /* ---- Icon set (inline SVG) ---- */
 const IC = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>',

@@ -187,6 +187,34 @@
       }
       document.title = p.name + ", DecoMuse";
       const rev = reviewStats(p);
+
+      // Product schema (JSON-LD) for Google rich results
+      (function () {
+        const SITE = "https://www.decomuse.com.au";
+        const startPrice = (p.sizes && p.sizes.length) ? Math.min.apply(null, p.sizes.map(s => s.price)) : p.price;
+        const imgSrc = (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg");
+        const ld = {
+          "@context": "https://schema.org", "@type": "Product",
+          name: p.name,
+          image: [SITE + "/" + String(imgSrc).replace(/^\//, "")],
+          description: (p.desc || p.name).slice(0, 320),
+          sku: p.sku || p.id,
+          brand: { "@type": "Brand", name: p.brand || "DecoMuse" },
+          offers: {
+            "@type": "Offer",
+            url: SITE + "/product.html?id=" + p.id,
+            priceCurrency: "AUD",
+            price: Number(startPrice).toFixed(2),
+            availability: "https://schema.org/InStock",
+            itemCondition: "https://schema.org/NewCondition"
+          },
+          aggregateRating: { "@type": "AggregateRating", ratingValue: rev.avg, reviewCount: rev.total }
+        };
+        const s = document.createElement("script");
+        s.type = "application/ld+json";
+        s.textContent = JSON.stringify(ld);
+        document.head.appendChild(s);
+      })();
       pdpColour = (p.colours && p.colours.length) ? p.colours[0].name : null;
       pdpSize = (p.sizes && p.sizes.length) ? p.sizes[0].label : null;
       pdpSizePrice = (p.sizes && p.sizes.length) ? p.sizes[0].price : null;
