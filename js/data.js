@@ -6,7 +6,7 @@
 
 const DECOMUSE = {
   brand: "DecoMuse",
-  tagline: "Home Décor, Lifestyle & Snippets",
+  tagline: "Home Décor Store",
   email: "Decormuseofficial@outlook.com",
   location: "Australia",
   flag: "🇦🇺",

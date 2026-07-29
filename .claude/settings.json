@@ -11,7 +11,9 @@
       "Bash(git commit -q -m 'Styling packages: remove fixed prices, show '\\\\''Price on enquiry'\\\\'' \\(quote per client\\); keep packages, features & buttons *)",
       "Bash(git commit -q -m 'SEO: retarget homepage title/description/H1 for '\\\\''home décor store Australia'\\\\'' & homewares keywords *)",
       "Bash(python -c \"import json,re,io; s=open\\('index.html',encoding='utf-8'\\).read\\(\\); m=re.search\\(r'<script type=\\\\\"application/ld\\\\+json\\\\\">\\(.*?\\)</script>', s, re.S\\); json.loads\\(m.group\\(1\\)\\); print\\('homepage JSON-LD valid'\\)\")",
-      "Bash(git commit -q -m 'SEO: richer homepage structured data \\(Store+OnlineStore+WebSite graph, logo, phone, payments, areaServed, SearchAction\\); shop.html ?q= search support *)"
+      "Bash(git commit -q -m 'SEO: richer homepage structured data \\(Store+OnlineStore+WebSite graph, logo, phone, payments, areaServed, SearchAction\\); shop.html ?q= search support *)",
+      "Bash(node -e \"const fs=require\\('fs'\\);const s=fs.readFileSync\\('index.html','utf8'\\);const m=s.match\\(/<script type=\\\\\"application\\\\/ld\\\\+json\\\\\">\\([\\\\s\\\\S]*?\\)<\\\\/script>/\\);try{JSON.parse\\(m[1]\\);console.log\\('✓ homepage JSON-LD is valid'\\);}catch\\(e\\){console.log\\('✗ INVALID:',e.message\\);}\")",
+      "Bash(git commit *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"

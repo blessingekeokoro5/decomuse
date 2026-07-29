@@ -154,7 +154,7 @@ function buildHeader() {
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
       <a class="brand" href="index.html" aria-label="DecoMuse home">
-        <img class="brand-logo-full" src="assets/logo.png" data-i="0" alt="DecoMuse" onload="this.closest('.brand').classList.add('has-logo')" onerror="nextLogo(this)">
+        <img class="brand-logo-full" src="assets/logo.png" data-i="0" alt="DecoMuse — Home Décor Store" onload="this.closest('.brand').classList.add('has-logo')" onerror="nextLogo(this)">
         <span class="brand-mark">
           <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <!-- outer arch -->
@@ -175,7 +175,7 @@ function buildHeader() {
         </span>
         <span class="brand-text">
           <span class="bt-main">D<span class="amp">&amp;</span>M</span>
-          <span class="bt-sub">Home &amp; Living</span>
+          <span class="bt-sub">Home Décor Store</span>
         </span>
       </a>
       <form class="header-search" id="headerSearch" role="search">
