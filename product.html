@@ -215,6 +215,12 @@
         s.textContent = JSON.stringify(ld);
         document.head.appendChild(s);
       })();
+
+      // GA4: product view
+      (function () {
+        const vp = (p.sizes && p.sizes.length) ? p.sizes[0].price : p.price;
+        gaEvent("view_item", { currency: "AUD", value: Number(vp), items: [gaItem(p, 1, vp)] });
+      })();
       pdpColour = (p.colours && p.colours.length) ? p.colours[0].name : null;
       pdpSize = (p.sizes && p.sizes.length) ? p.sizes[0].label : null;
       pdpSizePrice = (p.sizes && p.sizes.length) ? p.sizes[0].price : null;

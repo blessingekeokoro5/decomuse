@@ -17,6 +17,13 @@ function cartTotal() { return getCart().reduce((n, i) => n + i.price * i.qty, 0)
 
 function findProduct(id) { return PRODUCTS.find(p => p.id === id); }
 
+/* ---- GA4 ecommerce helpers ---- */
+function gaEvent(name, params) { try { if (typeof window.gtag === "function") window.gtag("event", name, params || {}); } catch (e) {} }
+function gaItem(p, qty, price) {
+  return { item_id: (p && (p.sku || p.id)) || "", item_name: (p && p.name) || "",
+    item_category: (p && p.cat) || "", price: Number(price != null ? price : (p && p.price) || 0), quantity: qty || 1 };
+}
+
 // Cart lines are keyed by product + colour + size so variants are separate lines.
 function addToCart(id, qty = 1, colour = null, size = null, price = null) {
   const p = findProduct(id);
@@ -28,6 +35,7 @@ function addToCart(id, qty = 1, colour = null, size = null, price = null) {
   if (line) line.qty += qty;
   else cart.push({ id: p.id, key, name: p.name, price: unitPrice, cat: p.cat, ph: p.ph, img: p.img || (p.imgs && p.imgs[0]) || undefined, qty, colour: colour || undefined, size: size || undefined });
   saveCart(cart);
+  gaEvent("add_to_cart", { currency: "AUD", value: unitPrice * qty, items: [gaItem(p, qty, unitPrice)] });
   showToast(`Added “${p.name}${colour ? " · " + colour : ""}${size ? " · " + size : ""}” to your cart`);
   if (typeof renderCartPage === "function") renderCartPage();
 }

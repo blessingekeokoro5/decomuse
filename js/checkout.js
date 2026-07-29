@@ -78,6 +78,7 @@ function renderCheckout() {
   }
   const t = checkoutTotals();
   const acc = getAccount() || {};
+  gaEvent("begin_checkout", { currency: "AUD", value: t.total, items: cart.map(i => gaItem(i, i.qty, i.price)) });
   const lines = cart.map(i => {
     const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
     const src = i.img || (prod && (prod.img || (prod.imgs && prod.imgs[0]))) || ("assets/products/" + i.id + ".jpg");
@@ -158,6 +159,14 @@ async function startPayment(e) {
   const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE.stripe) || {};
   const cart = getCart();
   const t = checkoutTotals();
+
+  // Stash purchase details so order-confirmed.html can fire the GA4 purchase event
+  try {
+    localStorage.setItem("dm_pending_purchase", JSON.stringify({
+      value: t.total, shipping: t.shipping || 0,
+      items: cart.map(i => ({ item_id: i.id, item_name: i.name, item_category: i.cat, price: i.price, quantity: i.qty }))
+    }));
+  } catch (e) {}
 
   // Gift card covers the whole order → complete without Stripe (uses refund credit)
   if (t.giftCard > 0 && t.total <= 0) {

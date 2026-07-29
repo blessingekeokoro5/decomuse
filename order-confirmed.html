@@ -45,6 +45,25 @@
       updateCartCount();
     })();
 
+    // GA4: purchase (fires once, then clears so a page refresh won't double-count)
+    (function () {
+      try {
+        const pend = JSON.parse(localStorage.getItem("dm_pending_purchase") || "null");
+        if (!pend) return;
+        const o = JSON.parse(localStorage.getItem("dm_last_order") || "null");
+        const sid = new URLSearchParams(location.search).get("session_id");
+        const txn = (o && o.orderNo) || sid || ("DM-" + Date.now());
+        if (typeof window.gtag === "function") {
+          window.gtag("event", "purchase", {
+            transaction_id: txn, currency: "AUD",
+            value: (o && o.total != null) ? o.total : pend.value,
+            shipping: pend.shipping || 0, items: pend.items || []
+          });
+        }
+        localStorage.removeItem("dm_pending_purchase");
+      } catch (e) {}
+    })();
+
     /* Email any purchased gift cards to their recipients (once, after payment). */
     (async function sendGiftCards() {
       let cart = [];
