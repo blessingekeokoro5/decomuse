@@ -17,6 +17,19 @@
   document.head.appendChild(link);
 })();
 
+/* ---- Google Analytics 4 (loads on every page via this shared script) ---- */
+(function () {
+  var GA_ID = "G-H06N3BSXY4";
+  var s = document.createElement("script");
+  s.async = true;
+  s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag("js", new Date());
+  window.gtag("config", GA_ID);
+})();
+
 /* ---- Icon set (inline SVG) ---- */
 const IC = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>',
