@@ -22,16 +22,43 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Store",
-    "name": "DecoMuse",
-    "description": "Australian home, lifestyle & fragrance store, fragrance, health & wellness, home décor, lifestyle essentials & gift hampers.",
-    "url": "https://www.decomuse.com.au",
-    "email": "decormuseofficial@outlook.com",
-    "address": { "@type": "PostalAddress", "addressCountry": "AU" },
-    "priceRange": "$$",
-    "sameAs": [
-      "https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr",
-      "https://www.instagram.com/decormuseofficial"
+    "@graph": [
+      {
+        "@type": ["Store", "OnlineStore"],
+        "@id": "https://www.decomuse.com.au/#store",
+        "name": "DecoMuse",
+        "alternateName": "DecoMuse Home & Living",
+        "description": "DecoMuse is an Australian online home décor & homewares store — curated décor, furniture, lighting, candles, fragrance, wellness and gift hampers, plus home styling, staging & interior design.",
+        "url": "https://www.decomuse.com.au",
+        "logo": "https://www.decomuse.com.au/assets/logo.jpg",
+        "image": "https://www.decomuse.com.au/assets/hero.jpg",
+        "email": "decormuseofficial@outlook.com",
+        "telephone": "+61451609398",
+        "priceRange": "$$",
+        "currenciesAccepted": "AUD",
+        "paymentAccepted": "Credit Card, Apple Pay, Google Pay, Afterpay, Zip",
+        "address": { "@type": "PostalAddress", "addressCountry": "AU" },
+        "areaServed": [
+          { "@type": "Country", "name": "Australia" },
+          { "@type": "Country", "name": "New Zealand" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr",
+          "https://www.instagram.com/decormuseofficial"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.decomuse.com.au/#website",
+        "url": "https://www.decomuse.com.au",
+        "name": "DecoMuse",
+        "publisher": { "@id": "https://www.decomuse.com.au/#store" },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": { "@type": "EntryPoint", "urlTemplate": "https://www.decomuse.com.au/shop.html?q={search_term_string}" },
+          "query-input": "required name=search_term_string"
+        }
+      }
     ]
   }
   </script>
