@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE — Booking calendar (Home Styling, Staging & Interior Design)
+   DÉCOMUSE — Booking calendar (Property Styling, Staging & Interior Design)
    Embeds a scheduling page if configured (DECOMUSE.bookingsUrl),
    else a built-in calendar that emails the business on submit.
    ============================================================ */
@@ -151,7 +151,7 @@ async function submitBooking(e) {
   const name = document.getElementById("bkName").value;
 
   const data = [
-    ["Service", "Home Styling / Interior Design consultation"],
+    ["Service", "Property Styling / Interior Design consultation"],
     ["Type", m.label],
     ["Where", m.place],
     ["Date", new Date(bk.date + "T00:00:00").toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long", year: "numeric" })],

@@ -551,6 +551,31 @@ em { font-style: italic; color: var(--rose-deep); }
 .bnpl-tag { font-weight: 700; font-size: 0.72rem; line-height: 1; padding: 3px 8px; border-radius: 5px; letter-spacing: 0.01em; }
 .bnpl-ap { background: #b2fce4; color: #06060a; }
 .bnpl-zip { background: #1a1a1a; color: #fff; }
+
+/* Circular service cards (Services page) */
+.svc-circles { display: grid; grid-template-columns: repeat(3,1fr); gap: 36px; margin-top: 14px; }
+.svc-round { position: relative; display: block; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow); }
+.svc-round img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
+.svc-round::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.40)); }
+.svc-round:hover img { transform: scale(1.06); }
+.svc-title { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; text-align: center; padding: 0 16px;
+  color: #fff; font-family: var(--font-head); font-size: clamp(1.3rem,2.4vw,1.7rem); text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+.svc-circle figcaption { text-align: center; margin: 18px auto 0; max-width: 300px; color: var(--body); font-size: 0.94rem; line-height: 1.55; }
+.svc-circle figcaption .link-arrow { margin-top: 10px; display: inline-flex; }
+@media (max-width: 760px){ .svc-circles { grid-template-columns: 1fr; gap: 30px; max-width: 340px; margin-left: auto; margin-right: auto; } }
+
+/* Enquire side tab + modal */
+.enquire-tab { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 190; writing-mode: vertical-rl; text-orientation: mixed;
+  background: var(--ink); color: #fff; border: none; cursor: pointer; letter-spacing: 0.2em; font-size: 0.72rem; font-weight: 600; text-transform: uppercase;
+  padding: 18px 9px; border-radius: 10px 0 0 10px; box-shadow: -3px 3px 12px rgba(0,0,0,0.2); font-family: var(--font-body); }
+.enquire-tab:hover { background: var(--rose-deep); }
+.enquire-modal { position: fixed; inset: 0; z-index: 300; display: none; align-items: center; justify-content: center; padding: 20px; }
+.enquire-modal.open { display: flex; }
+.enquire-overlay { position: absolute; inset: 0; background: rgba(28,22,19,0.55); }
+.enquire-card { position: relative; z-index: 1; background: #fff; border-radius: var(--radius); width: 100%; max-width: 520px; padding: 30px 32px; box-shadow: var(--shadow); max-height: 90vh; overflow-y: auto; }
+.enquire-close { position: absolute; top: 12px; right: 16px; background: none; border: none; font-size: 1.2rem; cursor: pointer; color: var(--muted); }
+.enquire-card h3 { font-size: 1.7rem; margin: 6px 0 4px; }
+@media (max-width: 600px){ .enquire-tab { padding: 14px 7px; letter-spacing: 0.14em; } }
 .product-foot { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: auto; padding-top: 16px; }
 
 /* Service card */

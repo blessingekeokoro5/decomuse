@@ -121,7 +121,7 @@ function buildHeader() {
   // Mobile drawer mirrors the desktop category nav order:
   // categories first, then Styling & Design, About, Contact.
   const mobilePlain = [
-    { label: "Our Services", href: "staging.html" },
+    { label: "Services", href: "staging.html" },
     { label: "Book Consult", href: "staging.html#book" },
     { label: "Help Centre", href: "support.html" },
     { label: "About Us", href: "about.html" },
@@ -218,7 +218,7 @@ function buildHeader() {
     <div class="nav-cats-row" id="navCatsRow">
       <div class="container">
         <ul class="nav-cats" id="navCats">${catTabs}
-          <li class="nav-cat-plain"><a href="staging.html">Our Services</a></li>
+          <li class="nav-cat-plain"><a href="staging.html">Services</a></li>
         </ul>
       </div>
       ${megaMarkup}
@@ -236,7 +236,7 @@ function buildFooter() {
   ];
   const decomuseLinks = [
     { t: "About Us", h: "about.html" },
-    { t: "Home Styling & Design", h: "staging.html" },
+    { t: "Property Styling & Design", h: "staging.html" },
     { t: "Portfolio", h: "portfolio.html" },
     { t: "The Edit — Journal", h: "blog.html" },
     { t: "Assistance & Contact", h: "support.html" },
@@ -506,6 +506,52 @@ function maybeNotifyLive(f) {
   }
 }
 
+/* ---- Enquire side tab + modal (site-wide) ---- */
+function buildEnquire() {
+  return `
+    <button class="enquire-tab" onclick="openEnquire()" aria-label="Make an enquiry">Enquire</button>
+    <div class="enquire-modal" id="enquireModal" aria-hidden="true">
+      <div class="enquire-overlay" onclick="closeEnquire()"></div>
+      <div class="enquire-card" role="dialog" aria-modal="true" aria-label="Make an enquiry">
+        <button class="enquire-close" onclick="closeEnquire()" aria-label="Close">✕</button>
+        <span class="eyebrow">Services</span>
+        <h3>Make an enquiry</h3>
+        <p style="color:var(--muted);font-size:0.9rem;margin:0 0 16px">Tell us about your space or project and we'll be in touch shortly.</p>
+        <form id="enquireForm">
+          <div class="field-row">
+            <div class="field"><label>Your name</label><input required></div>
+            <div class="field"><label>Email</label><input type="email" required></div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Phone</label><input type="tel"></div>
+            <div class="field"><label>Service</label>
+              <select><option>Property Styling</option><option>Property Staging</option><option>Interior Design</option><option>Trade &amp; Commercial</option><option>Gift hampers</option><option>Something else</option></select></div>
+          </div>
+          <div class="field"><label>Tell us more</label><textarea placeholder="Your space, timing, and what you're after…" style="min-height:90px"></textarea></div>
+          <button type="submit" class="btn btn--primary btn--block">Send enquiry</button>
+          <div class="form-success" id="enquireSuccess"></div>
+        </form>
+      </div>
+    </div>`;
+}
+function openEnquire() { const m = document.getElementById("enquireModal"); if (m) { m.classList.add("open"); m.setAttribute("aria-hidden", "false"); } }
+function closeEnquire() { const m = document.getElementById("enquireModal"); if (m) { m.classList.remove("open"); m.setAttribute("aria-hidden", "true"); } }
+function initEnquire() {
+  const form = document.getElementById("enquireForm");
+  if (!form) return;
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = form.querySelector('button[type="submit"]');
+    const data = (typeof collectForm === "function") ? collectForm(form) : [];
+    if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Services enquiry"); } catch (err) {}
+    const s = document.getElementById("enquireSuccess");
+    if (s) { s.classList.add("show"); s.textContent = "Thank you! Your enquiry has been sent — we'll be in touch shortly."; }
+    form.reset();
+    if (btn) { btn.disabled = false; btn.textContent = "Send enquiry"; }
+  });
+}
+
 /* ---- Inject on load ---- */
 function injectComponents() {
   const h = document.getElementById("site-header");
@@ -517,6 +563,7 @@ function injectComponents() {
   document.body.insertAdjacentHTML("beforeend", buildSearchOverlay());
   document.body.insertAdjacentHTML("beforeend", buildCookieBar());
   document.body.insertAdjacentHTML("beforeend", buildCountryModal());
+  document.body.insertAdjacentHTML("beforeend", buildEnquire());
   injectFavicon();
   wireNav();
   rotateAnnouncements();
@@ -526,6 +573,7 @@ function injectComponents() {
   initCountry();
   initMemberModal();
   initFlashBar();
+  initEnquire();
 }
 
 /* ---- Favicon (injected on every page), D&M house mark ---- */
