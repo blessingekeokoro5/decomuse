@@ -204,7 +204,7 @@ function bnplBadge(price) {
   if (!isFinite(p) || p < 1) return "";
   const q = (p / 4).toFixed(2);
   return `<div class="bnpl">4 interest-free payments of <strong>$${q}</strong> with `
-    + `<span class="bnpl-tag bnpl-ap">afterpay</span><span class="bnpl-tag bnpl-zip">zip</span></div>`;
+    + `<span class="bnpl-tag bnpl-ap">afterpay</span><span class="bnpl-tag bnpl-zip">zip</span><span class="bnpl-tag bnpl-klarna">Klarna</span></div>`;
 }
 
 /* ---- Product card markup ---- */

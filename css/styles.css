@@ -551,6 +551,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .bnpl-tag { font-weight: 700; font-size: 0.72rem; line-height: 1; padding: 3px 8px; border-radius: 5px; letter-spacing: 0.01em; }
 .bnpl-ap { background: #b2fce4; color: #06060a; }
 .bnpl-zip { background: #1a1a1a; color: #fff; }
+.bnpl-klarna { background: #ffb3c7; color: #0a0a0a; }
 
 /* Circular service cards (Services page) */
 .svc-circles { display: grid; grid-template-columns: repeat(3,1fr); gap: 36px; margin-top: 14px; }
