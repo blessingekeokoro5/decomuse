@@ -13,7 +13,12 @@
       "Bash(python -c \"import json,re,io; s=open\\('index.html',encoding='utf-8'\\).read\\(\\); m=re.search\\(r'<script type=\\\\\"application/ld\\\\+json\\\\\">\\(.*?\\)</script>', s, re.S\\); json.loads\\(m.group\\(1\\)\\); print\\('homepage JSON-LD valid'\\)\")",
       "Bash(git commit -q -m 'SEO: richer homepage structured data \\(Store+OnlineStore+WebSite graph, logo, phone, payments, areaServed, SearchAction\\); shop.html ?q= search support *)",
       "Bash(node -e \"const fs=require\\('fs'\\);const s=fs.readFileSync\\('index.html','utf8'\\);const m=s.match\\(/<script type=\\\\\"application\\\\/ld\\\\+json\\\\\">\\([\\\\s\\\\S]*?\\)<\\\\/script>/\\);try{JSON.parse\\(m[1]\\);console.log\\('✓ homepage JSON-LD is valid'\\);}catch\\(e\\){console.log\\('✗ INVALID:',e.message\\);}\")",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(cp \"/c/Users/direc/Downloads/1.Furniture-Tables & Desks-Coffee Tables..png\" \"assets/products/hd05.jpg\")",
+      "Bash(cp \"/c/Users/direc/Downloads/2nd photo-Furniture-Tables & Desks-Coffee Tables..png\" \"assets/products/hd05-2.jpg\")",
+      "Bash(cp \"/c/Users/direc/Downloads/3rd photo-1.Furniture-Tables & Desks-Coffee Tables..png\" \"assets/products/hd05-3.jpg\")",
+      "Bash(cp \"/c/Users/direc/Downloads/4th photo; Furniture-Tables & Desks-Coffee Tables..png\" \"assets/products/hd05-4.jpg\")",
+      "Bash(cp \"/c/Users/direc/Downloads/5th photo-coffee table.png\" \"assets/products/hd05-5.jpg\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
