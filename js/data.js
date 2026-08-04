@@ -149,7 +149,20 @@ const PRODUCTS = [
       "A statement centrepiece to pair with sofas, rugs & accent chairs"
     ],
     specs: { "Type": "Coffee Table", "Shape": "Oval", "Tabletop": "Marble-effect", "Base": "Timber-look", "Primary Colour": "White & Walnut", "Room": "Living / Indoor" },
-    care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." }
+    care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." },
+
+  { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", price: 198.37, memberPrice: 168.55, sku: "DM-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
+    imgs: ["assets/products/hd06.jpg", "assets/products/hd06-2.jpg", "assets/products/hd06-3.jpg", "assets/products/hd06-4.jpg", "assets/products/hd06-5.jpg", "assets/products/hd06-6.jpg", "assets/products/hd06-7.jpg", "assets/products/hd06-8.jpg", "assets/products/hd06-9.jpg", "assets/products/hd06-10.jpg"],
+    desc: "A refined two-piece table set that brings a soft, luxe finish to any living space. Each table is topped with marble-look tempered glass, tough enough for everyday use yet elegant enough to feel like a designer piece. Nest them together for a compact footprint, or set them apart as a coffee table and matching side table. With clean lines and neutral marble tones, they layer effortlessly with sofas, rugs and accent chairs, an easy way to elevate a lounge, bedroom or reading corner.",
+    features: [
+      "Two-piece set, use nested together or apart as coffee & side tables",
+      "Marble-look tempered glass tops, toughened for everyday durability",
+      "Neutral marble tones that suit any palette and style",
+      "Slim, contemporary frame with a light, airy footprint",
+      "Wipe-clean glass surface with a polished, high-end finish"
+    ],
+    specs: { "Type": "Coffee & Side Table Set", "Pieces": "2", "Tabletop": "Marble-look tempered glass", "Larger table width": "80cm", "Style": "Contemporary", "Room": "Living / Indoor" },
+    care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." }
 ];
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).

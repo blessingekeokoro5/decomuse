@@ -124,13 +124,34 @@
     <g:mpn>DM-10106</g:mpn>
     <g:identifier_exists>no</g:identifier_exists>
     <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
-    <g:product_type>Home Décor</g:product_type>
+    <g:product_type>Furniture</g:product_type>
     <g:shipping>
       <g:country>AU</g:country>
       <g:service>Standard</g:service>
       <g:price>19.00 AUD</g:price>
     </g:shipping>
     <g:sale_price>99.99 AUD</g:sale_price>
+  </item>
+  <item>
+    <g:id>DM-10107</g:id>
+    <g:title>Marble-Look Glass Table Set — 2 Piece (80cm)</g:title>
+    <g:description>A refined two-piece table set that brings a soft, luxe finish to any living space. Each table is topped with marble-look tempered glass, tough enough for everyday use yet elegant enough to feel like a designer piece. Nest them together for a compact footprint, or set them apart as a coffee table and matching side table. With clean lines and neutral marble tones, they layer effortlessly with sofas, rugs and accent chairs, an easy way to elevate a lounge, bedroom or reading corner.</g:description>
+    <g:link>https://www.decomuse.com.au/product.html?id=hd06</g:link>
+    <g:image_link>https://www.decomuse.com.au/assets/products/hd06.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>198.37 AUD</g:price>
+    <g:brand>DecoMuse</g:brand>
+    <g:mpn>DM-10107</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Furniture</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:sale_price>168.55 AUD</g:sale_price>
   </item>
 </channel>
 </rss>
