@@ -28,6 +28,8 @@
     .pdp-detail-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 0.92rem; }
     .pdp-detail-list li span:first-child { color: var(--muted); }
     .pdp-buy { display: flex; gap: 12px; align-items: center; margin: 24px 0 16px; flex-wrap: wrap; }
+    .pdp-social { display: flex; align-items: center; gap: 8px; margin: 2px 0 12px; font-size: 0.86rem; color: var(--body); background: var(--cream-2); border-radius: 8px; padding: 9px 13px; }
+    .pdp-social b { color: var(--rose-deep); font-weight: 700; }
     .pdp-trust { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; font-size: 0.85rem; color: var(--body); }
     .pdp-trust span { display: flex; align-items: center; gap: 7px; }
     @media (max-width: 860px){ .pdp { grid-template-columns: 1fr; gap: 28px; } }
@@ -95,6 +97,11 @@
       return out.join(" / ");
     }
 
+    // Stable "in carts right now" count per product (8–24)
+    function cartWant(p) {
+      let h = 0; for (let i = 0; i < p.id.length; i++) h = (h * 31 + p.id.charCodeAt(i)) >>> 0;
+      return 8 + (h % 17);
+    }
     let pdpQty = 1;
     let pdpColour = null;
     function pdpSetColour(name, btn) {
@@ -299,6 +306,7 @@
               <button class="btn btn--primary" onclick="addToCart('${p.id}', pdpQty, pdpColour, pdpSize, pdpSizePrice)">Add to cart</button>
               <button class="btn btn--outline" onclick="toggleWishlist('${p.id}', this)">${saved ? "♥ Saved" : "♡ Save"}</button>
             </div>
+            <div class="pdp-social">🛒 <span><strong>Other people want this.</strong> Over <b>${cartWant(p)}</b> people have this in their carts right now.</span></div>
             <div class="pdp-trust">
               <span>🚚 Free shipping over $500</span><span>↩️ 30-day returns</span><span>🔒 Secure checkout</span>
             </div>

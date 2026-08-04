@@ -358,8 +358,20 @@ function buildFooter() {
         </form>
       </div>
 
-      <div class="pay-chips">
-        ${payments.map(p => `<span class="pay-chip">${p}</span>`).join("")}
+      <div class="pay-wrap">
+        <div class="pay-safe">🔒 Guaranteed Safe &amp; Secure Checkout</div>
+        <div class="pay-row">
+          <span class="pay-badge pay-stripe">Powered by Stripe</span>
+          <span class="pay-badge pay-visa">VISA</span>
+          <span class="pay-badge pay-mc"><span class="mc-c1"></span><span class="mc-c2"></span></span>
+          <span class="pay-badge pay-amex">AMEX</span>
+          <span class="pay-badge pay-paypal"><span class="p1">Pay</span><span class="p2">Pal</span></span>
+          <span class="pay-badge pay-applepay">Apple&nbsp;Pay</span>
+          <span class="pay-badge pay-gpay"><span class="g-b">G</span>&nbsp;Pay</span>
+          <span class="pay-badge pay-afterpay">afterpay</span>
+          <span class="pay-badge pay-zip">zip</span>
+          <span class="pay-badge pay-klarna">Klarna</span>
+        </div>
       </div>
 
       <div class="footer-bottom">
