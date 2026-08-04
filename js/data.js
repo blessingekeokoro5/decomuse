@@ -152,7 +152,7 @@ const PRODUCTS = [
     care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." },
 
   { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", price: 198.37, memberPrice: 168.55, sku: "DM-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
-    imgs: ["assets/products/hd06.jpg", "assets/products/hd06-2.jpg", "assets/products/hd06-3.jpg", "assets/products/hd06-4.jpg", "assets/products/hd06-5.jpg", "assets/products/hd06-6.jpg", "assets/products/hd06-7.jpg", "assets/products/hd06-8.jpg", "assets/products/hd06-9.jpg", "assets/products/hd06-10.jpg"],
+    imgs: ["assets/products/hd06.jpg", "assets/products/hd06-3.jpg", "assets/products/hd06-4.jpg", "assets/products/hd06-5.jpg", "assets/products/hd06-6.jpg", "assets/products/hd06-7.jpg", "assets/products/hd06-8.jpg", "assets/products/hd06-9.jpg", "assets/products/hd06-10.jpg"],
     desc: "A refined two-piece table set that brings a soft, luxe finish to any living space. Each table is topped with marble-look tempered glass, tough enough for everyday use yet elegant enough to feel like a designer piece. Nest them together for a compact footprint, or set them apart as a coffee table and matching side table. With clean lines and neutral marble tones, they layer effortlessly with sofas, rugs and accent chairs, an easy way to elevate a lounge, bedroom or reading corner.",
     features: [
       "Two-piece set, use nested together or apart as coffee & side tables",
