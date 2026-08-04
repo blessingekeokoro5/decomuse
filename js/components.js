@@ -17,6 +17,26 @@
   document.head.appendChild(link);
 })();
 
+/* ---- PWA: manifest + iOS home-screen meta (injected site-wide) ---- */
+(function () {
+  function ensureMeta(attr, key, content) {
+    if (document.querySelector("meta[" + attr + '="' + key + '"]')) return;
+    var el = document.createElement("meta");
+    el.setAttribute(attr, key); el.setAttribute("content", content);
+    document.head.appendChild(el);
+  }
+  if (!document.querySelector('link[rel="manifest"]')) {
+    var link = document.createElement("link");
+    link.rel = "manifest"; link.href = "/manifest.json";
+    document.head.appendChild(link);
+  }
+  ensureMeta("name", "theme-color", "#B67280");
+  ensureMeta("name", "mobile-web-app-capable", "yes");
+  ensureMeta("name", "apple-mobile-web-app-capable", "yes");
+  ensureMeta("name", "apple-mobile-web-app-status-bar-style", "default");
+  ensureMeta("name", "apple-mobile-web-app-title", "DecoMuse");
+})();
+
 /* ---- OneSignal Web Push (promo notifications) ---- */
 (function () {
   var s = document.createElement("script");
