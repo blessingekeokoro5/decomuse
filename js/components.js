@@ -571,6 +571,8 @@ function buildEnquire() {
             <div class="field"><label>Service</label>
               <select><option>Property Styling</option><option>Property Staging</option><option>Interior Design</option><option>Trade &amp; Commercial</option><option>Gift hampers</option><option>Something else</option></select></div>
           </div>
+          <div class="field"><label>How did you hear about us?</label>
+            <select><option value="">Select an option</option><option>Google search</option><option>Instagram</option><option>Facebook</option><option>Pinterest</option><option>Friend or referral</option><option>Real estate agent</option><option>Shopped with us before</option><option>Other</option></select></div>
           <div class="field"><label>Tell us more</label><textarea placeholder="Your space, timing, and what you're after…" style="min-height:90px"></textarea></div>
           <button type="submit" class="btn btn--primary btn--block">Send enquiry</button>
           <div class="form-success" id="enquireSuccess"></div>
