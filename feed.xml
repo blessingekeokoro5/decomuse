@@ -153,5 +153,26 @@
     </g:shipping>
     <g:sale_price>168.55 AUD</g:sale_price>
   </item>
+  <item>
+    <g:id>DM-10108</g:id>
+    <g:title>Modern Coffee Table with Storage Drawer &amp; Open Shelf</g:title>
+    <g:description>Style and storage in one considered piece. This modern coffee table pairs a sleek marble-look top with a smart two-tone body, a soft-close drawer keeps remotes, chargers and clutter neatly out of sight, while the open shelf is ideal for books, baskets or a styling tray. Raised on slender metal legs, it feels light and contemporary, the perfect centrepiece for a living room that likes to stay tidy and effortlessly put-together.</g:description>
+    <g:link>https://www.decomuse.com.au/product.html?id=hd07</g:link>
+    <g:image_link>https://www.decomuse.com.au/assets/products/hd07.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>155.09 AUD</g:price>
+    <g:brand>DecoMuse</g:brand>
+    <g:mpn>DM-10108</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Furniture</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:sale_price>135.55 AUD</g:sale_price>
+  </item>
 </channel>
 </rss>

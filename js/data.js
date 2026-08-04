@@ -162,7 +162,20 @@ const PRODUCTS = [
       "Wipe-clean glass surface with a polished, high-end finish"
     ],
     specs: { "Type": "Coffee & Side Table Set", "Pieces": "2", "Tabletop": "Marble-look tempered glass", "Larger table width": "80cm", "Style": "Contemporary", "Room": "Living / Indoor" },
-    care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." }
+    care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." },
+
+  { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", price: 155.09, memberPrice: 135.55, sku: "DM-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
+    imgs: ["assets/products/hd07.jpg", "assets/products/hd07-2.jpg", "assets/products/hd07-3.jpg", "assets/products/hd07-4.jpg", "assets/products/hd07-5.jpg", "assets/products/hd07-6.jpg", "assets/products/hd07-7.jpg", "assets/products/hd07-8.jpg"],
+    desc: "Style and storage in one considered piece. This modern coffee table pairs a sleek marble-look top with a smart two-tone body, a soft-close drawer keeps remotes, chargers and clutter neatly out of sight, while the open shelf is ideal for books, baskets or a styling tray. Raised on slender metal legs, it feels light and contemporary, the perfect centrepiece for a living room that likes to stay tidy and effortlessly put-together.",
+    features: [
+      "Marble-look tabletop with a polished, contemporary finish",
+      "Handy storage drawer to hide remotes, chargers & clutter",
+      "Open display shelf for books, baskets or a styling tray",
+      "Slim metal legs for a light, modern silhouette",
+      "A functional statement piece for any living room"
+    ],
+    specs: { "Type": "Coffee Table", "Shape": "Rectangular", "Tabletop": "Marble-look", "Storage": "Drawer + open shelf", "Legs": "Metal", "Room": "Living / Indoor" },
+    care: "Wipe clean with a soft, damp cloth; avoid abrasive cleaners and excess water. Use coasters to protect the surface from heat and moisture." }
 ];
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).
