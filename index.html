@@ -94,6 +94,15 @@
   <!-- Hidden H1 kept for SEO (visible statement removed on request) -->
   <h1 class="sr-only">DecoMuse — Australian home décor &amp; homewares store · décor, furniture, lighting, candles, fragrance &amp; gifts</h1>
 
+  <!-- ============ SALE COUNTDOWN ============ -->
+  <div id="campaignBar" class="campaign-bar" style="display:none">
+    <div class="container campaign-inner">
+      <span class="campaign-text" id="campaignText"></span>
+      <div class="campaign-timer" id="campaignTimer" aria-label="Time remaining"></div>
+      <a class="campaign-cta" href="shop.html">Shop the sale →</a>
+    </div>
+  </div>
+
   <!-- ============ PROMO BANNER + TRUST BADGES ============ -->
   <section class="section--tight bg-cream2">
     <div class="container">
@@ -272,6 +281,28 @@
     // Render the set twice so the marquee loops seamlessly (translateX -50%).
     const shuffled = REVIEWS.slice().sort(() => Math.random() - 0.5);
     document.getElementById("reviewsGrid").innerHTML = shuffled.map(reviewCard).join("") + shuffled.map(reviewCard).join("");
+
+    // Sale countdown banner (Winter Décor Refresh) — reads DECOMUSE.campaign
+    (function () {
+      const c = (typeof getCampaign === "function") ? getCampaign() : { active: false };
+      const bar = document.getElementById("campaignBar");
+      if (!bar || !c.active) return;
+      document.getElementById("campaignText").textContent = (DECOMUSE.campaign && DECOMUSE.campaign.headline) || "Sale on now";
+      bar.style.display = "block";
+      const timer = document.getElementById("campaignTimer");
+      const pad = (n) => String(n).padStart(2, "0");
+      const unit = (v, l) => `<span class="ct-unit"><b>${pad(v)}</b><small>${l}</small></span>`;
+      function tick() {
+        const ms = c.endsAt - Date.now();
+        if (ms <= 0) { bar.style.display = "none"; clearInterval(iv); return; }
+        const s = Math.floor(ms / 1000);
+        timer.innerHTML = [
+          unit(Math.floor(s / 86400), "Day"), unit(Math.floor((s % 86400) / 3600), "Hrs"),
+          unit(Math.floor((s % 3600) / 60), "Min"), unit(s % 60, "Sec")
+        ].join('<span class="ct-sep">:</span>');
+      }
+      tick(); const iv = setInterval(tick, 1000);
+    })();
 
     // Build the moving member strip (offer + trust points), duplicated for a seamless loop
     (function () {

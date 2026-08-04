@@ -194,12 +194,16 @@ async function startPayment(e) {
   // --- Real Stripe Checkout (active as soon as an endpoint is set) ---
   if (cfg.checkoutEndpoint) {
     try {
+      // Apply the active discount (member / flash / sale campaign) to the prices we send to
+      // Stripe, so the amount CHARGED matches the discounted total shown on site.
+      const od = orderDiscount(t.sub);
+      const factor = 1 - (od.pct || 0) / 100;
       const res = await fetch(cfg.checkoutEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          items: cart.map(i => { const v = [i.colour, i.size].filter(Boolean).join(", "); return { id: i.id, name: v ? i.name + " (" + v + ")" : i.name, price: i.price, qty: i.qty }; }),
-          coupon: t.coupon, shipping: t.shipping, customer
+          items: cart.map(i => { const v = [i.colour, i.size].filter(Boolean).join(", "); return { id: i.id, name: v ? i.name + " (" + v + ")" : i.name, price: +(i.price * factor).toFixed(2), qty: i.qty }; }),
+          coupon: "", discountPct: od.pct || 0, discountLabel: od.label, shipping: t.shipping, customer
         })
       });
       const data = await res.json();

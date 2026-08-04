@@ -123,6 +123,19 @@ em { font-style: italic; color: var(--rose-deep); }
 .flash-x:hover { background: rgba(255,255,255,0.35); }
 @media (max-width: 600px){ .flash-bar { font-size: 0.8rem; padding-right: 40px; } .flash-cta { display: none; } }
 
+/* Sale countdown banner (Winter Décor Refresh) */
+.campaign-bar { background: #1a1614; color: #fff; padding: 13px 0; }
+.campaign-inner { display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.campaign-text { font-size: 0.9rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; }
+.campaign-timer { display: flex; align-items: center; gap: 12px; }
+.campaign-timer .ct-unit { text-align: center; min-width: 32px; }
+.campaign-timer .ct-unit b { display: block; font-size: 1.15rem; font-weight: 700; font-variant-numeric: tabular-nums; line-height: 1; }
+.campaign-timer .ct-unit small { display: block; font-size: 0.52rem; letter-spacing: 0.12em; text-transform: uppercase; color: #b0a3a0; margin-top: 3px; }
+.campaign-timer .ct-sep { color: #6b5d5a; font-weight: 700; }
+.campaign-cta { color: var(--rose-soft); font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; text-decoration: none; border-bottom: 1px solid transparent; }
+.campaign-cta:hover { border-bottom-color: var(--rose-soft); }
+@media (max-width: 600px){ .campaign-inner { gap: 14px; } .campaign-text { font-size: 0.76rem; letter-spacing: 0.08em; } .campaign-cta { display: none; } }
+
 /* ---- Announcement bar ---- */
 .announce {
   background: var(--forest); color: #e9e6d8; text-align: center;

@@ -52,7 +52,15 @@ function setQty(key, qty) {
   if (typeof renderCartPage === "function") renderCartPage();
 }
 
-/* Best discount = larger of member coupon (20%) or the live flash-sale % */
+/* Live sale campaign (Winter Décor Refresh, etc.) — set in DECOMUSE.campaign */
+function getCampaign() {
+  const c = (typeof DECOMUSE !== "undefined" && DECOMUSE.campaign) || null;
+  if (!c || !c.percent || !c.endsAt) return { active: false, percent: 0 };
+  const ends = new Date(c.endsAt).getTime();
+  return { active: Date.now() < ends, percent: c.percent, label: c.label || "Sale", headline: c.headline, endsAt: ends };
+}
+
+/* Best discount = largest of member coupon (20%), live flash-sale %, or sale campaign % */
 function orderDiscount(sub) {
   let coupon = null;
   try { coupon = window._coupon || localStorage.getItem("dm_coupon"); } catch (e) {}
@@ -60,8 +68,15 @@ function orderDiscount(sub) {
   const couponPct = (coupon === "WELCOME20" || (acc && acc.member && acc.coupon === "WELCOME20")) ? 20 : 0;
   let flashPct = 0;
   try { const f = getFlashSale(); if (f.active) flashPct = f.percent; } catch (e) {}
-  const pct = Math.max(couponPct, flashPct);
-  const label = (flashPct >= couponPct && flashPct > 0) ? `Flash sale (${flashPct}% off)` : (couponPct > 0 ? "Member discount (20%)" : "");
+  let campaignPct = 0, campaignLabel = "";
+  try { const c = getCampaign(); if (c.active) { campaignPct = c.percent; campaignLabel = c.label; } } catch (e) {}
+  const pct = Math.max(couponPct, flashPct, campaignPct);
+  let label = "";
+  if (pct > 0) {
+    if (campaignPct === pct) label = `${campaignLabel} (${pct}% off)`;
+    else if (flashPct === pct) label = `Flash sale (${pct}% off)`;
+    else label = "Member discount (20%)";
+  }
   return { pct, amount: Math.round(sub * pct / 100), label };
 }
 

@@ -13,6 +13,8 @@ const DECOMUSE = {
   abn: "41 991 812 955",
   est: "2026",
   currency: "$",
+  // Site-wide sale campaign. Set percent:0 (or endsAt in the past) to turn OFF.
+  campaign: { headline: "Winter Décor Refresh — 30% Off Every Piece", label: "Winter Décor Refresh", percent: 30, endsAt: "2026-08-14T23:59:59" },
   formEmail: "decormuseofficial@outlook.com",
   formEndpoint: "",
   formAccessKey: "f59d2f99-262b-46a0-987c-d94bcfe4b1bb",
