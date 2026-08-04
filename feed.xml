@@ -111,5 +111,26 @@
     <g:color>Teal/Navy/Blue Suede/Pea Pod/Coral/Burgundy/Chocolate Brown/Charcoal/Linen/Silver/White</g:color>
     <g:sale_price>25.99 AUD</g:sale_price>
   </item>
+  <item>
+    <g:id>DM-10106</g:id>
+    <g:title>Oval Marble-Effect Coffee Table</g:title>
+    <g:description>A sculptural centrepiece for the living room, this oval coffee table pairs a smooth marble-effect top with a warm, angular timber-look base. The soft oval silhouette keeps the room feeling open, while the crossed legs add architectural interest, a timeless, mid-century-inspired piece that anchors a lounge with quiet luxury. Style it with a stack of design books, a low vase or a scented candle to complete the look.</g:description>
+    <g:link>https://www.decomuse.com.au/product.html?id=hd05</g:link>
+    <g:image_link>https://www.decomuse.com.au/assets/products/hd05.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>115.37 AUD</g:price>
+    <g:brand>DecoMuse</g:brand>
+    <g:mpn>DM-10106</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Home Décor</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:sale_price>99.99 AUD</g:sale_price>
+  </item>
 </channel>
 </rss>
