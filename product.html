@@ -76,19 +76,19 @@
     const CAT_TREE = {
       "Furniture":         ["Home & Garden", "Furniture", "Tables & Desks"],
       "Home Décor":        ["Home & Garden", "Home Décor", "Décor & Accents"],
-      "Health & Wellness": ["Health & Beauty", "Health & Wellness", "Bath & Body"],
-      "Fragrance":         ["Home & Garden", "Fragrance", "Home Fragrance"],
-      "Lifestyle":         ["Home & Garden", "Lifestyle", "Everyday Essentials"],
       "Kitchen & Dining":  ["Home & Garden", "Kitchen & Dining", "Tableware"],
       "Bedroom & Bath":    ["Home & Garden", "Bedroom & Bath", "Linen & Textiles"],
-      "Gifts":             ["Gifts & Occasions", "Gifts", "Gift Ideas"],
-      "Travel Essentials": ["Lifestyle", "Travel", "Travel Essentials"]
+      "Fragrance":         ["Home & Garden", "Fragrance", "Home Fragrance"],
+      "Health & Wellness": ["Health & Wellness", "Bath & Body"],
+      "Lifestyle":         ["Lifestyle", "Everyday Essentials"],
+      "Gifts":             ["Gifts", "Gift Ideas"],
+      "Travel Essentials": ["Travel Essentials", "On the Go"]
     };
     function buildCrumb(p) {
-      const tree = CAT_TREE[p.cat] || ["Home & Garden", p.cat];
-      const out = [`<a href="index.html">${tree[0]}</a>`];
-      out.push(`<a href="shop.html?cat=${encodeURIComponent(p.cat)}">${p.cat}</a>`);
-      for (let i = 2; i < tree.length; i++) out.push(`<a href="shop.html?cat=${encodeURIComponent(p.cat)}">${tree[i]}</a>`);
+      const tree = CAT_TREE[p.cat] || [p.cat];
+      const catHref = "shop.html?cat=" + encodeURIComponent(p.cat);
+      const out = tree.map((label, i) =>
+        `<a href="${(i === 0 && label !== p.cat) ? "index.html" : catHref}">${label}</a>`);
       let type = (p.specs && p.specs.Type) ? p.specs.Type : "";
       if (type && type.indexOf("/") === -1 && !/s$/i.test(type)) type += "s";
       if (type) out.push(`<span>${type}</span>`);
