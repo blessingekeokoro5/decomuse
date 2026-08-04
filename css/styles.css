@@ -595,10 +595,25 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* Our latest projects (Services page) */
 .proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
-.proj-item { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); cursor: pointer; }
+.proj-item { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); cursor: pointer; position: relative; background: #fff; }
 .proj-item img { width: 100%; height: auto; display: block; transition: transform .5s ease; }
 .proj-item:hover img { transform: scale(1.03); }
+.proj-cap { padding: 12px 14px; font-size: 0.88rem; color: var(--ink); font-weight: 500; }
+.proj-cap .proj-count { color: var(--rose-deep); font-weight: 600; }
 @media (max-width: 700px){ .proj-grid { grid-template-columns: 1fr; } }
+
+/* Project gallery lightbox */
+.proj-lightbox { position: fixed; inset: 0; z-index: 9999; background: rgba(28,22,19,0.94); display: none; align-items: center; justify-content: center; padding: 30px; }
+.proj-lightbox.open { display: flex; }
+.pl-stage { margin: 0; max-width: 92vw; max-height: 88vh; text-align: center; }
+.pl-stage img { max-width: 92vw; max-height: 80vh; border-radius: 8px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+.pl-stage figcaption { color: #eaddd4; font-size: 0.85rem; letter-spacing: 0.04em; margin-top: 12px; }
+.pl-close { position: absolute; top: 20px; right: 24px; width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.12); color: #fff; border: none; font-size: 1.1rem; cursor: pointer; }
+.pl-close:hover { background: var(--rose); }
+.pl-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.14); color: #fff; border: none; font-size: 1.8rem; line-height: 1; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.pl-nav:hover { background: var(--rose); }
+.pl-nav.prev { left: 20px; } .pl-nav.next { right: 20px; }
+@media (max-width: 600px){ .pl-nav { width: 40px; height: 40px; font-size: 1.5rem; } .pl-nav.prev { left: 8px; } .pl-nav.next { right: 8px; } }
 
 /* Our process (Services page) */
 .eyebrow-lined { display: inline-flex; align-items: center; gap: 16px; color: var(--gold); }
