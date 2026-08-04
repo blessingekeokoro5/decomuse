@@ -17,6 +17,18 @@
   document.head.appendChild(link);
 })();
 
+/* ---- OneSignal Web Push (promo notifications) ---- */
+(function () {
+  var s = document.createElement("script");
+  s.src = "https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js";
+  s.defer = true;
+  document.head.appendChild(s);
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  window.OneSignalDeferred.push(async function (OneSignal) {
+    try { await OneSignal.init({ appId: "ecd08b6a-ec83-4816-a6a8-e5ced92225e5" }); } catch (e) {}
+  });
+})();
+
 /* ---- Google Analytics 4 (loads on every page via this shared script) ---- */
 (function () {
   var GA_ID = "G-H06N3BSXY4";

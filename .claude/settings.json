@@ -23,7 +23,8 @@
       "Bash(cp '/c/Users/direc/Downloads/2nd photo -__TRACKED_VAR__' assets/products/hd06-2.jpg)",
       "Bash(cp '/c/Users/direc/Downloads/3rd photo-__TRACKED_VAR__' assets/products/hd06-3.jpg)",
       "Bash(cp '/c/Users/direc/Downloads/4th photo-__TRACKED_VAR__' assets/products/hd06-4.jpg)",
-      "Bash(cp '/c/Users/direc/Downloads/5th photo-__TRACKED_VAR__' assets/products/hd06-5.jpg)"
+      "Bash(cp '/c/Users/direc/Downloads/5th photo-__TRACKED_VAR__' assets/products/hd06-5.jpg)",
+      "Bash(node -c OneSignalSDKWorker.js)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
