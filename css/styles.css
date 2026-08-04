@@ -604,8 +604,10 @@ em { font-style: italic; color: var(--rose-deep); }
 .vr-panel.gold h3 { color: #fff; }
 .vr-panel p { max-width: 360px; font-size: 0.92rem; line-height: 1.65; margin: 0 auto; }
 .vr-panel.gold p { color: rgba(255,255,255,0.92); }
-.vr-img { min-height: 320px; background-size: contain; background-position: center; background-repeat: no-repeat; background-color: #f3ece4; }
+.vr-img { min-height: 340px; background-size: cover; background-position: center; }
 .vr-row.rev .vr-panel { order: 2; } .vr-row.rev .vr-img { order: 1; }
+.vr-row.vr-full { grid-template-columns: 1fr; }
+.vr-row.vr-full .vr-panel { padding: 64px 30px; }
 @media (max-width: 760px){ .vr-row { grid-template-columns: 1fr; } .vr-row.rev .vr-panel, .vr-row.rev .vr-img { order: 0; } .vr-img { min-height: 220px; } .vr-panel { padding: 42px 26px; } }
 
 /* Our latest projects (Services page) */
