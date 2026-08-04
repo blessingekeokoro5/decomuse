@@ -138,7 +138,7 @@ const PRODUCTS = [
     specs: { "Material": "100% Cotton", "Weight": "450 GSM", "Pack size": "10 pieces", "Type": "Face washer / flannel" },
     care: "Machine wash cold and separately before first use. Gentle cycle; wash dark colours separately. Do not bleach. Tumble dry low. Do not iron. Do not dry clean." },
 
-  { id: "hd05", name: "Oval Marble-Effect Coffee Table", cat: "Home Décor", price: 115.37, memberPrice: 99.99, sku: "DM-10106", tag: "New", ph: "", img: "assets/products/hd05.jpg",
+  { id: "hd05", name: "Oval Marble-Effect Coffee Table", cat: "Furniture", price: 115.37, memberPrice: 99.99, sku: "DM-10106", tag: "New", ph: "", img: "assets/products/hd05.jpg",
     imgs: ["assets/products/hd05.jpg", "assets/products/hd05-2.jpg", "assets/products/hd05-3.jpg", "assets/products/hd05-4.jpg", "assets/products/hd05-5.jpg", "assets/products/hd05-6.jpg"],
     desc: "A sculptural centrepiece for the living room, this oval coffee table pairs a smooth marble-effect top with a warm, angular timber-look base. The soft oval silhouette keeps the room feeling open, while the crossed legs add architectural interest, a timeless, mid-century-inspired piece that anchors a lounge with quiet luxury. Style it with a stack of design books, a low vase or a scented candle to complete the look.",
     features: [
