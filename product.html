@@ -72,6 +72,29 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
+    // Category → breadcrumb path (differs per category). Final crumb = the product's type.
+    const CAT_TREE = {
+      "Furniture":         ["Home & Garden", "Furniture", "Tables & Desks"],
+      "Home Décor":        ["Home & Garden", "Home Décor", "Décor & Accents"],
+      "Health & Wellness": ["Health & Beauty", "Health & Wellness", "Bath & Body"],
+      "Fragrance":         ["Home & Garden", "Fragrance", "Home Fragrance"],
+      "Lifestyle":         ["Home & Garden", "Lifestyle", "Everyday Essentials"],
+      "Kitchen & Dining":  ["Home & Garden", "Kitchen & Dining", "Tableware"],
+      "Bedroom & Bath":    ["Home & Garden", "Bedroom & Bath", "Linen & Textiles"],
+      "Gifts":             ["Gifts & Occasions", "Gifts", "Gift Ideas"],
+      "Travel Essentials": ["Lifestyle", "Travel", "Travel Essentials"]
+    };
+    function buildCrumb(p) {
+      const tree = CAT_TREE[p.cat] || ["Home & Garden", p.cat];
+      const out = [`<a href="index.html">${tree[0]}</a>`];
+      out.push(`<a href="shop.html?cat=${encodeURIComponent(p.cat)}">${p.cat}</a>`);
+      for (let i = 2; i < tree.length; i++) out.push(`<a href="shop.html?cat=${encodeURIComponent(p.cat)}">${tree[i]}</a>`);
+      let type = (p.specs && p.specs.Type) ? p.specs.Type : "";
+      if (type && type.indexOf("/") === -1 && !/s$/i.test(type)) type += "s";
+      if (type) out.push(`<span>${type}</span>`);
+      return out.join(" / ");
+    }
+
     let pdpQty = 1;
     let pdpColour = null;
     function pdpSetColour(name, btn) {
@@ -224,7 +247,7 @@
       pdpColour = (p.colours && p.colours.length) ? p.colours[0].name : null;
       pdpSize = (p.sizes && p.sizes.length) ? p.sizes[0].label : null;
       pdpSizePrice = (p.sizes && p.sizes.length) ? p.sizes[0].price : null;
-      document.getElementById("pdpCrumb").innerHTML = `<a href="index.html">Home</a> / <a href="shop.html">Shop</a> / ${p.name}`;
+      document.getElementById("pdpCrumb").innerHTML = buildCrumb(p);
       const was = p.was ? `<small>${money(p.was)}</small>` : "";
       const saved = isWishlisted(p.id);
       const gimgs = (p.imgs && p.imgs.length) ? p.imgs : (p.img ? [p.img] : []);
