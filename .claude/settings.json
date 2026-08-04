@@ -26,7 +26,13 @@
       "Bash(cp '/c/Users/direc/Downloads/5th photo-__TRACKED_VAR__' assets/products/hd06-5.jpg)",
       "Bash(node -c OneSignalSDKWorker.js)",
       "WebFetch(domain:www.decomuse.com.au)",
-      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('manifest.json','utf8'\\)\\);console.log\\('manifest.json valid'\\)\")"
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('manifest.json','utf8'\\)\\);console.log\\('manifest.json valid'\\)\")",
+      "Bash(command -v magick)",
+      "Bash(echo \"magick: $\\(command -v magick 2>/dev/null || echo no\\)\")",
+      "Bash(command -v ffmpeg)",
+      "Bash(echo \"ffmpeg: $\\(command -v ffmpeg 2>/dev/null || echo no\\)\")",
+      "Bash(node -e \"require\\('sharp'\\);console.log\\('yes'\\)\")",
+      "Bash(python3 -c \"import PIL; print\\('PIL ok'\\)\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"

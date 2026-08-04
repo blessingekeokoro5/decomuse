@@ -212,7 +212,7 @@
   <div class="proj-lightbox" id="projLightbox" aria-hidden="true">
     <button class="pl-close" onclick="closeProject()" aria-label="Close">✕</button>
     <button class="pl-nav prev" onclick="gNav(-1)" aria-label="Previous">‹</button>
-    <figure class="pl-stage"><img id="projLbImg" alt="Project photo"><figcaption id="projLbCap"></figcaption></figure>
+    <figure class="pl-stage"><img id="projLbImg" alt="Project photo"><div id="projLbCrop" class="pl-crop" style="display:none"></div><figcaption id="projLbCap"></figcaption></figure>
     <button class="pl-nav next" onclick="gNav(1)" aria-label="Next">›</button>
   </div>
 
@@ -232,30 +232,35 @@
       { title: "Burnside, SA · Bright Family Living",            images: ["assets/services/project-3.jpg"] },
       { title: "Prospect, SA · Warm Minimal Styling",           images: ["assets/services/project-4.jpg"] },
       { title: "Glenelg, SA · Elegant Entertaining Space",      images: ["assets/services/project-5.jpg"] },
-      { title: "Unley, SA · Considered Whole-Home Design",      images: ["assets/services/project-6.jpg"] }
+      { title: "Unley, SA · Considered Whole-Home Design",      images: ["assets/services/project-6.jpg"], crop: true }
     ];
 
     (function renderProjects() {
       const grid = document.getElementById("projGrid");
       if (!grid) return;
-      grid.innerHTML = PROJECTS.map((p, i) => `
-        <figure class="proj-item reveal" onclick="openProject(${i})" title="${p.title}">
-          <img src="${p.images[0]}" alt="${p.title}" loading="lazy">
-          <figcaption class="proj-cap">${p.title}${p.images.length > 1 ? ` · <span class="proj-count">${p.images.length} photos</span>` : ""}</figcaption>
-        </figure>`).join("");
+      grid.innerHTML = PROJECTS.map((p, i) => {
+        const media = p.crop
+          ? `<div class="proj-crop-media" style="background-image:url('${p.images[0]}')"></div>`
+          : `<img src="${p.images[0]}" alt="${p.title}" loading="lazy">`;
+        return `<figure class="proj-item reveal" onclick="openProject(${i})" title="${p.title}">${media}<figcaption class="proj-cap">${p.title}${p.images.length > 1 ? ` · <span class="proj-count">${p.images.length} photos</span>` : ""}</figcaption></figure>`;
+      }).join("");
       if (typeof initReveal === "function") initReveal();
     })();
 
-    let gImgs = [], gCap = "", gCur = 0;
+    let gImgs = [], gCap = "", gCur = 0, gCrop = false;
     function openProject(i) {
       const p = PROJECTS[i]; if (!p) return;
-      gImgs = p.images; gCap = p.title; gCur = 0;
+      gImgs = p.images; gCap = p.title; gCur = 0; gCrop = !!p.crop;
       showG();
       const lb = document.getElementById("projLightbox");
       lb.classList.add("open"); lb.setAttribute("aria-hidden", "false");
     }
     function showG() {
-      document.getElementById("projLbImg").src = gImgs[gCur];
+      const src = gImgs[gCur];
+      const img = document.getElementById("projLbImg");
+      const crop = document.getElementById("projLbCrop");
+      if (gCrop) { crop.style.backgroundImage = `url('${src}')`; crop.style.display = "block"; img.style.display = "none"; }
+      else { img.src = src; img.style.display = ""; crop.style.display = "none"; }
       document.getElementById("projLbCap").textContent = gImgs.length > 1 ? `${gCap} · ${gCur + 1} / ${gImgs.length}` : gCap;
       const show = gImgs.length > 1 ? "flex" : "none";
       document.querySelectorAll("#projLightbox .pl-nav").forEach(b => b.style.display = show);
