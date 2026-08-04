@@ -40,7 +40,8 @@
       "Bash(perl -0pi -e 's{\\(Scope</h3>.*?\\)assets/services/staging-feature\\\\.jpg}{$1assets/services/process-scope.jpg}s' vacation-rentals.html)",
       "Bash(perl -0pi -e 's{\\(Creative Tank</h3>.*?\\)assets/services/interior-design-feature\\\\.jpg}{$1assets/services/process-creative.jpg}s' vacation-rentals.html)",
       "Bash(perl -0pi -e 's{\\(Approval</h3>.*?\\)assets/services/interior-design\\\\.jpg}{$1assets/services/process-approval.jpg}s' vacation-rentals.html)",
-      "Bash(perl -0pi -e 's{\\(Installation</h3>.*?\\)assets/services/property-staging\\\\.jpg}{$1assets/services/process-install.jpg}s' vacation-rentals.html)"
+      "Bash(perl -0pi -e 's{\\(Installation</h3>.*?\\)assets/services/property-staging\\\\.jpg}{$1assets/services/process-install.jpg}s' vacation-rentals.html)",
+      "Bash(perl -0pi -e \"s{\\(Installation</h3>.*?\\)assets/services/process-install\\\\.jpg}{\\\\${1}assets/services/property-staging.jpg}s\" vacation-rentals.html)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
