@@ -32,7 +32,15 @@
       "Bash(command -v ffmpeg)",
       "Bash(echo \"ffmpeg: $\\(command -v ffmpeg 2>/dev/null || echo no\\)\")",
       "Bash(node -e \"require\\('sharp'\\);console.log\\('yes'\\)\")",
-      "Bash(python3 -c \"import PIL; print\\('PIL ok'\\)\")"
+      "Bash(python3 -c \"import PIL; print\\('PIL ok'\\)\")",
+      "Bash(cp '__TRACKED_VAR__/the mood-board-on-a-tablet photo.png' assets/services/process-scope.jpg)",
+      "Bash(cp '__TRACKED_VAR__/the bedroom with the gold lamp.png' assets/services/process-creative.jpg)",
+      "Bash(cp '__TRACKED_VAR__/the outdoor dining with orange chairs.png' assets/services/process-approval.jpg)",
+      "Bash(cp '__TRACKED_VAR__/the kitchen desk.png' assets/services/process-install.jpg)",
+      "Bash(perl -0pi -e 's{\\(Scope</h3>.*?\\)assets/services/staging-feature\\\\.jpg}{$1assets/services/process-scope.jpg}s' vacation-rentals.html)",
+      "Bash(perl -0pi -e 's{\\(Creative Tank</h3>.*?\\)assets/services/interior-design-feature\\\\.jpg}{$1assets/services/process-creative.jpg}s' vacation-rentals.html)",
+      "Bash(perl -0pi -e 's{\\(Approval</h3>.*?\\)assets/services/interior-design\\\\.jpg}{$1assets/services/process-approval.jpg}s' vacation-rentals.html)",
+      "Bash(perl -0pi -e 's{\\(Installation</h3>.*?\\)assets/services/property-staging\\\\.jpg}{$1assets/services/process-install.jpg}s' vacation-rentals.html)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
