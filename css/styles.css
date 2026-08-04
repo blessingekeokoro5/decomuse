@@ -593,6 +593,13 @@ em { font-style: italic; color: var(--rose-deep); }
 .mission-text { text-align: center; max-width: 720px; margin: 24px auto 0; color: var(--body); font-size: 1.05rem; line-height: 1.85; }
 @media (max-width: 600px){ .mission-banner { height: 240px; } }
 
+/* Our latest projects (Services page) */
+.proj-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; margin-top: 34px; }
+.proj-item { margin: 0; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); cursor: pointer; aspect-ratio: 3/2; }
+.proj-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; display: block; }
+.proj-item:hover img { transform: scale(1.05); }
+@media (max-width: 600px){ .proj-grid { grid-template-columns: 1fr; } }
+
 /* Our process (Services page) */
 .eyebrow-lined { display: inline-flex; align-items: center; gap: 16px; color: var(--gold); }
 .eyebrow-lined::before, .eyebrow-lined::after { content: ""; width: 48px; height: 1px; background: var(--gold); opacity: 0.7; }
