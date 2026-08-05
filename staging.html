@@ -226,56 +226,51 @@
     /* ===== Our Latest Projects — highlights + galleries =====
        Each highlight has a title and a list of images. To add more photos to a
        highlight, drop them in assets/services/ and add their paths to `images`. */
+    // Each pair image is split into two suburb-labelled cards (left / right half).
     const PROJECTS = [
-      { title: "Paradise, SA · Open-Plan Living Transformation", images: ["assets/services/project-1.jpg"] },
-      { title: "Norwood, SA · Modern Lounge & Fireplace",        images: ["assets/services/project-2.jpg"] },
-      { title: "Burnside, SA · Bright Family Living",            images: ["assets/services/project-3.jpg"] },
-      { title: "Prospect, SA · Warm Minimal Styling",           images: ["assets/services/project-4.jpg"] },
-      { title: "Glenelg, SA · Elegant Entertaining Space",      images: ["assets/services/project-5.jpg"] },
-      { title: "Unley, SA · Considered Whole-Home Design",      images: ["assets/services/project-6.jpg"], crop: true }
+      { title: "Paradise, SA · Fireplace Living Room",  src: "assets/services/project-1.jpg", pos: "0%" },
+      { title: "Norwood, SA · Restful Bedroom",         src: "assets/services/project-1.jpg", pos: "100%" },
+      { title: "Burnside, SA · Timber Kitchen",         src: "assets/services/project-2.jpg", pos: "0%" },
+      { title: "Prospect, SA · Bright Family Lounge",   src: "assets/services/project-2.jpg", pos: "100%" },
+      { title: "Glenelg, SA · Statement Kitchen",       src: "assets/services/project-3.jpg", pos: "0%" },
+      { title: "Unley, SA · Calm Bedroom",              src: "assets/services/project-3.jpg", pos: "100%" },
+      { title: "Walkerville, SA · Butler's Pantry",     src: "assets/services/project-4.jpg", pos: "0%" },
+      { title: "North Adelaide, SA · Serene Bedroom",   src: "assets/services/project-4.jpg", pos: "100%" },
+      { title: "Henley Beach, SA · Coastal Living Room", src: "assets/services/project-5.jpg", pos: "0%" },
+      { title: "Brighton, SA · Entertainer's Kitchen",  src: "assets/services/project-5.jpg", pos: "100%" },
+      { title: "Stirling, SA · Whole-Home Living",      src: "assets/services/project-6.jpg", pos: "100%" }
     ];
 
     (function renderProjects() {
       const grid = document.getElementById("projGrid");
       if (!grid) return;
-      grid.innerHTML = PROJECTS.map((p, i) => {
-        const media = p.crop
-          ? `<div class="proj-crop-media" style="background-image:url('${p.images[0]}')"></div>`
-          : `<img src="${p.images[0]}" alt="${p.title}" loading="lazy">`;
-        return `<figure class="proj-item reveal" onclick="openProject(${i})" title="${p.title}">${media}<figcaption class="proj-cap">${p.title}${p.images.length > 1 ? ` · <span class="proj-count">${p.images.length} photos</span>` : ""}</figcaption></figure>`;
-      }).join("");
+      grid.innerHTML = PROJECTS.map((p, i) =>
+        `<figure class="proj-item reveal" onclick="openHalf(${i})" title="${p.title}">
+          <div class="proj-half" style="background-image:url('${p.src}');background-position:${p.pos} center"></div>
+          <figcaption class="proj-cap">${p.title}</figcaption>
+        </figure>`).join("");
       if (typeof initReveal === "function") initReveal();
     })();
 
-    let gImgs = [], gCap = "", gCur = 0, gCrop = false;
-    function openProject(i) {
+    function openHalf(i) {
       const p = PROJECTS[i]; if (!p) return;
-      gImgs = p.images; gCap = p.title; gCur = 0; gCrop = !!p.crop;
-      showG();
+      const crop = document.getElementById("projLbCrop");
+      crop.style.backgroundImage = `url('${p.src}')`;
+      crop.style.backgroundPosition = `${p.pos} center`;
+      crop.style.display = "block";
+      document.getElementById("projLbImg").style.display = "none";
+      document.getElementById("projLbCap").textContent = p.title;
+      document.querySelectorAll("#projLightbox .pl-nav").forEach(b => b.style.display = "none");
       const lb = document.getElementById("projLightbox");
       lb.classList.add("open"); lb.setAttribute("aria-hidden", "false");
     }
-    function showG() {
-      const src = gImgs[gCur];
-      const img = document.getElementById("projLbImg");
-      const crop = document.getElementById("projLbCrop");
-      if (gCrop) { crop.style.backgroundImage = `url('${src}')`; crop.style.display = "block"; img.style.display = "none"; }
-      else { img.src = src; img.style.display = ""; crop.style.display = "none"; }
-      document.getElementById("projLbCap").textContent = gImgs.length > 1 ? `${gCap} · ${gCur + 1} / ${gImgs.length}` : gCap;
-      const show = gImgs.length > 1 ? "flex" : "none";
-      document.querySelectorAll("#projLightbox .pl-nav").forEach(b => b.style.display = show);
-    }
-    function gNav(d) { gCur = (gCur + d + gImgs.length) % gImgs.length; showG(); }
     function closeProject() {
       const lb = document.getElementById("projLightbox");
       lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true");
     }
     document.getElementById("projLightbox").addEventListener("click", (e) => { if (e.target.id === "projLightbox") closeProject(); });
     document.addEventListener("keydown", (e) => {
-      if (!document.getElementById("projLightbox").classList.contains("open")) return;
-      if (e.key === "Escape") closeProject();
-      else if (e.key === "ArrowLeft") gNav(-1);
-      else if (e.key === "ArrowRight") gNav(1);
+      if (document.getElementById("projLightbox").classList.contains("open") && e.key === "Escape") closeProject();
     });
   </script>
 </body>
