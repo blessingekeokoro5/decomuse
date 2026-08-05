@@ -317,7 +317,7 @@ em { font-style: italic; color: var(--rose-deep); }
   .hero-slides .hero-slide { transition: none; }
   .hero-slides .hero-slide.active { animation: none; }
 }
-.hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: center; justify-items: center; text-align: center; min-height: 74vh; padding: 92px 0 96px; }
+.hero-grid { display: grid; grid-template-columns: 1fr; gap: 0; align-items: end; justify-items: start; text-align: left; min-height: 74vh; padding: 92px 0 64px; }
 .hero-eyebrow { color: var(--rose-deep); letter-spacing: 0.3em; font-size: 0.78rem; text-transform: uppercase; margin-bottom: 22px; display: block; }
 .hero h1 { margin-bottom: 22px; font-size: clamp(3rem, 6.5vw, 5rem); }
 .hero h1 em { display: block; }
@@ -325,7 +325,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .brand-statement .hero-eyebrow { display: block; margin-bottom: 16px; }
 .brand-statement h1 { font-size: clamp(2.4rem, 5vw, 3.6rem); margin-bottom: 20px; }
 .brand-statement .lead { max-width: 560px; margin: 0 auto; color: var(--body); }
-.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+.hero-cta { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-start; }
 .hero-ai-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 26px; font-size: 0.78rem;
   letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink); font-weight: 500; }
 .hero-ai-link:hover { color: var(--rose-deep); }
