@@ -249,7 +249,9 @@ function buildHeader() {
     <ul class="nav-main" id="navMain">${navMain}</ul>
     <div class="nav-cats-row" id="navCatsRow">
       <div class="container">
-        <ul class="nav-cats" id="navCats">${catTabs}
+        <ul class="nav-cats" id="navCats">
+          <li class="nav-cat-plain"><a href="index.html">Home</a></li>
+          ${catTabs}
           <li class="nav-cat-plain"><a href="staging.html">Services</a></li>
         </ul>
       </div>
