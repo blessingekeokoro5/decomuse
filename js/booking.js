@@ -5,14 +5,14 @@
    ============================================================ */
 
 const MEETING_TYPES = [
-  { key: "virtual",  icon: "💻", label: "Virtual Styling (video call)", place: "Online via video call. A join link is sent when we confirm your session. Available worldwide 🌏." },
-  { key: "inhome",   icon: "🏠", label: "In-home Consultation",         place: "One of our stylists visits your home, within our service areas." },
-  { key: "interior", icon: "🎨", label: "Interior Design Consultation", place: "A full interior design consult, in-home or virtual, to plan your whole space." }
+  { key: "styling",  icon: "🛋️", label: "Property Styling / Staging",   place: "One of our stylists visits your property, within our service areas." },
+  { key: "interior", icon: "🎨", label: "Interior Design Consultation", place: "A full in-home interior design consult to plan your whole space." },
+  { key: "vacation", icon: "🏝️", label: "Vacation Rental Styling",      place: "An in-home consult to style and furnish your short-stay or Airbnb." }
 ];
 
 const BK_DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 
-let bk = { type: "virtual", date: "", slot: "" };
+let bk = { type: "styling", date: "", slot: "" };
 
 function initBooking() {
   const host = document.getElementById("bookingWidget");
@@ -87,11 +87,11 @@ function renderBooking(host) {
         <h4 style="margin-bottom:10px">Availability</h4>
         <div class="bk-av">${bkAvailabilityNote()}</div>
         <div class="bk-summary" id="bkSummary">
-          <div class="bk-sum-line"><span>Service</span><strong id="sumType">Virtual Styling</strong></div>
+          <div class="bk-sum-line"><span>Service</span><strong id="sumType">Property Styling / Staging</strong></div>
           <div class="bk-sum-line"><span>Date</span><strong id="sumDate">—</strong></div>
           <div class="bk-sum-line"><span>Time</span><strong id="sumTime">—</strong></div>
         </div>
-        <p class="form-note">📧 Your request is emailed to our team for confirmation. Virtual sessions receive a video link once confirmed.</p>
+        <p class="form-note">📧 Your request is emailed to our team for confirmation. We'll be in touch to lock in the details.</p>
       </aside>
     </div>`;
 
@@ -167,7 +167,7 @@ async function submitBooking(e) {
   try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Styling / Interior Design booking"); } catch (err) {}
 
   success.classList.add("show");
-  success.innerHTML = `Thank you${name ? ", " + name.split(" ")[0] : ""}! Your <strong>${m.label}</strong> booking request for <strong>${document.getElementById("sumDate").textContent} at ${bkHour(parseInt(bk.slot))}</strong> has been sent. We'll confirm by email${bk.type === "virtual" ? " and include your video link" : ""}.`;
+  success.innerHTML = `Thank you${name ? ", " + name.split(" ")[0] : ""}! Your <strong>${m.label}</strong> booking request for <strong>${document.getElementById("sumDate").textContent} at ${bkHour(parseInt(bk.slot))}</strong> has been sent. We'll confirm the details by email.`;
   btn.disabled = false; btn.textContent = "Request booking";
 }
 
