@@ -309,10 +309,9 @@ em { font-style: italic; color: var(--rose-deep); }
   background: linear-gradient(rgba(246,238,232,0.52), rgba(246,238,232,0.68)); }
 .hero .container { position: relative; z-index: 2; }
 .hero-slides { position: absolute; inset: 0; z-index: 0; overflow: hidden; }
-.hero-slides .hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center;
-  opacity: 0; transition: opacity 1.2s ease; will-change: opacity, transform; }
-.hero-slides .hero-slide.active { opacity: 1; animation: heroKen 6.5s ease forwards; }
-@keyframes heroKen { from { transform: scale(1.04); } to { transform: scale(1.13); } }
+.hero-slides .hero-slide { position: absolute; inset: 0; background-size: contain; background-position: center; background-repeat: no-repeat;
+  opacity: 0; transition: opacity 1.2s ease; }
+.hero-slides .hero-slide.active { opacity: 1; }
 @media (prefers-reduced-motion: reduce) {
   .hero-slides .hero-slide { transition: none; }
   .hero-slides .hero-slide.active { animation: none; }
