@@ -78,6 +78,13 @@
       <div class="hero-slide" style="background-image:url('assets/hero.jpg')"></div>
       <div class="hero-slide" style="background-image:url('assets/hero-2.jpg')"></div>
       <div class="hero-slide" style="background-image:url('assets/hero-3.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-1.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-3.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-4.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-5.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-6.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('assets/hero-slide-7.jpg')"></div>
     </div>
     <div class="container hero-grid">
       <div class="reveal">
@@ -270,6 +277,20 @@
   <script src="js/main.js"></script>
   <script>
     // Featured products (first 4 with tags) + reviews
+    // Hero slideshow — crossfades through ALL .hero-slide photos (any number)
+    (function heroSlideshow() {
+      const slides = document.querySelectorAll(".hero-slides .hero-slide");
+      if (!slides.length) return;
+      let i = 0;
+      slides[0].classList.add("active");
+      if (slides.length < 2) return;
+      setInterval(() => {
+        slides[i].classList.remove("active");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("active");
+      }, 5000);
+    })();
+
     renderProducts("featuredGrid", PRODUCTS.filter(p => p.tag).slice(0, 4));
     const reviewCard = r => `
       <article class="testi">
