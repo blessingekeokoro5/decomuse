@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Locator — DecoMuse</title>
+  <meta name="description" content="DecoMuse physical showrooms are on their way. Register your interest and we'll notify you the moment our stores open for client walk-ins.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .sl-card { max-width: 640px; margin: 0 auto; text-align: center; background: linear-gradient(150deg, var(--forest), var(--forest-2));
+      color: #fff; border-radius: var(--radius-lg); padding: 46px 34px; box-shadow: var(--shadow); position: relative; overflow: hidden; }
+    .sl-pin { width: 74px; height: 74px; margin: 0 auto 18px; border-radius: 50%; display: grid; place-items: center;
+      background: rgba(198,161,91,0.24); border: 1px solid rgba(198,161,91,0.6); color: #f2e2bd; }
+    .sl-pin svg { width: 38px; height: 38px; }
+    .sl-card .sl-eyebrow { display: block; letter-spacing: 0.24em; text-transform: uppercase; font-size: 0.7rem; color: var(--rose-soft); margin-bottom: 10px; }
+    .sl-card h2 { color: #fff; font-size: 1.7rem; margin-bottom: 12px; }
+    .sl-msg { font-size: 1.05rem; color: #eaded5; line-height: 1.6; max-width: 460px; margin: 0 auto; }
+    .sl-form { display: flex; gap: 10px; max-width: 420px; margin: 26px auto 0; flex-wrap: wrap; }
+    .sl-form input { flex: 1; min-width: 200px; padding: 13px 16px; border: none; border-radius: 999px; font-family: var(--font-body); font-size: 0.95rem; }
+    .sl-note { font-size: 0.8rem; color: #cdbfb4; margin-top: 14px; }
+    .sl-online { max-width: 640px; margin: 30px auto 0; text-align: center; color: var(--body); }
+  </style>
+</head>
+<body data-page="store-locator.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Store locator</div>
+      <span class="eyebrow">Visit us</span>
+      <h1>Store locator</h1>
+      <p>Curated home décor, lifestyle &amp; fragrance, styled for real Australian homes.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="sl-card reveal">
+        <div class="sl-pin">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </div>
+        <span class="sl-eyebrow">Physical stores, coming soon</span>
+        <h2>Showrooms on the way</h2>
+        <p class="sl-msg"><strong>You will be notified when our physical stores will be available for client walk-ins.</strong></p>
+        <form class="sl-form" data-newsletter>
+          <input type="email" placeholder="Your email address" aria-label="Email" required>
+          <button type="submit" class="btn btn--primary">Notify me</button>
+        </form>
+        <p class="sl-note">We'll only email you about store openings and walk-in availability, no spam, unsubscribe anytime.</p>
+      </div>
+
+      <div class="sl-online reveal">
+        <p>In the meantime, we're a proudly Australian <strong>online store</strong>, shop the full collection anytime, with fast delivery Australia-wide.</p>
+        <div class="btn-row" style="justify-content:center;margin-top:16px">
+          <a class="btn btn--dark" href="shop.html">Shop the collection</a>
+          <a class="btn btn--outline" href="contact.html">Contact us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

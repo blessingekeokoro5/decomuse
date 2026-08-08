@@ -275,11 +275,13 @@ function buildFooter() {
     { t: "The Edit — Journal", h: "blog.html" },
     { t: "Assistance & Contact", h: "support.html" },
     { t: "Contact us", h: "contact.html" },
+    { t: "Store locator", h: "store-locator.html" },
     { t: "Muse Stylist AI", h: "stylist.html" }
   ];
   const infoLinks = [
     { t: "Frequent Questions", h: "policy.html?doc=faq" },
     { t: "Trade & Commercial", h: "trade.html" },
+    { t: "Become a supplier", h: "become-a-supplier.html" },
     { t: "Customer reviews", h: "index.html#reviews" },
     { t: "Delivery & Shipping", h: "policy.html?doc=delivery" },
     { t: "Track your order", h: "track.html" }

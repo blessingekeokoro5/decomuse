@@ -49,7 +49,13 @@
       "Bash(perl -pi -e 's{We do both, in-home or virtually\\\\.}{We do both, in your home.}' property-styling-staging.html)",
       "Bash(perl -pi -e 's{In-home &amp; virtual consults}{In-home consults}; s{A considered walk-through of your space, in person or online,}{A considered walk-through of your space, in person,}' property-styling-staging.html)",
       "Bash(grep -viE \"//|/\\\\*|worldwide 🌏\")",
-      "Bash(git commit -q -m 'Portfolio: replace gradient placeholders with the real '\\\\''Our Latest Projects'\\\\'' photos \\(assets/services/project-1..6\\) as suburb-labelled projects; each card opens a per-property gallery lightbox that auto-detects extra photos dropped into assets/portfolio/<slug>/N.jpg for full multi-angle project galleries *)"
+      "Bash(git commit -q -m 'Portfolio: replace gradient placeholders with the real '\\\\''Our Latest Projects'\\\\'' photos \\(assets/services/project-1..6\\) as suburb-labelled projects; each card opens a per-property gallery lightbox that auto-detects extra photos dropped into assets/portfolio/<slug>/N.jpg for full multi-angle project galleries *)",
+      "Bash(git commit -q -m 'Portfolio: isolate a single room per project in cards + lightbox \\(background 200% crop\\) so paired photos no longer show as a grouped/duplicated image; hide lone thumbnail until extra photos are added *)",
+      "Bash(git commit -q -m 'Add DecoMuse Rewards program: image-matched rewards modal \\(20% welcome + $10 voucher, $20 birthday voucher, earn points 100=$10, early access, 2x on gifts & personal shopping\\). Account portal shows points balance, redeem-to-voucher, vouchers list, birthday. Points accrue on orders \\(2x gift items\\); $ vouchers apply at cart/checkout \\(Stripe-safe factor\\) and are consumed on order *)",
+      "Bash(git commit -q -m 'Reviews: remove homepage '\\\\''Share your experience'\\\\'' form; add per-product '\\\\''Review this product'\\\\'' block to product page \\(5-star picker + '\\\\''valid email required for verification'\\\\'' + name/email/headline/review, delivered to team for moderation\\) *)",
+      "Bash(git commit -q -m 'Rewards modal: fit on mobile — scrollable card as safety net + compact icon-left benefit rows and tighter spacing on small screens *)",
+      "Bash(git commit -q -m 'Member card: remove ABN; restyle to match the gift card exactly \\(1.62/1 aspect, rounded, gold inner frame, dotted texture + gloss\\) in DecoMuse green; long names/emails truncate instead of overflowing; drop ABN from the downloadable PNG too *)",
+      "Bash(git commit -q -m 'Footer: add Store locator \\(coming-soon page — notifies customers when physical stores open for walk-ins, with notify signup\\) and Become a supplier \\(full supplier page: categories, criteria, process, benefits + application form\\); sitemap +2 *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
