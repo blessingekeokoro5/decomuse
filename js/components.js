@@ -108,7 +108,7 @@ const NAV_LINKS = [
 
 // Category photos used in the mega-menu dropdown promo panels
 const CAT_IMG = {
-  home:      "assets/cat-home-decor.jpg",
+  home:      "assets/hero.jpg",
   health:    "assets/cat-wellness.png",
   hampers:   "assets/cat-gifting.png",
   fragrance: "assets/cat-fragrance.png",
@@ -138,7 +138,7 @@ function buildHeader() {
           <div class="mega-promo">
             <div class="ph" data-label="decormuse">${CAT_IMG[cat.key] ? `<img class="ph-img" src="${CAT_IMG[cat.key]}" alt="${cat.label}" loading="lazy" onerror="this.remove()">` : ""}</div>
             <div class="mega-promo-actions">
-              <a href="#">Rewards</a><a href="#">Referrals</a>
+              <a href="rewards.html">Rewards</a><a href="refer-a-friend.html">Referrals</a>
             </div>
           </div>
         </div>
