@@ -31,6 +31,23 @@
     .acc-link { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px; text-align: center; color: var(--ink); }
     .acc-link:hover { background: var(--cream-2); }
     .acc-link .ic { font-size: 1.5rem; }
+    /* ID-style member card */
+    .mcard .mc-top { display: flex; justify-content: space-between; align-items: baseline; position: relative; z-index: 1; }
+    .mcard .brand { font-family: var(--font-head); font-size: 1.7rem; font-weight: 600; }
+    .mcard .mc-grid { display: flex; gap: 44px; margin-top: 18px; position: relative; z-index: 1; }
+    .mcard .mc-grid small { display: block; font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose-soft); margin-bottom: 3px; }
+    .mcard .mc-grid strong { font-size: 1.05rem; letter-spacing: 0.05em; font-family: 'Jost', monospace; }
+    .mcard .mc-abn { margin-top: 20px; font-size: 0.76rem; color: #d7e0cd; letter-spacing: 0.02em; position: relative; z-index: 1; }
+    .reward { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--blush);
+      border: 1px dashed var(--rose-soft); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 22px; }
+    .reward .code { font-family: var(--font-head); font-size: 1.4rem; color: var(--rose-deep); letter-spacing: 0.06em; }
+    .reward small { display: block; color: var(--muted); font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .orders-list { margin-top: 14px; }
+    .order-row { display: flex; justify-content: space-between; align-items: center; gap: 12px; border: 1px solid var(--line);
+      border-radius: 10px; padding: 14px 16px; margin-bottom: 10px; background: #fff; }
+    .order-row .o-meta strong { display: block; }
+    .order-row .o-meta small { color: var(--muted); font-size: 0.82rem; }
+    .acc-h3 { font-size: 1.2rem; margin: 30px 0 4px; }
   </style>
 </head>
 <body data-page="account.html">
@@ -107,7 +124,7 @@
       e.preventDefault();
       const name = document.getElementById("suName").value.trim();
       const email = document.getElementById("suEmail").value.trim();
-      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20" });
+      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20", memberNo: genMemberNo(), orders: [] });
       try { localStorage.setItem("dm_member","1"); } catch(err){}
       showToast("Welcome to DecoMuse! Your 20% code is ready 🎉");
       render();
@@ -128,22 +145,41 @@
     }
 
     function renderDashboard(acc) {
+      // Ensure every member has a stable membership number
+      let changed = false;
+      if (!acc.memberNo) { acc.memberNo = genMemberNo(); changed = true; }
+      if (!Array.isArray(acc.orders)) { acc.orders = getStoredOrders(acc.email); changed = true; }
+      if (changed) saveAccount(acc);
+
       document.getElementById("accTitle").textContent = acc.name ? `Hello, ${acc.name.split(" ")[0]} 👋` : "My account";
-      document.getElementById("accSub").textContent = "Manage your membership, coupon and saved favourites.";
+      document.getElementById("accSub").textContent = "Your membership card, coupon, orders and saved favourites.";
       const wishN = wishlistCount();
+      const orders = acc.orders || [];
       document.getElementById("accWrap").innerHTML = `
-        <div class="mcard reveal">
-          <div class="tier">DecoMuse Member</div>
+        <div class="mcard reveal" id="memberCard">
+          <div class="mc-top"><span class="brand">DecoMuse</span><span class="tier">Member Card</span></div>
           <h2>${acc.name || acc.email}</h2>
-          <div class="since">Member since ${acc.memberSince || "today"} · ${acc.email}</div>
-          <div class="coupon">
-            <div>
-              <small>Your welcome reward, 20% off</small>
-              <span class="code" id="couponCode">${acc.coupon || "WELCOME20"}</span>
-            </div>
-            <button class="btn btn--light btn--sm" onclick="copyCoupon()">Copy code</button>
+          <div class="mc-grid">
+            <div><small>Member No.</small><strong id="memberNo">${acc.memberNo}</strong></div>
+            <div><small>Member since</small><strong>${acc.memberSince || "today"}</strong></div>
           </div>
+          <div class="mc-abn">ABN 41 991 812 955 · ${acc.email}</div>
         </div>
+        <div style="text-align:center;margin:16px 0 4px">
+          <button class="btn btn--dark btn--sm" onclick="downloadCard()">⬇ Download member card</button>
+          <p class="form-note" style="margin-top:8px">Keep this card for identification and security when you shop with us in store or by phone.</p>
+        </div>
+
+        <div class="reward">
+          <div>
+            <small>Your welcome reward, 20% off</small>
+            <span class="code" id="couponCode">${acc.coupon || "WELCOME20"}</span>
+          </div>
+          <button class="btn btn--dark btn--sm" onclick="copyCoupon()">Copy code</button>
+        </div>
+
+        <h3 class="acc-h3">Your orders &amp; receipts</h3>
+        <div class="orders-list" id="ordersList">${renderOrders(orders)}</div>
 
         <div class="acc-links">
           <a class="acc-link" href="wishlist.html"><div class="ic">♡</div><strong>Wishlist</strong><div style="color:var(--muted);font-size:0.85rem">${wishN} saved</div></a>
@@ -156,6 +192,106 @@
           <button class="btn btn--outline btn--sm" onclick="doLogout()">Log out</button>
         </div>`;
       initReveal();
+    }
+
+    // ---- Membership number ----
+    function genMemberNo() {
+      const n = Math.floor(1000000000 + Math.random() * 8999999999).toString();
+      return n.slice(0, 4) + " " + n.slice(4, 7) + " " + n.slice(7);
+    }
+
+    // ---- Orders & receipts ----
+    function getStoredOrders(email) {
+      try {
+        const all = JSON.parse(localStorage.getItem("dm_orders") || "{}");
+        return (email && all[email]) ? all[email] : [];
+      } catch (e) { return []; }
+    }
+    function renderOrders(orders) {
+      if (!orders || !orders.length) {
+        return `<div style="border:1px dashed var(--line);border-radius:10px;padding:22px;text-align:center;color:var(--muted)">
+          You have no orders yet. <a href="shop.html">Start shopping →</a><br>
+          <small>Your receipts will appear here after checkout.</small></div>`;
+      }
+      return orders.map((o, i) => `
+        <div class="order-row">
+          <div class="o-meta">
+            <strong>Order ${o.orderNo}</strong>
+            <small>${o.date || ""} · ${(o.items || []).reduce((s, it) => s + (it.qty || 1), 0)} item(s)</small>
+          </div>
+          <div style="text-align:right">
+            <div class="price" style="font-family:var(--font-head)">${money(o.total || 0)}</div>
+            <button class="link-remove" style="color:var(--rose-deep)" onclick="viewReceipt(${i})">View receipt</button>
+          </div>
+        </div>`).join("");
+    }
+    function viewReceipt(i) {
+      const acc = getAccount();
+      const o = (acc.orders || [])[i];
+      if (!o) return;
+      const rows = (o.items || []).map(it =>
+        `<tr><td>${it.name || it.id}${it.qty > 1 ? " × " + it.qty : ""}</td><td style="text-align:right">${money((it.price || 0) * (it.qty || 1))}</td></tr>`
+      ).join("");
+      const w = window.open("", "_blank", "width=460,height=680");
+      w.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Receipt ${o.orderNo}</title>
+        <style>body{font-family:Georgia,serif;color:#2C2623;max-width:420px;margin:24px auto;padding:0 20px}
+        h1{font-size:1.5rem;color:#47563B;margin:0}.sub{color:#888;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+        table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.92rem}td{padding:7px 0;border-bottom:1px solid #eee}
+        .tot td{border:0;font-weight:700;padding-top:12px}.meta{font-size:.85rem;color:#555;margin:10px 0}
+        .thanks{margin-top:24px;color:#B67280}button{margin-top:20px;padding:10px 18px;background:#47563B;color:#fff;border:0;border-radius:8px;cursor:pointer;font-family:inherit}
+        @media print{button{display:none}}</style></head><body>
+        <h1>DecoMuse</h1><div class="sub">Purchase receipt</div>
+        <div class="meta"><strong>Order ${o.orderNo}</strong><br>${o.date || ""}<br>${acc.name || ""} · ${acc.email}<br>Member No. ${acc.memberNo || ""}</div>
+        <table>${rows}
+          ${o.shipping ? `<tr><td>Shipping</td><td style="text-align:right">${money(o.shipping)}</td></tr>` : `<tr><td>Shipping</td><td style="text-align:right">Free</td></tr>`}
+          <tr class="tot"><td>Total (incl. GST)</td><td style="text-align:right">${money(o.total || 0)}</td></tr>
+        </table>
+        <div class="meta">ABN 41 991 812 955 · www.decomuse.com.au</div>
+        <div class="thanks">Thank you for shopping with DecoMuse ✦</div>
+        <button onclick="window.print()">🖨 Print / Save as PDF</button>
+        </body></html>`);
+      w.document.close();
+    }
+
+    // ---- Download membership card as a PNG ----
+    function roundRect(ctx, x, y, w, h, r) {
+      ctx.beginPath(); ctx.moveTo(x + r, y);
+      ctx.arcTo(x + w, y, x + w, y + h, r); ctx.arcTo(x + w, y + h, x, y + h, r);
+      ctx.arcTo(x, y + h, x, y, r); ctx.arcTo(x, y, x + w, y, r); ctx.closePath();
+    }
+    function downloadCard() {
+      const acc = getAccount(); if (!acc) return;
+      const W = 1012, H = 640, c = document.createElement("canvas");
+      c.width = W; c.height = H;
+      const ctx = c.getContext("2d");
+      const g = ctx.createLinearGradient(0, 0, W, H);
+      g.addColorStop(0, "#47563B"); g.addColorStop(1, "#333f29");
+      ctx.fillStyle = g; roundRect(ctx, 0, 0, W, H, 42); ctx.fill();
+      // decorative sparkle
+      ctx.fillStyle = "rgba(255,255,255,0.08)"; ctx.font = "260px Georgia, serif";
+      ctx.fillText("✦", 690, 330);
+      // brand + tier
+      ctx.fillStyle = "#fff"; ctx.font = "600 58px Georgia, serif"; ctx.fillText("DecoMuse", 62, 118);
+      ctx.fillStyle = "rgba(255,255,255,0.72)"; ctx.font = "500 22px Arial"; ctx.textAlign = "left";
+      ctx.fillText("M E M B E R   C A R D", 66, 156);
+      // name
+      ctx.fillStyle = "#fff"; ctx.font = "700 52px Georgia, serif";
+      ctx.fillText((acc.name || acc.email).slice(0, 26), 62, 360);
+      // member number
+      ctx.fillStyle = "#E9C6CF"; ctx.font = "500 20px Arial"; ctx.fillText("MEMBER NO.", 62, 420);
+      ctx.fillStyle = "#fff"; ctx.font = "500 34px 'Courier New', monospace"; ctx.fillText(acc.memberNo || "", 62, 460);
+      // since
+      ctx.fillStyle = "#E9C6CF"; ctx.font = "500 20px Arial"; ctx.fillText("MEMBER SINCE", 560, 420);
+      ctx.fillStyle = "#fff"; ctx.font = "500 30px Arial"; ctx.fillText(acc.memberSince || "today", 560, 458);
+      // footer
+      ctx.fillStyle = "rgba(215,224,205,0.9)"; ctx.font = "20px Arial";
+      ctx.fillText("ABN 41 991 812 955  ·  www.decomuse.com.au", 62, 560);
+      ctx.fillText((acc.email || "").slice(0, 46), 62, 594);
+      const a = document.createElement("a");
+      a.href = c.toDataURL("image/png");
+      a.download = "DecoMuse-Member-Card.png";
+      document.body.appendChild(a); a.click(); a.remove();
+      showToast("Member card downloaded ⬇");
     }
 
     function copyCoupon() {

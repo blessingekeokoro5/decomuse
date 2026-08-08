@@ -45,6 +45,38 @@
       updateCartCount();
     })();
 
+    // Save this order to the member's portal (receipts) — keyed by email + on the account
+    (function saveOrderReceipt() {
+      try {
+        const o = JSON.parse(localStorage.getItem("dm_last_order") || "null");
+        if (!o || !o.orderNo) return;
+        const pend = JSON.parse(localStorage.getItem("dm_pending_purchase") || "null");
+        let items = (pend && pend.items) ? pend.items.map(it => ({
+          id: it.item_id || it.id, name: it.item_name || it.name,
+          price: it.price != null ? it.price : 0, qty: it.quantity || it.qty || 1
+        })) : [];
+        if (!items.length) { try { items = getCart().map(i => ({ id: i.id, name: i.name, price: i.price, qty: i.qty })); } catch (e) {} }
+        const record = {
+          orderNo: o.orderNo, date: (new Date()).toISOString().slice(0, 10),
+          total: o.total, shipping: (pend && pend.shipping) || 0, items
+        };
+        const email = o.email || (typeof getAccount === "function" && getAccount() && getAccount().email);
+        // Store keyed by email (survives even before the dashboard loads)
+        if (email) {
+          const all = JSON.parse(localStorage.getItem("dm_orders") || "{}");
+          all[email] = all[email] || [];
+          if (!all[email].some(x => x.orderNo === record.orderNo)) all[email].unshift(record);
+          localStorage.setItem("dm_orders", JSON.stringify(all));
+        }
+        // Attach to the logged-in account
+        const acc = (typeof getAccount === "function") ? getAccount() : null;
+        if (acc && acc.email) {
+          acc.orders = acc.orders || [];
+          if (!acc.orders.some(x => x.orderNo === record.orderNo)) { acc.orders.unshift(record); saveAccount(acc); }
+        }
+      } catch (e) {}
+    })();
+
     // GA4: purchase (fires once, then clears so a page refresh won't double-count)
     (function () {
       try {

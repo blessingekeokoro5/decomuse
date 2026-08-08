@@ -11,6 +11,56 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .muse-chat { background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column; }
+    .mc-head { display:flex; align-items:center; gap:12px; padding:16px 20px; background:linear-gradient(135deg,var(--forest),var(--forest-2)); color:#fff; }
+    .mc-ava { width:40px; height:40px; border-radius:50%; background:rgba(255,255,255,.16); display:grid; place-items:center; font-size:1.2rem; }
+    .mc-head strong { display:block; font-family:var(--font-head); font-size:1.1rem; }
+    .mc-head span { font-size:.78rem; color:#d7e0cd; }
+    .mc-body { padding:20px; overflow-y:auto; flex:1; display:flex; flex-direction:column; gap:14px; min-height:220px; max-height:440px; }
+    .mc-msg { max-width:86%; padding:12px 15px; border-radius:14px; font-size:.92rem; line-height:1.55; }
+    .mc-msg.bot { background:var(--cream-2); border-bottom-left-radius:4px; align-self:flex-start; }
+    .mc-msg.user { background:var(--rose); color:#fff; border-bottom-right-radius:4px; align-self:flex-end; }
+    .mc-recs { display:flex; flex-direction:column; gap:8px; margin-top:10px; }
+    .mc-rec { display:flex; align-items:center; gap:10px; padding:8px; border:1px solid var(--line); border-radius:10px; color:var(--ink); background:#fff; transition:background var(--tr); }
+    .mc-rec:hover { background:var(--cream-2); }
+    .mc-rec img { width:46px; height:46px; object-fit:cover; border-radius:8px; background:var(--cream-2); }
+    .mc-rec .rn { font-size:.86rem; font-weight:500; }
+    .mc-rec .rp { font-size:.82rem; color:var(--rose-deep); }
+    .mc-link { display:inline-block; margin-top:8px; font-size:.86rem; color:var(--rose-deep); font-weight:600; }
+    .mc-suggest { display:flex; flex-wrap:wrap; gap:8px; padding:2px 20px 14px; }
+    .mc-suggest button { padding:9px 14px; border:1.5px solid var(--line); background:#fff; border-radius:22px; font-family:var(--font-body); font-size:.84rem; color:var(--ink); cursor:pointer; transition:all var(--tr); }
+    .mc-suggest button:hover { background:var(--forest); color:#fff; border-color:var(--forest); }
+    .mc-input { display:flex; gap:8px; padding:14px 20px; border-top:1px solid var(--line); }
+    .mc-input input { flex:1; padding:12px 15px; border:1.5px solid var(--line); border-radius:24px; font-family:var(--font-body); font-size:.92rem; }
+    .mc-input button { width:44px; height:44px; border:0; border-radius:50%; background:var(--forest); color:#fff; cursor:pointer; font-size:1rem; flex:0 0 auto; }
+    .mc-disclaimer { text-align:center; font-size:.72rem; color:var(--muted); padding:0 0 14px; }
+    .mc-typing { display:flex; gap:4px; align-items:center; }
+    .mc-typing span { width:7px; height:7px; border-radius:50%; background:var(--rose-deep); opacity:.5; animation:mcDot 1s infinite; }
+    .mc-typing span:nth-child(2){ animation-delay:.2s } .mc-typing span:nth-child(3){ animation-delay:.4s }
+    @keyframes mcDot { 0%,60%,100%{ transform:translateY(0);opacity:.4 } 30%{ transform:translateY(-4px);opacity:1 } }
+    /* Welcome screen */
+    .mc-welcome { text-align:center; padding:14px 6px 4px; }
+    .mc-welcome .gi { font-size:2.4rem; }
+    .mc-welcome h3 { margin:8px 0 8px; letter-spacing:0.04em; }
+    .mc-welcome p { color:var(--muted); font-size:.92rem; max-width:440px; margin:0 auto 10px; line-height:1.55; }
+    .mc-lbl { font-size:.66rem; letter-spacing:.16em; color:var(--rose-deep); margin-bottom:4px; font-weight:600; }
+    /* Product cards inside chat */
+    .mc-cards { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:12px; }
+    .mc-card { border:1px solid var(--line); border-radius:12px; overflow:hidden; background:#fff; display:flex; flex-direction:column; }
+    .mc-card .cimg { aspect-ratio:1/1; background:var(--cream-2); display:block; }
+    .mc-card .cimg img { width:100%; height:100%; object-fit:cover; }
+    .mc-card .cbody { padding:10px 11px; display:flex; flex-direction:column; gap:4px; flex:1; }
+    .mc-card .cn { font-size:.86rem; font-weight:600; line-height:1.3; color:var(--ink); }
+    .mc-card .cd { font-size:.77rem; color:var(--muted); line-height:1.4; flex:1; }
+    .mc-card .cp { font-family:var(--font-head); color:var(--ink); font-size:1rem; }
+    .mc-card .cbtn { margin-top:6px; padding:9px; border:1px solid var(--forest); background:#fff; color:var(--forest); border-radius:8px;
+      font-family:var(--font-body); font-size:.82rem; font-weight:600; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:6px; }
+    .mc-card .cbtn:hover { background:var(--forest); color:#fff; }
+    @media (max-width:520px){ .mc-cards { grid-template-columns:1fr; } }
+    .mc-cam { width:44px; height:44px; border:1.5px solid var(--line); border-radius:50%; background:#fff; cursor:pointer; font-size:1rem; flex:0 0 auto; }
+    .mc-cam:hover { border-color:var(--rose); }
+  </style>
 </head>
 <body data-page="stylist.html">
   <div id="site-header"></div>
@@ -28,8 +78,31 @@
     <img src="assets/cat-stylist.png" alt="Muse Stylist AI" style="width:100%;max-width:720px;height:auto;margin:6px auto 0;mix-blend-mode:multiply">
   </div>
 
-  <section class="section">
+  <section class="section" style="padding-bottom:24px">
+    <div class="container" style="max-width:720px">
+      <div class="muse-chat" id="museChat">
+        <div class="mc-head">
+          <div class="mc-ava">✦</div>
+          <div><strong>Muse Stylist</strong><span>Your AI décor &amp; gift advisor</span></div>
+        </div>
+        <div class="mc-body" id="mcBody"></div>
+        <div class="mc-suggest" id="mcSuggest"></div>
+        <form class="mc-input" onsubmit="return museSend()">
+          <button type="button" class="mc-cam" aria-label="Upload a room photo" onclick="document.getElementById('stylistStage').scrollIntoView({behavior:'smooth'})">📷</button>
+          <input id="mcInput" placeholder="Ask about décor, gifts, orders…" autocomplete="off">
+          <button type="submit" aria-label="Send">➤</button>
+        </form>
+        <div class="mc-disclaimer">AI-powered suggestions may not always be accurate.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:24px">
     <div class="container" style="max-width:960px">
+      <div class="section-head" style="text-align:center;margin-bottom:8px">
+        <span class="eyebrow">Or upload a photo</span>
+        <h2>Let the Muse Stylist read your room</h2>
+      </div>
       <div id="stylistStage">
         <div class="upload-zone" id="uploadZone">
           <div class="up-ic">✦</div>
@@ -68,5 +141,126 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script src="js/stylist.js"></script>
+  <script>
+    /* ===== Muse Stylist AI chat — conversational décor & gift advisor ===== */
+    const MUSE_CHIPS = ["Gift for her under $200", "Gift for him under $200", "Under $100",
+      "Home décor", "Candles & fragrance", "Wellness & self-care", "Treat myself", "Help with an order"];
+    let museWelcome = true;
+
+    function museWelcomeHtml() {
+      return `<div class="mc-welcome">
+        <div class="gi">🎁</div>
+        <h3>Find the perfect piece</h3>
+        <p>Tell me who you're shopping for, or the room you're styling, and I'll suggest something they'll love.</p>
+        <p>I can help you find the perfect DecoMuse piece — and if you need help with an order, just ask. You can also <a href="contact.html">contact us</a> directly.</p>
+      </div>`;
+    }
+    function museInit() {
+      document.getElementById("mcBody").innerHTML = museWelcomeHtml();
+      document.getElementById("mcSuggest").innerHTML = MUSE_CHIPS.map(c =>
+        `<button type="button" onclick="museAsk('${c.replace(/'/g, "\\'")}')">${c}</button>`).join("");
+    }
+    function museAddMsg(html, who) {
+      const body = document.getElementById("mcBody");
+      const d = document.createElement("div");
+      d.className = "mc-msg " + who;
+      d.innerHTML = html;
+      body.appendChild(d);
+      body.scrollTop = body.scrollHeight;
+    }
+    function museTyping(on) {
+      const body = document.getElementById("mcBody");
+      let t = document.getElementById("mcTyping");
+      if (on) {
+        if (t) return;
+        t = document.createElement("div"); t.id = "mcTyping"; t.className = "mc-msg bot";
+        t.innerHTML = `<div class="mc-typing"><span></span><span></span><span></span></div>`;
+        body.appendChild(t); body.scrollTop = body.scrollHeight;
+      } else if (t) { t.remove(); }
+    }
+    function museSend() {
+      const i = document.getElementById("mcInput");
+      const v = (i.value || "").trim();
+      if (!v) return false;
+      i.value = ""; museAsk(v); return false;
+    }
+    function museAsk(text) {
+      if (museWelcome) { document.getElementById("mcBody").innerHTML = ""; museWelcome = false; }
+      museAddMsg(text, "user");
+      museTyping(true);
+      setTimeout(() => { museTyping(false); museReply(museRespond(text)); }, 750);
+    }
+
+    function museImg(p) { return p.img || (p.imgs && p.imgs[0]) || ("assets/products/" + p.id + ".jpg"); }
+    function museCards(list) {
+      return `<div class="mc-cards">` + list.map(p => {
+        const d = (p.desc || "").replace(/"/g, "&quot;");
+        const short = d.length > 62 ? d.slice(0, 62) + "…" : d;
+        return `<div class="mc-card">
+          <a class="cimg" href="product.html?id=${p.id}"><img src="${museImg(p)}" alt="${p.name}" onerror="this.closest('.cimg').style.display='none'"></a>
+          <div class="cbody">
+            <a class="cn" href="product.html?id=${p.id}">${p.name}</a>
+            <div class="cd">${short}</div>
+            <div class="cp">${money(p.price)}</div>
+            <button class="cbtn" onclick="addToCart('${p.id}',1);showToast('Added to your bag ✦')">🛍 Add to Bag</button>
+          </div></div>`;
+      }).join("") + `</div>`;
+    }
+    function museReply(r) {
+      let html = `<div class="mc-lbl">MUSE STYLIST</div>${r.text}`;
+      if (r.cards && r.cards.length) html += museCards(r.cards);
+      if (r.link) html += `<a class="mc-link" href="${r.link[1]}">${r.link[0]} →</a>`;
+      museAddMsg(html, "bot");
+    }
+
+    function museBudget(s) {
+      let m = s.match(/(?:under|below|less than|up ?to|max)\s*\$?\s*(\d{2,4})/);
+      if (!m) m = s.match(/\$\s?(\d{2,4})/);
+      return m ? +m[1] : null;
+    }
+    function musePick(cat, maxPrice, n) {
+      n = n || 4;
+      let list = PRODUCTS.slice();
+      if (cat) list = list.filter(p => p.cat === cat);
+      if (maxPrice) list = list.filter(p => p.price <= maxPrice);
+      if (list.length < 2 && maxPrice) list = PRODUCTS.filter(p => p.price <= maxPrice);
+      if (!list.length) list = PRODUCTS.slice();
+      // gift-worthy first: cheaper, giftable categories tend to be nicer picks
+      return list.slice(0, n);
+    }
+    function museRespond(text) {
+      const s = text.toLowerCase();
+      // Service / help intents (no products)
+      if (/\b(order|track|tracking|delivery|shipping|arrive|dispatch)\b/.test(s))
+        return { text: "Happy to help with your order. You can track it any time using your order number — standard delivery is 3–8 business days, and shipping is free on orders over $500.", link: ["Track my order", "track.html"] };
+      if (/\b(return|refund|exchange|replace|replacement)\b/.test(s))
+        return { text: "Of course. You can start a return within 30 days and choose a refund to your original payment, a gift card with a 5% bonus, an exchange or a replacement — all from our returns page.", link: ["Start a return", "returns.html"] };
+      if (/\b(contact|human|agent|speak|talk|email|phone|call|support)\b/.test(s))
+        return { text: "Our team would love to help. Reach out any time and we'll get back to you quickly.", link: ["Contact us", "contact.html"] };
+      if (/\b(member|membership|discount|coupon|promo|code|join|sign ?up|loyalty)\b/.test(s))
+        return { text: "Join free as a DecoMuse member and enjoy 20% off your first order, a downloadable membership card, and member-only perks. It only takes a minute.", link: ["Join free", "account.html"] };
+
+      // Product intents
+      const budget = museBudget(s);
+      let cat = null, label = "hand-picked";
+      if (/candle|fragrance|scent|diffuser|perfume/.test(s)) { cat = "Fragrance"; label = "fragrance"; }
+      else if (/wellness|self.?care|spa|relax|pamper|treat myself|calm/.test(s)) { cat = "Health & Wellness"; label = "wellness"; }
+      else if (/decor|décor|accent|vase|cushion|candle holder|finishing/.test(s)) { cat = "Home Décor"; label = "home décor"; }
+      else if (/furniture|coffee table|sofa|couch|living|lounge|desk/.test(s)) { cat = "Furniture"; label = "living-room"; }
+      else if (/bedroom|bed|linen|sheet|sleep|pillow/.test(s)) { cat = "Bedroom & Bath"; label = "bedroom"; }
+      else if (/kitchen|dining|tableware|dinner|plate|mug/.test(s)) { cat = "Kitchen & Dining"; label = "kitchen & dining"; }
+      else if (/gift|present|hamper|for (her|him|mum|dad|a woman|a man|someone)/.test(s)) { cat = "Gifts"; label = "gift-worthy"; }
+
+      const list = musePick(cat, budget, 4);
+      if (!list.length)
+        return { text: "I can help you find décor, gifts, fragrance and wellness pieces — or with orders and returns. Try one of the suggestions below, or upload a room photo above and I'll style it for you." };
+
+      const bud = budget ? `, all under $${budget}` : "";
+      const text2 = `Absolutely — here are ${list.length} ${label} picks that feel special and gift-worthy${bud}. I've focused on versatile pieces with a polished, considered feel. Tap <strong>Add to Bag</strong> on any you love, or ask me to narrow it down further — for example more calming, more of a statement, or a different budget.`;
+      return { text: text2, cards: list };
+    }
+
+    museInit();
+  </script>
 </body>
 </html>
