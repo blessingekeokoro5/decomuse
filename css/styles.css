@@ -490,7 +490,8 @@ em { font-style: italic; color: var(--rose-deep); }
 @keyframes popIn { from { opacity: 0; transform: translateY(20px) scale(0.96); } to { opacity: 1; transform: none; } }
 /* ---- Rewards modal (image-matched) ---- */
 .member-card--rewards { display: block; grid-template-columns: none; max-width: 720px; text-align: center;
-  background: linear-gradient(160deg, #3a2b28, #241b19); color: #f4ece7; padding: 46px 40px 28px; }
+  background: linear-gradient(160deg, #3a2b28, #241b19); color: #f4ece7; padding: 46px 40px 28px;
+  max-height: calc(100vh - 32px); overflow-y: auto; }
 .member-card--rewards .member-close { background: rgba(255,255,255,.12); color: #fff; }
 .member-card--rewards .member-close:hover { background: rgba(255,255,255,.24); }
 .rw-brand { font-family: var(--font-head); font-size: 1.9rem; letter-spacing: .12em; color: #fff; }
@@ -514,7 +515,22 @@ em { font-style: italic; color: var(--rose-deep); }
 .rw-btn--ghost:hover { background: rgba(255,255,255,.12); color: #fff; }
 .member-card--rewards .member-later { color: #b9aaa0; margin-top: 14px; }
 .member-card--rewards .member-later:hover { color: #fff; }
-@media (max-width: 640px) { .rw-benefits { grid-template-columns: 1fr; gap: 22px; } .member-card--rewards { padding: 38px 22px 22px; } .rw-brand { font-size: 1.6rem; } }
+@media (max-width: 640px) {
+  .member-modal { padding: 12px; }
+  .member-card--rewards { padding: 30px 18px 18px; max-height: calc(100vh - 24px); }
+  .rw-brand { font-size: 1.5rem; letter-spacing: .08em; }
+  .rw-offer { font-size: .74rem; margin-top: 10px; }
+  /* Compact icon-left benefit rows so all three fit without scrolling */
+  .rw-benefits { grid-template-columns: 1fr; gap: 14px; margin: 20px 0 4px; text-align: left; }
+  .rw-benefit { display: grid; grid-template-columns: 44px 1fr; column-gap: 14px; align-items: center; padding: 0; }
+  .rw-ic { grid-row: 1 / -1; align-self: center; height: auto; margin: 0; }
+  .rw-ic svg { width: 40px; height: 40px; }
+  .rw-benefit h4 { margin-bottom: 2px; }
+  .rw-rate { margin-top: 2px; }
+  .rw-bonus { font-size: .8rem; padding: 10px 12px; margin-top: 14px; }
+  .rw-actions { margin-top: 18px; gap: 10px; }
+  .rw-btn { min-width: 0; flex: 1; padding: 12px 10px; }
+}
 
 .member-close { position: absolute; top: 14px; right: 14px; z-index: 3; width: 36px; height: 36px; border-radius: 50%;
   background: rgba(255,255,255,0.9); border: none; cursor: pointer; font-size: 1rem; color: var(--ink); box-shadow: var(--shadow-sm); }
