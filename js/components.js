@@ -252,7 +252,15 @@ function buildHeader() {
         <ul class="nav-cats" id="navCats">
           <li class="nav-cat-plain"><a href="index.html">Home</a></li>
           ${catTabs}
-          <li class="nav-cat-plain"><a href="staging.html">Services</a></li>
+          <li class="nav-cat-plain nav-has-drop" onmouseenter="var r=document.getElementById('navCatsRow'); if(r){r.classList.remove('mega-open'); r.querySelectorAll('.mega').forEach(function(m){m.classList.remove('active');});}">
+            <a href="staging.html">Services ${IC.caret}</a>
+            <ul class="nav-drop">
+              <li><a href="property-styling-staging.html">Property Styling &amp; Staging</a></li>
+              <li><a href="personal-shopping.html">Home Décor Personal Shopper</a></li>
+              <li><a href="vacation-rentals.html">Vacation Rentals</a></li>
+              <li><a href="interior-design.html">Interior Design</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       ${megaMarkup}
