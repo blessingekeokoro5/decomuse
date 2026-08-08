@@ -52,6 +52,14 @@
     .rel-arrow:hover { background: var(--rose); color: #fff; border-color: var(--rose); }
     .rel-arrow.prev { left: -14px; } .rel-arrow.next { right: -14px; }
     @media (max-width: 720px){ .rel-arrow { display: none; } .rel-track .card { flex: 0 0 200px; } }
+    /* Review this product */
+    .pdp-review-form { max-width: 820px; margin: 0 auto; padding-top: 6px; }
+    .pdp-review-form h3 { font-size: 1.15rem; margin-bottom: 12px; }
+    .prf-stars { display: flex; gap: 8px; }
+    .prf-star { width: 46px; height: 46px; border: 1px solid var(--line); border-radius: 8px; background: #fff; font-size: 1.4rem; line-height: 1; color: var(--gold); cursor: pointer; transition: all var(--tr); }
+    .prf-star:hover, .prf-star.on { background: var(--cream-2); border-color: var(--gold); }
+    .prf-note { color: var(--rose-deep); font-size: 0.94rem; margin-top: 12px; }
+    .prf-form { margin-top: 18px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; }
   </style>
 </head>
 <body data-page="product.html">
@@ -181,6 +189,61 @@
         </div>
         <p class="rv-note">Incentives to write honest reviews may be offered to people who have purchased the item</p>
       </section>`;
+    }
+
+    // "Review this product" — per-product review submission (email required for verification)
+    let prfRating = 0;
+    function productReviewForm(p) {
+      return `
+      <section class="pdp-review-form" id="reviewForm">
+        <h3>Review this product</h3>
+        <div class="prf-stars" id="prfStars">
+          ${[1,2,3,4,5].map(n => `<button type="button" class="prf-star" data-n="${n}" onclick="prfSetStar(${n})" aria-label="${n} star${n > 1 ? "s" : ""}">☆</button>`).join("")}
+        </div>
+        <p class="prf-note">Adding a review will require a valid email for verification</p>
+        <form id="prfForm" class="prf-form" style="display:none" onsubmit="return submitProductReview(event, '${p.id}')">
+          <div class="field-row">
+            <div class="field"><label>Name</label><input id="prfName" required></div>
+            <div class="field"><label>Email <small style="color:var(--muted)">(for verification)</small></label><input id="prfEmail" type="email" required></div>
+          </div>
+          <div class="field"><label>Headline</label><input id="prfTitle" placeholder="Sum up your review"></div>
+          <div class="field"><label>Your review</label><textarea id="prfBody" required style="min-height:100px" placeholder="What did you love about it?"></textarea></div>
+          <button type="submit" class="btn btn--dark">Submit review</button>
+          <div class="form-success" id="prfSuccess"></div>
+        </form>
+      </section>`;
+    }
+    function prfSetStar(n) {
+      prfRating = n;
+      document.querySelectorAll("#prfStars .prf-star").forEach(b => {
+        const on = (+b.dataset.n <= n);
+        b.classList.toggle("on", on);
+        b.textContent = on ? "★" : "☆";
+      });
+      const form = document.getElementById("prfForm");
+      if (form) form.style.display = "";
+    }
+    async function submitProductReview(e, id) {
+      e.preventDefault();
+      if (!prfRating) { showToast("Please choose a star rating"); return false; }
+      const btn = e.target.querySelector('button[type="submit"]');
+      const prod = (typeof PRODUCTS !== "undefined") ? PRODUCTS.find(x => x.id === id) : null;
+      const data = [
+        ["Product", (prod ? prod.name : id) + " (" + id + ")"],
+        ["Rating", prfRating + " / 5"],
+        ["Name", document.getElementById("prfName").value],
+        ["Email", document.getElementById("prfEmail").value],
+        ["Headline", document.getElementById("prfTitle").value],
+        ["Review", document.getElementById("prfBody").value]
+      ].filter(d => d[1]);
+      if (btn) { btn.disabled = true; btn.textContent = "Submitting…"; }
+      try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — New product review (pending email verification)"); } catch (err) {}
+      const ok = document.getElementById("prfSuccess");
+      if (ok) { ok.classList.add("show"); ok.innerHTML = "Thank you! Your review has been submitted. We'll email you to verify it, then publish it to this product. ✦"; }
+      e.target.reset(); prfRating = 0;
+      document.querySelectorAll("#prfStars .prf-star").forEach(b => { b.classList.remove("on"); b.textContent = "☆"; });
+      if (btn) { btn.disabled = false; btn.textContent = "Submit review"; }
+      return false;
     }
 
     function productSpecs(p) {
@@ -328,7 +391,7 @@
           </div>
         </div>`;
 
-      wrap.insertAdjacentHTML("beforeend", productSpecs(p) + productReviews(p));
+      wrap.insertAdjacentHTML("beforeend", productSpecs(p) + productReviews(p) + productReviewForm(p));
 
       let related = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id);
       related = related.concat(PRODUCTS.filter(x => x.cat !== p.cat && x.id !== p.id));
