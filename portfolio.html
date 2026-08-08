@@ -16,6 +16,29 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .pf-loc { display: block; color: var(--muted); font-size: 0.82rem; margin-top: 3px; }
+    .pf-item { cursor: pointer; }
+    .pf-more { display: inline-block; margin-top: 6px; font-size: 0.78rem; color: var(--rose-deep); }
+    /* Project gallery lightbox */
+    .pf-lb { position: fixed; inset: 0; z-index: 300; background: rgba(30,24,22,.93); display: none; align-items: center; justify-content: center; padding: 24px; }
+    .pf-lb.open { display: flex; }
+    .pf-lb-stage { max-width: 900px; width: 100%; text-align: center; }
+    #pfLbImg { width: 100%; max-height: 64vh; object-fit: cover; border-radius: 12px; background: #000; }
+    .pf-lb-cap { color: #fff; margin-top: 14px; }
+    .pf-lb-cap h3 { color: #fff; margin: 4px 0 0; }
+    .pf-lb-cap .pf-cat { color: var(--rose-soft); }
+    .pf-lb-cap small { color: #d7cfc7; display: block; margin-top: 2px; }
+    .pf-lb-thumbs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
+    .pf-lb-thumbs button { width: 64px; height: 48px; border: 2px solid transparent; border-radius: 8px; overflow: hidden; padding: 0; cursor: pointer; background: none; }
+    .pf-lb-thumbs button.active { border-color: var(--rose); }
+    .pf-lb-thumbs img { width: 100%; height: 100%; object-fit: cover; }
+    .pf-lb-close { position: absolute; top: 18px; right: 22px; background: none; border: none; color: #fff; font-size: 1.9rem; cursor: pointer; line-height: 1; }
+    .pf-lb-nav { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,.15); border: none; color: #fff; width: 48px; height: 48px; border-radius: 50%; font-size: 1.8rem; cursor: pointer; }
+    .pf-lb-nav.prev { left: 20px; } .pf-lb-nav.next { right: 20px; }
+    .pf-lb-hint { color: #cbbfb8; font-size: 0.8rem; margin-top: 10px; }
+    @media (max-width: 600px){ .pf-lb-nav { width: 40px; height: 40px; font-size: 1.5rem; } }
+  </style>
 </head>
 <body data-page="portfolio.html">
   <div id="site-header"></div>
@@ -25,7 +48,7 @@
       <div class="breadcrumb"><a href="index.html">Home</a> / <a href="staging.html">Styling &amp; Design</a> / Portfolio</div>
       <span class="eyebrow">Our work</span>
       <h1>Styling &amp; staging portfolio</h1>
-      <p>A look at real spaces we've styled, staged and designed, considered, layered and made to feel unmistakably like home. Click any project to view it larger.</p>
+      <p>A look at real spaces we've styled, staged and designed, considered, layered and made to feel unmistakably like home. Click any project to view more photos of the space.</p>
     </div>
   </section>
 
@@ -42,6 +65,19 @@
       <div class="pf-grid" id="pfGrid"></div>
     </div>
   </section>
+
+  <!-- Project gallery lightbox -->
+  <div class="pf-lb" id="pfLb" aria-hidden="true">
+    <button class="pf-lb-close" onclick="closeProject()" aria-label="Close">✕</button>
+    <button class="pf-lb-nav prev" onclick="pfStep(-1)" aria-label="Previous">‹</button>
+    <div class="pf-lb-stage">
+      <img id="pfLbImg" src="" alt="">
+      <div class="pf-lb-cap" id="pfLbCap"></div>
+      <div class="pf-lb-thumbs" id="pfLbThumbs"></div>
+      <div class="pf-lb-hint" id="pfLbHint"></div>
+    </div>
+    <button class="pf-lb-nav next" onclick="pfStep(1)" aria-label="Next">›</button>
+  </div>
 
   <!-- CTA -->
   <section class="section bg-forest">
@@ -62,30 +98,38 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Portfolio projects — drop photos at assets/portfolio/<img>.jpg to fill them.
+    /* ===== Portfolio projects =====
+       Each project reuses the real "Our Latest Projects" photos (assets/services/project-N.jpg),
+       `pos` crops the paired photo to the room shown on the Services page.
+       To add MORE photos of a property later, drop images into a folder named by `slug`:
+         assets/portfolio/<slug>/1.jpg, 2.jpg, 3.jpg …  (up to 8)
+       They're detected automatically and appear in that project's gallery — no code changes needed. */
     const PORTFOLIO = [
-      { t: "Coastal Living Room Refresh", cat: "styling",  tag: "Property Styling",     ph: "rose",     img: "assets/portfolio/1.jpg" },
-      { t: "Apartment Staged to Sell",    cat: "staging",  tag: "Property Staging", ph: "forest",   img: "assets/portfolio/2.jpg" },
-      { t: "Warm Minimal Bedroom",        cat: "styling",  tag: "Property Styling",     ph: "espresso", img: "assets/portfolio/3.jpg" },
-      { t: "Full Home Interior Design",   cat: "interior", tag: "Interior Design",  ph: "",         img: "assets/portfolio/4.jpg" },
-      { t: "Family Home Staging",         cat: "staging",  tag: "Property Staging", ph: "rose",     img: "assets/portfolio/5.jpg" },
-      { t: "Dining & Kitchen Design",     cat: "interior", tag: "Interior Design",  ph: "forest",   img: "assets/portfolio/6.jpg" },
-      { t: "Bright Family Lounge",        cat: "styling",  tag: "Property Styling",     ph: "",         img: "assets/portfolio/7.jpg" },
-      { t: "Townhouse Restyle for Sale",  cat: "staging",  tag: "Property Staging", ph: "espresso", img: "assets/portfolio/8.jpg" },
-      { t: "Studio Apartment Design",     cat: "interior", tag: "Interior Design",  ph: "rose",     img: "assets/portfolio/9.jpg" },
-      { t: "Short-Stay Apartment Fit-Out", cat: "vacation", tag: "Vacation Rentals", ph: "forest",   img: "assets/portfolio/10.jpg" },
-      { t: "Airbnb Styling for Bookings",  cat: "vacation", tag: "Vacation Rentals", ph: "",         img: "assets/portfolio/11.jpg" },
-      { t: "Holiday Home Turnkey Styling", cat: "vacation", tag: "Vacation Rentals", ph: "espresso", img: "assets/portfolio/12.jpg" }
+      { t: "Coastal Living Room Refresh", loc: "Paradise, SA",      cat: "styling",  tag: "Property Styling",  src: "assets/services/project-1.jpg", pos: "0%",   ph: "rose",     slug: "paradise-living" },
+      { t: "Warm Minimal Bedroom",        loc: "Norwood, SA",       cat: "styling",  tag: "Property Styling",  src: "assets/services/project-1.jpg", pos: "100%", ph: "espresso", slug: "norwood-bedroom" },
+      { t: "Timber Kitchen Design",       loc: "Burnside, SA",      cat: "interior", tag: "Interior Design",   src: "assets/services/project-2.jpg", pos: "0%",   ph: "forest",   slug: "burnside-kitchen" },
+      { t: "Bright Family Lounge",        loc: "Prospect, SA",      cat: "styling",  tag: "Property Styling",  src: "assets/services/project-2.jpg", pos: "100%", ph: "",         slug: "prospect-lounge" },
+      { t: "Statement Kitchen",           loc: "Glenelg, SA",       cat: "interior", tag: "Interior Design",   src: "assets/services/project-3.jpg", pos: "0%",   ph: "rose",     slug: "glenelg-kitchen" },
+      { t: "Calm Bedroom, Staged to Sell", loc: "Unley, SA",        cat: "staging",  tag: "Property Staging",  src: "assets/services/project-3.jpg", pos: "100%", ph: "forest",   slug: "unley-bedroom" },
+      { t: "Butler's Pantry & Kitchen",   loc: "Walkerville, SA",   cat: "interior", tag: "Interior Design",   src: "assets/services/project-4.jpg", pos: "0%",   ph: "espresso", slug: "walkerville-pantry" },
+      { t: "Serene Bedroom Staging",      loc: "North Adelaide, SA", cat: "staging", tag: "Property Staging",  src: "assets/services/project-4.jpg", pos: "100%", ph: "rose",     slug: "north-adelaide-bedroom" },
+      { t: "Coastal Short-Stay Styling",  loc: "Henley Beach, SA",  cat: "vacation", tag: "Vacation Rentals",  src: "assets/services/project-5.jpg", pos: "0%",   ph: "forest",   slug: "henley-shortstay" },
+      { t: "Entertainer's Kitchen Staging", loc: "Brighton, SA",    cat: "staging",  tag: "Property Staging",  src: "assets/services/project-5.jpg", pos: "100%", ph: "",         slug: "brighton-kitchen" },
+      { t: "Holiday Home Turnkey Styling", loc: "Victor Harbor, SA", cat: "vacation", tag: "Vacation Rentals", src: "assets/services/project-6.jpg", pos: "0%",   ph: "espresso", slug: "victor-harbor-holiday" },
+      { t: "Whole-Home Living",           loc: "Stirling, SA",      cat: "interior", tag: "Interior Design",   src: "assets/services/project-6.jpg", pos: "100%", ph: "rose",     slug: "stirling-wholehome" }
     ];
 
     function renderPortfolio(filter) {
       const grid = document.getElementById("pfGrid");
       const list = filter === "all" ? PORTFOLIO : PORTFOLIO.filter(p => p.cat === filter);
-      grid.innerHTML = list.map(p => `
-        <figure class="pf-item reveal" data-title="${p.t}" onclick="var i=this.querySelector('img.ph-img'); if(i&&i.getAttribute('src'))showZoom(i.src, this.dataset.title)">
-          <div class="pf-media"><div class="ph ${p.ph}" data-label="${p.t}"><img class="ph-img" src="${p.img}" alt="${p.t}" loading="lazy" onerror="this.remove()"></div></div>
-          <figcaption><span class="pf-cat">${p.tag}</span><h3>${p.t}</h3></figcaption>
-        </figure>`).join("");
+      grid.innerHTML = list.map(p => {
+        const idx = PORTFOLIO.indexOf(p);
+        return `
+        <figure class="pf-item reveal" onclick="openProject(${idx})">
+          <div class="pf-media"><div class="ph ${p.ph}" data-label="${p.t}"><img class="ph-img" src="${p.src}" alt="${p.t}" loading="lazy" style="object-position:${p.pos || "50%"} center" onerror="this.remove()"></div></div>
+          <figcaption><span class="pf-cat">${p.tag}</span><h3>${p.t}</h3>${p.loc ? `<span class="pf-loc">${p.loc}</span>` : ""}<span class="pf-more">View gallery →</span></figcaption>
+        </figure>`;
+      }).join("");
       if (typeof initReveal === "function") initReveal();
     }
 
@@ -95,6 +139,59 @@
       renderPortfolio(btn.dataset.f);
     });
     renderPortfolio("all");
+
+    /* ===== Per-project gallery lightbox ===== */
+    let pfCur = null, pfImgs = [], pfIdx = 0;
+    function openProject(i) {
+      const p = PORTFOLIO[i]; if (!p) return;
+      pfCur = p; pfIdx = 0;
+      pfImgs = [{ src: p.src, pos: p.pos || "50%" }];
+      renderLb();
+      const lb = document.getElementById("pfLb");
+      lb.classList.add("open"); lb.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+      // Auto-detect extra photos dropped into assets/portfolio/<slug>/1.jpg … 8.jpg
+      if (p.slug) {
+        for (let n = 1; n <= 8; n++) {
+          (function (n) {
+            const url = "assets/portfolio/" + p.slug + "/" + n + ".jpg";
+            const im = new Image();
+            im.onload = function () { if (pfCur === p) { pfImgs.push({ src: url, pos: "50%" }); renderThumbs(); updateHint(); } };
+            im.src = url;
+          })(n);
+        }
+      }
+    }
+    function renderLb() {
+      const cur = pfImgs[pfIdx] || pfImgs[0];
+      const img = document.getElementById("pfLbImg");
+      img.src = cur.src; img.style.objectPosition = (cur.pos || "50%") + " center"; img.alt = pfCur.t;
+      document.getElementById("pfLbCap").innerHTML =
+        `<span class="pf-cat">${pfCur.tag}</span><h3>${pfCur.t}</h3>${pfCur.loc ? `<small>${pfCur.loc}</small>` : ""}`;
+      renderThumbs(); updateHint();
+    }
+    function renderThumbs() {
+      document.getElementById("pfLbThumbs").innerHTML = pfImgs.map((im, k) =>
+        `<button class="${k === pfIdx ? "active" : ""}" onclick="pfGo(${k})"><img src="${im.src}" style="object-position:${im.pos || "50%"} center" alt=""></button>`).join("");
+    }
+    function updateHint() {
+      const h = document.getElementById("pfLbHint");
+      h.textContent = pfImgs.length > 1 ? `Photo ${pfIdx + 1} of ${pfImgs.length}` : "More photos of this project coming soon";
+    }
+    function pfGo(k) { pfIdx = k; renderLb(); }
+    function pfStep(d) { if (!pfImgs.length) return; pfIdx = (pfIdx + d + pfImgs.length) % pfImgs.length; renderLb(); }
+    function closeProject() {
+      const lb = document.getElementById("pfLb");
+      lb.classList.remove("open"); lb.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = ""; pfCur = null;
+    }
+    document.getElementById("pfLb").addEventListener("click", (e) => { if (e.target.id === "pfLb") closeProject(); });
+    document.addEventListener("keydown", (e) => {
+      if (!document.getElementById("pfLb").classList.contains("open")) return;
+      if (e.key === "Escape") closeProject();
+      else if (e.key === "ArrowLeft") pfStep(-1);
+      else if (e.key === "ArrowRight") pfStep(1);
+    });
   </script>
 </body>
 </html>

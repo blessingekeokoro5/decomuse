@@ -48,7 +48,8 @@
       "Bash(perl -pi -e 's{Choose a virtual, in-home or interior design consultation}{Choose an in-home styling, staging or interior design consultation}' staging.html)",
       "Bash(perl -pi -e 's{We do both, in-home or virtually\\\\.}{We do both, in your home.}' property-styling-staging.html)",
       "Bash(perl -pi -e 's{In-home &amp; virtual consults}{In-home consults}; s{A considered walk-through of your space, in person or online,}{A considered walk-through of your space, in person,}' property-styling-staging.html)",
-      "Bash(grep -viE \"//|/\\\\*|worldwide 🌏\")"
+      "Bash(grep -viE \"//|/\\\\*|worldwide 🌏\")",
+      "Bash(git commit -q -m 'Portfolio: replace gradient placeholders with the real '\\\\''Our Latest Projects'\\\\'' photos \\(assets/services/project-1..6\\) as suburb-labelled projects; each card opens a per-property gallery lightbox that auto-detects extra photos dropped into assets/portfolio/<slug>/N.jpg for full multi-angle project galleries *)"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
