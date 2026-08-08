@@ -700,7 +700,7 @@ em { font-style: italic; color: var(--rose-deep); }
 @media (max-width: 560px){ .process-grid { grid-template-columns: 1fr; max-width: 320px; margin-left: auto; margin-right: auto; } }
 
 /* Circular service cards (Services page) */
-.svc-circles { display: grid; grid-template-columns: repeat(3,1fr); gap: 36px; margin-top: 14px; }
+.svc-circles { display: grid; grid-template-columns: repeat(4,1fr); gap: 28px; margin-top: 14px; }
 .svc-round { position: relative; display: block; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; box-shadow: var(--shadow); }
 .svc-round img { width: 100%; height: 100%; object-fit: cover; transition: transform .55s ease; }
 .svc-round::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.40)); }
@@ -709,6 +709,7 @@ em { font-style: italic; color: var(--rose-deep); }
   color: #fff; font-family: var(--font-head); font-size: clamp(1.3rem,2.4vw,1.7rem); text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
 .svc-circle figcaption { text-align: center; margin: 18px auto 0; max-width: 300px; color: var(--body); font-size: 0.94rem; line-height: 1.55; }
 .svc-circle figcaption .link-arrow { margin-top: 10px; display: inline-flex; }
+@media (max-width: 1024px){ .svc-circles { grid-template-columns: repeat(2,1fr); gap: 32px; } }
 @media (max-width: 760px){ .svc-circles { grid-template-columns: 1fr; gap: 30px; max-width: 340px; margin-left: auto; margin-right: auto; } }
 
 /* Enquire side tab + modal */
