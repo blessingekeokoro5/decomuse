@@ -16,6 +16,28 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .svc-hero { position: relative; overflow: hidden; border-radius: var(--radius-lg); min-height: 540px; display: flex; align-items: center; box-shadow: var(--shadow); }
+    .svc-hero-slides { position: absolute; inset: 0; z-index: 0; }
+    .svc-hero-slide { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0;
+      transition: opacity 1.4s ease; animation: svcKen 20s ease-in-out infinite alternate; }
+    .svc-hero-slide.active { opacity: 1; }
+    @keyframes svcKen { from { transform: scale(1.06); } to { transform: scale(1.15); } }
+    .svc-hero-scrim { position: absolute; inset: 0; z-index: 1;
+      background: linear-gradient(90deg, rgba(28,22,20,0.85) 0%, rgba(28,22,20,0.62) 46%, rgba(28,22,20,0.22) 100%); }
+    .svc-hero-inner { position: relative; z-index: 2; color: #fff; max-width: 620px; padding: 64px 52px; }
+    .svc-hero-inner .eyebrow { color: var(--rose-soft); }
+    .svc-hero-inner h2 { color: #fff; font-size: clamp(2rem, 4vw, 3rem); margin: 10px 0 14px; }
+    .svc-hero-inner .lead { color: #f1e8e0; }
+    .svc-hero-inner .feature-list li { color: #f1e8e0; }
+    .svc-hero-inner .btn--outline { color: #fff; border-color: rgba(255,255,255,0.6); }
+    .svc-hero-inner .btn--outline:hover { background: rgba(255,255,255,0.14); color: #fff; border-color: #fff; }
+    @media (max-width: 760px) {
+      .svc-hero { min-height: 480px; border-radius: var(--radius); }
+      .svc-hero-scrim { background: linear-gradient(180deg, rgba(28,22,20,0.45) 0%, rgba(28,22,20,0.85) 100%); }
+      .svc-hero-inner { padding: 40px 24px; }
+    }
+  </style>
 </head>
 <body data-page="staging.html">
   <div id="site-header"></div>
@@ -47,8 +69,15 @@
   <!-- Intro -->
   <section class="section">
     <div class="container">
-      <div class="split reveal">
-        <div>
+      <div class="svc-hero reveal">
+        <div class="svc-hero-slides" id="svcHeroSlides">
+          <div class="svc-hero-slide active" style="background-image:url('assets/hero.jpg')"></div>
+          <div class="svc-hero-slide" style="background-image:url('assets/services/staging-feature.jpg')"></div>
+          <div class="svc-hero-slide" style="background-image:url('assets/services/interior-design-feature.jpg')"></div>
+          <div class="svc-hero-slide" style="background-image:url('assets/services/property-styling.jpg')"></div>
+        </div>
+        <div class="svc-hero-scrim"></div>
+        <div class="svc-hero-inner">
           <span class="eyebrow">Considered, layered &amp; lived-in</span>
           <h2>Styling that tells your story</h2>
           <p class="lead">Whether you're refreshing a single room or preparing a home for market, we bring a considered eye, a curated inventory and hands-on care, so your space feels warm, intentional and unmistakably yours.</p>
@@ -59,11 +88,10 @@
             <li>Shoppable styling plans from the DecoMuse shop</li>
           </ul>
           <div class="btn-row" style="margin-top:26px">
-            <a class="btn btn--dark" href="#book">Book a consultation</a>
+            <a class="btn btn--primary" href="#book">Book a consultation</a>
             <a class="btn btn--outline" href="stylist.html">✦ Try Muse Stylist AI</a>
           </div>
         </div>
-        <div class="media"><div class="ph" data-label="Styled interior"><img class="ph-img" src="assets/hero.jpg" alt="Beautifully styled DecoMuse interior" loading="lazy"></div></div>
       </div>
     </div>
   </section>
@@ -276,6 +304,18 @@
     document.addEventListener("keydown", (e) => {
       if (document.getElementById("projLightbox").classList.contains("open") && e.key === "Escape") closeProject();
     });
+
+    // Intro banner slideshow — crossfades the background photos like the homepage hero
+    (function svcHeroSlideshow() {
+      const slides = document.querySelectorAll("#svcHeroSlides .svc-hero-slide");
+      if (slides.length < 2) return;
+      let i = 0;
+      setInterval(() => {
+        slides[i].classList.remove("active");
+        i = (i + 1) % slides.length;
+        slides[i].classList.add("active");
+      }, 5000);
+    })();
   </script>
 </body>
 </html>
