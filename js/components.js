@@ -824,27 +824,33 @@ function initSearch() {
   if (hsForm) hsForm.addEventListener("submit", (e) => { e.preventDefault(); input.value = hsInput.value; open(); });
   if (hsInput) hsInput.addEventListener("input", () => { if (hsInput.value.trim()) { input.value = hsInput.value; if (!overlay.classList.contains("open")) open(); else renderResults(input.value); } });
 
-  // Voice search — Web Speech API fills the search and runs it
+  // Voice search — always visible; uses the Web Speech API where supported
   const voiceBtn = document.getElementById("hsVoice");
   if (voiceBtn) {
-    const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (!SR) { voiceBtn.style.display = "none"; }
-    else {
-      voiceBtn.addEventListener("click", () => {
-        const rec = new SR();
-        rec.lang = "en-AU"; rec.interimResults = false; rec.maxAlternatives = 1;
-        voiceBtn.classList.add("listening");
-        showToast("Listening… say what you're looking for 🎙️");
-        rec.onresult = (ev) => {
-          const said = ev.results[0][0].transcript || "";
-          if (hsInput) hsInput.value = said;
-          input.value = said; open(); renderResults(said);
-        };
-        rec.onerror = () => showToast("Couldn't hear that — please try again");
-        rec.onend = () => voiceBtn.classList.remove("listening");
-        try { rec.start(); } catch (e) { voiceBtn.classList.remove("listening"); }
-      });
-    }
+    voiceBtn.addEventListener("click", () => {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) { showToast("Voice search works in Chrome, Edge or Safari — please type your search here 🙂"); return; }
+      let rec;
+      try { rec = new SR(); } catch (e) { showToast("Voice search isn't available right now — please type instead"); return; }
+      rec.lang = "en-AU"; rec.interimResults = false; rec.maxAlternatives = 1;
+      voiceBtn.classList.add("listening");
+      showToast("Listening… say what you're looking for 🎙️");
+      rec.onresult = (ev) => {
+        const said = ev.results[0][0].transcript || "";
+        if (typeof hsInput !== "undefined" && hsInput) hsInput.value = said;
+        if (typeof input !== "undefined" && input) input.value = said;
+        if (typeof open === "function") open();
+        if (typeof renderResults === "function") renderResults(said);
+      };
+      rec.onerror = (ev) => {
+        voiceBtn.classList.remove("listening");
+        showToast(ev && ev.error === "not-allowed"
+          ? "Microphone access was blocked — allow it in your browser settings"
+          : "Couldn't hear that — please try again");
+      };
+      rec.onend = () => voiceBtn.classList.remove("listening");
+      try { rec.start(); } catch (e) { voiceBtn.classList.remove("listening"); }
+    });
   }
 
   // Photo search — snap/upload a photo, hand it to Muse Stylist for visual matching
