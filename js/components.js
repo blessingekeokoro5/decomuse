@@ -1095,7 +1095,7 @@ function chatReply(text) {
     html = `Lovely, our ${link("shop.html?cat=" + encodeURIComponent("Health & Wellness"), "Health & Wellness")} edit has bath & body, skincare, aromatherapy and supplements 🌿. The Magnesium Bath Soak and Rosehip Facial Oil are favourites.`;
 
   else if (has(/\b(book|consult|consultation|staging|stage|interior design|stylist visit|in.?home|virtual styling|appointment)\b/))
-    html = `We'd love to style your space! ✦ Book a <strong>home styling, staging or interior design</strong> consultation (in-home or virtual, worldwide) on our ${link("staging.html#book", "Styling & Design")} page, or try the free ${link("stylist.html", "Muse Stylist AI")}.`;
+    html = `We'd love to style your space! ✦ Book an <strong>in-home styling, staging or interior design</strong> consultation on our ${link("staging.html#book", "Styling & Design")} page, or try the free ${link("stylist.html", "Muse Stylist AI")}.`;
 
   else if (has(/\b(style|styling|room|décor|decor|design|interior|furniture|\bhome\b|makeover|colour|color|theme|vibe|aesthetic|lamp|rug|mirror|sofa|cushion|vase)\b/))
     html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Muse Stylist AI")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "Home Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
