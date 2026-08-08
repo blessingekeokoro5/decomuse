@@ -1343,12 +1343,19 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* Shop-by-room bar (Home Styling page) */
 .room-nav { background: var(--ink); }
-.room-nav-list { display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
-  gap: 6px 34px; list-style: none; margin: 0; padding: 15px 0; }
-.room-nav-list a { color: #fff; text-transform: uppercase; letter-spacing: 0.18em;
-  font-size: 0.74rem; font-weight: 500; padding: 6px 2px; display: inline-block; transition: color var(--tr); }
-.room-nav-list a:hover { color: var(--rose-soft); }
-@media (max-width: 600px) { .room-nav-list { gap: 4px 20px; } .room-nav-list a { font-size: 0.68rem; letter-spacing: 0.12em; } }
+/* "Spaces we style" scrolling strip */
+.spaces-inner { display: flex; align-items: center; gap: 24px; padding: 13px 0; }
+.spaces-label { color: var(--rose-soft); text-transform: uppercase; letter-spacing: 0.2em; font-size: 0.7rem; font-weight: 600; white-space: nowrap; flex: none; }
+.spaces-marquee { position: relative; overflow: hidden; flex: 1 1 auto; min-width: 0; }
+.spaces-marquee::before, .spaces-marquee::after { content: ""; position: absolute; top: 0; bottom: 0; width: 44px; z-index: 2; pointer-events: none; }
+.spaces-marquee::before { left: 0; background: linear-gradient(90deg, var(--ink), transparent); }
+.spaces-marquee::after { right: 0; background: linear-gradient(270deg, var(--ink), transparent); }
+.spaces-track { display: inline-flex; align-items: center; gap: 28px; white-space: nowrap; animation: spacesScroll 24s linear infinite; }
+.spaces-track span { color: #fff; text-transform: uppercase; letter-spacing: 0.16em; font-size: 0.74rem; font-weight: 500; }
+.spaces-track i { color: rgba(255,255,255,0.35); font-style: normal; }
+.spaces-marquee:hover .spaces-track { animation-play-state: paused; }
+@keyframes spacesScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+@media (max-width: 600px) { .spaces-inner { flex-direction: column; gap: 8px; padding: 12px 0; } }
 
 /* Product image zoom (magnifier button + lightbox) */
 .zoom-btn { position: absolute; bottom: 10px; right: 10px; z-index: 4; width: 34px; height: 34px;
