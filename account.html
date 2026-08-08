@@ -16,13 +16,19 @@
     .acc-tabs button { flex: 1; padding: 12px; border: 1.5px solid var(--line); background: #fff; border-radius: var(--radius-sm);
       font-family: var(--font-body); font-size: 0.9rem; color: var(--ink); cursor: pointer; transition: all var(--tr); }
     .acc-tabs button.active { background: var(--rose); color: #fff; border-color: var(--rose); }
-    /* Membership card */
-    .mcard { background: linear-gradient(140deg, var(--forest), var(--forest-2)); color: #fff; border-radius: var(--radius-lg);
-      padding: 34px; position: relative; overflow: hidden; box-shadow: var(--shadow); }
-    .mcard::after { content: "✦"; position: absolute; right: 24px; top: 18px; font-size: 5rem; opacity: 0.14; }
-    .mcard .tier { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-soft); }
-    .mcard h2 { color: #fff; margin: 6px 0 4px; }
-    .mcard .since { color: #d7e0cd; font-size: 0.88rem; }
+    /* Membership card — matches the gift-card shape/style, in DecoMuse green */
+    .mcard { position: relative; overflow: hidden; color: #fff; border-radius: 22px; aspect-ratio: 1.62/1;
+      padding: 26px 30px; display: flex; flex-direction: column; justify-content: space-between;
+      background:
+        radial-gradient(120% 130% at 15% 10%, rgba(255,255,255,0.18), rgba(255,255,255,0) 45%),
+        linear-gradient(140deg, #5c6b4b 0%, var(--forest) 55%, #333f29 100%);
+      box-shadow: 0 24px 50px -22px rgba(40,54,32,0.7), inset 0 0 0 1px rgba(198,161,91,0.45); }
+    .mcard::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+      background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1.5px); background-size: 15px 15px; opacity: 0.5; }
+    .mcard::after { content: ""; position: absolute; top: -60%; left: -25%; width: 55%; height: 220%; pointer-events: none;
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.16) 50%, rgba(255,255,255,0) 100%); transform: rotate(18deg); }
+    .mc-frame { position: absolute; inset: 11px; border: 1px solid rgba(198,161,91,0.5); border-radius: 15px; pointer-events: none; }
+    .mcard > * { position: relative; z-index: 1; }
     .coupon { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.12);
       border: 1px dashed rgba(255,255,255,0.5); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 24px; }
     .coupon .code { font-family: var(--font-head); font-size: 1.5rem; letter-spacing: 0.08em; color: #fff; }
@@ -31,13 +37,17 @@
     .acc-link { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px; text-align: center; color: var(--ink); }
     .acc-link:hover { background: var(--cream-2); }
     .acc-link .ic { font-size: 1.5rem; }
-    /* ID-style member card */
-    .mcard .mc-top { display: flex; justify-content: space-between; align-items: baseline; position: relative; z-index: 1; }
-    .mcard .brand { font-family: var(--font-head); font-size: 1.7rem; font-weight: 600; }
-    .mcard .mc-grid { display: flex; gap: 44px; margin-top: 18px; position: relative; z-index: 1; }
-    .mcard .mc-grid small { display: block; font-size: 0.64rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--rose-soft); margin-bottom: 3px; }
-    .mcard .mc-grid strong { font-size: 1.05rem; letter-spacing: 0.05em; font-family: 'Jost', monospace; }
-    .mcard .mc-abn { margin-top: 20px; font-size: 0.76rem; color: #d7e0cd; letter-spacing: 0.02em; position: relative; z-index: 1; }
+    .mc-top { display: flex; justify-content: space-between; align-items: center; }
+    .mc-brand { font-family: var(--font-head); font-size: 1.6rem; font-weight: 700; letter-spacing: 0.01em; }
+    .mc-emblem { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-size: 1.1rem;
+      background: rgba(198,161,91,0.28); border: 1px solid rgba(198,161,91,0.6); color: #f2e2bd; }
+    .mc-eyebrow { display: block; letter-spacing: 0.28em; text-transform: uppercase; font-size: 0.62rem; color: #e4d3a6; margin-bottom: 6px; }
+    .mc-name { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.15rem, 4.4vw, 1.9rem); line-height: 1.1;
+      white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
+    .mc-foot { display: flex; gap: 30px; align-items: flex-end; }
+    .mc-field small { display: block; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: #cbd6bd; margin-bottom: 3px; }
+    .mc-field strong { font-size: 0.95rem; letter-spacing: 0.05em; font-family: 'Jost', monospace; font-weight: 500; }
+    @media (max-width: 480px){ .mcard { padding: 20px 20px; } .mc-name { font-size: clamp(1.05rem, 6vw, 1.5rem); } .mc-foot { gap: 20px; } .mc-brand { font-size: 1.35rem; } }
     .reward { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--blush);
       border: 1px dashed var(--rose-soft); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 22px; }
     .reward .code { font-family: var(--font-head); font-size: 1.4rem; color: var(--rose-deep); letter-spacing: 0.06em; }
@@ -175,13 +185,16 @@
       const orders = acc.orders || [];
       document.getElementById("accWrap").innerHTML = `
         <div class="mcard reveal" id="memberCard">
-          <div class="mc-top"><span class="brand">DecoMuse</span><span class="tier">Member Card</span></div>
-          <h2>${acc.name || acc.email}</h2>
-          <div class="mc-grid">
-            <div><small>Member No.</small><strong id="memberNo">${acc.memberNo}</strong></div>
-            <div><small>Member since</small><strong>${acc.memberSince || "today"}</strong></div>
+          <div class="mc-frame"></div>
+          <div class="mc-top"><span class="mc-brand">DecoMuse</span><span class="mc-emblem">✦</span></div>
+          <div class="mc-mid">
+            <span class="mc-eyebrow">Member Card</span>
+            <div class="mc-name">${acc.name || acc.email}</div>
           </div>
-          <div class="mc-abn">ABN 41 991 812 955 · ${acc.email}</div>
+          <div class="mc-foot">
+            <div class="mc-field"><small>Member No.</small><strong id="memberNo">${acc.memberNo}</strong></div>
+            <div class="mc-field"><small>Member since</small><strong>${acc.memberSince || "today"}</strong></div>
+          </div>
         </div>
         <div style="text-align:center;margin:16px 0 4px">
           <button class="btn btn--dark btn--sm" onclick="downloadCard()">⬇ Download member card</button>
@@ -378,8 +391,8 @@
       ctx.fillStyle = "#fff"; ctx.font = "500 30px Arial"; ctx.fillText(acc.memberSince || "today", 560, 458);
       // footer
       ctx.fillStyle = "rgba(215,224,205,0.9)"; ctx.font = "20px Arial";
-      ctx.fillText("ABN 41 991 812 955  ·  www.decomuse.com.au", 62, 560);
-      ctx.fillText((acc.email || "").slice(0, 46), 62, 594);
+      ctx.fillText("www.decomuse.com.au", 62, 566);
+      ctx.fillText((acc.email || "").slice(0, 46), 62, 598);
       const a = document.createElement("a");
       a.href = c.toDataURL("image/png");
       a.download = "DecoMuse-Member-Card.png";
