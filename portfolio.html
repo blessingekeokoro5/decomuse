@@ -19,12 +19,15 @@
   <style>
     .pf-loc { display: block; color: var(--muted); font-size: 0.82rem; margin-top: 3px; }
     .pf-item { cursor: pointer; }
+    .pf-cover { position: absolute; inset: 0; background: #241b19 center/cover no-repeat; transition: transform .5s ease; }
+    .pf-item:hover .pf-cover { transform: scale(1.05); }
     .pf-more { display: inline-block; margin-top: 6px; font-size: 0.78rem; color: var(--rose-deep); }
     /* Project gallery lightbox */
     .pf-lb { position: fixed; inset: 0; z-index: 300; background: rgba(30,24,22,.93); display: none; align-items: center; justify-content: center; padding: 24px; }
     .pf-lb.open { display: flex; }
     .pf-lb-stage { max-width: 900px; width: 100%; text-align: center; }
-    #pfLbImg { width: 100%; max-height: 64vh; object-fit: cover; border-radius: 12px; background: #000; }
+    .pf-lb-media { width: 100%; aspect-ratio: 3/2; max-height: 64vh; border-radius: 12px; background: #000 center/cover no-repeat; }
+    .pf-lb-thumbs button { background: #000 center/cover no-repeat; }
     .pf-lb-cap { color: #fff; margin-top: 14px; }
     .pf-lb-cap h3 { color: #fff; margin: 4px 0 0; }
     .pf-lb-cap .pf-cat { color: var(--rose-soft); }
@@ -71,7 +74,7 @@
     <button class="pf-lb-close" onclick="closeProject()" aria-label="Close">✕</button>
     <button class="pf-lb-nav prev" onclick="pfStep(-1)" aria-label="Previous">‹</button>
     <div class="pf-lb-stage">
-      <img id="pfLbImg" src="" alt="">
+      <div id="pfLbImg" class="pf-lb-media" role="img" aria-label=""></div>
       <div class="pf-lb-cap" id="pfLbCap"></div>
       <div class="pf-lb-thumbs" id="pfLbThumbs"></div>
       <div class="pf-lb-hint" id="pfLbHint"></div>
@@ -126,7 +129,7 @@
         const idx = PORTFOLIO.indexOf(p);
         return `
         <figure class="pf-item reveal" onclick="openProject(${idx})">
-          <div class="pf-media"><div class="ph ${p.ph}" data-label="${p.t}"><img class="ph-img" src="${p.src}" alt="${p.t}" loading="lazy" style="object-position:${p.pos || "50%"} center" onerror="this.remove()"></div></div>
+          <div class="pf-media"><div class="pf-cover" style="${bgStyle({ src: p.src, pos: p.pos || "0%", crop: true })}"></div></div>
           <figcaption><span class="pf-cat">${p.tag}</span><h3>${p.t}</h3>${p.loc ? `<span class="pf-loc">${p.loc}</span>` : ""}<span class="pf-more">View gallery →</span></figcaption>
         </figure>`;
       }).join("");
@@ -145,34 +148,44 @@
     function openProject(i) {
       const p = PORTFOLIO[i]; if (!p) return;
       pfCur = p; pfIdx = 0;
-      pfImgs = [{ src: p.src, pos: p.pos || "50%" }];
+      // The cover comes from a paired photo, so `crop` isolates just this project's room.
+      pfImgs = [{ src: p.src, pos: p.pos || "50%", crop: true }];
       renderLb();
       const lb = document.getElementById("pfLb");
       lb.classList.add("open"); lb.setAttribute("aria-hidden", "false");
       document.body.style.overflow = "hidden";
-      // Auto-detect extra photos dropped into assets/portfolio/<slug>/1.jpg … 8.jpg
+      // Auto-detect extra (full, individual) photos dropped into assets/portfolio/<slug>/1.jpg … 8.jpg
       if (p.slug) {
         for (let n = 1; n <= 8; n++) {
           (function (n) {
             const url = "assets/portfolio/" + p.slug + "/" + n + ".jpg";
             const im = new Image();
-            im.onload = function () { if (pfCur === p) { pfImgs.push({ src: url, pos: "50%" }); renderThumbs(); updateHint(); } };
+            im.onload = function () { if (pfCur === p) { pfImgs.push({ src: url, crop: false }); renderThumbs(); updateHint(); } };
             im.src = url;
           })(n);
         }
       }
     }
+    function bgStyle(im) {
+      // Cropped cover = isolate one room from the paired photo; extra photos = normal cover
+      return im.crop
+        ? `background-image:url('${im.src}');background-size:200% 100%;background-position:${im.pos || "0%"} center`
+        : `background-image:url('${im.src}');background-size:cover;background-position:center`;
+    }
     function renderLb() {
       const cur = pfImgs[pfIdx] || pfImgs[0];
-      const img = document.getElementById("pfLbImg");
-      img.src = cur.src; img.style.objectPosition = (cur.pos || "50%") + " center"; img.alt = pfCur.t;
+      document.getElementById("pfLbImg").setAttribute("style", bgStyle(cur));
+      document.getElementById("pfLbImg").setAttribute("aria-label", pfCur.t);
       document.getElementById("pfLbCap").innerHTML =
         `<span class="pf-cat">${pfCur.tag}</span><h3>${pfCur.t}</h3>${pfCur.loc ? `<small>${pfCur.loc}</small>` : ""}`;
       renderThumbs(); updateHint();
     }
     function renderThumbs() {
-      document.getElementById("pfLbThumbs").innerHTML = pfImgs.map((im, k) =>
-        `<button class="${k === pfIdx ? "active" : ""}" onclick="pfGo(${k})"><img src="${im.src}" style="object-position:${im.pos || "50%"} center" alt=""></button>`).join("");
+      // Only show a thumbnail strip once there's more than one photo (avoids a lone duplicate)
+      const wrap = document.getElementById("pfLbThumbs");
+      if (pfImgs.length < 2) { wrap.innerHTML = ""; return; }
+      wrap.innerHTML = pfImgs.map((im, k) =>
+        `<button class="${k === pfIdx ? "active" : ""}" style="${bgStyle(im)}" onclick="pfGo(${k})" aria-label="Photo ${k + 1}"></button>`).join("");
     }
     function updateHint() {
       const h = document.getElementById("pfLbHint");
