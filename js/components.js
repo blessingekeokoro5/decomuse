@@ -935,24 +935,42 @@ function initMemberBanner() {
    Membership sign-up modal (20% off + perks)
    ============================================================ */
 function buildMemberModal() {
+  const icGift = `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="7" y="18" width="34" height="9" rx="1.5"/><path d="M10 27v14a1.5 1.5 0 0 0 1.5 1.5h25A1.5 1.5 0 0 0 38 41V27M24 18v24"/><path d="M24 18s-3-8-8-7c-3.4.7-3 6 1 7h7zM24 18s3-8 8-7c3.4.7 3 6-1 7h-7z"/></svg>`;
+  const icPoints = `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><circle cx="24" cy="24" r="17"/><path d="M24 14l2.9 6 6.6.9-4.8 4.6 1.2 6.5L24 33.5 18.1 36l1.2-6.5-4.8-4.6 6.6-.9z"/></svg>`;
+  const icBag = `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M12 16h24l2 24a1.5 1.5 0 0 1-1.5 1.6h-25A1.5 1.5 0 0 1 10 40z"/><path d="M18 20v-4a6 6 0 0 1 12 0v4"/><path d="M24 27.5c-1.2-1.4-4-1-4 1.4 0 1.8 2.6 3.3 4 4.6 1.4-1.3 4-2.8 4-4.6 0-2.4-2.8-2.8-4-1.4z" fill="currentColor" stroke="none"/></svg>`;
   return `
   <div class="member-modal" id="memberModal" aria-hidden="true">
     <div class="member-overlay" id="memberOverlay"></div>
-    <div class="member-card" role="dialog" aria-label="Join the DecoMuse Membership">
-      <div class="member-visual" style="background-image:url('assets/member-bg.jpg')"></div>
-      <div class="member-body">
-        <button class="member-close" id="memberClose" aria-label="Close">✕</button>
-        <span class="member-eyebrow">✦ DecoMuse Membership</span>
-        <h3 class="member-title">Get the <em>inside scoop</em></h3>
-        <p class="member-offer">Subscribe &amp; receive <strong>20% off</strong> your first order</p>
-        <p class="member-sub">Plus member-only pricing, early access to new collections, styling tips and a little birthday treat.</p>
-        <form id="memberForm" class="member-form">
-          <input type="email" placeholder="Enter your email address" aria-label="Email" required>
-          <button type="submit" class="btn btn--primary btn--block">Subscribe</button>
-        </form>
-        <p class="member-terms">By subscribing you agree to receive DecoMuse emails; unsubscribe anytime. See our <a href="policy.html?doc=privacy">Privacy Policy</a> &amp; <a href="policy.html?doc=terms">Terms</a>. *T&amp;C's apply.</p>
-        <button class="member-later" id="memberLater">No thanks</button>
+    <div class="member-card member-card--rewards" role="dialog" aria-label="DecoMuse Rewards">
+      <button class="member-close" id="memberClose" aria-label="Close">✕</button>
+      <div class="rw-head">
+        <span class="rw-brand">DECOMUSE <strong>REWARDS</strong></span>
+        <p class="rw-offer">Sign up &amp; get <strong>20% off</strong> your first order, plus a <strong>$10 voucher</strong> for your next purchase</p>
       </div>
+      <div class="rw-benefits">
+        <div class="rw-benefit">
+          <div class="rw-ic">${icGift}</div>
+          <h4>$20 Birthday Voucher</h4>
+          <p>A little treat every year, on us.</p>
+        </div>
+        <div class="rw-benefit">
+          <div class="rw-ic">${icPoints}</div>
+          <h4>Earn Points on Every Purchase</h4>
+          <p>100 points = $10 voucher</p>
+          <span class="rw-rate">$1 = 1 point earned</span>
+        </div>
+        <div class="rw-benefit">
+          <div class="rw-ic">${icBag}</div>
+          <h4>Exclusive Early Access &amp; Offers</h4>
+          <p>First to shop new collections.</p>
+        </div>
+      </div>
+      <div class="rw-bonus"><strong>2× points</strong> on gift purchases &amp; when you book us as your personal shopper for home décor projects.</div>
+      <div class="rw-actions">
+        <a class="btn rw-btn" href="account.html">Register now</a>
+        <a class="btn rw-btn rw-btn--ghost" href="account.html#login">Login</a>
+      </div>
+      <button class="member-later" id="memberLater">No thanks</button>
     </div>
   </div>`;
 }

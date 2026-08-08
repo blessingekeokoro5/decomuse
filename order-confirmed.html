@@ -52,10 +52,10 @@
         if (!o || !o.orderNo) return;
         const pend = JSON.parse(localStorage.getItem("dm_pending_purchase") || "null");
         let items = (pend && pend.items) ? pend.items.map(it => ({
-          id: it.item_id || it.id, name: it.item_name || it.name,
-          price: it.price != null ? it.price : 0, qty: it.quantity || it.qty || 1
+          id: it.item_id || it.id, name: it.item_name || it.name, cat: it.item_category || it.cat,
+          price: it.price != null ? it.price : 0, qty: it.quantity || it.qty || 1, giftCard: it.giftCard
         })) : [];
-        if (!items.length) { try { items = getCart().map(i => ({ id: i.id, name: i.name, price: i.price, qty: i.qty })); } catch (e) {} }
+        if (!items.length) { try { items = getCart().map(i => ({ id: i.id, name: i.name, cat: i.cat, price: i.price, qty: i.qty, giftCard: i.giftCard })); } catch (e) {} }
         const record = {
           orderNo: o.orderNo, date: (new Date()).toISOString().slice(0, 10),
           total: o.total, shipping: (pend && pend.shipping) || 0, items
@@ -68,11 +68,28 @@
           if (!all[email].some(x => x.orderNo === record.orderNo)) all[email].unshift(record);
           localStorage.setItem("dm_orders", JSON.stringify(all));
         }
-        // Attach to the logged-in account
+        // Attach to the logged-in account + award rewards points + consume any applied voucher
         const acc = (typeof getAccount === "function") ? getAccount() : null;
         if (acc && acc.email) {
           acc.orders = acc.orders || [];
-          if (!acc.orders.some(x => x.orderNo === record.orderNo)) { acc.orders.unshift(record); saveAccount(acc); }
+          if (!acc.orders.some(x => x.orderNo === record.orderNo)) {
+            // Rewards points: $1 = 1 point, 2× on gift purchases (Gifts / hampers / gift cards)
+            let earned = 0;
+            items.forEach(it => {
+              const line = (it.price || 0) * (it.qty || 1);
+              const isGift = it.giftCard || /gift|hamper/i.test((it.name || "") + " " + (it.cat || ""));
+              earned += Math.round(line) * (isGift ? 2 : 1);
+            });
+            if (!earned && record.total) earned = Math.round(record.total);
+            acc.points = (acc.points || 0) + earned;
+            record.pointsEarned = earned;
+            // Consume the voucher that was applied to this order
+            const av = (typeof getVoucher === "function") ? getVoucher() : null;
+            if (av && av.code) acc.vouchers = (acc.vouchers || []).map(v => v.code === av.code ? Object.assign({}, v, { used: true }) : v);
+            acc.orders.unshift(record);
+            saveAccount(acc);
+            if (typeof setVoucher === "function") setVoucher(null);
+          }
         }
       } catch (e) {}
     })();

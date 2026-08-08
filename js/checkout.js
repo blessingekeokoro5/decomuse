@@ -19,15 +19,19 @@ function checkoutTotals() {
   const disc = orderDiscount(sub);
   const discount = disc.amount;
   const afterDisc = sub - discount;
+  // Rewards / gift dollar-voucher applied to this order
+  const vou = (typeof getVoucher === "function") ? getVoucher() : null;
+  const voucher = (vou && vou.amount) ? Math.min(vou.amount, afterDisc) : 0;
+  const afterVoucher = afterDisc - voucher;
   const rate = SHIP_RATES[shipCountry()];
   const shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
-  const preGift = afterDisc + shipping;
+  const preGift = afterVoucher + shipping;
   const gc = window._giftCard || null;
   // A gift card can be used online only when it covers the whole order.
   const giftCard = (gc && gc.amount >= preGift && preGift > 0) ? preGift : 0;
   const total = preGift - giftCard;
   const gst = Math.round((total / 11)); // GST component of a GST-inclusive total
-  return { sub, discount, discLabel: disc.label, shipping, preGift, giftCard, giftCode: gc ? gc.code : null, total, gst, coupon: window._coupon, country: shipCountry() };
+  return { sub, discount, discLabel: disc.label, voucher, voucherCode: vou ? vou.code : null, shipping, preGift, giftCard, giftCode: gc ? gc.code : null, total, gst, coupon: window._coupon, country: shipCountry() };
 }
 
 function updateTotalsUI() {
@@ -132,6 +136,7 @@ function renderCheckout() {
         <div class="co-lines">${lines}</div>
         <div class="summary-row"><span>Subtotal</span><span>${money(t.sub)}</span></div>
         ${t.discount ? `<div class="summary-row" style="color:var(--forest)"><span>${t.discLabel}</span><span>−${money(t.discount)}</span></div>` : ""}
+        ${t.voucher ? `<div class="summary-row" style="color:var(--forest)"><span>Rewards voucher (${t.voucherCode})</span><span>−${money(t.voucher)}</span></div>` : ""}
         <div class="summary-row"><span>Shipping</span><span id="sumShip">${t.shipping === 0 ? "Free" : money(t.shipping)}</span></div>
         <div class="summary-row" id="sumGiftRow" style="color:var(--forest);${t.giftCard ? "display:flex" : "display:none"}"><span>Gift card</span><span id="sumGift">−${money(t.giftCard)}</span></div>
         <div class="summary-row total"><span>Total</span><span id="sumTotal">${money(t.total)}</span></div>
@@ -197,13 +202,17 @@ async function startPayment(e) {
       // Apply the active discount (member / flash / sale campaign) to the prices we send to
       // Stripe, so the amount CHARGED matches the discounted total shown on site.
       const od = orderDiscount(t.sub);
-      const factor = 1 - (od.pct || 0) / 100;
+      // Fold both the % discount and any $ rewards voucher into an effective per-item factor,
+      // so the amount charged by Stripe matches the discounted total shown on site.
+      const totalDisc = (od.amount || 0) + (t.voucher || 0);
+      const factor = t.sub > 0 ? Math.max(0, 1 - totalDisc / t.sub) : 1;
+      const discLabel = [od.label, t.voucher ? `Rewards voucher ${money(t.voucher)}` : ""].filter(Boolean).join(" + ");
       const res = await fetch(cfg.checkoutEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           items: cart.map(i => { const v = [i.colour, i.size].filter(Boolean).join(", "); return { id: i.id, name: v ? i.name + " (" + v + ")" : i.name, price: +(i.price * factor).toFixed(2), qty: i.qty }; }),
-          coupon: "", discountPct: od.pct || 0, discountLabel: od.label, shipping: t.shipping, customer
+          coupon: "", discountPct: od.pct || 0, discountLabel: discLabel, shipping: t.shipping, customer
         })
       });
       const data = await res.json();
@@ -227,6 +236,7 @@ async function startPayment(e) {
     localStorage.removeItem(CART_KEY);
     localStorage.removeItem("dm_coupon");
     location.href = "order-confirmed.html";
+    // dm_voucher is consumed on order-confirmed (marks it used + awards points)
   }, 800);
 }
 

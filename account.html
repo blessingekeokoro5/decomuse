@@ -48,6 +48,20 @@
     .order-row .o-meta strong { display: block; }
     .order-row .o-meta small { color: var(--muted); font-size: 0.82rem; }
     .acc-h3 { font-size: 1.2rem; margin: 30px 0 4px; }
+    /* Rewards */
+    .rewards-card { background: linear-gradient(150deg, var(--forest), var(--forest-2)); color: #fff; border-radius: var(--radius-lg); padding: 22px 24px; margin-top: 22px; }
+    .rewards-card .rw-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .rw-pts-label { font-size: .72rem; letter-spacing: .16em; text-transform: uppercase; color: var(--rose-soft); }
+    .rw-pts { font-family: var(--font-head); font-size: 1.9rem; }
+    .rw-bar { height: 8px; background: rgba(255,255,255,.18); border-radius: 99px; margin: 14px 0 8px; overflow: hidden; }
+    .rw-bar span { display: block; height: 100%; background: var(--gold); border-radius: 99px; }
+    .rewards-card .rw-hint { font-size: .8rem; color: #e4dbcf; line-height: 1.5; }
+    .rw-redeem { background: #fff; color: var(--forest); border: none; border-radius: 99px; padding: 10px 16px; font-family: var(--font-body); font-weight: 600; cursor: pointer; white-space: nowrap; }
+    .rw-redeem:disabled { opacity: .5; cursor: not-allowed; }
+    .voucher { display: flex; justify-content: space-between; align-items: center; gap: 12px; border: 1px dashed var(--rose-soft); background: var(--blush); border-radius: 12px; padding: 14px 16px; margin-bottom: 10px; }
+    .voucher .v-amt { font-family: var(--font-head); font-size: 1.3rem; color: var(--rose-deep); }
+    .voucher .v-code { font-size: .78rem; color: var(--muted); letter-spacing: .04em; }
+    .bday-box { border: 1px solid var(--line); border-radius: 12px; padding: 16px; margin-top: 12px; font-size: 0.92rem; }
   </style>
 </head>
 <body data-page="account.html">
@@ -75,6 +89,7 @@
   <script src="js/main.js"></script>
   <script>
     let accMode = "signup";
+    if (location.hash === "#login") accMode = "login";
 
     function render() {
       const acc = getAccount();
@@ -124,7 +139,8 @@
       e.preventDefault();
       const name = document.getElementById("suName").value.trim();
       const email = document.getElementById("suEmail").value.trim();
-      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20", memberNo: genMemberNo(), orders: [] });
+      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20", memberNo: genMemberNo(), orders: [],
+        points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
       try { localStorage.setItem("dm_member","1"); } catch(err){}
       showToast("Welcome to DecoMuse! Your 20% code is ready 🎉");
       render();
@@ -149,6 +165,8 @@
       let changed = false;
       if (!acc.memberNo) { acc.memberNo = genMemberNo(); changed = true; }
       if (!Array.isArray(acc.orders)) { acc.orders = getStoredOrders(acc.email); changed = true; }
+      if (typeof acc.points !== "number") { acc.points = 0; changed = true; }
+      if (!Array.isArray(acc.vouchers)) { acc.vouchers = []; changed = true; }
       if (changed) saveAccount(acc);
 
       document.getElementById("accTitle").textContent = acc.name ? `Hello, ${acc.name.split(" ")[0]} 👋` : "My account";
@@ -178,6 +196,9 @@
           <button class="btn btn--dark btn--sm" onclick="copyCoupon()">Copy code</button>
         </div>
 
+        <h3 class="acc-h3">DecoMuse Rewards</h3>
+        ${rewardsHtml(acc)}
+
         <h3 class="acc-h3">Your orders &amp; receipts</h3>
         <div class="orders-list" id="ordersList">${renderOrders(orders)}</div>
 
@@ -198,6 +219,78 @@
     function genMemberNo() {
       const n = Math.floor(1000000000 + Math.random() * 8999999999).toString();
       return n.slice(0, 4) + " " + n.slice(4, 7) + " " + n.slice(7);
+    }
+
+    // ---- DecoMuse Rewards (points → vouchers) ----
+    const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    function genVoucherCode() { return "DM-V" + Math.floor(1000 + Math.random() * 9000) + "-" + Math.floor(1000 + Math.random() * 9000); }
+    function rewardsHtml(acc) {
+      const pts = acc.points || 0;
+      const inCycle = pts % 100;
+      const toNext = 100 - inCycle;
+      return `
+        <div class="rewards-card">
+          <div class="rw-top">
+            <div><span class="rw-pts-label">Points balance</span><div class="rw-pts">${pts} pts</div></div>
+            <button class="rw-redeem" onclick="redeemPoints()" ${pts < 100 ? "disabled" : ""}>Redeem 100 pts → $10 voucher</button>
+          </div>
+          <div class="rw-bar"><span style="width:${inCycle}%"></span></div>
+          <div class="rw-hint">${pts >= 100 ? "You have a reward ready to redeem! " : ""}${toNext} pts to your next $10 voucher · $1 = 1 point · <strong>2× points on gift purchases &amp; personal shopping projects</strong></div>
+        </div>
+        <div style="margin-top:14px">${vouchersHtml(acc)}</div>
+        ${birthdayHtml(acc)}`;
+    }
+    function vouchersHtml(acc) {
+      const vs = (acc.vouchers || []).filter(v => !v.used);
+      if (!vs.length) return `<p style="color:var(--muted);font-size:0.9rem">No vouchers yet, earn 100 points for a $10 voucher, or add your birthday for a $20 treat.</p>`;
+      return vs.map((v) => `
+        <div class="voucher">
+          <div><div class="v-amt">$${v.amount} voucher</div><div class="v-code">${v.label || "Reward"} · Code ${v.code}</div></div>
+          <button class="btn btn--dark btn--sm" onclick="applyVoucher('${v.code}')">Apply to next order</button>
+        </div>`).join("");
+    }
+    function birthdayHtml(acc) {
+      if (acc.birthday) return `<div class="bday-box">🎂 Birthday saved (<strong>${acc.birthday}</strong>). Your <strong>$20 birthday voucher</strong> lands in your birthday month each year.</div>`;
+      return `<div class="bday-box">🎂 <strong>Add your birthday</strong> to unlock a $20 birthday voucher each year.
+        <div style="display:flex;gap:8px;margin-top:10px">
+          <select id="bdayMonth" style="flex:1;padding:10px;border:1.5px solid var(--line);border-radius:8px;font-family:var(--font-body)">${MONTHS.map((m, i) => `<option value="${i + 1}">${m}</option>`).join("")}</select>
+          <button class="btn btn--outline btn--sm" onclick="saveBirthday()">Save</button>
+        </div></div>`;
+    }
+    function redeemPoints() {
+      const acc = getAccount(); if (!acc) return;
+      if ((acc.points || 0) < 100) { showToast("You need 100 points to redeem"); return; }
+      acc.points -= 100;
+      acc.vouchers = acc.vouchers || [];
+      acc.vouchers.push({ code: genVoucherCode(), amount: 10, label: "Points reward" });
+      saveAccount(acc);
+      showToast("Redeemed! Your $10 voucher is ready 🎉");
+      renderDashboard(getAccount());
+    }
+    function applyVoucher(code) {
+      const acc = getAccount();
+      const v = (acc.vouchers || []).find(x => x.code === code && !x.used);
+      if (!v) return;
+      if (typeof setVoucher === "function") setVoucher({ code: v.code, amount: v.amount });
+      showToast("Voucher applied, it'll show at checkout ✦");
+      location.href = "cart.html";
+    }
+    function saveBirthday() {
+      const acc = getAccount(); if (!acc) return;
+      const m = parseInt(document.getElementById("bdayMonth").value, 10);
+      acc.birthday = MONTHS[m - 1];
+      acc.vouchers = acc.vouchers || [];
+      const now = new Date();
+      if (m === now.getMonth() + 1 && acc.bdayGrantedYear !== now.getFullYear()) {
+        acc.vouchers.push({ code: genVoucherCode(), amount: 20, label: "Birthday voucher" });
+        acc.bdayGrantedYear = now.getFullYear();
+        saveAccount(acc);
+        showToast("Happy birthday month! Your $20 voucher is ready 🎂");
+      } else {
+        saveAccount(acc);
+        showToast("Birthday saved 🎂");
+      }
+      renderDashboard(getAccount());
     }
 
     // ---- Orders & receipts ----

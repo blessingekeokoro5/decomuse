@@ -118,8 +118,11 @@
       const sub = cartTotal();
       const disc = orderDiscount(sub);
       const discount = disc.amount;
-      const shipping = (sub - discount) >= 500 ? 0 : 19;
-      const total = sub - discount + shipping;
+      const afterDisc = sub - discount;
+      const vou = (typeof getVoucher === "function") ? getVoucher() : null;
+      const voucher = (vou && vou.amount) ? Math.min(vou.amount, afterDisc) : 0;
+      const shipping = afterDisc >= 500 ? 0 : 19;
+      const total = afterDisc - voucher + shipping;
 
       items.innerHTML = cart.map(i => {
         const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
@@ -148,6 +151,7 @@
         <div class="summary" style="margin-top:22px">
           <div class="summary-row"><span>Subtotal</span><span>${money(sub)}</span></div>
           ${discount ? `<div class="summary-row" style="color:var(--forest)"><span>${disc.label}</span><span>−${money(discount)}</span></div>` : ""}
+          ${voucher ? `<div class="summary-row" style="color:var(--forest)"><span>Rewards voucher (${vou.code}) <a href="#" onclick="removeVoucher();return false;" style="font-size:0.75rem;color:var(--muted)">remove</a></span><span>−${money(voucher)}</span></div>` : ""}
           <div class="summary-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
           ${shipping !== 0 ? `<div style="font-size:0.82rem;color:var(--muted)">Free shipping over $500</div>` : ""}
           <div class="summary-row total"><span>Total</span><span>${money(total)}</span></div>
@@ -167,6 +171,12 @@
       contBtn.removeAttribute("aria-disabled");
       emptyBtn.style.display = "";
       stickyTotal.textContent = money(total);
+    }
+
+    function removeVoucher() {
+      if (typeof setVoucher === "function") setVoucher(null);
+      renderCartPage();
+      showToast("Rewards voucher removed");
     }
 
     function applyCoupon() {

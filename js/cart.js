@@ -80,6 +80,10 @@ function orderDiscount(sub) {
   return { pct, amount: Math.round(sub * pct / 100), label };
 }
 
+/* Rewards / gift dollar-voucher applied to the next order (separate from % coupons) */
+function getVoucher() { try { return JSON.parse(localStorage.getItem("dm_voucher") || "null"); } catch (e) { return null; } }
+function setVoucher(v) { try { v ? localStorage.setItem("dm_voucher", JSON.stringify(v)) : localStorage.removeItem("dm_voucher"); } catch (e) {} }
+
 function updateCartCount() {
   const el = document.getElementById("cartCount");
   if (el) {
