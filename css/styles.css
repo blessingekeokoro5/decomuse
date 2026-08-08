@@ -1021,6 +1021,34 @@ em { font-style: italic; color: var(--rose-deep); }
 .socials { display: flex; gap: 10px; }
 .socials a { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.08); display: grid; place-items: center; color: #cbb9ad; }
 .socials a:hover { background: var(--rose); color: #fff; }
+/* App-style cart page */
+.cart-app { max-width: 720px; margin: 0 auto; padding-bottom: 20px; }
+.cart-express { border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 26px; background: var(--cream-2); }
+.cart-express .ce-head { display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 12px; }
+.cart-express .ce-status { color: var(--forest); }
+.ce-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; padding: 13px; border-radius: 10px; background: var(--ink); color: #fff; text-decoration: none; font-weight: 600; font-size: 0.92rem; }
+.ce-btn:hover { background: var(--rose-deep); }
+.ce-btn .pay-badge { height: 22px; min-width: 38px; font-size: 0.62rem; padding: 0 7px; }
+.cart-sec-title { font-size: 1.15rem; margin: 0 0 16px; padding-bottom: 10px; border-bottom: 1px solid var(--line); }
+.cart-empty-box { text-align: center; padding: 34px 0 30px; }
+.cart-empty-box svg { margin: 0 auto 14px; display: block; }
+.cart-empty-box h3 { font-size: 1.5rem; margin: 0 0 6px; }
+.cart-empty-box p { color: var(--muted); }
+.cart-empty-link { display: block; margin: 12px auto 0; background: none; border: none; color: var(--muted); font-size: 0.85rem; cursor: pointer; }
+.cart-empty-link:hover { color: var(--rose-deep); }
+.cart-accordion { margin-top: 30px; border-top: 1px solid var(--line); }
+.cart-accordion details { border-bottom: 1px solid var(--line); }
+.cart-accordion summary { list-style: none; cursor: pointer; padding: 16px 4px; font-weight: 500; color: var(--ink); display: flex; justify-content: space-between; align-items: center; }
+.cart-accordion summary::-webkit-details-marker { display: none; }
+.cart-accordion summary::after { content: "＋"; color: var(--muted); font-weight: 400; }
+.cart-accordion details[open] summary::after { content: "－"; }
+.cart-accordion .acc-body { padding: 0 4px 18px; color: var(--body); font-size: 0.9rem; line-height: 1.6; }
+.btn.is-disabled { background: var(--line); color: var(--muted); pointer-events: none; box-shadow: none; }
+.cart-sticky { position: sticky; bottom: 0; z-index: 50; background: #fff; border-top: 1px solid var(--line); box-shadow: 0 -4px 18px rgba(0,0,0,0.07); padding: 14px 0; }
+.cart-sticky-inner { display: flex; justify-content: space-between; align-items: center; max-width: 720px; margin: 0 auto; }
+.cart-sticky .cs-label small { color: var(--muted); font-size: 0.78rem; }
+.cart-sticky .cs-total { font-family: var(--font-head); font-size: 1.5rem; font-weight: 700; color: var(--ink); }
+
 /* Colourful payment badges */
 .pay-wrap { margin-top: 30px; text-align: center; }
 .pay-safe { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: #b3a197; margin-bottom: 12px; }
