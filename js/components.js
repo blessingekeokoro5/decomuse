@@ -89,11 +89,11 @@ const AU_FLAG_SVG = '<svg class="au-flag" viewBox="0 0 60 40" width="19" height=
 const UK_FLAG_SVG = '<svg class="uk-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="4"/><rect x="25" width="10" height="40" fill="#fff"/><rect y="15" width="60" height="10" fill="#fff"/><rect x="26.5" width="7" height="40" fill="#C8102E"/><rect y="16.5" width="60" height="7" fill="#C8102E"/></svg>';
 
 /* ---- Logo loader: try common formats before falling back to the drawn mark ---- */
-const LOGO_SRCS = ["assets/logo.png", "assets/logo.jpg", "assets/logo.jpeg", "assets/logo.webp", "assets/logo.svg"];
+const LOGO_SRCS = ["assets/logo.jpg", "assets/logo.svg", "assets/logo.png", "assets/logo.jpeg", "assets/logo.webp"];
 function nextLogo(img) {
   const i = (+img.dataset.i || 0) + 1;
   if (i < LOGO_SRCS.length) { img.dataset.i = i; img.src = LOGO_SRCS[i]; }
-  else { img.remove(); }
+  else { const b = img.closest(".brand"); if (b) b.classList.add("no-logo"); img.remove(); }
 }
 
 /* ---- Nav links (main utility row) ---- */
@@ -186,7 +186,7 @@ function buildHeader() {
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
       <a class="brand" href="index.html" aria-label="DecoMuse home">
-        <img class="brand-logo-full" src="assets/logo.png" data-i="0" alt="DecoMuse — Home Décor Store" onload="this.closest('.brand').classList.add('has-logo')" onerror="nextLogo(this)">
+        <img class="brand-logo-full" src="assets/logo.jpg" data-i="0" alt="DecoMuse — Home Décor Store" onerror="nextLogo(this)">
         <span class="brand-mark">
           <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <!-- outer arch -->
@@ -398,12 +398,19 @@ function buildFloating() {
 
     <div class="chat-nudge" id="chatNudge">
       <button class="nudge-x" id="nudgeX" aria-label="Dismiss">✕</button>
-      <span>👋 Hi! I'm <strong>MuseStylist</strong>, need a hand finding something?</span>
+      <span>Get personalised gift suggestions from the <strong>Muse Stylist</strong>, our AI gift advisor.</span>
     </div>
 
-    <button class="ai-fab" id="aiFab" aria-label="Chat with MuseStylist AI" title="Chat with MuseStylist AI">
-      <span class="dot"></span>${IC.spark}
-    </button>
+    <div class="dm-launch" id="dmLaunch">
+      <button class="launch-btn launch-gift" id="giftFab" aria-label="Find a gift with the Muse Stylist">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4.5" rx="1"/><path d="M5 13v6.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V13M12 8.5V20.5"/><path d="M12 8.5C11 6 9.5 4.6 8 5c-1.7.4-1.5 3 .6 3.5H12zM12 8.5C13 6 14.5 4.6 16 5c1.7.4 1.5 3-.6 3.5H12z"/></svg>
+        <span>Find a Gift</span>
+      </button>
+      <button class="launch-btn launch-support" id="supportFab" aria-label="Contact support">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.2a2.4 2.4 0 0 1 4.4 1.3c0 1.5-2 1.9-2 3"/><circle cx="12" cy="16.4" r=".7" fill="currentColor" stroke="none"/></svg>
+        <span>Support</span>
+      </button>
+    </div>
 
     <div class="chat-panel" id="chatPanel" aria-hidden="true">
       <div class="chat-head">
@@ -417,8 +424,8 @@ function buildFloating() {
         <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
       </div>
       <div class="chat-tabs" id="chatTabs">
-        <button type="button" class="chat-tab active" data-tab="chat">✦ MuseStylist</button>
-        <button type="button" class="chat-tab" data-tab="text">💬 Text me back</button>
+        <button type="button" class="chat-tab active" data-tab="chat">✦ Muse Stylist</button>
+        <button type="button" class="chat-tab" data-tab="support">💬 Support</button>
       </div>
       <div class="chat-view" id="chatViewChat">
         <div class="chat-body" id="chatBody"></div>
@@ -428,16 +435,8 @@ function buildFloating() {
           <button type="submit" aria-label="Send">${IC.arrow}</button>
         </form>
       </div>
-      <div class="chat-view chat-textback" id="chatViewText" hidden>
-        <p class="ctb-intro">💬 Enter your details and our team will <strong>text you back</strong> shortly, usually within business hours.</p>
-        <form id="ctbForm">
-          <div class="field"><label>Name</label><input id="ctbName" required></div>
-          <div class="field"><label>Mobile phone</label><input id="ctbPhone" type="tel" placeholder="04XX XXX XXX" required></div>
-          <div class="field"><label>Message</label><textarea id="ctbMsg" placeholder="How can we help?" style="min-height:70px"></textarea></div>
-          <button type="submit" class="btn btn--primary btn--block" id="ctbSend">Send</button>
-          <div class="form-success" id="ctbSuccess"></div>
-          <p class="ctb-consent">By submitting, you authorise DecoMuse to text or call the number above about your enquiry. Message &amp; data rates may apply; message frequency varies. Consent is not a condition of purchase. See our <a href="policy.html?doc=privacy">privacy policy</a>.</p>
-        </form>
+      <div class="chat-view chat-support" id="chatViewText" hidden>
+        <div class="support-scroll" id="supportBody"></div>
       </div>
     </div>`;
 }
@@ -1016,13 +1015,58 @@ function initMemberModal() {
    MuseStylist AI, shopper chat widget (client-side)
    ============================================================ */
 const CHAT_QUICK = [
-  { label: "🌸 Shop fragrance" },
-  { label: "🌿 Health & wellness" },
-  { label: "🎁 Build a hamper" },
+  { label: "🎁 Find a gift" },
+  { label: "🏠 Home décor" },
+  { label: "✦ Lifestyle essentials" },
   { label: "🛍️ Bestsellers" },
   { label: "🚚 Shipping & delivery" },
   { label: "💬 Talk to a human" }
 ];
+
+/* ---- Support panel (Leave us a message) ---- */
+const SUPPORT_ISSUES = ["Order", "Shipping", "Returns", "DecoMuse Account", "Product", "Online Offers", "Gift Cards & Vouchers", "General"];
+function renderSupport() {
+  const el = document.getElementById("supportBody");
+  if (!el) return;
+  el.innerHTML = `
+    <div class="support-title">Leave us a message</div>
+    <p class="support-lead">Please select your issue</p>
+    <ul class="support-issues">
+      ${SUPPORT_ISSUES.map(i => `<li><button type="button" onclick="dmSelectIssue('${i.replace(/'/g, "\\'")}')">${i}<span>›</span></button></li>`).join("")}
+    </ul>
+    <a class="support-more" href="contact.html">Find more information here</a>`;
+}
+function dmSelectIssue(issue) {
+  const el = document.getElementById("supportBody");
+  if (!el) return;
+  el.innerHTML = `
+    <button class="support-back" type="button" onclick="renderSupport()">← All topics</button>
+    <div class="support-title">${issue}</div>
+    <p class="support-lead">Leave us a message and our team will get back to you shortly.</p>
+    <form id="supForm" class="support-form">
+      <div class="field"><label>Your name</label><input id="supName" required></div>
+      <div class="field"><label>Email</label><input id="supEmail" type="email" required></div>
+      <div class="field"><label>Message</label><textarea id="supMsg" placeholder="How can we help with your ${issue.toLowerCase()}?" style="min-height:80px" required></textarea></div>
+      <button type="submit" class="btn btn--primary btn--block" id="supSend">Send message</button>
+      <div class="form-success" id="supSuccess"></div>
+    </form>`;
+  const f = document.getElementById("supForm");
+  f.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const btn = document.getElementById("supSend");
+    const data = [
+      ["Issue", issue],
+      ["Name", document.getElementById("supName").value],
+      ["Email", document.getElementById("supEmail").value],
+      ["Message", document.getElementById("supMsg").value]
+    ].filter(d => d[1]);
+    btn.disabled = true; btn.textContent = "Sending…";
+    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Support: " + issue); } catch (err) {}
+    const ok = document.getElementById("supSuccess");
+    if (ok) { ok.classList.add("show"); ok.innerHTML = "Thank you! Your message has been sent — our team will get back to you shortly. 💬"; }
+    f.reset(); btn.disabled = false; btn.textContent = "Send message";
+  });
+}
 
 // Pre-filled WhatsApp handoff to a real team member
 const WA_HANDOFF = (DECOMUSE.socials.whatsapp || "https://wa.me/61451609398") +
@@ -1064,6 +1108,9 @@ function chatReply(text) {
 
   else if (has(/\b(hamper|gift box|gift basket|build.*(box|gift|hamper)|make.*(hamper|gift))\b/) || has(/\bgift\b/) && has(/\b(build|make|custom|create)\b/))
     html = `What a lovely idea! 🎁 Use our ${link("hamper-maker.html", "Gift Hamper Maker")} to build a custom box, pick a box, add treats, drinks, pamper & home touches, watch the total, add a gift note, then straight to cart (min $60). Prefer ready-made? Browse the ${link("hampers.html", "Gifting")} page.`;
+
+  else if (has(/\b(gift|present|for (her|him|mum|dad|someone|a woman|a man)|birthday|anniversary|christmas|valentine|treat)\b/))
+    html = `Lovely, let's find the perfect gift! 🎁 Favourites right now: ${link("hampers.html", "gift hampers")}, ${link("shop.html?cat=Fragrance", "candles &amp; fragrance")}, and ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "home décor")}. Tell me your budget or who it's for and I'll narrow it down, or build a custom box with our ${link("hamper-maker.html", "Gift Hamper Maker")}.`;
 
   else if (has(/\b(how (do i|to) clean|care for|look after|maintain|wash|stain)\b/))
     html = `Happy to help you care for your pieces! 🌿 As a rule: dust timber with a soft dry cloth, spot-clean upholstery with a damp cloth, and keep candles trimmed to 5mm. If you tell me the exact item, I can be more specific, or our team can advise on ${link("contact.html", "Contact")}.`;
@@ -1189,7 +1236,9 @@ function chatSend(text) {
 }
 
 function initChat() {
-  const fab = document.getElementById("aiFab");
+  const giftFab = document.getElementById("giftFab");
+  const supportFab = document.getElementById("supportFab");
+  const launch = document.getElementById("dmLaunch");
   const panel = document.getElementById("chatPanel");
   const close = document.getElementById("chatClose");
   const form = document.getElementById("chatForm");
@@ -1197,77 +1246,57 @@ function initChat() {
   const quick = document.getElementById("chatQuick");
   const nudge = document.getElementById("chatNudge");
   const nudgeX = document.getElementById("nudgeX");
-  if (!fab || !panel) return;
+  if (!panel) return;
 
-  let opened = false, gated = false;
+  let greeted = false;
   const hideNudge = () => nudge && nudge.classList.remove("show");
-  const isMember = () => { const a = (typeof getAccount === "function") ? getAccount() : null; return !!(a && a.email); };
-  const open = () => {
-    panel.classList.add("open"); panel.setAttribute("aria-hidden", "false");
-    fab.classList.add("engaged"); hideNudge();
-    if (!isMember()) {
-      // MuseStylist AI is a member perk — gate the chat until logged in
-      if (form) form.style.display = "none";
-      if (quick) quick.style.display = "none";
-      if (!gated) {
-        gated = true;
-        chatAppend("bot", `✦ <strong>MuseStylist AI</strong> is a member perk. ${link("account.html", "Log in or create a free account")} to start styling your space with me, it's free to join and only takes a minute! 💛`);
-      }
-      return;
-    }
-    if (form) form.style.display = "";
-    if (quick) quick.style.display = "";
-    if (!opened) {
-      opened = true;
-      chatAppend("bot", `Hi, I'm the <strong>MuseStylist</strong> ✦ your personal shopping assistant. I can help you find a fragrance, wellness pick or home piece, build a gift hamper, or track an order, how can I help today?`);
-    }
-    setTimeout(() => input && input.focus(), 200);
-  };
-  const closeFn = () => { panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true"); };
+  const tabs = panel.querySelectorAll(".chat-tab");
+  const viewChat = document.getElementById("chatViewChat");
+  const viewText = document.getElementById("chatViewText");
 
-  fab.addEventListener("click", () => panel.classList.contains("open") ? closeFn() : open());
+  const greet = () => {
+    if (greeted) return; greeted = true;
+    chatAppend("bot", `Hi, I'm the <strong>Muse Stylist</strong> ✦ your AI décor &amp; gift advisor. Tell me who you're shopping for and I'll suggest something they'll love, or pick a category below. Need help with an order? Switch to <strong>Support</strong> above.`);
+  };
+  const switchTab = (name) => {
+    tabs.forEach(x => x.classList.toggle("active", x.dataset.tab === name));
+    const showSupport = name === "support";
+    if (viewChat) viewChat.hidden = showSupport;
+    if (viewText) viewText.hidden = !showSupport;
+    if (!showSupport) greet();
+  };
+  const open = (tab) => {
+    panel.classList.add("open"); panel.setAttribute("aria-hidden", "false");
+    if (launch) launch.classList.add("hidden");
+    hideNudge();
+    switchTab(tab || "chat");
+    if (tab !== "support") setTimeout(() => input && input.focus(), 200);
+  };
+  const closeFn = () => {
+    panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true");
+    if (launch) launch.classList.remove("hidden");
+  };
+
+  if (giftFab) giftFab.addEventListener("click", () => { if (!panel.classList.contains("open")) open("chat"); else switchTab("chat"); });
+  if (supportFab) supportFab.addEventListener("click", () => { if (!panel.classList.contains("open")) open("support"); else switchTab("support"); });
   if (close) close.addEventListener("click", closeFn);
 
   // Animated greeting nudge (once per session, if not opened)
   if (nudge && !sessionStorage.getItem("dm_nudged")) {
     setTimeout(() => { if (!panel.classList.contains("open")) nudge.classList.add("show"); }, 4000);
-    nudge.addEventListener("click", (e) => { if (e.target !== nudgeX) { open(); } });
+    nudge.addEventListener("click", (e) => { if (e.target !== nudgeX) open("chat"); });
   }
   if (nudgeX) nudgeX.addEventListener("click", (e) => { e.stopPropagation(); hideNudge(); sessionStorage.setItem("dm_nudged", "1"); });
 
-  quick.innerHTML = CHAT_QUICK.map(q => `<button type="button" data-q="${q.label}">${q.label}</button>`).join("");
-  quick.querySelectorAll("button").forEach(b => b.addEventListener("click", () => chatSend(b.dataset.q)));
+  if (quick) {
+    quick.innerHTML = CHAT_QUICK.map(q => `<button type="button" data-q="${q.label}">${q.label}</button>`).join("");
+    quick.querySelectorAll("button").forEach(b => b.addEventListener("click", () => chatSend(b.dataset.q)));
+  }
+  if (form) form.addEventListener("submit", (e) => { e.preventDefault(); chatSend(input.value); input.value = ""; });
 
-  form.addEventListener("submit", (e) => { e.preventDefault(); chatSend(input.value); input.value = ""; });
+  tabs.forEach(t => t.addEventListener("click", () => switchTab(t.dataset.tab)));
 
-  // Tabs: MuseStylist chat  <>  Text me back
-  const tabs = panel.querySelectorAll(".chat-tab");
-  const viewChat = document.getElementById("chatViewChat");
-  const viewText = document.getElementById("chatViewText");
-  tabs.forEach(t => t.addEventListener("click", () => {
-    tabs.forEach(x => x.classList.toggle("active", x === t));
-    const showText = t.dataset.tab === "text";
-    if (viewChat) viewChat.hidden = showText;
-    if (viewText) viewText.hidden = !showText;
-  }));
-
-  // Text-back request form
-  const ctb = document.getElementById("ctbForm");
-  if (ctb) ctb.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const btn = document.getElementById("ctbSend");
-    const ok = document.getElementById("ctbSuccess");
-    const data = [
-      ["Name", document.getElementById("ctbName").value],
-      ["Mobile phone", document.getElementById("ctbPhone").value],
-      ["Message", document.getElementById("ctbMsg").value]
-    ].filter(d => d[1]);
-    btn.disabled = true; btn.textContent = "Sending…";
-    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Text-back request (please text this customer)"); } catch (err) {}
-    ok.classList.add("show");
-    ok.innerHTML = "Thank you! Our team will text you back shortly. 💬";
-    ctb.reset(); btn.disabled = false; btn.textContent = "Send";
-  });
+  renderSupport();
 }
 
 /* ---- Rotating announcement ticker ---- */
