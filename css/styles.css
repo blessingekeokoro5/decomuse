@@ -221,18 +221,10 @@ em { font-style: italic; color: var(--rose-deep); }
 /* Plain nav links in the category row */
 .nav-cat-plain a { color: var(--ink); font-size: 0.88rem; padding: 8px 16px; border-radius: 6px; }
 .nav-cat-plain a:hover { color: var(--rose-deep); }
-/* Services dropdown */
-.nav-has-drop { position: relative; }
-.nav-has-drop > a { display: inline-flex; align-items: center; gap: 6px; }
-.nav-has-drop .caret { width: 12px; height: 12px; transition: transform var(--tr); }
-.nav-has-drop:hover .caret, .nav-has-drop:focus-within .caret { transform: rotate(180deg); }
-.nav-drop { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(8px); min-width: 244px;
-  background: #fff; border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 8px; margin: 0;
-  list-style: none; opacity: 0; visibility: hidden; transition: opacity .2s, transform .2s; z-index: 320; }
-.nav-drop::before { content: ""; position: absolute; top: -10px; left: 0; right: 0; height: 10px; }
-.nav-has-drop:hover .nav-drop, .nav-has-drop:focus-within .nav-drop { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(4px); }
-.nav-drop li a { display: block; padding: 11px 14px; border-radius: 8px; font-size: 0.9rem; color: var(--ink); white-space: nowrap; }
-.nav-drop li a:hover { background: var(--cream-2); color: var(--rose-deep); }
+/* Mobile drawer — Services sub-menu */
+.nav-main .m-sub { list-style: none; margin: 0; padding: 0; }
+.nav-main .m-sub > li > a { display: block; padding: 11px 8px 11px 28px; font-size: 0.92rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+.nav-main .m-sub > li > a:hover { color: var(--rose-deep); }
 
 @media (max-width: 860px) {
   .header-search .hs-tag { display: none; }

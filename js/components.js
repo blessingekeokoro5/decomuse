@@ -145,6 +145,43 @@ function buildHeader() {
       </div>`;
   }).join("");
 
+  // Services mega panel — same look as the category mega-menus
+  const servicesMega = `
+      <div class="mega" data-mega="services">
+        <div class="container mega-inner">
+          <div>
+            <h4>Services</h4>
+            <div class="mega-cols">
+              <div class="mega-col">
+                <h5>Our services</h5>
+                <ul>
+                  <li><a href="property-styling-staging.html">Property Styling &amp; Staging</a></li>
+                  <li><a href="personal-shopping.html">Home Décor Personal Shopper</a></li>
+                  <li><a href="vacation-rentals.html">Vacation Rentals</a></li>
+                  <li><a href="interior-design.html">Interior Design</a></li>
+                </ul>
+              </div>
+              <div class="mega-col">
+                <h5>Explore</h5>
+                <ul>
+                  <li><a href="staging.html">All services</a></li>
+                  <li><a href="portfolio.html">Our portfolio</a></li>
+                  <li><a href="staging.html#book">Book a consultation</a></li>
+                  <li><a href="stylist.html">Muse Stylist AI</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="mega-promo">
+            <div class="ph" data-label="DecoMuse services"><img class="ph-img" src="assets/services/interior-design-feature.jpg" alt="DecoMuse styling services" loading="lazy" onerror="this.remove()"></div>
+            <div class="mega-promo-actions">
+              <a href="#" onclick="if(typeof openEnquire==='function'){openEnquire();return false;}">Request a quote</a>
+              <a href="portfolio.html">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </div>`;
+
   const catTabs = MEGA_MENU.map(cat => {
     const href = cat.key === "hampers" ? "hampers.html" : "";
     return `<li data-cat="${cat.key}"><a${href ? ` href="${href}"` : ""}>${cat.label} ${IC.caret}</a></li>`;
@@ -152,8 +189,14 @@ function buildHeader() {
 
   // Mobile drawer mirrors the desktop category nav order:
   // categories first, then Styling & Design, About, Contact.
+  const servicesSubs = [
+    { label: "Property Styling & Staging", href: "property-styling-staging.html" },
+    { label: "Home Décor Personal Shopper", href: "personal-shopping.html" },
+    { label: "Vacation Rentals", href: "vacation-rentals.html" },
+    { label: "Interior Design", href: "interior-design.html" }
+  ];
+  const servicesMobile = `<li class="m-has-sub"><a href="staging.html">Services</a><ul class="m-sub">${servicesSubs.map(s => `<li><a href="${s.href}">${s.label}</a></li>`).join("")}</ul></li>`;
   const mobilePlain = [
-    { label: "Services", href: "staging.html" },
     { label: "Book Consult", href: "staging.html#book" },
     { label: "Help Centre", href: "support.html" },
     { label: "About Us", href: "about.html" },
@@ -162,6 +205,7 @@ function buildHeader() {
   ];
   const navMain = MEGA_MENU.map(c =>
       `<li><a href="${c.key === "hampers" ? "hampers.html" : "shop.html?cat=" + encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
+    + servicesMobile
     + mobilePlain.map(l => {
       const active = (l.href === page) ? "active" : "";
       return `<li><a class="${active}" href="${l.href}">${l.label}</a></li>`;
@@ -252,18 +296,10 @@ function buildHeader() {
         <ul class="nav-cats" id="navCats">
           <li class="nav-cat-plain"><a href="index.html">Home</a></li>
           ${catTabs}
-          <li class="nav-cat-plain nav-has-drop" onmouseenter="var r=document.getElementById('navCatsRow'); if(r){r.classList.remove('mega-open'); r.querySelectorAll('.mega').forEach(function(m){m.classList.remove('active');});}">
-            <a href="staging.html">Services ${IC.caret}</a>
-            <ul class="nav-drop">
-              <li><a href="property-styling-staging.html">Property Styling &amp; Staging</a></li>
-              <li><a href="personal-shopping.html">Home Décor Personal Shopper</a></li>
-              <li><a href="vacation-rentals.html">Vacation Rentals</a></li>
-              <li><a href="interior-design.html">Interior Design</a></li>
-            </ul>
-          </li>
+          <li data-cat="services"><a href="staging.html">Services ${IC.caret}</a></li>
         </ul>
       </div>
-      ${megaMarkup}
+      ${megaMarkup}${servicesMega}
     </div>
   </header>`;
 }
@@ -1361,24 +1397,30 @@ function wireNav() {
 
   if (cats && catsRow) {
     const items = cats.querySelectorAll("li[data-cat]");
-    let closeTimer;
+    let closeTimer, pinned = false;
     const openMega = (key) => {
       clearTimeout(closeTimer);
       catsRow.classList.add("mega-open");
       catsRow.querySelectorAll(".mega").forEach(m => m.classList.toggle("active", m.dataset.mega === key));
       items.forEach(li => li.classList.toggle("open", li.dataset.cat === key));
     };
-    const closeMega = () => {
-      closeTimer = setTimeout(() => {
-        catsRow.classList.remove("mega-open");
-        catsRow.querySelectorAll(".mega").forEach(m => m.classList.remove("active"));
-        items.forEach(li => li.classList.remove("open"));
-      }, 160);
+    const doClose = () => {
+      pinned = false;
+      catsRow.classList.remove("mega-open");
+      catsRow.querySelectorAll(".mega").forEach(m => m.classList.remove("active"));
+      items.forEach(li => li.classList.remove("open"));
     };
+    const closeMega = () => { if (pinned) return; closeTimer = setTimeout(doClose, 160); };
     items.forEach(li => {
-      li.addEventListener("mouseenter", () => openMega(li.dataset.cat));
+      li.addEventListener("mouseenter", () => { if (li.dataset.cat !== "services") pinned = false; openMega(li.dataset.cat); });
       li.addEventListener("mouseleave", closeMega);
       li.querySelector("a").addEventListener("click", (e) => {
+        // Services: click toggles the mega open and pins it (stays until you click away)
+        if (li.dataset.cat === "services") {
+          e.preventDefault();
+          if (pinned) { doClose(); } else { pinned = true; openMega("services"); }
+          return;
+        }
         if (e.currentTarget.getAttribute("href")) return; // real link (Gift Baskets & Hampers → hampers.html)
         e.preventDefault();
         window.location.href = "shop.html?cat=" + encodeURIComponent(MEGA_MENU.find(m => m.key === li.dataset.cat).label);
@@ -1388,6 +1430,8 @@ function wireNav() {
       m.addEventListener("mouseenter", () => { clearTimeout(closeTimer); });
       m.addEventListener("mouseleave", closeMega);
     });
+    // Clicking anywhere outside the nav closes a pinned (click-opened) mega
+    document.addEventListener("click", (e) => { if (pinned && !catsRow.contains(e.target)) doClose(); });
   }
 }
 
