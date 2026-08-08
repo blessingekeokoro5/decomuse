@@ -32,7 +32,7 @@ const STATIC = [
   ["hampers.html", 0.7], ["staging.html", 0.8], ["portfolio.html", 0.7], ["trade.html", 0.6],
   ["property-styling-staging.html", 0.7], ["interior-design.html", 0.7], ["vacation-rentals.html", 0.7],
   ["personal-shopping.html", 0.7], ["store-locator.html", 0.5], ["become-a-supplier.html", 0.6],
-  ["rewards.html", 0.6], ["refer-a-friend.html", 0.6],
+  ["rewards.html", 0.6], ["refer-a-friend.html", 0.6], ["careers.html", 0.5],
   ["stylist.html", 0.6], ["blog.html", 0.8], ["about.html", 0.6], ["contact.html", 0.6],
   ["support.html", 0.5], ["returns.html", 0.6], ["track.html", 0.4], ["wishlist.html", 0.3],
   ["policy.html?doc=faq", 0.4], ["policy.html?doc=delivery", 0.4], ["policy.html?doc=returns", 0.4],

@@ -168,6 +168,7 @@ function buildHeader() {
                   <li><a href="portfolio.html">Our portfolio</a></li>
                   <li><a href="staging.html#book">Book a consultation</a></li>
                   <li><a href="stylist.html">Muse Stylist AI</a></li>
+                  <li><a href="careers.html">Careers</a></li>
                 </ul>
               </div>
             </div>
