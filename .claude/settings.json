@@ -59,7 +59,10 @@
       "Bash(node --check js/admin.js)",
       "Bash(node --check js/forms.js)",
       "Bash(node --check netlify/functions/send-forms.js)",
-      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);console.log\\('forms:',Object.keys\\(window.DM_FORMS\\).length,'| bundles:',Object.keys\\(window.DM_BUNDLES\\).join\\(', '\\)\\)\")"
+      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);console.log\\('forms:',Object.keys\\(window.DM_FORMS\\).length,'| bundles:',Object.keys\\(window.DM_BUNDLES\\).join\\(', '\\)\\)\")",
+      "Bash(node --check netlify/functions/send-invoice.js)",
+      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);var f=window.DM_FORMS;console.log\\('forms:',Object.keys\\(f\\).length,'| employees:',Object.keys\\(f\\).filter\\(k=>f[k].cat==='employee'\\).length,'| invoice noSig:',!!f.invoice.noSignature,'sendToClient:',!!f.invoice.sendToClient\\)\")",
+      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);var f=window.DM_FORMS;console.log\\('total forms:',Object.keys\\(f\\).length,'| employee:',Object.keys\\(f\\).filter\\(k=>f[k].cat==='employee'\\).length,'| emp bundle:',window.DM_BUNDLES['employee-onboarding'].forms.length,'forms'\\)\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"

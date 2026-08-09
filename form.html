@@ -64,7 +64,10 @@
       document.getElementById("fCrumb").textContent = f.title;
       document.getElementById("fEyebrow").textContent = f.cat === "employee" ? "Employee form" : "Client form";
       document.getElementById("fIntro").textContent = f.intro || "";
-      document.getElementById("fBtns").innerHTML =
+      var sendBtn = f.sendToClient
+        ? '<button class="btn btn--dark btn--sm" type="button" onclick="dmSendFilledForm(document.querySelector(\'form[data-client-form]\'),' + JSON.stringify(f.title) + ')">✉ Send to client</button> '
+        : "";
+      document.getElementById("fBtns").innerHTML = sendBtn +
         '<button class="btn btn--outline btn--sm" type="button" onclick="dmDownloadFormPDF(document.querySelector(\'form[data-client-form]\'),' + JSON.stringify(f.title) + ')">⬇ Download PDF</button> ' +
         '<button class="btn btn--outline btn--sm" type="button" onclick="window.print()">🖨 Print</button>';
       wrap.innerHTML = window.dmRenderForm(f);

@@ -54,7 +54,7 @@
   window.dmRenderForm = function (f) {
     var body = renderFields(f.fields || []);
     if (f.terms) body += '<div class="form-sec-title">Terms</div><div class="terms">' + f.terms + '</div>';
-    body += SIGNATURE_BLOCK;
+    if (!f.noSignature) body += SIGNATURE_BLOCK;
     return '<form data-client-form="' + esc(f.title) + '" data-success="' + esc(f.success || "Thank you! Your form has been submitted to DecoMuse. 💛") + '">' +
       body +
       '<button type="submit" class="btn btn--primary btn--block" style="margin-top:18px">' + (f.submit || "Submit form") + '</button>' +
@@ -236,14 +236,26 @@
       intro: "DecoMuse tax invoice.",
       success: "Invoice saved.",
       submit: "Save invoice",
+      noSignature: true, sendToClient: true,
       fields: [
-        { sec: "Bill to" }, { name: "Client name", label: "Client name", required: true, half: true }, EMAIL, { name: "Client address", label: "Client address" },
-        { sec: "Invoice" },
-        { name: "Invoice number", label: "Invoice number", half: true }, { name: "Invoice date", label: "Invoice date", type: "date", half: true },
-        { name: "Due date", label: "Due date", type: "date", half: true }, { name: "Payment terms", label: "Payment terms", half: true },
-        { name: "Description", label: "Service / description", type: "textarea" },
+        { sec: "Bill to (customer)" },
+        { name: "Client name", label: "Customer name", required: true, half: true },
+        { name: "Email", label: "Customer email", type: "email", required: true, half: true },
+        { name: "Client phone", label: "Customer phone", type: "tel", half: true },
+        { name: "Client address", label: "Customer address", half: true },
+        { sec: "Invoice details" },
+        { name: "Invoice number", label: "Invoice number", half: true },
+        { name: "Invoice date", label: "Invoice date", type: "date", half: true },
+        { name: "Due date", label: "Due date", type: "date", half: true },
+        { name: "Status", label: "Payment status", type: "select", options: ["Unpaid", "Paid", "Partially paid", "Overdue"], half: true },
+        { sec: "Items & amounts" },
+        { name: "Description", label: "Description of services / items", type: "textarea" },
         { name: "Amount", label: "Amount (ex GST)", type: "number", half: true }, { name: "GST", label: "GST", type: "number", half: true },
-        { name: "Total", label: "Total (AUD, incl GST)", type: "number", half: true }
+        { name: "Total", label: "Total (incl GST)", type: "number", half: true }, { name: "Amount paid", label: "Amount paid", type: "number", half: true },
+        { name: "Balance due", label: "Balance due", type: "number", half: true },
+        { sec: "Payment" },
+        { name: "Payment terms", label: "Payment terms", ph: "e.g. Due in 7 days", half: true },
+        { name: "Payment details", label: "Payment details", type: "textarea", ph: "Account name, BSB, Account number, reference…" }
       ]
     },
     "project-completion": {
@@ -309,11 +321,34 @@
         { consent: "I have read and agree to the contractor engagement terms below.", name: "Agrees to contractor terms", required: true }
       ],
       terms: "<h4>Engagement</h4><p>You are engaged as an independent contractor and are responsible for your own tax, superannuation and insurances.</p><h4>Services & rate</h4><p>You will provide the agreed services at the agreed rate, invoiced per completed job unless otherwise agreed.</p><h4>Confidentiality</h4><p>You will keep client and business information confidential during and after engagement.</p><h4>Care & conduct</h4><p>You will care for client homes and DecoMuse inventory and represent the brand professionally.</p>"
+    },
+    "employee-bank-super": {
+      title: "Employee Bank & Superannuation Details", cat: "employee",
+      intro: "Your payment & super details, kept strictly confidential.",
+      fields: [
+        NAME, EMAIL,
+        { sec: "Bank account" },
+        { name: "Account name", label: "Account name", half: true }, { name: "Bank name", label: "Bank name", half: true },
+        { name: "BSB", label: "BSB", half: true }, { name: "Account number", label: "Account number", half: true },
+        { sec: "Tax & super" },
+        { name: "Tax File Number", label: "Tax File Number", half: true }, { name: "Super fund", label: "Superannuation fund", half: true },
+        { name: "Super member number", label: "Super member number", half: true }, { name: "Super USI", label: "Fund USI (if known)", half: true },
+        { consent: "These details are correct and I authorise DecoMuse to use them for payroll & superannuation.", name: "Authorises payroll details", required: true }
+      ]
+    },
+    "policy-handbook-ack": {
+      title: "Policy Handbook Acknowledgement", cat: "employee",
+      intro: "Please confirm you've read and understood our workplace policies.",
+      fields: [
+        NAME, EMAIL, { name: "Position", label: "Position / role", half: true }, { name: "Date", label: "Date", type: "date", half: true },
+        { consent: "I have read, understood and agree to abide by the DecoMuse policies summarised below.", name: "Acknowledges policies", required: true }
+      ],
+      terms: "<h4>Code of conduct</h4><p>Act professionally, honestly and respectfully toward clients, colleagues and suppliers.</p><h4>Work health & safety</h4><p>Follow safe work practices, report hazards &amp; incidents, and take care in client homes and the warehouse.</p><h4>Privacy &amp; confidentiality</h4><p>Protect client and business information and only use it for DecoMuse work.</p><h4>Equal opportunity</h4><p>DecoMuse is committed to a workplace free from discrimination, bullying and harassment.</p><h4>Social media &amp; brand</h4><p>Represent DecoMuse positively and never share confidential or client information online.</p><h4>Attendance</h4><p>Be reliable and communicate promptly about availability, delays or absences.</p>"
     }
   };
 
   window.DM_BUNDLES = {
     "client-onboarding": { label: "Client onboarding documents", forms: ["client-intake", "project-brief", "design-preferences", "service-agreement", "home-access-safety", "photo-release", "cancellation-ack"] },
-    "employee-onboarding": { label: "Employee onboarding documents", forms: ["employee-onboarding", "employee-emergency", "employee-confidentiality", "contractor-agreement"] }
+    "employee-onboarding": { label: "Employee onboarding documents", forms: ["employee-onboarding", "employee-bank-super", "employee-emergency", "employee-confidentiality", "policy-handbook-ack"] }
   };
 })();

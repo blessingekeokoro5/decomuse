@@ -57,6 +57,31 @@
     doc.save((title || "DecoMuse-form").replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") + ".pdf");
   };
 
+  // Email a filled form (e.g. an invoice) to the recipient found in its Email field (via Brevo)
+  window.dmSendFilledForm = async function (form, title) {
+    if (!form) return;
+    var data = (typeof collectForm === "function") ? collectForm(form) : [];
+    var emailPair = data.find(function (d) { return /email/i.test(d[0]); });
+    var namePair = data.find(function (d) { return /name/i.test(d[0]); });
+    var email = emailPair ? emailPair[1] : "";
+    if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { alert("Please enter the client's email in the form first."); return; }
+    var clean = data.filter(function (p) { return !/^data:image\//.test(String(p[1])); });
+    var out = form.querySelector(".form-success");
+    var sent = false;
+    try {
+      var res = await fetch("/.netlify/functions/send-invoice", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email, name: namePair ? namePair[1] : "", title: title || "Invoice", fields: clean })
+      });
+      var d = await res.json().catch(function () { return {}; });
+      sent = res.ok && d.ok;
+    } catch (e) { sent = false; }
+    if (sent) { if (out) { out.classList.add("show"); out.innerHTML = "✓ Sent to " + email + " (copy in your inbox)."; } window.dmSaveClient(title || "Invoice", data); return; }
+    // Fallback: open the admin's email app pre-filled
+    var body = "Please find your DecoMuse " + (title || "invoice").toLowerCase() + " details below:\n\n" + clean.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n\nThank you,\nDecoMuse";
+    location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent((title || "Invoice") + " — DecoMuse") + "&body=" + encodeURIComponent(body);
+  };
+
   // Signature pads — draw with mouse/finger; value stored as a PNG data URL in .sig-input
   function initSigPads() {
     document.querySelectorAll(".sig-block .sig-pad").forEach(function (pad) {
