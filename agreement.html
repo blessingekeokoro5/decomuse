@@ -39,16 +39,18 @@
     <div class="container" style="max-width:760px">
       <div style="text-align:right;margin-bottom:14px" class="no-print"><button class="btn btn--outline btn--sm" type="button" onclick="window.print()">⬇ Download / Print</button></div>
       <div class="form-card">
-        <form data-client-form="Service Agreement" data-success="Thank you! Your signed agreement has been sent to DecoMuse. We'll confirm your booking and next steps shortly. 💛">
+        <form data-client-form="Service Agreement" name="Service Agreement" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success="Thank you! Your signed agreement has been sent to DecoMuse. We'll confirm your booking and next steps shortly. 💛">
+          <input type="hidden" name="form-name" value="Service Agreement">
+          <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
           <div class="form-sec-title">Client &amp; booking details</div>
           <div class="field-row">
-            <div class="field"><label>Full name *</label><input required></div>
-            <div class="field"><label>Email *</label><input type="email" required></div>
+            <div class="field"><label>Full name *</label><input name="Name" required></div>
+            <div class="field"><label>Email *</label><input name="Email" type="email" required></div>
           </div>
           <div class="field-row">
-            <div class="field"><label>Phone</label><input type="tel"></div>
+            <div class="field"><label>Phone</label><input name="Phone" type="tel"></div>
             <div class="field"><label>Service *</label>
-              <select required>
+              <select name="Service" required>
                 <option value="">Select a service</option>
                 <option>Property Styling &amp; Staging</option>
                 <option>Interior Design</option>
@@ -56,10 +58,10 @@
                 <option>Home Décor Personal Shopper</option>
               </select></div>
           </div>
-          <div class="field"><label>Project address</label><input></div>
+          <div class="field"><label>Project address</label><input name="Project address"></div>
           <div class="field-row">
-            <div class="field"><label>Agreed fee / quote reference</label><input placeholder="e.g. quote #, or agreed amount"></div>
-            <div class="field"><label>Preferred start date</label><input type="date"></div>
+            <div class="field"><label>Agreed fee / quote reference</label><input name="Agreed fee / quote" placeholder="e.g. quote #, or agreed amount"></div>
+            <div class="field"><label>Preferred start date</label><input name="Preferred start date" type="date"></div>
           </div>
 
           <div class="form-sec-title">Terms of service</div>
@@ -74,15 +76,15 @@
             <h4>8. Liability</h4><p>DecoMuse takes great care, but is not liable for pre-existing damage or issues outside our control. Nothing in these terms limits your rights under the Australian Consumer Law.</p>
           </div>
 
-          <label class="consent"><input type="checkbox" aria-label="Opt out of marketing photos"> I do <strong>not</strong> consent to DecoMuse using photos of my project for portfolio / marketing.</label>
+          <label class="consent"><input type="checkbox" name="Opt out of marketing photos" aria-label="Opt out of marketing photos"> I do <strong>not</strong> consent to DecoMuse using photos of my project for portfolio / marketing.</label>
 
           <div class="form-sec-title">Signature</div>
           <div class="field-row">
-            <div class="field"><label>Typed signature (full name) *</label><input required placeholder="Type your full name">
+            <div class="field"><label>Typed signature (full name) *</label><input name="Signature" required placeholder="Type your full name">
               <div class="sign-hint">Typing your name acts as your electronic signature.</div></div>
-            <div class="field"><label>Date *</label><input type="date" required></div>
+            <div class="field"><label>Date *</label><input name="Date signed" type="date" required></div>
           </div>
-          <label class="consent"><input type="checkbox" required aria-label="Agrees to service terms"> I have read and agree to the DecoMuse Service Agreement terms above. *</label>
+          <label class="consent"><input type="checkbox" name="Agrees to terms" required aria-label="Agrees to service terms"> I have read and agree to the DecoMuse Service Agreement terms above. *</label>
 
           <button type="submit" class="btn btn--primary btn--block" style="margin-top:18px">Agree &amp; submit</button>
           <div class="form-success"></div>

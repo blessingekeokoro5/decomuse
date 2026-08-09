@@ -33,6 +33,17 @@
         var data = (typeof collectForm === "function") ? collectForm(form) : [];
         window.dmSaveClient(type, data);
         if (btn) { btn.disabled = true; btn.dataset.l = btn.textContent; btn.textContent = "Submitting…"; }
+
+        // 1) Netlify Forms — server-side capture, viewable in the Netlify dashboard (cross-device)
+        if (form.getAttribute("data-netlify") === "true") {
+          try {
+            var fd = new FormData(form);
+            var body = new URLSearchParams();
+            fd.forEach(function (v, k) { if (typeof v === "string") body.append(k, v); });
+            await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body: body.toString() });
+          } catch (err) {}
+        }
+        // 2) Instant email notification via Web3Forms
         try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — " + type + " (new client)"); } catch (err) {}
         var ok = form.querySelector(".form-success");
         if (ok) { ok.classList.add("show"); ok.innerHTML = form.getAttribute("data-success") || "Thank you! Your details have been submitted to DecoMuse."; }

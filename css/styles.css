@@ -1052,6 +1052,8 @@ em { font-style: italic; color: var(--rose-deep); }
 .footer-trust .ft-reviews { display: block; font-size: 0.85rem; color: #cbb9ad; }
 .footer-trust .ft-reviews:hover { color: #fff; }
 .footer-trust .ft-abn { font-size: 0.72rem; letter-spacing: 0.06em; color: #8f7f76; margin-top: 16px; }
+.footer-trust .ft-admin { display: inline-block; margin-top: 10px; font-size: 0.78rem; letter-spacing: 0.04em; color: #c9bcb2; }
+.footer-trust .ft-admin:hover { color: #fff; }
 .footer-brand .fb-name { font-family: var(--font-head); font-size: 1.9rem; color: #fff; margin-bottom: 6px; }
 .footer-brand .fb-tag { font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-soft); margin-bottom: 16px; }
 .footer-brand p { color: #b3a197; font-size: 0.9rem; max-width: 280px; }

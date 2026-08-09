@@ -390,6 +390,7 @@ function buildFooter() {
           <div class="ft-score">4.9 / 5</div>
           <a class="ft-reviews" href="index.html#reviews">Read our customer reviews →</a>
           <div class="ft-abn">ABN ${DECOMUSE.abn}</div>
+          <a class="ft-admin" href="admin.html" title="Admin sign-in">🔒 Admin dashboard</a>
         </div>
       </div>
 
@@ -429,8 +430,7 @@ function buildFooter() {
           <a href="policy.html?doc=delivery">Delivery &amp; Shipping</a> ·
           <a href="policy.html?doc=returns">Returns</a> ·
           <a href="policy.html?doc=privacy">Privacy</a> ·
-          <a href="policy.html?doc=terms">Terms</a> ·
-          <a href="admin.html" title="Admin sign-in">🔒 Admin</a>
+          <a href="policy.html?doc=terms">Terms</a>
         </span>
       </div>
     </div>
