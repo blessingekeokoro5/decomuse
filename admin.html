@@ -35,6 +35,9 @@
     .admin-formcard h3 { margin-bottom: 4px; }
     .admin-empty { text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; padding: 40px 20px; }
     .admin-note { background: var(--blush); border-radius: 10px; padding: 12px 16px; font-size: 0.86rem; color: var(--rose-deep); margin-bottom: 18px; }
+    .rec-forms { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; max-height: 240px; overflow-y: auto; border: 1px solid var(--line); border-radius: 10px; padding: 12px; }
+    .rec-item { display: flex; gap: 8px; align-items: center; font-size: 0.86rem; }
+    @media (max-width: 560px){ .rec-forms { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body data-page="admin.html">
@@ -69,6 +72,8 @@
       <div class="admin-tabs" id="adminTabs">
         <button class="active" data-tab="base">Customer base</button>
         <button data-tab="forms">Client forms</button>
+        <button data-tab="empforms">Employee forms</button>
+        <button data-tab="send">Send forms</button>
         <button data-tab="settings">Settings</button>
       </div>
 
@@ -87,24 +92,35 @@
 
       <!-- Client forms -->
       <div id="tabForms" hidden>
-        <div class="admin-note">Share these links with new clients, or open &amp; print them as a PDF. Every completed form emails you and lands in your Customer base above.</div>
-        <div class="admin-formcard">
-          <h3>New client onboarding</h3>
-          <p style="color:var(--muted)">Capture a new client's contact details, project brief, budget, timeline &amp; style preferences.</p>
-          <div class="btn-row" style="margin-top:12px">
-            <a class="btn btn--dark btn--sm" href="onboarding.html" target="_blank" rel="noopener">Open form</a>
-            <button class="btn btn--outline btn--sm" onclick="copyLink('onboarding.html', this)">Copy share link</button>
-            <a class="btn btn--outline btn--sm" href="onboarding.html?print=1" target="_blank" rel="noopener">Download / Print</a>
+        <div class="admin-note">Share these links with clients, or download / print them. Every completed form is signed on-screen, emails you, and lands in your Customer base above.</div>
+        <div id="clientFormsList"></div>
+      </div>
+
+      <!-- Employee forms -->
+      <div id="tabEmpforms" hidden>
+        <div class="admin-note">Onboarding &amp; agreement forms for people you employ or engage. Share the link, or send them by email from the “Send forms” tab.</div>
+        <div id="empFormsList"></div>
+      </div>
+
+      <!-- Send forms to a recipient -->
+      <div id="tabSend" hidden>
+        <div class="admin-note">Email a client or new employee their required forms — they'll get links to complete &amp; sign online. A copy comes to your inbox too.</div>
+        <div class="admin-formcard" style="max-width:680px">
+          <h3>Send forms to a recipient</h3>
+          <div class="field-row">
+            <div class="field"><label>Recipient name</label><input id="recName"></div>
+            <div class="field"><label>Recipient email</label><input id="recEmail" type="email"></div>
           </div>
-        </div>
-        <div class="admin-formcard">
-          <h3>Service agreement</h3>
-          <p style="color:var(--muted)">Terms of service with a typed signature &amp; consent, for clients booking a styling, design, vacation-rental or personal-shopping service.</p>
-          <div class="btn-row" style="margin-top:12px">
-            <a class="btn btn--dark btn--sm" href="agreement.html" target="_blank" rel="noopener">Open form</a>
-            <button class="btn btn--outline btn--sm" onclick="copyLink('agreement.html', this)">Copy share link</button>
-            <a class="btn btn--outline btn--sm" href="agreement.html?print=1" target="_blank" rel="noopener">Download / Print</a>
-          </div>
+          <div class="field"><label>Quick bundle</label>
+            <select id="recBundle" onchange="applyBundle()">
+              <option value="">— Choose a bundle, or tick forms below —</option>
+              <option value="client-onboarding">Client onboarding documents</option>
+              <option value="employee-onboarding">Employee onboarding documents</option>
+            </select></div>
+          <div class="field"><label>Forms to send</label><div id="recForms" class="rec-forms"></div></div>
+          <div class="field"><label>Message (optional)</label><textarea id="recMsg" style="min-height:70px" placeholder="Add a personal note…"></textarea></div>
+          <button class="btn btn--dark btn--sm" onclick="sendForms()" id="recSendBtn">Send forms</button>
+          <div id="recOut" style="font-size:0.88rem;margin-top:10px"></div>
         </div>
       </div>
 
@@ -127,6 +143,7 @@
   <script src="js/components.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
   <script src="js/admin.js"></script>
   <script>
     /* ===== Admin gate ===== */
@@ -139,6 +156,64 @@
       document.getElementById("adminGate").style.display = "none";
       document.getElementById("adminPanel").style.display = "";
       renderDB();
+      renderFormsLists();
+    }
+
+    /* ===== Forms lists + send-to-recipient ===== */
+    function formCard(slug, f) {
+      var base = "form.html?f=" + slug;
+      return '<div class="admin-formcard"><h3>' + f.title + '</h3><p style="color:var(--muted)">' + (f.intro || "") + '</p>' +
+        '<div class="btn-row" style="margin-top:12px">' +
+        '<a class="btn btn--dark btn--sm" href="' + base + '" target="_blank" rel="noopener">Open</a>' +
+        '<button class="btn btn--outline btn--sm" onclick="copyLink(\'' + base + '\', this)">Copy link</button>' +
+        '<a class="btn btn--outline btn--sm" href="' + base + '&pdf=1" target="_blank" rel="noopener">⬇ PDF</a>' +
+        '<a class="btn btn--outline btn--sm" href="' + base + '&print=1" target="_blank" rel="noopener">🖨 Print</a>' +
+        '</div></div>';
+    }
+    function renderFormsLists() {
+      var forms = window.DM_FORMS || {}, client = "", emp = "", recChecks = "";
+      Object.keys(forms).forEach(function (slug) {
+        var f = forms[slug], card = formCard(slug, f);
+        if (f.cat === "employee") emp += card; else client += card;
+        recChecks += '<label class="rec-item" data-cat="' + f.cat + '"><input type="checkbox" value="' + slug + '"> ' + f.title + '</label>';
+      });
+      var cl = document.getElementById("clientFormsList"); if (cl) cl.innerHTML = client || "<p style='color:var(--muted)'>No client forms.</p>";
+      var el = document.getElementById("empFormsList"); if (el) el.innerHTML = emp || "<p style='color:var(--muted)'>No employee forms.</p>";
+      var rf = document.getElementById("recForms"); if (rf) rf.innerHTML = recChecks;
+    }
+    function applyBundle() {
+      var b = document.getElementById("recBundle").value;
+      var bundle = (window.DM_BUNDLES || {})[b];
+      var set = bundle ? bundle.forms : [];
+      document.querySelectorAll("#recForms input[type=checkbox]").forEach(function (cb) { cb.checked = set.indexOf(cb.value) >= 0; });
+    }
+    async function sendForms() {
+      var name = (document.getElementById("recName").value || "").trim();
+      var email = (document.getElementById("recEmail").value || "").trim();
+      var msg = (document.getElementById("recMsg").value || "").trim();
+      var out = document.getElementById("recOut");
+      var picked = [].slice.call(document.querySelectorAll("#recForms input:checked")).map(function (cb) { return cb.value; });
+      if (!email) { out.style.color = "var(--rose-deep)"; out.textContent = "Please enter the recipient's email."; return; }
+      if (!picked.length) { out.style.color = "var(--rose-deep)"; out.textContent = "Please select at least one form."; return; }
+      var forms = window.DM_FORMS || {};
+      var origin = location.origin + location.pathname.replace(/admin\.html$/, "");
+      var list = picked.map(function (slug) { return { title: forms[slug].title, url: origin + "form.html?f=" + slug }; });
+      var kind = picked.every(function (s) { return forms[s].cat === "employee"; }) ? "employee" : "client";
+      var btn = document.getElementById("recSendBtn"); btn.disabled = true; var bl = btn.textContent; btn.textContent = "Sending…";
+      var sent = false;
+      try {
+        var res = await fetch("/.netlify/functions/send-forms", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name: name, email: email, message: msg, kind: kind, forms: list }) });
+        var data = await res.json().catch(function () { return {}; });
+        sent = res.ok && data.ok;
+      } catch (e) { sent = false; }
+      btn.disabled = false; btn.textContent = bl;
+      if (sent) { out.style.color = "var(--forest)"; out.innerHTML = "✓ Sent to " + email + " (copy in your inbox)."; }
+      else {
+        var body = "Hi " + (name || "") + ",%0D%0A%0D%0A" + (msg ? encodeURIComponent(msg) + "%0D%0A%0D%0A" : "") + "Please complete your DecoMuse form(s):%0D%0A%0D%0A" + list.map(function (f) { return f.title + ": " + f.url; }).join("%0D%0A") + "%0D%0A%0D%0AWarm regards,%0D%0ADecoMuse";
+        out.style.color = "var(--muted)";
+        out.innerHTML = "Email service isn't enabled yet — opening your email app to send manually…";
+        location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Your DecoMuse forms") + "&body=" + body;
+      }
     }
     function adminLogout() { try { sessionStorage.removeItem("dm_admin_ok"); } catch (e) {} location.reload(); }
 
@@ -160,6 +235,8 @@
       const tab = btn.dataset.tab;
       document.getElementById("tabBase").hidden = tab !== "base";
       document.getElementById("tabForms").hidden = tab !== "forms";
+      document.getElementById("tabEmpforms").hidden = tab !== "empforms";
+      document.getElementById("tabSend").hidden = tab !== "send";
       document.getElementById("tabSettings").hidden = tab !== "settings";
     });
 
@@ -178,7 +255,11 @@
           const d = new Date(r.date);
           const name = fieldVal(r, /name/i), email = fieldVal(r, /email/i);
           const cls = /agreement/i.test(r.type) ? "db-type agreement" : "db-type";
-          const rows = (r.fields || []).map(f => `<div><b>${f[0]}:</b> ${String(f[1] || "").replace(/</g, "&lt;")}</div>`).join("");
+          const rows = (r.fields || []).map(f => {
+            const v = String(f[1] || "");
+            if (/^data:image\//.test(v)) return `<div><b>${f[0]}:</b><br><img src="${v}" alt="signature" style="max-width:240px;border:1px solid var(--line);border-radius:8px;background:#fff;margin-top:4px"></div>`;
+            return `<div><b>${f[0]}:</b> ${v.replace(/</g, "&lt;")}</div>`;
+          }).join("");
           return `<tr>
             <td>${d.toLocaleDateString()}<br><small style="color:var(--muted)">${d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</small></td>
             <td><span class="${cls}">${r.type}</span></td>
@@ -201,7 +282,11 @@
         const lines = [cols.map(esc).join(",")];
         db.forEach(r => {
           const map = {}; (r.fields || []).forEach(f => map[f[0]] = f[1]);
-          lines.push(cols.map(c => esc(c === "Date" ? new Date(r.date).toLocaleString() : c === "Type" ? r.type : map[c] || "")).join(","));
+          lines.push(cols.map(c => {
+            let val = c === "Date" ? new Date(r.date).toLocaleString() : c === "Type" ? r.type : (map[c] || "");
+            if (/^data:image\//.test(String(val))) val = "[signature image]";
+            return esc(val);
+          }).join(","));
         });
         blob = new Blob([lines.join("\n")], { type: "text/csv" }); name = "decomuse-customers.csv";
       }

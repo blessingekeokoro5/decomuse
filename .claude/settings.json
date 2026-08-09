@@ -56,7 +56,10 @@
       "Bash(git commit -q -m 'Rewards modal: fit on mobile — scrollable card as safety net + compact icon-left benefit rows and tighter spacing on small screens *)",
       "Bash(git commit -q -m 'Member card: remove ABN; restyle to match the gift card exactly \\(1.62/1 aspect, rounded, gold inner frame, dotted texture + gloss\\) in DecoMuse green; long names/emails truncate instead of overflowing; drop ABN from the downloadable PNG too *)",
       "Bash(git commit -q -m 'Footer: add Store locator \\(coming-soon page — notifies customers when physical stores open for walk-ins, with notify signup\\) and Become a supplier \\(full supplier page: categories, criteria, process, benefits + application form\\); sitemap +2 *)",
-      "Bash(node --check js/admin.js)"
+      "Bash(node --check js/admin.js)",
+      "Bash(node --check js/forms.js)",
+      "Bash(node --check netlify/functions/send-forms.js)",
+      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);console.log\\('forms:',Object.keys\\(window.DM_FORMS\\).length,'| bundles:',Object.keys\\(window.DM_BUNDLES\\).join\\(', '\\)\\)\")"
     ],
     "additionalDirectories": [
       "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"

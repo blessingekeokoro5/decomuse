@@ -1054,6 +1054,15 @@ em { font-style: italic; color: var(--rose-deep); }
 .footer-trust .ft-abn { font-size: 0.72rem; letter-spacing: 0.06em; color: #8f7f76; margin-top: 16px; }
 .footer-trust .ft-admin { display: inline-block; margin-top: 10px; font-size: 0.78rem; letter-spacing: 0.04em; color: #c9bcb2; }
 .footer-trust .ft-admin:hover { color: #fff; }
+/* Signature pad */
+.sig-block { margin-top: 6px; }
+.sig-block > label { display: block; font-size: 0.82rem; color: var(--ink); margin-bottom: 6px; font-weight: 500; }
+.sig-pad { position: relative; border: 1.5px dashed var(--line); border-radius: 10px; background: #fff; height: 170px; touch-action: none; }
+.sig-pad.signed { border-style: solid; border-color: var(--rose-soft); }
+.sig-canvas { width: 100%; height: 100%; display: block; cursor: crosshair; border-radius: 10px; }
+.sig-clear { position: absolute; top: 8px; right: 8px; background: #fff; border: 1px solid var(--line); border-radius: 8px; padding: 5px 11px; font-size: 0.76rem; cursor: pointer; font-family: var(--font-body); }
+.sig-clear:hover { background: var(--cream-2); }
+.sig-hint { font-size: 0.78rem; color: var(--muted); margin-top: 6px; }
 .footer-brand .fb-name { font-family: var(--font-head); font-size: 1.9rem; color: #fff; margin-bottom: 6px; }
 .footer-brand .fb-tag { font-size: 0.66rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-soft); margin-bottom: 16px; }
 .footer-brand p { color: #b3a197; font-size: 0.9rem; max-width: 280px; }

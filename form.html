@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DecoMuse Form</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .form-sec-title { font-size: 1rem; letter-spacing: 0.02em; margin: 26px 0 12px; padding-bottom: 6px; border-bottom: 1px solid var(--line); color: var(--rose-deep); }
+    .form-sec-title:first-of-type { margin-top: 0; }
+    .consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.9rem; margin-top: 10px; }
+    .consent input { margin-top: 3px; }
+    .terms { background: var(--cream-2); border: 1px solid var(--line); border-radius: 12px; padding: 18px 20px; font-size: 0.9rem; line-height: 1.6; max-height: 320px; overflow-y: auto; }
+    .terms h4 { font-family: var(--font-body); font-size: 0.86rem; font-weight: 600; margin: 14px 0 4px; color: var(--ink); }
+    .terms h4:first-child { margin-top: 0; }
+    @media print { #site-header, #site-footer, .no-print { display: none !important; } body { background: #fff; } .terms { max-height: none; overflow: visible; } .form-card { box-shadow: none; border: 1px solid #ccc; } }
+  </style>
+</head>
+<body data-page="form.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner no-print">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <span id="fCrumb">Form</span></div>
+      <span class="eyebrow" id="fEyebrow">DecoMuse form</span>
+      <h1 id="fTitle">Form</h1>
+      <p id="fIntro"></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:760px">
+      <div style="text-align:right;margin-bottom:14px" class="no-print" id="fBtns"></div>
+      <div class="form-card" id="fWrap"></div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/forms.js"></script>
+  <script src="js/admin.js"></script>
+  <script>
+    (function () {
+      var slug = new URLSearchParams(location.search).get("f");
+      var f = (window.DM_FORMS || {})[slug];
+      var wrap = document.getElementById("fWrap");
+      if (!f) {
+        document.getElementById("fTitle").textContent = "Form not found";
+        wrap.innerHTML = '<p>Sorry, this form isn\'t available. <a href="index.html">Back to store</a></p>';
+        return;
+      }
+      document.title = f.title + " — DecoMuse";
+      document.getElementById("fTitle").textContent = f.title;
+      document.getElementById("fCrumb").textContent = f.title;
+      document.getElementById("fEyebrow").textContent = f.cat === "employee" ? "Employee form" : "Client form";
+      document.getElementById("fIntro").textContent = f.intro || "";
+      document.getElementById("fBtns").innerHTML =
+        '<button class="btn btn--outline btn--sm" type="button" onclick="dmDownloadFormPDF(document.querySelector(\'form[data-client-form]\'),' + JSON.stringify(f.title) + ')">⬇ Download PDF</button> ' +
+        '<button class="btn btn--outline btn--sm" type="button" onclick="window.print()">🖨 Print</button>';
+      wrap.innerHTML = window.dmRenderForm(f);
+      if (window.dmInitForms) window.dmInitForms();
+    })();
+  </script>
+</body>
+</html>

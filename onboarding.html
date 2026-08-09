@@ -33,7 +33,10 @@
 
   <section class="section">
     <div class="container" style="max-width:760px">
-      <div style="text-align:right;margin-bottom:14px" class="no-print"><button class="btn btn--outline btn--sm" type="button" onclick="window.print()">⬇ Download / Print</button></div>
+      <div style="text-align:right;margin-bottom:14px" class="no-print">
+        <button class="btn btn--outline btn--sm" type="button" onclick="dmDownloadFormPDF(document.querySelector('form[data-client-form]'),'New Client Onboarding')">⬇ Download PDF</button>
+        <button class="btn btn--outline btn--sm" type="button" onclick="window.print()">🖨 Print</button>
+      </div>
       <div class="form-card">
         <form data-client-form="Client Onboarding" name="Client Onboarding" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-success="Thank you! Your onboarding details have been sent to DecoMuse. We'll be in touch shortly to get started. 💛">
           <input type="hidden" name="form-name" value="Client Onboarding">
@@ -83,6 +86,14 @@
 
           <label class="consent"><input type="checkbox" name="Consent to contact" required aria-label="Consent to contact & privacy"> I agree to be contacted by DecoMuse about my project and consent to DecoMuse collecting these details, per the <a href="policy.html?doc=privacy" target="_blank">Privacy Policy</a>. *</label>
 
+          <div class="form-sec-title">Signature</div>
+          <div class="sig-block">
+            <label>Draw your signature *</label>
+            <div class="sig-pad"><canvas class="sig-canvas" aria-label="Signature pad"></canvas><button type="button" class="sig-clear">Clear</button></div>
+            <div class="sig-hint">Sign above with your mouse or finger. Signature is required.</div>
+            <input type="hidden" name="Signature image" class="sig-input">
+          </div>
+
           <button type="submit" class="btn btn--primary btn--block" style="margin-top:18px">Submit onboarding</button>
           <div class="form-success"></div>
         </form>
@@ -91,6 +102,7 @@
   </section>
 
   <div id="site-footer"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="js/data.js"></script>
   <script src="js/components.js"></script>
   <script src="js/cart.js"></script>
