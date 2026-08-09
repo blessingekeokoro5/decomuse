@@ -1,6 +1,8 @@
 User-agent: *
 Allow: /
 Disallow: /admin.html
+Disallow: /onboarding.html
+Disallow: /agreement.html
 Disallow: /checkout.html
 Disallow: /order-confirmed.html
 

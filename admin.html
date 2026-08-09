@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Add Product — DecoMuse Admin</title>
-  <meta name="robots" content="noindex">
+  <title>Admin — DecoMuse</title>
+  <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -12,259 +12,237 @@
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
   <style>
-    .admin-wrap { max-width: 1100px; margin: 0 auto; padding: 30px 24px 80px; }
-    .admin-head { text-align: center; margin-bottom: 30px; }
-    .admin-grid { display: grid; grid-template-columns: 1fr 380px; gap: 30px; align-items: start; }
-    .prev-card { background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
-    .prev-media { aspect-ratio: 1/1; position: relative; }
-    .prev-tag { position: absolute; top: 12px; left: 12px; background: var(--forest); color: #fff; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 11px; border-radius: 999px; z-index: 2; }
-    .prev-tag.sale { background: var(--rose); }
-    .prev-body { padding: 22px; }
-    .prev-cat { color: var(--rose-deep); font-size: 0.66rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
-    .prev-name { font-family: var(--font-head); font-size: 1.1rem; color: var(--ink); margin: 5px 0 6px; }
-    .prev-price { font-family: var(--font-head); font-size: 1.3rem; color: var(--ink); font-weight: 600; }
-    .prev-price small { font-size: 0.8rem; color: var(--muted); text-decoration: line-through; margin-left: 7px; font-family: var(--font-body); font-weight: 400; }
-    .prev-free { color: var(--forest); font-size: 0.72rem; font-weight: 500; margin-top: 6px; }
-    .sticky-side { position: sticky; top: 20px; }
-    .admin-list { width: 100%; border-collapse: collapse; margin-top: 10px; }
-    .admin-list th, .admin-list td { text-align: left; padding: 9px 10px; border-bottom: 1px solid var(--line); font-size: 0.88rem; }
-    .admin-list th { color: var(--muted); font-weight: 500; font-size: 0.72rem; letter-spacing: 0.08em; text-transform: uppercase; }
-    .admin-code { width: 100%; min-height: 130px; font-family: ui-monospace, "Consolas", monospace; font-size: 0.8rem; padding: 14px; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: #2b2320; color: #e5d7cd; resize: vertical; }
-    .x-btn { background: none; border: none; color: var(--muted); cursor: pointer; text-decoration: underline; font-size: 0.82rem; }
-    .x-btn:hover { color: var(--rose); }
-    .admin-note { background: var(--cream-2); border-radius: var(--radius-sm); padding: 14px 16px; font-size: 0.88rem; color: var(--body); margin-bottom: 20px; }
-    @media (max-width: 860px){ .admin-grid { grid-template-columns: 1fr; } .sticky-side { position: static; } }
+    .admin-lock { width: 74px; height: 74px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center;
+      font-size: 2rem; background: linear-gradient(150deg, var(--forest), var(--forest-2)); color: #f2e2bd; }
+    .admin-head { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-bottom: 18px; }
+    .admin-tabs { display: flex; gap: 8px; border-bottom: 1px solid var(--line); margin-bottom: 22px; flex-wrap: wrap; }
+    .admin-tabs button { background: none; border: none; border-bottom: 2px solid transparent; padding: 10px 14px; cursor: pointer;
+      font-family: var(--font-body); font-size: 0.92rem; color: var(--muted); }
+    .admin-tabs button.active { color: var(--rose-deep); border-bottom-color: var(--rose); font-weight: 500; }
+    .admin-toolbar { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+    .admin-toolbar input[type=search] { flex: 1; min-width: 200px; padding: 11px 14px; border: 1.5px solid var(--line); border-radius: 10px; font-family: var(--font-body); }
+    .admin-count { font-size: 0.86rem; color: var(--muted); }
+    .db-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .db-table th { text-align: left; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); }
+    .db-table td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    .db-table tr:hover td { background: var(--cream-2); }
+    .db-type { display: inline-block; font-size: 0.72rem; padding: 3px 9px; border-radius: 99px; background: var(--blush); color: var(--rose-deep); }
+    .db-type.agreement { background: #e7ecdf; color: var(--forest); }
+    .db-view { background: none; border: none; color: var(--rose-deep); cursor: pointer; font-family: var(--font-body); font-size: 0.86rem; }
+    .db-details { background: var(--cream-2); border-radius: 10px; padding: 12px 14px; margin-top: 8px; font-size: 0.86rem; }
+    .db-details b { color: var(--ink); }
+    .admin-formcard { border: 1px solid var(--line); border-radius: var(--radius); padding: 22px; background: #fff; margin-bottom: 16px; }
+    .admin-formcard h3 { margin-bottom: 4px; }
+    .admin-empty { text-align: center; color: var(--muted); border: 1px dashed var(--line); border-radius: 12px; padding: 40px 20px; }
+    .admin-note { background: var(--blush); border-radius: 10px; padding: 12px 16px; font-size: 0.86rem; color: var(--rose-deep); margin-bottom: 18px; }
   </style>
 </head>
-<body style="background:var(--cream)">
-  <div class="admin-wrap">
-    <div class="admin-head">
-      <span class="eyebrow">DecoMuse Admin</span>
-      <h1 style="font-size:2.2rem">Add a product</h1>
-      <p style="color:var(--muted)">Fill in the details, preview it, then save to your device or copy the code into <strong>js/data.js</strong>.</p>
-    </div>
+<body data-page="admin.html">
+  <div id="site-header"></div>
 
-    <div class="admin-note">
-      🔒 This page is for you only (not linked in the menu). Products you <strong>“Save to this device”</strong> show live in your browser instantly. To make them permanent for everyone, use <strong>Copy code</strong> and paste it into <code>js/data.js</code> — or just send me the code and I'll add it.
-    </div>
-
-    <div class="admin-grid">
-      <!-- Form -->
-      <div class="form-card">
-        <form id="prodForm">
-          <div class="field"><label>Product name *</label><input id="pName" required placeholder="e.g. Rose & Vanilla Perfume"></div>
-          <div class="field-row">
-            <div class="field"><label>Category *</label>
-              <select id="pCat">
-                <option>Fragrance</option><option>Health & Wellness</option><option>Home Décor</option><option>Lifestyle</option>
-              </select>
-            </div>
-            <div class="field"><label>Price ($) *</label><input id="pPrice" type="number" min="1" step="0.01" required placeholder="95"></div>
-          </div>
-          <div class="field-row">
-            <div class="field"><label>Was price ($) — if on sale</label><input id="pWas" type="number" min="1" step="0.01" placeholder="optional"></div>
-            <div class="field"><label>Badge</label>
-              <select id="pTag"><option value="">None</option><option>New</option><option>Sale</option><option>Bestseller</option><option>Loved</option></select>
-            </div>
-          </div>
-          <div class="field-row">
-            <div class="field"><label>Placeholder colour</label>
-              <select id="pPh"><option value="rose">Rose</option><option value="forest">Forest</option><option value="espresso">Espresso</option><option value="">Blush (default)</option></select>
-            </div>
-            <div class="field"><label>Product ID (auto)</label><input id="pId" placeholder="auto-generated"></div>
-          </div>
-          <div class="field"><label>Product photo</label>
-            <input id="pImg" type="file" accept="image/*">
-            <small style="color:var(--muted);display:block;margin-top:6px">A square photo looks best. It's saved to this device so it shows instantly on the shop, cart &amp; checkout. To make it permanent for all visitors, also save the file as <code>assets/products/&lt;id&gt;.jpg</code>.</small>
-          </div>
-          <label class="lead" style="display:flex;align-items:center;gap:10px;font-size:0.92rem;margin-bottom:18px">
-            <input type="checkbox" id="pFree" style="width:auto;accent-color:var(--rose)"> Show a “Free shipping” badge
-          </label>
-          <div class="btn-row">
-            <button type="submit" class="btn btn--primary">＋ Add to list</button>
-            <button type="button" class="btn btn--outline" onclick="resetForm()">Clear form</button>
-          </div>
+  <!-- Lock screen -->
+  <section class="section" id="adminGate">
+    <div class="container" style="max-width:460px">
+      <div class="form-card" style="text-align:center">
+        <div class="admin-lock">🔒</div>
+        <span class="eyebrow">Admin access only</span>
+        <h1 style="font-size:1.6rem;margin:6px 0 8px">DecoMuse Admin</h1>
+        <p style="color:var(--muted)">Sorry, this area is for <strong>DecoMuse admin use only</strong>. Please sign in to continue.</p>
+        <form id="adminLoginForm" style="margin-top:8px">
+          <div class="field"><label>Admin password</label><input id="adminPw" type="password" autocomplete="current-password" required></div>
+          <button class="btn btn--primary btn--block" type="submit">Sign in</button>
+          <div id="adminErr" style="color:var(--rose-deep);font-size:0.86rem;margin-top:10px;display:none">Incorrect password. Please try again.</div>
         </form>
-      </div>
-
-      <!-- Live preview -->
-      <div class="sticky-side">
-        <span class="eyebrow">Live preview</span>
-        <div class="prev-card" id="prevCard" style="margin-top:8px"></div>
+        <p style="font-size:0.8rem;color:var(--muted);margin-top:14px"><a href="index.html">← Back to store</a></p>
       </div>
     </div>
+  </section>
 
-    <!-- Session list -->
-    <div style="margin-top:40px">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
-        <h2 style="font-size:1.5rem;margin:0">Products to add (<span id="count">0</span>)</h2>
-        <div class="btn-row">
-          <button class="btn btn--forest btn--sm" onclick="saveToDevice()">💾 Save to this device (show live)</button>
-          <button class="btn btn--outline btn--sm" onclick="clearDrafts()">Clear device drafts</button>
+  <!-- Admin panel -->
+  <section class="section" id="adminPanel" style="display:none">
+    <div class="container">
+      <div class="admin-head">
+        <div><span class="eyebrow">DecoMuse admin</span><h1 style="margin:2px 0 0">Dashboard</h1></div>
+        <button class="btn btn--outline btn--sm" onclick="adminLogout()">Log out</button>
+      </div>
+
+      <div class="admin-tabs" id="adminTabs">
+        <button class="active" data-tab="base">Customer base</button>
+        <button data-tab="forms">Client forms</button>
+        <button data-tab="settings">Settings</button>
+      </div>
+
+      <!-- Customer base -->
+      <div id="tabBase">
+        <div class="admin-toolbar">
+          <input type="search" id="dbSearch" placeholder="Search by name, email, type…" oninput="renderDB()">
+          <span class="admin-count" id="dbCount"></span>
+          <button class="btn btn--outline btn--sm" onclick="exportDB('csv')">Export CSV</button>
+          <button class="btn btn--outline btn--sm" onclick="exportDB('json')">Export JSON</button>
+          <label class="btn btn--outline btn--sm" style="cursor:pointer;margin:0">Import<input type="file" accept="application/json" onchange="importDB(this)" hidden></label>
+          <button class="btn btn--outline btn--sm" onclick="clearDB()" style="color:var(--rose-deep)">Clear all</button>
+        </div>
+        <div id="dbTableWrap"></div>
+      </div>
+
+      <!-- Client forms -->
+      <div id="tabForms" hidden>
+        <div class="admin-note">Share these links with new clients, or open &amp; print them as a PDF. Every completed form emails you and lands in your Customer base above.</div>
+        <div class="admin-formcard">
+          <h3>New client onboarding</h3>
+          <p style="color:var(--muted)">Capture a new client's contact details, project brief, budget, timeline &amp; style preferences.</p>
+          <div class="btn-row" style="margin-top:12px">
+            <a class="btn btn--dark btn--sm" href="onboarding.html" target="_blank" rel="noopener">Open form</a>
+            <button class="btn btn--outline btn--sm" onclick="copyLink('onboarding.html', this)">Copy share link</button>
+            <a class="btn btn--outline btn--sm" href="onboarding.html?print=1" target="_blank" rel="noopener">Download / Print</a>
+          </div>
+        </div>
+        <div class="admin-formcard">
+          <h3>Service agreement</h3>
+          <p style="color:var(--muted)">Terms of service with a typed signature &amp; consent, for clients booking a styling, design, vacation-rental or personal-shopping service.</p>
+          <div class="btn-row" style="margin-top:12px">
+            <a class="btn btn--dark btn--sm" href="agreement.html" target="_blank" rel="noopener">Open form</a>
+            <button class="btn btn--outline btn--sm" onclick="copyLink('agreement.html', this)">Copy share link</button>
+            <a class="btn btn--outline btn--sm" href="agreement.html?print=1" target="_blank" rel="noopener">Download / Print</a>
+          </div>
         </div>
       </div>
-      <table class="admin-list" id="listTable"><thead><tr><th>ID</th><th>Name</th><th>Category</th><th>Price</th><th>Badge</th><th></th></tr></thead><tbody></tbody></table>
-      <p id="emptyMsg" style="color:var(--muted);padding:14px 0">No products added yet — fill the form above and click “Add to list”.</p>
-    </div>
 
-    <!-- Generated code -->
-    <div style="margin-top:34px">
-      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px">
-        <h2 style="font-size:1.5rem;margin:0">Code for js/data.js</h2>
-        <button class="btn btn--primary btn--sm" onclick="copyCode()">📋 Copy code</button>
+      <!-- Settings -->
+      <div id="tabSettings" hidden>
+        <div class="admin-note">Change your admin password on this device. To change it across all devices permanently, update <b>ADMIN_DEFAULT</b> in <b>admin.html</b> and redeploy.</div>
+        <div class="admin-formcard" style="max-width:420px">
+          <h3>Change admin password</h3>
+          <div class="field"><label>New password</label><input id="newPw" type="password"></div>
+          <div class="field"><label>Confirm new password</label><input id="newPw2" type="password"></div>
+          <button class="btn btn--dark btn--sm" onclick="changePw()">Update password</button>
+          <div id="pwMsg" style="font-size:0.86rem;margin-top:10px"></div>
+        </div>
       </div>
-      <p style="color:var(--muted);font-size:0.88rem;margin:8px 0">Paste these line(s) inside the <code>const PRODUCTS = [ … ]</code> list in <code>js/data.js</code> (before the closing <code>];</code>). Each line ends with a comma.</p>
-      <textarea class="admin-code" id="codeOut" readonly placeholder="Your product code appears here…"></textarea>
     </div>
+  </section>
 
-    <div style="text-align:center;margin-top:30px"><a class="btn btn--outline" href="index.html">← Back to site</a></div>
-  </div>
-
+  <div id="site-footer"></div>
   <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/admin.js"></script>
   <script>
-    const money = (n) => "$" + Number(n).toLocaleString("en-AU");
-    let draft = [];
-    let currentImgData = "";
+    /* ===== Admin gate ===== */
+    // Default password — CHANGE THIS, then redeploy, to lock the admin area permanently.
+    const ADMIN_DEFAULT = "decomuse-admin";
+    function adminStoredHash() { return localStorage.getItem("dm_admin_pin") || dmHash(ADMIN_DEFAULT); }
+    function isAuthed() { try { return sessionStorage.getItem("dm_admin_ok") === "1"; } catch (e) { return false; } }
 
-    // Resize an uploaded photo to keep localStorage light, then return a JPEG data URL.
-    function fileToResizedDataURL(file, maxW, cb) {
-      const reader = new FileReader();
-      reader.onload = (e) => {
-        const img = new Image();
-        img.onload = () => {
-          const scale = Math.min(1, maxW / img.width);
-          const w = Math.round(img.width * scale), h = Math.round(img.height * scale);
-          const c = document.createElement("canvas"); c.width = w; c.height = h;
-          c.getContext("2d").drawImage(img, 0, 0, w, h);
-          cb(c.toDataURL("image/jpeg", 0.82));
-        };
-        img.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
+    function showAdmin() {
+      document.getElementById("adminGate").style.display = "none";
+      document.getElementById("adminPanel").style.display = "";
+      renderDB();
     }
+    function adminLogout() { try { sessionStorage.removeItem("dm_admin_ok"); } catch (e) {} location.reload(); }
 
-    // Suggest a unique ID from category prefix + next number
-    function suggestId(cat) {
-      const prefix = { "Fragrance": "f", "Health & Wellness": "h", "Home Décor": "p", "Lifestyle": "l" }[cat] || "x";
-      const all = PRODUCTS.concat(draft);
-      let n = 1;
-      while (all.some(p => p.id === prefix + String(n).padStart(2, "0"))) n++;
-      return prefix + String(n).padStart(2, "0");
-    }
-
-    function currentProduct() {
-      const name = document.getElementById("pName").value.trim();
-      const cat = document.getElementById("pCat").value;
-      const price = parseFloat(document.getElementById("pPrice").value);
-      const was = parseFloat(document.getElementById("pWas").value);
-      const tag = document.getElementById("pTag").value;
-      const ph = document.getElementById("pPh").value;
-      const free = document.getElementById("pFree").checked;
-      let id = document.getElementById("pId").value.trim() || suggestId(cat);
-      const p = { id, name, cat, price };
-      if (was) p.was = was;
-      if (tag) p.tag = tag;
-      p.ph = ph;
-      if (free) p.freeship = true;
-      if (currentImgData) p.img = currentImgData;
-      return p;
-    }
-
-    function renderPreview() {
-      const p = currentProduct();
-      const tag = p.tag ? `<span class="prev-tag ${/sale/i.test(p.tag) ? "sale" : ""}">${p.tag}</span>` : "";
-      const was = p.was ? `<small>${money(p.was)}</small>` : "";
-      const media = p.img
-        ? `${tag}<div class="ph ${p.ph}" data-label="${p.name || "Product name"}"><img class="ph-img" src="${p.img}" alt="${p.name || "Product"}"></div>`
-        : `${tag}<div class="ph ${p.ph}" data-label="${p.name || "Product name"}"></div>`;
-      document.getElementById("prevCard").innerHTML = `
-        <div class="prev-media">${media}</div>
-        <div class="prev-body">
-          <div class="prev-cat">${p.cat}</div>
-          <div class="prev-name">${p.name || "Product name"}</div>
-          <div class="prev-price">${p.price ? money(p.price) : "$0"}${was}</div>
-          ${p.freeship ? `<div class="prev-free">🚚 Free shipping</div>` : ""}
-        </div>`;
-      // keep the ID field showing the suggestion
-      const idField = document.getElementById("pId");
-      if (!idField.value.trim()) idField.placeholder = suggestId(p.cat);
-    }
-
-    function renderList() {
-      const tb = document.querySelector("#listTable tbody");
-      document.getElementById("count").textContent = draft.length;
-      document.getElementById("emptyMsg").style.display = draft.length ? "none" : "block";
-      document.getElementById("listTable").style.display = draft.length ? "table" : "none";
-      tb.innerHTML = draft.map((p, i) => `<tr>
-        <td>${p.id}</td><td>${p.name}</td><td>${p.cat}</td><td>${money(p.price)}</td><td>${p.tag || "–"}</td>
-        <td><button class="x-btn" onclick="removeDraft(${i})">remove</button></td></tr>`).join("");
-      renderCode();
-    }
-
-    function codeLine(p) {
-      let s = `  { id: "${p.id}", name: ${JSON.stringify(p.name)}, cat: ${JSON.stringify(p.cat)}, price: ${p.price}`;
-      if (p.was) s += `, was: ${p.was}`;
-      if (p.tag) s += `, tag: ${JSON.stringify(p.tag)}`;
-      s += `, ph: ${JSON.stringify(p.ph || "")}`;
-      if (p.img) { const imgPath = p.img.indexOf("data:") === 0 ? `assets/products/${p.id}.jpg` : p.img; s += `, img: ${JSON.stringify(imgPath)}`; }
-      if (p.freeship) s += `, freeship: true`;
-      s += ` },`;
-      return s;
-    }
-    function renderCode() {
-      document.getElementById("codeOut").value = draft.map(codeLine).join("\n");
-    }
-
-    function removeDraft(i) { draft.splice(i, 1); renderList(); }
-
-    document.getElementById("prodForm").addEventListener("submit", (e) => {
+    document.getElementById("adminLoginForm").addEventListener("submit", function (e) {
       e.preventDefault();
-      const p = currentProduct();
-      if (!p.name || !p.price) return;
-      if (draft.some(x => x.id === p.id) || PRODUCTS.some(x => x.id === p.id)) { alert("That ID is already used — clear the ID field to auto-generate a new one."); return; }
-      draft.push(p);
-      renderList();
-      resetForm();
-    });
-
-    function resetForm() {
-      document.getElementById("prodForm").reset();
-      document.getElementById("pId").value = "";
-      currentImgData = "";
-      renderPreview();
-    }
-
-    document.getElementById("pImg").addEventListener("change", (e) => {
-      const f = e.target.files && e.target.files[0];
-      if (!f) { currentImgData = ""; renderPreview(); return; }
-      fileToResizedDataURL(f, 900, (data) => { currentImgData = data; renderPreview(); });
-    });
-
-    function saveToDevice() {
-      if (!draft.length) { alert("Add at least one product to the list first."); return; }
-      let existing = [];
-      try { existing = JSON.parse(localStorage.getItem("dm_admin_products") || "[]"); } catch (e) {}
-      const merged = existing.concat(draft.filter(p => !existing.some(x => x.id === p.id)));
-      localStorage.setItem("dm_admin_products", JSON.stringify(merged));
-      alert("Saved! These " + draft.length + " product(s) now show live on this device. Open the Shop to see them.\n\nTo make them permanent for all visitors, use ‘Copy code’ and paste into js/data.js.");
-    }
-    function clearDrafts() {
-      if (confirm("Remove all products you saved to this device? (Your permanent ones in data.js are untouched.)")) {
-        localStorage.removeItem("dm_admin_products");
-        alert("Device drafts cleared. Refresh the shop to update.");
+      const pw = document.getElementById("adminPw").value;
+      if (dmHash(pw) === adminStoredHash()) {
+        try { sessionStorage.setItem("dm_admin_ok", "1"); } catch (er) {}
+        showAdmin();
+      } else {
+        document.getElementById("adminErr").style.display = "block";
       }
+    });
+
+    /* ===== Tabs ===== */
+    document.getElementById("adminTabs").addEventListener("click", function (e) {
+      const btn = e.target.closest("button"); if (!btn) return;
+      document.querySelectorAll("#adminTabs button").forEach(b => b.classList.toggle("active", b === btn));
+      const tab = btn.dataset.tab;
+      document.getElementById("tabBase").hidden = tab !== "base";
+      document.getElementById("tabForms").hidden = tab !== "forms";
+      document.getElementById("tabSettings").hidden = tab !== "settings";
+    });
+
+    /* ===== Customer base ===== */
+    function fieldVal(rec, re) { const f = (rec.fields || []).find(x => re.test(x[0])); return f ? f[1] : ""; }
+    function renderDB() {
+      const q = (document.getElementById("dbSearch").value || "").toLowerCase();
+      let db = dmGetDB();
+      if (q) db = db.filter(r => JSON.stringify(r).toLowerCase().includes(q));
+      document.getElementById("dbCount").textContent = db.length + (db.length === 1 ? " record" : " records");
+      const wrap = document.getElementById("dbTableWrap");
+      if (!db.length) { wrap.innerHTML = `<div class="admin-empty">No submissions yet. Share a client form to start building your customer base.</div>`; return; }
+      wrap.innerHTML = `<div style="overflow-x:auto"><table class="db-table"><thead><tr>
+        <th>Date</th><th>Type</th><th>Name</th><th>Email</th><th></th></tr></thead><tbody>${
+        db.map(r => {
+          const d = new Date(r.date);
+          const name = fieldVal(r, /name/i), email = fieldVal(r, /email/i);
+          const cls = /agreement/i.test(r.type) ? "db-type agreement" : "db-type";
+          const rows = (r.fields || []).map(f => `<div><b>${f[0]}:</b> ${String(f[1] || "").replace(/</g, "&lt;")}</div>`).join("");
+          return `<tr>
+            <td>${d.toLocaleDateString()}<br><small style="color:var(--muted)">${d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</small></td>
+            <td><span class="${cls}">${r.type}</span></td>
+            <td>${name || "—"}</td>
+            <td>${email ? `<a href="mailto:${email}">${email}</a>` : "—"}</td>
+            <td><button class="db-view" onclick="this.closest('tr').nextElementSibling.hidden=!this.closest('tr').nextElementSibling.hidden">View</button></td>
+          </tr>
+          <tr hidden><td colspan="5"><div class="db-details">${rows}</div></td></tr>`;
+        }).join("")}</tbody></table></div>`;
     }
-    function copyCode() {
-      const el = document.getElementById("codeOut");
-      if (!el.value) { alert("Add a product to the list first."); return; }
-      el.select();
-      if (navigator.clipboard) navigator.clipboard.writeText(el.value).then(() => alert("Code copied! Paste it into the PRODUCTS list in js/data.js."));
-      else { document.execCommand("copy"); alert("Code copied!"); }
+    function exportDB(fmt) {
+      const db = dmGetDB();
+      if (!db.length) { alert("No records to export yet."); return; }
+      let blob, name;
+      if (fmt === "json") { blob = new Blob([JSON.stringify(db, null, 2)], { type: "application/json" }); name = "decomuse-customers.json"; }
+      else {
+        const keys = {}; db.forEach(r => (r.fields || []).forEach(f => keys[f[0]] = 1));
+        const cols = ["Date", "Type"].concat(Object.keys(keys));
+        const esc = v => `"${String(v == null ? "" : v).replace(/"/g, '""')}"`;
+        const lines = [cols.map(esc).join(",")];
+        db.forEach(r => {
+          const map = {}; (r.fields || []).forEach(f => map[f[0]] = f[1]);
+          lines.push(cols.map(c => esc(c === "Date" ? new Date(r.date).toLocaleString() : c === "Type" ? r.type : map[c] || "")).join(","));
+        });
+        blob = new Blob([lines.join("\n")], { type: "text/csv" }); name = "decomuse-customers.csv";
+      }
+      const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = name; a.click();
+    }
+    function importDB(input) {
+      const file = input.files[0]; if (!file) return;
+      const reader = new FileReader();
+      reader.onload = e => {
+        try {
+          const incoming = JSON.parse(e.target.result);
+          if (!Array.isArray(incoming)) throw 0;
+          const db = dmGetDB(), ids = new Set(db.map(r => r.id));
+          incoming.forEach(r => { if (!ids.has(r.id)) db.push(r); });
+          db.sort((a, b) => new Date(b.date) - new Date(a.date));
+          dmSetDB(db); renderDB(); alert("Imported " + incoming.length + " record(s).");
+        } catch (er) { alert("That file wasn't a valid DecoMuse export."); }
+      };
+      reader.readAsText(file); input.value = "";
+    }
+    function clearDB() { if (confirm("Delete ALL customer records on this device? Export first if you want a backup.")) { dmSetDB([]); renderDB(); } }
+
+    /* ===== Forms & settings ===== */
+    function copyLink(path, btn) {
+      const url = location.origin + location.pathname.replace(/admin\.html$/, "") + path;
+      const done = () => { const o = btn.textContent; btn.textContent = "Copied!"; setTimeout(() => btn.textContent = o, 1500); };
+      if (navigator.clipboard) navigator.clipboard.writeText(url).then(done, () => prompt("Copy this link:", url));
+      else prompt("Copy this link:", url);
+    }
+    function changePw() {
+      const a = document.getElementById("newPw").value, b = document.getElementById("newPw2").value;
+      const msg = document.getElementById("pwMsg");
+      if (!a || a.length < 4) { msg.style.color = "var(--rose-deep)"; msg.textContent = "Choose a password of at least 4 characters."; return; }
+      if (a !== b) { msg.style.color = "var(--rose-deep)"; msg.textContent = "Passwords don't match."; return; }
+      localStorage.setItem("dm_admin_pin", dmHash(a));
+      msg.style.color = "var(--forest)"; msg.textContent = "✓ Password updated on this device.";
+      document.getElementById("newPw").value = ""; document.getElementById("newPw2").value = "";
     }
 
-    ["pName","pCat","pPrice","pWas","pTag","pPh","pFree","pId"].forEach(id =>
-      document.getElementById(id).addEventListener("input", renderPreview));
-    renderPreview(); renderList();
+    // Auto-open if already signed in this session
+    if (isAuthed()) showAdmin();
   </script>
 </body>
 </html>

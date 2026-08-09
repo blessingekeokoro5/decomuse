@@ -429,7 +429,8 @@ function buildFooter() {
           <a href="policy.html?doc=delivery">Delivery &amp; Shipping</a> ·
           <a href="policy.html?doc=returns">Returns</a> ·
           <a href="policy.html?doc=privacy">Privacy</a> ·
-          <a href="policy.html?doc=terms">Terms</a>
+          <a href="policy.html?doc=terms">Terms</a> ·
+          <a href="admin.html" title="Admin sign-in">🔒 Admin</a>
         </span>
       </div>
     </div>
