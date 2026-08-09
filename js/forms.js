@@ -55,10 +55,17 @@
     var body = renderFields(f.fields || []);
     if (f.terms) body += '<div class="form-sec-title">Terms</div><div class="terms">' + f.terms + '</div>';
     if (!f.noSignature) body += SIGNATURE_BLOCK;
-    return '<form data-client-form="' + esc(f.title) + '" data-success="' + esc(f.success || "Thank you! Your form has been submitted to DecoMuse. 💛") + '">' +
-      body +
-      '<button type="submit" class="btn btn--primary btn--block" style="margin-top:18px">' + (f.submit || "Submit form") + '</button>' +
-      '<div class="form-success"></div></form>';
+    var buttons;
+    if (f.sendToClient) {
+      buttons = '<div class="btn-row" style="margin-top:18px">' +
+        '<button type="submit" class="btn btn--primary">' + (f.submit || "Save invoice") + '</button>' +
+        '<button type="button" class="btn btn--dark" onclick="dmSendFilledForm(this.closest(\'form\'))">✉ Email invoice to client</button>' +
+        '</div>';
+    } else {
+      buttons = '<button type="submit" class="btn btn--primary btn--block" style="margin-top:18px">' + (f.submit || "Submit form") + '</button>';
+    }
+    return '<form data-client-form="' + esc(f.title) + '"' + (f.invoice ? ' data-invoice="1"' : '') + ' data-success="' + esc(f.success || "Thank you! Your form has been submitted to DecoMuse. 💛") + '">' +
+      body + buttons + '<div class="form-success"></div></form>';
   };
 
   // Shorthand builders
@@ -236,7 +243,7 @@
       intro: "DecoMuse tax invoice.",
       success: "Invoice saved.",
       submit: "Save invoice",
-      noSignature: true, sendToClient: true,
+      noSignature: true, sendToClient: true, invoice: true,
       fields: [
         { sec: "Bill to (customer)" },
         { name: "Client name", label: "Customer name", required: true, half: true },

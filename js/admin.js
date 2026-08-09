@@ -26,6 +26,7 @@
   // Build & download a blank, fillable PDF of a client form (uses jsPDF if loaded, else prints)
   window.dmDownloadFormPDF = function (form, title) {
     if (!form) return;
+    title = title || (form.getAttribute && form.getAttribute("data-client-form")) || "DecoMuse form";
     if (!(window.jspdf && window.jspdf.jsPDF)) { window.print(); return; }
     var doc = new window.jspdf.jsPDF({ unit: "pt", format: "a4" });
     var M = 48, PH = doc.internal.pageSize.getHeight(), maxW = doc.internal.pageSize.getWidth() - M * 2, y = M;
@@ -57,29 +58,93 @@
     doc.save((title || "DecoMuse-form").replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") + ".pdf");
   };
 
+  // Branded, filled INVOICE pdf — logo + "DecoMuse Official" + Bill To + amounts + status
+  window.dmInvoicePDF = function (form) {
+    if (!form) return;
+    if (!(window.jspdf && window.jspdf.jsPDF)) { window.print(); return; }
+    var data = (typeof collectForm === "function") ? collectForm(form) : [];
+    var map = {}; data.forEach(function (p) { if (p && p[0]) map[p[0]] = p[1]; });
+    var g = function (k) { return map[k] == null ? "" : String(map[k]); };
+    var money = function (v) { if (v == null || String(v).trim() === "") return ""; var n = Number(String(v).replace(/[^0-9.\-]/g, "")); return isNaN(n) ? String(v) : "$" + n.toFixed(2); };
+    var img = new Image();
+    img.onload = function () { try { var c = document.createElement("canvas"); c.width = img.naturalWidth; c.height = img.naturalHeight; c.getContext("2d").drawImage(img, 0, 0); build(c.toDataURL("image/jpeg", 0.92), img.naturalWidth / img.naturalHeight); } catch (e) { build(null, 1.4); } };
+    img.onerror = function () { build(null, 1.4); };
+    img.src = "assets/logo.jpg";
+    function build(logo, ratio) {
+      var doc = new window.jspdf.jsPDF({ unit: "pt", format: "a4" });
+      var M = 48, PW = doc.internal.pageSize.getWidth(), y = 52;
+      if (logo) { var lw = 118, lh = lw / (ratio || 1.4); try { doc.addImage(logo, "JPEG", M, y, lw, lh); } catch (e) {} }
+      doc.setFont("helvetica", "bold"); doc.setFontSize(13); doc.setTextColor(71, 86, 59); doc.text("DecoMuse Official", PW - M, y + 12, { align: "right" });
+      doc.setFont("helvetica", "normal"); doc.setFontSize(9.5); doc.setTextColor(90, 80, 76);
+      ["ABN 41 991 812 955", "decormuseofficial@outlook.com", "0451 609 398", "www.decomuse.com.au"].forEach(function (t, i) { doc.text(t, PW - M, y + 28 + i * 13, { align: "right" }); });
+      y += 96;
+      doc.setDrawColor(71, 86, 59); doc.setLineWidth(1.4); doc.line(M, y, PW - M, y); y += 26;
+      doc.setFont("helvetica", "bold"); doc.setFontSize(9); doc.setTextColor(165, 88, 106); doc.text("BILL TO", M, y);
+      doc.setFontSize(12); doc.setTextColor(44, 38, 35); doc.text(g("Client name") || "-", M, y + 17);
+      doc.setFont("helvetica", "normal"); doc.setFontSize(10);
+      var bl = [g("Client address"), g("Client phone"), g("Email")].filter(Boolean);
+      bl.forEach(function (t, i) { doc.text(String(t), M, y + 33 + i * 13); });
+      doc.setFontSize(10); doc.setTextColor(44, 38, 35);
+      doc.text("Invoice #  " + (g("Invoice number") || "-"), PW - M, y, { align: "right" });
+      doc.text("Date  " + (g("Invoice date") || "-"), PW - M, y + 16, { align: "right" });
+      doc.text("Due  " + (g("Due date") || "-"), PW - M, y + 32, { align: "right" });
+      var st = (g("Status") || "Unpaid"), s = st.toLowerCase();
+      var sc = s === "paid" ? [71, 86, 59] : s === "overdue" ? [178, 58, 58] : s.indexOf("partial") >= 0 ? [198, 161, 91] : [165, 88, 106];
+      doc.setFillColor(sc[0], sc[1], sc[2]); doc.roundedRect(PW - M - 96, y + 44, 96, 20, 10, 10, "F");
+      doc.setTextColor(255, 255, 255); doc.setFont("helvetica", "bold"); doc.setFontSize(9); doc.text(st.toUpperCase(), PW - M - 48, y + 57, { align: "center" });
+      y += 33 + bl.length * 13 + 28;
+      if (g("Description")) { doc.setFont("helvetica", "bold"); doc.setFontSize(9); doc.setTextColor(165, 88, 106); doc.text("DETAILS", M, y); y += 15; doc.setFont("helvetica", "normal"); doc.setFontSize(10); doc.setTextColor(44, 38, 35); doc.splitTextToSize(g("Description"), PW - 2 * M).forEach(function (ln) { doc.text(ln, M, y); y += 14; }); y += 8; }
+      function amt(label, v, bold) { if (!v) return; doc.setFont("helvetica", bold ? "bold" : "normal"); doc.setFontSize(bold ? 12 : 10.5); doc.setTextColor(44, 38, 35); doc.text(label, M, y); doc.text(money(v), PW - M, y, { align: "right" }); doc.setDrawColor(228); doc.setLineWidth(0.7); doc.line(M, y + 7, PW - M, y + 7); y += 23; }
+      amt("Amount (ex GST)", g("Amount")); amt("GST", g("GST")); amt("Total (incl GST)", g("Total"), true); amt("Amount paid", g("Amount paid")); amt("Balance due", g("Balance due"), true);
+      if (g("Payment details")) {
+        y += 10;
+        var pd = doc.splitTextToSize(g("Payment details") + (g("Payment terms") ? "\nTerms: " + g("Payment terms") : ""), PW - 2 * M - 28);
+        var h = Math.max(52, 30 + pd.length * 12);
+        doc.setFillColor(246, 238, 232); doc.roundedRect(M, y, PW - 2 * M, h, 8, 8, "F");
+        doc.setFont("helvetica", "bold"); doc.setFontSize(10); doc.setTextColor(44, 38, 35); doc.text("Payment details", M + 14, y + 18);
+        doc.setFont("helvetica", "normal"); doc.setFontSize(9.5); doc.setTextColor(90, 80, 76);
+        pd.forEach(function (ln, i) { doc.text(ln, M + 14, y + 33 + i * 12); });
+        y += h + 14;
+      }
+      doc.setFontSize(10);
+      if (s === "paid") { doc.setTextColor(71, 86, 59); doc.text("Paid - thank you!", M, y); }
+      else { doc.setTextColor(165, 88, 106); var due = g("Due date"); doc.text("Payment reminder: " + (due ? "due by " + due : "please arrange payment") + (g("Invoice number") ? " (ref " + g("Invoice number") + ")" : ""), M, y); }
+      doc.save("Invoice-" + (g("Invoice number") || Date.now()) + ".pdf");
+    }
+  };
+
   // Email a filled form (e.g. an invoice) to the recipient found in its Email field (via Brevo)
   window.dmSendFilledForm = async function (form, title) {
     if (!form) return;
+    title = title || (form.getAttribute && form.getAttribute("data-client-form")) || "Invoice";
     var data = (typeof collectForm === "function") ? collectForm(form) : [];
     var emailPair = data.find(function (d) { return /email/i.test(d[0]); });
     var namePair = data.find(function (d) { return /name/i.test(d[0]); });
     var email = emailPair ? emailPair[1] : "";
     if (!email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { alert("Please enter the client's email in the form first."); return; }
+    // Always save my own copy to the Customer base first (whether or not the email sends)
+    window.dmSaveClient(title, data);
     var clean = data.filter(function (p) { return !/^data:image\//.test(String(p[1])); });
     var out = form.querySelector(".form-success");
     var sent = false;
     try {
       var res = await fetch("/.netlify/functions/send-invoice", {
         method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email, name: namePair ? namePair[1] : "", title: title || "Invoice", fields: clean })
+        body: JSON.stringify({ email: email, name: namePair ? namePair[1] : "", title: title, fields: clean })
       });
       var d = await res.json().catch(function () { return {}; });
       sent = res.ok && d.ok;
     } catch (e) { sent = false; }
-    if (sent) { if (out) { out.classList.add("show"); out.innerHTML = "✓ Sent to " + email + " (copy in your inbox)."; } window.dmSaveClient(title || "Invoice", data); return; }
-    // Fallback: open the admin's email app pre-filled
-    var body = "Please find your DecoMuse " + (title || "invoice").toLowerCase() + " details below:\n\n" + clean.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n\nThank you,\nDecoMuse";
-    location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent((title || "Invoice") + " — DecoMuse") + "&body=" + encodeURIComponent(body);
+    if (out) {
+      out.classList.add("show");
+      out.innerHTML = sent
+        ? "✓ Emailed to " + email + " — a copy is saved in your Customer base and inbox."
+        : "Saved to your Customer base. Opening your email app to send it…";
+    }
+    if (!sent) {
+      var body = "Please find your DecoMuse " + title.toLowerCase() + " details below:\n\n" + clean.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n\nThank you,\nDecoMuse";
+      location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent(title + " — DecoMuse") + "&body=" + encodeURIComponent(body);
+    }
   };
 
   // Signature pads — draw with mouse/finger; value stored as a PNG data URL in .sig-input
@@ -151,8 +216,7 @@
     try {
       if (/[?&]pdf=1/.test(location.search)) {
         var f = document.querySelector("form[data-client-form]");
-        var t = f ? f.getAttribute("data-client-form") : "DecoMuse form";
-        setTimeout(function () { window.dmDownloadFormPDF(f, t); }, 1000);
+        setTimeout(function () { if (f && f.getAttribute("data-invoice")) window.dmInvoicePDF(f); else window.dmDownloadFormPDF(f); }, 1000);
       } else if (/[?&]print=1/.test(location.search)) {
         setTimeout(function () { window.print(); }, 600);
       }
