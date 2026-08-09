@@ -61,18 +61,18 @@
       <div class="section-head reveal"><span class="eyebrow">Apply now</span><h2>Send us your application</h2>
         <p>Tell us about you and how you'd love to contribute. Fields marked * are required.</p></div>
       <div class="form-card reveal">
-        <form data-demo-form data-form-name="Careers application" data-success-msg="Thank you for applying! We've received your application and will be in touch if there's a fit. 💛">
+        <form id="careerForm" enctype="multipart/form-data">
           <div class="field-row">
-            <div class="field"><label>Your name *</label><input required></div>
-            <div class="field"><label>Email *</label><input type="email" required></div>
+            <div class="field"><label>Your name *</label><input name="Name" required></div>
+            <div class="field"><label>Email *</label><input name="Email" type="email" required></div>
           </div>
           <div class="field-row">
-            <div class="field"><label>Phone</label><input type="tel"></div>
-            <div class="field"><label>Where are you based?</label><input placeholder="City / state"></div>
+            <div class="field"><label>Phone</label><input name="Phone" type="tel"></div>
+            <div class="field"><label>Where are you based?</label><input name="Location" placeholder="City / state"></div>
           </div>
           <div class="field-row">
             <div class="field"><label>Role you're interested in *</label>
-              <select required>
+              <select name="Role" required>
                 <option value="">Select a role</option>
                 <option>Stylist / Stager</option>
                 <option>Interior Designer</option>
@@ -82,11 +82,17 @@
                 <option>Marketing / Operations</option>
                 <option>General / Other</option>
               </select></div>
-            <div class="field"><label>Portfolio / LinkedIn (link)</label><input placeholder="https://"></div>
+            <div class="field"><label>Portfolio / LinkedIn (link)</label><input name="Portfolio" placeholder="https://"></div>
           </div>
-          <div class="field"><label>Tell us about yourself *</label><textarea required placeholder="Your experience, what you love doing, and why DecoMuse. Feel free to paste a link to your résumé/CV." style="min-height:120px"></textarea></div>
-          <button type="submit" class="btn btn--primary btn--block">Submit application</button>
-          <div class="form-success"></div>
+          <div class="field"><label>Tell us about yourself *</label><textarea name="About" required placeholder="Your experience, what you love doing, and why DecoMuse." style="min-height:120px"></textarea></div>
+          <div class="field">
+            <label>Upload your CV / résumé <small style="color:var(--muted)">(PDF or Word, max 5MB)</small></label>
+            <input id="cvFile" name="attachment" type="file" accept=".pdf,.doc,.docx,.rtf,.txt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                   style="width:100%;padding:11px 13px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font-family:var(--font-body);font-size:0.9rem;cursor:pointer">
+          </div>
+          <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+          <button type="submit" class="btn btn--primary btn--block" id="careerSubmit">Submit application</button>
+          <div class="form-success" id="careerSuccess"></div>
           <p class="form-note" style="text-align:center;margin-top:12px">Prefer email? Send your CV to <a href="mailto:decormuseofficial@outlook.com">decormuseofficial@outlook.com</a>.</p>
         </form>
       </div>
@@ -98,5 +104,48 @@
   <script src="js/components.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Careers application — multipart submit so the CV file is attached (Web3Forms)
+    document.addEventListener("DOMContentLoaded", function () {
+      var form = document.getElementById("careerForm");
+      if (!form) return;
+      var ok = document.getElementById("careerSuccess");
+      var btn = document.getElementById("careerSubmit");
+      var cv = document.getElementById("cvFile");
+      var say = function (msg, bad) { if (!ok) return; ok.classList.add("show"); ok.style.color = bad ? "var(--rose-deep)" : ""; ok.innerHTML = msg; };
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+        if (cv && cv.files[0] && cv.files[0].size > 5 * 1024 * 1024) {
+          say("Your CV is over 5MB. Please upload a smaller file, or email it to <a href='mailto:decormuseofficial@outlook.com'>decormuseofficial@outlook.com</a>.", true);
+          return;
+        }
+        var key = (typeof DECOMUSE !== "undefined" && DECOMUSE.formAccessKey) || "";
+        var fd = new FormData(form);
+        fd.append("access_key", key);
+        fd.append("subject", "DecoMuse — Careers application");
+        fd.append("from_name", "DecoMuse Website");
+        var replyto = (form.querySelector('input[name="Email"]') || {}).value || "";
+        if (replyto) fd.append("replyto", replyto);
+
+        btn.disabled = true; var label = btn.textContent; btn.textContent = "Sending…";
+        var sent = false;
+        if (key) {
+          try {
+            var res = await fetch("https://api.web3forms.com/submit", { method: "POST", body: fd });
+            var data = await res.json().catch(function () { return {}; });
+            sent = res.ok && data.success;
+          } catch (err) { sent = false; }
+        }
+        if (sent) {
+          say("Thank you for applying! We've received your application" + (cv && cv.files[0] ? " and CV" : "") + ", and will be in touch if there's a fit. 💛");
+          form.reset();
+        } else {
+          say("Sorry, we couldn't send that just now. Please email your CV to <a href='mailto:decormuseofficial@outlook.com'>decormuseofficial@outlook.com</a>.", true);
+        }
+        btn.disabled = false; btn.textContent = label;
+      });
+    });
+  </script>
 </body>
 </html>
