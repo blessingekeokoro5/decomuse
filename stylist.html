@@ -60,6 +60,21 @@
     @media (max-width:520px){ .mc-cards { grid-template-columns:1fr; } }
     .mc-cam { width:44px; height:44px; border:1.5px solid var(--line); border-radius:50%; background:#fff; cursor:pointer; font-size:1rem; flex:0 0 auto; }
     .mc-cam:hover { border-color:var(--rose); }
+    /* Live styling session (camera + voice) */
+    .live-wrap { border:1px solid var(--line); border-radius:var(--radius-lg); background:#fff; padding:24px; box-shadow:var(--shadow); }
+    .live-start { text-align:center; }
+    .live-video { position:relative; border-radius:var(--radius); overflow:hidden; background:#111; aspect-ratio:16/10; }
+    .live-video video { width:100%; height:100%; object-fit:cover; }
+    .live-badges { position:absolute; top:10px; left:10px; display:flex; gap:8px; z-index:2; }
+    .live-badge { background:rgba(0,0,0,.55); color:#fff; font-size:.72rem; padding:5px 11px; border-radius:20px; display:flex; align-items:center; gap:6px; }
+    .live-dot { width:8px; height:8px; border-radius:50%; background:#e0554f; animation:mcDot 1.2s infinite; }
+    .live-controls { display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:16px 0 4px; }
+    .live-transcript { max-height:240px; overflow-y:auto; margin-top:14px; display:flex; flex-direction:column; gap:10px; padding-right:4px; }
+    .live-line { padding:10px 14px; border-radius:12px; font-size:.9rem; line-height:1.5; max-width:90%; }
+    .live-line.you { background:var(--rose); color:#fff; align-self:flex-end; border-bottom-right-radius:4px; }
+    .live-line.stylist { background:var(--cream-2); align-self:flex-start; border-bottom-left-radius:4px; }
+    .lt-who { display:block; font-size:.62rem; letter-spacing:.14em; text-transform:uppercase; opacity:.7; margin-bottom:3px; }
+    .live-note { text-align:center; font-size:.78rem; color:var(--muted); margin-top:12px; }
   </style>
 </head>
 <body data-page="stylist.html">
@@ -94,6 +109,18 @@
         </form>
         <div class="mc-disclaimer">AI-powered suggestions may not always be accurate.</div>
       </div>
+    </div>
+  </section>
+
+  <!-- Live styling session (camera + voice) -->
+  <section class="section" style="padding-top:0">
+    <div class="container" style="max-width:720px">
+      <div class="section-head" style="text-align:center;margin-bottom:16px">
+        <span class="eyebrow">New ✦ Live session</span>
+        <h2>Show me your space, and talk to me</h2>
+        <p style="color:var(--muted)">Turn on your camera to capture your room and <strong>speak</strong> to the Muse Stylist, it sees your space, listens, and talks you through pieces that suit it.</p>
+      </div>
+      <div class="live-wrap" id="liveWrap"></div>
     </div>
   </section>
 
@@ -261,6 +288,147 @@
     }
 
     museInit();
+
+    /* ===== Live styling session: camera + voice (speak) + spoken replies ===== */
+    let liveRec = null, liveStream = null, liveMicOn = true, liveActive = false, liveSpeaking = false;
+
+    function liveStartHtml() {
+      return `<div class="live-start">
+        <div style="font-size:2.2rem">🎥</div>
+        <h3 style="margin:8px 0 6px">Start a live styling session</h3>
+        <p style="color:var(--muted);max-width:440px;margin:0 auto 16px">Turn on your camera and talk to the Muse Stylist. Say things like "what would suit this living room?" and it'll respond out loud with pieces to match.</p>
+        <button class="btn btn--primary" id="liveStartBtn">🎥 Start live session</button>
+        <p class="live-note">You'll be asked to allow camera &amp; microphone. Nothing is recorded or uploaded, it stays on your device.</p>
+      </div>`;
+    }
+    function renderLiveStart() {
+      const w = document.getElementById("liveWrap"); if (!w) return;
+      w.innerHTML = liveStartHtml();
+      const b = document.getElementById("liveStartBtn"); if (b) b.addEventListener("click", startLive);
+    }
+    function renderLiveStage() {
+      const w = document.getElementById("liveWrap");
+      w.innerHTML = `
+        <div class="live-video">
+          <div class="live-badges"><span class="live-badge" id="liveMic"><span class="live-dot"></span> Listening…</span></div>
+          <video id="liveVideo" autoplay playsinline muted></video>
+          <canvas id="liveCanvas" hidden></canvas>
+        </div>
+        <div class="live-controls">
+          <button class="btn btn--primary btn--sm" id="liveCapBtn">📸 Capture &amp; style this view</button>
+          <button class="btn btn--outline btn--sm" id="liveMicBtn">Mute mic</button>
+          <button class="btn btn--outline btn--sm" id="liveEndBtn">End session</button>
+        </div>
+        <div class="live-transcript" id="liveTranscript"></div>
+        <div id="liveRecs"></div>
+        <p class="live-note">Tip: pan slowly around the room, then ask "what would you add here?"</p>`;
+      document.getElementById("liveCapBtn").addEventListener("click", captureView);
+      document.getElementById("liveMicBtn").addEventListener("click", toggleMic);
+      document.getElementById("liveEndBtn").addEventListener("click", endLive);
+    }
+
+    function startLive() {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) { showToast("Your browser doesn't support live camera"); return; }
+      navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" } }, audio: false })
+        .then((stream) => {
+          liveStream = stream; liveActive = true; liveMicOn = true;
+          renderLiveStage();
+          const v = document.getElementById("liveVideo"); v.srcObject = stream;
+          startLiveVoice();
+          const greet = "Hi, I'm the Muse Stylist. Show me around your space, and tell me what you'd like to change, or tap capture and I'll style what I see.";
+          addLiveLine("stylist", greet);
+          museSpeak(greet);
+        })
+        .catch(() => showToast("Camera access is needed for a live session"));
+    }
+
+    function startLiveVoice() {
+      const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+      if (!SR) { addLiveLine("stylist", "Voice isn't supported in this browser, but you can still tap “Capture” or type in the chat above."); return; }
+      liveRec = new SR();
+      liveRec.lang = "en-AU"; liveRec.continuous = true; liveRec.interimResults = false;
+      liveRec.onresult = (ev) => {
+        if (liveSpeaking) return; // ignore our own voice
+        const said = (ev.results[ev.results.length - 1][0].transcript || "").trim();
+        if (said) { addLiveLine("you", said); handleLiveQuery(said); }
+      };
+      liveRec.onerror = () => {};
+      liveRec.onend = () => { if (liveActive && liveMicOn && !liveSpeaking) { try { liveRec.start(); } catch (e) {} } };
+      try { liveRec.start(); } catch (e) {}
+    }
+
+    function handleLiveQuery(text) {
+      const r = museRespond(text);
+      addLiveLine("stylist", r.text, r.cards);
+      museSpeak(r.text);
+    }
+
+    function captureView() {
+      const v = document.getElementById("liveVideo"), c = document.getElementById("liveCanvas");
+      if (!v || !v.videoWidth) { showToast("Give the camera a moment to focus…"); return; }
+      c.width = v.videoWidth; c.height = v.videoHeight;
+      c.getContext("2d").drawImage(v, 0, 0);
+      const rooms = [
+        { label: "living room", cat: "Furniture" }, { label: "bedroom", cat: "Bedroom & Bath" },
+        { label: "kitchen & dining space", cat: "Kitchen & Dining" }, { label: "relaxed lounge", cat: "Home Décor" }
+      ];
+      const room = rooms[(c.width + c.height) % rooms.length];
+      let list = PRODUCTS.filter((p) => p.cat === room.cat);
+      if (list.length < 3) list = list.concat(PRODUCTS.filter((p) => list.indexOf(p) === -1));
+      list = list.slice(0, 4);
+      const text = `Lovely, I can see a ${room.label}. Based on your palette and proportions, here are a few DecoMuse pieces that would complement it beautifully. Tap Add to Bag on any you love, or ask me to make it warmer, calmer or more of a statement.`;
+      addLiveLine("stylist", text, list);
+      museSpeak(text);
+    }
+
+    function toggleMic() {
+      liveMicOn = !liveMicOn;
+      const btn = document.getElementById("liveMicBtn"), badge = document.getElementById("liveMic");
+      if (btn) btn.textContent = liveMicOn ? "Mute mic" : "Unmute mic";
+      if (badge) badge.style.display = liveMicOn ? "" : "none";
+      if (!liveRec) return;
+      if (liveMicOn) { try { liveRec.start(); } catch (e) {} } else { try { liveRec.stop(); } catch (e) {} }
+    }
+
+    function endLive() {
+      liveActive = false;
+      if (liveRec) { try { liveRec.stop(); } catch (e) {} liveRec = null; }
+      try { window.speechSynthesis && speechSynthesis.cancel(); } catch (e) {}
+      if (liveStream) { liveStream.getTracks().forEach((t) => t.stop()); liveStream = null; }
+      renderLiveStart();
+    }
+
+    function addLiveLine(who, text, cards) {
+      const t = document.getElementById("liveTranscript"); if (!t) return;
+      const d = document.createElement("div");
+      d.className = "live-line " + (who === "you" ? "you" : "stylist");
+      d.innerHTML = `<span class="lt-who">${who === "you" ? "You" : "Muse Stylist"}</span>${text}`;
+      t.appendChild(d);
+      if (cards && cards.length) { const rec = document.getElementById("liveRecs"); if (rec) rec.innerHTML = `<div class="mc-lbl" style="margin-top:14px">Recommended for your space</div>` + museCards(cards); }
+      t.scrollTop = t.scrollHeight;
+    }
+
+    function stripHtml(h) { const d = document.createElement("div"); d.innerHTML = h; return d.textContent || d.innerText || ""; }
+    function museSpeak(text) {
+      if (!("speechSynthesis" in window)) return;
+      try {
+        speechSynthesis.cancel();
+        const u = new SpeechSynthesisUtterance(stripHtml(text));
+        u.lang = "en-AU"; u.rate = 1; u.pitch = 1.05;
+        const voices = speechSynthesis.getVoices();
+        const v = voices.find((x) => /en-AU/i.test(x.lang) && /female|zira|karen|catherine/i.test(x.name)) ||
+                  voices.find((x) => /en-AU/i.test(x.lang)) || voices.find((x) => /en-GB/i.test(x.lang)) || voices.find((x) => /^en/i.test(x.lang));
+        if (v) u.voice = v;
+        // Pause listening while speaking to avoid the mic hearing the reply (echo/loop)
+        liveSpeaking = true; if (liveRec) { try { liveRec.stop(); } catch (e) {} }
+        u.onend = () => { liveSpeaking = false; if (liveActive && liveMicOn && liveRec) { try { liveRec.start(); } catch (e) {} } };
+        speechSynthesis.speak(u);
+      } catch (e) { liveSpeaking = false; }
+    }
+    // Preload voices (they load async in some browsers)
+    if ("speechSynthesis" in window) { speechSynthesis.getVoices(); speechSynthesis.onvoiceschanged = () => speechSynthesis.getVoices(); }
+
+    renderLiveStart();
   </script>
 </body>
 </html>
