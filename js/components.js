@@ -96,6 +96,15 @@ function nextLogo(img) {
   else { const b = img.closest(".brand"); if (b) b.classList.add("no-logo"); img.remove(); }
 }
 
+/* Mobile menu: accordion toggle + search */
+function mNavToggle(btn) { const li = btn.closest(".m-acc"); if (li) li.classList.toggle("open"); }
+function mNavSearch(e) {
+  e.preventDefault();
+  const v = (document.getElementById("mNavSearchInput").value || "").trim();
+  if (v) location.href = "shop.html?q=" + encodeURIComponent(v);
+  return false;
+}
+
 /* ---- Nav links (main utility row) ---- */
 const NAV_LINKS = [
   { label: "Home", href: "index.html" },
@@ -196,21 +205,50 @@ function buildHeader() {
     { label: "Vacation Rentals", href: "vacation-rentals.html" },
     { label: "Interior Design", href: "interior-design.html" }
   ];
-  const servicesMobile = `<li class="m-has-sub"><a href="staging.html">Services</a><ul class="m-sub">${servicesSubs.map(s => `<li><a href="${s.href}">${s.label}</a></li>`).join("")}</ul></li>`;
-  const mobilePlain = [
-    { label: "Book Consult", href: "staging.html#book" },
-    { label: "Help Centre", href: "support.html" },
-    { label: "About Us", href: "about.html" },
-    { label: "Trade", href: "trade.html" },
-    { label: "Contact Us", href: "contact.html" }
-  ];
-  const navMain = MEGA_MENU.map(c =>
-      `<li><a href="${c.key === "hampers" ? "hampers.html" : "shop.html?cat=" + encodeURIComponent(c.label)}">${c.label}</a></li>`).join("")
-    + servicesMobile
-    + mobilePlain.map(l => {
-      const active = (l.href === page) ? "active" : "";
-      return `<li><a class="${active}" href="${l.href}">${l.label}</a></li>`;
-    }).join("");
+  const socials = DECOMUSE.socials || {};
+  const socialLinks = [];
+  if (socials.pinterest) socialLinks.push(`<a href="${socials.pinterest}" target="_blank" rel="noopener" aria-label="Pinterest"><b>P</b></a>`);
+  if (socials.facebook) socialLinks.push(`<a href="${socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>`);
+  if (socials.instagram) socialLinks.push(`<a href="${socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>`);
+  if (socials.tiktok) socialLinks.push(`<a href="${socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok"><b>♪</b></a>`);
+  socialLinks.push(`<a href="mailto:${DECOMUSE.email}" aria-label="Email">${IC.mail}</a>`);
+
+  const navMain = `
+    <form class="m-search" onsubmit="return mNavSearch(event)">
+      <input type="search" id="mNavSearchInput" placeholder="Search products" aria-label="Search products" autocomplete="off">
+      <button type="submit" aria-label="Search">${IC.search}</button>
+    </form>
+    <ul class="m-list">
+      <li><a href="index.html">Home</a></li>
+      ${MEGA_MENU.map(cat => {
+        const shopHref = cat.key === "hampers" ? "hampers.html" : "shop.html?cat=" + encodeURIComponent(cat.label);
+        const links = cat.columns.reduce((a, c) => a.concat(c.links), []).slice(0, 7);
+        return `<li class="m-acc">
+          <div class="m-acc-head"><a href="${shopHref}">${cat.label}</a><button type="button" class="m-chev" aria-label="Expand ${cat.label}" onclick="mNavToggle(this)">${IC.caret}</button></div>
+          <ul class="m-acc-body"><li><a href="${shopHref}">Shop all ${cat.label}</a></li>${links.map(l => `<li><a href="${shopHref}">${l}</a></li>`).join("")}</ul>
+        </li>`;
+      }).join("")}
+      <li class="m-acc">
+        <div class="m-acc-head"><a href="staging.html">Services</a><button type="button" class="m-chev" aria-label="Expand Services" onclick="mNavToggle(this)">${IC.caret}</button></div>
+        <ul class="m-acc-body">${servicesSubs.map(s => `<li><a href="${s.href}">${s.label}</a></li>`).join("")}</ul>
+      </li>
+      <li><a href="hampers.html">Gifting</a></li>
+      <li><a href="support.html">Customer Care</a></li>
+    </ul>
+    <div class="m-region">
+      <button type="button" onclick="openCountryModal()">${AU_FLAG_SVG}<span>${(typeof curLabel === "function" ? curLabel() : "AUD $")}</span></button>
+      <button type="button" onclick="openCountryModal()">${UK_FLAG_SVG}<span>English</span></button>
+    </div>
+    <div class="m-quick">
+      <a href="wishlist.html" aria-label="Wishlist">${IC.heart}</a>
+      <a href="shop.html" aria-label="Shop &amp; sort"><span style="font-size:1.3rem;line-height:1">⇅</span></a>
+    </div>
+    <div class="m-social">${socialLinks.join("")}</div>
+    <div class="m-account">
+      <h4>My Account</h4>
+      <a class="btn btn--outline btn--block" href="account.html">Log in</a>
+      <a class="btn btn--dark btn--block" href="account.html" style="margin-top:8px">Register</a>
+    </div>`;
 
   return `
   <div class="top-utility">
@@ -291,7 +329,7 @@ function buildHeader() {
         <a class="icon-btn" href="cart.html" aria-label="Cart" title="Cart">${IC.bag}<span class="cart-count" id="cartCount">0</span></a>
       </div>
     </div>
-    <ul class="nav-main" id="navMain">${navMain}</ul>
+    <div class="nav-main" id="navMain">${navMain}</div>
     <div class="nav-cats-row" id="navCatsRow">
       <div class="container">
         <ul class="nav-cats" id="navCats">
