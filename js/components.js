@@ -215,10 +215,6 @@ function buildHeader() {
   if (socials.tiktok) socialLinks.push(`<a href="${socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>`);
 
   const navMain = `
-    <form class="m-search" onsubmit="return mNavSearch(event)">
-      <input type="search" id="mNavSearchInput" placeholder="Search products" aria-label="Search products" autocomplete="off">
-      <button type="submit" aria-label="Search">${IC.search}</button>
-    </form>
     <ul class="m-list">
       <li><a href="index.html">Home</a></li>
       ${MEGA_MENU.map(cat => {
