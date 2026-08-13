@@ -24,6 +24,7 @@ const DECOMUSE = {
   socials: {
     instagram: "https://www.instagram.com/decormuseofficial?igsh=MTU3ZWowNnUyNmI0dQ%3D%3D&utm_source=qr",
     facebook: "https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr",
+    tiktok: "https://www.tiktok.com/@decormuseofficial",
     whatsapp: "https://wa.me/61451609398"
   }
 };

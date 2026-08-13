@@ -88,6 +88,9 @@ const AU_FLAG_SVG = '<svg class="au-flag" viewBox="0 0 60 40" width="19" height=
 /* UK (Union Jack) flag for the English language label — inline SVG (Windows can't draw 🇬🇧). */
 const UK_FLAG_SVG = '<svg class="uk-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="4"/><rect x="25" width="10" height="40" fill="#fff"/><rect y="15" width="60" height="10" fill="#fff"/><rect x="26.5" width="7" height="40" fill="#C8102E"/><rect y="16.5" width="60" height="7" fill="#C8102E"/></svg>';
 
+/* TikTok icon (no IC entry) */
+const TIKTOK_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M16.5 3c.3 2.1 1.6 3.5 3.6 3.8v2.5c-1.2.1-2.5-.2-3.6-.9v5.9c0 3.4-2.8 5.9-6 5.4-2.6-.4-4.4-2.7-4.2-5.3.2-2.6 2.5-4.5 5.1-4.3v2.6c-.5-.1-1-.1-1.4.1-1 .3-1.6 1.4-1.3 2.4.3 1 1.3 1.6 2.3 1.4 1-.2 1.6-1.1 1.6-2.1V3h2.3z"/></svg>';
+
 /* ---- Logo loader: try common formats before falling back to the drawn mark ---- */
 const LOGO_SRCS = ["assets/logo.jpg", "assets/logo.svg", "assets/logo.png", "assets/logo.jpeg", "assets/logo.webp"];
 function nextLogo(img) {
@@ -207,11 +210,9 @@ function buildHeader() {
   ];
   const socials = DECOMUSE.socials || {};
   const socialLinks = [];
-  if (socials.pinterest) socialLinks.push(`<a href="${socials.pinterest}" target="_blank" rel="noopener" aria-label="Pinterest"><b>P</b></a>`);
   if (socials.facebook) socialLinks.push(`<a href="${socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>`);
   if (socials.instagram) socialLinks.push(`<a href="${socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>`);
-  if (socials.tiktok) socialLinks.push(`<a href="${socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok"><b>♪</b></a>`);
-  socialLinks.push(`<a href="mailto:${DECOMUSE.email}" aria-label="Email">${IC.mail}</a>`);
+  if (socials.tiktok) socialLinks.push(`<a href="${socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>`);
 
   const navMain = `
     <form class="m-search" onsubmit="return mNavSearch(event)">
@@ -412,9 +413,9 @@ function buildFooter() {
           <p>Objects worth living with. Australia's curated home, lifestyle &amp; fragrance store, décor, fragrance, wellness, everyday essentials &amp; beautiful gifting.</p>
           <div class="fc-row" style="color:#ddccc2;margin-top:14px"><span class="fc-ic">${DECOMUSE.flag}</span> <strong>${DECOMUSE.location}</strong></div>
           <div class="socials" style="margin-top:16px">
-            <a href="${DECOMUSE.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
             <a href="${DECOMUSE.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>
-            <a href="mailto:${DECOMUSE.email}" aria-label="Email">${IC.mail}</a>
+            <a href="${DECOMUSE.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
+            <a href="${DECOMUSE.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>
           </div>
         </div>
 
