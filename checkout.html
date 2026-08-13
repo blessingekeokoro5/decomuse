@@ -11,6 +11,19 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .fulfil { margin-bottom: 30px; }
+    .fulfil-title { font-size: 1.15rem; margin-bottom: 14px; }
+    .fulfil-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .fulfil-opt { display: flex; flex-direction: column; align-items: center; gap: 9px; padding: 22px 10px; border: 1.5px solid var(--line);
+      background: #fff; border-radius: var(--radius); cursor: pointer; font-family: var(--font-body); font-size: 0.92rem; font-weight: 500; color: var(--ink); transition: all var(--tr); }
+    .fulfil-opt .fic { font-size: 1.7rem; line-height: 1; }
+    .fulfil-opt:hover { border-color: var(--rose-soft); }
+    .fulfil-opt.active { border-color: var(--rose); background: var(--blush); box-shadow: inset 0 0 0 1px var(--rose); }
+    .fulfil-note { margin-top: 14px; font-size: 0.88rem; color: var(--body); background: var(--cream-2); border-radius: 10px; padding: 13px 16px; line-height: 1.55; }
+    .fulfil-note:empty { display: none; }
+    @media (max-width: 520px){ .fulfil-opt { padding: 16px 6px; font-size: 0.82rem; } .fulfil-opt .fic { font-size: 1.35rem; } }
+  </style>
 </head>
 <body data-page="checkout.html">
   <div id="site-header"></div>

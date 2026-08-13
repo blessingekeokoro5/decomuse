@@ -24,7 +24,8 @@ function checkoutTotals() {
   const voucher = (vou && vou.amount) ? Math.min(vou.amount, afterDisc) : 0;
   const afterVoucher = afterDisc - voucher;
   const rate = SHIP_RATES[shipCountry()];
-  const shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
+  let shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
+  if (window._fulfil === "pickup") shipping = 0;   // collect in-studio, no delivery fee
   const preGift = afterVoucher + shipping;
   const gc = window._giftCard || null;
   // A gift card can be used online only when it covers the whole order.
@@ -39,12 +40,15 @@ function updateTotalsUI() {
   const shipTxt = t.shipping === 0 ? "Free" : money(t.shipping);
   const line = document.getElementById("coShipLine");
   if (line) line.innerHTML = `<strong>Standard</strong> · ${shipTxt} · 3 to 8 business days`;
-  const s = document.getElementById("sumShip"); if (s) s.textContent = shipTxt;
+  const s = document.getElementById("sumShip"); if (s) s.textContent = window._fulfil === "pickup" ? "Free (pickup)" : shipTxt;
   const gr = document.getElementById("sumGiftRow"); if (gr) gr.style.display = t.giftCard ? "flex" : "none";
   const gv = document.getElementById("sumGift"); if (gv) gv.textContent = "−" + money(t.giftCard);
   const tot = document.getElementById("sumTotal"); if (tot) tot.textContent = money(t.total);
   const g = document.getElementById("sumGst"); if (g) g.textContent = money(t.gst);
-  const btn = document.getElementById("payBtn"); if (btn) btn.textContent = t.total <= 0 ? "Complete order (gift card) →" : `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`;
+  const btn = document.getElementById("payBtn");
+  if (btn) btn.textContent = window._fulfil === "layby"
+    ? "Submit lay-by request →"
+    : (t.total <= 0 ? "Complete order (gift card) →" : `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`);
 }
 
 function applyGiftCardCheckout() {
@@ -95,30 +99,39 @@ function renderCheckout() {
   }).join("");
 
   wrap.innerHTML = `
+    <div class="fulfil">
+      <h3 class="fulfil-title">Choose how you'd like to get your items</h3>
+      <div class="fulfil-grid" id="fulfilGrid">
+        <button type="button" class="fulfil-opt active" data-mode="delivery" onclick="setFulfil('delivery')"><span class="fic">🚚</span><span>Delivery</span></button>
+        <button type="button" class="fulfil-opt" data-mode="pickup" onclick="setFulfil('pickup')"><span class="fic">🛍️</span><span>Pick up</span></button>
+        <button type="button" class="fulfil-opt" data-mode="layby" onclick="setFulfil('layby')"><span class="fic">🗓️</span><span>Lay-by</span></button>
+      </div>
+      <div class="fulfil-note" id="fulfilNote"></div>
+    </div>
     <div class="co-grid">
       <div>
         <form id="checkoutForm" class="form-card">
           <div class="co-section">Contact</div>
           <div class="field"><label>Email</label><input id="coEmail" type="email" value="${acc.email || ""}" required></div>
 
-          <div class="co-section">Shipping address</div>
+          <div class="co-section" id="shipTitle">Delivery address</div>
           <div class="field-row">
             <div class="field"><label>First name</label><input id="coFirst" required></div>
             <div class="field"><label>Last name</label><input id="coLast" required></div>
           </div>
-          <div class="field"><label>Address</label><input id="coAddr" required></div>
-          <div class="field-row">
+          <div class="field ship-addr"><label>Address</label><input id="coAddr" required></div>
+          <div class="field-row ship-addr">
             <div class="field"><label>Suburb</label><input id="coSuburb" required></div>
             <div class="field"><label>State / Postcode</label><input id="coPost" placeholder="SA 5000" required></div>
           </div>
           <div class="field-row">
-            <div class="field"><label>Country</label>
+            <div class="field ship-addr"><label>Country</label>
               <select id="coCountry"><option>Australia</option><option>New Zealand</option></select></div>
             <div class="field"><label>Phone</label><input id="coPhone" type="tel"></div>
           </div>
 
-          <div class="co-section">Delivery</div>
-          <label class="co-radio"><input type="radio" name="ship" checked> <span id="coShipLine"><strong>Standard</strong> · ${t.shipping === 0 ? "Free" : money(t.shipping)} · 3 to 8 business days</span></label>
+          <div class="co-section" id="deliverySection">Delivery</div>
+          <label class="co-radio" id="shipRadio"><input type="radio" name="ship" checked> <span id="coShipLine"><strong>Standard</strong> · ${t.shipping === 0 ? "Free" : money(t.shipping)} · 3 to 8 business days</span></label>
 
           <div class="co-section">Payment</div>
           <div class="co-pay">
@@ -157,6 +170,43 @@ function renderCheckout() {
   document.getElementById("checkoutForm").addEventListener("submit", startPayment);
   const cc = document.getElementById("coCountry");
   if (cc) cc.addEventListener("change", updateTotalsUI);
+  if (typeof window._fulfil === "undefined") window._fulfil = "delivery";
+  setFulfil(window._fulfil);
+}
+
+/* Fulfilment method: Delivery · Pick up · Lay-by */
+function setFulfil(mode) {
+  window._fulfil = mode;
+  document.querySelectorAll("#fulfilGrid .fulfil-opt").forEach((b) => b.classList.toggle("active", b.dataset.mode === mode));
+  const note = document.getElementById("fulfilNote");
+  const title = document.getElementById("shipTitle");
+  const delivery = document.getElementById("deliverySection");
+  const radio = document.getElementById("shipRadio");
+  const addr = document.querySelectorAll(".ship-addr");
+  const showAddr = (show) => {
+    addr.forEach((el) => (el.style.display = show ? "" : "none"));
+    ["coAddr", "coSuburb", "coPost"].forEach((id) => { const el = document.getElementById(id); if (el) el.required = show; });
+  };
+  if (mode === "pickup") {
+    showAddr(false);
+    if (title) title.textContent = "Contact for pickup";
+    if (delivery) delivery.style.display = "none";
+    if (radio) radio.style.display = "none";
+    if (note) note.innerHTML = "🛍️ <strong>Pick up</strong> — collect from our Klemzig, Adelaide studio. We'll email you when your order is ready (usually 1–2 business days). No delivery fee.";
+  } else if (mode === "layby") {
+    showAddr(true);
+    if (title) title.textContent = "Delivery address";
+    if (delivery) delivery.style.display = "";
+    if (radio) radio.style.display = "";
+    if (note) note.innerHTML = "🗓️ <strong>Lay-by</strong> — reserve your pieces with a 20% deposit today and pay the balance over 8 weeks. Your items are held for you and dispatched once paid in full. Submit below and our team will email you to set it up.";
+  } else {
+    showAddr(true);
+    if (title) title.textContent = "Delivery address";
+    if (delivery) delivery.style.display = "";
+    if (radio) radio.style.display = "";
+    if (note) note.innerHTML = "";
+  }
+  if (typeof updateTotalsUI === "function") updateTotalsUI();
 }
 
 async function startPayment(e) {
@@ -173,6 +223,30 @@ async function startPayment(e) {
       items: cart.map(i => ({ item_id: i.id, item_name: i.name, item_category: i.cat, price: i.price, quantity: i.qty }))
     }));
   } catch (e) {}
+
+  // Lay-by → reserve the items with a request to our team (no charge now)
+  if (window._fulfil === "layby") {
+    const email = document.getElementById("coEmail").value;
+    const first = document.getElementById("coFirst").value;
+    const name = (first + " " + document.getElementById("coLast").value).trim();
+    const deposit = Math.round(t.total * 0.2 * 100) / 100;
+    const data = [
+      ["Request", "Lay-by"],
+      ["Name", name], ["Email", email], ["Phone", document.getElementById("coPhone").value],
+      ["Delivery address", [document.getElementById("coAddr").value, document.getElementById("coSuburb").value, document.getElementById("coPost").value, document.getElementById("coCountry").value].filter(Boolean).join(", ")],
+      ["Order total", money(t.total)], ["Deposit (20%)", money(deposit)],
+      ["Items", cart.map((i) => `${i.qty}× ${i.name}`).join("; ")]
+    ];
+    btn.disabled = true; btn.textContent = "Sending request…";
+    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Lay-by request"); } catch (err) {}
+    showToast("Lay-by request sent ✦");
+    document.getElementById("checkoutWrap").innerHTML =
+      `<div class="empty-state" style="max-width:560px;margin:0 auto"><div class="em">🗓️</div><h2>Lay-by request received</h2>
+       <p>Thanks ${first || "there"}! We've noted your lay-by and our team will email you to set it up. A <strong>20% deposit (${money(deposit)})</strong> secures your items, with the balance payable over 8 weeks. Your bag stays saved until then.</p>
+       <a class="btn btn--primary" href="shop.html" style="margin-top:16px">Continue shopping</a></div>`;
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    return;
+  }
 
   // Gift card covers the whole order → complete without Stripe (uses refund credit)
   if (t.giftCard > 0 && t.total <= 0) {
