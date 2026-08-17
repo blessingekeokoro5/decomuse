@@ -107,6 +107,22 @@ const MEGA_MENU = [
 
 /* ---- Products (AUD) ---- */
 const PRODUCTS = [
+  // ── Bathroom ──
+  { id: "bt01", name: "Aurelia Marble & Gold Bathroom Set (5-Piece)", cat: "Bathroom", price: 250, memberPrice: 220, sku: "DM-10109", tag: "New", ph: "", img: "assets/products/bt01.png",
+    imgs: ["assets/products/bt01.png", "assets/products/bt01-2.png", "assets/products/bt01-3.png", "assets/products/bt01-4.png", "assets/products/bt01-5.png"],
+    colours: [{ name: "Emerald Green", hex: "#134a38" }, { name: "Black", hex: "#171512" }],
+    desc: "Turn a daily routine into a five-star ritual. The Aurelia set brings hand-glazed marble ceramic and hand-painted gold veining to your basin, each piece finished with a gilded base that catches the light. A complete five-piece collection that makes even the smallest bathroom feel like a boutique hotel, choose deep emerald green or midnight black, both pooled with liquid-gold marbling.",
+    features: [
+      "Complete 5-piece set: soap/lotion dispenser, toothbrush holder, two tumblers & a soap dish",
+      "Hand-glazed ceramic with hand-painted gold marble veining, no two pieces are exactly alike",
+      "Gilded gold base trim and a smooth gold pump for a boutique-hotel finish",
+      "Available in deep Emerald Green or Midnight Black to suit your palette",
+      "A ready-made luxury refresh, and a beautiful housewarming or wedding gift"
+    ],
+    specs: { "Type": "Bathroom accessory set", "Pieces": "5", "Material": "Ceramic", "Finish": "Marble glaze with gold detailing" },
+    boxContents: ["1 × soap / lotion dispenser", "1 × toothbrush holder", "2 × tumblers", "1 × soap dish"],
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners to protect the gold detailing." },
+
   // ── Home Décor ──
   { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
