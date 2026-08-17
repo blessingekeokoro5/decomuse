@@ -195,8 +195,9 @@ function buildHeader() {
         </div>
       </div>`;
 
+  const CAT_PAGES = { hampers: "hampers.html", bathroom: "bathroom.html" };
   const catTabs = MEGA_MENU.map(cat => {
-    const href = cat.key === "hampers" ? "hampers.html" : "";
+    const href = CAT_PAGES[cat.key] || "";
     return `<li data-cat="${cat.key}"><a${href ? ` href="${href}"` : ""}>${cat.label} ${IC.caret}</a></li>`;
   }).join("");
 
@@ -218,7 +219,7 @@ function buildHeader() {
     <ul class="m-list">
       <li><a href="index.html">Home</a></li>
       ${MEGA_MENU.map(cat => {
-        const shopHref = cat.key === "hampers" ? "hampers.html" : "shop.html?cat=" + encodeURIComponent(cat.label);
+        const shopHref = CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
         const links = cat.columns.reduce((a, c) => a.concat(c.links), []).slice(0, 7);
         return `<li class="m-acc">
           <div class="m-acc-head"><a href="${shopHref}">${cat.label}</a><button type="button" class="m-chev" aria-label="Expand ${cat.label}" onclick="mNavToggle(this)">${IC.caret}</button></div>

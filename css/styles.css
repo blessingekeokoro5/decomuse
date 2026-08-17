@@ -1635,3 +1635,25 @@ em { font-style: italic; color: var(--rose-deep); }
 .dp-box h4 { font-size: 1.15rem; margin: 0 0 10px; }
 .dp-box p { color: var(--body); font-size: 0.9rem; margin: 0; line-height: 1.6; }
 .dp-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--muted); }
+
+/* ============================================================
+   Collection landing pages (room hero banner + feature strip)
+   Reusable across Bathroom, Bedroom, Living Room, etc.
+   ============================================================ */
+.collection-hero { position: relative; min-height: 420px; display: grid; place-items: center; padding: 70px 20px;
+  background-color: var(--cream-2);
+  background-image: linear-gradient(rgba(28,24,21,0.28), rgba(28,24,21,0.42)), var(--collection-img, none);
+  background-size: cover; background-position: center; }
+.collection-hero-box { background: #121212; color: #fff; text-align: center; padding: 48px 72px; max-width: 640px; width: 100%;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.28); }
+.coll-script { font-family: "Dancing Script", "Playfair Display", cursive; font-size: 2.1rem; line-height: 1;
+  color: var(--gold); font-weight: 500; }
+.coll-title { font-family: var(--font-head); color: #fff; font-size: clamp(2.4rem, 6vw, 4.1rem); line-height: 1;
+  letter-spacing: 0.14em; text-transform: uppercase; margin: 8px 0 0; }
+@media (max-width: 560px){ .collection-hero { min-height: 320px; } .collection-hero-box { padding: 34px 26px; } .coll-title { letter-spacing: 0.08em; } }
+
+.feature-strip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 46px 0; }
+.feature-item { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
+.feature-item svg { width: 40px; height: 40px; stroke: var(--ink); stroke-width: 1.4; fill: none; }
+.feature-item span { font-family: var(--font-head); font-size: 1.04rem; color: var(--ink); }
+@media (max-width: 720px){ .feature-strip { grid-template-columns: 1fr 1fr; gap: 34px 20px; } }
