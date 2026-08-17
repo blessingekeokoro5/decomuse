@@ -333,6 +333,7 @@ function buildHeader() {
           <li class="nav-cat-plain"><a href="index.html">Home</a></li>
           ${catTabs}
           <li data-cat="services"><a href="staging.html">Services ${IC.caret}</a></li>
+          <li class="nav-cat-plain"><a href="support.html">Customer Care</a></li>
         </ul>
       </div>
       ${megaMarkup}${servicesMega}
@@ -1191,16 +1192,13 @@ function chatReply(text) {
   let unsure = false, html;
 
   if (has(/\b(hi|hey|hello|hiya|good (morning|afternoon|evening)|how are you)\b/))
-    html = `Hi, lovely to meet you! 👋 I'm MuseStylist, your personal shopping assistant. I can help you find a fragrance, wellness pick or home piece, build a gift hamper, or track an order. What are you after today?`;
+    html = `Hi, lovely to meet you! 👋 I'm MuseStylist, your personal shopping assistant. I can help you find a home fragrance, styling piece or gift, build a gift hamper, or track an order. What are you after today?`;
 
   else if (has(/\b(human|real person|agent|team member|speak to someone|talk to someone|representative|customer service)\b/))
     html = `Of course, I'll connect you with a real DecoMuse team member. Reach us straight away on WhatsApp, or email ${DECOMUSE.email}.<br>${waButton()}`;
 
-  else if (has(/\b(fragrance|perfume|scent|cologne|eau de|aftershave|diffuser)\b/))
-    html = `Our ${link("shop.html?cat=Fragrance", "Fragrance")} range spans perfume for her & him, unisex scents, reed diffusers, candles and room sprays 🌸. New to us? Try the <strong>Discovery Set, 5 Scents</strong>.`;
-
-  else if (has(/\b(wellness|health|skincare|\bskin\b|bath|body|supplement|vitamin|aromatherapy|self.?care|soak|facial|serum)\b/))
-    html = `Lovely, our ${link("shop.html?cat=" + encodeURIComponent("Health & Wellness"), "Health & Wellness")} edit has bath & body, skincare, aromatherapy and supplements 🌿. The Magnesium Bath Soak and Rosehip Facial Oil are favourites.`;
+  else if (has(/\b(fragrance|scent|diffuser|candle|room spray|essential oil)\b/))
+    html = `Our ${link("shop.html?cat=Lifestyle", "Home Fragrances")} edit (in Lifestyle) has reed diffusers, scented candles, room sprays and essential oils 🌸, everything to layer your home with scent.`;
 
   else if (has(/\b(book|consult|consultation|staging|stage|interior design|stylist visit|in.?home|virtual styling|appointment)\b/))
     html = `We'd love to style your space! ✦ Book an <strong>in-home styling, staging or interior design</strong> consultation on our ${link("staging.html#book", "Styling & Design")} page, or try the free ${link("stylist.html", "Muse Stylist AI")}.`;
@@ -1218,7 +1216,7 @@ function chatReply(text) {
     html = `What a lovely idea! 🎁 Use our ${link("hamper-maker.html", "Gift Hamper Maker")} to build a custom box, pick a box, add treats, drinks, pamper & home touches, watch the total, add a gift note, then straight to cart (min $60). Prefer ready-made? Browse the ${link("hampers.html", "Gifting")} page.`;
 
   else if (has(/\b(gift|present|for (her|him|mum|dad|someone|a woman|a man)|birthday|anniversary|christmas|valentine|treat)\b/))
-    html = `Lovely, let's find the perfect gift! 🎁 Favourites right now: ${link("hampers.html", "gift hampers")}, ${link("shop.html?cat=Fragrance", "candles &amp; fragrance")}, and ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "home décor")}. Tell me your budget or who it's for and I'll narrow it down, or build a custom box with our ${link("hamper-maker.html", "Gift Hamper Maker")}.`;
+    html = `Lovely, let's find the perfect gift! 🎁 Favourites right now: ${link("hampers.html", "gift hampers")}, ${link("shop.html?cat=Lifestyle", "candles &amp; home fragrances")}, and ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "home décor")}. Tell me your budget or who it's for and I'll narrow it down, or build a custom box with our ${link("hamper-maker.html", "Gift Hamper Maker")}.`;
 
   else if (has(/\b(how (do i|to) clean|care for|look after|maintain|wash|stain)\b/))
     html = `Happy to help you care for your pieces! 🌿 As a rule: dust timber with a soft dry cloth, spot-clean upholstery with a damp cloth, and keep candles trimmed to 5mm. If you tell me the exact item, I can be more specific, or our team can advise on ${link("contact.html", "Contact")}.`;

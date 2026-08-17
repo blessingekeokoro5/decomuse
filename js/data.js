@@ -32,21 +32,57 @@ const DECOMUSE = {
 /* ---- Mega-menu categories (retail) ---- */
 const MEGA_MENU = [
   {
-    key: "home", label: "Home Décor",
+    key: "living", label: "Living Room",
     columns: [
-      { title: "Shop", links: ["Shop All Home", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Living", links: ["Sofas & Seating", "Coffee & Side Tables", "Rugs", "Lighting", "Mirrors"] },
-      { title: "Bedroom", links: ["Bed Linen", "Cushions & Throws", "Bedside Tables", "Lamps"] },
-      { title: "Décor", links: ["Vases", "Wall Art", "Candles", "Ceramics", "Faux Greenery"] }
+      { title: "Shop", links: ["Shop All Living Room", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Furniture", links: ["Sofas & Seating", "Coffee & Side Tables", "TV Units", "Bookshelves"] },
+      { title: "Soft Furnishings", links: ["Rugs", "Cushions & Throws", "Curtains"] },
+      { title: "Accents", links: ["Lighting", "Mirrors", "Wall Art", "Vases"] }
     ]
   },
   {
-    key: "health", label: "Health & Wellness",
+    key: "home", label: "Home Décor",
     columns: [
-      { title: "Shop", links: ["Shop All Wellness", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Bath & Body", links: ["Bath Soaks", "Body Cream", "Hand Care", "Soap & Wash"] },
-      { title: "Skincare", links: ["Facial Oils", "Moisturisers", "Serums", "Masks"] },
-      { title: "Wellbeing", links: ["Supplements & Vitamins", "Aromatherapy", "Sleep & Calm", "Self-care Sets"] }
+      { title: "Shop", links: ["Shop All Home Décor", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Decorative", links: ["Vases", "Wall Art", "Sculptures & Objects", "Ceramics"] },
+      { title: "Ambience", links: ["Candles", "Reed Diffusers", "Faux Greenery"] },
+      { title: "Finishing Touches", links: ["Mirrors", "Photo Frames", "Trays & Bowls"] }
+    ]
+  },
+  {
+    key: "bedroom", label: "Bedroom",
+    columns: [
+      { title: "Shop", links: ["Shop All Bedroom", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Bedding", links: ["Bed Linen", "Quilt Covers", "Cushions & Throws", "Blankets"] },
+      { title: "Furniture", links: ["Bedside Tables", "Dressers", "Headboards"] },
+      { title: "Lighting & Décor", links: ["Lamps", "Mirrors", "Wall Art"] }
+    ]
+  },
+  {
+    key: "bathroom", label: "Bathroom",
+    columns: [
+      { title: "Shop", links: ["Shop All Bathroom", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Textiles", links: ["Towels", "Bath Mats", "Robes"] },
+      { title: "Storage", links: ["Baskets", "Vanity Trays", "Caddies"] },
+      { title: "Accessories", links: ["Soap Dispensers", "Tumblers", "Candles", "Diffusers"] }
+    ]
+  },
+  {
+    key: "office", label: "Office",
+    columns: [
+      { title: "Shop", links: ["Shop All Office", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Furniture", links: ["Desks", "Office Chairs", "Shelving"] },
+      { title: "Desktop", links: ["Desk Organisers", "Stationery", "Lamps"] },
+      { title: "Décor", links: ["Wall Art", "Plants & Planters", "Candles"] }
+    ]
+  },
+  {
+    key: "outdoor", label: "Outdoor",
+    columns: [
+      { title: "Shop", links: ["Shop All Outdoor", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Furniture", links: ["Outdoor Lounges", "Dining Sets", "Chairs"] },
+      { title: "Garden", links: ["Planters & Pots", "Faux Plants", "Lanterns"] },
+      { title: "Comfort", links: ["Outdoor Cushions", "Outdoor Rugs", "Throws"] }
     ]
   },
   {
@@ -59,18 +95,10 @@ const MEGA_MENU = [
     ]
   },
   {
-    key: "fragrance", label: "Fragrance",
-    columns: [
-      { title: "Shop", links: ["Shop All Fragrance", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Perfume", links: ["Perfume for Her", "Perfume for Him", "Unisex", "Eau de Parfum", "Eau de Toilette", "Travel & Minis"] },
-      { title: "Home Fragrance", links: ["Reed Diffusers", "Scented Candles", "Room Sprays", "Essential Oils"] },
-      { title: "Gifting", links: ["Fragrance Gift Sets", "Discovery Sets"] }
-    ]
-  },
-  {
     key: "lifestyle", label: "Lifestyle",
     columns: [
       { title: "Shop", links: ["Shop All Lifestyle", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Home Fragrances", links: ["Reed Diffusers", "Scented Candles", "Room Sprays", "Essential Oils", "Fragrance Gift Sets"] },
       { title: "Everyday", links: ["Candles", "Textiles & Linen", "Kitchen & Dining", "Stationery", "Travel"] },
       { title: "Self & Home", links: ["Wellness Essentials", "Coffee & Tea", "Gifts Under $50"] }
     ]
