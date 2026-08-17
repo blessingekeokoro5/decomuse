@@ -185,7 +185,7 @@ const PRODUCTS = [
     specs: { "Material": "100% Cotton", "Weight": "450 GSM", "Pack size": "10 pieces", "Type": "Face washer / flannel" },
     care: "Machine wash cold and separately before first use. Gentle cycle; wash dark colours separately. Do not bleach. Tumble dry low. Do not iron. Do not dry clean." },
 
-  { id: "hd05", name: "Oval Marble-Effect Coffee Table", cat: "Furniture", price: 115.37, memberPrice: 99.99, sku: "DM-10106", tag: "New", ph: "", img: "assets/products/hd05.jpg",
+  { id: "hd05", name: "Oval Marble-Effect Coffee Table", cat: "Furniture", room: "Living Room", price: 115.37, memberPrice: 99.99, sku: "DM-10106", tag: "New", ph: "", img: "assets/products/hd05.jpg",
     imgs: ["assets/products/hd05.jpg", "assets/products/hd05-2.jpg", "assets/products/hd05-3.jpg", "assets/products/hd05-4.jpg", "assets/products/hd05-5.jpg", "assets/products/hd05-6.jpg"],
     desc: "A sculptural centrepiece for the living room, this oval coffee table pairs a smooth marble-effect top with a warm, angular timber-look base. The soft oval silhouette keeps the room feeling open, while the crossed legs add architectural interest, a timeless, mid-century-inspired piece that anchors a lounge with quiet luxury. Style it with a stack of design books, a low vase or a scented candle to complete the look.",
     features: [
@@ -198,7 +198,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table", "Shape": "Oval", "Tabletop": "Marble-effect", "Base": "Timber-look", "Primary Colour": "White & Walnut", "Room": "Living / Indoor" },
     care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." },
 
-  { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", price: 198.37, memberPrice: 168.55, sku: "DM-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
+  { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", room: "Living Room", price: 198.37, memberPrice: 168.55, sku: "DM-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
     imgs: ["assets/products/hd06.jpg", "assets/products/hd06-3.jpg", "assets/products/hd06-4.jpg", "assets/products/hd06-5.jpg", "assets/products/hd06-6.jpg", "assets/products/hd06-7.jpg", "assets/products/hd06-8.jpg", "assets/products/hd06-9.jpg", "assets/products/hd06-10.jpg"],
     desc: "A refined two-piece table set that brings a soft, luxe finish to any living space. Each table is topped with marble-look tempered glass, tough enough for everyday use yet elegant enough to feel like a designer piece. Nest them together for a compact footprint, or set them apart as a coffee table and matching side table. With clean lines and neutral marble tones, they layer effortlessly with sofas, rugs and accent chairs, an easy way to elevate a lounge, bedroom or reading corner.",
     features: [
@@ -211,7 +211,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee & Side Table Set", "Pieces": "2", "Tabletop": "Marble-look tempered glass", "Larger table width": "80cm", "Style": "Contemporary", "Room": "Living / Indoor" },
     care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." },
 
-  { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", price: 155.09, memberPrice: 135.55, sku: "DM-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
+  { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", room: "Living Room", price: 155.09, memberPrice: 135.55, sku: "DM-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
     imgs: ["assets/products/hd07.jpg", "assets/products/hd07-2.jpg", "assets/products/hd07-3.jpg", "assets/products/hd07-4.jpg", "assets/products/hd07-5.jpg", "assets/products/hd07-6.jpg", "assets/products/hd07-7.jpg", "assets/products/hd07-8.jpg"],
     desc: "Style and storage in one considered piece. This modern coffee table pairs a sleek marble-look top with a smart two-tone body, a soft-close drawer keeps remotes, chargers and clutter neatly out of sight, while the open shelf is ideal for books, baskets or a styling tray. Raised on slender metal legs, it feels light and contemporary, the perfect centrepiece for a living room that likes to stay tidy and effortlessly put-together.",
     features: [
