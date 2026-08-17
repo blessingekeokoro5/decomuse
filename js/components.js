@@ -130,6 +130,19 @@ const CAT_IMG = {
 function buildHeader() {
   const page = document.body.dataset.page || "";
 
+  // Each category tab / dropdown routes to its own collection page
+  const CAT_PAGES = {
+    living: "living-room.html",
+    home: "home-decor.html",
+    bedroom: "bedroom.html",
+    bathroom: "bathroom.html",
+    office: "office.html",
+    outdoor: "outdoor.html",
+    hampers: "hampers.html",
+    lifestyle: "lifestyle.html"
+  };
+  const catDest = (cat) => CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
+
   // Mega menu markup
   const megaMarkup = MEGA_MENU.map(cat => {
     const cols = cat.columns.map(col => `
@@ -137,7 +150,7 @@ function buildHeader() {
         <h5>${col.title}</h5>
         <ul>${col.links.map(l => {
           const isSale = /sale/i.test(l);
-          return `<li class="${isSale ? 'sale' : ''}"><a href="shop.html?cat=${encodeURIComponent(cat.label)}">${l}</a></li>`;
+          return `<li class="${isSale ? 'sale' : ''}"><a href="${catDest(cat)}">${l}</a></li>`;
         }).join("")}</ul>
       </div>`).join("");
     return `
@@ -195,10 +208,9 @@ function buildHeader() {
         </div>
       </div>`;
 
-  const CAT_PAGES = { hampers: "hampers.html", bathroom: "bathroom.html" };
   const catTabs = MEGA_MENU.map(cat => {
-    const href = CAT_PAGES[cat.key] || "";
-    return `<li data-cat="${cat.key}"><a${href ? ` href="${href}"` : ""}>${cat.label} ${IC.caret}</a></li>`;
+    const href = catDest(cat);
+    return `<li data-cat="${cat.key}"><a href="${href}">${cat.label} ${IC.caret}</a></li>`;
   }).join("");
 
   // Mobile drawer mirrors the desktop category nav order:

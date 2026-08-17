@@ -12,7 +12,7 @@
   <meta name="twitter:image" content="https://www.decomuse.com.au/assets/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
@@ -20,12 +20,36 @@
 <body data-page="hampers.html">
   <div id="site-header"></div>
 
-  <section class="page-banner">
+  <!-- Collection hero — add the photo at assets/collections/gift-hampers.png -->
+  <section class="collection-hero">
+    <img class="collection-hero-img" src="assets/collections/gift-hampers.png" alt="Gift Hampers collection" onerror="this.remove()">
+    <div class="collection-hero-box">
+      <div class="coll-script">Collection</div>
+      <h1 class="coll-title">Gift Hampers</h1>
+    </div>
+  </section>
+
+  <!-- Feature strip -->
+  <section class="section" style="padding-top:0;padding-bottom:0">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Gift Baskets &amp; Hampers</div>
-      <span class="eyebrow">Hamper Creation</span>
-      <h1>Luxury hampers, thoughtfully composed</h1>
-      <p>For birthdays, corporate gifting, celebrations and décor-themed gifts, hand-styled, beautifully wrapped and finished with a personal note.</p>
+      <div class="feature-strip">
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17" cy="18" r="1.7"/></svg>
+          <span>Free Shipping on All Orders</span>
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5"/><path d="M12 12v9"/></svg>
+          <span>1 – 2 Week Delivery</span>
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 1.6 2.7-.2 1 2.5 2.3 1.4-.8 2.6.8 2.6-2.3 1.4-1 2.5-2.7-.2L12 21l-2.2-1.6-2.7.2-1-2.5-2.3-1.4.8-2.6-.8-2.6 2.3-1.4 1-2.5 2.7.2z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>100% Satisfaction Guarantee</span>
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 6-13 15-13 0 9-5 15-13 13"/><path d="M5 19c3-4 6-6 10-7"/></svg>
+          <span>Eco Friendly</span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -54,8 +78,8 @@
           <p class="dm-tag">Curated pieces for elevated living</p>
           <h2 class="dm-head">Australia's home, lifestyle &amp; fragrance store</h2>
           <ul class="dm-cats">
-            <li>Home Décor</li><li>Health &amp; Wellness</li><li>Gift Baskets &amp; Hampers</li>
-            <li>Fragrance</li><li>Lifestyle</li><li>Styling &amp; Design</li>
+            <li>Living Room</li><li>Home Décor</li><li>Bedroom</li>
+            <li>Bathroom</li><li>Gift Hampers</li><li>Lifestyle</li>
           </ul>
           <div class="dm-cta">
             <a class="btn btn--primary" href="shop.html">Shop the collection →</a>

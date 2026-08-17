@@ -1641,10 +1641,10 @@ em { font-style: italic; color: var(--rose-deep); }
    Reusable across Bathroom, Bedroom, Living Room, etc.
    ============================================================ */
 .collection-hero { position: relative; min-height: 420px; display: grid; place-items: center; padding: 70px 20px;
-  background-color: var(--cream-2);
-  background-image: linear-gradient(rgba(28,24,21,0.28), rgba(28,24,21,0.42)), var(--collection-img, none);
-  background-size: cover; background-position: center; }
-.collection-hero-box { background: #121212; color: #fff; text-align: center; padding: 48px 72px; max-width: 640px; width: 100%;
+  background-color: var(--cream-2); overflow: hidden; }
+.collection-hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+.collection-hero::after { content: ""; position: absolute; inset: 0; background: rgba(28,24,21,0.34); z-index: 1; }
+.collection-hero-box { position: relative; z-index: 2; background: #121212; color: #fff; text-align: center; padding: 48px 72px; max-width: 640px; width: 100%;
   box-shadow: 0 24px 60px rgba(0,0,0,0.28); }
 .coll-script { font-family: "Dancing Script", "Playfair Display", cursive; font-size: 2.1rem; line-height: 1;
   color: var(--gold); font-weight: 500; }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bathroom Collection | DecoMuse</title>
-  <meta name="description" content="Shop the DecoMuse Bathroom collection — luxury towels, storage, vanity accessories, candles and finishing touches to elevate your bathroom.">
+  <title>Living Room Collection | DecoMuse</title>
+  <meta name="description" content="Shop the DecoMuse Living Room collection — sofas, coffee tables, rugs, lighting and accents to bring your living room together.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="DecoMuse">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,22 +13,16 @@
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
   <link rel="stylesheet" href="css/styles.css">
-  <style>
-    .load-more-wrap { text-align: center; margin: 44px 0 6px; }
-    .viewed-count { font-size: 0.82rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted);
-      max-width: 360px; margin: 0 auto 24px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
-    .load-more-btn { min-width: 250px; letter-spacing: 0.16em; text-transform: uppercase; }
-  </style>
 </head>
-<body data-page="bathroom.html">
+<body data-page="living-room.html">
   <div id="site-header"></div>
 
-  <!-- Collection hero — swap the photo by replacing assets/collections/bathroom.jpg -->
+  <!-- Collection hero — add the photo at assets/collections/living-room.png -->
   <section class="collection-hero">
-    <img class="collection-hero-img" src="assets/collections/bathroom.png" alt="Bathroom collection" onerror="this.remove()">
+    <img class="collection-hero-img" src="assets/collections/living-room.png" alt="Living Room collection" onerror="this.remove()">
     <div class="collection-hero-box">
       <div class="coll-script">Collection</div>
-      <h1 class="coll-title">Bathroom</h1>
+      <h1 class="coll-title">Living Room</h1>
     </div>
   </section>
 
@@ -59,17 +53,17 @@
   <!-- Products -->
   <section class="section" style="padding-top:0">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Home</a> / Bathroom</div>
+      <div class="breadcrumb"><a href="index.html">Home</a> / Living Room</div>
       <div class="section-head" style="margin-bottom:26px">
-        <span class="eyebrow">The Bathroom Edit</span>
-        <h2>Considered pieces for a spa-like bathroom</h2>
-        <p>Luxury towels, storage, vanity accessories, candles and the finishing touches that turn a bathroom into a retreat.</p>
+        <span class="eyebrow">The Living Room Edit</span>
+        <h2>Pieces that bring your living room together</h2>
+        <p>Sofas and seating, coffee tables, rugs, lighting and the accents that make a living room feel warm, layered and effortless.</p>
       </div>
 
       <div class="shop-bar">
-        <span id="bathCount" class="shop-count"></span>
+        <span id="roomCount" class="shop-count"></span>
         <label class="shop-sort">Sort
-          <select id="bathSort" onchange="paintBath()">
+          <select id="roomSort" onchange="paintRoom()">
             <option value="featured">Featured</option>
             <option value="price-asc">Price: low to high</option>
             <option value="price-desc">Price: high to low</option>
@@ -78,11 +72,11 @@
         </label>
       </div>
 
-      <div class="grid grid-4" id="bathGrid"></div>
-      <div id="bathEmpty" class="empty-state" style="display:none">
-        <div class="em">🛁</div>
+      <div class="grid grid-4" id="roomGrid"></div>
+      <div id="roomEmpty" class="empty-state" style="display:none">
+        <div class="em">🛋️</div>
         <h3>New pieces landing here soon</h3>
-        <p>We're curating the Bathroom collection. Browse the full shop in the meantime.</p>
+        <p>We're curating the Living Room collection. Browse the full shop in the meantime.</p>
         <a class="btn btn--outline btn--pill" href="shop.html">Browse the shop</a>
       </div>
     </div>
@@ -95,23 +89,20 @@
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
   <script>
-    // Products tagged for the bathroom (cat: "Bathroom" — or room: "Bathroom" — in js/data.js)
-    function bathBaseList() {
-      return PRODUCTS.filter(p => p.cat === "Bathroom" || p.room === "Bathroom");
-    }
-    function paintBath() {
-      let list = bathBaseList();
-      const sort = (document.getElementById("bathSort") || {}).value || "featured";
+    const ROOM = "Living Room"; // products with cat: "Living Room" (or room: "Living Room") in js/data.js appear here
+    function paintRoom() {
+      let list = PRODUCTS.filter(p => p.cat === ROOM || p.room === ROOM);
+      const sort = (document.getElementById("roomSort") || {}).value || "featured";
       if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
       else if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
       else if (sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
-      renderProducts("bathGrid", list);
-      const c = document.getElementById("bathCount");
+      renderProducts("roomGrid", list);
+      const c = document.getElementById("roomCount");
       if (c) c.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"}`;
-      document.getElementById("bathEmpty").style.display = list.length ? "none" : "block";
-      document.getElementById("bathGrid").style.display = list.length ? "grid" : "none";
+      document.getElementById("roomEmpty").style.display = list.length ? "none" : "block";
+      document.getElementById("roomGrid").style.display = list.length ? "grid" : "none";
     }
-    paintBath();
+    paintRoom();
     initReveal();
   </script>
 </body>

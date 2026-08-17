@@ -148,7 +148,7 @@
   <script>
     /* ===== Admin gate ===== */
     // Default password — CHANGE THIS, then redeploy, to lock the admin area permanently.
-    const ADMIN_DEFAULT = "decomuse-admin";
+    const ADMIN_DEFAULT = "ZaraHosini@30";
     function adminStoredHash() { return localStorage.getItem("dm_admin_pin") || dmHash(ADMIN_DEFAULT); }
     function isAuthed() { try { return sessionStorage.getItem("dm_admin_ok") === "1"; } catch (e) { return false; } }
 

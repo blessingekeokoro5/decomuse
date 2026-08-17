@@ -62,10 +62,20 @@
       "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);console.log\\('forms:',Object.keys\\(window.DM_FORMS\\).length,'| bundles:',Object.keys\\(window.DM_BUNDLES\\).join\\(', '\\)\\)\")",
       "Bash(node --check netlify/functions/send-invoice.js)",
       "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);var f=window.DM_FORMS;console.log\\('forms:',Object.keys\\(f\\).length,'| employees:',Object.keys\\(f\\).filter\\(k=>f[k].cat==='employee'\\).length,'| invoice noSig:',!!f.invoice.noSignature,'sendToClient:',!!f.invoice.sendToClient\\)\")",
-      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);var f=window.DM_FORMS;console.log\\('total forms:',Object.keys\\(f\\).length,'| employee:',Object.keys\\(f\\).filter\\(k=>f[k].cat==='employee'\\).length,'| emp bundle:',window.DM_BUNDLES['employee-onboarding'].forms.length,'forms'\\)\")"
+      "Bash(node -e \"global.window={};require\\('./js/forms.js'\\);var f=window.DM_FORMS;console.log\\('total forms:',Object.keys\\(f\\).length,'| employee:',Object.keys\\(f\\).filter\\(k=>f[k].cat==='employee'\\).length,'| emp bundle:',window.DM_BUNDLES['employee-onboarding'].forms.length,'forms'\\)\")",
+      "Bash(node -e \"const fs=require\\('fs'\\);const b=fs.readFileSync\\('assets/logo.jpg'\\);let i=2;while\\(i<b.length\\){if\\(b[i]!==0xFF\\){i++;continue;}const m=b[i+1];if\\(m>=0xC0&&m<=0xCF&&m!==0xC4&&m!==0xC8&&m!==0xCC\\){const h=b.readUInt16BE\\(i+5\\),w=b.readUInt16BE\\(i+7\\);console.log\\('logo.jpg',w+'x'+h\\);break;}i+=2+b.readUInt16BE\\(i+2\\);}\")",
+      "Bash(python -c \"import json;json.load\\(open\\('manifest.json'\\)\\);print\\('manifest valid JSON'\\)\")",
+      "Bash(node -e \"JSON.parse\\(require\\('fs'\\).readFileSync\\('manifest.json','utf8'\\)\\);console.log\\('manifest valid JSON'\\)\")",
+      "Bash(mkdir -p \"/c/Users/direc/Zarell/css\" \"/c/Users/direc/Zarell/js\" \"/c/Users/direc/Zarell/assets\" && echo \"created\" && ls -la \"/c/Users/direc/Zarell\")",
+      "Bash(node -e \"global.window={};eval\\(require\\('fs'\\).readFileSync\\('js/data.js','utf8'\\)\\);console.log\\('products:',PRODUCTS.length,'| cats:',CATEGORIES.join\\(', '\\),'| brands:',BRANDS.length,'| looks:',LOOKS.length\\)\")",
+      "Bash(grep -iE '\\\\.\\(jpg|jpeg|png|webp|avif\\)$')",
+      "Bash(node --e \"new Function\\(require\\('fs'\\).readFileSync\\('js/data.js','utf8'\\)\\); console.log\\('data OK'\\)\")"
     ],
     "additionalDirectories": [
-      "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory"
+      "c:\\Users\\direc\\.claude\\projects\\c--Users-direc-MY-NEW-BUSINESS\\memory",
+      "C:\\Users\\direc\\Zarell",
+      "c:\\Users\\direc\\Zarell\\css",
+      "c:\\Users\\direc\\Zarell"
     ]
   }
 }
