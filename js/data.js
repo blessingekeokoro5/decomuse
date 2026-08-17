@@ -86,7 +86,7 @@ const MEGA_MENU = [
     ]
   },
   {
-    key: "hampers", label: "Gift Baskets & Hampers",
+    key: "hampers", label: "Gift Hampers",
     columns: [
       { title: "Price", links: ["Create My Own Hamper", "On Sale", "Under $100", "$100 to $150", "Over $150", "Gift Cards", "Most Popular"] },
       { title: "Favourite", links: ["Fragrance Hampers", "Pamper Hampers", "Gourmet Food", "Cheese & Wine", "Chocolate & Sweet", "Tea & Coffee"] },

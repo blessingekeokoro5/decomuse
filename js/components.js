@@ -330,10 +330,8 @@ function buildHeader() {
     <div class="nav-cats-row" id="navCatsRow">
       <div class="container">
         <ul class="nav-cats" id="navCats">
-          <li class="nav-cat-plain"><a href="index.html">Home</a></li>
           ${catTabs}
           <li data-cat="services"><a href="staging.html">Services ${IC.caret}</a></li>
-          <li class="nav-cat-plain"><a href="support.html">Customer Care</a></li>
         </ul>
       </div>
       ${megaMarkup}${servicesMega}
