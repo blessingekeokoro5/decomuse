@@ -128,7 +128,8 @@ const CAT_IMG = {
   outdoor:   "assets/nav/outdoor.png",
   kitchen:   "assets/nav/kitchenware.png",
   hampers:   "assets/cat-gifting.png",
-  lifestyle: "assets/cat-lifestyle.png"
+  lifestyle: "assets/cat-lifestyle.png",
+  sale:      "assets/hero.jpg"
 };
 
 function buildHeader() {
