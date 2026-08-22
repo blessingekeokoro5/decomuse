@@ -120,10 +120,14 @@ const NAV_LINKS = [
 
 // Category photos used in the mega-menu dropdown promo panels
 const CAT_IMG = {
-  home:      "assets/hero.jpg",
-  health:    "assets/cat-wellness.png",
+  living:    "assets/nav/living.png",
+  home:      "assets/nav/home-decor.png",
+  bedroom:   "assets/nav/bedroom.png",
+  bathroom:  "assets/nav/bathroom.png",
+  office:    "assets/nav/office.png",
+  outdoor:   "assets/nav/outdoor.png",
+  kitchen:   "assets/nav/kitchenware.png",
   hampers:   "assets/cat-gifting.png",
-  fragrance: "assets/cat-fragrance.png",
   lifestyle: "assets/cat-lifestyle.png"
 };
 
