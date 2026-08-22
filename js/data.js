@@ -144,11 +144,11 @@ const PRODUCTS = [
   { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
-  { id: "hd08", name: "Alban Bouclé Pillow Cover", cat: "Home Décor", room: "Living Room", price: 47, memberPrice: 39, sku: "DM-10110", tag: "New", ph: "", img: "assets/products/hd08.png?v=2",
+  { id: "hd08", name: "Alban Bouclé Pillow Cover", cat: "Home Décor", room: "Living Room", price: 59, memberPrice: 55, sku: "DM-10110", tag: "New", ph: "", img: "assets/products/hd08.png?v=2",
     imgs: ["assets/products/hd08.png?v=2", "assets/products/hd08-2.png?v=2", "assets/products/hd08-3.png?v=2", "assets/products/hd08-4.png?v=2", "assets/products/hd08-5.png?v=2", "assets/products/hd08-6.png?v=2", "assets/products/hd08-7.png?v=2", "assets/products/hd08-8.png?v=2", "assets/products/hd08-9.png?v=2"],
     colours: [{ name: "Red", hex: "#7c1c26" }, { name: "Pink", hex: "#e9c3cb" }, { name: "White", hex: "#f2efe9" }, { name: "Brown", hex: "#5b4636" }, { name: "Blue", hex: "#9fb2c4" }, { name: "Khaki", hex: "#b3a37a" }, { name: "Green", hex: "#b9c7a8" }],
     sizes: ["30cm x 50cm", "45cm x 45cm", "50cm x 50cm"],
-    desc: "Sink into softness. The Alban cover is made from a plush, curly bouclé that brings instant warmth and texture to any sofa, bed or armchair. Its deep, tactile pile and rich colour palette layer beautifully with linen, knits and neutrals, while a hidden zip makes it easy to refresh your space with the seasons. Cover only, insert not included.",
+    desc: "Wrap your space in texture. The Alban cushion cover is crafted from a deep, curly bouclé with a soft, teddy-like pile that instantly adds warmth and understated luxury to sofas, beds, benches and reading nooks. In a considered palette of seven rich tones, from berry red to sage, soft blush and espresso, it layers effortlessly with linen, wool and neutrals to refresh a room in seconds. A concealed zip keeps the finish clean and makes seasonal swaps easy, and because it's sold as a cover only (insert not included), you can restyle again and again without the bulk.",
     features: [
       "Plush curly bouclé with a soft, teddy-like pile",
       "Hidden zip closure for a clean finish and easy removal",
