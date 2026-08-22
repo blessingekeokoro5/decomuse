@@ -260,10 +260,10 @@ em { font-style: italic; color: var(--rose-deep); }
 
 /* Category (mega) nav row */
 .nav-cats-row { border-top: 1px solid var(--line); background: rgba(246,238,232,0.9); }
-.nav-cats { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 4px; list-style: none; margin: 0; padding: 0; height: 54px; }
+.nav-cats { display: flex; flex-wrap: nowrap; align-items: center; justify-content: center; gap: 2px; list-style: none; margin: 0; padding: 0; height: 54px; }
 .nav-cats > li { position: static; }
-.nav-cats > li > a { display: inline-flex; align-items: center; gap: 5px; color: var(--ink); font-size: 0.86rem; white-space: nowrap;
-  letter-spacing: 0.02em; padding: 8px 12px; border-radius: 6px; cursor: pointer; }
+.nav-cats > li > a { display: inline-flex; align-items: center; gap: 4px; color: var(--ink); font-size: 0.8rem; white-space: nowrap;
+  letter-spacing: 0.01em; padding: 7px 9px; border-radius: 6px; cursor: pointer; }
 .nav-cats > li > a:hover, .nav-cats > li.open > a { color: var(--rose-deep); }
 .nav-cats .caret { width: 12px; height: 12px; transition: transform var(--tr); }
 .nav-cats > li.open .caret { transform: rotate(180deg); }

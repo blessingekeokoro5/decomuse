@@ -8,8 +8,10 @@ Save each collection's hero photo here with these EXACT names:
   bathroom.png      -> bathroom.html   (added)
   office.png        -> office.html
   outdoor.png       -> outdoor.html
+  kitchenware.png   -> kitchenware.html
   gift-hampers.png  -> hampers.html
   lifestyle.png     -> lifestyle.html
+  sale.png          -> sale.html
 
 The image shows as a full-width banner behind the black "Collection · <Name>"
 box. A wide landscape photo (approx 1800 x 900px) looks best; a portrait photo

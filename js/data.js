@@ -86,6 +86,15 @@ const MEGA_MENU = [
     ]
   },
   {
+    key: "kitchen", label: "Kitchenware",
+    columns: [
+      { title: "Shop", links: ["Shop All Kitchenware", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Cook & Bake", links: ["Cookware", "Bakeware", "Utensils", "Chopping Boards"] },
+      { title: "Dine", links: ["Dinnerware", "Glassware", "Cutlery", "Serveware"] },
+      { title: "Prep & Store", links: ["Storage & Canisters", "Kitchen Linen", "Coffee & Tea"] }
+    ]
+  },
+  {
     key: "hampers", label: "Gift Hampers",
     columns: [
       { title: "Price", links: ["Create My Own Hamper", "On Sale", "Under $100", "$100 to $150", "Over $150", "Gift Cards", "Most Popular"] },
@@ -101,6 +110,14 @@ const MEGA_MENU = [
       { title: "Home Fragrances", links: ["Reed Diffusers", "Scented Candles", "Room Sprays", "Essential Oils", "Fragrance Gift Sets"] },
       { title: "Everyday", links: ["Candles", "Textiles & Linen", "Kitchen & Dining", "Stationery", "Travel"] },
       { title: "Self & Home", links: ["Wellness Essentials", "Coffee & Tea", "Gifts Under $50"] }
+    ]
+  },
+  {
+    key: "sale", label: "Sale & Clearance",
+    columns: [
+      { title: "Shop the Sale", links: ["All Sale & Clearance", "New Markdowns", "Last Chance", "Clearance"] },
+      { title: "By Discount", links: ["Up to 30% Off", "Up to 50% Off", "50%+ Off"] },
+      { title: "By Room", links: ["Living Room", "Bedroom", "Bathroom", "Kitchenware"] }
     ]
   }
 ];

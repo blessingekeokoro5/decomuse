@@ -138,8 +138,10 @@ function buildHeader() {
     bathroom: "bathroom.html",
     office: "office.html",
     outdoor: "outdoor.html",
+    kitchen: "kitchenware.html",
     hampers: "hampers.html",
-    lifestyle: "lifestyle.html"
+    lifestyle: "lifestyle.html",
+    sale: "sale.html"
   };
   const catDest = (cat) => CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
 
