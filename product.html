@@ -286,6 +286,10 @@
         return;
       }
       document.title = p.name + ", DecoMuse";
+      // Normalise plain-string sizes -> {label, price} so the gallery/size template (which expects objects) doesn't throw
+      if (p.sizes && p.sizes.length && typeof p.sizes[0] === "string") {
+        p.sizes = p.sizes.map(s => ({ label: s, price: p.price }));
+      }
       const rev = reviewStats(p);
 
       // Product schema (JSON-LD) for Google rich results
