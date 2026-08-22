@@ -124,6 +124,7 @@ const MEGA_MENU = [
 
 /* ---- Products (AUD) ---- */
 const PRODUCTS = [
+  /* @@NEW_PRODUCTS@@  ← admin "Add product" inserts new items right below this line. Do not remove. */
   // ── Bathroom ──
   { id: "bt01", name: "Aurelia Marble & Gold Bathroom Set (5-Piece)", cat: "Bathroom", price: 250, memberPrice: 220, sku: "DM-10109", tag: "New", ph: "", img: "assets/products/bt01-5.png",
     imgs: ["assets/products/bt01-5.png", "assets/products/bt01.png", "assets/products/bt01-2.png", "assets/products/bt01-3.png", "assets/products/bt01-4.png"],

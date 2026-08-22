@@ -71,6 +71,7 @@
 
       <div class="admin-tabs" id="adminTabs">
         <button class="active" data-tab="base">Customer base</button>
+        <button data-tab="products">Products</button>
         <button data-tab="forms">Client forms</button>
         <button data-tab="empforms">Employee forms</button>
         <button data-tab="send">Send forms</button>
@@ -88,6 +89,47 @@
           <button class="btn btn--outline btn--sm" onclick="clearDB()" style="color:var(--rose-deep)">Clear all</button>
         </div>
         <div id="dbTableWrap"></div>
+      </div>
+
+      <!-- Products -->
+      <div id="tabProducts" hidden>
+        <div class="admin-note">Add a new product straight to your shop. Fill in the details, add photos, and tap <b>Publish</b> — it goes live in about a minute. Works on your phone. 📱</div>
+        <div class="admin-formcard" style="max-width:680px">
+          <h3>Add a product</h3>
+          <div class="field"><label>Product name *</label><input id="pName" placeholder="e.g. Alban Bouclé Pillow Cover"></div>
+          <div class="field-row">
+            <div class="field"><label>Category / page</label>
+              <select id="pCat">
+                <option>Home Décor</option>
+                <option>Living Room</option>
+                <option>Bedroom</option>
+                <option>Bathroom</option>
+                <option>Office</option>
+                <option>Outdoor</option>
+                <option>Kitchenware</option>
+                <option>Lifestyle</option>
+              </select>
+            </div>
+            <div class="field"><label>Tag <span style="color:var(--muted)">(optional)</span></label>
+              <select id="pTag"><option value="">None</option><option>New</option><option>Bestseller</option></select>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field"><label>Price (non-member) *</label><input id="pPrice" type="number" min="0" step="0.01" placeholder="59"></div>
+            <div class="field"><label>Member price <span style="color:var(--muted)">(optional)</span></label><input id="pMember" type="number" min="0" step="0.01" placeholder="55"></div>
+          </div>
+          <div class="field"><label>Description</label><textarea id="pDesc" style="min-height:90px" placeholder="Write a short, appealing description…"></textarea></div>
+          <div class="field-row">
+            <div class="field"><label>Colours <span style="color:var(--muted)">(comma-separated)</span></label><input id="pColours" placeholder="Red, Pink, White, Green"></div>
+            <div class="field"><label>Sizes <span style="color:var(--muted)">(comma-separated)</span></label><input id="pSizes" placeholder="30cm x 50cm, 45cm x 45cm"></div>
+          </div>
+          <div class="field"><label>Photos <span style="color:var(--muted)">(first photo is the main image)</span></label>
+            <input id="pPhotos" type="file" accept="image/*" multiple>
+            <div id="pPhotoPreview" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px"></div>
+          </div>
+          <button class="btn btn--dark" id="pPublishBtn" onclick="publishProduct()">Publish product</button>
+          <div id="pOut" style="font-size:0.9rem;margin-top:12px"></div>
+        </div>
       </div>
 
       <!-- Client forms -->
@@ -221,7 +263,7 @@
       e.preventDefault();
       const pw = document.getElementById("adminPw").value;
       if (dmHash(pw) === adminStoredHash()) {
-        try { sessionStorage.setItem("dm_admin_ok", "1"); } catch (er) {}
+        try { sessionStorage.setItem("dm_admin_ok", "1"); sessionStorage.setItem("dm_admin_pw", pw); } catch (er) {}
         showAdmin();
       } else {
         document.getElementById("adminErr").style.display = "block";
@@ -234,6 +276,7 @@
       document.querySelectorAll("#adminTabs button").forEach(b => b.classList.toggle("active", b === btn));
       const tab = btn.dataset.tab;
       document.getElementById("tabBase").hidden = tab !== "base";
+      document.getElementById("tabProducts").hidden = tab !== "products";
       document.getElementById("tabForms").hidden = tab !== "forms";
       document.getElementById("tabEmpforms").hidden = tab !== "empforms";
       document.getElementById("tabSend").hidden = tab !== "send";
@@ -324,6 +367,81 @@
       localStorage.setItem("dm_admin_pin", dmHash(a));
       msg.style.color = "var(--forest)"; msg.textContent = "✓ Password updated on this device.";
       document.getElementById("newPw").value = ""; document.getElementById("newPw2").value = "";
+    }
+
+    /* ===== Products: add & publish ===== */
+    let pImages = []; // array of resized dataURLs
+    // Downscale phone photos so commits stay small and the shop loads fast
+    function resizeImage(file, maxW) {
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onload = () => {
+          const img = new Image();
+          img.onload = () => {
+            const scale = Math.min(1, maxW / img.width);
+            const w = Math.round(img.width * scale), h = Math.round(img.height * scale);
+            const c = document.createElement("canvas"); c.width = w; c.height = h;
+            c.getContext("2d").drawImage(img, 0, 0, w, h);
+            resolve(c.toDataURL("image/jpeg", 0.85));
+          };
+          img.onerror = reject; img.src = reader.result;
+        };
+        reader.onerror = reject; reader.readAsDataURL(file);
+      });
+    }
+    const pPhotosEl = document.getElementById("pPhotos");
+    if (pPhotosEl) pPhotosEl.addEventListener("change", async function () {
+      const files = [].slice.call(this.files).slice(0, 10);
+      const prev = document.getElementById("pPhotoPreview");
+      prev.innerHTML = "Processing photos…"; pImages = [];
+      try {
+        for (const f of files) pImages.push(await resizeImage(f, 1400));
+        prev.innerHTML = pImages.map((src, i) => `<div style="position:relative"><img src="${src}" style="width:74px;height:74px;object-fit:cover;border-radius:8px;border:1px solid var(--line)">${i === 0 ? '<span style="position:absolute;bottom:2px;left:2px;background:var(--rose-deep);color:#fff;font-size:0.6rem;padding:1px 5px;border-radius:4px">Main</span>' : ''}</div>`).join("");
+      } catch (e) { prev.innerHTML = "<span style='color:var(--rose-deep)'>Couldn't read those photos. Try again.</span>"; }
+    });
+    async function publishProduct() {
+      const out = document.getElementById("pOut");
+      const name = (document.getElementById("pName").value || "").trim();
+      const price = parseFloat(document.getElementById("pPrice").value);
+      if (!name) { out.style.color = "var(--rose-deep)"; out.textContent = "Please enter a product name."; return; }
+      if (!price || price <= 0) { out.style.color = "var(--rose-deep)"; out.textContent = "Please enter a valid price."; return; }
+      let pw = ""; try { pw = sessionStorage.getItem("dm_admin_pw") || ""; } catch (e) {}
+      if (!pw) { pw = prompt("Re-enter your admin password to publish:") || ""; }
+      if (!pw) return;
+      const product = {
+        name: name,
+        cat: document.getElementById("pCat").value,
+        price: price,
+        memberPrice: parseFloat(document.getElementById("pMember").value) || undefined,
+        desc: (document.getElementById("pDesc").value || "").trim(),
+        colours: (document.getElementById("pColours").value || "").split(",").map(s => s.trim()).filter(Boolean),
+        sizes: (document.getElementById("pSizes").value || "").split(",").map(s => s.trim()).filter(Boolean),
+        tag: document.getElementById("pTag").value || undefined
+      };
+      const roomCats = ["Living Room", "Bedroom", "Bathroom", "Office", "Outdoor", "Kitchenware"];
+      if (roomCats.indexOf(product.cat) >= 0) product.room = product.cat;
+      const btn = document.getElementById("pPublishBtn"); btn.disabled = true; const bl = btn.textContent; btn.textContent = "Publishing…";
+      out.style.color = "var(--muted)"; out.textContent = "Publishing… this takes about a minute to appear live.";
+      try {
+        const res = await fetch("/.netlify/functions/add-product", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ password: pw, product: product, images: pImages })
+        });
+        const data = await res.json().catch(() => ({}));
+        if (res.ok && data.ok) {
+          out.style.color = "var(--forest)";
+          out.innerHTML = "✓ Published! <b>" + name + "</b> (" + data.sku + "). It'll appear in your shop in about a minute. You can add another now.";
+          ["pName", "pPrice", "pMember", "pDesc", "pColours", "pSizes"].forEach(id => document.getElementById(id).value = "");
+          document.getElementById("pPhotos").value = ""; document.getElementById("pPhotoPreview").innerHTML = ""; pImages = [];
+        } else {
+          out.style.color = "var(--rose-deep)";
+          out.textContent = "Couldn't publish: " + (data.error || ("error " + res.status));
+          if (res.status === 401) { try { sessionStorage.removeItem("dm_admin_pw"); } catch (e) {} }
+        }
+      } catch (e) {
+        out.style.color = "var(--rose-deep)"; out.textContent = "Network error — please try again.";
+      }
+      btn.disabled = false; btn.textContent = bl;
     }
 
     // Auto-open if already signed in this session
