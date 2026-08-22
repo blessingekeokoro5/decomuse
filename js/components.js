@@ -270,6 +270,7 @@ function buildHeader() {
         <a href="about.html">About Us</a>
         <a href="trade.html">Trade</a>
         <a href="contact.html">Contact Us</a>
+        <a href="track.html">Track Delivery</a>
         <button class="tu-region" type="button" aria-label="Choose your region, currency and language" onclick="openCountryModal()">${AU_FLAG_SVG}<span>${(typeof curLabel === "function" ? curLabel() : "AUD $")}</span><span class="tu-dot">·</span>${UK_FLAG_SVG}<span>English</span> ${IC.caret}</button>
       </div>
     </div>
