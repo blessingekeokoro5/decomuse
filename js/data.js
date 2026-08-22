@@ -145,7 +145,7 @@ const PRODUCTS = [
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
   { id: "hd08", name: "Alban Bouclé Pillow Cover", cat: "Home Décor", room: "Living Room", price: 47, memberPrice: 39, sku: "DM-10110", tag: "New", ph: "", img: "assets/products/hd08.png",
-    imgs: ["assets/products/hd08.png", "assets/products/hd08-2.png", "assets/products/hd08-3.png", "assets/products/hd08-4.png"],
+    imgs: ["assets/products/hd08.png", "assets/products/hd08-2.png", "assets/products/hd08-3.png", "assets/products/hd08-4.png", "assets/products/hd08-5.png", "assets/products/hd08-6.png", "assets/products/hd08-7.png", "assets/products/hd08-8.png", "assets/products/hd08-9.png"],
     colours: [{ name: "Red", hex: "#7c1c26" }, { name: "Pink", hex: "#e9c3cb" }, { name: "White", hex: "#f2efe9" }, { name: "Brown", hex: "#5b4636" }, { name: "Blue", hex: "#9fb2c4" }, { name: "Khaki", hex: "#b3a37a" }, { name: "Green", hex: "#b9c7a8" }],
     sizes: ["30cm x 50cm", "45cm x 45cm", "50cm x 50cm"],
     desc: "Sink into softness. The Alban cover is made from a plush, curly bouclé that brings instant warmth and texture to any sofa, bed or armchair. Its deep, tactile pile and rich colour palette layer beautifully with linen, knits and neutrals, while a hidden zip makes it easy to refresh your space with the seasons. Cover only, insert not included.",
