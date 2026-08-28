@@ -111,14 +111,6 @@ const MEGA_MENU = [
       { title: "Everyday", links: ["Candles", "Textiles & Linen", "Kitchen & Dining", "Stationery", "Travel"] },
       { title: "Self & Home", links: ["Wellness Essentials", "Coffee & Tea", "Gifts Under $50"] }
     ]
-  },
-  {
-    key: "sale", label: "Sale & Clearance",
-    columns: [
-      { title: "Shop the Sale", links: ["All Sale & Clearance", "New Markdowns", "Last Chance", "Clearance"] },
-      { title: "By Discount", links: ["Up to 30% Off", "Up to 50% Off", "50%+ Off"] },
-      { title: "By Room", links: ["Living Room", "Bedroom", "Bathroom", "Kitchenware"] }
-    ]
   }
 ];
 

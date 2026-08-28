@@ -367,7 +367,7 @@ function buildFooter() {
   const shopLinks = [
     { t: "Shop All", h: "shop.html" },
     { t: "New Arrivals", h: "shop.html" },
-    { t: "On Sale", h: "shop.html" },
+    { t: "On Sale", h: "sale.html" },
     { t: "Gift Cards", h: "gift-cards.html" },
     { t: "Gift Hamper Maker", h: "hamper-maker.html" }
   ];
@@ -399,7 +399,7 @@ function buildFooter() {
     { t: "Cookies Policy", h: "policy.html?doc=privacy" }
   ];
   const occasionLinks = [
-    { t: "On Sale", h: "shop.html" },
+    { t: "On Sale", h: "sale.html" },
     { t: "Gift Hampers", h: "hampers.html" },
     { t: "Gift Cards", h: "gift-cards.html" },
     { t: "Christmas", h: "hampers.html" },
