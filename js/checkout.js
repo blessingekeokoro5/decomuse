@@ -26,6 +26,7 @@ function checkoutTotals() {
   const rate = SHIP_RATES[shipCountry()];
   let shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
   if (window._fulfil === "pickup") shipping = 0;   // collect in-studio, no delivery fee
+  else if (window._fulfil === "sameday") shipping = sub <= 0 ? 0 : 15;   // flat same-day local courier fee (Uber/DoorDash)
   const preGift = afterVoucher + shipping;
   const gc = window._giftCard || null;
   // A gift card can be used online only when it covers the whole order.
@@ -39,7 +40,9 @@ function updateTotalsUI() {
   const t = checkoutTotals();
   const shipTxt = t.shipping === 0 ? "Free" : money(t.shipping);
   const line = document.getElementById("coShipLine");
-  if (line) line.innerHTML = `<strong>Standard</strong> · ${shipTxt} · 3 to 8 business days`;
+  if (line) line.innerHTML = window._fulfil === "sameday"
+    ? `<strong>Same-day local</strong> · ${shipTxt} · via Uber / DoorDash, metro area`
+    : `<strong>Standard</strong> · ${shipTxt} · 3 to 8 business days`;
   const s = document.getElementById("sumShip"); if (s) s.textContent = window._fulfil === "pickup" ? "Free (pickup)" : shipTxt;
   const gr = document.getElementById("sumGiftRow"); if (gr) gr.style.display = t.giftCard ? "flex" : "none";
   const gv = document.getElementById("sumGift"); if (gv) gv.textContent = "−" + money(t.giftCard);
@@ -103,6 +106,7 @@ function renderCheckout() {
       <h3 class="fulfil-title">Choose how you'd like to get your items</h3>
       <div class="fulfil-grid" id="fulfilGrid">
         <button type="button" class="fulfil-opt active" data-mode="delivery" onclick="setFulfil('delivery')"><span class="fic">🚚</span><span>Delivery</span></button>
+        <button type="button" class="fulfil-opt" data-mode="sameday" onclick="setFulfil('sameday')"><span class="fic">🛵</span><span>Same-day local</span></button>
         <button type="button" class="fulfil-opt" data-mode="pickup" onclick="setFulfil('pickup')"><span class="fic">🛍️</span><span>Pick up</span></button>
         <button type="button" class="fulfil-opt" data-mode="layby" onclick="setFulfil('layby')"><span class="fic">🗓️</span><span>Lay-by</span></button>
       </div>
@@ -193,6 +197,12 @@ function setFulfil(mode) {
     if (delivery) delivery.style.display = "none";
     if (radio) radio.style.display = "none";
     if (note) note.innerHTML = "🛍️ <strong>Pick up</strong> — collect from our Klemzig, Adelaide studio. We'll email you when your order is ready (usually 1–2 business days). No delivery fee.";
+  } else if (mode === "sameday") {
+    showAddr(true);
+    if (title) title.textContent = "Delivery address";
+    if (delivery) delivery.style.display = "";
+    if (radio) radio.style.display = "";
+    if (note) note.innerHTML = "🛵 <strong>Same-day local delivery</strong> — for metro-area addresses, delivered today by <strong>Uber</strong> or <strong>DoorDash</strong> on orders placed before 2pm (Mon–Sat). Flat $15 local fee. We'll text you tracking once your courier is on the way. Not in a metro area? Choose Delivery instead.";
   } else if (mode === "layby") {
     showAddr(true);
     if (title) title.textContent = "Delivery address";
