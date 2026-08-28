@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Packaging — Pouches, Gift Boxes & Bulk Supplies | DecoMuse</title>
+  <meta name="description" content="DecoMuse packaging — food-vendor pouches, gift boxes, packaging kits and bulk/custom-branded supplies for businesses. Shop packs or request a bulk quote.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DecoMuse">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.jpg">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="packaging.html">
+  <div id="site-header"></div>
+
+  <!-- Collection hero — add the photo at assets/collections/packaging.png -->
+  <section class="collection-hero">
+    <img class="collection-hero-img" src="assets/collections/packaging.png" alt="Packaging collection" onerror="this.remove()">
+    <div class="collection-hero-box">
+      <div class="coll-script">Pouches · Boxes · Kits</div>
+      <h1 class="coll-title">Packaging</h1>
+    </div>
+  </section>
+
+  <!-- Feature strip -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="feature-strip">
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h11v9H3z"/><path d="M14 9h4l3 3v3h-7z"/><circle cx="7" cy="18" r="1.7"/><circle cx="17" cy="18" r="1.7"/></svg>
+          <span>Free Shipping on All Orders</span>
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5"/><path d="M12 12v9"/></svg>
+          <span>Bulk &amp; Wholesale Available</span>
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l2.2 1.6 2.7-.2 1 2.5 2.3 1.4-.8 2.6.8 2.6-2.3 1.4-1 2.5-2.7-.2L12 21l-2.2-1.6-2.7.2-1-2.5-2.3-1.4.8-2.6-.8-2.6 2.3-1.4 1-2.5 2.7.2z"/><path d="M9 12l2 2 4-4"/></svg>
+          <span>Custom Branding on Request</span>
+        </div>
+        <div class="feature-item">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19c0-8 6-13 15-13 0 9-5 15-13 13"/><path d="M5 19c3-4 6-6 10-7"/></svg>
+          <span>Eco / Recyclable Options</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop packs -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / Packaging</div>
+      <div class="section-head" style="margin-bottom:26px">
+        <span class="eyebrow">Shop packaging</span>
+        <h2>Pouches, boxes &amp; kits — by the pack</h2>
+        <p>Food-vendor pouches, gift boxes, hamper boxes and ready-to-go packaging kits. Buy fixed-price packs below, or scroll down to order in bulk for your business.</p>
+      </div>
+
+      <div class="shop-bar">
+        <span id="pkgCount" class="shop-count"></span>
+        <label class="shop-sort">Sort
+          <select id="pkgSort" onchange="paintPkg()">
+            <option value="featured">Featured</option>
+            <option value="price-asc">Price: low to high</option>
+            <option value="price-desc">Price: high to low</option>
+            <option value="name">Name: A to Z</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="grid grid-4" id="pkgGrid"></div>
+      <div id="pkgEmpty" class="empty-state" style="display:none">
+        <div class="em">📦</div>
+        <h3>Packs landing here soon</h3>
+        <p>We're stocking the packaging range. In the meantime, tell us what you need with a bulk quote below.</p>
+        <a class="btn btn--outline btn--pill" href="#bulk">Request a bulk quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bulk & Commercial quote -->
+  <section class="section bg-cream2" id="bulk">
+    <div class="container">
+      <div class="split reveal">
+        <div>
+          <span class="eyebrow">Bulk &amp; Commercial</span>
+          <h2>Ordering for a business?</h2>
+          <p class="lead">Food vendors, cafés, gift studios and retailers — get wholesale pricing on pouches, boxes and kits, with the option of custom-branded packaging. Tell us what you need and we'll send a tailored quote.</p>
+          <ul class="pdp-detail-list" style="max-width:420px">
+            <li><span>Minimum order</span><span>From 100 units</span></li>
+            <li><span>Custom branding</span><span>Logo &amp; colours available</span></li>
+            <li><span>Lead time</span><span>Quoted per order</span></li>
+            <li><span>Samples</span><span>On request</span></li>
+          </ul>
+        </div>
+        <div class="form-card">
+          <h3 style="margin-bottom:6px">Request a bulk quote</h3>
+          <form data-demo-form data-form-name="Bulk packaging quote" data-success-msg="Thank you! Your bulk quote request has been received — the DecoMuse team will be in touch shortly.">
+            <div class="field-row">
+              <div class="field"><label>Your name</label><input required></div>
+              <div class="field"><label>Business name</label><input></div>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Email</label><input type="email" required></div>
+              <div class="field"><label>Phone</label><input type="tel"></div>
+            </div>
+            <div class="field"><label>What packaging do you need?</label>
+              <select>
+                <option>Food &amp; vendor pouches</option>
+                <option>Gift boxes</option>
+                <option>Hamper boxes</option>
+                <option>Mailers &amp; cartons</option>
+                <option>Packaging kits</option>
+                <option>Custom branded packaging</option>
+                <option>Mixed / not sure yet</option>
+              </select>
+            </div>
+            <div class="field-row">
+              <div class="field"><label>Estimated quantity</label><input placeholder="e.g. 500 units"></div>
+              <div class="field"><label>Custom branding?</label>
+                <select><option>No, plain</option><option>Yes — logo / colours</option><option>Maybe, tell me options</option></select>
+              </div>
+            </div>
+            <div class="field"><label>Details</label><textarea style="min-height:90px" placeholder="Sizes, materials, colours, deadline, anything else…"></textarea></div>
+            <button class="btn btn--primary btn--block" type="submit">Send quote request</button>
+            <div class="form-success" style="display:none;color:var(--forest);margin-top:12px"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function paintPkg() {
+      let list = PRODUCTS.filter(p => p.cat === "Packaging" || p.room === "Packaging");
+      const sort = (document.getElementById("pkgSort") || {}).value || "featured";
+      if (sort === "price-asc") list.sort((a, b) => a.price - b.price);
+      else if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
+      else if (sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
+      renderProducts("pkgGrid", list);
+      const c = document.getElementById("pkgCount");
+      if (c) c.textContent = `${list.length} ${list.length === 1 ? "pack" : "packs"}`;
+      document.getElementById("pkgEmpty").style.display = list.length ? "none" : "block";
+      document.getElementById("pkgGrid").style.display = list.length ? "grid" : "none";
+    }
+    paintPkg();
+    initReveal();
+  </script>
+</body>
+</html>

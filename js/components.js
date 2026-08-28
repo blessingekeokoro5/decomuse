@@ -152,14 +152,17 @@ function buildHeader() {
 
   // Mega menu markup
   const megaMarkup = MEGA_MENU.map(cat => {
-    const cols = cat.columns.map(col => `
+    const cols = cat.columns.map(col => {
+      const dest = col.page || catDest(cat);
+      return `
       <div class="mega-col">
         <h5>${col.title}</h5>
         <ul>${col.links.map(l => {
           const isSale = /sale/i.test(l);
-          return `<li class="${isSale ? 'sale' : ''}"><a href="${catDest(cat)}">${l}</a></li>`;
+          return `<li class="${isSale ? 'sale' : ''}"><a href="${dest}">${l}</a></li>`;
         }).join("")}</ul>
-      </div>`).join("");
+      </div>`;
+    }).join("");
     return `
       <div class="mega" data-mega="${cat.key}">
         <div class="container mega-inner">
@@ -239,10 +242,10 @@ function buildHeader() {
       <li><a href="index.html">Home</a></li>
       ${MEGA_MENU.map(cat => {
         const shopHref = CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
-        const links = cat.columns.reduce((a, c) => a.concat(c.links), []).slice(0, 7);
+        const links = cat.columns.reduce((a, c) => a.concat(c.links.map(l => ({ l, href: c.page || shopHref }))), []).slice(0, 8);
         return `<li class="m-acc">
           <div class="m-acc-head"><a href="${shopHref}">${cat.label}</a><button type="button" class="m-chev" aria-label="Expand ${cat.label}" onclick="mNavToggle(this)">${IC.caret}</button></div>
-          <ul class="m-acc-body"><li><a href="${shopHref}">Shop all ${cat.label}</a></li>${links.map(l => `<li><a href="${shopHref}">${l}</a></li>`).join("")}</ul>
+          <ul class="m-acc-body"><li><a href="${shopHref}">Shop all ${cat.label}</a></li>${links.map(x => `<li><a href="${x.href}">${x.l}</a></li>`).join("")}</ul>
         </li>`;
       }).join("")}
       <li class="m-acc">

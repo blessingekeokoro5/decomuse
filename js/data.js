@@ -95,12 +95,12 @@ const MEGA_MENU = [
     ]
   },
   {
-    key: "hampers", label: "Gift Hampers",
+    key: "hampers", label: "Gifts & Packaging",
     columns: [
-      { title: "Price", links: ["Create My Own Hamper", "On Sale", "Under $100", "$100 to $150", "Over $150", "Gift Cards", "Most Popular"] },
-      { title: "Favourite", links: ["Fragrance Hampers", "Pamper Hampers", "Gourmet Food", "Cheese & Wine", "Chocolate & Sweet", "Tea & Coffee"] },
-      { title: "Occasions", links: ["Birthday", "Thank You", "Congratulations", "New Baby", "Anniversary", "Housewarming"] },
-      { title: "Seasonal", links: ["Christmas", "Mother's Day", "Father's Day", "Valentine's Day", "Easter"] }
+      { title: "Gift Hampers", links: ["Shop All Hampers", "Create My Own Hamper", "By Occasion", "Gift Cards", "On Sale"] },
+      { title: "Pouches & Boxes", page: "packaging.html", links: ["Food & Vendor Pouches", "Gift Boxes", "Hamper Boxes", "Mailers & Cartons"] },
+      { title: "Kits & Supplies", page: "packaging.html", links: ["Packaging Kits", "Ribbons & Tags", "Tissue & Filler", "Labels & Stickers"] },
+      { title: "Bulk & Commercial", page: "packaging.html", links: ["Wholesale Packaging", "Custom Branded Packaging", "Request a Bulk Quote"] }
     ]
   },
   {
