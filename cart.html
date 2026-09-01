@@ -18,52 +18,24 @@
   <section class="page-banner">
     <div class="container">
       <div class="breadcrumb"><a href="index.html">Home</a> / Cart</div>
-      <span class="eyebrow">Your selection</span>
-      <h1>Shopping cart</h1>
+      <h1>Shopping Cart</h1>
+      <div class="cart-id" id="cartId"></div>
     </div>
   </section>
 
   <section class="section">
     <div class="container">
-      <div class="cart-app">
-        <!-- Express checkout -->
-        <div class="cart-express" id="cartExpress" style="display:none">
-          <div class="ce-head"><span>Express Checkout</span><span class="ce-status">via Stripe</span></div>
-          <a class="ce-btn" href="checkout.html">Express Checkout
-            <span class="pay-badge pay-applepay">Apple&nbsp;Pay</span>
-            <span class="pay-badge pay-gpay"><span class="g-b">G</span>&nbsp;Pay</span>
-          </a>
+      <div class="cart-layout" id="cartLayout">
+        <div class="cart-main">
+          <div id="cartItems"></div>
+          <div id="cartLower"></div>
         </div>
-
-        <!-- Review items -->
-        <h2 class="cart-sec-title">Review items</h2>
-        <div id="cartItems"></div>
-        <div id="cartSummary"></div>
-
-        <!-- Actions -->
-        <a class="btn btn--primary btn--block" id="continueBtn" href="checkout.html" style="margin-top:20px">Continue to checkout →</a>
-        <button class="cart-empty-link" id="emptyCartBtn" onclick="emptyCart()">🗑 Empty cart</button>
-
-        <!-- Details accordions -->
-        <div class="cart-accordion">
-          <details>
-            <summary>Customer details</summary>
-            <div class="acc-body">Your name, email and shipping address are collected securely on the next step, at checkout with Stripe. You can also <a href="account.html">log in</a> to save your details.</div>
-          </details>
-          <details>
-            <summary>Delivery preferences</summary>
-            <div class="acc-body">Standard shipping Australia-wide and to New Zealand · 3–8 business days. <strong>Free shipping on orders over $500.</strong> We accept returns within 30 days.</div>
-          </details>
-          <details>
-            <summary>Payment options</summary>
-            <div class="acc-body">Pay securely with Card, Apple Pay, Google Pay, Afterpay, Zip or Klarna. Have a promo code? Enter it in your order summary above, or at checkout.</div>
-          </details>
-        </div>
+        <aside class="cart-aside" id="cartAside"></aside>
       </div>
     </div>
   </section>
 
-  <!-- Sticky total bar -->
+  <!-- Sticky total bar (mobile) -->
   <div class="cart-sticky">
     <div class="container">
       <div class="cart-sticky-inner">
@@ -86,17 +58,40 @@
       if (confirm("Remove all items from your cart?")) { saveCart([]); renderCartPage(); showToast("Cart emptied"); }
     }
 
+    function confidenceCard(total) {
+      const p4 = money(total / 4);
+      return `
+        <div class="conf-card">
+          <div class="conf-head">SHOP <em>with</em> CONFIDENCE</div>
+          <div class="conf-sec">
+            <h4>Buy Today, Pay Later</h4>
+            <p class="conf-muted">Available now, based on your cart:</p>
+            <div class="conf-bnpl">
+              <div class="cb-row"><span class="cb-badge cb-afterpay">afterpay</span> <span>4 payments of <strong>${p4}</strong></span></div>
+              <div class="cb-row"><span class="cb-badge cb-zip">zip</span> <span>4 interest-free payments of <strong>${p4}</strong></span></div>
+              <div class="cb-row"><span class="cb-badge cb-paypal">PayPal</span> <span>Pay in 4 with <strong>${p4}</strong></span></div>
+            </div>
+          </div>
+          <div class="conf-sec">
+            <h4>Returns &amp; Exchanges</h4>
+            <p class="conf-muted">Shop with confidence — <strong>30-day returns</strong> and our satisfaction guarantee.</p>
+          </div>
+          <div class="conf-sec">
+            <h4>We're Here to Help</h4>
+            <p class="conf-muted">Our Australian-based team offers support <strong>7 days a week</strong>. <a href="contact.html">Contact us →</a></p>
+          </div>
+        </div>`;
+    }
+
     function renderCartPage() {
       const cart = getCart();
       const items = document.getElementById("cartItems");
-      const summary = document.getElementById("cartSummary");
-      const express = document.getElementById("cartExpress");
-      const contBtn = document.getElementById("continueBtn");
-      const emptyBtn = document.getElementById("emptyCartBtn");
+      const lower = document.getElementById("cartLower");
+      const aside = document.getElementById("cartAside");
       const stickyTotal = document.getElementById("cartStickyTotal");
+      const cartIdEl = document.getElementById("cartId");
 
       if (!cart.length) {
-        express.style.display = "none";
         items.innerHTML = `
           <div class="cart-empty-box">
             ${CART_EMPTY_SVG}
@@ -107,10 +102,9 @@
               <a class="btn btn--outline" href="stylist.html">✦ Try Muse Stylist AI</a>
             </div>
           </div>`;
-        summary.innerHTML = "";
-        contBtn.classList.add("is-disabled");
-        contBtn.setAttribute("aria-disabled", "true");
-        emptyBtn.style.display = "none";
+        lower.innerHTML = "";
+        aside.innerHTML = "";
+        if (cartIdEl) cartIdEl.textContent = "";
         stickyTotal.textContent = money(0);
         return;
       }
@@ -123,53 +117,93 @@
       const voucher = (vou && vou.amount) ? Math.min(vou.amount, afterDisc) : 0;
       const shipping = afterDisc >= 500 ? 0 : 19;
       const total = afterDisc - voucher + shipping;
+      const gst = total / 11;
 
+      if (cartIdEl) cartIdEl.textContent = "Cart ID: " + (localStorage.getItem("dm_cart_id") || (function () { const id = "DM" + Math.floor(10000000 + Math.random() * 89999999); localStorage.setItem("dm_cart_id", id); return id; })());
+
+      // ---- Items ----
       items.innerHTML = cart.map(i => {
         const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
         const src = i.img || (prod && (prod.img || (prod.imgs && prod.imgs[0]))) || ("assets/products/" + i.id + ".jpg");
+        const sku = (prod && prod.sku) ? prod.sku : "";
         return `
         <div class="cart-line">
           <div class="thumb"><div class="ph ${i.ph}" data-label="${i.name}"><img class="ph-img" src="${src}" alt="${i.name}" onerror="this.remove()"></div></div>
-          <div>
-            <div style="color:var(--rose-deep);font-size:0.66rem;letter-spacing:0.14em;text-transform:uppercase">${i.cat}</div>
-            <h3 style="font-size:1.05rem;margin:2px 0 6px">${i.name}${(i.colour || i.size) ? ` <small style="color:var(--muted);font-weight:400">· ${[i.colour, i.size].filter(Boolean).join(" · ")}</small>` : ""}</h3>
-            ${i.contents ? `<p style="font-size:0.8rem;color:var(--muted);margin:0 0 8px;max-width:380px">${i.contents}</p>` : ""}
+          <div class="cl-info">
+            <div class="cl-cat">${i.cat}</div>
+            <h3 class="cl-name">${i.name}${(i.colour || i.size) ? ` <small>· ${[i.colour, i.size].filter(Boolean).join(" · ")}</small>` : ""}</h3>
+            ${sku ? `<div class="cl-sku">${sku}</div>` : ""}
+            ${afterDisc >= 500 ? `<div class="cl-bonus">BONUS: FREE DELIVERY</div>` : ""}
+            <ul class="cart-deliv">
+              <li>Delivered by a trusted supplier — track online</li>
+              <li>Allow 3–8 business days for delivery — depending on your location</li>
+              <li>Leaves our warehouse in 1–2 business days</li>
+            </ul>
+          </div>
+          <div class="cl-price"><span class="cl-plabel">Price</span>${money(i.price)}</div>
+          <div class="cl-qty">
+            <span class="cl-plabel">Qty</span>
             <div class="qty">
               <button onclick="setQty('${i.key || i.id}', ${i.qty - 1})">−</button>
               <span>${i.qty}</span>
               <button onclick="setQty('${i.key || i.id}', ${i.qty + 1})">+</button>
             </div>
+            <button class="link-remove" onclick="removeFromCart('${i.key || i.id}')">✕ Remove</button>
           </div>
-          <div style="text-align:right">
-            <div class="price">${money(i.price * i.qty)}</div>
-            <button class="link-remove" onclick="removeFromCart('${i.key || i.id}')">Remove</button>
-          </div>
+          <div class="cl-sub"><span class="cl-plabel">Subtotal</span>${money(i.price * i.qty)}</div>
         </div>`;
       }).join("");
 
-      summary.innerHTML = `
-        <div class="summary" style="margin-top:22px">
-          <div class="summary-row"><span>Subtotal</span><span>${money(sub)}</span></div>
-          ${discount ? `<div class="summary-row" style="color:var(--forest)"><span>${disc.label}</span><span>−${money(discount)}</span></div>` : ""}
-          ${voucher ? `<div class="summary-row" style="color:var(--forest)"><span>Rewards voucher (${vou.code}) <a href="#" onclick="removeVoucher();return false;" style="font-size:0.75rem;color:var(--muted)">remove</a></span><span>−${money(voucher)}</span></div>` : ""}
-          <div class="summary-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
-          ${shipping !== 0 ? `<div style="font-size:0.82rem;color:var(--muted)">Free shipping over $500</div>` : ""}
-          <div class="summary-row total"><span>Total</span><span>${money(total)}</span></div>
-          ${(typeof DM_CUR !== "undefined" && DM_CUR !== "AUD") ? `<div style="font-size:0.8rem;color:var(--muted);margin-top:2px">≈ converted · charged in AUD: <strong>${moneyAud(total)}</strong></div>` : ""}
-          ${bnplBadge(total)}
-          <div style="display:flex;gap:8px;margin:16px 0 6px">
-            <input id="couponInput" placeholder="Promo code (try WELCOME20)" value="${window._coupon || ""}"
-                   style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
-            <button class="btn btn--outline btn--sm" onclick="applyCoupon()">Apply</button>
-          </div>
-          ${window._coupon === "WELCOME20" ? `<div style="font-size:0.82rem;color:var(--forest)">✓ Member code applied</div>` : ""}
-          <button class="btn btn--outline btn--block" style="margin-top:12px" onclick="emailMyBag()">📧 Email my shopping list</button>
-        </div>`;
+      // ---- Delivery (delivery only — no click & collect) + gift card + promo + totals + actions ----
+      lower.innerHTML = `
+        <div class="cart-panel cart-delivery">
+          <h3>Delivery</h3>
+          <label class="deliv-opt selected">
+            <span class="deliv-ic">🚚</span>
+            <span class="deliv-txt"><strong>Standard delivery</strong><small>Australia-wide &amp; New Zealand · 3–8 business days${shipping === 0 ? " · <span style='color:var(--forest)'>Free on this order</span>" : " · Free over $500"}</small></span>
+            <span class="deliv-check">✓</span>
+          </label>
+          <p class="deliv-note">Same-day local delivery (Uber/DoorDash) is available on eligible metro orders — choose it at checkout.</p>
+        </div>
 
-      express.style.display = "";
-      contBtn.classList.remove("is-disabled");
-      contBtn.removeAttribute("aria-disabled");
-      emptyBtn.style.display = "";
+        <details class="cart-panel cart-fold">
+          <summary>🎁 Use a gift card</summary>
+          <div class="fold-body">Have a DecoMuse gift card? You can redeem it securely at checkout — your balance will apply to this order.</div>
+        </details>
+
+        <details class="cart-panel cart-fold" ${window._coupon ? "open" : ""}>
+          <summary>🏷️ Use a promotional code</summary>
+          <div class="fold-body">
+            <div style="display:flex;gap:8px">
+              <input id="couponInput" placeholder="Promo code (try WELCOME20)" value="${window._coupon || ""}"
+                     style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
+              <button class="btn btn--outline btn--sm" onclick="applyCoupon()">Apply</button>
+            </div>
+            ${window._coupon === "WELCOME20" ? `<div style="font-size:0.82rem;color:var(--forest);margin-top:8px">✓ Member code applied — 20% off</div>` : ""}
+          </div>
+        </details>
+
+        <div class="cart-totals">
+          <div class="ct-row"><span>Subtotal</span><span>${money(sub)}</span></div>
+          ${discount ? `<div class="ct-row" style="color:var(--forest)"><span>${disc.label}</span><span>−${money(discount)}</span></div>` : ""}
+          ${voucher ? `<div class="ct-row" style="color:var(--forest)"><span>Rewards voucher (${vou.code}) <a href="#" onclick="removeVoucher();return false;" style="font-size:0.75rem;color:var(--muted)">remove</a></span><span>−${money(voucher)}</span></div>` : ""}
+          <div class="ct-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
+          <div class="ct-row ct-total"><span>Total amount</span><span>${money(total)}</span></div>
+          <div class="ct-gst">(Incl GST ${money(gst)})</div>
+          ${(typeof DM_CUR !== "undefined" && DM_CUR !== "AUD") ? `<div class="ct-gst">≈ charged in AUD: <strong>${moneyAud(total)}</strong></div>` : ""}
+        </div>
+
+        <div class="cart-actions">
+          <a class="btn btn--outline" href="shop.html">← Continue shopping</a>
+          <a class="btn btn--primary" id="continueBtn" href="checkout.html">Continue to checkout →</a>
+        </div>
+        <div class="cart-actions-sub">
+          <button class="btn btn--outline btn--sm" onclick="emailMyBag()">📧 Email my shopping list</button>
+          <button class="cart-empty-link" onclick="emptyCart()">🗑 Empty cart</button>
+        </div>
+        <p class="cart-secure">🔒 Secure checkout with Card · Apple&nbsp;Pay · Google&nbsp;Pay · Afterpay · Zip · Klarna, via Stripe. You can review your order before paying.</p>`;
+
+      aside.innerHTML = confidenceCard(total);
       stickyTotal.textContent = money(total);
     }
 
