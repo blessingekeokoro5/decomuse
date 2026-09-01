@@ -228,6 +228,23 @@ function bnplBadge(price) {
 
 /* ---- Product card markup ---- */
 function productCard(p) {
+  if (p.comingSoon) {
+    return `
+    <article class="card product coming-soon" data-cat="${p.cat}">
+      <div class="card-media">
+        <div class="card-badges"><span class="tag soon">Back Soon</span></div>
+        <div class="ph cs-ph" data-label="${p.name}">
+          <img class="cs-logo" src="assets/logo.jpg" alt="DecoMuse" loading="lazy" onerror="this.style.display='none'">
+          <span class="cs-msg">Image Coming Soon</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <span class="cat">${p.cat}</span>
+        <h3>${p.name}</h3>
+        <div class="cs-status">Coming back soon</div>
+      </div>
+    </article>`;
+  }
   const tag = p.tag ? `<span class="tag ${/sale/i.test(p.tag) ? 'sale' : ''}">${p.tag}</span>` : "";
   const hot = sellingFast(p) ? `<span class="badge-hot">⚡ Selling fast</span>` : "";
   const was = p.was ? `<small>${money(p.was)}</small>` : "";

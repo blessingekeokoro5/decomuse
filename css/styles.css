@@ -1636,6 +1636,15 @@ em { font-style: italic; color: var(--rose-deep); }
 .dp-box p { color: var(--body); font-size: 0.9rem; margin: 0; line-height: 1.6; }
 .dp-close { position: absolute; top: 12px; right: 14px; background: none; border: none; font-size: 1.1rem; cursor: pointer; color: var(--muted); }
 
+/* Coming-soon placeholder cards (DecoMuse logo, "Back Soon") */
+.card.coming-soon .cs-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
+  background: #fbf8f5; aspect-ratio: 1 / 1; width: 100%; }
+.cs-logo { width: 58%; max-width: 190px; max-height: 60%; object-fit: contain; mix-blend-mode: multiply; opacity: 0.9; }
+.cs-msg { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.tag.soon { background: #e6e2dc; color: #6b6258; }
+.card.coming-soon h3 a, .card.coming-soon h3 { color: var(--ink); }
+.card.coming-soon .cs-status { font-size: 0.85rem; color: var(--muted); font-style: italic; margin-top: 4px; }
+
 /* ============================================================
    Collection landing pages (room hero banner + feature strip)
    Reusable across Bathroom, Bedroom, Living Room, etc.

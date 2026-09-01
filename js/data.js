@@ -249,6 +249,30 @@ const PRODUCTS = [
     care: "Wipe clean with a soft, damp cloth; avoid abrasive cleaners and excess water. Use coasters to protect the surface from heat and moisture." }
 ];
 
+/* ---- Coming-soon placeholders ---------------------------------
+   Shown as "Back Soon" cards (DecoMuse logo) so every category
+   looks stocked while real products are being added. Delete a
+   category's list here once you've published real products for it. */
+const COMING_SOON = {
+  "Living Room": ["Bouclé Accent Armchair", "Arched Floor Mirror", "Hand-Knotted Area Rug", "Ceramic Table Lamp"],
+  "Home Décor": ["Sculptural Ceramic Vase", "Framed Line-Art Print", "Marble Trinket Tray", "Faux Olive Stem"],
+  "Bedroom": ["French Linen Quilt Set", "Oak Bedside Table", "Cushion & Throw Bundle", "Bedside Reading Lamp"],
+  "Bathroom": ["Waffle Cotton Towel Set", "Bamboo Bath Caddy", "Woven Storage Basket", "Stoneware Soap Dispenser"],
+  "Office": ["Oak Writing Desk", "Ergonomic Studio Chair", "Leather Desk Organiser", "Brass Task Lamp"],
+  "Outdoor": ["Rattan Lounge Set", "Textured Ceramic Planter", "Solar Lantern Pair", "Weatherproof Cushion Set"],
+  "Kitchenware": ["Stoneware Dinner Set", "Acacia Serving Board", "Glass Canister Trio", "Linen Tea Towel Set"],
+  "Lifestyle": ["Soy Candle Trio", "Reed Diffuser Duo", "Travel Wash Bag", "Stoneware Mug Set"],
+  "Packaging": ["Kraft Gift Boxes 10pk", "Stand-Up Food Pouches 50pk", "Ribbon & Gift Tag Kit", "Mailer Boxes 20pk"]
+};
+Object.keys(COMING_SOON).forEach(function (cat) {
+  COMING_SOON[cat].forEach(function (nm, i) {
+    PRODUCTS.push({
+      id: "cs-" + cat.toLowerCase().replace(/[^a-z]+/g, "") + "-" + (i + 1),
+      name: nm, cat: cat, comingSoon: true, ph: "", img: "assets/logo.jpg"
+    });
+  });
+});
+
 /* Merge any products added via the Admin form on this device (drafts / live preview).
    These show on the site immediately; use the Admin "Copy code" to make them permanent. */
 try {
