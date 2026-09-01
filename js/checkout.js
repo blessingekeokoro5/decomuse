@@ -221,6 +221,22 @@ function setFulfil(mode) {
 
 async function startPayment(e) {
   e.preventDefault();
+  // Must be logged in to place an order — so it saves to the account and can be tracked.
+  const _acct = (typeof getAccount === "function") ? getAccount() : null;
+  if (!_acct || !_acct.email) {
+    let gate = document.getElementById("coLoginGate");
+    if (!gate) {
+      gate = document.createElement("div");
+      gate.id = "coLoginGate";
+      gate.className = "fulfil-note";
+      gate.style.color = "var(--rose-deep)";
+      const pb = document.getElementById("payBtn");
+      if (pb && pb.parentNode) pb.parentNode.insertBefore(gate, pb);
+    }
+    gate.innerHTML = '🔒 Please <a href="account.html">log in or create a free account</a> to place your order — it lets you track it every step of the way, from picking to your door.';
+    gate.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
   const btn = document.getElementById("payBtn");
   const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE.stripe) || {};
   const cart = getCart();

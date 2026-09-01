@@ -97,6 +97,7 @@
   <script src="js/components.js"></script>
   <script src="js/cart.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/order-status.js"></script>
   <script>
     let accMode = "signup";
     if (location.hash === "#login") accMode = "login";
@@ -314,22 +315,36 @@
       } catch (e) { return []; }
     }
     function renderOrders(orders) {
+      window._orders = orders || [];
       if (!orders || !orders.length) {
         return `<div style="border:1px dashed var(--line);border-radius:10px;padding:22px;text-align:center;color:var(--muted)">
           You have no orders yet. <a href="shop.html">Start shopping →</a><br>
           <small>Your receipts will appear here after checkout.</small></div>`;
       }
       return orders.map((o, i) => `
-        <div class="order-row">
-          <div class="o-meta">
-            <strong>Order ${o.orderNo}</strong>
-            <small>${o.date || ""} · ${(o.items || []).reduce((s, it) => s + (it.qty || 1), 0)} item(s)</small>
+        <div class="order-wrap">
+          <div class="order-row">
+            <div class="o-meta">
+              <strong>Order ${o.orderNo}</strong>
+              <small>${o.date || ""} · ${(o.items || []).reduce((s, it) => s + (it.qty || 1), 0)} item(s)</small>
+            </div>
+            <div style="text-align:right">
+              <div class="price" style="font-family:var(--font-head)">${money(o.total || 0)}</div>
+              <button class="link-remove" style="color:var(--rose-deep)" onclick="viewReceipt(${i})">View receipt</button>
+              <button class="btn btn--outline btn--sm" style="margin-left:8px" onclick="openOrderTrack(${i}, this)">Track order</button>
+            </div>
           </div>
-          <div style="text-align:right">
-            <div class="price" style="font-family:var(--font-head)">${money(o.total || 0)}</div>
-            <button class="link-remove" style="color:var(--rose-deep)" onclick="viewReceipt(${i})">View receipt</button>
-          </div>
+          <div class="order-track" id="otrack${i}" hidden></div>
         </div>`).join("");
+    }
+    function openOrderTrack(i, btn) {
+      const el = document.getElementById("otrack" + i);
+      const o = (window._orders || [])[i];
+      if (!el || !o) return;
+      if (!el.hidden) { el.hidden = true; if (btn) btn.textContent = "Track order"; return; }
+      el.hidden = false; if (btn) btn.textContent = "Hide tracking";
+      if (typeof renderOrderStatus === "function") renderOrderStatus(o, el);
+      el.scrollIntoView({ behavior: "smooth", block: "nearest" });
     }
     function viewReceipt(i) {
       const acc = getAccount();

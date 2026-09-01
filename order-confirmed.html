@@ -58,6 +58,7 @@
         if (!items.length) { try { items = getCart().map(i => ({ id: i.id, name: i.name, cat: i.cat, price: i.price, qty: i.qty, giftCard: i.giftCard })); } catch (e) {} }
         const record = {
           orderNo: o.orderNo, date: (new Date()).toISOString().slice(0, 10),
+          placedAt: Date.now(),
           total: o.total, shipping: (pend && pend.shipping) || 0, items
         };
         const email = o.email || (typeof getAccount === "function" && getAccount() && getAccount().email);
