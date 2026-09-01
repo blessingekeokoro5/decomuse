@@ -264,13 +264,19 @@ const COMING_SOON = {
   "Lifestyle": ["Soy Candle Trio", "Reed Diffuser Duo", "Travel Wash Bag", "Stoneware Mug Set"],
   "Packaging": ["Kraft Gift Boxes 10pk", "Stand-Up Food Pouches 50pk", "Ribbon & Gift Tag Kit", "Mailer Boxes 20pk"]
 };
+const CS_STYLES = ["", "Classic", "Luxe", "Petite", "Grand", "Studio", "Signature", "Heritage", "Everyday", "Deluxe", "Modern", "Coastal", "Nordic"];
+const CS_PER_CAT = 50; // placeholder cards shown per category until real stock is added
 Object.keys(COMING_SOON).forEach(function (cat) {
-  COMING_SOON[cat].forEach(function (nm, i) {
+  var base = COMING_SOON[cat];
+  for (var i = 0; i < CS_PER_CAT; i++) {
+    var nm = base[i % base.length];
+    var st = CS_STYLES[Math.floor(i / base.length) % CS_STYLES.length];
     PRODUCTS.push({
       id: "cs-" + cat.toLowerCase().replace(/[^a-z]+/g, "") + "-" + (i + 1),
-      name: nm, cat: cat, comingSoon: true, ph: "", img: "assets/logo.jpg"
+      name: st ? st + " " + nm : nm,
+      cat: cat, comingSoon: true, ph: "", img: "assets/logo.jpg"
     });
-  });
+  }
 });
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).
