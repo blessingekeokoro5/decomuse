@@ -783,7 +783,7 @@ function initCookies() {
   const close = (val) => { try { localStorage.setItem("dm_cookies", val); } catch (e) {} bar.classList.remove("show"); };
   document.getElementById("cookieAccept").addEventListener("click", () => close("all"));
   document.getElementById("cookieEssential").addEventListener("click", () => close("essential"));
-  setTimeout(() => bar.classList.add("show"), 800);
+  setTimeout(() => bar.classList.add("show"), 120000); // cookie bar: 2 minutes
 }
 
 /* ============================================================
@@ -1041,7 +1041,7 @@ function initMemberBanner() {
     startAutoClose();
     banner.addEventListener("mouseenter", () => clearTimeout(promoTimer));
     banner.addEventListener("mouseleave", startAutoClose);
-  }, 2000);
+  }, 300000); // member banner: 5 minutes
 }
 
 /* ============================================================
@@ -1138,7 +1138,7 @@ function initMemberModal() {
       if (country && country.classList.contains("open")) { setTimeout(tryShow, 1500); return; }
       openMemberModal();
     };
-    setTimeout(tryShow, 2600);
+    setTimeout(tryShow, 480000); // discount / membership modal: 8 minutes
   }
 }
 
