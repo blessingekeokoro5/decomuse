@@ -1787,3 +1787,13 @@ em { font-style: italic; color: var(--rose-deep); }
 .start-return .sr-h { font-size: 1.05rem; margin-bottom: 10px; }
 .start-return .sr-btn { display: inline-block; }
 .sr-policy-h { margin: 8px 0 12px; }
+
+/* "Ask MuseStylist" nav pill */
+.ask-muse { display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer;
+  background: linear-gradient(120deg, var(--rose-deep), #a85f8f 45%, var(--gold));
+  color: #fff; font-family: var(--font-body); font-weight: 500; font-size: 0.86rem; letter-spacing: 0.01em;
+  padding: 9px 16px; border-radius: 999px; white-space: nowrap; box-shadow: 0 4px 14px rgba(165,88,106,0.28);
+  transition: transform var(--tr), box-shadow var(--tr); }
+.ask-muse:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(165,88,106,0.38); }
+.ask-muse .am-star { font-size: 0.9rem; }
+@media (max-width: 640px){ .ask-muse { display: none; } }

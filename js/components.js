@@ -324,6 +324,7 @@ function buildHeader() {
         <button type="submit" class="hs-btn" aria-label="Search">${IC.search}</button>
       </form>
       <div class="nav-utility-right">
+        <button class="ask-muse" type="button" onclick="if(typeof openMuseChat==='function')openMuseChat();else location.href='stylist.html';" aria-label="Ask MuseStylist"><span class="am-star">✦</span> Ask MuseStylist</button>
         <button class="region-btn" id="regionBtn" aria-label="Choose region" title="Choose your region"><span id="regionFlag">🇦🇺</span></button>
         <a class="icon-btn wish-link" href="wishlist.html" aria-label="Wishlist">${IC.heart}</a>
         <div class="account-menu" id="accountMenu">
@@ -1404,6 +1405,7 @@ function initChat() {
     panel.classList.remove("open"); panel.setAttribute("aria-hidden", "true");
     if (launch) launch.classList.remove("hidden");
   };
+  window.openMuseChat = () => { if (!panel.classList.contains("open")) open("chat"); else switchTab("chat"); };
 
   if (giftFab) giftFab.addEventListener("click", () => { if (!panel.classList.contains("open")) open("chat"); else switchTab("chat"); });
   if (supportFab) supportFab.addEventListener("click", () => { if (!panel.classList.contains("open")) open("support"); else switchTab("support"); });
