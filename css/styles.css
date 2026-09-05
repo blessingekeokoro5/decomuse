@@ -1781,3 +1781,9 @@ em { font-style: italic; color: var(--rose-deep); }
   .cl-qty .qty { justify-content: flex-start; }
   .cart-actions { flex-direction: column; }
 }
+
+/* Returns policy — Start A Return button */
+.start-return { margin: 8px 0 22px; }
+.start-return .sr-h { font-size: 1.05rem; margin-bottom: 10px; }
+.start-return .sr-btn { display: inline-block; }
+.sr-policy-h { margin: 8px 0 12px; }

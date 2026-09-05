@@ -83,8 +83,15 @@
     }
     function renderPolicy(slug) {
       const p = POLICIES[slug];
+      const startReturn = slug === "returns" ? `
+        <div class="start-return">
+          <h3 class="sr-h">Start A Return</h3>
+          <a class="btn btn--dark sr-btn" href="returns.html">Click here to start a return</a>
+        </div>
+        <h3 class="sr-policy-h">Our Returns Policy</h3>` : "";
       return `<h2>${p.title}</h2>
         <p class="pol-updated">Last updated: ${POLICY_UPDATED}</p>
+        ${startReturn}
         <p class="pol-intro">${p.intro}</p>
         ${p.body}`;
     }
