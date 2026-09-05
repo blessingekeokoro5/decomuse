@@ -823,7 +823,7 @@ function buildCountryModal() {
     <div class="country-card" role="dialog" aria-label="Confirm your country">
       <button class="country-close" id="countryClose" aria-label="Close">✕</button>
       <h3>Confirm your country</h3>
-      <p>You're shopping the <strong>DecoMuse Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to Australia &amp; New Zealand, confirm your region for delivery &amp; pricing info.</p>
+      <p>You're shopping the <strong>DecoMuse Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to selected regions — Australia, New Zealand, Nigeria, the UK, USA &amp; Canada — confirm your region for delivery &amp; pricing info.</p>
       <div class="country-detected" id="countryDetected"></div>
       <label class="country-select-label">Shopping from another country?
         <select id="countrySelect">${options}</select>
@@ -1232,7 +1232,7 @@ function chatReply(text) {
     html = `We've got you! 📦 Our ${link("packaging.html", "Packaging")} range has food-vendor pouches, gift boxes, hamper boxes and ready-to-go kits, buy fixed-price packs or ${link("packaging.html#bulk", "request a bulk quote")} for your business.`;
 
   else if (has(/\b(ship|shipping|deliver|delivery|post|postage|freight|worldwide|international|country|countries|how long|when.*(arrive|get|receive)|dispatch)\b/) && !has(/\buber\b/))
-    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>Australia &amp; New Zealand</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
+    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>selected regions — Australia, New Zealand, Nigeria, the UK, USA &amp; Canada</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
 
   else if (has(/\b(lifestyle|candle|throw|cushion|linen|homeware|kitchen|dining|stationery|everyday|essential)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Lifestyle")} edit is full of everyday beautiful things, candles, textiles, kitchen & dining and little essentials ✦.`;

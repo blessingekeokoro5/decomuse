@@ -321,7 +321,7 @@ const HAMPER_MIN = 60;
 /* ---- Rotating announcement bar ---- */
 const ANNOUNCEMENTS = [
   "✦ Free shipping on orders over $500, Australia-wide",
-  "🌏 We ship to Australia &amp; New Zealand",
+  "🌏 We ship to selected regions — Australia / New Zealand / Nigeria / UK / USA / Canada",
   "🌸 New fragrances &amp; home arrivals added weekly",
   "💝 Members save 20% on their first order, join free",
   "⭐ Loved by 500+ Australian homes · 4.9★ average review",
