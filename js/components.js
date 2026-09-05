@@ -510,13 +510,9 @@ function buildFloating() {
     </div>
 
     <div class="dm-launch" id="dmLaunch">
-      <button class="launch-btn launch-gift" id="giftFab" aria-label="Find a gift with the Muse Stylist">
-        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="3.5" y="8.5" width="17" height="4.5" rx="1"/><path d="M5 13v6.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V13M12 8.5V20.5"/><path d="M12 8.5C11 6 9.5 4.6 8 5c-1.7.4-1.5 3 .6 3.5H12zM12 8.5C13 6 14.5 4.6 16 5c1.7.4 1.5 3-.6 3.5H12z"/></svg>
-        <span>Find a Gift</span>
-      </button>
-      <button class="launch-btn launch-support" id="supportFab" aria-label="Contact support">
-        <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M9.6 9.2a2.4 2.4 0 0 1 4.4 1.3c0 1.5-2 1.9-2 3"/><circle cx="12" cy="16.4" r=".7" fill="currentColor" stroke="none"/></svg>
-        <span>Support</span>
+      <button class="launch-btn launch-gift" id="giftFab" aria-label="Ask MuseStylist — gifts, décor, styling & support">
+        <span class="lb-star">✦</span>
+        <span>Ask MuseStylist</span>
       </button>
     </div>
 
@@ -1147,11 +1143,11 @@ function initMemberModal() {
    MuseStylist AI, shopper chat widget (client-side)
    ============================================================ */
 const CHAT_QUICK = [
-  { label: "🎁 Find a gift" },
-  { label: "🏠 Home décor" },
-  { label: "✦ Lifestyle essentials" },
-  { label: "🛍️ Bestsellers" },
-  { label: "🚚 Shipping & delivery" },
+  { label: "🎁 Help me find a gift" },
+  { label: "🏠 Décor finds for my home" },
+  { label: "✦ Style a room for me" },
+  { label: "📦 Shop packaging supplies" },
+  { label: "🚚 Track my order" },
   { label: "💬 Talk to a human" }
 ];
 
@@ -1228,6 +1224,12 @@ function chatReply(text) {
 
   else if (has(/\b(style|styling|room|décor|decor|design|interior|furniture|\bhome\b|makeover|colour|color|theme|vibe|aesthetic|lamp|rug|mirror|sofa|cushion|vase)\b/))
     html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Muse Stylist AI")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "Home Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
+
+  else if (has(/\b(track|order status|my order|where.?s my (order|parcel|delivery)|being picked)\b/))
+    html = `You can watch your order live! 🚚 Log in to your ${link("account.html", "account")} and open <strong>Orders → Track order</strong> to see it being picked, packed and on its way, with an estimated arrival time. You can also use our ${link("track.html", "order tracking")} page.`;
+
+  else if (has(/\b(packaging|pouch|pouches|mailer|carton|bulk packaging|packaging supplies)\b/))
+    html = `We've got you! 📦 Our ${link("packaging.html", "Packaging")} range has food-vendor pouches, gift boxes, hamper boxes and ready-to-go kits, buy fixed-price packs or ${link("packaging.html#bulk", "request a bulk quote")} for your business.`;
 
   else if (has(/\b(ship|shipping|deliver|delivery|post|postage|freight|worldwide|international|country|countries|how long|when.*(arrive|get|receive)|dispatch)\b/) && !has(/\buber\b/))
     html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>Australia &amp; New Zealand</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
