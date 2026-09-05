@@ -4,14 +4,43 @@
    pays via Stripe Checkout when configured, else demo mode.
    ============================================================ */
 
-// Delivery is calculated from the destination country.
-const SHIP_RATES = {
-  "Australia":   { flat: 19, freeOver: 500 },
-  "New Zealand": { flat: 39, freeOver: 500 }
+/* Weight-based shipping calculator.
+   Each zone = a base handling fee + a per-kilogram rate (AUD). The rate is
+   worked out automatically from the total weight of the cart and the region
+   the shopper selects at checkout. Adjust these numbers to match your courier. */
+const SHIP_ZONES = {
+  "Australia":       { base: 9.95,  perKg: 2.5,  freeOver: 500, days: "3 to 8 business days" },
+  "New Zealand":     { base: 19.95, perKg: 7,    freeOver: 750, days: "5 to 12 business days" },
+  "United Kingdom":  { base: 34.95, perKg: 16,   days: "7 to 15 business days" },
+  "United States":   { base: 34.95, perKg: 16,   days: "7 to 15 business days" },
+  "Canada":          { base: 36.95, perKg: 17,   days: "7 to 16 business days" },
+  "Nigeria":         { base: 44.95, perKg: 22,   days: "8 to 18 business days" }
 };
+const DEFAULT_ITEM_KG = 0.75; // used when a product has no weight set
+
 function shipCountry() {
   const el = document.getElementById("coCountry");
-  return (el && SHIP_RATES[el.value]) ? el.value : "Australia";
+  return (el && SHIP_ZONES[el.value]) ? el.value : "Australia";
+}
+// Total billable weight (kg) of everything in the cart
+function cartWeight() {
+  let kg = 0;
+  getCart().forEach(function (i) {
+    let w = DEFAULT_ITEM_KG;
+    const p = (typeof findProduct === "function") ? findProduct(i.id) : null;
+    const raw = (p && p.weight) != null ? p.weight : i.weight;
+    if (raw != null) { const n = parseFloat(String(raw).replace(/[^0-9.]/g, "")); if (!isNaN(n) && n > 0) w = n; }
+    kg += w * (i.qty || 1);
+  });
+  return Math.round(Math.max(kg, 0.1) * 100) / 100;
+}
+// Weight-based quote for the selected region
+function shipQuote(afterDisc) {
+  const z = SHIP_ZONES[shipCountry()] || SHIP_ZONES["Australia"];
+  const weight = cartWeight();
+  let fee = Math.round((z.base + z.perKg * weight) * 100) / 100;
+  if (z.freeOver && afterDisc >= z.freeOver) fee = 0;
+  return { fee: fee, weight: weight, days: z.days, freeOver: z.freeOver };
 }
 
 function checkoutTotals() {
@@ -23,8 +52,8 @@ function checkoutTotals() {
   const vou = (typeof getVoucher === "function") ? getVoucher() : null;
   const voucher = (vou && vou.amount) ? Math.min(vou.amount, afterDisc) : 0;
   const afterVoucher = afterDisc - voucher;
-  const rate = SHIP_RATES[shipCountry()];
-  let shipping = sub <= 0 ? 0 : (afterDisc >= rate.freeOver ? 0 : rate.flat);
+  const q = shipQuote(afterDisc);
+  let shipping = sub <= 0 ? 0 : q.fee;
   if (window._fulfil === "pickup") shipping = 0;   // collect in-studio, no delivery fee
   else if (window._fulfil === "sameday") shipping = sub <= 0 ? 0 : 15;   // flat same-day local courier fee (Uber/DoorDash)
   const preGift = afterVoucher + shipping;
@@ -33,7 +62,7 @@ function checkoutTotals() {
   const giftCard = (gc && gc.amount >= preGift && preGift > 0) ? preGift : 0;
   const total = preGift - giftCard;
   const gst = Math.round((total / 11)); // GST component of a GST-inclusive total
-  return { sub, discount, discLabel: disc.label, voucher, voucherCode: vou ? vou.code : null, shipping, preGift, giftCard, giftCode: gc ? gc.code : null, total, gst, coupon: window._coupon, country: shipCountry() };
+  return { sub, discount, discLabel: disc.label, voucher, voucherCode: vou ? vou.code : null, shipping, preGift, giftCard, giftCode: gc ? gc.code : null, total, gst, coupon: window._coupon, country: shipCountry(), weight: q.weight, shipDays: q.days, freeOver: q.freeOver };
 }
 
 function updateTotalsUI() {
@@ -42,7 +71,7 @@ function updateTotalsUI() {
   const line = document.getElementById("coShipLine");
   if (line) line.innerHTML = window._fulfil === "sameday"
     ? `<strong>Same-day local</strong> · ${shipTxt} · via Uber / DoorDash, metro area`
-    : `<strong>Standard</strong> · ${shipTxt} · 3 to 8 business days`;
+    : `<strong>Standard</strong> · ${shipTxt} · to ${t.country} · calculated for ~${t.weight}kg · ${t.shipDays || "3 to 8 business days"}${(t.shipping === 0 && t.freeOver) ? ` · <span style="color:var(--forest)">free over ${money(t.freeOver)}</span>` : ""}`;
   const s = document.getElementById("sumShip"); if (s) s.textContent = window._fulfil === "pickup" ? "Free (pickup)" : shipTxt;
   const gr = document.getElementById("sumGiftRow"); if (gr) gr.style.display = t.giftCard ? "flex" : "none";
   const gv = document.getElementById("sumGift"); if (gv) gv.textContent = "−" + money(t.giftCard);
@@ -130,7 +159,7 @@ function renderCheckout() {
           </div>
           <div class="field-row">
             <div class="field ship-addr"><label>Country</label>
-              <select id="coCountry"><option>Australia</option><option>New Zealand</option></select></div>
+              <select id="coCountry" onchange="updateTotalsUI()"><option>Australia</option><option>New Zealand</option><option>United Kingdom</option><option>United States</option><option>Canada</option><option>Nigeria</option></select></div>
             <div class="field"><label>Phone</label><input id="coPhone" type="tel"></div>
           </div>
 

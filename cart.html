@@ -115,8 +115,7 @@
       const afterDisc = sub - discount;
       const vou = (typeof getVoucher === "function") ? getVoucher() : null;
       const voucher = (vou && vou.amount) ? Math.min(vou.amount, afterDisc) : 0;
-      const shipping = afterDisc >= 500 ? 0 : 19;
-      const total = afterDisc - voucher + shipping;
+      const total = afterDisc - voucher; // shipping is calculated at checkout by region & weight
       const gst = total / 11;
 
       if (cartIdEl) cartIdEl.textContent = "Cart ID: " + (localStorage.getItem("dm_cart_id") || (function () { const id = "DM" + Math.floor(10000000 + Math.random() * 89999999); localStorage.setItem("dm_cart_id", id); return id; })());
@@ -187,9 +186,9 @@
           <div class="ct-row"><span>Subtotal</span><span>${money(sub)}</span></div>
           ${discount ? `<div class="ct-row" style="color:var(--forest)"><span>${disc.label}</span><span>−${money(discount)}</span></div>` : ""}
           ${voucher ? `<div class="ct-row" style="color:var(--forest)"><span>Rewards voucher (${vou.code}) <a href="#" onclick="removeVoucher();return false;" style="font-size:0.75rem;color:var(--muted)">remove</a></span><span>−${money(voucher)}</span></div>` : ""}
-          <div class="ct-row"><span>Shipping</span><span>${shipping === 0 ? "Free" : money(shipping)}</span></div>
+          <div class="ct-row"><span>Shipping</span><span>Calculated at checkout</span></div>
           <div class="ct-row ct-total"><span>Total amount</span><span>${money(total)}</span></div>
-          <div class="ct-gst">(Incl GST ${money(gst)})</div>
+          <div class="ct-gst">(Incl GST ${money(gst)}) · + shipping by region &amp; weight</div>
           ${(typeof DM_CUR !== "undefined" && DM_CUR !== "AUD") ? `<div class="ct-gst">≈ charged in AUD: <strong>${moneyAud(total)}</strong></div>` : ""}
         </div>
 
