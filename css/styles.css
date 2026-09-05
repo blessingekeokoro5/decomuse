@@ -1798,3 +1798,14 @@ em { font-style: italic; color: var(--rose-deep); }
 .ask-muse:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(165,88,106,0.38); }
 .ask-muse .am-star { font-size: 0.9rem; }
 @media (max-width: 640px){ .ask-muse { display: none; } }
+
+/* Gifts & Packaging hub cards */
+.gp-card { display: flex; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; background: #fff; color: inherit; transition: transform var(--tr), box-shadow var(--tr); }
+.gp-card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.gp-media { aspect-ratio: 16 / 10; background: var(--cream-2); }
+.gp-media .ph { width: 100%; height: 100%; }
+.gp-media .ph-img { width: 100%; height: 100%; object-fit: cover; }
+.gp-body { padding: 22px; }
+.gp-body h2 { margin: 6px 0 8px; }
+.gp-body p { color: var(--muted); font-size: 0.92rem; }
+.gp-body .link-arrow { margin-top: 10px; display: inline-block; color: var(--rose-deep); }
