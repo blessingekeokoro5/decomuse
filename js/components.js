@@ -500,8 +500,8 @@ function buildFooter() {
 function buildFloating() {
   return `
     <div class="float-left">
-      <button class="float-btn" onclick="history.back()">← <span>Previous page</span></button>
-      <button class="float-btn rose" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ <span>Return to top</span></button>
+      <button class="float-btn" onclick="history.back()" aria-label="Previous page" title="Previous page">←<span>Previous page</span></button>
+      <button class="float-btn rose" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Return to top" title="Return to top">↑<span>Return to top</span></button>
     </div>
 
     <div class="chat-nudge" id="chatNudge">
