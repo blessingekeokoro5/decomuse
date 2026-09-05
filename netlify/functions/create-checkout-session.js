@@ -22,14 +22,8 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 const SITE_URL = process.env.SITE_URL || "https://decomuse.com.au";
 
-// Countries we ship to
-const SHIP_COUNTRIES = ["AU", "NZ"];
-
-// Shipping rates (AUD) by destination. Free over the threshold, else a flat rate.
-const SHIP_RATES = {
-  "Australia":   { flat: 19, freeOver: 500 },
-  "New Zealand": { flat: 39, freeOver: 500 }
-};
+// Countries we ship to (ISO codes) — matches the site's shipping calculator regions
+const SHIP_COUNTRIES = ["AU", "NZ", "GB", "US", "CA", "NG"];
 
 function jsonResponse(statusCode, obj) {
   return {
@@ -49,7 +43,7 @@ exports.handler = async (event) => {
   if (event.httpMethod !== "POST") return jsonResponse(405, { error: "Method Not Allowed" });
 
   try {
-    const { items = [], coupon, customer = {} } = JSON.parse(event.body || "{}");
+    const { items = [], coupon, customer = {}, shipping } = JSON.parse(event.body || "{}");
 
     if (!Array.isArray(items) || items.length === 0) {
       return jsonResponse(400, { error: "Your cart is empty." });
@@ -79,9 +73,9 @@ exports.handler = async (event) => {
       };
     });
 
-    // Server-side shipping by destination country (don't trust the client's amount)
-    const rate = SHIP_RATES[customer.country] || SHIP_RATES["Australia"];
-    const shipAmount = subtotal >= rate.freeOver ? 0 : rate.flat;
+    // Shipping = the weight-based amount the site's calculator worked out for the
+    // chosen region, so what Stripe charges matches exactly what the shopper saw.
+    const shipAmount = Math.max(0, Number(shipping) || 0);
     const shipping_options = [
       {
         shipping_rate_data: {
@@ -90,7 +84,7 @@ exports.handler = async (event) => {
           display_name: shipAmount === 0 ? "Free standard shipping" : "Standard shipping",
           delivery_estimate: {
             minimum: { unit: "business_day", value: 3 },
-            maximum: { unit: "business_day", value: 8 },
+            maximum: { unit: "business_day", value: 15 },
           },
         },
       },
