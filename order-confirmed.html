@@ -95,6 +95,33 @@
       } catch (e) {}
     })();
 
+    /* Email the customer a branded order confirmation (once per order). */
+    (async function sendOrderEmail() {
+      try {
+        const o = JSON.parse(localStorage.getItem("dm_last_order") || "null");
+        if (!o || !o.orderNo || !o.email) return;
+        let doneList = [];
+        try { doneList = JSON.parse(localStorage.getItem("dm_order_emailed") || "[]"); } catch (e) {}
+        if (doneList.indexOf(o.orderNo) !== -1) return; // already sent
+        let rec = null;
+        try {
+          const all = JSON.parse(localStorage.getItem("dm_orders") || "{}");
+          rec = (all[o.email] || []).find(function (x) { return x.orderNo === o.orderNo; });
+        } catch (e) {}
+        const acc = (typeof getAccount === "function") ? getAccount() : null;
+        const payload = {
+          orderNo: o.orderNo, email: o.email, name: (acc && acc.name) || "",
+          total: (rec && rec.total != null) ? rec.total : o.total,
+          shipping: (rec && rec.shipping) || 0,
+          date: rec && rec.date, items: (rec && rec.items) || []
+        };
+        const endpoint = ((typeof DECOMUSE !== "undefined" && DECOMUSE.orderEmailEndpoint) || "/.netlify/functions/send-order-confirmation");
+        const res = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) });
+        const data = await res.json().catch(function () { return {}; });
+        if (res.ok && data.ok) { doneList.push(o.orderNo); localStorage.setItem("dm_order_emailed", JSON.stringify(doneList)); }
+      } catch (e) {}
+    })();
+
     // GA4: purchase (fires once, then clears so a page refresh won't double-count)
     (function () {
       try {
