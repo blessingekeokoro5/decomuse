@@ -53,7 +53,7 @@ const MEGA_MENU = [
     key: "bedroom", label: "Bedroom",
     columns: [
       { title: "Shop", links: ["Shop All Bedroom", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Bedding", links: ["Bed Linen", "Quilt Covers", "Cushions & Throws", "Blankets"] },
+      { title: "Bedding", links: ["Bed Linen", "Quilt Covers", "Blankets"] },
       { title: "Furniture", links: ["Bedside Tables", "Dressers", "Headboards"] },
       { title: "Lighting & Décor", links: ["Lamps", "Mirrors", "Wall Art"] }
     ]
