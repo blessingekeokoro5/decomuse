@@ -107,9 +107,9 @@ const MEGA_MENU = [
     key: "lifestyle", label: "Lifestyle",
     columns: [
       { title: "Shop", links: ["Shop All Lifestyle", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Home Fragrances", links: ["Reed Diffusers", "Scented Candles", "Room Sprays", "Essential Oils", "Fragrance Gift Sets"] },
-      { title: "Everyday", links: ["Candles", "Textiles & Linen", "Kitchen & Dining", "Stationery", "Travel"] },
-      { title: "Self & Home", links: ["Wellness Essentials", "Coffee & Tea", "Gifts Under $50"] }
+      { title: "Home Fragrances", links: ["Room Sprays", "Essential Oils", "Fragrance Gift Sets"] },
+      { title: "Everyday", links: ["Textiles & Linen", "Stationery", "Travel Essentials"] },
+      { title: "Self & Home", links: ["Wellness Kits & Essentials", "Gifts Under $100"] }
     ]
   }
 ];
