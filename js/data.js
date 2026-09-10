@@ -81,7 +81,7 @@ const MEGA_MENU = [
     columns: [
       { title: "Shop", links: ["Shop All Outdoor", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Furniture", links: ["Outdoor Lounges", "Dining Sets", "Chairs"] },
-      { title: "Garden", links: ["Planters & Pots", "Faux Plants", "Lanterns"] },
+      { title: "Garden", links: ["Planters & Pots", "Faux Plants"] },
       { title: "Comfort", links: ["Outdoor Cushions", "Outdoor Rugs", "Throws"] }
     ]
   },

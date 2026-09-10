@@ -242,7 +242,7 @@ function buildHeader() {
       <li><a href="index.html">Home</a></li>
       ${MEGA_MENU.map(cat => {
         const shopHref = CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
-        const links = cat.columns.reduce((a, c) => a.concat(c.links.map(l => ({ l, href: c.page || shopHref }))), []).slice(0, 8);
+        const links = cat.columns.reduce((a, c) => a.concat(c.links.map(l => ({ l, href: c.page || shopHref }))), []).filter(x => !/^shop all/i.test(x.l)).slice(0, 8);
         return `<li class="m-acc">
           <div class="m-acc-head"><a href="${shopHref}">${cat.label}</a><button type="button" class="m-chev" aria-label="Expand ${cat.label}" onclick="mNavToggle(this)">${IC.caret}</button></div>
           <ul class="m-acc-body"><li><a href="${shopHref}">Shop all ${cat.label}</a></li>${links.map(x => `<li><a href="${x.href}">${x.l}</a></li>`).join("")}</ul>
@@ -252,7 +252,6 @@ function buildHeader() {
         <div class="m-acc-head"><a href="staging.html">Services</a><button type="button" class="m-chev" aria-label="Expand Services" onclick="mNavToggle(this)">${IC.caret}</button></div>
         <ul class="m-acc-body">${servicesSubs.map(s => `<li><a href="${s.href}">${s.label}</a></li>`).join("")}</ul>
       </li>
-      <li><a href="hampers.html">Gifting</a></li>
       <li><a href="support.html">Customer Care</a></li>
     </ul>
     <div class="m-region">
