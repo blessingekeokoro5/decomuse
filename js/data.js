@@ -264,7 +264,7 @@ const COMING_SOON = {
   "Packaging": ["Kraft Gift Boxes 10pk", "Stand-Up Food Pouches 50pk", "Ribbon & Gift Tag Kit", "Mailer Boxes 20pk"]
 };
 const CS_STYLES = ["", "Classic", "Luxe", "Petite", "Grand", "Studio", "Signature", "Heritage", "Everyday", "Deluxe", "Modern", "Coastal", "Nordic"];
-const CS_PER_CAT = 50; // placeholder cards shown per category until real stock is added
+const CS_PER_CAT = 0; // 'Back Soon' placeholder cards (0 = off; priced demo products below fill the pages instead)
 Object.keys(COMING_SOON).forEach(function (cat) {
   var base = COMING_SOON[cat];
   for (var i = 0; i < CS_PER_CAT; i++) {
@@ -276,6 +276,36 @@ Object.keys(COMING_SOON).forEach(function (cat) {
       cat: cat, comingSoon: true, ph: "", img: "assets/logo.jpg"
     });
   }
+});
+
+/* ---- Demo products (priced samples) --------------------------------
+   Placeholder tiles show the product name until you add a real photo at
+   assets/products/<id>.jpg (the id is shown on each card in the console).
+   To replace one: drop a photo named after its id, or tell Claude.
+   Delete this whole block once your real stock is in. */
+const DEMO_PRODUCTS = {
+  "Living Room": [["Bouclé Accent Armchair", 749], ["Linen 3-Seater Sofa", 1690], ["Oak Coffee Table", 429], ["Hand-Knotted Wool Rug 2×3m", 389], ["Arched Floor Mirror", 299], ["Ceramic Table Lamp", 129], ["Velvet Cushion Cover Pair", 59], ["Marble Side Table", 219], ["Woven Storage Basket", 69], ["Abstract Framed Wall Art", 149]],
+  "Home Décor": [["Sculptural Ceramic Vase", 89], ["Soy Candle Trio", 54], ["Faux Olive Tree 120cm", 149], ["Brass Photo Frame", 39], ["Marble Trinket Tray", 45], ["Stoneware Bud Vase", 29], ["Coffee Table Book", 69], ["Textured Ceramic Bowl", 49], ["Line-Art Print (A2)", 59], ["Scented Reed Diffuser", 42]],
+  "Bedroom": [["French Linen Quilt Cover Set", 229], ["Oak Bedside Table", 199], ["Upholstered Bed Head (Queen)", 549], ["Cotton Waffle Blanket", 119], ["Bedside Table Lamp", 89], ["Linen Euro Pillowcase Pair", 69], ["Wool Throw Blanket", 99], ["Rattan Dresser", 629], ["Blackout Curtain Pair", 129], ["Bedside Rug Runner", 79]],
+  "Bathroom": [["Turkish Cotton Towel Set (5pc)", 89], ["Bamboo Bath Caddy", 59], ["Stoneware Soap Dispenser", 34], ["Woven Storage Basket", 45], ["Ribbed Glass Tumbler", 19], ["Teak Bath Mat", 69], ["Vanity Tray", 39], ["Waffle Bath Robe", 79], ["Apothecary Bottle Set (3pc)", 42], ["Round Backlit Mirror", 199]],
+  "Office": [["Oak Writing Desk", 599], ["Ergonomic Studio Chair", 349], ["Leather Desk Organiser", 79], ["Brass Task Lamp", 129], ["Bookshelf 5-Tier", 289], ["Felt Desk Mat", 49], ["Ceramic Pen Pot", 25], ["Cork Notice Board", 59], ["Cable Management Tray", 35], ["Linen Storage Box Set", 45]],
+  "Outdoor": [["Rattan Lounge Set (4pc)", 1290], ["Teak Dining Table", 899], ["Outdoor Armchair", 349], ["Textured Ceramic Planter", 89], ["Faux Topiary Ball", 69], ["Outdoor Scatter Cushion Pair", 59], ["Weatherproof Outdoor Rug 2×3m", 199], ["Hanging Egg Chair", 599], ["Solar Garden Lantern", 45], ["Folding Bistro Set (3pc)", 429]],
+  "Kitchenware": [["Stoneware Dinner Set (16pc)", 149], ["Acacia Serving Board", 49], ["Cast Iron Casserole Pot", 129], ["Glass Storage Canister Trio", 45], ["Linen Tea Towel Set (3pc)", 29], ["Marble Utensil Holder", 39], ["Stackable Pasta Bowls (4pc)", 59], ["Ceramic Mug Set (4pc)", 42], ["Wooden Salad Servers", 25], ["Nordic Cutlery Set (16pc)", 69]],
+  "Lifestyle": [["Soy Candle Trio", 54], ["Reed Diffuser Duo", 48], ["Room Spray", 29], ["Essential Oil Blend Set", 39], ["Linen Table Runner", 45], ["Leather Travel Wash Bag", 69], ["Ceramic Mug Set (2pc)", 34], ["Wellness Gift Kit", 79], ["Recipe Journal", 32], ["Scented Sachet Set", 19]],
+  "Packaging": [["Kraft Gift Box Set (10pk)", 34.95], ["Rigid Magnetic Gift Box", 12.95], ["Stand-Up Kraft Pouches (50pk)", 29.95], ["Matte Black Coffee Bags (50pk)", 32.95], ["Eco Mailer Boxes (20pk)", 27.95], ["Tissue Paper & Filler Set", 14.95], ["Satin Ribbon & Gift Tag Kit", 18.95], ["Window Bakery Boxes (25pk)", 24.95], ["Luxe Hamper Box with Lid", 16.95], ["Sticker & Label Sheets (100pk)", 11.95]]
+};
+Object.keys(DEMO_PRODUCTS).forEach(function (cat) {
+  var slug = cat.toLowerCase().replace(/[^a-z]+/g, "");
+  DEMO_PRODUCTS[cat].forEach(function (row, i) {
+    var price = row[1];
+    PRODUCTS.push({
+      id: "d-" + slug + "-" + (i + 1),
+      name: row[0], cat: cat, room: cat, price: price,
+      memberPrice: Math.round(price * 0.9 * 100) / 100,
+      tag: "New", demo: true, ph: "",
+      desc: "Sample product for preview — swap the photo, price and description for your real stock anytime."
+    });
+  });
 });
 
 /* Merge any products added via the Admin form on this device (drafts / live preview).
