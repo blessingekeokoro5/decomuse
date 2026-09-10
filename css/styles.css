@@ -1809,3 +1809,11 @@ em { font-style: italic; color: var(--rose-deep); }
 .gp-body h2 { margin: 6px 0 8px; }
 .gp-body p { color: var(--muted); font-size: 0.92rem; }
 .gp-body .link-arrow { margin-top: 10px; display: inline-block; color: var(--rose-deep); }
+
+/* Packaging — Bulk & Commercial option buttons */
+.pkg-tabs { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-bottom: 26px; }
+.pkg-tab { border: 1.5px solid var(--line); background: #fff; color: var(--ink); padding: 12px 20px; border-radius: 999px;
+  cursor: pointer; font-family: var(--font-body); font-size: 0.92rem; transition: background var(--tr), color var(--tr), border-color var(--tr); }
+.pkg-tab:hover { border-color: var(--rose-soft); }
+.pkg-tab.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+.pkg-panel[hidden] { display: none; }

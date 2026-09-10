@@ -89,58 +89,136 @@
         <div class="em">📦</div>
         <h3>Packs landing here soon</h3>
         <p>We're stocking the packaging range. In the meantime, tell us what you need with a bulk quote below.</p>
-        <a class="btn btn--outline btn--pill" href="#bulk">Request a bulk quote</a>
+        <a class="btn btn--outline btn--pill" href="#bulk" onclick="setTimeout(function(){switchPkgPanel('quote');},60)">Request a bulk quote</a>
       </div>
     </div>
   </section>
 
-  <!-- Bulk & Commercial quote -->
+  <!-- Bulk & Commercial -->
   <section class="section bg-cream2" id="bulk">
     <div class="container">
-      <div class="split reveal">
-        <div>
-          <span class="eyebrow">Bulk &amp; Commercial</span>
-          <h2>Ordering for a business?</h2>
-          <p class="lead">Food vendors, cafés, gift studios and retailers — get wholesale pricing on pouches, boxes and kits, with the option of custom-branded packaging. Tell us what you need and we'll send a tailored quote.</p>
-          <ul class="pdp-detail-list" style="max-width:420px">
-            <li><span>Minimum order</span><span>From 100 units</span></li>
-            <li><span>Custom branding</span><span>Logo &amp; colours available</span></li>
-            <li><span>Lead time</span><span>Quoted per order</span></li>
-            <li><span>Samples</span><span>On request</span></li>
-          </ul>
-        </div>
-        <div class="form-card">
-          <h3 style="margin-bottom:6px">Request a bulk quote</h3>
-          <form data-demo-form data-form-name="Bulk packaging quote" data-success-msg="Thank you! Your bulk quote request has been received — the DecoMuse team will be in touch shortly.">
-            <div class="field-row">
-              <div class="field"><label>Your name</label><input required></div>
-              <div class="field"><label>Business name</label><input></div>
-            </div>
-            <div class="field-row">
-              <div class="field"><label>Email</label><input type="email" required></div>
-              <div class="field"><label>Phone</label><input type="tel"></div>
-            </div>
-            <div class="field"><label>What packaging do you need?</label>
-              <select>
-                <option>Food &amp; vendor pouches</option>
-                <option>Gift boxes</option>
-                <option>Hamper boxes</option>
-                <option>Mailers &amp; cartons</option>
-                <option>Packaging kits</option>
-                <option>Custom branded packaging</option>
-                <option>Mixed / not sure yet</option>
-              </select>
-            </div>
-            <div class="field-row">
-              <div class="field"><label>Estimated quantity</label><input placeholder="e.g. 500 units"></div>
-              <div class="field"><label>Custom branding?</label>
-                <select><option>No, plain</option><option>Yes — logo / colours</option><option>Maybe, tell me options</option></select>
+      <div class="section-head reveal">
+        <span class="eyebrow">Bulk &amp; Commercial</span>
+        <h2>Ordering for a business?</h2>
+        <p>Food vendors, cafés, gift studios and retailers — pick an option below and we'll take it from there.</p>
+      </div>
+
+      <div class="pkg-tabs" id="pkgTabs">
+        <button type="button" class="pkg-tab active" data-panel="wholesale" onclick="switchPkgPanel('wholesale', this)">🏷️ Wholesale Packaging</button>
+        <button type="button" class="pkg-tab" data-panel="custom" onclick="switchPkgPanel('custom', this)">🎨 Custom Branded Packaging</button>
+        <button type="button" class="pkg-tab" data-panel="quote" onclick="switchPkgPanel('quote', this)">📦 Request a Bulk Quote</button>
+      </div>
+
+      <!-- 1. Wholesale -->
+      <div class="pkg-panel" id="pkgWholesale">
+        <div class="split reveal">
+          <div>
+            <h3>Wholesale packaging</h3>
+            <p class="lead">Stock our pouches, boxes and kits at wholesale pricing. Tell us what you'd like to carry and your volumes, and we'll send our wholesale rate card.</p>
+            <ul class="pdp-detail-list" style="max-width:420px">
+              <li><span>Minimum order</span><span>From 100 units</span></li>
+              <li><span>Pricing</span><span>Tiered by volume</span></li>
+              <li><span>Samples</span><span>On request</span></li>
+            </ul>
+          </div>
+          <div class="form-card">
+            <h3 style="margin-bottom:6px">Wholesale enquiry</h3>
+            <form data-demo-form data-form-name="Wholesale packaging enquiry" data-success-msg="Thank you! Your wholesale enquiry has been received — we'll send our rate card shortly.">
+              <div class="field-row">
+                <div class="field"><label>Business name</label><input required></div>
+                <div class="field"><label>Contact name</label><input></div>
               </div>
-            </div>
-            <div class="field"><label>Details</label><textarea style="min-height:90px" placeholder="Sizes, materials, colours, deadline, anything else…"></textarea></div>
-            <button class="btn btn--primary btn--block" type="submit">Send quote request</button>
-            <div class="form-success" style="display:none;color:var(--forest);margin-top:12px"></div>
-          </form>
+              <div class="field-row">
+                <div class="field"><label>Email</label><input type="email" required></div>
+                <div class="field"><label>Phone</label><input type="tel"></div>
+              </div>
+              <div class="field"><label>Products you'd like to stock</label><textarea style="min-height:70px" placeholder="e.g. kraft pouches, gift boxes, mailers…"></textarea></div>
+              <div class="field"><label>Estimated monthly volume</label><input placeholder="e.g. 1,000 units / month"></div>
+              <button class="btn btn--primary btn--block" type="submit">Send wholesale enquiry</button>
+              <div class="form-success" style="display:none;color:var(--forest);margin-top:12px"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. Custom Branded -->
+      <div class="pkg-panel" id="pkgCustom" hidden>
+        <div class="split reveal">
+          <div>
+            <h3>Custom branded packaging</h3>
+            <p class="lead">Make it yours — your logo, colours and finish on pouches, boxes, mailers and tissue. Send us the details and we'll come back with options, mockups and pricing.</p>
+            <ul class="pdp-detail-list" style="max-width:420px">
+              <li><span>Branding</span><span>Printed logo, colours, embossing</span></li>
+              <li><span>Mockups</span><span>Before you commit</span></li>
+              <li><span>Minimum order</span><span>From 250 units</span></li>
+            </ul>
+          </div>
+          <div class="form-card">
+            <h3 style="margin-bottom:6px">Custom branding enquiry</h3>
+            <form data-demo-form data-form-name="Custom branded packaging enquiry" data-success-msg="Thank you! Your custom branding enquiry has been received — we'll be in touch with options & mockups.">
+              <div class="field-row">
+                <div class="field"><label>Business name</label><input required></div>
+                <div class="field"><label>Email</label><input type="email" required></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label>Phone</label><input type="tel"></div>
+                <div class="field"><label>Packaging to brand</label>
+                  <select><option>Pouches</option><option>Gift boxes</option><option>Hamper boxes</option><option>Mailers &amp; cartons</option><option>Tissue &amp; stickers</option><option>Mixed</option></select>
+                </div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label>Branding style</label>
+                  <select><option>Printed logo</option><option>Custom colours</option><option>Embossed / foil</option><option>Full custom design</option></select>
+                </div>
+                <div class="field"><label>Estimated quantity</label><input placeholder="e.g. 500 units"></div>
+              </div>
+              <div class="field"><label>Brand &amp; design details</label><textarea style="min-height:80px" placeholder="Your brand, colours, sizes, deadline… (we'll request your logo file by email)"></textarea></div>
+              <button class="btn btn--primary btn--block" type="submit">Send branding enquiry</button>
+              <div class="form-success" style="display:none;color:var(--forest);margin-top:12px"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3. Bulk Quote -->
+      <div class="pkg-panel" id="pkgQuote" hidden>
+        <div class="split reveal">
+          <div>
+            <h3>Request a bulk quote</h3>
+            <p class="lead">Know what you need? Send the details and we'll email a tailored quote — plain or branded, any of our packaging lines.</p>
+            <ul class="pdp-detail-list" style="max-width:420px">
+              <li><span>Minimum order</span><span>From 100 units</span></li>
+              <li><span>Lead time</span><span>Quoted per order</span></li>
+              <li><span>Samples</span><span>On request</span></li>
+            </ul>
+          </div>
+          <div class="form-card">
+            <h3 style="margin-bottom:6px">Bulk quote request</h3>
+            <form data-demo-form data-form-name="Bulk packaging quote" data-success-msg="Thank you! Your bulk quote request has been received — the DecoMuse team will be in touch shortly.">
+              <div class="field-row">
+                <div class="field"><label>Your name</label><input required></div>
+                <div class="field"><label>Business name</label><input></div>
+              </div>
+              <div class="field-row">
+                <div class="field"><label>Email</label><input type="email" required></div>
+                <div class="field"><label>Phone</label><input type="tel"></div>
+              </div>
+              <div class="field"><label>What packaging do you need?</label>
+                <select>
+                  <option>Food &amp; vendor pouches</option>
+                  <option>Gift boxes</option>
+                  <option>Hamper boxes</option>
+                  <option>Mailers &amp; cartons</option>
+                  <option>Packaging kits</option>
+                  <option>Mixed / not sure yet</option>
+                </select>
+              </div>
+              <div class="field"><label>Estimated quantity</label><input placeholder="e.g. 500 units"></div>
+              <div class="field"><label>Details</label><textarea style="min-height:80px" placeholder="Sizes, materials, colours, deadline, anything else…"></textarea></div>
+              <button class="btn btn--primary btn--block" type="submit">Send quote request</button>
+              <div class="form-success" style="display:none;color:var(--forest);margin-top:12px"></div>
+            </form>
+          </div>
         </div>
       </div>
     </div>
@@ -164,6 +242,16 @@
       if (c) c.textContent = `${list.length} ${list.length === 1 ? "pack" : "packs"}`;
       document.getElementById("pkgEmpty").style.display = list.length ? "none" : "block";
       document.getElementById("pkgGrid").style.display = list.length ? "grid" : "none";
+    }
+    function switchPkgPanel(name, btn) {
+      ["Wholesale", "Custom", "Quote"].forEach(function (n) {
+        const p = document.getElementById("pkg" + n);
+        if (p) p.hidden = (n.toLowerCase() !== name);
+      });
+      document.querySelectorAll("#pkgTabs .pkg-tab").forEach(function (b) {
+        b.classList.toggle("active", b.dataset.panel === name);
+      });
+      if (typeof initReveal === "function") initReveal();
     }
     paintPkg();
     initReveal();
