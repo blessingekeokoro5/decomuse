@@ -134,7 +134,7 @@ const POLICIES = {
 
   privacy: {
     title: "Privacy Policy",
-    intro: "DecoMuse (ABN 41 991 812 955) respects your privacy and is committed to protecting your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).",
+    intro: "DecoMuse respects your privacy and is committed to protecting your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).",
     body: `
       <h3>1. Information we collect</h3>
       <p>We may collect personal information including your name, delivery and billing address, email, phone number, order details and, where relevant, information you provide when booking a service, applying for a role, or contacting us. We do not store full card numbers, payments are handled by secure third-party processors.</p>
@@ -176,7 +176,7 @@ const POLICIES = {
     intro: "These Terms & Conditions govern your use of the DecoMuse website and your purchase of our products and services. By using our site or placing an order, you agree to these terms.",
     body: `
       <h3>1. About us</h3>
-      <p>This website is operated by DecoMuse (ABN 41 991 812 955), an Australian home, lifestyle and fragrance business.</p>
+      <p>This website is operated by DecoMuse, an Australian home, lifestyle and fragrance business.</p>
 
       <h3>2. Pricing &amp; GST</h3>
       <p>All prices are in Australian Dollars (AUD) and include GST where applicable, unless stated otherwise. We may update prices, products and promotions at any time. Sale discounts (such as Spend &amp; Save) apply per their stated terms.</p>

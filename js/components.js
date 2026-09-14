@@ -451,7 +451,6 @@ function buildFooter() {
           <div class="ft-stars">★★★★★</div>
           <div class="ft-score">4.9 / 5</div>
           <a class="ft-reviews" href="index.html#reviews">Read our customer reviews →</a>
-          <div class="ft-abn">ABN ${DECOMUSE.abn}</div>
           <a class="ft-admin" href="admin.html" title="Admin sign-in">🔒 Admin dashboard</a>
         </div>
       </div>
