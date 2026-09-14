@@ -90,6 +90,7 @@ const UK_FLAG_SVG = '<svg class="uk-flag" viewBox="0 0 60 40" width="19" height=
 
 /* TikTok icon (no IC entry) */
 const TIKTOK_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M16.5 3c.3 2.1 1.6 3.5 3.6 3.8v2.5c-1.2.1-2.5-.2-3.6-.9v5.9c0 3.4-2.8 5.9-6 5.4-2.6-.4-4.4-2.7-4.2-5.3.2-2.6 2.5-4.5 5.1-4.3v2.6c-.5-.1-1-.1-1.4.1-1 .3-1.6 1.4-1.3 2.4.3 1 1.3 1.6 2.3 1.4 1-.2 1.6-1.1 1.6-2.1V3h2.3z"/></svg>';
+const YOUTUBE_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7c-.2-.9-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.8-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.9.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.8 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>';
 
 /* ---- Logo loader: try common formats before falling back to the drawn mark ---- */
 const LOGO_SRCS = ["assets/logo.jpg", "assets/logo.svg", "assets/logo.png", "assets/logo.jpeg", "assets/logo.webp"];
@@ -236,6 +237,7 @@ function buildHeader() {
   if (socials.facebook) socialLinks.push(`<a href="${socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>`);
   if (socials.instagram) socialLinks.push(`<a href="${socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>`);
   if (socials.tiktok) socialLinks.push(`<a href="${socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>`);
+  if (socials.youtube) socialLinks.push(`<a href="${socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${YOUTUBE_SVG}</a>`);
 
   const navMain = `
     <ul class="m-list">
@@ -435,6 +437,7 @@ function buildFooter() {
             <a href="${DECOMUSE.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>
             <a href="${DECOMUSE.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
             <a href="${DECOMUSE.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>
+            <a href="${DECOMUSE.socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${YOUTUBE_SVG}</a>
           </div>
         </div>
 
