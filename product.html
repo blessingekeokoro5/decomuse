@@ -576,7 +576,7 @@
     /* ---- 2. See it in your room (3D / AR) ---- */
     function openRoomView(id){
       const p = findProd(id); if (!p) return;
-      const url = location.origin + "/product.html?id=" + p.id;
+      const url = location.origin + "/ar.html?id=" + p.id;
       // Real AR when a 3D model is supplied; otherwise the QR "see in your room" flow.
       if (p.model3d){
         if (!window.customElements || !customElements.get("model-viewer")){
@@ -596,9 +596,9 @@
         <p class="th-sub">Scan the QR code with your phone and select "See it in your room". 3D imagery is indicative only.</p>
         <img class="ar-qr" src="${qr}" alt="Scan to view ${p.name} on your phone" onerror="this.style.display='none'">
         <div class="ar-steps">
-          <div>1. Open your phone camera and scan the code above.</div>
-          <div>2. Open this product page on your phone.</div>
-          <div>3. Tap <strong>In your room</strong> to place it with your camera.</div>
+          <div>1. Open your phone camera and point it at the code above.</div>
+          <div>2. Tap the link to open the piece on your phone.</div>
+          <div>3. Tap <strong>See in your room</strong> to place it with your camera.</div>
         </div>
         <p class="ar-fine">*Requires an AR-supported device & browser. We recommend iOS 12 or later with Safari, or Android 7.0 or later with Chrome.</p>
       </div>`);

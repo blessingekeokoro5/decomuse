@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>See it in your room, DecoMuse</title>
+  <meta name="description" content="Preview this DecoMuse piece in your own room.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/logo.jpg">
+  <link rel="stylesheet" href="css/styles.css?v=9">
+  <style>
+    body { margin: 0; background: #fff; color: var(--ink); font-family: var(--font-body); min-height: 100vh; display: flex; flex-direction: column; }
+    .ar-topbar { padding: 18px 20px; }
+    .ar-back { display: inline-flex; align-items: center; gap: 8px; color: var(--forest); font-weight: 600; font-size: 1.05rem; text-decoration: none; }
+    .ar-back svg { width: 20px; height: 20px; }
+    .ar-stage { flex: 1; display: flex; align-items: center; justify-content: center; padding: 10px 24px 20px; min-height: 44vh; }
+    .ar-stage img { max-width: 100%; max-height: 62vh; object-fit: contain; }
+    .ar-stage model-viewer { width: 100%; height: 62vh; background: #fff; }
+    .ar-foot { padding: 16px 20px calc(24px + env(safe-area-inset-bottom)); }
+    .ar-cta { display: block; width: 100%; text-align: center; padding: 16px; border: 1.5px solid var(--ink); border-radius: 12px;
+      background: #fff; color: var(--ink); font-family: var(--font-body); font-size: 1.05rem; font-weight: 500; cursor: pointer; }
+    .ar-cta:active { background: var(--cream-2); }
+    .ar-cta[hidden] { display: none; }
+    .ar-fine { text-align: center; color: var(--muted); font-size: 0.82rem; margin: 12px 0 0; }
+    .ar-name { text-align: center; font-family: var(--font-head); font-size: 1.15rem; margin: 0 0 2px; padding: 0 20px; }
+    .ar-price { text-align: center; color: var(--forest); font-weight: 600; margin: 0 0 4px; }
+    .ar-msg { max-width: 340px; margin: 14px auto 0; text-align: center; color: var(--body); font-size: 0.92rem; line-height: 1.6;
+      background: var(--cream-2); border-radius: 12px; padding: 16px 18px; }
+    .ar-msg[hidden] { display: none; }
+    .ar-empty { text-align: center; padding: 60px 24px; }
+  </style>
+</head>
+<body>
+  <div class="ar-topbar">
+    <a class="ar-back" id="arBack" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      View product details
+    </a>
+  </div>
+  <div id="arRoot"></div>
+
+  <script src="js/data.js?v=9"></script>
+  <script>
+    (function () {
+      const id = new URLSearchParams(location.search).get("id");
+      const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
+      const root = document.getElementById("arRoot");
+      const money = (n) => "$" + Number(n || 0).toFixed(2);
+
+      if (!p) {
+        document.getElementById("arBack").setAttribute("href", "shop.html");
+        root.innerHTML = `<div class="ar-empty"><h2>Piece not found</h2><p>This item may have moved. <a href="shop.html">Browse the shop →</a></p></div>`;
+        return;
+      }
+      document.title = "See " + p.name + " in your room, DecoMuse";
+      document.getElementById("arBack").setAttribute("href", "product.html?id=" + p.id);
+      const photo = (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg");
+
+      const stage = p.model3d
+        ? `<div class="ar-stage"><model-viewer id="mv" src="${p.model3d}" ${p.modelUsdz ? `ios-src="${p.modelUsdz}"` : ""} poster="${photo}" camera-controls auto-rotate shadow-intensity="1" ar ar-modes="scene-viewer webxr quick-look" alt="${p.name}"></model-viewer></div>`
+        : `<div class="ar-stage"><img src="${photo}" alt="${p.name}"></div>`;
+
+      root.innerHTML = `
+        <p class="ar-name">${p.name}</p>
+        <div class="ar-price">${money(p.memberPrice || p.price)}</div>
+        ${stage}
+        <div class="ar-foot">
+          <button class="ar-cta" id="arCta">See in your room</button>
+          <div class="ar-msg" id="arMsg" hidden></div>
+          <p class="ar-fine">3D imagery is indicative only</p>
+        </div>`;
+
+      const cta = document.getElementById("arCta");
+      const msg = document.getElementById("arMsg");
+
+      if (p.model3d) {
+        // Real AR via <model-viewer>
+        const s = document.createElement("script");
+        s.type = "module";
+        s.src = "https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js";
+        document.head.appendChild(s);
+        cta.addEventListener("click", function () {
+          const mv = document.getElementById("mv");
+          if (mv && mv.canActivateAR) { mv.activateAR(); }
+          else { msg.hidden = false; msg.innerHTML = "Point your phone at the floor, then move it slowly to place the piece. If nothing appears, make sure you're using Safari (iPhone) or Chrome (Android)."; }
+        });
+      } else {
+        // No 3D model yet — honest, helpful fallback
+        cta.addEventListener("click", function () {
+          msg.hidden = false;
+          msg.innerHTML = `A true in-room 3D preview for this piece is on its way. In the meantime, tap <a href="product.html?id=${p.id}"><strong>View product details</strong></a> to see every angle, the full gallery and exact dimensions.`;
+          cta.textContent = "See in your room ✓";
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
