@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=6">
+  <link rel="stylesheet" href="css/styles.css?v=7">
 </head>
 <body data-page="contact.html">
   <div id="site-header"></div>
@@ -97,7 +97,18 @@
           </div>
           <div class="contact-card-wrap reveal" style="margin-top:22px;text-align:center">
             <span class="eyebrow" style="display:block;margin-bottom:10px">Save our card</span>
-            <img src="assets/contact-card.jpg" alt="DecoMuse contact card — Customer Representative · decomuseofficial@outlook.com · www.decomuse.com.au" style="width:100%;border-radius:16px;box-shadow:var(--shadow);display:block">
+            <img id="dmCardImg" src="assets/contact-card.jpg" alt="DecoMuse contact card — Customer Representative · decomuseofficial@outlook.com · www.decomuse.com.au" style="width:100%;border-radius:16px;box-shadow:var(--shadow);display:block">
+            <div class="card-actions" style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:16px">
+              <button type="button" class="btn btn--dark btn--sm" onclick="dmSaveContact()">📇 Add to contacts</button>
+              <button type="button" class="btn btn--primary btn--sm" onclick="dmShareCard()">🔗 Share card</button>
+              <a class="btn btn--outline btn--sm" href="assets/contact-card.jpg" download="DecoMuse-Card.jpg">⬇️ Download</a>
+            </div>
+            <div class="card-share-fallback" id="dmShareFallback" hidden style="display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:12px">
+              <a class="btn btn--ghost btn--sm" id="dmWa" target="_blank" rel="noopener">💬 WhatsApp</a>
+              <a class="btn btn--ghost btn--sm" id="dmFb" target="_blank" rel="noopener">📘 Facebook</a>
+              <a class="btn btn--ghost btn--sm" id="dmMail" href="mailto:?subject=DecoMuse%20contact%20card&body=Here%27s%20the%20DecoMuse%20card%3A%20https%3A%2F%2Fwww.decomuse.com.au%2Fcontact.html">✉️ Email</a>
+            </div>
+            <p class="card-hint" style="color:var(--muted);font-size:0.8rem;margin-top:10px">Tip: "Add to contacts" saves DecoMuse straight to your phone — then it appears in your phone's contact/Wallet-style card.</p>
           </div>
         </div>
       </div>
@@ -105,9 +116,9 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=6"></script>
-  <script src="js/components.js?v=6"></script>
-  <script src="js/cart.js"></script>
+  <script src="js/data.js?v=7"></script>
+  <script src="js/components.js?v=7"></script>
+  <script src="js/cart.js?v=7"></script>
   <script src="js/main.js"></script>
   <script>
     // Pre-select the service from ?subject= (e.g. Wholesale)
@@ -117,6 +128,74 @@
       const sel = document.getElementById("serviceSelect");
       [...sel.options].forEach(o => { if (o.textContent.toLowerCase().includes(subj.toLowerCase())) sel.value = o.value; });
     })();
+
+    // ---- DecoMuse card: save / share / download ----
+    const DM_CARD_URL = "assets/contact-card.jpg";
+    const DM_PAGE_URL = "https://www.decomuse.com.au/contact.html";
+
+    async function dmCardFile() {
+      try {
+        const res = await fetch(DM_CARD_URL);
+        const blob = await res.blob();
+        return new File([blob], "DecoMuse-Card.jpg", { type: blob.type || "image/jpeg" });
+      } catch (e) { return null; }
+    }
+    function dmBlobToB64(blob) {
+      return new Promise((resolve) => {
+        const r = new FileReader();
+        r.onloadend = () => resolve(String(r.result).split(",")[1] || "");
+        r.onerror = () => resolve("");
+        r.readAsDataURL(blob);
+      });
+    }
+
+    // Build & download a vCard (.vcf) — saves DecoMuse to the phone's contacts,
+    // where it shows as a saved card (the practical Apple/Google Wallet equivalent).
+    async function dmSaveContact() {
+      let photoLine = "";
+      try {
+        const res = await fetch(DM_CARD_URL);
+        const b64 = await dmBlobToB64(await res.blob());
+        if (b64) photoLine = "PHOTO;ENCODING=b;TYPE=JPEG:" + b64 + "\n";
+      } catch (e) {}
+      const vcf =
+        "BEGIN:VCARD\nVERSION:3.0\n" +
+        "N:;DecoMuse;;;\nFN:DecoMuse\n" +
+        "ORG:DecoMuse\nTITLE:Customer Representative\n" +
+        "EMAIL;TYPE=INTERNET:decomuseofficial@outlook.com\n" +
+        "TEL;TYPE=CELL:+61451609398\n" +
+        "URL:https://www.decomuse.com.au\n" +
+        "ADR;TYPE=WORK:;;;;;;Australia\n" +
+        "NOTE:Home Decor, Lifestyle & Snippets — Home Décor · Gift Hampers · Wellness Essentials\n" +
+        photoLine +
+        "END:VCARD";
+      const url = URL.createObjectURL(new Blob([vcf], { type: "text/vcard" }));
+      const a = document.createElement("a");
+      a.href = url; a.download = "DecoMuse.vcf";
+      document.body.appendChild(a); a.click(); a.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    }
+
+    // Share the card image (native share sheet → WhatsApp/Facebook/anywhere),
+    // with graceful fallbacks when the browser can't share.
+    async function dmShareCard() {
+      const shareData = { title: "DecoMuse", text: "DecoMuse — Home Decor, Lifestyle & Snippets. www.decomuse.com.au", url: DM_PAGE_URL };
+      const file = await dmCardFile();
+      try {
+        if (file && navigator.canShare && navigator.canShare({ files: [file] })) {
+          await navigator.share({ files: [file], title: "DecoMuse", text: shareData.text });
+          return;
+        }
+        if (navigator.share) { await navigator.share(shareData); return; }
+      } catch (e) {
+        if (e && e.name === "AbortError") return; // user cancelled
+      }
+      // Desktop / unsupported: reveal direct share links
+      const fb = document.getElementById("dmShareFallback");
+      document.getElementById("dmWa").href = "https://wa.me/?text=" + encodeURIComponent(shareData.text + " " + DM_PAGE_URL);
+      document.getElementById("dmFb").href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(DM_PAGE_URL);
+      fb.hidden = false;
+    }
   </script>
 </body>
 </html>
