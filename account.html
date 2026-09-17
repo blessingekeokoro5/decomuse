@@ -16,6 +16,25 @@
     .acc-tabs button { flex: 1; padding: 12px; border: 1.5px solid var(--line); background: #fff; border-radius: var(--radius-sm);
       font-family: var(--font-body); font-size: 0.9rem; color: var(--ink); cursor: pointer; transition: all var(--tr); }
     .acc-tabs button.active { background: var(--rose); color: #fff; border-color: var(--rose); }
+    /* Social sign-in (Continue with Google / Apple) */
+    .sso-btns { display: flex; flex-direction: column; gap: 12px; margin-bottom: 6px; }
+    .sso-btn { display: flex; align-items: center; justify-content: center; gap: 12px; width: 100%; padding: 13px 16px;
+      border: 1.5px solid var(--line); border-radius: 12px; background: #fff; color: var(--ink);
+      font-family: var(--font-body); font-size: 0.98rem; font-weight: 500; cursor: pointer; transition: all var(--tr); }
+    .sso-btn:hover { background: var(--cream-2); border-color: var(--ink); }
+    .sso-btn svg, .sso-btn img { width: 20px; height: 20px; flex: none; }
+    .sso-apple { background: #000; color: #fff; border-color: #000; }
+    .sso-apple:hover { background: #1a1a1a; border-color: #1a1a1a; }
+    .auth-or { display: flex; align-items: center; gap: 14px; margin: 18px 0; color: var(--muted); font-size: 0.85rem; }
+    .auth-or::before, .auth-or::after { content: ""; flex: 1; height: 1px; background: var(--line); }
+    .pw-wrap { position: relative; }
+    .pw-wrap input { width: 100%; padding-right: 44px; }
+    .pw-toggle { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); background: none; border: none;
+      cursor: pointer; padding: 6px; color: var(--muted); line-height: 0; }
+    .pw-toggle:hover { color: var(--ink); }
+    .auth-legal { font-size: 0.78rem; color: var(--muted); line-height: 1.6; margin-top: 16px; text-align: center; }
+    .auth-legal a { color: var(--rose-deep); text-decoration: underline; }
+    .forgot-link { display: block; text-align: right; font-size: 0.85rem; color: var(--rose-deep); margin: -6px 0 14px; }
     /* Membership card — matches the gift-card shape/style, in DecoMuse green */
     .mcard { position: relative; overflow: hidden; color: #fff; border-radius: 22px; aspect-ratio: 1.62/1;
       padding: 26px 30px; display: flex; flex-direction: column; justify-content: space-between;
@@ -93,6 +112,7 @@
   </section>
 
   <div id="site-footer"></div>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="js/data.js?v=7"></script>
   <script src="js/components.js?v=7"></script>
   <script src="js/cart.js?v=7"></script>
@@ -111,9 +131,20 @@
       wrap.innerHTML = `
         <div class="form-card reveal">
           <div class="acc-tabs">
-            <button class="${accMode==='signup'?'active':''}" onclick="setMode('signup')">Sign up</button>
-            <button class="${accMode==='login'?'active':''}" onclick="setMode('login')">Log in</button>
+            <button class="${accMode==='login'?'active':''}" onclick="setMode('login')">Sign in</button>
+            <button class="${accMode==='signup'?'active':''}" onclick="setMode('signup')">Create account</button>
           </div>
+          <div class="sso-btns">
+            <button type="button" class="sso-btn" onclick="socialAuth('google')">
+              <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></svg>
+              Continue with Google
+            </button>
+            <button type="button" class="sso-btn sso-apple" onclick="socialAuth('apple')">
+              <svg viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M16.365 1.43c0 1.14-.417 2.2-1.11 2.98-.75.85-1.98 1.51-3.02 1.43-.13-1.1.44-2.26 1.09-2.99.73-.83 2.02-1.45 3.04-1.42zM20.5 17.03c-.55 1.27-.82 1.84-1.53 2.96-.99 1.57-2.39 3.52-4.12 3.53-1.54.02-1.94-1-4.03-.99-2.09.01-2.53 1.01-4.07.99-1.73-.02-3.05-1.78-4.04-3.35-2.77-4.38-3.06-9.52-1.35-12.25 1.21-1.94 3.13-3.08 4.93-3.08 1.84 0 2.99 1.01 4.51 1.01 1.47 0 2.37-1.01 4.5-1.01 1.61 0 3.32.88 4.53 2.4-3.98 2.18-3.34 7.87.26 9.24z"/></svg>
+              Continue with Apple
+            </button>
+          </div>
+          <div class="auth-or">or</div>
           <div id="accForm"></div>
         </div>`;
       renderForm();
@@ -124,6 +155,8 @@
 
     function renderForm() {
       const el = document.getElementById("accForm");
+      const eye = `<button type="button" class="pw-toggle" aria-label="Show password" onclick="togglePw(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>`;
+      const legal = `<p class="auth-legal">By continuing with Google, Apple or email you agree to our <a href="policy.html?doc=terms">Terms &amp; Privacy Policy</a>, and to receiving marketing communications from us. Unsubscribe at any time.</p>`;
       if (accMode === "signup") {
         el.innerHTML = `
           <div style="background:var(--blush);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px;font-size:0.9rem;color:var(--rose-deep)">
@@ -132,18 +165,69 @@
           <form onsubmit="return doSignup(event)">
             <div class="field"><label>Full name</label><input id="suName" required></div>
             <div class="field"><label>Email</label><input id="suEmail" type="email" required></div>
-            <div class="field"><label>Create a password</label><input id="suPass" type="password" required></div>
+            <div class="field"><label>Create a password</label><div class="pw-wrap"><input id="suPass" type="password" required>${eye}</div></div>
             <button type="submit" class="btn btn--primary btn--block">Create my account &amp; get 20% off</button>
-          </form>`;
+          </form>
+          ${legal}`;
       } else {
         el.innerHTML = `
           <form onsubmit="return doLogin(event)">
             <div class="field"><label>Email</label><input id="liEmail" type="email" required></div>
-            <div class="field"><label>Password</label><input id="liPass" type="password" required></div>
-            <button type="submit" class="btn btn--primary btn--block">Log in</button>
+            <div class="field"><label>Password</label><div class="pw-wrap"><input id="liPass" type="password" required>${eye}</div></div>
+            <a class="forgot-link" href="#" onclick="forgotPw();return false;">Forgot password?</a>
+            <button type="submit" class="btn btn--primary btn--block">Sign in</button>
             <p class="form-note" style="text-align:center;margin-top:12px">New here? <a href="#" onclick="setMode('signup');return false;">Create an account</a> for 20% off.</p>
-          </form>`;
+          </form>
+          ${legal}`;
       }
+    }
+
+    // Show/hide password
+    function togglePw(btn) {
+      const input = btn.parentElement.querySelector("input");
+      const show = input.type === "password";
+      input.type = show ? "text" : "password";
+      btn.setAttribute("aria-label", show ? "Hide password" : "Show password");
+      btn.style.color = show ? "var(--rose-deep)" : "";
+    }
+    function forgotPw() {
+      const email = prompt("Enter your account email and we'll send you a reset link:");
+      if (email) showToast("If an account exists for " + email + ", a reset link is on its way ✉️");
+    }
+
+    // ---- Continue with Google / Apple ----
+    // Real SSO: set GOOGLE_CLIENT_ID (Google Cloud OAuth) to enable true Google Sign-In.
+    // Until then, these give a one-tap quick join into the DecoMuse membership.
+    const GOOGLE_CLIENT_ID = ""; // paste your OAuth Client ID here to enable real Google login
+    function socialAuth(provider) {
+      const label = provider === "google" ? "Google" : "Apple";
+      if (provider === "google" && GOOGLE_CLIENT_ID && window.google && google.accounts) {
+        google.accounts.id.initialize({ client_id: GOOGLE_CLIENT_ID, callback: onGoogleCredential });
+        google.accounts.id.prompt();
+        return;
+      }
+      // Quick-join fallback (works today, no OAuth setup needed)
+      const email = prompt(`Continue with ${label}\n\nEnter your email to sign in or create your free DecoMuse account:`);
+      if (!email || !/.+@.+\..+/.test(email)) { if (email) showToast("Please enter a valid email"); return; }
+      const existing = getAccount();
+      if (existing && existing.email) { existing.email = email; existing.provider = label; saveAccount(existing); showToast("Welcome back! 👋"); render(); return; }
+      saveAccount({ name: "", email, provider: label, member: true, memberSince: todayAU(), coupon: "WELCOME20",
+        memberNo: genMemberNo(), orders: [], points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
+      try { localStorage.setItem("dm_member", "1"); } catch (err) {}
+      showToast(`Signed in with ${label} — welcome to DecoMuse! 🎉`);
+      render();
+    }
+    function onGoogleCredential(resp) {
+      try {
+        const p = JSON.parse(atob(resp.credential.split(".")[1]));
+        const existing = getAccount() || {};
+        saveAccount(Object.assign(existing, { name: p.name || existing.name || "", email: p.email, provider: "Google",
+          member: true, memberSince: existing.memberSince || todayAU(), coupon: existing.coupon || "WELCOME20",
+          memberNo: existing.memberNo || genMemberNo(), orders: existing.orders || [], points: existing.points || 0,
+          vouchers: existing.vouchers || [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] }));
+        try { localStorage.setItem("dm_member", "1"); } catch (err) {}
+        showToast("Signed in with Google 🎉"); render();
+      } catch (e) { showToast("Google sign-in could not be completed"); }
     }
 
     function doSignup(e) {
