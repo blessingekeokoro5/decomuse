@@ -28,6 +28,13 @@
     .pdp-detail-list li { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px dashed var(--line); font-size: 0.92rem; }
     .pdp-detail-list li span:first-child { color: var(--muted); }
     .pdp-buy { display: flex; gap: 12px; align-items: center; margin: 24px 0 12px; flex-wrap: wrap; }
+    .member-save { margin-top: 16px; border: 1px solid var(--line); border-radius: 14px; padding: 16px 18px; background: #fff; }
+    .member-save .ms-head { font-weight: 600; font-size: 1.02rem; display: flex; align-items: center; gap: 8px; margin-bottom: 12px; color: var(--ink); }
+    .ms-badge { background: var(--ink); color: #fff; font-size: 0.68rem; letter-spacing: 0.08em; padding: 3px 9px; border-radius: 999px; }
+    .ms-list { list-style: none; margin: 0 0 14px; padding: 0; }
+    .ms-list li { display: flex; align-items: flex-start; gap: 10px; padding: 6px 0; font-size: 0.9rem; color: var(--body); line-height: 1.45; }
+    .ms-list .ms-ic { color: var(--rose-deep); flex: 0 0 auto; }
+    .ms-list strong { color: var(--ink); }
     .pdp-share { display: flex; gap: 10px; flex-wrap: wrap; margin: 0 0 18px; }
     .pdp-share button { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 10px;
       border: 1.5px solid var(--line); background: var(--cream-2); color: var(--ink); font-family: var(--font-body);
@@ -357,6 +364,17 @@
             <div id="pdpBnpl">${bnplBadge((p.sizes && p.sizes.length) ? p.sizes[0].price : p.price)}</div>
             ${p.dontPay ? `<div class="dont-pay" style="margin-top:8px"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why should I not pay more?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
             ${p.memberPrice ? `<div class="member-price" style="margin-top:6px">✦ Members price ${money(p.memberPrice)} <a href="#" onclick="if(typeof openMemberModal==='function')openMemberModal();return false;" style="font-size:0.82rem">Join free →</a></div>` : ""}
+            ${p.memberPrice ? `<div class="member-save">
+              <div class="ms-head">Save with <span class="ms-badge">MEMBER ✔</span></div>
+              <ul class="ms-list">
+                <li><span class="ms-ic">🏷️</span><span><strong>Save ${money(p.price - p.memberPrice)}</strong> on the non-member price</span></li>
+                <li><span class="ms-ic">💲</span><span>Earn <strong>${money(p.memberPrice / 10)}</strong> in rewards credit</span></li>
+                <li><span class="ms-ic">🎁</span><span>Go in the draw to <strong>win a free space-styling session</strong></span></li>
+                <li><span class="ms-ic">🎟️</span><span>Earn up to <strong>$250 in vouchers</strong></span></li>
+                <li><span class="ms-ic">✦</span><span>Earn <strong>rewards points</strong> to your DecoMuse card, to use on future purchases</span></li>
+              </ul>
+              <a class="btn btn--dark btn--block ms-cta" href="account.html">+ Join Membership for Free</a>
+            </div>` : ""}
             <p style="margin-top:16px">${p.desc || blurb(p)}</p>
             <ul class="pdp-detail-list">
               ${p.brand ? `<li><span>Brand</span><span>${p.brand}</span></li>` : ""}
