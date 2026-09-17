@@ -15,12 +15,60 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=7">
+  <link rel="stylesheet" href="css/styles.css?v=8">
   <style>
     .pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
     .pdp-gallery .main { position: relative; aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
     .pdp-verified { position: absolute; bottom: 14px; left: 14px; z-index: 3; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px 6px 7px; border-radius: 999px; background: rgba(255,255,255,0.96); border: 1px solid rgba(45,74,58,0.18); box-shadow: var(--shadow-sm); font-family: var(--font-body); font-weight: 700; font-size: 0.68rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--forest); line-height: 1; }
     .pdp-verified svg { width: 18px; height: 18px; color: var(--forest); flex: none; }
+    /* Furniture viewer tools — row of icons BELOW the product image */
+    .pdp-tools { display: flex; gap: 14px; justify-content: center; margin: 14px 0 2px; }
+    .pdp-tool { width: 46px; height: 46px; border-radius: 50%; background: #808a80; border: none;
+      cursor: pointer; display: grid; place-items: center; color: #fff; transition: all var(--tr); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
+    .pdp-tool:hover { background: var(--forest); transform: translateY(-2px); }
+    .pdp-tool svg { width: 22px; height: 22px; }
+    .pdp-tool-label { display: block; text-align: center; font-size: 0.62rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); margin-top: 5px; }
+    .pdp-tool-wrap { display: flex; flex-direction: column; align-items: center; }
+    /* Shared tool overlay */
+    .tool-overlay { position: fixed; inset: 0; z-index: 3000; background: rgba(20,24,18,0.82); display: none;
+      align-items: center; justify-content: center; padding: 20px; }
+    .tool-overlay.open { display: flex; }
+    .tool-panel { background: #fff; border-radius: 18px; max-width: 640px; width: 100%; max-height: 92vh; overflow: auto; position: relative; padding: 26px; }
+    .tool-close { position: absolute; top: 14px; right: 14px; width: 36px; height: 36px; border-radius: 50%; border: none;
+      background: var(--cream-2); font-size: 1.1rem; cursor: pointer; color: var(--ink); }
+    .tool-panel h3 { font-size: 1.35rem; margin: 0 0 4px; }
+    .tool-panel .th-sub { color: var(--muted); font-size: 0.9rem; margin-bottom: 18px; }
+    /* 360 spin */
+    .spin-stage { position: relative; aspect-ratio: 1/1; background: #fff; border-radius: 12px; overflow: hidden; cursor: grab;
+      user-select: none; touch-action: pan-y; border: 1px solid var(--line); }
+    .spin-stage.dragging { cursor: grabbing; }
+    .spin-stage img { width: 100%; height: 100%; object-fit: contain; pointer-events: none; -webkit-user-drag: none; }
+    .spin-hint { position: absolute; left: 50%; bottom: 12px; transform: translateX(-50%); background: rgba(0,0,0,0.6); color: #fff;
+      font-size: 0.78rem; padding: 6px 14px; border-radius: 999px; display: inline-flex; gap: 7px; align-items: center; pointer-events: none; }
+    .spin-controls { display: flex; justify-content: center; gap: 10px; margin-top: 14px; }
+    .spin-controls button { border: 1px solid var(--line); background: var(--cream-2); border-radius: 999px; padding: 8px 16px;
+      font-family: var(--font-body); font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+    .spin-controls button:hover { background: #fff; border-color: var(--forest); }
+    /* Dimensions diagram */
+    .dim-box { display: grid; place-items: center; padding: 10px 0 4px; }
+    .dim-svg { width: 100%; max-width: 460px; height: auto; }
+    .dim-svg .dl { fill: var(--ink); font: 600 15px var(--font-body); }
+    .dim-svg .dtick { stroke: var(--forest); stroke-width: 1.6; fill: none; }
+    .dim-svg .dface { fill: #efe9df; stroke: #cdbfa8; stroke-width: 1.5; }
+    .dim-svg .dface2 { fill: #e4dccd; stroke: #cdbfa8; stroke-width: 1.5; }
+    .dim-svg .dface3 { fill: #d9cfbb; stroke: #cdbfa8; stroke-width: 1.5; }
+    .dim-list { list-style: none; padding: 0; margin: 18px auto 0; max-width: 360px; }
+    .dim-list li { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 0.95rem; }
+    .dim-list li span:first-child { color: var(--muted); }
+    .dim-list li strong { font-family: var(--font-head); font-size: 1.05rem; }
+    .dim-note { color: var(--muted); font-size: 0.82rem; margin-top: 14px; text-align: center; }
+    /* See-in-room / AR */
+    .ar-body { text-align: center; }
+    .ar-phone { font-size: 2.6rem; }
+    .ar-qr { width: 190px; height: 190px; margin: 16px auto; display: block; border: 1px solid var(--line); border-radius: 12px; padding: 8px; background: #fff; }
+    .ar-steps { text-align: left; max-width: 380px; margin: 8px auto 0; color: var(--body); font-size: 0.9rem; line-height: 1.7; }
+    .ar-fine { color: var(--muted); font-size: 0.78rem; margin-top: 16px; }
+    model-viewer { width: 100%; height: 340px; background: var(--cream-2); border-radius: 12px; }
     .pdp-thumbs { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 10px; }
     .pdp-thumbs .ph { aspect-ratio: 1/1; border-radius: 8px; cursor: pointer; }
     /* Show full image (incl. infographic text) instead of cropping */
@@ -96,9 +144,9 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=7"></script>
-  <script src="js/components.js?v=7"></script>
-  <script src="js/cart.js?v=7"></script>
+  <script src="js/data.js?v=8"></script>
+  <script src="js/components.js?v=8"></script>
+  <script src="js/cart.js?v=8"></script>
   <script src="js/main.js"></script>
   <script>
     // Category → breadcrumb path (differs per category). Final crumb = the product's type.
@@ -346,6 +394,17 @@
       const gimgs = (p.imgs && p.imgs.length) ? p.imgs : (p.img ? [p.img] : []);
       const saveBadge = p.was ? `<span class="pdp-save">SAVE ${Math.round((1 - p.price / p.was) * 100)}%</span>` : "";
       const verifiedBadge = `<span class="dm-verified pdp-verified" title="DecoMuse Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>D&amp;M Verified</span></span>`;
+      // Furniture viewer tools (below the image): dimensions · 3D in-room · 360°
+      const showTools = p.cat === "Furniture" || !!p.dims || !!p.spin360 || !!p.model3d;
+      const RULER_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6.5 8v3M10 8v4M13.5 8v3M17 8v4"/></svg>';
+      const CUBE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 2.5v9m0 0l8-4.5m-8 4.5L4 7"/></svg>';
+      const SPIN_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h4V4"/><path d="M21 16h-4v4"/><path d="M6.5 8.5a7 7 0 0 1 11.9 2"/><path d="M17.5 15.5a7 7 0 0 1-11.9-2"/></svg>';
+      const toolsHtml = showTools ? `
+        <div class="pdp-tools">
+          <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="View dimensions" onclick="openDims('${p.id}')">${RULER_IC}</button><span class="pdp-tool-label">Dimensions</span></div>
+          <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="See it in your room" onclick="openRoomView('${p.id}')">${CUBE_IC}</button><span class="pdp-tool-label">In your room</span></div>
+          <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="360 degree view" onclick="openSpin('${p.id}')">${SPIN_IC}</button><span class="pdp-tool-label">360° view</span></div>
+        </div>` : "";
       let galleryHtml;
       if (gimgs.length) {
         galleryHtml = `
@@ -354,10 +413,11 @@
               <div class="ph" data-label="${p.name}"><img class="ph-img" id="pdpMainImg" src="${gimgs[0]}" alt="${p.name}"></div>
               <button class="zoom-btn" type="button" aria-label="Zoom image" data-name="${(p.name || '').replace(/"/g, '&quot;')}" onclick="showZoom(document.getElementById('pdpMainImg').src, this.getAttribute('data-name'))">${IC.search}</button>
             </div>
+            ${toolsHtml}
             ${gimgs.length > 1 ? `<div class="pdp-thumbs">${gimgs.map((s, i) => `<button type="button" class="pdp-thumb ${i === 0 ? 'active' : ''}" onclick="pdpSetImg('${s}', this)"><img src="${s}" alt=""></button>`).join("")}</div>` : ""}
           </div>`;
       } else {
-        galleryHtml = `<div class="pdp-gallery"><div class="main">${saveBadge}${verifiedBadge}<div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></div></div>`;
+        galleryHtml = `<div class="pdp-gallery"><div class="main">${saveBadge}${verifiedBadge}<div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></div>${toolsHtml}</div>`;
       }
       wrap.innerHTML = `
         <div class="pdp">
@@ -445,6 +505,139 @@
     }
     function scrollRel(dir){ const t = document.getElementById("relatedGrid"); if (t) t.scrollBy({ left: dir * 280, behavior: "smooth" }); }
     function setPdpQty(d){ pdpQty = Math.max(1, pdpQty + d); document.getElementById("pdpQty").textContent = pdpQty; }
+
+    /* ============ Furniture viewer tools ============ */
+    function findProd(id){ return (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id); }
+    function ensureToolOverlay(){
+      let o = document.getElementById("toolOverlay");
+      if (!o){
+        o = document.createElement("div");
+        o.id = "toolOverlay"; o.className = "tool-overlay";
+        o.innerHTML = `<div class="tool-panel"><button class="tool-close" aria-label="Close" onclick="closeTool()">✕</button><div id="toolBody"></div></div>`;
+        document.body.appendChild(o);
+        o.addEventListener("click", (e) => { if (e.target === o) closeTool(); });
+        document.addEventListener("keydown", (e) => { if (e.key === "Escape") closeTool(); });
+      }
+      return o;
+    }
+    function openTool(html){
+      const o = ensureToolOverlay();
+      document.getElementById("toolBody").innerHTML = html;
+      o.classList.add("open"); document.body.style.overflow = "hidden";
+    }
+    function closeTool(){
+      const o = document.getElementById("toolOverlay");
+      if (o){ o.classList.remove("open"); document.body.style.overflow = ""; }
+      if (window._spin){ window._spin.stop && window._spin.stop(); window._spin = null; }
+    }
+
+    /* ---- 1. Dimensions (ruler) ---- */
+    function openDims(id){
+      const p = findProd(id); if (!p) return;
+      const d = p.dims;
+      let body;
+      if (d && (d.w || d.h || d.d)){
+        const u = d.unit || "cm";
+        body = `<h3>Dimensions</h3><p class="th-sub">${p.name}</p>
+          <div class="dim-box">
+            <svg class="dim-svg" viewBox="0 0 460 300" role="img" aria-label="Dimension diagram">
+              <polygon class="dface"  points="70,120 300,120 300,250 70,250"/>
+              <polygon class="dface2" points="70,120 130,70 360,70 300,120"/>
+              <polygon class="dface3" points="300,120 360,70 360,200 300,250"/>
+              <path class="dtick" d="M40,120 L40,250"/><path class="dtick" d="M35,120 L45,120"/><path class="dtick" d="M35,250 L45,250"/>
+              <text class="dl" x="14" y="190" transform="rotate(-90 14,190)">${d.h ? d.h + u : ""}</text>
+              <path class="dtick" d="M70,272 L300,272"/><path class="dtick" d="M70,267 L70,277"/><path class="dtick" d="M300,267 L300,277"/>
+              <text class="dl" x="160" y="292">${d.w ? d.w + u : ""}</text>
+              <path class="dtick" d="M312,258 L372,208"/><path class="dtick" d="M308,254 L316,262"/><path class="dtick" d="M368,204 L376,212"/>
+              <text class="dl" x="330" y="250">${d.d ? d.d + u : ""}</text>
+            </svg>
+          </div>
+          <ul class="dim-list">
+            ${d.w ? `<li><span>Width</span><strong>${d.w} ${u}</strong></li>` : ""}
+            ${d.d ? `<li><span>Depth</span><strong>${d.d} ${u}</strong></li>` : ""}
+            ${d.h ? `<li><span>Height</span><strong>${d.h} ${u}</strong></li>` : ""}
+          </ul>
+          ${d.note ? `<p class="dim-note">${d.note}</p>` : ""}
+          <p class="dim-note">Measurements are approximate. Please allow a small tolerance for handmade & natural finishes.</p>`;
+      } else {
+        body = `<h3>Dimensions</h3><p class="th-sub">${p.name}</p><p>Detailed dimensions for this piece are being added. In the meantime, please <a href="contact.html">contact us</a> for exact sizing.</p>`;
+      }
+      openTool(body);
+    }
+
+    /* ---- 2. See it in your room (3D / AR) ---- */
+    function openRoomView(id){
+      const p = findProd(id); if (!p) return;
+      const url = location.origin + "/product.html?id=" + p.id;
+      // Real AR when a 3D model is supplied; otherwise the QR "see in your room" flow.
+      if (p.model3d){
+        if (!window.customElements || !customElements.get("model-viewer")){
+          const s = document.createElement("script");
+          s.type = "module"; s.src = "https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js";
+          document.head.appendChild(s);
+        }
+        openTool(`<h3>See it in your room</h3><p class="th-sub">${p.name}</p>
+          <model-viewer src="${p.model3d}" ${p.modelUsdz ? `ios-src="${p.modelUsdz}"` : ""} camera-controls auto-rotate ar ar-modes="scene-viewer webxr quick-look" alt="${p.name} in 3D"></model-viewer>
+          <p class="ar-fine">Tap the AR icon (bottom-right of the 3D view) on a supported phone to place this piece in your room.</p>`);
+        return;
+      }
+      const qr = "https://api.qrserver.com/v1/create-qr-code/?size=380x380&margin=8&data=" + encodeURIComponent(url);
+      openTool(`<div class="ar-body">
+        <div class="ar-phone">📱</div>
+        <h3>See how it looks in your room!</h3>
+        <p class="th-sub">Scan the QR code with your phone and select "See it in your room". 3D imagery is indicative only.</p>
+        <img class="ar-qr" src="${qr}" alt="Scan to view ${p.name} on your phone" onerror="this.style.display='none'">
+        <div class="ar-steps">
+          <div>1. Open your phone camera and scan the code above.</div>
+          <div>2. Open this product page on your phone.</div>
+          <div>3. Tap <strong>In your room</strong> to place it with your camera.</div>
+        </div>
+        <p class="ar-fine">*Requires an AR-supported device & browser. We recommend iOS 12 or later with Safari, or Android 7.0 or later with Chrome.</p>
+      </div>`);
+    }
+
+    /* ---- 3. 360° spin ---- */
+    function openSpin(id){
+      const p = findProd(id); if (!p) return;
+      const frames = (p.spin360 && p.spin360.length) ? p.spin360 : ((p.imgs && p.imgs.length) ? p.imgs : (p.img ? [p.img] : []));
+      const real360 = !!(p.spin360 && p.spin360.length);
+      if (!frames.length){ showToast("No images available to spin"); return; }
+      openTool(`<h3>360° view</h3><p class="th-sub">${real360 ? "Drag left or right to spin the piece." : "Drag to view " + p.name + " from every angle."}</p>
+        <div class="spin-stage" id="spinStage">
+          <img id="spinImg" src="${frames[0]}" alt="${p.name}">
+          <span class="spin-hint">↤ drag to rotate ↦</span>
+        </div>
+        <div class="spin-controls">
+          <button type="button" onclick="spinStep(-1)">‹ Rotate</button>
+          <button type="button" id="spinPlay" onclick="spinToggle()">⏸ Auto-spin</button>
+          <button type="button" onclick="spinStep(1)">Rotate ›</button>
+        </div>`);
+      const state = { frames, i: 0, dragging: false, lastX: 0, timer: null, playing: true };
+      window._spin = state;
+      const stage = document.getElementById("spinStage");
+      const setFrame = () => { document.getElementById("spinImg").src = frames[((state.i % frames.length) + frames.length) % frames.length]; };
+      state.set = setFrame;
+      const auto = () => { state.timer = setInterval(() => { state.i++; setFrame(); }, 180); };
+      state.stop = () => { if (state.timer){ clearInterval(state.timer); state.timer = null; } };
+      auto();
+      const stopAuto = () => { state.playing = false; state.stop(); const b = document.getElementById("spinPlay"); if (b) b.textContent = "▶ Auto-spin"; };
+      const onDown = (x) => { state.dragging = true; state.lastX = x; stage.classList.add("dragging"); stopAuto(); };
+      const onMove = (x) => { if (!state.dragging) return; const dx = x - state.lastX; if (Math.abs(dx) > 14){ state.i += dx > 0 ? 1 : -1; setFrame(); state.lastX = x; } };
+      const onUp = () => { state.dragging = false; stage.classList.remove("dragging"); };
+      stage.addEventListener("mousedown", (e) => onDown(e.clientX));
+      window.addEventListener("mousemove", (e) => onMove(e.clientX));
+      window.addEventListener("mouseup", onUp);
+      stage.addEventListener("touchstart", (e) => onDown(e.touches[0].clientX), { passive: true });
+      stage.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
+      stage.addEventListener("touchend", onUp);
+    }
+    function spinStep(dir){ const s = window._spin; if (!s) return; s.playing = false; s.stop(); document.getElementById("spinPlay").textContent = "▶ Auto-spin"; s.i += dir; s.set(); }
+    function spinToggle(){
+      const s = window._spin; if (!s) return; const b = document.getElementById("spinPlay");
+      if (s.playing){ s.playing = false; s.stop(); b.textContent = "▶ Auto-spin"; }
+      else { s.playing = true; b.textContent = "⏸ Auto-spin"; s.timer = setInterval(() => { s.i++; s.set(); }, 180); }
+    }
+
     render();
   </script>
 </body>
