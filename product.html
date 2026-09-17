@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=8">
+  <link rel="stylesheet" href="css/styles.css?v=9">
   <style>
     .pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
     .pdp-gallery .main { position: relative; aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
@@ -64,6 +64,8 @@
     .dim-h::after { content: ""; position: absolute; left: 0; top: 13px; bottom: 13px; width: 0; border-left: 1.6px solid var(--forest); box-shadow: 100% 0 0 -0.4px var(--forest); }
     .dim-h span { position: relative; background: #fff; padding: 2px 6px; }
     .dim-depth { display: inline-flex; align-items: center; gap: 7px; margin: 12px auto 0; color: var(--forest); font-size: 0.85rem; font-weight: 600; }
+    .dim-plain { max-width: 460px; margin: 0 auto; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
+    .dim-plain img { width: 100%; display: block; }
     .dim-list { list-style: none; padding: 0; margin: 18px auto 0; max-width: 360px; }
     .dim-list li { display: flex; justify-content: space-between; padding: 11px 0; border-bottom: 1px dashed var(--line); font-size: 0.95rem; }
     .dim-list li span:first-child { color: var(--muted); }
@@ -151,9 +153,9 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=8"></script>
-  <script src="js/components.js?v=8"></script>
-  <script src="js/cart.js?v=8"></script>
+  <script src="js/data.js?v=9"></script>
+  <script src="js/components.js?v=9"></script>
+  <script src="js/cart.js?v=9"></script>
   <script src="js/main.js"></script>
   <script>
     // Category → breadcrumb path (differs per category). Final crumb = the product's type.
@@ -545,16 +547,19 @@
       let body;
       if (d && (d.w || d.h || d.d)){
         const u = d.unit || "cm";
-        const photo = (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg");
-        body = `<h3>Dimensions</h3><p class="th-sub">${p.name}</p>
-          <div class="dim-box">
-            <div class="dim-photo">
-              <div class="dim-frame"><img src="${photo}" alt="${p.name}" onerror="this.closest('.dim-frame').style.display='none'"></div>
-              ${d.h ? `<div class="dim-mark dim-v"><span>${d.h} ${u}</span></div>` : ""}
-              ${d.w ? `<div class="dim-mark dim-h"><span>${d.w} ${u}</span></div>` : ""}
+        const photo = d.img || (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg");
+        const diagram = d.printed
+          ? `<div class="dim-box"><div class="dim-plain"><img src="${photo}" alt="${p.name} dimensions" onerror="this.closest('.dim-plain').style.display='none'"></div></div>`
+          : `<div class="dim-box">
+              <div class="dim-photo">
+                <div class="dim-frame"><img src="${photo}" alt="${p.name}" onerror="this.closest('.dim-frame').style.display='none'"></div>
+                ${d.h ? `<div class="dim-mark dim-v"><span>${d.h} ${u}</span></div>` : ""}
+                ${d.w ? `<div class="dim-mark dim-h"><span>${d.w} ${u}</span></div>` : ""}
+              </div>
             </div>
-          </div>
-          ${d.d ? `<div style="text-align:center"><span class="dim-depth">⇲ Depth ${d.d} ${u}</span></div>` : ""}
+            ${d.d ? `<div style="text-align:center"><span class="dim-depth">⇲ Depth ${d.d} ${u}</span></div>` : ""}`;
+        body = `<h3>Dimensions</h3><p class="th-sub">${p.name}</p>
+          ${diagram}
           <ul class="dim-list">
             ${d.w ? `<li><span>Width</span><strong>${d.w} ${u}</strong></li>` : ""}
             ${d.d ? `<li><span>Depth</span><strong>${d.d} ${u}</strong></li>` : ""}

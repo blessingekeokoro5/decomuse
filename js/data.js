@@ -235,7 +235,7 @@ const PRODUCTS = [
       "A statement centrepiece to pair with sofas, rugs & accent chairs"
     ],
     specs: { "Type": "Coffee Table", "Shape": "Oval", "Tabletop": "Marble-effect", "Base": "Timber-look", "Primary Colour": "White & Walnut", "Room": "Living / Indoor" },
-    dims: { w: 100, d: 50, h: 45, unit: "cm" },
+    dims: { w: 80, d: 50, h: 45, unit: "cm", img: "assets/products/hd05-2.jpg", printed: true },
     care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." },
 
   { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", room: "Living Room", price: 198.37, memberPrice: 168.55, sku: "DM-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
@@ -249,7 +249,7 @@ const PRODUCTS = [
       "Wipe-clean glass surface with a polished, high-end finish"
     ],
     specs: { "Type": "Coffee & Side Table Set", "Pieces": "2", "Tabletop": "Marble-look tempered glass", "Larger table width": "80cm", "Style": "Contemporary", "Room": "Living / Indoor" },
-    dims: { w: 80, d: 80, h: 45, unit: "cm", note: "Larger table shown; smaller nesting table is 50 × 50 × 40 cm" },
+    dims: { w: 80, d: 80, h: 45, unit: "cm", img: "assets/products/hd06-4.jpg", printed: true, note: "Larger table shown (80 cm ⌀ × 45 cm high); smaller nesting table is 60 cm ⌀ × 38 cm high." },
     care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." },
 
   { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", room: "Living Room", price: 155.09, memberPrice: 135.55, sku: "DM-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
@@ -263,7 +263,7 @@ const PRODUCTS = [
       "A functional statement piece for any living room"
     ],
     specs: { "Type": "Coffee Table", "Shape": "Rectangular", "Tabletop": "Marble-look", "Storage": "Drawer + open shelf", "Legs": "Metal", "Room": "Living / Indoor" },
-    dims: { w: 100, d: 50, h: 45, unit: "cm" },
+    dims: { w: 100, d: 50, h: 45, unit: "cm", img: "assets/products/hd07-2.jpg" },
     care: "Wipe clean with a soft, damp cloth; avoid abrasive cleaners and excess water. Use coasters to protect the surface from heat and moisture." }
 ];
 
