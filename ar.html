@@ -44,7 +44,7 @@
 
   <script src="js/data.js?v=9"></script>
   <script>
-    (function () {
+    (async function () {
       const id = new URLSearchParams(location.search).get("id");
       const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
       const root = document.getElementById("arRoot");
@@ -59,8 +59,16 @@
       document.getElementById("arBack").setAttribute("href", "product.html?id=" + p.id);
       const photo = (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg");
 
-      const stage = p.model3d
-        ? `<div class="ar-stage"><model-viewer id="mv" src="${p.model3d}" ${p.modelUsdz ? `ios-src="${p.modelUsdz}"` : ""} poster="${photo}" camera-controls auto-rotate shadow-intensity="1" ar ar-modes="scene-viewer webxr quick-look" alt="${p.name}"></model-viewer></div>`
+      // A 3D model can be set explicitly on the product OR just dropped in as
+      // assets/models/<id>.glb (Android) and assets/models/<id>.usdz (iPhone).
+      const glbUrl = p.model3d || ("assets/models/" + p.id + ".glb");
+      const usdzUrl = p.modelUsdz || ("assets/models/" + p.id + ".usdz");
+      const exists = async (u) => { try { const r = await fetch(u, { method: "HEAD" }); return r.ok; } catch (e) { return false; } };
+      const [hasGlb, hasUsdz] = await Promise.all([exists(glbUrl), exists(usdzUrl)]);
+      const hasModel = hasGlb || hasUsdz;
+
+      const stage = hasGlb
+        ? `<div class="ar-stage"><model-viewer id="mv" src="${glbUrl}" ${hasUsdz ? `ios-src="${usdzUrl}"` : ""} poster="${photo}" camera-controls auto-rotate shadow-intensity="1" ar ar-modes="scene-viewer webxr quick-look" alt="${p.name}"></model-viewer></div>`
         : `<div class="ar-stage"><img src="${photo}" alt="${p.name}"></div>`;
 
       root.innerHTML = `
@@ -68,30 +76,35 @@
         <div class="ar-price">${money(p.memberPrice || p.price)}</div>
         ${stage}
         <div class="ar-foot">
-          <button class="ar-cta" id="arCta">See in your room</button>
+          ${(hasModel && !hasGlb && hasUsdz) ? `<a class="ar-cta" id="arQuickLook" rel="ar" href="${usdzUrl}"><img src="${photo}" alt="" style="display:none">See in your room</a>` : `<button class="ar-cta" id="arCta">See in your room</button>`}
           <div class="ar-msg" id="arMsg" hidden></div>
           <p class="ar-fine">3D imagery is indicative only</p>
         </div>`;
 
-      const cta = document.getElementById("arCta");
       const msg = document.getElementById("arMsg");
 
-      if (p.model3d) {
-        // Real AR via <model-viewer>
+      if (hasGlb) {
+        // model-viewer path (Android Scene Viewer + iOS Quick Look via ios-src)
         const s = document.createElement("script");
         s.type = "module";
         s.src = "https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js";
         document.head.appendChild(s);
+        const cta = document.getElementById("arCta");
         cta.addEventListener("click", function () {
           const mv = document.getElementById("mv");
-          if (mv && mv.canActivateAR) { mv.activateAR(); }
-          else { msg.hidden = false; msg.innerHTML = "Point your phone at the floor, then move it slowly to place the piece. If nothing appears, make sure you're using Safari (iPhone) or Chrome (Android)."; }
+          if (mv && typeof mv.activateAR === "function" && mv.canActivateAR) { mv.activateAR(); }
+          else if (mv && typeof mv.activateAR === "function") { mv.activateAR(); }
+          else { msg.hidden = false; msg.innerHTML = "Point your phone at the floor and move it slowly to place the piece. Use Safari on iPhone or Chrome on Android."; }
         });
+      } else if (hasUsdz) {
+        // iPhone-only: a direct rel="ar" USDZ link fires the native "View in AR?" prompt.
+        // (The anchor handles it natively — no JS needed.)
       } else {
-        // No 3D model yet — honest, helpful fallback
+        // No model yet — honest, helpful fallback.
+        const cta = document.getElementById("arCta");
         cta.addEventListener("click", function () {
           msg.hidden = false;
-          msg.innerHTML = `A true in-room 3D preview for this piece is on its way. In the meantime, tap <a href="product.html?id=${p.id}"><strong>View product details</strong></a> to see every angle, the full gallery and exact dimensions.`;
+          msg.innerHTML = `A true in-room 3D preview for this piece is on its way. Tap <a href="product.html?id=${p.id}"><strong>View product details</strong></a> to see every angle, the full gallery and exact dimensions.`;
           cta.textContent = "See in your room ✓";
         });
       }
