@@ -640,12 +640,14 @@
       const stage = document.getElementById("spinStage");
       const setFrame = () => { document.getElementById("spinImg").src = frames[((state.i % frames.length) + frames.length) % frames.length]; };
       state.set = setFrame;
-      const auto = () => { state.timer = setInterval(() => { state.i++; setFrame(); }, 180); };
+      const SPIN_MS = 550;           // auto-spin: slower, calmer rotation
+      const DRAG_PX_PER_FRAME = 42;  // more drag distance needed to advance one frame
+      const auto = () => { state.timer = setInterval(() => { state.i++; setFrame(); }, SPIN_MS); };
       state.stop = () => { if (state.timer){ clearInterval(state.timer); state.timer = null; } };
       auto();
       const stopAuto = () => { state.playing = false; state.stop(); const b = document.getElementById("spinPlay"); if (b) b.textContent = "▶ Auto-spin"; };
       const onDown = (x) => { state.dragging = true; state.lastX = x; stage.classList.add("dragging"); stopAuto(); };
-      const onMove = (x) => { if (!state.dragging) return; const dx = x - state.lastX; if (Math.abs(dx) > 14){ state.i += dx > 0 ? 1 : -1; setFrame(); state.lastX = x; } };
+      const onMove = (x) => { if (!state.dragging) return; const dx = x - state.lastX; if (Math.abs(dx) >= DRAG_PX_PER_FRAME){ state.i += dx > 0 ? 1 : -1; setFrame(); state.lastX = x; } };
       const onUp = () => { state.dragging = false; stage.classList.remove("dragging"); };
       stage.addEventListener("mousedown", (e) => onDown(e.clientX));
       window.addEventListener("mousemove", (e) => onMove(e.clientX));
@@ -658,7 +660,7 @@
     function spinToggle(){
       const s = window._spin; if (!s) return; const b = document.getElementById("spinPlay");
       if (s.playing){ s.playing = false; s.stop(); b.textContent = "▶ Auto-spin"; }
-      else { s.playing = true; b.textContent = "⏸ Auto-spin"; s.timer = setInterval(() => { s.i++; s.set(); }, 180); }
+      else { s.playing = true; b.textContent = "⏸ Auto-spin"; s.timer = setInterval(() => { s.i++; s.set(); }, 550); }
     }
 
     render();
