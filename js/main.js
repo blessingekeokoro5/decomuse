@@ -253,3 +253,81 @@ function showDontPayInfo(e) {
   }
   m.classList.add("open");
 }
+
+/* ---- Sub-category filtering from mega-menu links (?sub=) ----
+   Menu links carry ?sub=<label> so a category page shows only that
+   sub-category. Matching is keyword-based against product name/specs. */
+function subKeywords(sub) {
+  const overrides = {
+    "sculptures & objects": ["sculpture", "object", "ornament", "figurine", "statue", "bust"],
+    "faux greenery": ["faux", "greenery", "olive", "topiary", "foliage", "fern", "stem", "plant", "flower"],
+    "faux plants": ["faux", "topiary", "olive", "fern", "plant"],
+    "reed diffusers": ["diffuser", "reed"],
+    "diffusers": ["diffuser"],
+    "coffee & side tables": ["coffee table", "side table", "table"],
+    "coffee & tea": ["coffee", "tea", "mug"],
+    "storage & canisters": ["storage", "canister", "jar", "basket"],
+    "storage": ["storage", "basket", "box"],
+    "kitchen linen": ["tea towel", "linen", "apron", "napkin"],
+    "textiles & linen": ["linen", "textile", "runner", "napkin", "throw"],
+    "plants & planters": ["plant", "planter", "pot"],
+    "planters & pots": ["planter", "pot"],
+    "trays & bowls": ["tray", "bowl", "dish"],
+    "cushions & throws": ["cushion", "throw", "pillow"],
+    "wall art": ["wall art", "art", "print", "canvas"],
+    "bed linen": ["linen", "sheet", "bedding", "pillowcase", "quilt"],
+    "quilt covers": ["quilt", "duvet", "cover"],
+    "wellness kits & essentials": ["wellness", "kit", "spa", "soak", "mist"],
+    "fragrance gift sets": ["fragrance", "scent", "candle"],
+    "essential oils": ["essential oil", "oil", "blend"],
+    "room sprays": ["room spray", "spray", "mist"],
+    "dining sets": ["dining", "dinner set"],
+    "outdoor lounges": ["lounge", "sofa", "daybed"],
+    "outdoor cushions": ["cushion", "scatter"],
+    "outdoor rugs": ["rug"],
+    "chopping boards": ["chopping", "board"],
+    "office chairs": ["chair"],
+    "desk organisers": ["organiser", "organizer", "desk"],
+    "soap dispensers": ["soap", "dispenser"],
+    "vanity trays": ["vanity", "tray"],
+    "bath mats": ["bath mat", "mat"],
+    "photo frames": ["frame", "photo"],
+    "tv units": ["tv", "entertainment", "media unit"],
+    "sofas & seating": ["sofa", "seat", "armchair", "couch", "lounge"],
+    "coffee & tea": ["coffee", "tea", "mug", "kettle"]
+  };
+  const key = (sub || "").toLowerCase().trim();
+  if (overrides[key]) return overrides[key];
+  const stop = new Set(["and", "the", "of", "under", "with", "your", "all", "shop", "a", "to", "for", "my", "own", "by", "occasion", "essentials", "sets", "set", "new", "arrivals"]);
+  return key.replace(/[&$]/g, " ").split(/[^a-z0-9]+/)
+    .filter(w => w && !stop.has(w))
+    .map(w => (w.length > 4 && w.endsWith("s")) ? w.slice(0, -1) : w);
+}
+function productMatchesSub(p, sub) {
+  const s = (sub || "").toLowerCase().trim();
+  if (s === "new arrivals") return /new/i.test(p.tag || "");
+  if (s === "bestsellers") return (typeof sellingFast === "function" && sellingFast(p)) || /best/i.test(p.tag || "");
+  if (s === "on sale") return !!p.was || /sale/i.test(p.tag || "");
+  if (s === "gifts under $100" || s === "gifts under 100") return (p.memberPrice || p.price) < 100;
+  const hay = [p.name, p.specs && Object.values(p.specs).join(" "), (p.features || []).join(" "), p.tag]
+    .filter(Boolean).join(" ").toLowerCase();
+  return subKeywords(sub).some(k => k && hay.includes(k));
+}
+function applySubFilter(list) {
+  const sub = new URLSearchParams(location.search).get("sub");
+  if (!sub) return list;
+  const filtered = list.filter(p => productMatchesSub(p, sub));
+  renderSubChip(sub);
+  try { document.title = sub + " · DecoMuse"; } catch (e) {}
+  return filtered;
+}
+function renderSubChip(sub) {
+  if (document.getElementById("subChip")) return;
+  const bar = document.querySelector(".shop-bar");
+  const chip = document.createElement("div");
+  chip.id = "subChip";
+  chip.className = "sub-chip";
+  chip.innerHTML = `<span>Showing <strong>${sub}</strong></span><a href="${location.pathname}">Clear ✕</a>`;
+  if (bar && bar.parentNode) bar.parentNode.insertBefore(chip, bar);
+  else { const c = document.querySelector(".container"); if (c) c.insertBefore(chip, c.firstChild); }
+}

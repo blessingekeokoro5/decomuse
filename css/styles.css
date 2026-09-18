@@ -616,6 +616,14 @@ em { font-style: italic; color: var(--rose-deep); }
 .bnpl-zip { background: #1a1a1a; color: #fff; }
 .bnpl-klarna { background: #ffb3c7; color: #0a0a0a; }
 
+/* Sub-category filter chip (mega-menu ?sub= links) */
+.sub-chip { display: inline-flex; align-items: center; gap: 14px; background: var(--cream-2); border: 1px solid var(--line);
+  border-radius: 999px; padding: 9px 9px 9px 18px; margin-bottom: 16px; font-size: 0.9rem; color: var(--ink); }
+.sub-chip strong { color: var(--rose-deep); }
+.sub-chip a { display: inline-flex; align-items: center; background: #fff; border: 1px solid var(--line); border-radius: 999px;
+  padding: 5px 12px; font-size: 0.8rem; color: var(--muted); }
+.sub-chip a:hover { color: var(--ink); border-color: var(--ink); }
+
 /* Who are our clients (Services page) — split with full-bleed image */
 .stage-clients { display: grid; grid-template-columns: 1fr 1fr; align-items: stretch; }
 .stage-clients .sc-text { background: var(--cream); display: grid; place-items: center; padding: 64px 24px; text-align: center; }
