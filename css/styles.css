@@ -592,6 +592,13 @@ em { font-style: italic; color: var(--rose-deep); }
   cursor: pointer; display: grid; place-items: center; z-index: 2; color: var(--ink); transition: transform .15s, color .15s; }
 .product .wish svg { width: 19px; height: 19px; }
 .product .wish:hover { transform: scale(1.08); color: var(--rose); }
+/* Find-similar (search our site) button — sits under the wishlist heart */
+.product .find-sim { position: absolute; top: 54px; right: 10px; width: 38px; height: 38px; border-radius: 50%;
+  background: rgba(255,255,255,0.95); border: 1px solid var(--line); box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  cursor: pointer; display: grid; place-items: center; z-index: 2; color: var(--ink); transition: transform .15s, color .15s; }
+.product .find-sim svg { width: 18px; height: 18px; }
+.product .find-sim:hover { transform: scale(1.08); color: var(--rose-deep); }
+.pkg-enquire-tag { font-size: 0.8rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--rose-deep); font-weight: 500; margin: 2px 0 4px; }
 .product .wish.on { color: var(--rose); }
 .product .wish.on svg { fill: var(--rose); }
 /* D&M Verified trust seal (bottom-left of every product image) */

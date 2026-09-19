@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=14">
+  <link rel="stylesheet" href="css/styles.css?v=15">
   <style>
     .pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
     .pdp-gallery .main { position: relative; aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
@@ -153,9 +153,9 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=14"></script>
-  <script src="js/components.js?v=14"></script>
-  <script src="js/cart.js?v=14"></script>
+  <script src="js/data.js?v=15"></script>
+  <script src="js/components.js?v=15"></script>
+  <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script>
     // Category → breadcrumb path (differs per category). Final crumb = the product's type.
@@ -439,11 +439,12 @@
             ${p.brand ? `<div class="pdp-brand">${p.brand}</div>` : `<span class="cat">${p.cat}</span>`}
             <h1>${p.name}</h1>
             <div class="stars" style="margin-bottom:10px">★★★★★ <span style="color:var(--muted);font-size:0.85rem">${rev.avg.toFixed(1)} · ${rev.total} reviews</span></div>
+            ${p.cat === "Packaging" ? `<div class="price" id="pdpPrice" style="font-size:1.15rem;color:var(--rose-deep)">Retail &amp; wholesale · price on enquiry</div><div id="pdpBnpl"></div>` : `
             <div class="price" id="pdpPrice">${money((p.sizes && p.sizes.length) ? p.sizes[0].price : p.price)}${was}</div>
             <div id="pdpBnpl">${bnplBadge((p.sizes && p.sizes.length) ? p.sizes[0].price : p.price)}</div>
-            ${p.dontPay ? `<div class="dont-pay" style="margin-top:8px"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why should I not pay more?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
-            ${p.memberPrice ? `<div class="member-price" style="margin-top:6px">✦ Members price ${money(p.memberPrice)} <a href="#" onclick="if(typeof openMemberModal==='function')openMemberModal();return false;" style="font-size:0.82rem">Join free →</a></div>` : ""}
-            ${p.memberPrice ? `<div class="member-save">
+            ${p.dontPay ? `<div class="dont-pay" style="margin-top:8px"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why should I not pay more?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}`}
+            ${(p.memberPrice && p.cat !== "Packaging") ? `<div class="member-price" style="margin-top:6px">✦ Members price ${money(p.memberPrice)} <a href="#" onclick="if(typeof openMemberModal==='function')openMemberModal();return false;" style="font-size:0.82rem">Join free →</a></div>` : ""}
+            ${(p.memberPrice && p.cat !== "Packaging") ? `<div class="member-save">
               <div class="ms-head">Save with <span class="ms-badge">MEMBER ✔</span></div>
               <ul class="ms-list">
                 <li><span class="ms-ic">🏷️</span><span><strong>Save ${money(p.price - p.memberPrice)}</strong> on the non-member price</span></li>
@@ -462,20 +463,26 @@
               ${p.custom ? `<li><span>Made to order</span><span style="color:var(--rose-deep)">Customisable · allow extra time</span></li>` : ""}
               <li><span>Availability</span><span style="color:var(--forest)">In stock</span></li>
             </ul>
-            ${p.sizes && p.sizes.length ? `<div class="pdp-sizes">
+            ${p.sizes && p.sizes.length ? (p.cat === "Packaging" ? `<div class="pdp-sizes">
+              <div class="pdp-size-label">Sizes available</div>
+              <div class="pdp-size-opts">${p.sizes.map(s => `<span class="pdp-size" style="cursor:default">${s.label}</span>`).join("")}</div>
+            </div>` : `<div class="pdp-sizes">
               <div class="pdp-size-label">Size: <strong id="pdpSizeName">${p.sizes[0].label}</strong></div>
               <div class="pdp-size-opts">${p.sizes.map((s, i) => `<button type="button" class="pdp-size ${i === 0 ? 'active' : ''}" onclick="pdpSetSize('${s.label.replace(/'/g, "\\'")}', ${s.price}, this)"><span>${s.label}</span><span class="ps-price">${money(s.price)}</span></button>`).join("")}</div>
-            </div>` : ""}
+            </div>`) : ""}
             ${p.colours && p.colours.length ? `<div class="pdp-colours">
               <div class="pdp-colour-label">Colour: <strong id="pdpColourName">${p.colours[0].name}</strong></div>
               <div class="pdp-swatches">${p.colours.map((c, i) => `<button type="button" class="pdp-swatch ${i === 0 ? 'active' : ''}" style="background:${c.hex}" aria-label="${c.name}" title="${c.name}" onclick="pdpSetColour('${c.name.replace(/'/g, "\\'")}', this)"></button>`).join("")}</div>
             </div>` : ""}
-            <div class="pdp-buy">
+            ${p.cat === "Packaging" ? `<div class="pdp-buy">
+              <a class="btn btn--primary" href="https://wa.me/61451609398?text=${encodeURIComponent('Hi DecoMuse, I\'d like details and pricing for: ' + p.name)}" target="_blank" rel="noopener">💬 Enquire on WhatsApp</a>
+              <a class="btn btn--ghost" href="packaging.html#bulk">Request a bulk quote</a>
+            </div>` : `<div class="pdp-buy">
               <div class="qty">
                 <button onclick="setPdpQty(-1)">−</button><span id="pdpQty">1</span><button onclick="setPdpQty(1)">+</button>
               </div>
               <button class="btn btn--primary" onclick="addToCart('${p.id}', pdpQty, pdpColour, pdpSize, pdpSizePrice)">Add to cart</button>
-            </div>
+            </div>`}
             <div class="pdp-share">
               <button type="button" class="wa" onclick="shareWhatsApp('${(p.name || '').replace(/'/g, "\\'")}')">
                 <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.4.2-.7.05a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.65s.3-.35.45-.5a2 2 0 0 0 .3-.5.55.55 0 0 0 0-.5c0-.15-.7-1.65-.9-2.25s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4A3.4 3.4 0 0 0 5.6 9c0 1.5 1.1 2.95 1.25 3.15s2.15 3.3 5.2 4.6a17 17 0 0 0 1.75.65 4.2 4.2 0 0 0 1.9.12c.6-.1 1.8-.75 2-1.45s.2-1.35.15-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2z"/></svg>

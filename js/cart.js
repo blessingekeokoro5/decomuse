@@ -253,6 +253,7 @@ function productCard(p) {
       <div class="card-media">
         <div class="card-badges">${hot}${tag}</div>
         <button class="wish ${isWishlisted(p.id) ? "on" : ""}" aria-label="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}</button>
+        <button class="find-sim" type="button" aria-label="Find similar products on DecoMuse" title="Find similar on DecoMuse" onclick="findSimilar('${p.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="11" cy="11" r="3"/><path d="m15 15 2.2 2.2"/></svg></button>
         <a href="product.html?id=${p.id}" aria-label="${p.name}"><div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></a>
         <span class="dm-verified" title="DecoMuse Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>D&amp;M Verified</span></span>
         <button class="zoom-btn" type="button" aria-label="Zoom image" onclick="openZoom(event, this)">${IC.search}</button>
@@ -260,13 +261,16 @@ function productCard(p) {
       <div class="card-body">
         <span class="cat">${p.cat}</span>
         <h3><a href="product.html?id=${p.id}">${p.name}</a></h3>
+        ${p.cat === "Packaging" ? `<div class="pkg-enquire-tag">Retail &amp; wholesale · enquire</div>` : `
         <div class="price">${p.sizes && p.sizes.length ? "from " : ""}${money(p.price)}${was}</div>
         ${p.dontPay ? `<div class="dont-pay"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
         ${p.memberPrice ? `<div class="member-price">✦ Members ${money(p.memberPrice)}</div>` : ""}
-        ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
+        ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}`}
         <div class="product-foot">
           <span class="stars">★★★★★</span>
-          <button class="btn btn--primary btn--sm" onclick="addToCart('${p.id}')">Add to cart</button>
+          ${p.cat === "Packaging"
+            ? `<a class="btn btn--primary btn--sm" href="product.html?id=${p.id}">View details</a>`
+            : `<button class="btn btn--primary btn--sm" onclick="addToCart('${p.id}')">Add to cart</button>`}
         </div>
       </div>
     </article>`;

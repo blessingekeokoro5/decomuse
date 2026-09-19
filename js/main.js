@@ -331,3 +331,10 @@ function renderSubChip(sub) {
   if (bar && bar.parentNode) bar.parentNode.insertBefore(chip, bar);
   else { const c = document.querySelector(".container"); if (c) c.insertBefore(chip, c.firstChild); }
 }
+
+/* Find similar products on DecoMuse (card search icon) — searches our own shop. */
+function findSimilar(id) {
+  const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
+  const term = p ? (p.cat || (p.name || "").split(" ").slice(-1)[0]) : "";
+  location.href = "shop.html?q=" + encodeURIComponent(term);
+}
