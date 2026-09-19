@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=10">
+  <link rel="stylesheet" href="css/styles.css?v=11">
   <style>
     .pdp { display: grid; grid-template-columns: 1fr 1fr; gap: 46px; align-items: start; }
     .pdp-gallery .main { position: relative; aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
@@ -153,9 +153,9 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=10"></script>
-  <script src="js/components.js?v=10"></script>
-  <script src="js/cart.js?v=10"></script>
+  <script src="js/data.js?v=11"></script>
+  <script src="js/components.js?v=11"></script>
+  <script src="js/cart.js?v=11"></script>
   <script src="js/main.js"></script>
   <script>
     // Category → breadcrumb path (differs per category). Final crumb = the product's type.
@@ -410,11 +410,13 @@
       const RULER_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6.5 8v3M10 8v4M13.5 8v3M17 8v4"/></svg>';
       const CUBE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 2.5v9m0 0l8-4.5m-8 4.5L4 7"/></svg>';
       const SPIN_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h4V4"/><path d="M21 16h-4v4"/><path d="M6.5 8.5a7 7 0 0 1 11.9 2"/><path d="M17.5 15.5a7 7 0 0 1-11.9-2"/></svg>';
+      const QR_IC = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 3h8v8H3V3zm2 2v4h4V5H5zm-2 8h8v8H3v-8zm2 2v4h4v-4H5zM13 3h8v8h-8V3zm2 2v4h4V5h-4zM13 13h2v2h-2v-2zm4 0h2v2h2v2h-2v2h-2v-2h-2v-2h2v-2zm2 6h2v2h-2v-2zm-6 0h2v2h-2v-2z"/></svg>';
       const toolsHtml = showTools ? `
         <div class="pdp-tools">
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="View dimensions" onclick="openDims('${p.id}')">${RULER_IC}</button><span class="pdp-tool-label">Dimensions</span></div>
           ${SHOW_AR ? `<div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="See it in your room" onclick="openRoomView('${p.id}')">${CUBE_IC}</button><span class="pdp-tool-label">In your room</span></div>` : ""}
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="360 degree view" onclick="openSpin('${p.id}')">${SPIN_IC}</button><span class="pdp-tool-label">360° view</span></div>
+          <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="Scan to view on a phone" onclick="openScan('${p.id}')">${QR_IC}</button><span class="pdp-tool-label">Scan</span></div>
         </div>` : "";
       let galleryHtml;
       if (gimgs.length) {
@@ -627,28 +629,19 @@
       const frames = (p.spin360 && p.spin360.length) ? p.spin360 : ((p.imgs && p.imgs.length) ? p.imgs : (p.img ? [p.img] : []));
       const real360 = !!(p.spin360 && p.spin360.length);
       if (!frames.length){ showToast("No images available to spin"); return; }
-      openTool(`<h3>360° view</h3><p class="th-sub">${real360 ? "Drag left or right to spin the piece." : "Drag to view " + p.name + " from every angle."}</p>
+      openTool(`<h3>360° view</h3><p class="th-sub">Drag left or right to view ${p.name} from every angle.</p>
         <div class="spin-stage" id="spinStage">
           <img id="spinImg" src="${frames[0]}" alt="${p.name}">
           <span class="spin-hint">↤ drag to rotate ↦</span>
-        </div>
-        <div class="spin-controls">
-          <button type="button" onclick="spinStep(-1)">‹ Rotate</button>
-          <button type="button" id="spinPlay" onclick="spinToggle()">⏸ Auto-spin</button>
-          <button type="button" onclick="spinStep(1)">Rotate ›</button>
         </div>`);
-      const state = { frames, i: 0, dragging: false, lastX: 0, timer: null, playing: true };
+      const state = { frames, i: 0, dragging: false, lastX: 0, timer: null };
       window._spin = state;
       const stage = document.getElementById("spinStage");
       const setFrame = () => { document.getElementById("spinImg").src = frames[((state.i % frames.length) + frames.length) % frames.length]; };
       state.set = setFrame;
-      const SPIN_MS = 550;           // auto-spin: slower, calmer rotation
-      const DRAG_PX_PER_FRAME = 42;  // more drag distance needed to advance one frame
-      const auto = () => { state.timer = setInterval(() => { state.i++; setFrame(); }, SPIN_MS); };
       state.stop = () => { if (state.timer){ clearInterval(state.timer); state.timer = null; } };
-      auto();
-      const stopAuto = () => { state.playing = false; state.stop(); const b = document.getElementById("spinPlay"); if (b) b.textContent = "▶ Auto-spin"; };
-      const onDown = (x) => { state.dragging = true; state.lastX = x; stage.classList.add("dragging"); stopAuto(); };
+      const DRAG_PX_PER_FRAME = 42;  // drag distance needed to advance one frame
+      const onDown = (x) => { state.dragging = true; state.lastX = x; stage.classList.add("dragging"); };
       const onMove = (x) => { if (!state.dragging) return; const dx = x - state.lastX; if (Math.abs(dx) >= DRAG_PX_PER_FRAME){ state.i += dx > 0 ? 1 : -1; setFrame(); state.lastX = x; } };
       const onUp = () => { state.dragging = false; stage.classList.remove("dragging"); };
       stage.addEventListener("mousedown", (e) => onDown(e.clientX));
@@ -658,11 +651,19 @@
       stage.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
       stage.addEventListener("touchend", onUp);
     }
-    function spinStep(dir){ const s = window._spin; if (!s) return; s.playing = false; s.stop(); document.getElementById("spinPlay").textContent = "▶ Auto-spin"; s.i += dir; s.set(); }
-    function spinToggle(){
-      const s = window._spin; if (!s) return; const b = document.getElementById("spinPlay");
-      if (s.playing){ s.playing = false; s.stop(); b.textContent = "▶ Auto-spin"; }
-      else { s.playing = true; b.textContent = "⏸ Auto-spin"; s.timer = setInterval(() => { s.i++; s.set(); }, 550); }
+
+    /* ---- 4. Scan QR → open this product's details on a phone (no AR) ---- */
+    function openScan(id){
+      const p = findProd(id); if (!p) return;
+      const url = location.origin + "/product.html?id=" + p.id;
+      const qr = "https://api.qrserver.com/v1/create-qr-code/?size=360x360&margin=10&data=" + encodeURIComponent(url);
+      openTool(`<div class="ar-body">
+        <div class="ar-phone">🔗</div>
+        <h3>Scan to view this product</h3>
+        <p class="th-sub">Point a phone camera at the code to open <strong>${p.name}</strong> — full details, photos and dimensions. Handy for showing family or friends.</p>
+        <img class="ar-qr" src="${qr}" alt="Scan to view ${p.name}" onerror="this.style.display='none'">
+        <p class="ar-fine">Opens the product page — no app needed.</p>
+      </div>`);
     }
 
     render();

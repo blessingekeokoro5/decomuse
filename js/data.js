@@ -250,6 +250,7 @@ const PRODUCTS = [
     ],
     specs: { "Type": "Coffee & Side Table Set", "Pieces": "2", "Tabletop": "Marble-look tempered glass", "Larger table width": "80cm", "Style": "Contemporary", "Room": "Living / Indoor" },
     dims: { w: 80, d: 80, h: 45, unit: "cm", img: "assets/products/hd06-4.jpg", printed: true, note: "Larger table shown (80 cm ⌀ × 45 cm high); smaller nesting table is 60 cm ⌀ × 38 cm high." },
+    spin360: ["assets/products/hd06.jpg", "assets/products/hd06-5.jpg", "assets/products/hd06-6.jpg"],
     care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." },
 
   { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", room: "Living Room", price: 155.09, memberPrice: 135.55, sku: "DM-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
