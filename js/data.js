@@ -284,7 +284,23 @@ const PRODUCTS = [
       "Four models to choose from: Core, Plus, Elite (Mesh) & Elite (Foam)"
     ],
     specs: { "Type": "Ergonomic office chair", "Back": "Breathable mesh", "Armrests": "3D adjustable", "Recline": "Up to 140°", "Footrest": "Retractable", "Base": "Chrome with castor wheels", "Colour": "Grey" },
-    care: "Wipe the mesh and frame with a soft, dry or lightly damp cloth. Avoid harsh chemicals. Periodically check and tighten fittings, and keep the castors clear of debris for smooth rolling." }
+    care: "Wipe the mesh and frame with a soft, dry or lightly damp cloth. Avoid harsh chemicals. Periodically check and tighten fittings, and keep the castors clear of debris for smooth rolling." },
+
+  { id: "pk01", name: "Food-Vendor Stand-Up Pouches — Resealable Zipper (10-Pack)", cat: "Packaging", room: "Packaging", price: 12.95, memberPrice: 11.65, sku: "DM-10113", tag: "New", ph: "", img: "assets/products/foodpouch-1.png",
+    imgs: ["assets/products/foodpouch-1.png", "assets/products/foodpouch-2.png", "assets/products/foodpouch-3.png"],
+    sizes: [{ label: "100 × 150 + 35 mm · 10-pack", price: 12.95 }, { label: "120 × 170 + 35 mm · 10-pack", price: 15.95 }],
+    desc: "Food-safe, resealable stand-up pouches that keep your product fresh and looking retail-ready — ideal for coffee, granola, nuts, dried fruit, spices, lollies, protein and pet treats. The multi-layer PET + PA + PE structure blocks moisture and odour, while the zipper top opens and reseals again and again. Made with recycled materials and finished with vibrant flexo printing. Buy retail packs here, or order wholesale in bulk with your own logo and artwork — message us on WhatsApp for the rate card, samples or custom branding.",
+    features: [
+      "Resealable zipper top keeps food fresh between uses",
+      "Food-grade multi-layer PET + PA + PE barrier",
+      "Stands upright on the shelf for great presentation",
+      "Two sizes: 100×150+35mm and 120×170+35mm",
+      "Two thicknesses available: 0.1 mm and 0.3 mm",
+      "Made with recycled materials",
+      "Custom logo, artwork & packaging available (min. order 2 pcs) — wholesale/bulk pricing on request"
+    ],
+    specs: { "Material structure": "PET + PA + PE", "Sealing & handle": "Resealable zipper top", "Bag type": "Stand-up pouch", "Feature": "Recycled materials", "Industrial use": "Food-grade", "Surface handling": "Flexo printing", "Thickness": "0.1 mm / 0.3 mm" },
+    care: "Store in a cool, dry place out of direct sunlight. For food use, fill with dry or sealed goods and press the zipper fully closed to keep contents fresh." }
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
