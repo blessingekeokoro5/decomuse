@@ -630,28 +630,45 @@
       const real360 = !!(p.spin360 && p.spin360.length);
       if (!frames.length){ showToast("No images available to spin"); return; }
       const multi = frames.length > 1;
-      openTool(`<h3>360° view</h3><p class="th-sub">${multi ? "Drag left or right to view " + p.name + " from every angle." : p.name}</p>
+      openTool(`<h3>360° view</h3><p class="th-sub">${multi ? "Drag left or right to view " + p.name + " from every angle." : "Click and drag to move " + p.name + " around."}</p>
         <div class="spin-stage" id="spinStage">
           <img id="spinImg" src="${frames[0]}" alt="${p.name}">
-          ${multi ? `<span class="spin-hint">↤ drag to rotate ↦</span>` : ""}
-        </div>`);
-      const state = { frames, i: 0, dragging: false, lastX: 0, timer: null };
+          <span class="spin-hint">↤ drag to move ↦</span>
+        </div>
+        ${multi ? "" : `<div class="spin-controls"><button type="button" onclick="spinReset()">↺ Reset view</button></div>`}`);
+      const state = { frames, i: 0, dragging: false, lastX: 0, lastY: 0, rx: 0, ry: 0, timer: null };
       window._spin = state;
       const stage = document.getElementById("spinStage");
-      const setFrame = () => { document.getElementById("spinImg").src = frames[((state.i % frames.length) + frames.length) % frames.length]; };
+      const img = document.getElementById("spinImg");
+      const setFrame = () => { img.src = frames[((state.i % frames.length) + frames.length) % frames.length]; };
       state.set = setFrame;
       state.stop = () => { if (state.timer){ clearInterval(state.timer); state.timer = null; } };
-      const DRAG_PX_PER_FRAME = 42;  // drag distance needed to advance one frame
-      const onDown = (x) => { state.dragging = true; state.lastX = x; stage.classList.add("dragging"); };
-      const onMove = (x) => { if (!state.dragging) return; const dx = x - state.lastX; if (Math.abs(dx) >= DRAG_PX_PER_FRAME){ state.i += dx > 0 ? 1 : -1; setFrame(); state.lastX = x; } };
+      const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
+      if (!multi){ stage.style.perspective = "1100px"; img.style.transition = "transform .12s ease-out"; img.style.willChange = "transform"; }
+      state.applyTilt = () => { img.style.transform = `rotateX(${state.rx}deg) rotateY(${state.ry}deg)`; };
+      const DRAG_PX_PER_FRAME = 42;  // drag distance to advance a frame (multi-frame sets only)
+      const onDown = (x, y) => { state.dragging = true; state.lastX = x; state.lastY = y; stage.classList.add("dragging"); };
+      const onMove = (x, y) => {
+        if (!state.dragging) return;
+        if (multi){
+          const dx = x - state.lastX;
+          if (Math.abs(dx) >= DRAG_PX_PER_FRAME){ state.i += dx > 0 ? 1 : -1; setFrame(); state.lastX = x; }
+        } else {
+          state.ry = clamp(state.ry + (x - state.lastX) / 3.2, -60, 60);
+          state.rx = clamp(state.rx - (y - state.lastY) / 4, -35, 35);
+          state.applyTilt();
+          state.lastX = x; state.lastY = y;
+        }
+      };
       const onUp = () => { state.dragging = false; stage.classList.remove("dragging"); };
-      stage.addEventListener("mousedown", (e) => onDown(e.clientX));
-      window.addEventListener("mousemove", (e) => onMove(e.clientX));
+      stage.addEventListener("mousedown", (e) => { e.preventDefault(); onDown(e.clientX, e.clientY); });
+      window.addEventListener("mousemove", (e) => onMove(e.clientX, e.clientY));
       window.addEventListener("mouseup", onUp);
-      stage.addEventListener("touchstart", (e) => onDown(e.touches[0].clientX), { passive: true });
-      stage.addEventListener("touchmove", (e) => onMove(e.touches[0].clientX), { passive: true });
+      stage.addEventListener("touchstart", (e) => onDown(e.touches[0].clientX, e.touches[0].clientY), { passive: true });
+      stage.addEventListener("touchmove", (e) => { onMove(e.touches[0].clientX, e.touches[0].clientY); }, { passive: true });
       stage.addEventListener("touchend", onUp);
     }
+    function spinReset(){ const s = window._spin; if (!s || !s.applyTilt) return; s.rx = 0; s.ry = 0; s.applyTilt(); }
 
     /* ---- 4. Scan QR → open this product's details on a phone (no AR) ---- */
     function openScan(id){
