@@ -404,6 +404,8 @@
       const saveBadge = p.was ? `<span class="pdp-save">SAVE ${Math.round((1 - p.price / p.was) * 100)}%</span>` : "";
       const verifiedBadge = `<span class="dm-verified pdp-verified" title="DecoMuse Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>D&amp;M Verified</span></span>`;
       // Furniture viewer tools (below the image): dimensions · 3D in-room · 360°
+      // Set SHOW_AR to true once real 3D models (assets/models/<id>.glb/.usdz) exist to bring back the "In your room" icon.
+      const SHOW_AR = false;
       const showTools = p.cat === "Furniture" || !!p.dims || !!p.spin360 || !!p.model3d;
       const RULER_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6.5 8v3M10 8v4M13.5 8v3M17 8v4"/></svg>';
       const CUBE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 2.5v9m0 0l8-4.5m-8 4.5L4 7"/></svg>';
@@ -411,7 +413,7 @@
       const toolsHtml = showTools ? `
         <div class="pdp-tools">
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="View dimensions" onclick="openDims('${p.id}')">${RULER_IC}</button><span class="pdp-tool-label">Dimensions</span></div>
-          <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="See it in your room" onclick="openRoomView('${p.id}')">${CUBE_IC}</button><span class="pdp-tool-label">In your room</span></div>
+          ${SHOW_AR ? `<div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="See it in your room" onclick="openRoomView('${p.id}')">${CUBE_IC}</button><span class="pdp-tool-label">In your room</span></div>` : ""}
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="360 degree view" onclick="openSpin('${p.id}')">${SPIN_IC}</button><span class="pdp-tool-label">360° view</span></div>
         </div>` : "";
       let galleryHtml;
