@@ -267,7 +267,24 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table", "Shape": "Rectangular", "Tabletop": "Marble-look", "Storage": "Drawer + open shelf", "Legs": "Metal", "Room": "Living / Indoor" },
     dims: { w: 100, d: 50, h: 45, unit: "cm", img: "assets/products/hd07-2.jpg" },
     spin360: ["assets/products/hd07-2.jpg"],
-    care: "Wipe clean with a soft, damp cloth; avoid abrasive cleaners and excess water. Use coasters to protect the surface from heat and moisture." }
+    care: "Wipe clean with a soft, damp cloth; avoid abrasive cleaners and excess water. Use coasters to protect the surface from heat and moisture." },
+
+  { id: "of01", name: "Ergolux Plus Ergonomic Mesh Office Chair with Footrest (Grey)", brand: "Ergolux", cat: "Office", room: "Office", price: 150.45, memberPrice: 135.45, sku: "DM-10112", tag: "New", ph: "", img: "assets/products/of01.png",
+    imgs: ["assets/products/of01.png", "assets/products/of01-2.png", "assets/products/of01-3.png", "assets/products/of01-4.png", "assets/products/of01-5.png", "assets/products/of01-6.png", "assets/products/of01-7.png", "assets/products/of01-8.png", "assets/products/of01-9.png"],
+    colours: [{ name: "Grey", hex: "#9b9b9b" }],
+    sizes: [{ label: "Core", price: 150.45 }, { label: "Plus", price: 171.45 }, { label: "Elite (Mesh)", price: 517.95 }, { label: "Elite (Foam)", price: 591.45 }],
+    desc: "Work, study or game in all-day comfort with the Ergolux Plus ergonomic mesh office chair. The breathable mesh back keeps you cool through the longest sessions, while adaptive lumbar support, an adjustable headrest and 3D armrests shape the chair around you. Recline up to 140°, put your feet up on the retractable footrest, and glide silently on quiet castor wheels. Choose the model that suits you, from the everyday Core to the fully loaded Elite, each finished in a cool, contemporary grey.",
+    features: [
+      "Breathable mesh back that stays cool through long sittings",
+      "Adaptive lumbar support and an adjustable headrest",
+      "3D adjustable armrests plus adjustable seat height & depth",
+      "Reclines up to 140° (90° / 110° / 140°) to shift your posture",
+      "Retractable footrest to lean back and put your feet up",
+      "Quiet castor wheels and a polished chrome base",
+      "Four models to choose from: Core, Plus, Elite (Mesh) & Elite (Foam)"
+    ],
+    specs: { "Type": "Ergonomic office chair", "Back": "Breathable mesh", "Armrests": "3D adjustable", "Recline": "Up to 140°", "Footrest": "Retractable", "Base": "Chrome with castor wheels", "Colour": "Grey" },
+    care: "Wipe the mesh and frame with a soft, dry or lightly damp cloth. Avoid harsh chemicals. Periodically check and tighten fittings, and keep the castors clear of debris for smooth rolling." }
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
