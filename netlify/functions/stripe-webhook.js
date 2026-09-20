@@ -19,6 +19,7 @@
    ============================================================ */
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const { issueGiftCard } = require("./_giftcards");
 const WEBHOOK_SECRET = process.env.STRIPE_WEBHOOK_SECRET;
 
 function money(cents, cur) {
@@ -98,6 +99,24 @@ exports.handler = async (event) => {
         });
         await emailOrder(session, lineItems.data);
         console.log("Paid order captured:", session.id, money(session.amount_total, session.currency));
+
+        // Gift cards become spendable only now, having actually been paid for.
+        // issueGiftCard is idempotent, so a replayed webhook can't double them.
+        let cards = [];
+        try { cards = JSON.parse((session.metadata && session.metadata.gift_cards) || "[]"); } catch (e) {}
+        for (const c of cards) {
+          try {
+            const card = await issueGiftCard({
+              code: c.c,
+              amount: c.a,
+              source: "purchase",
+              note: `Bought in Stripe session ${session.id}`,
+            });
+            console.log("Gift card issued:", card.code, card.amount);
+          } catch (err) {
+            console.error("Gift card issue failed for", c && c.c, "—", err.message);
+          }
+        }
       }
     }
   } catch (err) {

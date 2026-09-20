@@ -22,6 +22,12 @@
   force = true
 
 [[redirects]]
+  from = "/api/issue-gift-card"
+  to = "/.netlify/functions/issue-gift-card"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/api/stripe-webhook"
   to = "/.netlify/functions/stripe-webhook"
   status = 200

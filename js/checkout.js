@@ -310,15 +310,9 @@ async function startPayment(e) {
     return;
   }
 
-  // Gift card covers the whole order → complete without Stripe (uses refund credit)
-  if (t.giftCard > 0 && t.total <= 0) {
-    const acc = getAccount();
-    if (acc) { const gc = (acc.giftCards || []).find(g => g.code === t.giftCode); if (gc) { gc.balance = Math.max(0, +(gc.balance - t.giftCard).toFixed(2)); saveAccount(acc); } }
-    localStorage.setItem("dm_last_order", JSON.stringify({ orderNo: "DM-" + (100000 + Math.floor(Math.random() * 899999)), total: 0, email: (acc && acc.email) || "" }));
-    localStorage.removeItem(CART_KEY); localStorage.removeItem("dm_coupon"); window._giftCard = null;
-    location.href = "order-confirmed.html";
-    return;
-  }
+  // NOTE: an order paid entirely by gift card is NOT completed here any more.
+  // The card is checked against the shop's ledger by the same server call that
+  // handles payment, so credit that DecoMuse never issued can't buy anything.
 
   const customer = {
     email: document.getElementById("coEmail").value,
@@ -330,7 +324,8 @@ async function startPayment(e) {
     phone: document.getElementById("coPhone").value
   };
 
-  btn.disabled = true; btn.textContent = "Connecting to Stripe…";
+  const payingByGiftCard = t.giftCard > 0 && t.total <= 0;
+  btn.disabled = true; btn.textContent = payingByGiftCard ? "Checking your gift card…" : "Connecting to Stripe…";
 
   // --- Real Stripe Checkout (active as soon as an endpoint is set) ---
   if (cfg.checkoutEndpoint) {
@@ -351,10 +346,26 @@ async function startPayment(e) {
           discountPct: od.pct || 0,
           voucher: t.voucher || 0, voucherCode: t.voucherCode || "",
           fulfil: window._fulfil || "ship",
+          giftCode: payingByGiftCard ? t.giftCode : undefined,
           customer
         })
       });
       const data = await res.json();
+
+      // Paid in full with a verified gift card — the shop has recorded the order.
+      if (data.paidByGiftCard) {
+        const acc = getAccount();
+        if (acc) {
+          const gc = (acc.giftCards || []).find(g => g.code === t.giftCode);
+          if (gc && data.giftCard) gc.balance = data.giftCard.remaining;
+          saveAccount(acc);
+        }
+        localStorage.setItem("dm_last_order", JSON.stringify({ orderNo: data.orderNo, total: data.total || 0, email: customer.email || (acc && acc.email) || "" }));
+        localStorage.removeItem(CART_KEY); localStorage.removeItem("dm_coupon"); window._giftCard = null;
+        location.href = "order-confirmed.html";
+        return;
+      }
+
       if (data.url) { window.location.href = data.url; return; }          // Stripe-hosted redirect
       if (data.id && window.Stripe && cfg.publishableKey) {                 // or redirectToCheckout by session id
         await window.Stripe(cfg.publishableKey).redirectToCheckout({ sessionId: data.id });

@@ -22,10 +22,13 @@
      STRIPE_SECRET_KEY   = sk_test_...  then later  sk_live_...
      SITE_URL            = https://www.decomuse.com.au
    Optional:
-     MAX_VOUCHER_AUD     = largest rewards voucher redeemable (default 250)
+     MAX_VOUCHER_AUD     = largest rewards voucher redeemable (default 20)
+     WEB3FORMS_KEY       = so gift-card-paid orders still reach your inbox
    ============================================================ */
 
 const CATALOGUE = require("./_catalogue.json");
+const { loadGiftCard, redeemGiftCard, normaliseCode } = require("./_giftcards");
+const { emailShop } = require("./_notify");
 
 // Constructed lazily: the Stripe client throws if the key is missing, and we'd
 // rather return a clear error than have the whole function fail to load.
@@ -66,7 +69,11 @@ function maxDiscountPct() {
   }
   return pct;
 }
-const MAX_VOUCHER = Number(process.env.MAX_VOUCHER_AUD) || 250;
+/* Rewards vouchers live in the shopper's browser, so we can't verify one
+   exists — the cap IS the control. Rewards issue $10 and $20 vouchers, so
+   $20 bounds what a tampered cart can claim. Larger prize vouchers should
+   be issued as gift cards, which ARE verified against the ledger. */
+const MAX_VOUCHER = Number(process.env.MAX_VOUCHER_AUD) || 20;
 
 const GIFT_CARD_MIN = 10;
 const GIFT_CARD_MAX = 2000;
@@ -171,6 +178,13 @@ exports.handler = async (event) => {
 
     // 1. Trusted prices, from the catalogue only.
     const lines = items.map(resolveLine);
+
+    // Gift cards being BOUGHT in this order. They're only issued into the
+    // ledger once Stripe confirms payment (see stripe-webhook.js), so an
+    // abandoned checkout never mints a spendable card.
+    const purchasedCards = items
+      .filter((i) => String((i && i.id) || "").startsWith("giftcard-") && i.giftCard && i.giftCard.code)
+      .map((i) => ({ c: String(i.giftCard.code).toUpperCase(), a: round2(Number(i.giftCard.amount)) }));
     const subtotal = round2(lines.reduce((n, l) => n + l.unitPrice * l.qty, 0));
     if (subtotal <= 0) return jsonResponse(400, { error: "Your cart total is empty." });
 
@@ -187,6 +201,55 @@ exports.handler = async (event) => {
 
     // 4. Shipping: recomputed here from weight and region, never taken from the client.
     const ship = shippingFor(String(customer.country || "Australia"), String(fulfil), lines, afterDiscount);
+
+    // 5. Gift card — verified against the ledger, never taken on trust.
+    //    A card only reduces the bill if DecoMuse actually issued it and it
+    //    still holds enough balance to cover the whole order. (Part-payment
+    //    by gift card isn't offered online, same as before.)
+    const orderTotal = round2(afterDiscount + ship.amount);
+    const giftCode = normaliseCode(body.giftCode);
+
+    if (body.giftCode && !giftCode) {
+      return jsonResponse(400, { error: "That doesn't look like a DecoMuse gift card code." });
+    }
+
+    if (giftCode) {
+      const card = await loadGiftCard(giftCode);
+      if (!card || card.voided) {
+        return jsonResponse(400, { error: "We can't find that gift card. Please check the code, or contact us if it was issued for a return." });
+      }
+      if (card.remaining + 0.001 < orderTotal) {
+        return jsonResponse(400, {
+          error: `That gift card has $${card.remaining.toFixed(2)} left, which doesn't cover this order ($${orderTotal.toFixed(2)}). Gift cards can only be used online when they cover the full amount.`,
+        });
+      }
+
+      // Spend it, then record the order — no Stripe session, so this is the
+      // only place the shop hears about it.
+      const remaining = await redeemGiftCard(card, orderTotal);
+      const orderNo = "DM-" + Math.floor(100000 + Math.random() * 899999);
+
+      await emailShop(
+        `DecoMuse — new order ${orderNo} paid by gift card ($${orderTotal.toFixed(2)})`,
+        `Order: ${orderNo}\n` +
+        `Paid with gift card: ${giftCode}  (issued ${card.issued || "unknown"}, source: ${card.source || "unknown"})\n` +
+        `Order total: $${orderTotal.toFixed(2)}\n` +
+        `Remaining on card: $${remaining.toFixed(2)}\n\n` +
+        `Items:\n` + lines.map((l) => `  ${l.qty} x ${l.name} — $${round2(l.unitPrice * l.qty).toFixed(2)}`).join("\n") +
+        `\n\nSubtotal: $${subtotal.toFixed(2)}\nDiscount: -$${discount.toFixed(2)}\n` +
+        `Voucher: -$${voucher.toFixed(2)}\nShipping: $${ship.amount.toFixed(2)} (${ship.label})\n\n` +
+        `Customer: ${customer.name || ""}\nEmail: ${customer.email || ""}\nPhone: ${customer.phone || ""}\n` +
+        `Deliver to: ${[customer.address, customer.suburb, customer.postcode, customer.country].filter(Boolean).join(", ")}\n`
+      );
+
+      console.log("Gift card order:", orderNo, giftCode, orderTotal, "remaining", remaining);
+      return jsonResponse(200, {
+        paidByGiftCard: true,
+        orderNo,
+        total: orderTotal,
+        giftCard: { code: giftCode, remaining },
+      });
+    }
 
     // Fold the discount into unit prices so the amount Stripe charges matches
     // the discounted total the shopper saw on site, line by line.
@@ -250,6 +313,8 @@ exports.handler = async (event) => {
         voucher: String(voucher),
         voucher_code: String(body.voucherCode || ""),
         shipping: String(ship.amount),
+        // Read back by the webhook to issue the cards once payment succeeds.
+        ...(purchasedCards.length ? { gift_cards: JSON.stringify(purchasedCards).slice(0, 500) } : {}),
       },
     });
 

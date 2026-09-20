@@ -76,7 +76,9 @@ Stripe starts in **Test mode** (toggle, top-right). Go to **Developers → API k
 | `STRIPE_SECRET_KEY` | `sk_test_...` (your test secret key) |
 | `SITE_URL` | your live URL **including `www`**, e.g. `https://www.decomuse.com.au` — this is where Stripe returns the shopper after payment. If unset it falls back to `https://www.decomuse.com.au`. |
 | `ORDER_EMAIL` | `Decormuseofficial@outlook.com` |
-| `WEB3FORMS_KEY` | (optional) access key from https://web3forms.com to email you each order |
+| `WEB3FORMS_KEY` | access key from https://web3forms.com — also how gift-card-paid orders reach you, so worth setting |
+| `ADMIN_SECRET` | a long random string, known only to you. Required to issue store credit; without it, nobody can (including you). |
+| `MAX_VOUCHER_AUD` | (optional) largest rewards voucher a cart may claim. Defaults to **$20**, matching what rewards issue. |
 
 Then **Deploys → Trigger deploy → Clear cache and deploy** so the functions pick up the variables.
 
@@ -110,3 +112,50 @@ You should land on `order-confirmed.html`, and (if `WEB3FORMS_KEY` is set) get t
 - **Price validation:** the function currently trusts prices sent by the browser. Because your catalogue lives in `js/data.js`, a determined user could alter a price client-side. When you're ready, move the product/price list to a small server-side map the function reads from, and look prices up by `id` instead of trusting `price`.
 - **Receipts:** enable customer email receipts in Stripe **Settings → Customer emails**.
 - **Refunds/disputes:** handled entirely in the Stripe Dashboard — no code needed.
+
+
+---
+
+## Gift cards & store credit
+
+Gift cards are the one thing on the site that spends like money, so they are
+tracked server-side. Each card is a record in **Stripe** (an inactive Product
+whose id is the card code), holding its remaining balance.
+
+**Cards can only be created by the server, two ways:**
+
+1. **Bought and paid for.** `create-checkout-session` notes the code on the
+   Stripe session; `stripe-webhook` issues the card only once Stripe confirms
+   payment. An abandoned checkout never mints a card, and a replayed webhook
+   can't double a balance.
+2. **Issued by you**, for approved returns credit, goodwill or prizes:
+
+```bash
+curl -X POST https://www.decomuse.com.au/api/issue-gift-card \
+  -H "Content-Type: application/json" \
+  -d '{"secret":"YOUR_ADMIN_SECRET","amount":52.50,"note":"Return RET-1234"}'
+```
+
+It replies with the code to send the customer. Add `"code":"DMGC-123456"` to
+issue a specific one. Re-issuing an existing code does nothing, so it's safe to
+retry.
+
+**Redeeming** goes through the same checkout function: the card must exist, not
+be voided, and hold enough balance to cover the whole order (part-payment isn't
+offered online). The balance is decremented server-side and the order is emailed
+to you — this is the only record of it, since no Stripe payment takes place.
+
+### Why returns credit changed
+The returns page used to create a spendable gift card directly in the customer's
+browser, with a 5% bonus, the moment they chose "gift card". Anyone could grant
+themselves credit and check out for nothing — and the resulting "order" never
+reached DecoMuse at all, so nothing would have shipped, but the confirmation
+page said it had.
+
+It now records a credit **request** and tells the customer their code will be
+emailed once the return is approved. When you approve it, issue the card with
+the command above.
+
+### Checking a card
+Stripe Dashboard → **Products** → search the code. `remaining` in its metadata
+is the live balance; `source` says whether it was bought or issued by you.
