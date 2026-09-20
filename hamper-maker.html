@@ -154,7 +154,10 @@
         cat: "Gift Hamper" + (note ? " · Note added" : ""),
         ph: "rose",
         qty: 1,
-        contents
+        contents,
+        // Components travel with the line so checkout can re-price the hamper
+        // server-side instead of trusting the total worked out in the browser.
+        hamper: lines.map(l => ({ id: l.item.id, qty: l.qty }))
       });
       saveCart(cart);
       showToast("Your custom hamper was added to the cart 🎁");

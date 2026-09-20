@@ -14,7 +14,10 @@ const DECOMUSE = {
   est: "2026",
   currency: "$",
   // Site-wide sale campaign. Set percent:0 (or endsAt in the past) to turn OFF.
-  campaign: { headline: "Winter Décor Refresh — 20% Off Every Piece", label: "Winter Décor Refresh", percent: 20, endsAt: "2026-08-14T23:59:59" },
+  // OFF (percent: 0). To run a sale: set percent + a future endsAt, update the
+  // headline/label, then re-run `npm run catalogue` so the server-side discount
+  // ceiling matches. Expired 20% "Winter Décor Refresh" retired 2026-09-20.
+  campaign: { headline: "", label: "", percent: 0, endsAt: "" },
   formEmail: "decormuseofficial@outlook.com",
   formEndpoint: "",
   formAccessKey: "f59d2f99-262b-46a0-987c-d94bcfe4b1bb",

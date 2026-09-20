@@ -6,9 +6,10 @@ paid order is captured by a webhook.
 
 ```
 Browser (checkout.html)
-   │  POST cart
+   │  POST product ids + quantities only — NO prices
    ▼
 Netlify Function: create-checkout-session   ── uses STRIPE_SECRET_KEY
+   │  prices/discount/shipping computed here from _catalogue.json
    │  returns Stripe-hosted checkout URL
    ▼
 Stripe Checkout page (customer enters card)
@@ -17,8 +18,34 @@ Stripe Checkout page (customer enters card)
 Netlify Function: stripe-webhook            ── verifies signature, emails you the order
 ```
 
+## How pricing is protected
+The browser never tells the server what anything costs. It sends only *what* is
+being bought — product id, quantity, colour/size — and the function works out
+every dollar figure itself from `netlify/functions/_catalogue.json`, a trusted
+copy of your products generated from `js/data.js` at deploy time.
+
+That matters because `js/data.js` ships to the shopper's browser, where anyone
+can edit it. Before this, an edited cart was charged as edited: a $1690 sofa
+could be bought for $1. Now a tampered price is ignored, an unknown product id
+is refused, discounts are capped at the highest rate any real shopper can reach,
+rewards vouchers are capped at `MAX_VOUCHER_AUD` (default $250), and shipping is
+recalculated from weight and region rather than accepted from the page.
+
+**After editing products in `js/data.js`, run:**
+```bash
+npm run catalogue      # regenerates netlify/functions/_catalogue.json
+```
+Netlify also runs this on every deploy, so the two can't drift apart. Commit the
+regenerated JSON along with your `js/data.js` change.
+
+> Products added through `admin.html` live in that browser's localStorage only.
+> They aren't in the trusted catalogue, so they can't be checked out — add real
+> products to `js/data.js` to sell them.
+
 ## Files
-- `netlify/functions/create-checkout-session.js` — builds the payment session
+- `netlify/functions/create-checkout-session.js` — prices the order and builds the payment session
+- `netlify/functions/_catalogue.json` — trusted server-side prices (generated; do not hand-edit)
+- `scripts/gen-catalogue.js` — regenerates that file from `js/data.js`
 - `netlify/functions/stripe-webhook.js` — records/notifies you of paid orders
 - `netlify.toml` — tells Netlify where the functions live
 - `package.json` — declares the `stripe` dependency
@@ -47,7 +74,7 @@ Stripe starts in **Test mode** (toggle, top-right). Go to **Developers → API k
 | Key | Value |
 |-----|-------|
 | `STRIPE_SECRET_KEY` | `sk_test_...` (your test secret key) |
-| `SITE_URL` | your Netlify URL, e.g. `https://decomuse.netlify.app` |
+| `SITE_URL` | your live URL **including `www`**, e.g. `https://www.decomuse.com.au` — this is where Stripe returns the shopper after payment. If unset it falls back to `https://www.decomuse.com.au`. |
 | `ORDER_EMAIL` | `Decormuseofficial@outlook.com` |
 | `WEB3FORMS_KEY` | (optional) access key from https://web3forms.com to email you each order |
 

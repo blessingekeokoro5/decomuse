@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "node _preview-server.js",
-    "start": "node _preview-server.js"
+    "start": "node _preview-server.js",
+    "catalogue": "node scripts/gen-catalogue.js",
+    "build": "node scripts/gen-catalogue.js"
   },
   "dependencies": {
     "stripe": "^17.5.0"

@@ -26,6 +26,13 @@ function shipCountry() {
 function cartWeight() {
   let kg = 0;
   getCart().forEach(function (i) {
+    // Must match shippingFor() in netlify/functions/create-checkout-session.js,
+    // or the quote shown here won't be the shipping Stripe charges.
+    if (i.giftCard) return;                                   // emailed, nothing to post
+    if (i.hamper) {                                           // weight scales with contents
+      kg += DEFAULT_ITEM_KG * i.hamper.reduce(function (n, l) { return n + (l.qty || 1); }, 0) * (i.qty || 1);
+      return;
+    }
     let w = DEFAULT_ITEM_KG;
     const p = (typeof findProduct === "function") ? findProduct(i.id) : null;
     const raw = (p && p.weight) != null ? p.weight : i.weight;
@@ -328,32 +335,37 @@ async function startPayment(e) {
   // --- Real Stripe Checkout (active as soon as an endpoint is set) ---
   if (cfg.checkoutEndpoint) {
     try {
-      // Apply the active discount (member / flash / sale campaign) to the prices we send to
-      // Stripe, so the amount CHARGED matches the discounted total shown on site.
+      // We send only WHAT is being bought — ids, quantities, variants. Every dollar
+      // figure (unit price, discount, shipping) is recomputed server-side from the
+      // trusted catalogue, so an edited cart can't change what Stripe charges.
       const od = orderDiscount(t.sub);
-      // Fold both the % discount and any $ rewards voucher into an effective per-item factor,
-      // so the amount charged by Stripe matches the discounted total shown on site.
-      const totalDisc = (od.amount || 0) + (t.voucher || 0);
-      const factor = t.sub > 0 ? Math.max(0, 1 - totalDisc / t.sub) : 1;
-      const discLabel = [od.label, t.voucher ? `Rewards voucher ${money(t.voucher)}` : ""].filter(Boolean).join(" + ");
       const res = await fetch(cfg.checkoutEndpoint, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          items: cart.map(i => { const v = [i.colour, i.size].filter(Boolean).join(", "); return { id: i.id, name: v ? i.name + " (" + v + ")" : i.name, price: +(i.price * factor).toFixed(2), qty: i.qty }; }),
-          coupon: "", discountPct: od.pct || 0, discountLabel: discLabel, shipping: t.shipping, customer
+          items: cart.map(i => ({
+            id: i.id, qty: i.qty, colour: i.colour || undefined, size: i.size || undefined,
+            giftCard: i.giftCard || undefined,   // gift cards carry their own amount
+            hamper: i.hamper || undefined        // custom hampers carry their components
+          })),
+          discountPct: od.pct || 0,
+          voucher: t.voucher || 0, voucherCode: t.voucherCode || "",
+          fulfil: window._fulfil || "ship",
+          customer
         })
       });
       const data = await res.json();
       if (data.url) { window.location.href = data.url; return; }          // Stripe-hosted redirect
-      if (data.id && window.Stripe) {                                       // or redirectToCheckout by session id
+      if (data.id && window.Stripe && cfg.publishableKey) {                 // or redirectToCheckout by session id
         await window.Stripe(cfg.publishableKey).redirectToCheckout({ sessionId: data.id });
         return;
       }
-      throw new Error("No session returned");
+      throw new Error(data.error || "No session returned");
     } catch (err) {
       btn.disabled = false; btn.textContent = `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`;
-      showToast("Couldn't reach payment server. Please try again or contact us.");
+      showToast(err && err.message && err.message !== "No session returned"
+        ? err.message
+        : "Couldn't reach payment server. Please try again or contact us.");
       return;
     }
   }

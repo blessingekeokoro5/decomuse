@@ -6,6 +6,9 @@
 [build]
   publish = "."
   functions = "netlify/functions"
+  # Rebuild the trusted server-side price catalogue from js/data.js on every
+  # deploy, so checkout prices can never drift from the shop.
+  command = "node scripts/gen-catalogue.js"
 
 [functions]
   node_bundler = "esbuild"
