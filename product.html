@@ -333,6 +333,9 @@
         const bc = Array.isArray(p.boxContents) ? `<ul class="pdp-highlights">${p.boxContents.map(b => `<li>${b}</li>`).join("")}</ul>` : `<p>${p.boxContents}</p>`;
         html += `<div class="pdp-spec-block"><h3>Box contents</h3>${bc}</div>`;
       }
+      if (p.guide) html += `<div class="pdp-spec-block"><h3>Assembly guide</h3>
+        <p>Step-by-step instructions, parts list and hardware list.</p>
+        <a class="btn btn--outline btn--sm" href="${p.guide}" target="_blank" rel="noopener" download style="margin-top:8px">\u2193 Download the assembly guide (PDF)</a></div>`;
       if (p.warranty) html += `<div class="pdp-spec-block"><h3>Warranty</h3><p>${p.warranty}</p></div>`;
       if (p.care) html += `<div class="pdp-spec-block"><h3>Care instructions</h3><p>${p.care}</p></div>`;
       if (p.about) html += `<div class="pdp-spec-block"><h3>About the maker</h3><p>${p.about}</p></div>`;

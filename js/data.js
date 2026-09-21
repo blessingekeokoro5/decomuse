@@ -325,6 +325,7 @@ const PRODUCTS = [
     weight: "88 kg",
     boxContents: ["1 \u00d7 bed", "1 \u00d7 set of assembly parts", "1 \u00d7 assembly manual"],
     warranty: "1 Year",
+    guide: "assets/guides/bd01-assembly-guide.pdf",
     care: "Wipe clean with a dry cloth. Use floor protection on hard surfaces, such as a non-slip rug or felt feet protectors, and check periodically that the fixings are tight and the support legs sit firmly on the floor." }
 ];
 
