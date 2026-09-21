@@ -303,7 +303,29 @@ const PRODUCTS = [
       "Custom logo, artwork & packaging available (min. order 2 pcs) — wholesale/bulk pricing on request"
     ],
     specs: { "Material structure": "PET + PA + PE", "Sealing & handle": "Resealable zipper top", "Bag type": "Stand-up pouch", "Feature": "Recycled materials", "Industrial use": "Food-grade", "Surface handling": "Flexo printing", "Thickness": "0.1 mm / 0.3 mm" },
-    care: "Store in a cool, dry place out of direct sunlight. For food use, fill with dry or sealed goods and press the zipper fully closed to keep contents fresh." }
+    care: "Store in a cool, dry place out of direct sunlight. For food use, fill with dry or sealed goods and press the zipper fully closed to keep contents fresh." },
+  { id: "bd01", name: "Spring Upholstered Bed Frame with 3 Drawers \u2014 Oat White", brand: "Western Designs", cat: "Bedroom", room: "Bedroom", price: 1350, memberPrice: 1300, sku: "DM-10114", tag: "New", ph: "", img: "assets/products/bd01.jpg",
+    imgs: ["assets/products/bd01.jpg", "assets/products/bd01-2.jpg", "assets/products/bd01-3.jpg", "assets/products/bd01-4.jpg", "assets/products/bd01-5.jpg", "assets/products/bd01-6.jpg"],
+    dims: { w: 286.6, d: 219, h: 141.2, unit: "cm", img: "assets/products/bd01-3.jpg", note: "King shown. Queen is the same height and depth with a narrower bedhead \u2014 see the size guide images." },
+    colours: [{ name: "Oat White", hex: "#e6ded0" }],
+    sizes: [{ label: "Queen", price: 1350 }, { label: "King", price: 1460 }],
+    desc: "A bed that anchors the whole room. The Spring's bedhead runs extra wide and stands tall, softly padded and panelled with angled stitching that catches the light differently through the day, so the wall behind your bed stops being an afterthought. It is upholstered in a warm oat white that reads cream rather than grey, and sits on a sturdy slatted platform base, so your mattress needs no box spring underneath. Three deep drawers roll out on castors for spare linen, winter blankets and everything a bedroom quietly accumulates. Wide enough that bedside tables tuck neatly against either side, which is exactly how it is meant to be styled.",
+    features: [
+      "Extra-wide, extra-tall padded bedhead with angled panel stitching",
+      "Three spacious under-bed drawers on castors, two at the sides and one at the foot",
+      "Slatted LVL timber platform base, no box spring needed",
+      "Rubberwood legs with a powder-coated iron centre rail and support feet",
+      "Holds up to 200 kg",
+      "Available in Queen and King",
+      "Flat-packed for home assembly \u2014 two people recommended",
+      "Mattress and bedside tables are not included"
+    ],
+    specs: { "Type": "Platform bed with storage", "Upholstery": "100% polyester over foam padding", "Frame": "MDF & particleboard", "Legs": "Rubberwood", "Slats": "LVL timber", "Centre rail": "Powder-coated iron", "Drawers": "3, on castors", "Side drawer (internal)": "19cm H x 80cm W x 50cm D", "Footboard drawer (King)": "19.8cm H x 166.1cm W x 53cm D", "Maximum weight capacity": "200 kg", "Product weight": "88 kg (Queen) / 100 kg (King)", "Mattress": "Not included", "Colour": "Oat White", "Style": "Traditional / Luxe" },
+    dimensions: "Queen: 141.2cm H x 259cm W x 219cm D \u00b7 King: 141.2cm H x 286.6cm W x 219cm D \u00b7 Bedhead depth 9cm",
+    weight: "88 kg",
+    boxContents: ["1 \u00d7 bed", "1 \u00d7 set of assembly parts", "1 \u00d7 assembly manual"],
+    warranty: "1 Year",
+    care: "Wipe clean with a dry cloth. Use floor protection on hard surfaces, such as a non-slip rug or felt feet protectors, and check periodically that the fixings are tight and the support legs sit firmly on the floor." }
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------

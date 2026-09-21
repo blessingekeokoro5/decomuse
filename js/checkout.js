@@ -36,7 +36,8 @@ function cartWeight() {
     let w = DEFAULT_ITEM_KG;
     const p = (typeof findProduct === "function") ? findProduct(i.id) : null;
     const raw = (p && p.weight) != null ? p.weight : i.weight;
-    if (raw != null) { const n = parseFloat(String(raw).replace(/[^0-9.]/g, "")); if (!isNaN(n) && n > 0) w = n; }
+    // First number only — "88 kg / 100 kg" must read as 88, not 88100.
+    if (raw != null) { const m = String(raw).match(/[0-9]+(\.[0-9]+)?/); const n = m ? parseFloat(m[0]) : NaN; if (!isNaN(n) && n > 0) w = n; }
     kg += w * (i.qty || 1);
   });
   return Math.round(Math.max(kg, 0.1) * 100) / 100;

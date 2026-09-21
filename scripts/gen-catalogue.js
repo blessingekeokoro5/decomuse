@@ -43,7 +43,12 @@ vm.runInContext(source, sandbox, { filename: "js/data.js" });
 const { PRODUCTS, HAMPER_ITEMS, HAMPER_MIN, DECOMUSE } = sandbox.__out;
 
 function num(v) {
-  const n = typeof v === "number" ? v : parseFloat(String(v == null ? "" : v).replace(/[^0-9.]/g, ""));
+  // Take the FIRST number in the string. Stripping every non-digit instead
+  // would turn "88 kg / 100 kg" into 88100 — and a weight like that makes
+  // the shipping calculator quote six figures.
+  if (typeof v === "number") return isFinite(v) && v >= 0 ? v : null;
+  const m = String(v == null ? "" : v).match(/[0-9]+(\.[0-9]+)?/);
+  const n = m ? parseFloat(m[0]) : NaN;
   return isFinite(n) && n >= 0 ? n : null;
 }
 
