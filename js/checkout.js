@@ -126,6 +126,8 @@ function renderCheckout() {
   }
   const t = checkoutTotals();
   const acc = getAccount() || {};
+  const giftOrder = isGiftOrder(cart);
+  if (!giftOrder) window._fulfil = "delivery";
   gaEvent("begin_checkout", { currency: "AUD", value: t.total, items: cart.map(i => gaItem(i, i.qty, i.price)) });
   const lines = cart.map(i => {
     const prod = (typeof findProduct === "function") ? findProduct(i.id) : null;
@@ -140,12 +142,13 @@ function renderCheckout() {
 
   wrap.innerHTML = `
     <div class="fulfil">
-      <h3 class="fulfil-title">Choose how you'd like to get your items</h3>
+      <h3 class="fulfil-title">${giftOrder ? "Choose how you'd like to get your items" : "How you'll get your items"}</h3>
       <div class="fulfil-grid" id="fulfilGrid">
         <button type="button" class="fulfil-opt active" data-mode="delivery" onclick="setFulfil('delivery')"><span class="fic">🚚</span><span>Delivery</span></button>
+        ${giftOrder ? `
         <button type="button" class="fulfil-opt" data-mode="sameday" onclick="setFulfil('sameday')"><span class="fic">🛵</span><span>Same-day local</span></button>
         <button type="button" class="fulfil-opt" data-mode="pickup" onclick="setFulfil('pickup')"><span class="fic">🛍️</span><span>Pick up</span></button>
-        <button type="button" class="fulfil-opt" data-mode="layby" onclick="setFulfil('layby')"><span class="fic">🗓️</span><span>Lay-by</span></button>
+        <button type="button" class="fulfil-opt" data-mode="layby" onclick="setFulfil('layby')"><span class="fic">🗓️</span><span>Lay-by</span></button>` : ""}
       </div>
       <div class="fulfil-note" id="fulfilNote"></div>
     </div>
@@ -211,11 +214,21 @@ function renderCheckout() {
   document.getElementById("checkoutForm").addEventListener("submit", startPayment);
   const cc = document.getElementById("coCountry");
   if (cc) cc.addEventListener("change", updateTotalsUI);
-  if (typeof window._fulfil === "undefined") window._fulfil = "delivery";
+  if (typeof window._fulfil === "undefined" || !giftOrder) window._fulfil = "delivery";
   setFulfil(window._fulfil);
 }
 
-/* Fulfilment method: Delivery · Pick up · Lay-by */
+/* Same-day, pick up and lay-by are for gift orders only: a cart of custom
+   gift hampers (gift cards may ride along). Everything else is Delivery.
+   create-checkout-session.js applies the same rule. */
+function isGiftOrder(cart) {
+  const id = (i) => String((i && i.id) || "");
+  return cart.length > 0 &&
+    cart.some((i) => id(i).startsWith("hamper-")) &&
+    cart.every((i) => id(i).startsWith("hamper-") || id(i).startsWith("giftcard-"));
+}
+
+/* Fulfilment method: Delivery · Same-day · Pick up · Lay-by */
 function setFulfil(mode) {
   window._fulfil = mode;
   document.querySelectorAll("#fulfilGrid .fulfil-opt").forEach((b) => b.classList.toggle("active", b.dataset.mode === mode));
@@ -251,7 +264,7 @@ function setFulfil(mode) {
     if (title) title.textContent = "Delivery address";
     if (delivery) delivery.style.display = "";
     if (radio) radio.style.display = "";
-    if (note) note.innerHTML = "";
+    if (note) note.innerHTML = isGiftOrder(getCart()) ? "" : "🚚 Delivered to your door. Same-day local, pick up and lay-by are available on <a href=\"hamper-maker.html\">gift hamper</a> orders.";
   }
   if (typeof updateTotalsUI === "function") updateTotalsUI();
 }

@@ -167,7 +167,8 @@ exports.handler = async (event) => {
 
   try {
     const body = JSON.parse(event.body || "{}");
-    const { items = [], customer = {}, fulfil = "ship" } = body;
+    const { items = [], customer = {} } = body;
+    let fulfil = String(body.fulfil || "ship");
 
     if (!Array.isArray(items) || items.length === 0) {
       return jsonResponse(400, { error: "Your cart is empty." });
@@ -175,6 +176,13 @@ exports.handler = async (event) => {
     if (items.length > 100) {
       return jsonResponse(400, { error: "That's more items than we can check out at once." });
     }
+
+    // Same-day and pick up are for gift hamper orders only (matches isGiftOrder
+    // in js/checkout.js); any other cart ships by standard delivery.
+    const itemId = (i) => String((i && i.id) || "");
+    const giftOrder = items.some((i) => itemId(i).startsWith("hamper-")) &&
+      items.every((i) => itemId(i).startsWith("hamper-") || itemId(i).startsWith("giftcard-"));
+    if (!giftOrder) fulfil = "ship";
 
     // 1. Trusted prices, from the catalogue only.
     const lines = items.map(resolveLine);

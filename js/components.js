@@ -521,6 +521,9 @@ function buildFloating() {
         <span class="lb-star">✦</span>
         <span>Ask MuseStylist</span>
       </button>
+      <button class="launch-btn launch-help" id="supportFab" aria-label="Help desk — track an order, returns, FAQs &amp; contact">
+        <span>?</span><span>Help</span>
+      </button>
     </div>
 
     <div class="chat-panel" id="chatPanel" aria-hidden="true">
@@ -536,7 +539,7 @@ function buildFloating() {
       </div>
       <div class="chat-tabs" id="chatTabs">
         <button type="button" class="chat-tab active" data-tab="chat">✦ Muse Stylist</button>
-        <button type="button" class="chat-tab" data-tab="support">💬 Support</button>
+        <button type="button" class="chat-tab" data-tab="support">💬 Help desk</button>
       </div>
       <div class="chat-view" id="chatViewChat">
         <div class="chat-body" id="chatBody"></div>
@@ -1158,29 +1161,108 @@ const CHAT_QUICK = [
   { label: "💬 Talk to a human" }
 ];
 
-/* ---- Support panel (Leave us a message) ---- */
-const SUPPORT_ISSUES = ["Order", "Shipping", "Returns", "DecoMuse Account", "Product", "Online Offers", "Gift Cards & Vouchers", "General"];
+/* ---- Help desk (self-service home → FAQs, tracking, returns, message us) ---- */
+const SUPPORT_ISSUES = ["Order", "Change or cancel an order", "Shipping", "Returns", "Faulty or damaged item", "DecoMuse Account", "Product", "Online Offers", "Gift Cards & Vouchers", "General"];
+
+// FAQ_ITEMS lives in policies.js (not loaded on every page), so fetch it on first use
+function dmLoadFaqs(cb) {
+  if (typeof FAQ_ITEMS !== "undefined") return cb(FAQ_ITEMS);
+  if (window._dmFaqWait) return window._dmFaqWait.push(cb);
+  window._dmFaqWait = [cb];
+  const s = document.createElement("script");
+  s.src = "js/policies.js";
+  const done = () => { const list = typeof FAQ_ITEMS !== "undefined" ? FAQ_ITEMS : []; window._dmFaqWait.forEach(f => f(list)); window._dmFaqWait = null; };
+  s.onload = done; s.onerror = done;
+  document.head.appendChild(s);
+}
+function dmFaqList(items) {
+  if (!items.length) return `<p class="support-lead">No matching answers. Try other words, or <a href="#" onclick="dmMessageTopics();return false">send us a message</a>.</p>`;
+  return `<div class="hd-faqs">${items.map(f => `<details class="hd-faq"><summary>${f.q}</summary><div>${f.a}</div></details>`).join("")}</div>`;
+}
+
 function renderSupport() {
   const el = document.getElementById("supportBody");
   if (!el) return;
   el.innerHTML = `
+    <div class="hd-hero">
+      <div class="hd-hi">Hi there 👋</div>
+      <div class="hd-how">How can we help?</div>
+      <div class="hd-search">
+        <input id="hdSearch" type="search" placeholder="Search for answers…" autocomplete="off" aria-label="Search help articles">
+      </div>
+    </div>
+    <div id="hdResults" hidden></div>
+    <div id="hdHome">
+      <div class="hd-actions">
+        <form class="hd-card hd-track" id="hdTrack">
+          <span class="hd-ic">🚚</span>
+          <div class="hd-card-t"><strong>Track my order</strong><small>Enter your order number (starts with DM-)</small></div>
+          <div class="hd-track-row">
+            <input id="hdTrackNo" placeholder="e.g. DM-100482" aria-label="Order number" required>
+            <button type="submit" class="btn btn--primary btn--sm">Track</button>
+          </div>
+        </form>
+        <a class="hd-card" href="returns.html"><span class="hd-ic">↩️</span><div class="hd-card-t"><strong>Returns &amp; exchanges</strong><small>Start a return or check what's eligible</small></div><span class="hd-go">›</span></a>
+        <button type="button" class="hd-card" onclick="dmSelectIssue('Change or cancel an order')"><span class="hd-ic">✏️</span><div class="hd-card-t"><strong>Change or cancel an order</strong><small>Tell us quickly, before it ships</small></div><span class="hd-go">›</span></button>
+        <button type="button" class="hd-card" onclick="dmMessageTopics()"><span class="hd-ic">📩</span><div class="hd-card-t"><strong>Send us a message</strong><small>We usually reply within a few hours</small></div><span class="hd-go">›</span></button>
+        <a class="hd-card" href="${WA_HANDOFF}" target="_blank" rel="noopener"><span class="hd-ic">💬</span><div class="hd-card-t"><strong>Chat on WhatsApp</strong><small>Fast replies during business hours</small></div><span class="hd-go">›</span></a>
+      </div>
+      <div class="hd-sec">Popular questions</div>
+      <div id="hdPopular"><p class="support-lead">Loading…</p></div>
+      <a class="support-more" href="policy.html?doc=faq">View all FAQs</a>
+    </div>
+    <p class="hd-hours">Our team: Mon to Fri 9am to 5:30pm · Sat 10am to 4pm (AEST)</p>`;
+
+  dmLoadFaqs(items => {
+    const pop = document.getElementById("hdPopular");
+    if (pop) pop.innerHTML = dmFaqList(items.slice(0, 6));
+  });
+
+  const search = document.getElementById("hdSearch");
+  search.addEventListener("input", () => {
+    const q = search.value.trim().toLowerCase();
+    const res = document.getElementById("hdResults"), home = document.getElementById("hdHome");
+    if (!q) { res.hidden = true; home.hidden = false; return; }
+    dmLoadFaqs(items => {
+      const words = q.split(/\s+/).filter(w => w.length > 1);
+      const plain = s => s.replace(/<[^>]+>/g, " ").toLowerCase();
+      const hits = items.filter(f => { const t = plain(f.q + " " + f.a); return words.every(w => t.includes(w)); });
+      res.innerHTML = `<div class="hd-sec">${hits.length} result${hits.length === 1 ? "" : "s"}</div>${dmFaqList(hits)}`;
+      res.hidden = false; home.hidden = true;
+    });
+  });
+
+  document.getElementById("hdTrack").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const no = document.getElementById("hdTrackNo").value.trim();
+    if (no) location.href = "track.html?order=" + encodeURIComponent(no);
+  });
+}
+function dmMessageTopics() {
+  const el = document.getElementById("supportBody");
+  if (!el) return;
+  el.innerHTML = `
+    <button class="support-back" type="button" onclick="renderSupport()">← Help desk</button>
     <div class="support-title">Leave us a message</div>
     <p class="support-lead">Please select your issue</p>
     <ul class="support-issues">
       ${SUPPORT_ISSUES.map(i => `<li><button type="button" onclick="dmSelectIssue('${i.replace(/'/g, "\\'")}')">${i}<span>›</span></button></li>`).join("")}
     </ul>
-    <a class="support-more" href="contact.html">Find more information here</a>`;
+    <a class="support-more" href="support.html">Visit the full Support Centre</a>`;
 }
 function dmSelectIssue(issue) {
   const el = document.getElementById("supportBody");
   if (!el) return;
+  const orderField = /order|return|faulty|shipping/i.test(issue)
+    ? `<div class="field"><label>Order number (if you have one)</label><input id="supOrder" placeholder="DM-"></div>` : "";
   el.innerHTML = `
-    <button class="support-back" type="button" onclick="renderSupport()">← All topics</button>
+    <button class="support-back" type="button" onclick="dmMessageTopics()">← All topics</button>
     <div class="support-title">${issue}</div>
     <p class="support-lead">Leave us a message and our team will get back to you shortly.</p>
     <form id="supForm" class="support-form">
       <div class="field"><label>Your name</label><input id="supName" required></div>
       <div class="field"><label>Email</label><input id="supEmail" type="email" required></div>
+      ${orderField}
       <div class="field"><label>Message</label><textarea id="supMsg" placeholder="How can we help with your ${issue.toLowerCase()}?" style="min-height:80px" required></textarea></div>
       <button type="submit" class="btn btn--primary btn--block" id="supSend">Send message</button>
       <div class="form-success" id="supSuccess"></div>
@@ -1193,6 +1275,7 @@ function dmSelectIssue(issue) {
       ["Issue", issue],
       ["Name", document.getElementById("supName").value],
       ["Email", document.getElementById("supEmail").value],
+      ["Order number", (document.getElementById("supOrder") || {}).value],
       ["Message", document.getElementById("supMsg").value]
     ].filter(d => d[1]);
     btn.disabled = true; btn.textContent = "Sending…";
@@ -1394,7 +1477,7 @@ function initChat() {
 
   const greet = () => {
     if (greeted) return; greeted = true;
-    chatAppend("bot", `Hi, I'm the <strong>Muse Stylist</strong> ✦ your AI décor &amp; gift advisor. Tell me who you're shopping for and I'll suggest something they'll love, or pick a category below. Need help with an order? Switch to <strong>Support</strong> above.`);
+    chatAppend("bot", `Hi, I'm the <strong>Muse Stylist</strong> ✦ your AI décor &amp; gift advisor. Tell me who you're shopping for and I'll suggest something they'll love, or pick a category below. Need help with an order? Switch to the <strong>Help desk</strong> above.`);
   };
   const switchTab = (name) => {
     tabs.forEach(x => x.classList.toggle("active", x.dataset.tab === name));
@@ -1415,9 +1498,10 @@ function initChat() {
     if (launch) launch.classList.remove("hidden");
   };
   window.openMuseChat = () => { if (!panel.classList.contains("open")) open("chat"); else switchTab("chat"); };
+  window.openHelpDesk = () => { renderSupport(); if (!panel.classList.contains("open")) open("support"); else switchTab("support"); };
 
   if (giftFab) giftFab.addEventListener("click", () => { if (!panel.classList.contains("open")) open("chat"); else switchTab("chat"); });
-  if (supportFab) supportFab.addEventListener("click", () => { if (!panel.classList.contains("open")) open("support"); else switchTab("support"); });
+  if (supportFab) supportFab.addEventListener("click", () => window.openHelpDesk());
   if (close) close.addEventListener("click", closeFn);
 
   // Animated greeting nudge (once per session, if not opened)
@@ -1436,6 +1520,11 @@ function initChat() {
   tabs.forEach(t => t.addEventListener("click", () => switchTab(t.dataset.tab)));
 
   renderSupport();
+
+  // Deep link: any page URL ending in #help opens the help desk
+  const helpHash = () => { if (location.hash === "#help") window.openHelpDesk(); };
+  helpHash();
+  window.addEventListener("hashchange", helpHash);
 }
 
 /* ---- Rotating announcement ticker ---- */

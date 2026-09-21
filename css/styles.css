@@ -1263,6 +1263,8 @@ em { font-style: italic; color: var(--rose-deep); }
 .launch-btn svg { display: block; }
 .launch-gift { background: var(--gold); color: #3c3016; }
 .launch-support { background: var(--ink); color: #fff; }
+.launch-help { background: var(--ink); color: #fff; padding: 10px 18px 10px 10px; font-size: 0.86rem; }
+.launch-help span:first-child { width: 24px; height: 24px; border-radius: 50%; background: #fff; color: var(--ink); display: grid; place-items: center; font-weight: 700; font-size: 0.85rem; }
 @media (max-width: 480px) { .launch-btn { padding: 12px 18px; font-size: 0.86rem; } }
 
 /* Nudge sits above the launcher */
@@ -1286,6 +1288,34 @@ em { font-style: italic; color: var(--rose-deep); }
 .support-form label { display: block; font-size: 0.78rem; color: var(--muted); margin-bottom: 4px; }
 .support-form input, .support-form textarea { width: 100%; border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 13px; font-family: var(--font-body); font-size: 0.9rem; background: #fff; }
 .support-form input:focus, .support-form textarea:focus { outline: none; border-color: var(--rose); }
+
+/* ---- Help desk home (self-service) ---- */
+.hd-hero { background: var(--forest); color: #fff; margin: -18px -20px 16px; padding: 22px 20px 20px; }
+.hd-hi { font-size: 0.9rem; color: #e3e6d6; }
+.hd-how { font-family: var(--font-head); font-size: 1.45rem; line-height: 1.2; margin: 2px 0 14px; }
+.hd-search input { width: 100%; border: none; border-radius: 999px; padding: 11px 16px; font-family: var(--font-body); font-size: 0.9rem; background: #fff; color: var(--ink); }
+.hd-search input:focus { outline: 2px solid var(--rose-soft); }
+.hd-actions { display: flex; flex-direction: column; gap: 8px; margin-bottom: 18px; }
+.hd-card { display: flex; align-items: center; gap: 12px; width: 100%; text-align: left; background: #fff; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; color: var(--ink); font-family: var(--font-body); cursor: pointer; transition: border-color var(--tr); }
+.hd-card:hover { border-color: var(--rose-soft); color: var(--ink); }
+.hd-ic { font-size: 1.25rem; flex: none; }
+.hd-card-t { flex: 1; min-width: 0; }
+.hd-card-t strong { display: block; font-size: 0.9rem; font-weight: 600; }
+.hd-card-t small { display: block; font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+.hd-go { color: var(--rose-deep); font-size: 1.2rem; }
+.hd-track { flex-wrap: wrap; cursor: default; }
+.hd-track-row { display: flex; gap: 8px; width: 100%; }
+.hd-track-row input { flex: 1; min-width: 0; border: 1.5px solid var(--line); border-radius: 10px; padding: 9px 12px; font-family: var(--font-body); font-size: 0.88rem; }
+.hd-track-row input:focus { outline: none; border-color: var(--rose); }
+.hd-sec { font-size: 0.7rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 4px 0 8px; }
+.hd-faqs { background: #fff; border: 1px solid var(--line); border-radius: 12px; margin-bottom: 12px; }
+.hd-faq + .hd-faq { border-top: 1px solid var(--line); }
+.hd-faq summary { cursor: pointer; padding: 11px 14px; font-size: 0.88rem; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 10px; }
+.hd-faq summary::-webkit-details-marker { display: none; }
+.hd-faq summary::after { content: "+"; color: var(--rose-deep); font-size: 1.1rem; line-height: 1; }
+.hd-faq[open] summary::after { content: "–"; }
+.hd-faq div { padding: 0 14px 12px; font-size: 0.84rem; color: var(--body); line-height: 1.6; }
+.hd-hours { font-size: 0.74rem; color: var(--muted); text-align: center; margin: 16px 0 0; }
 
 /* ---- Toast ---- */
 .toast { position: fixed; bottom: 90px; left: 50%; transform: translateX(-50%) translateY(140%);
