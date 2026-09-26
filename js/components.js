@@ -197,6 +197,7 @@ function buildHeader() {
               <div class="mega-col">
                 <h5>Our services</h5>
                 <ul>
+                  <li><a href="styled-spaces.html">Styled Spaces by Samira</a></li>
                   <li><a href="property-styling-staging.html">Property Styling &amp; Staging</a></li>
                   <li><a href="personal-shopping.html">Home Décor Personal Shopper</a></li>
                   <li><a href="vacation-rentals.html">Vacation Rentals</a></li>
@@ -233,6 +234,7 @@ function buildHeader() {
   // Mobile drawer mirrors the desktop category nav order:
   // categories first, then Styling & Design, About, Contact.
   const servicesSubs = [
+    { label: "Styled Spaces by Samira", href: "styled-spaces.html" },
     { label: "Property Styling & Staging", href: "property-styling-staging.html" },
     { label: "Home Décor Personal Shopper", href: "personal-shopping.html" },
     { label: "Vacation Rentals", href: "vacation-rentals.html" },
@@ -684,7 +686,7 @@ function buildEnquire() {
           <div class="field-row">
             <div class="field"><label>Phone</label><input type="tel"></div>
             <div class="field"><label>Service</label>
-              <select><option>Property Styling</option><option>Property Staging</option><option>Interior Design</option><option>Trade &amp; Commercial</option><option>Gift hampers</option><option>Something else</option></select></div>
+              <select><option>Styled Spaces by Samira (new builds)</option><option>Property Styling</option><option>Property Staging</option><option>Interior Design</option><option>Trade &amp; Commercial</option><option>Gift hampers</option><option>Something else</option></select></div>
           </div>
           <div class="field"><label>How did you hear about us?</label>
             <select><option value="">Select an option</option><option>Google search</option><option>Instagram</option><option>Facebook</option><option>Pinterest</option><option>Friend or referral</option><option>Real estate agent</option><option>Shopped with us before</option><option>Other</option></select></div>
