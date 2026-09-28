@@ -10,4 +10,4 @@ http.createServer((req,res)=>{
     res.writeHead(200,{'Content-Type':types[path.extname(fp)]||'application/octet-stream'});
     res.end(d);
   });
-}).listen(8080,()=>console.log('DecoMuse preview running at http://localhost:8080'));
+}).listen(8080,()=>console.log('Samira Home Decor preview running at http://localhost:8080'));

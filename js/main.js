@@ -65,11 +65,11 @@ function collectForm(form) {
 
 // Build a readable subject line from the form / page context
 function formSubject(form) {
-  if (form.dataset.formName) return "DecoMuse, " + form.dataset.formName;
+  if (form.dataset.formName) return "Samira Home Decor, " + form.dataset.formName;
   const sec = form.closest("section");
   const h = sec && sec.querySelector(".section-head h2, .page-banner h1, h2, h3");
   const base = h ? h.textContent.trim() : (document.title.split(/[, |]/)[0].trim() || "Website enquiry");
-  return "DecoMuse, " + base;
+  return "Samira Home Decor, " + base;
 }
 
 // Deliver: POST to Formspree if configured, otherwise open a pre-addressed email
@@ -79,12 +79,12 @@ async function deliverForm(data, subject) {
   const endpoint = cfg.formEndpoint || "";
   const accessKey = cfg.formAccessKey || "";
   const replyto = (data.find(d => /email/i.test(d[0])) || [])[1] || "";
-  const body = data.map(([k, v]) => `${k}: ${v}`).join("\n") + "\n\n, Sent from the DecoMuse website";
+  const body = data.map(([k, v]) => `${k}: ${v}`).join("\n") + "\n\n, Sent from the Samira Home Decor website";
 
   // 1) Web3Forms silent delivery (recommended, just an access key, no account)
   if (accessKey) {
     try {
-      const payload = { access_key: accessKey, subject, from_name: "DecoMuse Website", replyto };
+      const payload = { access_key: accessKey, subject, from_name: "Samira Home Decor Website", replyto };
       data.forEach(([k, v]) => { payload[k] = v; });
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload)
@@ -123,7 +123,7 @@ function initForms() {
       if (success) {
         success.classList.add("show");
         success.textContent = ok
-          ? (form.dataset.successMsg || "Thank you! Your request has been sent to the DecoMuse team, we'll be in touch within 2 business hours.")
+          ? (form.dataset.successMsg || "Thank you! Your request has been sent to the Samira Home Decor team, we'll be in touch within 2 business hours.")
           : "Sorry, something went wrong. Please email decormuseofficial@outlook.com or message us on WhatsApp.";
       }
       form.reset();
@@ -137,7 +137,7 @@ function initForms() {
       e.preventDefault();
       const email = (form.querySelector("input") || {}).value || "";
       if (typeof DECOMUSE !== "undefined" && DECOMUSE.formEndpoint) {
-        deliverForm([["Newsletter subscriber", email]], "DecoMuse, New newsletter subscriber");
+        deliverForm([["Newsletter subscriber", email]], "Samira Home Decor, New newsletter subscriber");
       }
       form.reset();
       showToast("You're on the list, welcome to The Edit ✦");
@@ -243,7 +243,7 @@ function showDontPayInfo(e) {
       '<div class="dp-box" role="dialog" aria-label="About the Don\'t Pay price">' +
         '<button class="dp-close" aria-label="Close">✕</button>' +
         '<h4>About the “Don’t Pay” price</h4>' +
-        '<p>The <strong>Don’t Pay</strong> price is the price at which the same, or a nearly identical, item is being offered for sale, or has been offered for sale recently. It may refer to our own price elsewhere, or to the price of another seller. DecoMuse assumes sole responsibility for ensuring the accuracy of this price.</p>' +
+        '<p>The <strong>Don’t Pay</strong> price is the price at which the same, or a nearly identical, item is being offered for sale, or has been offered for sale recently. It may refer to our own price elsewhere, or to the price of another seller. Samira Home Decor assumes sole responsibility for ensuring the accuracy of this price.</p>' +
       '</div>';
     document.body.appendChild(m);
     const close = () => m.classList.remove("open");
@@ -318,7 +318,7 @@ function applySubFilter(list) {
   if (!sub) return list;
   const filtered = list.filter(p => productMatchesSub(p, sub));
   renderSubChip(sub);
-  try { document.title = sub + " · DecoMuse"; } catch (e) {}
+  try { document.title = sub + " · Samira Home Decor"; } catch (e) {}
   return filtered;
 }
 function renderSubChip(sub) {
@@ -332,7 +332,7 @@ function renderSubChip(sub) {
   else { const c = document.querySelector(".container"); if (c) c.insertBefore(chip, c.firstChild); }
 }
 
-/* Find similar products on DecoMuse (card search icon) — searches our own shop. */
+/* Find similar products on Samira Home Decor (card search icon) — searches our own shop. */
 function findSimilar(id) {
   const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
   const term = p ? (p.cat || (p.name || "").split(" ").slice(-1)[0]) : "";

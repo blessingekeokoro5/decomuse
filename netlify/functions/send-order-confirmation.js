@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — Order Confirmation email  (Netlify Function, Brevo)
+   Samira Home Decor — Order Confirmation email  (Netlify Function, Brevo)
    ------------------------------------------------------------
    After checkout, emails the customer a branded order summary
    (order number, items, totals, delivery info), with a copy to
@@ -16,7 +16,7 @@
 
 const BREVO_API_KEY  = process.env.BREVO_API_KEY || "";
 const SENDER_EMAIL   = process.env.SENDER_EMAIL || "decormuseofficial@outlook.com";
-const SENDER_NAME    = process.env.SENDER_NAME || "DecoMuse";
+const SENDER_NAME    = process.env.SENDER_NAME || "Samira Home Decor";
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "decormuseofficial@outlook.com";
 const SITE_URL       = process.env.SITE_URL || "https://www.decomuse.com.au";
 
@@ -60,7 +60,7 @@ exports.handler = async (event) => {
     const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#2C2623;padding:8px">
       <div style="text-align:center;padding:22px 0 6px">
-        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#47563B">DecoMuse</div>
+        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#47563B">Samira Home Decor</div>
         <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home Décor Store</div>
       </div>
       <div style="background:#47563B;color:#fff;border-radius:14px;padding:26px 28px;text-align:center">
@@ -90,7 +90,7 @@ exports.handler = async (event) => {
       </div>
       <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">
         Need a hand? Just reply to this email or contact us at ${esc(BUSINESS_EMAIL)}.<br>
-        Thank you for shopping with DecoMuse 💛
+        Thank you for shopping with Samira Home Decor 💛
       </p>
     </div>`;
 
@@ -98,7 +98,7 @@ exports.handler = async (event) => {
       sender: { name: SENDER_NAME, email: SENDER_EMAIL },
       to: [{ email: o.email, name: o.name || undefined }],
       bcc: [{ email: BUSINESS_EMAIL }],
-      subject: `Your DecoMuse order ${o.orderNo || ""} is confirmed 🌿`,
+      subject: `Your Samira Home Decor order ${o.orderNo || ""} is confirmed 🌿`,
       htmlContent: html,
     };
 

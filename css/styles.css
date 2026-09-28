@@ -4,26 +4,26 @@
    ============================================================ */
 
 :root {
-  /* ---- Palette (matched to Decomuse brand) ---- */
-  --cream:      #F6EEE8;   /* page background */
-  --cream-2:    #F1E4DC;   /* deeper cream panel */
-  --blush:      #F0DBD6;   /* soft pink panels (sale, reviews) */
-  --blush-2:    #E9CAC5;   /* deeper blush */
-  --rose:       #B67280;   /* PRIMARY dusty rose / blush pink */
-  --rose-deep:  #A5586A;   /* headings accent, italics, eyebrows */
-  --rose-soft:  #D7A6AE;
-  --forest:     #47563B;   /* SECONDARY emerald / forest green */
-  --forest-2:   #3B4A31;   /* deeper green */
-  --forest-soft:#8A9877;
-  --espresso:   #2B2320;   /* footer / dark buttons */
-  --espresso-2: #3A302B;
-  --ink:        #2C2623;   /* headings */
-  --body:       #6E625B;   /* body copy */
-  --muted:      #998A82;   /* muted labels */
-  --line:       #E5D6CD;   /* borders */
+  /* ---- Palette (SYS · Samira Home Decor — navy & gold) ---- */
+  --cream:      #F4EFE6;   /* page background (Soft Ivory) */
+  --cream-2:    #E8DCC8;   /* deeper panel (Warm Cream) */
+  --blush:      #F3EAD6;   /* soft champagne panels (sale, reviews) */
+  --blush-2:    #ECDCB4;   /* deeper champagne */
+  --rose:       #C6A15B;   /* PRIMARY accent (Antique Gold) */
+  --rose-deep:  #A9843C;   /* headings accent, italics, eyebrows (deep gold) */
+  --rose-soft:  #E0C992;   /* Champagne */
+  --forest:     #0B1F3A;   /* SECONDARY / structure (Deep Navy) */
+  --forest-2:   #061525;   /* deeper navy (Midnight) */
+  --forest-soft:#A89886;   /* Soft Taupe */
+  --espresso:   #061525;   /* footer / dark buttons (Midnight) */
+  --espresso-2: #0B1F3A;   /* Deep Navy */
+  --ink:        #0B1F3A;   /* headings (Deep Navy) */
+  --body:       #5B554C;   /* body copy (warm taupe-grey) */
+  --muted:      #A89886;   /* muted labels (Soft Taupe) */
+  --line:       #E6DCC9;   /* borders */
   --white:      #ffffff;
 
-  --gold:       #C6A15B;
+  --gold:       #C6A15B;   /* Antique Gold */
 
   /* ---- Type ---- */
   --font-head:  "Playfair Display", Georgia, serif;
@@ -1525,7 +1525,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .pdp-spec-block p { color: var(--body); margin: 0; }
 @media (max-width: 760px) { .pdp { grid-template-columns: 1fr; gap: 28px; } }
 
-/* ============ DecoMuse bubbling brand banner ============ */
+/* ============ Samira Home Decor bubbling brand banner ============ */
 .dm-banner { position: relative; overflow: hidden; border-radius: 22px; text-align: center;
   padding: 54px 26px 58px; box-shadow: var(--shadow);
   background: linear-gradient(155deg, var(--blush) 0%, var(--cream) 48%, var(--blush-2) 100%); }
@@ -1607,7 +1607,7 @@ em { font-style: italic; color: var(--rose-deep); }
 
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
-/* About page: "DecoMuse Home Collectives" image overlay */
+/* About page: "Samira Home Decor Home Collectives" image overlay */
 .about-collective .ph { position: relative; }
 .collective-caption { position: absolute; inset: 0; z-index: 3; display: flex; flex-direction: column;
   align-items: center; justify-content: center; text-align: center; color: #fff; padding: 20px;
@@ -1628,7 +1628,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .member-terms { text-transform: none; letter-spacing: normal; font-size: 0.68rem; text-align: center; margin-top: 14px; line-height: 1.5; }
 .member-terms a { color: var(--rose-deep); }
 
-/* Footer: DecoMuse app coming soon + suggestion box */
+/* Footer: Samira Home Decor app coming soon + suggestion box */
 .app-soon { display: grid; grid-template-columns: 1fr 1.1fr; gap: 34px; align-items: center;
   background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); border-radius: 16px;
   padding: 26px 30px; margin: 8px 0 30px; }
@@ -1728,7 +1728,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .ostat-ev-detail { margin: 2px 0 0; font-size: 0.83rem; color: var(--muted); }
 .ostat-ev.upcoming .ostat-ev-detail { opacity: 0.7; }
 
-/* Coming-soon placeholder cards (DecoMuse logo, "Back Soon") */
+/* Coming-soon placeholder cards (Samira Home Decor logo, "Back Soon") */
 .card.coming-soon .cs-ph { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;
   background: #fbf8f5; aspect-ratio: 1 / 1; width: 100%; }
 .cs-logo { width: 58%; max-width: 190px; max-height: 60%; object-fit: contain; mix-blend-mode: multiply; opacity: 0.9; }

@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Muse Stylist AI, Style Your Room | DecoMuse</title>
-  <meta name="description" content="Upload a photo of your room and let DecoMuse's Muse Stylist AI recommend décor pieces matched to your space, then add your favourites to cart.">
+  <title>Muse Stylist AI, Style Your Room | Samira Home Decor</title>
+  <meta name="description" content="Upload a photo of your room and let Samira Home Decor's Muse Stylist AI recommend décor pieces matched to your space, then add your favourites to cart.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=16">
+  <link rel="stylesheet" href="css/styles.css?v=17">
   <style>
     .muse-chat { background:#fff; border:1px solid var(--line); border-radius:var(--radius-lg); box-shadow:var(--shadow); overflow:hidden; display:flex; flex-direction:column; }
     .mc-head { display:flex; align-items:center; gap:12px; padding:16px 20px; background:linear-gradient(135deg,var(--forest),var(--forest-2)); color:#fff; }
@@ -85,7 +85,7 @@
       <div class="breadcrumb"><a href="index.html">Home</a> / Muse Stylist AI</div>
       <span class="eyebrow">✦ Muse Stylist AI</span>
       <h1>Upload your room. Get styled.</h1>
-      <p>Our stylist AI reads your space, palette, proportions and vibe, then recommends DecoMuse pieces you can add straight to your cart.</p>
+      <p>Our stylist AI reads your space, palette, proportions and vibe, then recommends Samira Home Decor pieces you can add straight to your cart.</p>
     </div>
   </section>
 
@@ -164,7 +164,7 @@
 
   <div id="site-footer"></div>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=16"></script>
+  <script src="js/components.js?v=17"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script src="js/stylist.js"></script>
@@ -179,7 +179,7 @@
         <div class="gi">🎁</div>
         <h3>Find the perfect piece</h3>
         <p>Tell me who you're shopping for, or the room you're styling, and I'll suggest something they'll love.</p>
-        <p>I can help you find the perfect DecoMuse piece — and if you need help with an order, just ask. You can also <a href="contact.html">contact us</a> directly.</p>
+        <p>I can help you find the perfect Samira Home Decor piece — and if you need help with an order, just ask. You can also <a href="contact.html">contact us</a> directly.</p>
       </div>`;
     }
     function museInit() {
@@ -265,7 +265,7 @@
       if (/\b(contact|human|agent|speak|talk|email|phone|call|support)\b/.test(s))
         return { text: "Our team would love to help. Reach out any time and we'll get back to you quickly.", link: ["Contact us", "contact.html"] };
       if (/\b(member|membership|discount|coupon|promo|code|join|sign ?up|loyalty)\b/.test(s))
-        return { text: "Join free as a DecoMuse member and enjoy 20% off your first order, a downloadable membership card, and member-only perks. It only takes a minute.", link: ["Join free", "account.html"] };
+        return { text: "Join free as a Samira Home Decor member and enjoy 20% off your first order, a downloadable membership card, and member-only perks. It only takes a minute.", link: ["Join free", "account.html"] };
 
       // Product intents
       const budget = museBudget(s);
@@ -376,7 +376,7 @@
       let list = PRODUCTS.filter((p) => p.cat === room.cat);
       if (list.length < 3) list = list.concat(PRODUCTS.filter((p) => list.indexOf(p) === -1));
       list = list.slice(0, 4);
-      const text = `Lovely, I can see a ${room.label}. Based on your palette and proportions, here are a few DecoMuse pieces that would complement it beautifully. Tap Add to Bag on any you love, or ask me to make it warmer, calmer or more of a statement.`;
+      const text = `Lovely, I can see a ${room.label}. Based on your palette and proportions, here are a few Samira Home Decor pieces that would complement it beautifully. Tap Add to Bag on any you love, or ask me to make it warmer, calmer or more of a statement.`;
       addLiveLine("stylist", text, list);
       museSpeak(text);
     }

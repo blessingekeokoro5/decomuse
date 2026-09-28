@@ -29,7 +29,7 @@ vm.createContext(sandbox);
 vm.runInContext(code + "\n;globalThis.__PRODUCTS = PRODUCTS; globalThis.__DECOMUSE = DECOMUSE;", sandbox, { filename: "data.js" });
 
 const PRODUCTS = sandbox.__PRODUCTS || [];
-const BRAND = (sandbox.__DECOMUSE && sandbox.__DECOMUSE.brand) || "DecoMuse";
+const BRAND = (sandbox.__DECOMUSE && sandbox.__DECOMUSE.brand) || "Samira Home Decor";
 
 const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -94,7 +94,7 @@ ${extras.join("\n")}
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
 <channel>
-  <title>DecoMuse — Home Décor, Lifestyle &amp; Fragrance</title>
+  <title>Samira Home Decor — Home Décor, Lifestyle &amp; Fragrance</title>
   <link>${SITE}</link>
   <description>Curated pieces for elevated living. Shipped Australia-wide.</description>
 ${items.join("\n")}

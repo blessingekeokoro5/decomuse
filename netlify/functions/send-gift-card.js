@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — Send Gift Card  (Netlify Function, Brevo)
+   Samira Home Decor — Send Gift Card  (Netlify Function, Brevo)
    ------------------------------------------------------------
    After a gift card is purchased, emails the designed card
    (amount, reference code, barcode, message) to the recipient,
@@ -19,7 +19,7 @@
 
 const BREVO_API_KEY  = process.env.BREVO_API_KEY || "";
 const SENDER_EMAIL   = process.env.SENDER_EMAIL || "decormuseofficial@outlook.com";
-const SENDER_NAME    = process.env.SENDER_NAME || "DecoMuse";
+const SENDER_NAME    = process.env.SENDER_NAME || "Samira Home Decor";
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "decormuseofficial@outlook.com";
 const SITE_URL       = process.env.SITE_URL || "https://www.decomuse.com.au";
 
@@ -68,13 +68,13 @@ exports.handler = async (event) => {
 
     const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#2C2623;padding:8px">
-      <p style="text-align:center;color:#8a7f77;margin:18px 0 8px">${from ? esc(from) + " has sent you a" : "You've received a"} DecoMuse gift card 🎁</p>
+      <p style="text-align:center;color:#8a7f77;margin:18px 0 8px">${from ? esc(from) + " has sent you a" : "You've received a"} Samira Home Decor gift card 🎁</p>
 
       <!-- The card -->
       <table role="presentation" cellpadding="0" cellspacing="0" width="100%" style="border-radius:20px;overflow:hidden;background:#A5586A;background:linear-gradient(140deg,#c07a88,#A5586A 55%,#7f3a49);color:#fff">
         <tr><td style="padding:28px 30px">
           <table role="presentation" width="100%"><tr>
-            <td style="font-family:Georgia,serif;font-size:26px;font-weight:bold">DecoMuse</td>
+            <td style="font-family:Georgia,serif;font-size:26px;font-weight:bold">Samira Home Decor</td>
             <td align="right" style="font-size:20px">🎁</td>
           </tr></table>
           <div style="letter-spacing:4px;text-transform:uppercase;font-size:11px;color:#ecd9ae;margin:22px 0 4px">Gift Card</div>
@@ -109,7 +109,7 @@ exports.handler = async (event) => {
       sender: { name: SENDER_NAME, email: SENDER_EMAIL },
       to: [{ email }],
       bcc: [{ email: BUSINESS_EMAIL }],
-      subject: `🎁 Your DecoMuse gift card (${money(amount)})`,
+      subject: `🎁 Your Samira Home Decor gift card (${money(amount)})`,
       htmlContent: html,
     };
 

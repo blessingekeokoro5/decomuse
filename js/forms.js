@@ -64,7 +64,7 @@
     } else {
       buttons = '<button type="submit" class="btn btn--primary btn--block" style="margin-top:18px">' + (f.submit || "Submit form") + '</button>';
     }
-    return '<form data-client-form="' + esc(f.title) + '"' + (f.invoice ? ' data-invoice="1"' : '') + ' data-success="' + esc(f.success || "Thank you! Your form has been submitted to DecoMuse. 💛") + '">' +
+    return '<form data-client-form="' + esc(f.title) + '"' + (f.invoice ? ' data-invoice="1"' : '') + ' data-success="' + esc(f.success || "Thank you! Your form has been submitted to Samira Home Decor. 💛") + '">' +
       body + buttons + '<div class="form-success"></div></form>';
   };
 
@@ -87,7 +87,7 @@
         { name: "Preferred time", label: "Preferred time", type: "select", options: ["Morning", "Afternoon", "Evening", "Flexible"], half: true },
         { name: "How did you hear", label: "How did you hear about us?", type: "select", options: ["Google", "Instagram", "Facebook", "Referral", "Real estate agent", "Shopped before", "Other"], half: true },
         { name: "Notes", label: "Anything we should know?", type: "textarea", ph: "Goals, timing, access…" },
-        { consent: "I agree to be contacted about my booking and consent to DecoMuse collecting these details.", name: "Consent to contact", required: true }
+        { consent: "I agree to be contacted about my booking and consent to Samira Home Decor collecting these details.", name: "Consent to contact", required: true }
       ]
     },
     "project-brief": {
@@ -112,10 +112,10 @@
         { name: "Service", label: "Service", type: "select", options: SERVICES, required: true, half: true },
         { name: "Project address", label: "Project address" },
         { name: "Agreed fee / quote", label: "Agreed fee / quote reference", half: true }, { name: "Start date", label: "Preferred start date", type: "date", half: true },
-        { consent: "I do NOT consent to DecoMuse using photos of my project for portfolio / marketing.", name: "Opt out of marketing photos" },
-        { consent: "I have read and agree to the DecoMuse Service Agreement terms.", name: "Agrees to terms", required: true }
+        { consent: "I do NOT consent to Samira Home Decor using photos of my project for portfolio / marketing.", name: "Opt out of marketing photos" },
+        { consent: "I have read and agree to the Samira Home Decor Service Agreement terms.", name: "Agrees to terms", required: true }
       ],
-      terms: "<h4>1. Scope</h4><p>DecoMuse provides the agreed service. Work beyond the agreed scope may be quoted separately.</p><h4>2. Fees & GST</h4><p>Fees are per the agreed quote, in AUD, GST-inclusive where applicable. Product & third-party costs are additional unless stated.</p><h4>3. Deposit</h4><p>A 50% deposit secures your booking and dates; the balance is due on/before completion.</p><h4>4. Hire items</h4><p>For staging, hired furniture & décor remain DecoMuse property for the hire period; the client is responsible for reasonable care.</p><h4>5. Cancellations</h4><p>Please give 48 hours' notice to reschedule. Deposits are non-refundable within 7 days of a scheduled service.</p><h4>6. Liability</h4><p>Nothing in these terms limits your rights under the Australian Consumer Law.</p>"
+      terms: "<h4>1. Scope</h4><p>Samira Home Decor provides the agreed service. Work beyond the agreed scope may be quoted separately.</p><h4>2. Fees & GST</h4><p>Fees are per the agreed quote, in AUD, GST-inclusive where applicable. Product & third-party costs are additional unless stated.</p><h4>3. Deposit</h4><p>A 50% deposit secures your booking and dates; the balance is due on/before completion.</p><h4>4. Hire items</h4><p>For staging, hired furniture & décor remain Samira Home Decor property for the hire period; the client is responsible for reasonable care.</p><h4>5. Cancellations</h4><p>Please give 48 hours' notice to reschedule. Deposits are non-refundable within 7 days of a scheduled service.</p><h4>6. Liability</h4><p>Nothing in these terms limits your rights under the Australian Consumer Law.</p>"
     },
     "scope-of-work": {
       title: "Scope of Work Form", cat: "client",
@@ -176,7 +176,7 @@
         { name: "Rooms to shop", label: "Rooms / areas to shop for", type: "textarea" },
         { name: "Priority items", label: "Priority items", type: "textarea" },
         { name: "Preferred stores", label: "Preferred stores / brands", half: true }, { name: "Items to avoid", label: "Items / materials to avoid", half: true },
-        { consent: "I authorise DecoMuse to source & recommend items within the budget above.", name: "Authorise purchasing", required: true }
+        { consent: "I authorise Samira Home Decor to source & recommend items within the budget above.", name: "Authorise purchasing", required: true }
       ]
     },
     "inventory-list": {
@@ -201,12 +201,12 @@
         { sec: "Release" },
         { name: "Permission", label: "Do you grant photo permission?", type: "select", options: ["Yes, full use", "Yes, no address shown", "No"], required: true, half: true },
         { name: "Credit", label: "Credit / tag preference", half: true },
-        { consent: "I grant DecoMuse permission to use before & after photos of my project per my selection above.", name: "Grants photo release", required: true }
+        { consent: "I grant Samira Home Decor permission to use before & after photos of my project per my selection above.", name: "Grants photo release", required: true }
       ]
     },
     "gift-card-redemption": {
       title: "Gift Card Redemption Form", cat: "client",
-      intro: "Redeem a DecoMuse gift card.",
+      intro: "Redeem a Samira Home Decor gift card.",
       fields: [
         NAME, EMAIL,
         { sec: "Gift card" },
@@ -219,14 +219,14 @@
     },
     "membership-registration": {
       title: "Membership Registration Form", cat: "client",
-      intro: "Join DecoMuse Rewards.",
+      intro: "Join Samira Home Decor Rewards.",
       fields: [
         NAME, EMAIL, PHONE, { name: "Birthday", label: "Birthday", type: "date", half: true },
         { sec: "Preferences" },
         { name: "Interests", label: "What are you most interested in?", type: "textarea" },
         { name: "How did you hear", label: "How did you hear about us?", type: "select", options: ["Google", "Instagram", "Facebook", "Referral", "In store", "Other"], half: true },
         { name: "Marketing consent", label: "Email me offers & news?", type: "select", options: ["Yes", "No"], half: true },
-        { consent: "I agree to the DecoMuse membership & privacy terms.", name: "Agrees to membership terms", required: true }
+        { consent: "I agree to the Samira Home Decor membership & privacy terms.", name: "Agrees to membership terms", required: true }
       ]
     },
     "cancellation-ack": {
@@ -240,7 +240,7 @@
     },
     "invoice": {
       title: "Invoice", cat: "client",
-      intro: "DecoMuse tax invoice.",
+      intro: "Samira Home Decor tax invoice.",
       success: "Invoice saved.",
       submit: "Save invoice",
       noSignature: true, sendToClient: true, invoice: true,
@@ -293,7 +293,7 @@
         { name: "Bank name", label: "Bank name", half: true }, { name: "BSB", label: "BSB", half: true },
         { name: "Account number", label: "Account number", half: true }, { name: "Tax File Number", label: "Tax File Number", half: true },
         { name: "Super fund", label: "Superannuation fund", half: true }, { name: "Super member number", label: "Super member no.", half: true },
-        { consent: "The information above is true and correct, and I authorise DecoMuse to use it for payroll & onboarding.", name: "Info accurate & authorised", required: true }
+        { consent: "The information above is true and correct, and I authorise Samira Home Decor to use it for payroll & onboarding.", name: "Info accurate & authorised", required: true }
       ]
     },
     "employee-emergency": {
@@ -316,18 +316,18 @@
         NAME, EMAIL, { name: "Position", label: "Position / role", half: true },
         { consent: "I have read and agree to the confidentiality & conduct terms below.", name: "Agrees to confidentiality", required: true }
       ],
-      terms: "<h4>Confidentiality</h4><p>I will keep confidential all client details, business information, supplier terms, pricing and any personal data I access, during and after my engagement with DecoMuse.</p><h4>Client privacy</h4><p>I will handle client information respectfully and only use it for DecoMuse work, in line with the Privacy Policy.</p><h4>Conduct</h4><p>I will represent DecoMuse professionally, care for client homes and property, and follow reasonable health & safety directions.</p><h4>Property</h4><p>Inventory, tools and materials remain DecoMuse property and will be returned on request.</p>"
+      terms: "<h4>Confidentiality</h4><p>I will keep confidential all client details, business information, supplier terms, pricing and any personal data I access, during and after my engagement with Samira Home Decor.</p><h4>Client privacy</h4><p>I will handle client information respectfully and only use it for Samira Home Decor work, in line with the Privacy Policy.</p><h4>Conduct</h4><p>I will represent Samira Home Decor professionally, care for client homes and property, and follow reasonable health & safety directions.</p><h4>Property</h4><p>Inventory, tools and materials remain Samira Home Decor property and will be returned on request.</p>"
     },
     "contractor-agreement": {
       title: "Contractor / Stylist Engagement Agreement", cat: "employee",
-      intro: "For stylists & contractors engaged by DecoMuse.",
+      intro: "For stylists & contractors engaged by Samira Home Decor.",
       fields: [
         NAME, EMAIL, PHONE, { name: "ABN", label: "ABN", half: true },
         { name: "Services provided", label: "Services you provide", type: "textarea" },
         { name: "Rate", label: "Agreed rate", half: true }, { name: "Start date", label: "Start date", type: "date", half: true },
         { consent: "I have read and agree to the contractor engagement terms below.", name: "Agrees to contractor terms", required: true }
       ],
-      terms: "<h4>Engagement</h4><p>You are engaged as an independent contractor and are responsible for your own tax, superannuation and insurances.</p><h4>Services & rate</h4><p>You will provide the agreed services at the agreed rate, invoiced per completed job unless otherwise agreed.</p><h4>Confidentiality</h4><p>You will keep client and business information confidential during and after engagement.</p><h4>Care & conduct</h4><p>You will care for client homes and DecoMuse inventory and represent the brand professionally.</p>"
+      terms: "<h4>Engagement</h4><p>You are engaged as an independent contractor and are responsible for your own tax, superannuation and insurances.</p><h4>Services & rate</h4><p>You will provide the agreed services at the agreed rate, invoiced per completed job unless otherwise agreed.</p><h4>Confidentiality</h4><p>You will keep client and business information confidential during and after engagement.</p><h4>Care & conduct</h4><p>You will care for client homes and Samira Home Decor inventory and represent the brand professionally.</p>"
     },
     "employee-bank-super": {
       title: "Employee Bank & Superannuation Details", cat: "employee",
@@ -340,7 +340,7 @@
         { sec: "Tax & super" },
         { name: "Tax File Number", label: "Tax File Number", half: true }, { name: "Super fund", label: "Superannuation fund", half: true },
         { name: "Super member number", label: "Super member number", half: true }, { name: "Super USI", label: "Fund USI (if known)", half: true },
-        { consent: "These details are correct and I authorise DecoMuse to use them for payroll & superannuation.", name: "Authorises payroll details", required: true }
+        { consent: "These details are correct and I authorise Samira Home Decor to use them for payroll & superannuation.", name: "Authorises payroll details", required: true }
       ]
     },
     "policy-handbook-ack": {
@@ -348,9 +348,9 @@
       intro: "Please confirm you've read and understood our workplace policies.",
       fields: [
         NAME, EMAIL, { name: "Position", label: "Position / role", half: true }, { name: "Date", label: "Date", type: "date", half: true },
-        { consent: "I have read, understood and agree to abide by the DecoMuse policies summarised below.", name: "Acknowledges policies", required: true }
+        { consent: "I have read, understood and agree to abide by the Samira Home Decor policies summarised below.", name: "Acknowledges policies", required: true }
       ],
-      terms: "<h4>Code of conduct</h4><p>Act professionally, honestly and respectfully toward clients, colleagues and suppliers.</p><h4>Work health & safety</h4><p>Follow safe work practices, report hazards &amp; incidents, and take care in client homes and the warehouse.</p><h4>Privacy &amp; confidentiality</h4><p>Protect client and business information and only use it for DecoMuse work.</p><h4>Equal opportunity</h4><p>DecoMuse is committed to a workplace free from discrimination, bullying and harassment.</p><h4>Social media &amp; brand</h4><p>Represent DecoMuse positively and never share confidential or client information online.</p><h4>Attendance</h4><p>Be reliable and communicate promptly about availability, delays or absences.</p>"
+      terms: "<h4>Code of conduct</h4><p>Act professionally, honestly and respectfully toward clients, colleagues and suppliers.</p><h4>Work health & safety</h4><p>Follow safe work practices, report hazards &amp; incidents, and take care in client homes and the warehouse.</p><h4>Privacy &amp; confidentiality</h4><p>Protect client and business information and only use it for Samira Home Decor work.</p><h4>Equal opportunity</h4><p>Samira Home Decor is committed to a workplace free from discrimination, bullying and harassment.</p><h4>Social media &amp; brand</h4><p>Represent Samira Home Decor positively and never share confidential or client information online.</p><h4>Attendance</h4><p>Be reliable and communicate promptly about availability, delays or absences.</p>"
     }
   };
 

@@ -1,7 +1,7 @@
 /* ============================================================
-   DecoMuse — Gift card ledger (shared by the functions)
+   Samira Home Decor — Gift card ledger (shared by the functions)
    ------------------------------------------------------------
-   A gift card is only worth money if DecoMuse issued it. Until
+   A gift card is only worth money if Samira Home Decor issued it. Until
    now cards were minted in the shopper's own browser, so anyone
    could grant themselves credit and check out for nothing.
 
@@ -12,7 +12,7 @@
 
    Cards are only ever created server-side:
      • stripe-webhook.js  — when a gift card is actually PAID for
-     • issue-gift-card.js — by DecoMuse, for approved returns credit
+     • issue-gift-card.js — by Samira Home Decor, for approved returns credit
 
    Required: STRIPE_SECRET_KEY
    ============================================================ */
@@ -72,7 +72,7 @@ async function issueGiftCard({ code, amount, source, note }) {
 
   const p = await stripe().products.create({
     id: productId(c),
-    name: `DecoMuse Gift Card ${c}`,
+    name: `Samira Home Decor Gift Card ${c}`,
     active: false,                                    // ledger record, not a sellable product
     metadata: {
       kind: "gift_card",

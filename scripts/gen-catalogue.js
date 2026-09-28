@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   DecoMuse — generate the trusted server-side price catalogue
+   Samira Home Decor — generate the trusted server-side price catalogue
    ------------------------------------------------------------
    js/data.js is the single source of truth for products, but it
    ships to the browser, where a shopper can edit it. The Stripe

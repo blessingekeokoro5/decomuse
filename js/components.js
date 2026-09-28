@@ -34,7 +34,7 @@
   ensureMeta("name", "mobile-web-app-capable", "yes");
   ensureMeta("name", "apple-mobile-web-app-capable", "yes");
   ensureMeta("name", "apple-mobile-web-app-status-bar-style", "default");
-  ensureMeta("name", "apple-mobile-web-app-title", "DecoMuse");
+  ensureMeta("name", "apple-mobile-web-app-title", "Samira Home Decor");
 })();
 
 /* ---- OneSignal Web Push (promo notifications) ---- */
@@ -217,7 +217,7 @@ function buildHeader() {
             </div>
           </div>
           <div class="mega-promo">
-            <div class="ph" data-label="DecoMuse services"><img class="ph-img" src="assets/services/interior-design-feature.jpg" alt="DecoMuse styling services" loading="lazy" onerror="this.remove()"></div>
+            <div class="ph" data-label="Samira Home Decor services"><img class="ph-img" src="assets/services/interior-design-feature.jpg" alt="Samira Home Decor styling services" loading="lazy" onerror="this.remove()"></div>
             <div class="mega-promo-actions">
               <a href="#" onclick="if(typeof openEnquire==='function'){openEnquire();return false;}">Request a quote</a>
               <a href="portfolio.html">Portfolio</a>
@@ -298,8 +298,8 @@ function buildHeader() {
   <header class="site-header">
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
-      <a class="brand" href="index.html" aria-label="DecoMuse home">
-        <img class="brand-logo-full" src="assets/logo.jpg" data-i="0" alt="DecoMuse — Home Décor Store" onerror="nextLogo(this)">
+      <a class="brand" href="index.html" aria-label="Samira Home Decor home">
+        <img class="brand-logo-full" src="assets/logo.jpg" data-i="0" alt="Samira Home Decor — Home Décor Store" onerror="nextLogo(this)">
         <span class="brand-mark">
           <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <!-- outer arch -->
@@ -343,7 +343,7 @@ function buildHeader() {
           <div class="account-dropdown">
             <div class="ad-head">
               <span class="ad-avatar">${IC.user}</span>
-              <div class="ad-hi"><strong>Hi there</strong><small>Sign in &amp; discover DecoMuse</small></div>
+              <div class="ad-hi"><strong>Hi there</strong><small>Sign in &amp; discover Samira Home Decor</small></div>
             </div>
             <div class="ad-auth">
               <a class="btn btn--primary btn--sm btn--block" href="account.html">Log in</a>
@@ -437,7 +437,7 @@ function buildFooter() {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="fb-name">DecoMuse</div>
+          <div class="fb-name">Samira Home Decor</div>
           <div class="fb-tag">${DECOMUSE.tagline}</div>
           <p>Objects worth living with. Australia's curated home, lifestyle &amp; fragrance store, décor, fragrance, wellness, everyday essentials &amp; beautiful gifting.</p>
           <div class="fc-row" style="color:#ddccc2;margin-top:14px"><span class="fc-ic">${DECOMUSE.flag}</span> <strong>${DECOMUSE.location}</strong></div>
@@ -449,7 +449,7 @@ function buildFooter() {
           </div>
         </div>
 
-        ${col("DecoMuse", decomuseLinks)}
+        ${col("Samira Home Decor", decomuseLinks)}
         ${col("Information of interest", infoLinks)}
         ${col("Our policies", policyLinks)}
         ${col("Shop & occasions", occasionLinks)}
@@ -466,12 +466,12 @@ function buildFooter() {
       <div class="app-soon">
         <div class="app-soon-copy">
           <span class="app-badge">📱 Coming soon</span>
-          <h4>The DecoMuse app is on its way</h4>
+          <h4>The Samira Home Decor app is on its way</h4>
           <p>Shop, style and get inspired on the go. Got an idea or a feature you'd love? Tell us, we're building it for you.</p>
         </div>
-        <form class="app-soon-form" data-demo-form data-subject="DecoMuse App — suggestion" data-success-msg="Thank you! Your app suggestion has been sent, we really appreciate it. 💛">
+        <form class="app-soon-form" data-demo-form data-subject="Samira Home Decor App — suggestion" data-success-msg="Thank you! Your app suggestion has been sent, we really appreciate it. 💛">
           <input type="email" placeholder="Your email (optional)" aria-label="Email">
-          <textarea placeholder="Your suggestion for the DecoMuse app…" aria-label="App suggestion" required></textarea>
+          <textarea placeholder="Your suggestion for the Samira Home Decor app…" aria-label="App suggestion" required></textarea>
           <button type="submit" class="btn btn--primary">Send suggestion</button>
           <div class="form-success"></div>
         </form>
@@ -494,7 +494,7 @@ function buildFooter() {
       </div>
 
       <div class="footer-bottom">
-        <span>© ${DECOMUSE.est} DecoMuse. All rights reserved · Proudly Australian ${DECOMUSE.flag}</span>
+        <span>© ${DECOMUSE.est} Samira Home Decor. All rights reserved · Proudly Australian ${DECOMUSE.flag}</span>
         <span class="footer-bottom-links">
           <a href="policy.html?doc=delivery">Delivery &amp; Shipping</a> ·
           <a href="policy.html?doc=returns">Returns</a> ·
@@ -661,7 +661,7 @@ function maybeNotifyLive(f) {
   if (!want || done) return;
   if (window.Notification && Notification.permission === "granted") {
     try {
-      new Notification("DecoMuse Flash Sale is live! ⚡", { body: `${f.percent}% off everything for the next 3 hours. Shop now!` });
+      new Notification("Samira Home Decor Flash Sale is live! ⚡", { body: `${f.percent}% off everything for the next 3 hours. Shop now!` });
       localStorage.setItem("dm_flash_notified_" + f.endsAt, "1");
     } catch (e) {}
   }
@@ -707,7 +707,7 @@ function initEnquire() {
     const btn = form.querySelector('button[type="submit"]');
     const data = (typeof collectForm === "function") ? collectForm(form) : [];
     if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
-    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Services enquiry"); } catch (err) {}
+    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Services enquiry"); } catch (err) {}
     const s = document.getElementById("enquireSuccess");
     if (s) { s.classList.add("show"); s.textContent = "Thank you! Your enquiry has been sent — we'll be in touch shortly."; }
     form.reset();
@@ -755,7 +755,7 @@ function buildCookieBar() {
   <div class="cookie-modal" id="cookieBar" role="dialog" aria-label="Cookie settings">
     <div class="cookie-card">
       <h3>Cookie settings</h3>
-      <p>At DecoMuse we use cookies to keep your cart and preferences, improve your browsing and show you more relevant products. You can accept all, or keep only what's essential. Read our <a href="policy.html?doc=privacy">Privacy &amp; Cookie Policy</a>.</p>
+      <p>At Samira Home Decor we use cookies to keep your cart and preferences, improve your browsing and show you more relevant products. You can accept all, or keep only what's essential. Read our <a href="policy.html?doc=privacy">Privacy &amp; Cookie Policy</a>.</p>
 
       <div class="cookie-row">
         <div>
@@ -835,7 +835,7 @@ function buildCountryModal() {
     <div class="country-card" role="dialog" aria-label="Confirm your country">
       <button class="country-close" id="countryClose" aria-label="Close">✕</button>
       <h3>Confirm your country</h3>
-      <p>You're shopping the <strong>DecoMuse Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to selected regions — Australia, New Zealand, Nigeria, the UK, USA &amp; Canada — confirm your region for delivery &amp; pricing info.</p>
+      <p>You're shopping the <strong>Samira Home Decor Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to selected regions — Australia, New Zealand, Nigeria, the UK, USA &amp; Canada — confirm your region for delivery &amp; pricing info.</p>
       <div class="country-detected" id="countryDetected"></div>
       <label class="country-select-label">Shopping from another country?
         <select id="countrySelect">${options}</select>
@@ -1063,7 +1063,7 @@ function buildMemberModal() {
   return `
   <div class="member-modal" id="memberModal" aria-hidden="true">
     <div class="member-overlay" id="memberOverlay"></div>
-    <div class="member-card member-card--rewards" role="dialog" aria-label="DecoMuse Rewards">
+    <div class="member-card member-card--rewards" role="dialog" aria-label="Samira Home Decor Rewards">
       <button class="member-close" id="memberClose" aria-label="Close">✕</button>
       <div class="rw-head">
         <span class="rw-brand">DECOMUSE <strong>REWARDS</strong></span>
@@ -1134,7 +1134,7 @@ function initMemberModal() {
       });
     }
     closeMemberModal();
-    showToast("Welcome to DecoMuse! Your 20% code WELCOME20 is ready 🎉");
+    showToast("Welcome to Samira Home Decor! Your 20% code WELCOME20 is ready 🎉");
   });
 
   // Auto-show once per session on visit (unless already a member or dismissed)
@@ -1164,7 +1164,7 @@ const CHAT_QUICK = [
 ];
 
 /* ---- Help desk (self-service home → FAQs, tracking, returns, message us) ---- */
-const SUPPORT_ISSUES = ["Order", "Change or cancel an order", "Shipping", "Returns", "Faulty or damaged item", "DecoMuse Account", "Product", "Online Offers", "Gift Cards & Vouchers", "General"];
+const SUPPORT_ISSUES = ["Order", "Change or cancel an order", "Shipping", "Returns", "Faulty or damaged item", "Samira Home Decor Account", "Product", "Online Offers", "Gift Cards & Vouchers", "General"];
 
 // FAQ_ITEMS lives in policies.js (not loaded on every page), so fetch it on first use
 function dmLoadFaqs(cb) {
@@ -1281,7 +1281,7 @@ function dmSelectIssue(issue) {
       ["Message", document.getElementById("supMsg").value]
     ].filter(d => d[1]);
     btn.disabled = true; btn.textContent = "Sending…";
-    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Support: " + issue); } catch (err) {}
+    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Support: " + issue); } catch (err) {}
     const ok = document.getElementById("supSuccess");
     if (ok) { ok.classList.add("show"); ok.innerHTML = "Thank you! Your message has been sent — our team will get back to you shortly. 💬"; }
     f.reset(); btn.disabled = false; btn.textContent = "Send message";
@@ -1290,7 +1290,7 @@ function dmSelectIssue(issue) {
 
 // Pre-filled WhatsApp handoff to a real team member
 const WA_HANDOFF = (DECOMUSE.socials.whatsapp || "https://wa.me/61451609398") +
-  "?text=" + encodeURIComponent("Hi DecoMuse 🙂 I'd like to chat with a team member about ");
+  "?text=" + encodeURIComponent("Hi Samira Home Decor 🙂 I'd like to chat with a team member about ");
 function waButton(label) {
   return `<a class="chat-wa" href="${WA_HANDOFF}" target="_blank" rel="noopener">${IC.wa} ${label || "Chat with a human on WhatsApp"}</a>`;
 }
@@ -1306,7 +1306,7 @@ function chatReply(text) {
     html = `Hi, lovely to meet you! 👋 I'm MuseStylist, your personal shopping assistant. I can help you find a home fragrance, styling piece or gift, build a gift hamper, or track an order. What are you after today?`;
 
   else if (has(/\b(human|real person|agent|team member|speak to someone|talk to someone|representative|customer service)\b/))
-    html = `Of course, I'll connect you with a real DecoMuse team member. Reach us straight away on WhatsApp, or email ${DECOMUSE.email}.<br>${waButton()}`;
+    html = `Of course, I'll connect you with a real Samira Home Decor team member. Reach us straight away on WhatsApp, or email ${DECOMUSE.email}.<br>${waButton()}`;
 
   else if (has(/\b(fragrance|scent|diffuser|candle|room spray|essential oil)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Home Fragrances")} edit (in Lifestyle) has reed diffusers, scented candles, room sprays and essential oils 🌸, everything to layer your home with scent.`;
@@ -1416,7 +1416,7 @@ function chatFeedback(id, good) {
   if (good) {
     chatAppend("bot", `Wonderful, so glad that helped! 😊 Anything else I can find or style for you?`);
   } else {
-    chatAppend("bot", `Thanks for the honesty, I'd like to get you a better answer. Try rephrasing, or I can connect you with a real DecoMuse team member right now:<br>${waButton()}`);
+    chatAppend("bot", `Thanks for the honesty, I'd like to get you a better answer. Try rephrasing, or I can connect you with a real Samira Home Decor team member right now:<br>${waButton()}`);
   }
   maybeAskRating();
 }

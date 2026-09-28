@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — Issue a gift card  (Netlify Function, staff only)
+   Samira Home Decor — Issue a gift card  (Netlify Function, staff only)
    ------------------------------------------------------------
    The only way to create store credit that actually spends. Used
    for approved returns credit, goodwill, and competition prizes.

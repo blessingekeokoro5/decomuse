@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin — DecoMuse</title>
+  <title>Admin — Samira Home Decor</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=16">
+  <link rel="stylesheet" href="css/styles.css?v=17">
   <style>
     .admin-lock { width: 74px; height: 74px; margin: 0 auto 14px; border-radius: 50%; display: grid; place-items: center;
       font-size: 2rem; background: linear-gradient(150deg, var(--forest), var(--forest-2)); color: #f2e2bd; }
@@ -49,8 +49,8 @@
       <div class="form-card" style="text-align:center">
         <div class="admin-lock">🔒</div>
         <span class="eyebrow">Admin access only</span>
-        <h1 style="font-size:1.6rem;margin:6px 0 8px">DecoMuse Admin</h1>
-        <p style="color:var(--muted)">Sorry, this area is for <strong>DecoMuse admin use only</strong>. Please sign in to continue.</p>
+        <h1 style="font-size:1.6rem;margin:6px 0 8px">Samira Home Decor Admin</h1>
+        <p style="color:var(--muted)">Sorry, this area is for <strong>Samira Home Decor admin use only</strong>. Please sign in to continue.</p>
         <form id="adminLoginForm" style="margin-top:8px">
           <div class="field"><label>Admin password</label><input id="adminPw" type="password" autocomplete="current-password" required></div>
           <button class="btn btn--primary btn--block" type="submit">Sign in</button>
@@ -65,7 +65,7 @@
   <section class="section" id="adminPanel" style="display:none">
     <div class="container">
       <div class="admin-head">
-        <div><span class="eyebrow">DecoMuse admin</span><h1 style="margin:2px 0 0">Dashboard</h1></div>
+        <div><span class="eyebrow">Samira Home Decor admin</span><h1 style="margin:2px 0 0">Dashboard</h1></div>
         <button class="btn btn--outline btn--sm" onclick="adminLogout()">Log out</button>
       </div>
 
@@ -140,7 +140,7 @@
 
   <div id="site-footer"></div>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=16"></script>
+  <script src="js/components.js?v=17"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script src="js/forms.js"></script>
@@ -209,10 +209,10 @@
       btn.disabled = false; btn.textContent = bl;
       if (sent) { out.style.color = "var(--forest)"; out.innerHTML = "✓ Sent to " + email + " (copy in your inbox)."; }
       else {
-        var body = "Hi " + (name || "") + ",%0D%0A%0D%0A" + (msg ? encodeURIComponent(msg) + "%0D%0A%0D%0A" : "") + "Please complete your DecoMuse form(s):%0D%0A%0D%0A" + list.map(function (f) { return f.title + ": " + f.url; }).join("%0D%0A") + "%0D%0A%0D%0AWarm regards,%0D%0ADecoMuse";
+        var body = "Hi " + (name || "") + ",%0D%0A%0D%0A" + (msg ? encodeURIComponent(msg) + "%0D%0A%0D%0A" : "") + "Please complete your Samira Home Decor form(s):%0D%0A%0D%0A" + list.map(function (f) { return f.title + ": " + f.url; }).join("%0D%0A") + "%0D%0A%0D%0AWarm regards,%0D%0ASamira Home Decor";
         out.style.color = "var(--muted)";
         out.innerHTML = "Email service isn't enabled yet — opening your email app to send manually…";
-        location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Your DecoMuse forms") + "&body=" + body;
+        location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Your Samira Home Decor forms") + "&body=" + body;
       }
     }
     function adminLogout() { try { sessionStorage.removeItem("dm_admin_ok"); } catch (e) {} location.reload(); }
@@ -303,7 +303,7 @@
           incoming.forEach(r => { if (!ids.has(r.id)) db.push(r); });
           db.sort((a, b) => new Date(b.date) - new Date(a.date));
           dmSetDB(db); renderDB(); alert("Imported " + incoming.length + " record(s).");
-        } catch (er) { alert("That file wasn't a valid DecoMuse export."); }
+        } catch (er) { alert("That file wasn't a valid Samira Home Decor export."); }
       };
       reader.readAsText(file); input.value = "";
     }

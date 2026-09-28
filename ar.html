@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <title>See it in your room, DecoMuse</title>
-  <meta name="description" content="Preview this DecoMuse piece in your own room.">
+  <title>See it in your room, Samira Home Decor</title>
+  <meta name="description" content="Preview this Samira Home Decor piece in your own room.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=16">
+  <link rel="stylesheet" href="css/styles.css?v=17">
   <style>
     body { margin: 0; background: #fff; color: var(--ink); font-family: var(--font-body); min-height: 100vh; display: flex; flex-direction: column; }
     .ar-topbar { padding: 18px 20px; }
@@ -55,7 +55,7 @@
         root.innerHTML = `<div class="ar-empty"><h2>Piece not found</h2><p>This item may have moved. <a href="shop.html">Browse the shop →</a></p></div>`;
         return;
       }
-      document.title = "See " + p.name + " in your room, DecoMuse";
+      document.title = "See " + p.name + " in your room, Samira Home Decor";
       document.getElementById("arBack").setAttribute("href", "product.html?id=" + p.id);
       const photo = (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg");
 

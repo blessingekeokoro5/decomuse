@@ -314,7 +314,7 @@ async function startPayment(e) {
       ["Items", cart.map((i) => `${i.qty}× ${i.name}`).join("; ")]
     ];
     btn.disabled = true; btn.textContent = "Sending request…";
-    try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Lay-by request"); } catch (err) {}
+    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Lay-by request"); } catch (err) {}
     showToast("Lay-by request sent ✦");
     document.getElementById("checkoutWrap").innerHTML =
       `<div class="empty-state" style="max-width:560px;margin:0 auto"><div class="em">🗓️</div><h2>Lay-by request received</h2>
@@ -326,7 +326,7 @@ async function startPayment(e) {
 
   // NOTE: an order paid entirely by gift card is NOT completed here any more.
   // The card is checked against the shop's ledger by the same server call that
-  // handles payment, so credit that DecoMuse never issued can't buy anything.
+  // handles payment, so credit that Samira Home Decor never issued can't buy anything.
 
   const customer = {
     email: document.getElementById("coEmail").value,

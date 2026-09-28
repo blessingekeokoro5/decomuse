@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — Create Stripe Checkout Session  (Netlify Function)
+   Samira Home Decor — Create Stripe Checkout Session  (Netlify Function)
    ------------------------------------------------------------
    Runs on the SERVER only. Uses your Stripe SECRET key, which
    must NEVER be exposed to the browser.
@@ -106,7 +106,7 @@ function resolveLine(raw) {
     if (!isFinite(amount) || amount < GIFT_CARD_MIN || amount > GIFT_CARD_MAX) {
       throw new Error(`Gift card amount must be between $${GIFT_CARD_MIN} and $${GIFT_CARD_MAX}.`);
     }
-    return { name: `DecoMuse Gift Card ($${amount})`, sku: gc.code || "", unitPrice: amount, qty, weight: 0 };
+    return { name: `Samira Home Decor Gift Card ($${amount})`, sku: gc.code || "", unitPrice: amount, qty, weight: 0 };
   }
 
   // --- Custom hampers: rebuilt from the chosen components ---
@@ -211,14 +211,14 @@ exports.handler = async (event) => {
     const ship = shippingFor(String(customer.country || "Australia"), String(fulfil), lines, afterDiscount);
 
     // 5. Gift card — verified against the ledger, never taken on trust.
-    //    A card only reduces the bill if DecoMuse actually issued it and it
+    //    A card only reduces the bill if Samira Home Decor actually issued it and it
     //    still holds enough balance to cover the whole order. (Part-payment
     //    by gift card isn't offered online, same as before.)
     const orderTotal = round2(afterDiscount + ship.amount);
     const giftCode = normaliseCode(body.giftCode);
 
     if (body.giftCode && !giftCode) {
-      return jsonResponse(400, { error: "That doesn't look like a DecoMuse gift card code." });
+      return jsonResponse(400, { error: "That doesn't look like a Samira Home Decor gift card code." });
     }
 
     if (giftCode) {
@@ -238,7 +238,7 @@ exports.handler = async (event) => {
       const orderNo = "DM-" + Math.floor(100000 + Math.random() * 899999);
 
       await emailShop(
-        `DecoMuse — new order ${orderNo} paid by gift card ($${orderTotal.toFixed(2)})`,
+        `Samira Home Decor — new order ${orderNo} paid by gift card ($${orderTotal.toFixed(2)})`,
         `Order: ${orderNo}\n` +
         `Paid with gift card: ${giftCode}  (issued ${card.issued || "unknown"}, source: ${card.source || "unknown"})\n` +
         `Order total: $${orderTotal.toFixed(2)}\n` +

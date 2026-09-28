@@ -41,17 +41,17 @@ const FAQ_ITEMS = [
     a: "Yes! Many pieces can be customised, personalised or made to order, for example custom hampers, monogrammed or engraved gifts, and bespoke colour or size options. Just add a note with your order or contact us with what you'd like. Please note that customised and made-to-order items take a few extra days to prepare, so they take a little longer to be delivered than a standard order." },
   { q: "How long do customised orders take to be delivered?",
     a: "Standard orders are dispatched within 1 to 2 business days. Customised, personalised and made-to-order items take a few additional days to create before they ship, so your total delivery time will be a little longer. We'll always confirm an estimated timeframe once we accept your custom order." },
-  { q: "How can I contact DecoMuse?",
+  { q: "How can I contact Samira Home Decor?",
     a: "Email <a href='mailto:Decormuseofficial@outlook.com'>Decormuseofficial@outlook.com</a>, or message us on WhatsApp. We're a proudly Australian online store 🇦🇺." }
 ];
 
 const POLICIES = {
   delivery: {
     title: "Delivery, Shipping & Order Tracking Policy",
-    intro: "This policy explains how we ship, fulfil, deliver and track DecoMuse orders. It should be read together with our Terms & Conditions and Returns & Refund Policy.",
+    intro: "This policy explains how we ship, fulfil, deliver and track Samira Home Decor orders. It should be read together with our Terms & Conditions and Returns & Refund Policy.",
     body: `
       <h3>1. Dispatch &amp; processing</h3>
-      <p>All DecoMuse home-décor products are shipped from our <strong>Melbourne warehouse</strong>. Orders are generally processed and dispatched within <strong>1 to 2 business days</strong> of payment being received and cleared. During sale periods and holidays, processing may take a little longer.</p>
+      <p>All Samira Home Decor home-décor products are shipped from our <strong>Melbourne warehouse</strong>. Orders are generally processed and dispatched within <strong>1 to 2 business days</strong> of payment being received and cleared. During sale periods and holidays, processing may take a little longer.</p>
 
       <h3>2. Shipping &amp; fulfilment</h3>
       <p>Once your order is placed, our team picks, packs and fulfils it from our Melbourne warehouse with care. Our shipping &amp; fulfilment standards:</p>
@@ -92,7 +92,7 @@ const POLICIES = {
 
   returns: {
     title: "Returns & Refund Policy",
-    intro: "DecoMuse is committed to your satisfaction and to meeting our obligations under the Australian Consumer Law (ACL).",
+    intro: "Samira Home Decor is committed to your satisfaction and to meeting our obligations under the Australian Consumer Law (ACL).",
     body: `
       <h3>1. Your rights under the Australian Consumer Law</h3>
       <p>Our goods and services come with guarantees that cannot be excluded under the Australian Consumer Law. For a <strong>major failure</strong> you are entitled to a replacement or refund, and to compensation for any other reasonably foreseeable loss or damage. For a failure that does not amount to a major failure, you are entitled to have the goods repaired or replaced if the failure can be remedied. These rights are in addition to any change-of-mind policy below.</p>
@@ -134,7 +134,7 @@ const POLICIES = {
 
   privacy: {
     title: "Privacy Policy",
-    intro: "DecoMuse respects your privacy and is committed to protecting your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).",
+    intro: "Samira Home Decor respects your privacy and is committed to protecting your personal information in accordance with the Privacy Act 1988 (Cth) and the Australian Privacy Principles (APPs).",
     body: `
       <h3>1. Information we collect</h3>
       <p>We may collect personal information including your name, delivery and billing address, email, phone number, order details and, where relevant, information you provide when booking a service, applying for a role, or contacting us. We do not store full card numbers, payments are handled by secure third-party processors.</p>
@@ -173,10 +173,10 @@ const POLICIES = {
 
   terms: {
     title: "Terms & Conditions",
-    intro: "These Terms & Conditions govern your use of the DecoMuse website and your purchase of our products and services. By using our site or placing an order, you agree to these terms.",
+    intro: "These Terms & Conditions govern your use of the Samira Home Decor website and your purchase of our products and services. By using our site or placing an order, you agree to these terms.",
     body: `
       <h3>1. About us</h3>
-      <p>This website is operated by DecoMuse, an Australian home, lifestyle and fragrance business.</p>
+      <p>This website is operated by Samira Home Decor, an Australian home, lifestyle and fragrance business.</p>
 
       <h3>2. Pricing &amp; GST</h3>
       <p>All prices are in Australian Dollars (AUD) and include GST where applicable, unless stated otherwise. We may update prices, products and promotions at any time. Sale discounts (such as Spend &amp; Save) apply per their stated terms.</p>
@@ -194,7 +194,7 @@ const POLICIES = {
       <p>Our site may link to third-party sites and services (for example payment providers, delivery partners and social media). We are not responsible for the content or practices of third-party websites.</p>
 
       <h3>7. Intellectual property</h3>
-      <p>All content on this website, including text, imagery, branding and design, is owned by or licensed to DecoMuse and may not be used without our written permission.</p>
+      <p>All content on this website, including text, imagery, branding and design, is owned by or licensed to Samira Home Decor and may not be used without our written permission.</p>
 
       <h3>8. Consumer guarantees &amp; liability</h3>
       <p>Nothing in these terms excludes, restricts or modifies any consumer guarantee, right or remedy you have under the Australian Consumer Law. To the extent permitted by law, our liability for a failure to comply with a consumer guarantee is limited to re-supplying, replacing or repairing the goods or services, or paying the cost of doing so.</p>

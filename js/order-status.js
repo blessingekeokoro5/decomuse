@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — Live order tracker (picking + shipping history)
+   Samira Home Decor — Live order tracker (picking + shipping history)
    ------------------------------------------------------------
    renderOrderStatus(order, el) draws:
      • an Estimated-arrival banner

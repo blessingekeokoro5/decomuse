@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Account, DecoMuse</title>
-  <meta name="description" content="Log in or sign up to your DecoMuse account, manage your membership, view your 20% welcome coupon and saved favourites.">
+  <title>My Account, Samira Home Decor</title>
+  <meta name="description" content="Log in or sign up to your Samira Home Decor account, manage your membership, view your 20% welcome coupon and saved favourites.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=16">
+  <link rel="stylesheet" href="css/styles.css?v=17">
   <style>
     .acc-tabs { display: flex; gap: 8px; margin-bottom: 22px; }
     .acc-tabs button { flex: 1; padding: 12px; border: 1.5px solid var(--line); background: #fff; border-radius: var(--radius-sm);
@@ -35,13 +35,13 @@
     .auth-legal { font-size: 0.78rem; color: var(--muted); line-height: 1.6; margin-top: 16px; text-align: center; }
     .auth-legal a { color: var(--rose-deep); text-decoration: underline; }
     .forgot-link { display: block; text-align: right; font-size: 0.85rem; color: var(--rose-deep); margin: -6px 0 14px; }
-    /* Membership card — matches the gift-card shape/style, in DecoMuse green */
+    /* Membership card — matches the gift-card shape/style, in Samira Home Decor green */
     .mcard { position: relative; overflow: hidden; color: #fff; border-radius: 22px; aspect-ratio: 1.62/1;
       padding: 26px 30px; display: flex; flex-direction: column; justify-content: space-between;
       background:
         radial-gradient(120% 130% at 15% 10%, rgba(255,255,255,0.18), rgba(255,255,255,0) 45%),
-        linear-gradient(140deg, #5c6b4b 0%, var(--forest) 55%, #333f29 100%);
-      box-shadow: 0 24px 50px -22px rgba(40,54,32,0.7), inset 0 0 0 1px rgba(198,161,91,0.45); }
+        linear-gradient(140deg, #16304f 0%, var(--forest) 55%, #061525 100%);
+      box-shadow: 0 24px 50px -22px rgba(11,31,58,0.7), inset 0 0 0 1px rgba(198,161,91,0.45); }
     .mcard::before { content: ""; position: absolute; inset: 0; pointer-events: none;
       background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1.5px); background-size: 15px 15px; opacity: 0.5; }
     .mcard::after { content: ""; position: absolute; top: -60%; left: -25%; width: 55%; height: 220%; pointer-events: none;
@@ -51,7 +51,7 @@
     .coupon { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: rgba(255,255,255,0.12);
       border: 1px dashed rgba(255,255,255,0.5); border-radius: var(--radius-sm); padding: 16px 18px; margin-top: 24px; }
     .coupon .code { font-family: var(--font-head); font-size: 1.5rem; letter-spacing: 0.08em; color: #fff; }
-    .coupon small { display: block; color: #d7e0cd; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
+    .coupon small { display: block; color: #d9e2ef; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; }
     .acc-links { display: grid; grid-template-columns: repeat(auto-fit,minmax(150px,1fr)); gap: 12px; margin-top: 24px; }
     .acc-link { background: #fff; border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 18px; text-align: center; color: var(--ink); }
     .acc-link:hover { background: var(--cream-2); }
@@ -64,7 +64,7 @@
     .mc-name { font-family: var(--font-head); font-weight: 600; font-size: clamp(1.15rem, 4.4vw, 1.9rem); line-height: 1.1;
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 100%; }
     .mc-foot { display: flex; gap: 30px; align-items: flex-end; }
-    .mc-field small { display: block; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: #cbd6bd; margin-bottom: 3px; }
+    .mc-field small { display: block; font-size: 0.58rem; letter-spacing: 0.14em; text-transform: uppercase; color: #b9c4d4; margin-bottom: 3px; }
     .mc-field strong { font-size: 0.95rem; letter-spacing: 0.05em; font-family: 'Jost', monospace; font-weight: 500; }
     @media (max-width: 480px){ .mcard { padding: 20px 20px; } .mc-name { font-size: clamp(1.05rem, 6vw, 1.5rem); } .mc-foot { gap: 20px; } .mc-brand { font-size: 1.35rem; } }
     .reward { display: flex; align-items: center; justify-content: space-between; gap: 12px; background: var(--blush);
@@ -114,7 +114,7 @@
   <div id="site-footer"></div>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=16"></script>
+  <script src="js/components.js?v=17"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script src="js/order-status.js"></script>
@@ -197,7 +197,7 @@
 
     // ---- Continue with Google / Apple ----
     // Real SSO: set GOOGLE_CLIENT_ID (Google Cloud OAuth) to enable true Google Sign-In.
-    // Until then, these give a one-tap quick join into the DecoMuse membership.
+    // Until then, these give a one-tap quick join into the Samira Home Decor membership.
     const GOOGLE_CLIENT_ID = ""; // paste your OAuth Client ID here to enable real Google login
     function socialAuth(provider) {
       const label = provider === "google" ? "Google" : "Apple";
@@ -207,14 +207,14 @@
         return;
       }
       // Quick-join fallback (works today, no OAuth setup needed)
-      const email = prompt(`Continue with ${label}\n\nEnter your email to sign in or create your free DecoMuse account:`);
+      const email = prompt(`Continue with ${label}\n\nEnter your email to sign in or create your free Samira Home Decor account:`);
       if (!email || !/.+@.+\..+/.test(email)) { if (email) showToast("Please enter a valid email"); return; }
       const existing = getAccount();
       if (existing && existing.email) { existing.email = email; existing.provider = label; saveAccount(existing); showToast("Welcome back! 👋"); render(); return; }
       saveAccount({ name: "", email, provider: label, member: true, memberSince: todayAU(), coupon: "WELCOME20",
         memberNo: genMemberNo(), orders: [], points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
       try { localStorage.setItem("dm_member", "1"); } catch (err) {}
-      showToast(`Signed in with ${label} — welcome to DecoMuse! 🎉`);
+      showToast(`Signed in with ${label} — welcome to Samira Home Decor! 🎉`);
       render();
     }
     function onGoogleCredential(resp) {
@@ -237,7 +237,7 @@
       saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20", memberNo: genMemberNo(), orders: [],
         points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
       try { localStorage.setItem("dm_member","1"); } catch(err){}
-      showToast("Welcome to DecoMuse! Your 20% code is ready 🎉");
+      showToast("Welcome to Samira Home Decor! Your 20% code is ready 🎉");
       render();
       return false;
     }
@@ -271,7 +271,7 @@
       document.getElementById("accWrap").innerHTML = `
         <div class="mcard reveal" id="memberCard">
           <div class="mc-frame"></div>
-          <div class="mc-top"><span class="mc-brand">DecoMuse</span><span class="mc-emblem">✦</span></div>
+          <div class="mc-top"><span class="mc-brand">SYS</span><span class="mc-emblem">✦</span></div>
           <div class="mc-mid">
             <span class="mc-eyebrow">Member Card</span>
             <div class="mc-name">${acc.name || acc.email}</div>
@@ -294,7 +294,7 @@
           <button class="btn btn--dark btn--sm" onclick="copyCoupon()">Copy code</button>
         </div>
 
-        <h3 class="acc-h3">DecoMuse Rewards</h3>
+        <h3 class="acc-h3">Samira Home Decor Rewards</h3>
         ${rewardsHtml(acc)}
 
         <h3 class="acc-h3">Your orders &amp; receipts</h3>
@@ -319,7 +319,7 @@
       return n.slice(0, 4) + " " + n.slice(4, 7) + " " + n.slice(7);
     }
 
-    // ---- DecoMuse Rewards (points → vouchers) ----
+    // ---- Samira Home Decor Rewards (points → vouchers) ----
     const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     function genVoucherCode() { return "DM-V" + Math.floor(1000 + Math.random() * 9000) + "-" + Math.floor(1000 + Math.random() * 9000); }
     function rewardsHtml(acc) {
@@ -440,19 +440,19 @@
       const w = window.open("", "_blank", "width=460,height=680");
       w.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8"><title>Receipt ${o.orderNo}</title>
         <style>body{font-family:Georgia,serif;color:#2C2623;max-width:420px;margin:24px auto;padding:0 20px}
-        h1{font-size:1.5rem;color:#47563B;margin:0}.sub{color:#888;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
+        h1{font-size:1.5rem;color:#0B1F3A;margin:0}.sub{color:#888;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase}
         table{width:100%;border-collapse:collapse;margin:18px 0;font-size:.92rem}td{padding:7px 0;border-bottom:1px solid #eee}
         .tot td{border:0;font-weight:700;padding-top:12px}.meta{font-size:.85rem;color:#555;margin:10px 0}
-        .thanks{margin-top:24px;color:#B67280}button{margin-top:20px;padding:10px 18px;background:#47563B;color:#fff;border:0;border-radius:8px;cursor:pointer;font-family:inherit}
+        .thanks{margin-top:24px;color:#C6A15B}button{margin-top:20px;padding:10px 18px;background:#0B1F3A;color:#fff;border:0;border-radius:8px;cursor:pointer;font-family:inherit}
         @media print{button{display:none}}</style></head><body>
-        <h1>DecoMuse</h1><div class="sub">Purchase receipt</div>
+        <h1>Samira Home Decor</h1><div class="sub">Purchase receipt</div>
         <div class="meta"><strong>Order ${o.orderNo}</strong><br>${o.date || ""}<br>${acc.name || ""} · ${acc.email}<br>Member No. ${acc.memberNo || ""}</div>
         <table>${rows}
           ${o.shipping ? `<tr><td>Shipping</td><td style="text-align:right">${money(o.shipping)}</td></tr>` : `<tr><td>Shipping</td><td style="text-align:right">Free</td></tr>`}
           <tr class="tot"><td>Total (incl. GST)</td><td style="text-align:right">${money(o.total || 0)}</td></tr>
         </table>
         <div class="meta">ABN 41 991 812 955 · www.decomuse.com.au</div>
-        <div class="thanks">Thank you for shopping with DecoMuse ✦</div>
+        <div class="thanks">Thank you for shopping with Samira Home Decor ✦</div>
         <button onclick="window.print()">🖨 Print / Save as PDF</button>
         </body></html>`);
       w.document.close();
@@ -470,23 +470,23 @@
       c.width = W; c.height = H;
       const ctx = c.getContext("2d");
       const g = ctx.createLinearGradient(0, 0, W, H);
-      g.addColorStop(0, "#47563B"); g.addColorStop(1, "#333f29");
+      g.addColorStop(0, "#0B1F3A"); g.addColorStop(1, "#061525");
       ctx.fillStyle = g; roundRect(ctx, 0, 0, W, H, 42); ctx.fill();
       // decorative sparkle
       ctx.fillStyle = "rgba(255,255,255,0.08)"; ctx.font = "260px Georgia, serif";
       ctx.fillText("✦", 690, 330);
       // brand + tier
-      ctx.fillStyle = "#fff"; ctx.font = "600 58px Georgia, serif"; ctx.fillText("DecoMuse", 62, 118);
+      ctx.fillStyle = "#fff"; ctx.font = "600 58px Georgia, serif"; ctx.fillText("SYS", 62, 118);
       ctx.fillStyle = "rgba(255,255,255,0.72)"; ctx.font = "500 22px Arial"; ctx.textAlign = "left";
       ctx.fillText("M E M B E R   C A R D", 66, 156);
       // name
       ctx.fillStyle = "#fff"; ctx.font = "700 52px Georgia, serif";
       ctx.fillText((acc.name || acc.email).slice(0, 26), 62, 360);
       // member number
-      ctx.fillStyle = "#E9C6CF"; ctx.font = "500 20px Arial"; ctx.fillText("MEMBER NO.", 62, 420);
+      ctx.fillStyle = "#E0C992"; ctx.font = "500 20px Arial"; ctx.fillText("MEMBER NO.", 62, 420);
       ctx.fillStyle = "#fff"; ctx.font = "500 34px 'Courier New', monospace"; ctx.fillText(acc.memberNo || "", 62, 460);
       // since
-      ctx.fillStyle = "#E9C6CF"; ctx.font = "500 20px Arial"; ctx.fillText("MEMBER SINCE", 560, 420);
+      ctx.fillStyle = "#E0C992"; ctx.font = "500 20px Arial"; ctx.fillText("MEMBER SINCE", 560, 420);
       ctx.fillStyle = "#fff"; ctx.font = "500 30px Arial"; ctx.fillText(acc.memberSince || "today", 560, 458);
       // footer
       ctx.fillStyle = "rgba(215,224,205,0.9)"; ctx.font = "20px Arial";
@@ -494,7 +494,7 @@
       ctx.fillText((acc.email || "").slice(0, 46), 62, 598);
       const a = document.createElement("a");
       a.href = c.toDataURL("image/png");
-      a.download = "DecoMuse-Member-Card.png";
+      a.download = "Samira Home Decor-Member-Card.png";
       document.body.appendChild(a); a.click(); a.remove();
       showToast("Member card downloaded ⬇");
     }

@@ -234,7 +234,7 @@ function productCard(p) {
       <div class="card-media">
         <div class="card-badges"><span class="tag soon">Back Soon</span></div>
         <div class="ph cs-ph" data-label="${p.name}">
-          <img class="cs-logo" src="assets/logo.jpg" alt="DecoMuse" loading="lazy" onerror="this.style.display='none'">
+          <img class="cs-logo" src="assets/logo.jpg" alt="Samira Home Decor" loading="lazy" onerror="this.style.display='none'">
           <span class="cs-msg">Image Coming Soon</span>
         </div>
       </div>
@@ -253,9 +253,9 @@ function productCard(p) {
       <div class="card-media">
         <div class="card-badges">${hot}${tag}</div>
         <button class="wish ${isWishlisted(p.id) ? "on" : ""}" aria-label="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}</button>
-        <button class="find-sim" type="button" aria-label="Find similar products on DecoMuse" title="Find similar on DecoMuse" onclick="findSimilar('${p.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="11" cy="11" r="3"/><path d="m15 15 2.2 2.2"/></svg></button>
+        <button class="find-sim" type="button" aria-label="Find similar products on Samira Home Decor" title="Find similar on Samira Home Decor" onclick="findSimilar('${p.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="11" cy="11" r="3"/><path d="m15 15 2.2 2.2"/></svg></button>
         <a href="product.html?id=${p.id}" aria-label="${p.name}"><div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></a>
-        <span class="dm-verified" title="DecoMuse Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>D&amp;M Verified</span></span>
+        <span class="dm-verified" title="Samira Home Decor Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SYS Verified</span></span>
         <button class="zoom-btn" type="button" aria-label="Zoom image" onclick="openZoom(event, this)">${IC.search}</button>
       </div>
       <div class="card-body">
@@ -294,8 +294,8 @@ function bagMailtoFallback(cart) {
     const variant = [i.colour, i.size].filter(Boolean).join(", ");
     return `• ${i.qty} x ${i.name}${variant ? " (" + variant + ")" : ""} — ${money(i.price * i.qty)}\n  ${origin}/product.html?id=${i.id}`;
   }).join("\n\n");
-  const body = `Here's my DecoMuse shopping list 🛍️\n\n${lines}\n\nSubtotal: ${money(cartTotal())}\n\nShop the collection anytime: ${origin}/shop.html`;
-  window.location.href = "mailto:?subject=" + encodeURIComponent("My DecoMuse shopping list") + "&body=" + encodeURIComponent(body);
+  const body = `Here's my Samira Home Decor shopping list 🛍️\n\n${lines}\n\nSubtotal: ${money(cartTotal())}\n\nShop the collection anytime: ${origin}/shop.html`;
+  window.location.href = "mailto:?subject=" + encodeURIComponent("My Samira Home Decor shopping list") + "&body=" + encodeURIComponent(body);
 }
 
 async function emailMyBag() {

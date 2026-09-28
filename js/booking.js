@@ -19,7 +19,7 @@ function initBooking() {
   if (!host) return;
   const url = (typeof DECOMUSE !== "undefined" && DECOMUSE.bookingsUrl) || "";
   if (url) {
-    host.innerHTML = `<iframe src="${url}" class="bookings-embed" title="DecoMuse booking calendar" loading="lazy"></iframe>`;
+    host.innerHTML = `<iframe src="${url}" class="bookings-embed" title="Samira Home Decor booking calendar" loading="lazy"></iframe>`;
     return;
   }
   renderBooking(host);
@@ -164,7 +164,7 @@ async function submitBooking(e) {
   ].filter(d => d[1]);
 
   btn.disabled = true; btn.textContent = "Sending…";
-  try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Styling / Interior Design booking"); } catch (err) {}
+  try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Styling / Interior Design booking"); } catch (err) {}
 
   success.classList.add("show");
   success.innerHTML = `Thank you${name ? ", " + name.split(" ")[0] : ""}! Your <strong>${m.label}</strong> booking request for <strong>${document.getElementById("sumDate").textContent} at ${bkHour(parseInt(bk.slot))}</strong> has been sent. We'll confirm the details by email.`;

@@ -1,7 +1,7 @@
 /* ============================================================
-   DecoMuse — Send an invoice / filled form to a recipient (Brevo)
+   Samira Home Decor — Send an invoice / filled form to a recipient (Brevo)
    ------------------------------------------------------------
-   Emails a branded invoice (from DecoMuse Official, billed to the
+   Emails a branded invoice (from Samira Home Decor Official, billed to the
    customer) with a payment-status badge and a paid/unpaid reminder,
    with a copy to the business inbox for your records.
 
@@ -13,7 +13,7 @@
 
 const BREVO_API_KEY  = process.env.BREVO_API_KEY || "";
 const SENDER_EMAIL   = process.env.SENDER_EMAIL || "decormuseofficial@outlook.com";
-const SENDER_NAME    = process.env.SENDER_NAME || "DecoMuse";
+const SENDER_NAME    = process.env.SENDER_NAME || "Samira Home Decor";
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "decormuseofficial@outlook.com";
 const SITE_URL       = process.env.SITE_URL || "https://www.decomuse.com.au";
 const BIZ_PHONE      = process.env.BUSINESS_PHONE || "0451 609 398";
@@ -63,9 +63,9 @@ exports.handler = async (event) => {
     // Business "from" block + logo — reused by both layouts
     const fromBlock = `
       <table role="presentation" width="100%"><tr>
-        <td valign="top"><img src="${logo}" alt="DecoMuse" width="150" style="max-width:160px;height:auto"></td>
+        <td valign="top"><img src="${logo}" alt="Samira Home Decor" width="150" style="max-width:160px;height:auto"></td>
         <td valign="top" align="right" style="font-size:12px;color:#5a5049;line-height:1.7">
-          <strong style="color:#47563B;font-size:15px">DecoMuse Official</strong><br>
+          <strong style="color:#47563B;font-size:15px">Samira Home Decor Official</strong><br>
           ABN ${ABN}<br>${esc(BUSINESS_EMAIL)}<br>${esc(BIZ_PHONE)}<br>${esc(SITE_URL.replace(/^https?:\/\//, ""))}
         </td>
       </tr></table>
@@ -124,15 +124,15 @@ exports.handler = async (event) => {
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#2C2623;padding:10px">
       ${fromBlock}
       ${inner}
-      <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6;margin-top:22px">Thank you for choosing DecoMuse ✦<br>Questions? Just reply to this email.</p>
+      <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6;margin-top:22px">Thank you for choosing Samira Home Decor ✦<br>Questions? Just reply to this email.</p>
     </div>`;
 
     const subject = isInvoice
-      ? `${heading}${g("Invoice number") ? " #" + g("Invoice number") : ""} — DecoMuse`
-      : `${heading} — DecoMuse`;
+      ? `${heading}${g("Invoice number") ? " #" + g("Invoice number") : ""} — Samira Home Decor`
+      : `${heading} — Samira Home Decor`;
 
     const payload = {
-      sender: { name: "DecoMuse Official", email: SENDER_EMAIL },
+      sender: { name: "Samira Home Decor Official", email: SENDER_EMAIL },
       to: [{ email, name: name || undefined }],
       bcc: [{ email: BUSINESS_EMAIL }],
       replyTo: { email: BUSINESS_EMAIL, name: SENDER_NAME },

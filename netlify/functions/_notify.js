@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — email the shop (shared helper)
+   Samira Home Decor — email the shop (shared helper)
    ------------------------------------------------------------
    Used for orders that never pass through Stripe's webhook, such
    as an order paid entirely with a gift card. Silently does
@@ -18,7 +18,7 @@ async function emailShop(subject, body) {
       body: JSON.stringify({
         access_key: key,
         subject,
-        from_name: "DecoMuse Store",
+        from_name: "Samira Home Decor Store",
         email: to,
         message: body,
       }),

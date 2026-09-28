@@ -1,7 +1,7 @@
 /* ============================================================
-   DecoMuse — Send Shopping List  (Netlify Function, Brevo)
+   Samira Home Decor — Send Shopping List  (Netlify Function, Brevo)
    ------------------------------------------------------------
-   Emails a shopper their saved shopping list *from* the DecoMuse
+   Emails a shopper their saved shopping list *from* the Samira Home Decor
    business address, and blind-copies the business inbox so you
    see every list that goes out. Runs on the server only.
 
@@ -14,7 +14,7 @@
    Optional environment variables:
      SENDER_EMAIL    = decormuseofficial@outlook.com  (must be a
                        VERIFIED sender in Brevo → Senders)
-     SENDER_NAME     = DecoMuse
+     SENDER_NAME     = Samira Home Decor
      BUSINESS_EMAIL  = decormuseofficial@outlook.com  (gets a bcc)
      SITE_URL        = https://www.decomuse.com.au
 
@@ -24,7 +24,7 @@
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY || "";
 const SENDER_EMAIL  = process.env.SENDER_EMAIL || "decormuseofficial@outlook.com";
-const SENDER_NAME   = process.env.SENDER_NAME || "DecoMuse";
+const SENDER_NAME   = process.env.SENDER_NAME || "Samira Home Decor";
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "decormuseofficial@outlook.com";
 const SITE_URL = process.env.SITE_URL || "https://www.decomuse.com.au";
 
@@ -82,7 +82,7 @@ exports.handler = async (event) => {
     const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#2C2623">
       <div style="text-align:center;padding:24px 0">
-        <h1 style="font-family:Georgia,serif;color:#A5586A;margin:0">DecoMuse</h1>
+        <h1 style="font-family:Georgia,serif;color:#A5586A;margin:0">Samira Home Decor</h1>
         <p style="color:#8a7f77;margin:6px 0 0">Your saved shopping list 🛍️</p>
       </div>
       <table style="width:100%;border-collapse:collapse">${rows}</table>
@@ -100,7 +100,7 @@ exports.handler = async (event) => {
       sender: { name: SENDER_NAME, email: SENDER_EMAIL },
       to: [{ email: to }],
       bcc: [{ email: BUSINESS_EMAIL }],
-      subject: "Your DecoMuse shopping list",
+      subject: "Your Samira Home Decor shopping list",
       htmlContent: html,
     };
 

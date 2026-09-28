@@ -1,5 +1,5 @@
 /* ============================================================
-   DecoMuse — Stripe Webhook  (Netlify Function)
+   Samira Home Decor — Stripe Webhook  (Netlify Function)
    ------------------------------------------------------------
    Stripe calls this URL after every payment. This is the RELIABLE
    record of a paid order — it fires even if the customer closes
@@ -38,7 +38,7 @@ async function emailOrder(session, lineItems) {
     .join("\n");
 
   const body =
-    `New paid order via DecoMuse 🎉\n\n` +
+    `New paid order via Samira Home Decor 🎉\n\n` +
     `Order (Stripe session): ${session.id}\n` +
     `Payment status: ${session.payment_status}\n` +
     `Total: ${money(session.amount_total, session.currency)}\n` +
@@ -64,8 +64,8 @@ async function emailOrder(session, lineItems) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         access_key: key,
-        subject: `DecoMuse — new paid order (${money(session.amount_total, session.currency)})`,
-        from_name: "DecoMuse Store",
+        subject: `Samira Home Decor — new paid order (${money(session.amount_total, session.currency)})`,
+        from_name: "Samira Home Decor Store",
         email: to,
         message: body,
       }),

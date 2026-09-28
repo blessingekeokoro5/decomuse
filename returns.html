@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Returns & Refunds — Lodge a Return | DecoMuse</title>
-  <meta name="description" content="Lodge a DecoMuse return, get a reference barcode, track your return status, and choose a refund to your gift card or a replacement.">
+  <title>Returns & Refunds — Lodge a Return | Samira Home Decor</title>
+  <meta name="description" content="Lodge a Samira Home Decor return, get a reference barcode, track your return status, and choose a refund to your gift card or a replacement.">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="DecoMuse">
+  <meta property="og:site_name" content="Samira Home Decor">
   <meta property="og:image" content="https://www.decomuse.com.au/assets/hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://www.decomuse.com.au/assets/hero.jpg">
@@ -15,7 +15,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=16">
+  <link rel="stylesheet" href="css/styles.css?v=17">
   <style>
     .rt-tabs { display: flex; gap: 8px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
     .rt-panel { display: none; } .rt-panel.active { display: block; }
@@ -121,7 +121,7 @@
 
   <div id="site-footer"></div>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=16"></script>
+  <script src="js/components.js?v=17"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script>
@@ -209,7 +209,7 @@
         ["Photos attached", photoCount + ""],
         ["Comments", ticket.comments]
       ].filter(d => d[1]);
-      try { if (typeof deliverForm === "function") await deliverForm(data, "DecoMuse — Return request " + ref); } catch (err) {}
+      try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Return request " + ref); } catch (err) {}
 
       document.getElementById("rSuccess").classList.add("show");
       document.getElementById("rSuccess").innerHTML = "Return lodged! Your reference is below — please print it and attach it to your parcel.";
@@ -282,7 +282,7 @@
 
       if (choice === "original") {
         const data = [["Refund to", "Original payment method"], ["Amount", money(t.amount)], ["Customer", t.email], ["Return", ref], ["Product", t.product]];
-        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Refund to original payment " + ref); } catch (e) {}
+        try { if (typeof deliverForm === "function") deliverForm(data, "Samira Home Decor — Refund to original payment " + ref); } catch (e) {}
         showToast("Refund to your original payment requested 💳");
       } else if (choice === "giftcard") {
         // A small 5% bonus to encourage keeping the value with us.
@@ -295,15 +295,15 @@
         acc.pendingCredit.push({ amount: t.giftAmount, requested: todayAU(), from: ref, status: "awaiting approval" });
         saveAccount(acc);
         const data = [["Store credit requested", money(t.giftAmount) + " (incl. 5% bonus)"], ["To", t.email], ["From return", ref], ["Action", "Approve the return, then issue the gift card"]];
-        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Store credit to issue for " + ref); } catch (e) {}
+        try { if (typeof deliverForm === "function") deliverForm(data, "Samira Home Decor — Store credit to issue for " + ref); } catch (e) {}
         showToast("Store credit requested 🎁 — we'll email your code once the return is approved");
       } else if (choice === "exchange") {
         const data = [["Resolution", "Exchange for a different item"], ["Customer", t.email], ["Return", ref], ["Product", t.product]];
-        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Exchange request " + ref); } catch (e) {}
+        try { if (typeof deliverForm === "function") deliverForm(data, "Samira Home Decor — Exchange request " + ref); } catch (e) {}
         showToast("Exchange requested 🔀");
       } else {
         const data = [["Resolution", "Replacement of the same item"], ["Customer", t.email], ["Return", ref], ["Product", t.product]];
-        try { if (typeof deliverForm === "function") deliverForm(data, "DecoMuse — Replacement request " + ref); } catch (e) {}
+        try { if (typeof deliverForm === "function") deliverForm(data, "Samira Home Decor — Replacement request " + ref); } catch (e) {}
         showToast("Replacement requested 🔁");
       }
       saveReturns(all); trackReturns();

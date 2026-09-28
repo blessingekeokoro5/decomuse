@@ -26,7 +26,7 @@
   // Build & download a blank, fillable PDF of a client form (uses jsPDF if loaded, else prints)
   window.dmDownloadFormPDF = function (form, title) {
     if (!form) return;
-    title = title || (form.getAttribute && form.getAttribute("data-client-form")) || "DecoMuse form";
+    title = title || (form.getAttribute && form.getAttribute("data-client-form")) || "Samira Home Decor form";
     if (!(window.jspdf && window.jspdf.jsPDF)) { window.print(); return; }
     var doc = new window.jspdf.jsPDF({ unit: "pt", format: "a4" });
     var M = 48, PH = doc.internal.pageSize.getHeight(), maxW = doc.internal.pageSize.getWidth() - M * 2, y = M;
@@ -36,7 +36,7 @@
       doc.setTextColor(color ? color[0] : 40, color ? color[1] : 38, color ? color[2] : 35);
       doc.splitTextToSize(str, maxW).forEach(function (ln) { brk(size * 1.45); doc.text(ln, M, y); y += size * 1.45; });
     }
-    line(title || "DecoMuse", 20, true, [71, 86, 59]);
+    line(title || "Samira Home Decor", 20, true, [71, 86, 59]);
     line("www.decomuse.com.au", 9, false, [150, 140, 132]); y += 8;
     Array.prototype.forEach.call(form.querySelectorAll(".form-sec-title, .field, .consent, .terms, .sig-block"), function (el) {
       if (el.classList.contains("form-sec-title")) { y += 12; line(el.textContent.trim().toUpperCase(), 11, true, [165, 88, 106]); y += 2; }
@@ -55,10 +55,10 @@
         else { brk(26); y += 6; doc.setDrawColor(205); doc.line(M, y + 8, M + maxW, y + 8); y += 22; }
       }
     });
-    doc.save((title || "DecoMuse-form").replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") + ".pdf");
+    doc.save((title || "Samira Home Decor-form").replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") + ".pdf");
   };
 
-  // Branded, filled INVOICE pdf — logo + "DecoMuse Official" + Bill To + amounts + status
+  // Branded, filled INVOICE pdf — logo + "Samira Home Decor Official" + Bill To + amounts + status
   window.dmInvoicePDF = function (form) {
     if (!form) return;
     if (!(window.jspdf && window.jspdf.jsPDF)) { window.print(); return; }
@@ -74,7 +74,7 @@
       var doc = new window.jspdf.jsPDF({ unit: "pt", format: "a4" });
       var M = 48, PW = doc.internal.pageSize.getWidth(), y = 52;
       if (logo) { var lw = 118, lh = lw / (ratio || 1.4); try { doc.addImage(logo, "JPEG", M, y, lw, lh); } catch (e) {} }
-      doc.setFont("helvetica", "bold"); doc.setFontSize(13); doc.setTextColor(71, 86, 59); doc.text("DecoMuse Official", PW - M, y + 12, { align: "right" });
+      doc.setFont("helvetica", "bold"); doc.setFontSize(13); doc.setTextColor(71, 86, 59); doc.text("Samira Home Decor Official", PW - M, y + 12, { align: "right" });
       doc.setFont("helvetica", "normal"); doc.setFontSize(9.5); doc.setTextColor(90, 80, 76);
       ["ABN 41 991 812 955", "decormuseofficial@outlook.com", "0451 609 398", "www.decomuse.com.au"].forEach(function (t, i) { doc.text(t, PW - M, y + 28 + i * 13, { align: "right" }); });
       y += 96;
@@ -142,8 +142,8 @@
         : "Saved to your Customer base. Opening your email app to send it…";
     }
     if (!sent) {
-      var body = "Please find your DecoMuse " + title.toLowerCase() + " details below:\n\n" + clean.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n\nThank you,\nDecoMuse";
-      location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent(title + " — DecoMuse") + "&body=" + encodeURIComponent(body);
+      var body = "Please find your Samira Home Decor " + title.toLowerCase() + " details below:\n\n" + clean.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n\nThank you,\nSamira Home Decor";
+      location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent(title + " — Samira Home Decor") + "&body=" + encodeURIComponent(body);
     }
   };
 
@@ -203,9 +203,9 @@
         }
         // 2) Email (signature sent as a note; the full image is in the saved record)
         var emailData = base.slice(); if (sigData) emailData.push(["Signature", "Provided (drawn signature captured)"]);
-        try { if (typeof deliverForm === "function") await deliverForm(emailData, "DecoMuse — " + type); } catch (err) {}
+        try { if (typeof deliverForm === "function") await deliverForm(emailData, "Samira Home Decor — " + type); } catch (err) {}
         var ok = form.querySelector(".form-success");
-        if (ok) { ok.classList.add("show"); ok.innerHTML = form.getAttribute("data-success") || "Thank you! Your details have been submitted to DecoMuse."; }
+        if (ok) { ok.classList.add("show"); ok.innerHTML = form.getAttribute("data-success") || "Thank you! Your details have been submitted to Samira Home Decor."; }
         form.reset();
         if (pad && sigInput) { var c = pad.querySelector("canvas"); if (c) c.getContext("2d").clearRect(0, 0, c.width, c.height); pad.classList.remove("signed"); sigInput.value = ""; }
         if (btn) { btn.disabled = false; btn.textContent = btn.dataset.l; }

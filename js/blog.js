@@ -23,7 +23,7 @@ const POSTS = [
       <h2>3. The softener (organic)</h2>
       <p>Finish with something living or textural, a single stem, dried botanicals, or a low bowl. This breaks up the hard lines and stops the vignette feeling staged.</p>
       <p>Leave a third of the surface empty. Negative space is what makes a styled table look expensive rather than crowded.</p>
-      <h3>The DecoMuse formula</h3>
+      <h3>The Samira Home Decor formula</h3>
       <p>Odd numbers, varied heights, one hero, and breathing room. Style it once with intention and it will look effortless every day after.</p>`
   },
   {
