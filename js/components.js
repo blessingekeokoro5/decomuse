@@ -85,6 +85,9 @@ const IC = {
 /* Australian flag as inline SVG — renders everywhere (Windows can't draw the 🇦🇺 emoji). */
 const AU_FLAG_SVG = '<svg class="au-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><clipPath id="auJack"><rect width="30" height="20"/></clipPath><g clip-path="url(#auJack)"><path d="M0,0 30,20 M30,0 0,20" stroke="#fff" stroke-width="4"/><path d="M0,0 30,20 M30,0 0,20" stroke="#E4002B" stroke-width="2"/><rect x="13" width="4" height="20" fill="#fff"/><rect y="8" width="30" height="4" fill="#fff"/><rect x="13.75" width="2.5" height="20" fill="#E4002B"/><rect y="8.75" width="30" height="2.5" fill="#E4002B"/></g><circle cx="15" cy="30" r="2.6" fill="#fff"/><circle cx="46" cy="9" r="1.7" fill="#fff"/><circle cx="53" cy="19" r="1.7" fill="#fff"/><circle cx="46" cy="30" r="1.7" fill="#fff"/><circle cx="39" cy="19" r="1.7" fill="#fff"/><circle cx="46" cy="19.5" r="1" fill="#fff"/></svg>';
 
+/* Australia map silhouette (trust badge) */
+const AU_MAP_SVG = '<svg viewBox="0 0 100 88" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 30c-2-8 4-14 12-15 6-1 9-6 15-6l5 5c6-1 11 1 16 0 6-1 10-6 14-4 3 4 0 9 4 12 5 2 12 2 14 8 1 5-5 8-4 13 1 6 7 9 4 15-4 6-12 4-17 8-4 3-5 9-11 9-5 0-7-5-12-4-6 1-9 7-15 5-6-2-6-9-11-12-6-4-14-4-15-11-1-6 4-10 2-16-1-3-1-5-1-7z"/><circle cx="62" cy="83" r="3.4"/></svg>';
+
 /* UK (Union Jack) flag for the English language label — inline SVG (Windows can't draw 🇬🇧). */
 const UK_FLAG_SVG = '<svg class="uk-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="4"/><rect x="25" width="10" height="40" fill="#fff"/><rect y="15" width="60" height="10" fill="#fff"/><rect x="26.5" width="7" height="40" fill="#C8102E"/><rect y="16.5" width="60" height="7" fill="#C8102E"/></svg>';
 
@@ -294,7 +297,7 @@ function buildHeader() {
       </div>
     </div>
   </div>
-  <div class="announce"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span></div>
+  <div class="announce"><div class="announce-inner"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span><span class="au-owned">${AU_MAP_SVG} 100% Australian Owned &amp; Operated</span></div></div>
   <header class="site-header">
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
@@ -319,8 +322,8 @@ function buildHeader() {
           </svg>
         </span>
         <span class="brand-text">
-          <span class="bt-main">D<span class="amp">&amp;</span>M</span>
-          <span class="bt-sub">Home Décor Store</span>
+          <span class="bt-main">SYS</span>
+          <span class="bt-sub">Samira Home Decor</span>
         </span>
       </a>
       <form class="header-search" id="headerSearch" role="search">
