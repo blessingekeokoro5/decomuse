@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Muse Stylist AI (client-side demo)
+   DÉCOMUSE, Samira Assistant (client-side demo)
    Upload a room photo → "analyse" → recommend shoppable pieces.
    (Simulated on-device; swap analyseRoom() for a real API later.)
    ============================================================ */
@@ -20,7 +20,7 @@ function initStylist() {
     stage.innerHTML = `
       <div class="upload-zone" style="text-align:center">
         <div class="up-ic">✦</div>
-        <h3>Muse Stylist AI is for members</h3>
+        <h3>Samira Assistant is for members</h3>
         <p style="color:var(--muted);max-width:440px;margin:8px auto 0">Log in or create a free Samira Home Decor account to upload your room and get instant, shoppable styling recommendations, it only takes a minute.</p>
         <div class="btn-row" style="justify-content:center;margin-top:18px">
           <a class="btn btn--primary" href="account.html">Log in / Create account</a>
@@ -99,7 +99,7 @@ function showResults(room) {
         <div>
           <span class="eyebrow">Analysis complete</span>
           <h2 style="margin-bottom:12px">We styled your ${room.label.toLowerCase()}</h2>
-          <p class="lead" style="font-size:1.05rem">Here's what the Muse Stylist read from your space:</p>
+          <p class="lead" style="font-size:1.05rem">Here's what the Samira Assistant read from your space:</p>
           <div class="detected">
             <span class="chip">🏠 ${room.label}</span>
             <span class="chip">🎨 ${room.palette}</span>

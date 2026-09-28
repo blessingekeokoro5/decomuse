@@ -210,7 +210,7 @@ function buildHeader() {
                   <li><a href="staging.html">All services</a></li>
                   <li><a href="portfolio.html">Our portfolio</a></li>
                   <li><a href="staging.html#book">Book a consultation</a></li>
-                  <li><a href="stylist.html">Muse Stylist AI</a></li>
+                  <li><a href="stylist.html">Samira Assistant</a></li>
                   <li><a href="careers.html">Careers</a></li>
                 </ul>
               </div>
@@ -333,7 +333,7 @@ function buildHeader() {
         <button type="submit" class="hs-btn" aria-label="Search">${IC.search}</button>
       </form>
       <div class="nav-utility-right">
-        <button class="ask-muse" type="button" onclick="if(typeof openMuseChat==='function')openMuseChat();else location.href='stylist.html';" aria-label="Ask MuseStylist"><span class="am-star">✦</span> Ask MuseStylist</button>
+        <button class="ask-muse" type="button" onclick="if(typeof openMuseChat==='function')openMuseChat();else location.href='stylist.html';" aria-label="Ask Samira Assistant"><span class="am-star">✦</span> Ask Samira Assistant</button>
         <button class="region-btn" id="regionBtn" aria-label="Choose region" title="Choose your region"><span id="regionFlag">🇦🇺</span></button>
         <a class="icon-btn wish-link" href="wishlist.html" aria-label="Wishlist">${IC.heart}</a>
         <div class="account-menu" id="accountMenu">
@@ -353,7 +353,7 @@ function buildHeader() {
             <a class="ad-item" href="account.html"><span class="ad-ic">👤</span><div><strong>My account</strong><small>Details, addresses &amp; payments</small></div></a>
             <a class="ad-item" href="wishlist.html"><span class="ad-ic">♡</span><div><strong>My wishlist</strong><small>Your saved favourites</small></div></a>
             <a class="ad-item" href="account.html"><span class="ad-ic">🏷️</span><div><strong>Discount vouchers</strong><small>Your member coupons</small></div></a>
-            <a class="ad-item" href="stylist.html"><span class="ad-ic">✦</span><div><strong>Muse Stylist AI</strong><small>Get styled &amp; shop the look</small></div></a>
+            <a class="ad-item" href="stylist.html"><span class="ad-ic">✦</span><div><strong>Samira Assistant</strong><small>Get styled &amp; shop the look</small></div></a>
             <a class="ad-item" href="contact.html"><span class="ad-ic">💬</span><div><strong>Help &amp; contact</strong><small>We're here to help</small></div></a>
           </div>
         </div>
@@ -389,7 +389,7 @@ function buildFooter() {
     { t: "Assistance & Contact", h: "support.html" },
     { t: "Contact us", h: "contact.html" },
     { t: "Store locator", h: "store-locator.html" },
-    { t: "Muse Stylist AI", h: "stylist.html" }
+    { t: "Samira Assistant", h: "stylist.html" }
   ];
   const infoLinks = [
     { t: "Frequent Questions", h: "policy.html?doc=faq" },
@@ -515,13 +515,13 @@ function buildFloating() {
 
     <div class="chat-nudge" id="chatNudge">
       <button class="nudge-x" id="nudgeX" aria-label="Dismiss">✕</button>
-      <span>Get personalised gift suggestions from the <strong>Muse Stylist</strong>, our AI gift advisor.</span>
+      <span>Get personalised gift suggestions from the <strong>Samira Assistant</strong>, our AI gift advisor.</span>
     </div>
 
     <div class="dm-launch" id="dmLaunch">
-      <button class="launch-btn launch-gift" id="giftFab" aria-label="Ask MuseStylist — gifts, décor, styling & support">
+      <button class="launch-btn launch-gift" id="giftFab" aria-label="Ask Samira Assistant — gifts, décor, styling & support">
         <span class="lb-star">✦</span>
-        <span>Ask MuseStylist</span>
+        <span>Ask Samira Assistant</span>
       </button>
       <button class="launch-btn launch-help" id="supportFab" aria-label="Help desk — track an order, returns, FAQs &amp; contact">
         <span>?</span><span>Help</span>
@@ -533,14 +533,14 @@ function buildFloating() {
         <div class="chat-head-id">
           <span class="chat-avatar">${IC.spark}</span>
           <div>
-            <strong>MuseStylist AI</strong>
+            <strong>Samira Assistant</strong>
             <small><span class="chat-online"></span> Typically replies instantly</small>
           </div>
         </div>
         <button class="chat-close" id="chatClose" aria-label="Close chat">✕</button>
       </div>
       <div class="chat-tabs" id="chatTabs">
-        <button type="button" class="chat-tab active" data-tab="chat">✦ Muse Stylist</button>
+        <button type="button" class="chat-tab active" data-tab="chat">✦ Samira Assistant</button>
         <button type="button" class="chat-tab" data-tab="support">💬 Help desk</button>
       </div>
       <div class="chat-view" id="chatViewChat">
@@ -967,7 +967,7 @@ function initSearch() {
     });
   }
 
-  // Photo search — snap/upload a photo, hand it to Muse Stylist for visual matching
+  // Photo search — snap/upload a photo, hand it to Samira Assistant for visual matching
   const camBtn = document.getElementById("hsCamera");
   const camInput = document.getElementById("hsCameraInput");
   if (camBtn && camInput) {
@@ -1152,7 +1152,7 @@ function initMemberModal() {
 }
 
 /* ============================================================
-   MuseStylist AI, shopper chat widget (client-side)
+   Samira Assistant, shopper chat widget (client-side)
    ============================================================ */
 const CHAT_QUICK = [
   { label: "🎁 Help me find a gift" },
@@ -1303,7 +1303,7 @@ function chatReply(text) {
   let unsure = false, html;
 
   if (has(/\b(hi|hey|hello|hiya|good (morning|afternoon|evening)|how are you)\b/))
-    html = `Hi, lovely to meet you! 👋 I'm MuseStylist, your personal shopping assistant. I can help you find a home fragrance, styling piece or gift, build a gift hamper, or track an order. What are you after today?`;
+    html = `Hi, lovely to meet you! 👋 I'm Samira Assistant, your personal shopping assistant. I can help you find a home fragrance, styling piece or gift, build a gift hamper, or track an order. What are you after today?`;
 
   else if (has(/\b(human|real person|agent|team member|speak to someone|talk to someone|representative|customer service)\b/))
     html = `Of course, I'll connect you with a real Samira Home Decor team member. Reach us straight away on WhatsApp, or email ${DECOMUSE.email}.<br>${waButton()}`;
@@ -1312,10 +1312,10 @@ function chatReply(text) {
     html = `Our ${link("shop.html?cat=Lifestyle", "Home Fragrances")} edit (in Lifestyle) has reed diffusers, scented candles, room sprays and essential oils 🌸, everything to layer your home with scent.`;
 
   else if (has(/\b(book|consult|consultation|staging|stage|interior design|stylist visit|in.?home|virtual styling|appointment)\b/))
-    html = `We'd love to style your space! ✦ Book an <strong>in-home styling, staging or interior design</strong> consultation on our ${link("staging.html#book", "Styling & Design")} page, or try the free ${link("stylist.html", "Muse Stylist AI")}.`;
+    html = `We'd love to style your space! ✦ Book an <strong>in-home styling, staging or interior design</strong> consultation on our ${link("staging.html#book", "Styling & Design")} page, or try the free ${link("stylist.html", "Samira Assistant")}.`;
 
   else if (has(/\b(style|styling|room|décor|decor|design|interior|furniture|\bhome\b|makeover|colour|color|theme|vibe|aesthetic|lamp|rug|mirror|sofa|cushion|vase)\b/))
-    html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Muse Stylist AI")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "Home Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
+    html = `I'd love to help you style your space! ✦ Upload a photo to the ${link("stylist.html", "Samira Assistant")} for instant, shoppable picks, browse ${link("shop.html?cat=" + encodeURIComponent("Home Décor"), "Home Décor")}, or book a ${link("staging.html", "styling consultation")}.`;
 
   else if (has(/\b(track|order status|my order|where.?s my (order|parcel|delivery)|being picked)\b/))
     html = `You can watch your order live! 🚚 Log in to your ${link("account.html", "account")} and open <strong>Orders → Track order</strong> to see it being picked, packed and on its way, with an estimated arrival time. You can also use our ${link("track.html", "order tracking")} page.`;
@@ -1479,7 +1479,7 @@ function initChat() {
 
   const greet = () => {
     if (greeted) return; greeted = true;
-    chatAppend("bot", `Hi, I'm the <strong>Muse Stylist</strong> ✦ your AI décor &amp; gift advisor. Tell me who you're shopping for and I'll suggest something they'll love, or pick a category below. Need help with an order? Switch to the <strong>Help desk</strong> above.`);
+    chatAppend("bot", `Hi, I'm the <strong>Samira Assistant</strong> ✦ your AI décor &amp; gift advisor. Tell me who you're shopping for and I'll suggest something they'll love, or pick a category below. Need help with an order? Switch to the <strong>Help desk</strong> above.`);
   };
   const switchTab = (name) => {
     tabs.forEach(x => x.classList.toggle("active", x.dataset.tab === name));
@@ -1596,3 +1596,21 @@ function wireNav() {
 }
 
 document.addEventListener("DOMContentLoaded", injectComponents);
+
+/* ============================================================
+   Live chat (Tawk.to) — paste your embed src to switch it on.
+   Sign up free at tawk.to → Administration → Chat Widget → copy
+   the src URL from the embed code (looks like
+   https://embed.tawk.to/XXXXXXXX/1abcd) and set it below.
+   Left empty = no live chat loaded (the Help desk still works).
+   ============================================================ */
+const TAWK_EMBED_SRC = ""; // <-- paste your Tawk.to embed src here
+(function () {
+  if (!TAWK_EMBED_SRC) return;
+  window.Tawk_API = window.Tawk_API || {};
+  window.Tawk_LoadStart = new Date();
+  var s = document.createElement("script");
+  s.async = true; s.src = TAWK_EMBED_SRC; s.charset = "UTF-8";
+  s.setAttribute("crossorigin", "*");
+  document.head.appendChild(s);
+})();
