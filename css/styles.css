@@ -1868,3 +1868,27 @@ em { font-style: italic; color: var(--rose-deep); }
 .pkg-tab:hover { border-color: var(--rose-soft); }
 .pkg-tab.active { background: var(--rose); color: #fff; border-color: var(--rose); }
 .pkg-panel[hidden] { display: none; }
+
+/* ============================================================
+   "We're here to help" contact band (contact + homepage)
+   ============================================================ */
+.help-band { background: linear-gradient(150deg, var(--forest), var(--forest-2)); color: #fff; }
+.help-band .hb-head { text-align: center; max-width: 640px; margin: 0 auto 30px; }
+.help-band .eyebrow { color: var(--rose-soft); }
+.help-band h2 { color: #fff; }
+.help-band .hb-head p { color: #e7e0d4; margin-top: 8px; }
+.hb-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.hb-card { display: flex; align-items: center; gap: 14px; text-align: left; width: 100%;
+  background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.18); border-radius: var(--radius-sm);
+  padding: 20px 18px; color: #fff; cursor: pointer; transition: all var(--tr); font-family: var(--font-body); }
+.hb-card:hover { background: rgba(255,255,255,0.10); border-color: var(--gold); transform: translateY(-3px); }
+.hb-card .hb-ic { flex: none; width: 40px; height: 40px; display: grid; place-items: center; color: var(--gold); }
+.hb-card .hb-ic svg { width: 26px; height: 26px; }
+.hb-card strong { display: block; font-size: 1.02rem; }
+.hb-card small { color: #d8d0c2; font-size: 0.82rem; }
+.hb-card .hb-go { margin-left: auto; color: var(--gold); font-size: 1.3rem; }
+.help-band--slim { padding-top: 40px; padding-bottom: 40px; }
+.help-band--slim .hb-head { margin-bottom: 22px; }
+.help-band--slim .hb-head p { display: none; }
+@media (max-width: 900px){ .hb-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px){ .hb-grid { grid-template-columns: 1fr; } }
