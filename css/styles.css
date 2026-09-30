@@ -144,14 +144,15 @@ em { font-style: italic; color: var(--rose-deep); }
   display: flex; align-items: center; justify-content: center;
 }
 .announce a { color: #fff; text-decoration: underline; }
-.announce-inner { position: relative; width: 100%; max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: center; }
-.au-brand { position: absolute; left: 4px; top: 50%; transform: translateY(-50%); font-weight: 600; letter-spacing: 0.14em; color: #f1eee2; white-space: nowrap; }
+.announce-inner { position: relative; width: 100%; max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.au-brand { flex: 0 0 auto; font-weight: 600; letter-spacing: 0.14em; color: #f1eee2; white-space: nowrap; }
 @media (max-width: 1100px){ .au-brand { display: none; } }
-.au-owned { position: absolute; right: 4px; top: 50%; transform: translateY(-50%); display: inline-flex; align-items: center; gap: 7px;
+.au-owned { flex: 0 0 auto; display: inline-flex; align-items: center; gap: 7px;
   color: #f1eee2; font-size: 0.66rem; letter-spacing: 0.12em; white-space: nowrap; }
 .au-owned svg { width: 17px; height: 15px; color: var(--gold); flex: 0 0 auto; }
 @media (max-width: 900px){ .au-owned { display: none; } }
-.announce-track { display: inline-block; transition: opacity 0.4s ease, transform 0.4s ease; max-width: 100%; padding: 0 8px; }
+.announce-track { flex: 1 1 auto; min-width: 0; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  transition: opacity 0.4s ease, transform 0.4s ease; padding: 0 8px; }
 .announce-track.out { opacity: 0; transform: translateY(-8px); }
 
 /* ---- Header ---- */
