@@ -727,7 +727,6 @@ function injectComponents() {
   document.body.insertAdjacentHTML("beforeend", buildFloating());
   document.body.insertAdjacentHTML("beforeend", buildMemberModal());
   document.body.insertAdjacentHTML("beforeend", buildSearchOverlay());
-  document.body.insertAdjacentHTML("beforeend", buildCookieBar());
   document.body.insertAdjacentHTML("beforeend", buildCountryModal());
   document.body.insertAdjacentHTML("beforeend", buildEnquire());
   injectFavicon();
@@ -735,7 +734,6 @@ function injectComponents() {
   rotateAnnouncements();
   initChat();
   initSearch();
-  initCookies();
   initCountry();
   initMemberModal();
   initFlashBar();
@@ -1069,7 +1067,7 @@ function buildMemberModal() {
     <div class="member-card member-card--rewards" role="dialog" aria-label="Samira Home Decor Rewards">
       <button class="member-close" id="memberClose" aria-label="Close">✕</button>
       <div class="rw-head">
-        <span class="rw-brand">DECOMUSE <strong>REWARDS</strong></span>
+        <span class="rw-brand">SAMIRA <strong>REWARDS</strong></span>
         <p class="rw-offer">Sign up &amp; get <strong>20% off</strong> your first order, plus a <strong>$10 voucher</strong> for your next purchase</p>
       </div>
       <div class="rw-benefits">

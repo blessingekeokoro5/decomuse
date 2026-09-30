@@ -499,7 +499,7 @@ em { font-style: italic; color: var(--rose-deep); }
 @keyframes popIn { from { opacity: 0; transform: translateY(20px) scale(0.96); } to { opacity: 1; transform: none; } }
 /* ---- Rewards modal (image-matched) ---- */
 .member-card--rewards { display: block; grid-template-columns: none; max-width: 720px; text-align: center;
-  background: linear-gradient(160deg, #3a2b28, #241b19); color: #f4ece7; padding: 46px 40px 28px;
+  background: linear-gradient(160deg, #0B1F3A, #061525); color: #f4ece7; padding: 46px 40px 28px;
   max-height: calc(100vh - 32px); overflow-y: auto; }
 .member-card--rewards .member-close { background: rgba(255,255,255,.12); color: #fff; }
 .member-card--rewards .member-close:hover { background: rgba(255,255,255,.24); }
