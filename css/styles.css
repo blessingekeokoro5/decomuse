@@ -159,7 +159,9 @@ em { font-style: italic; color: var(--rose-deep); }
 .site-header { position: sticky; top: 0; z-index: 200; background: rgba(246,238,232,0.96);
   backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
 .nav-utility { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: 78px; }
-.brand { display: flex; align-items: center; gap: 12px; }
+.brand { display: flex; flex-direction: column; align-items: flex-start; gap: 3px; }
+.brand-tagline { font-size: 0.6rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--rose-deep); white-space: nowrap; }
+@media (max-width: 600px){ .brand-tagline { font-size: 0.52rem; letter-spacing: 0.1em; } }
 .brand-mark {
   width: 50px; height: 50px; flex: none;
   display: grid; place-items: center; color: var(--rose-deep);

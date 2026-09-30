@@ -325,6 +325,7 @@ function buildHeader() {
           <span class="bt-main">Samira Home Decor</span>
           <span class="bt-sub">Style Your Space</span>
         </span>
+        <span class="brand-tagline">Home décor for every house</span>
       </a>
       <form class="header-search" id="headerSearch" role="search">
         <button type="button" class="hs-tag" onclick="location.href='stylist.html'">Get inspired</button>
@@ -440,8 +441,8 @@ function buildFooter() {
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="fb-name">Samira Home Decor</div>
-          <div class="fb-tag">${DECOMUSE.tagline}</div>
+          <div class="fb-name">Style Your Space by Samira</div>
+          <div class="fb-tag">Home décor for every house</div>
           <p>Objects worth living with. Australia's curated home, lifestyle &amp; fragrance store, décor, fragrance, wellness, everyday essentials &amp; beautiful gifting.</p>
           <div class="fc-row" style="color:#ddccc2;margin-top:14px"><span class="fc-ic">${DECOMUSE.flag}</span> <strong>${DECOMUSE.location}</strong></div>
           <div class="socials" style="margin-top:16px">
