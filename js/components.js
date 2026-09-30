@@ -297,7 +297,7 @@ function buildHeader() {
       </div>
     </div>
   </div>
-  <div class="announce"><div class="announce-inner"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span><span class="au-owned">${AU_MAP_SVG} 100% Australian Owned &amp; Operated</span></div></div>
+  <div class="announce"><div class="announce-inner"><span class="au-brand">Samira Home Decor Store</span><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span><span class="au-owned">${AU_MAP_SVG} 100% Australian Owned &amp; Operated</span></div></div>
   <header class="site-header">
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
@@ -729,12 +729,14 @@ function injectComponents() {
   document.body.insertAdjacentHTML("beforeend", buildSearchOverlay());
   document.body.insertAdjacentHTML("beforeend", buildCountryModal());
   document.body.insertAdjacentHTML("beforeend", buildEnquire());
+  document.body.insertAdjacentHTML("beforeend", buildMemberBanner());
   injectFavicon();
   wireNav();
   rotateAnnouncements();
   initChat();
   initSearch();
   initCountry();
+  initMemberBanner();
   initMemberModal();
   initFlashBar();
   initEnquire();
@@ -1018,9 +1020,9 @@ function buildMemberBanner() {
   return `
   <div class="promo-banner" id="promoBanner" role="dialog" aria-label="Membership offer">
     <button class="promo-close" id="promoClose" aria-label="Close">✕</button>
-    <span class="promo-badge">✦ Members</span>
+    <span class="promo-badge">✦ Samira Members</span>
     <div class="promo-copy">
-      <strong>Save 20% on your first order</strong>
+      <strong>Save 20% on your first Samira Home Decor order</strong>
       <span>Early access · member-only offers · a birthday treat</span>
     </div>
     <button class="btn btn--primary btn--sm" onclick="openMemberModal();hideMemberBanner();">Become a member</button>
@@ -1051,7 +1053,7 @@ function initMemberBanner() {
     startAutoClose();
     banner.addEventListener("mouseenter", () => clearTimeout(promoTimer));
     banner.addEventListener("mouseleave", startAutoClose);
-  }, 300000); // member banner: 5 minutes
+  }, 20000); // member banner: 20 seconds
 }
 
 /* ============================================================
