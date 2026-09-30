@@ -297,7 +297,7 @@ function buildHeader() {
       </div>
     </div>
   </div>
-  <div class="announce"><div class="announce-inner"><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span><span class="au-owned">${AU_MAP_SVG} 100% Australian Owned &amp; Operated</span></div></div>
+  <div class="announce"><div class="announce-inner"><span class="au-brand">Samira Home Decor</span><span class="announce-track" id="announceTrack">${ANNOUNCEMENTS[0]}</span><span class="au-owned">${AU_MAP_SVG} 100% Australian Owned &amp; Operated</span></div></div>
   <header class="site-header">
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
