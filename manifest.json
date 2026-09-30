@@ -1,13 +1,13 @@
 {
-  "name": "DecoMuse — Home Décor Store",
-  "short_name": "DecoMuse",
+  "name": "Samira Home Decor",
+  "short_name": "Samira",
   "description": "Australian online home décor & homewares store — curated décor, furniture, lighting, candles, fragrance, wellness and gifts.",
   "start_url": "/index.html?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F6EEE8",
-  "theme_color": "#B67280",
+  "background_color": "#F4EFE6",
+  "theme_color": "#0B1F3A",
   "lang": "en-AU",
   "categories": ["shopping", "lifestyle"],
   "icons": [
