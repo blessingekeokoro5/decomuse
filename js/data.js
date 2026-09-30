@@ -432,7 +432,7 @@ const HAMPER_MIN = 60;
 const ANNOUNCEMENTS = [
   "✦ Free shipping on orders over $500, Australia-wide",
   "🌏 We ship to Australia, NZ, UK, USA, Canada &amp; Nigeria",
-  "🌸 New home fragrance &amp; décor finds added weekly",
+  "🌸 New décor finds added weekly",
   "💝 Members save 20% on their first order, join free",
   "⭐ Loved by 500+ Australian homes · 4.9★ average review",
   "🎁 Build your own luxury hamper, gifting made effortless",
