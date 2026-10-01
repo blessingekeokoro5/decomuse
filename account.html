@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account, Samira Home Decor</title>
-  <meta name="description" content="Log in or sign up to your Samira Home Decor account, manage your membership, view your 20% welcome coupon and saved favourites.">
+  <meta name="description" content="Log in or sign up to your Samira Home Decor account, manage your membership, view your 10% welcome coupon and saved favourites.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=32">
+  <link rel="stylesheet" href="css/styles.css?v=33">
   <style>
     .acc-tabs { display: flex; gap: 8px; margin-bottom: 22px; }
     .acc-tabs button { flex: 1; padding: 12px; border: 1.5px solid var(--line); background: #fff; border-radius: var(--radius-sm);
@@ -39,12 +39,12 @@
     .mcard { position: relative; overflow: hidden; color: #fff; border-radius: 22px; aspect-ratio: 1.62/1;
       padding: 26px 30px; display: flex; flex-direction: column; justify-content: space-between;
       background:
-        radial-gradient(120% 130% at 15% 10%, rgba(255,255,255,0.18), rgba(255,255,255,0) 45%),
+        radial-gradient(110% 130% at 15% 10%, rgba(255,255,255,0.18), rgba(255,255,255,0) 45%),
         linear-gradient(140deg, #16304f 0%, var(--forest) 55%, #061525 100%);
       box-shadow: 0 24px 50px -22px rgba(11,31,58,0.7), inset 0 0 0 1px rgba(198,161,91,0.45); }
     .mcard::before { content: ""; position: absolute; inset: 0; pointer-events: none;
       background-image: radial-gradient(rgba(255,255,255,0.12) 1px, transparent 1.5px); background-size: 15px 15px; opacity: 0.5; }
-    .mcard::after { content: ""; position: absolute; top: -60%; left: -25%; width: 55%; height: 220%; pointer-events: none;
+    .mcard::after { content: ""; position: absolute; top: -60%; left: -25%; width: 55%; height: 210%; pointer-events: none;
       background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.16) 50%, rgba(255,255,255,0) 100%); transform: rotate(18deg); }
     .mc-frame { position: absolute; inset: 11px; border: 1px solid rgba(198,161,91,0.5); border-radius: 15px; pointer-events: none; }
     .mcard > * { position: relative; z-index: 1; }
@@ -114,7 +114,7 @@
   <div id="site-footer"></div>
   <script src="https://accounts.google.com/gsi/client" async defer></script>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=32"></script>
+  <script src="js/components.js?v=33"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script src="js/order-status.js"></script>
@@ -160,13 +160,13 @@
       if (accMode === "signup") {
         el.innerHTML = `
           <div style="background:var(--blush);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px;font-size:0.9rem;color:var(--rose-deep)">
-            🎉 Join free and get <strong>20% off your first order</strong> plus member perks.
+            🎉 Join free and get <strong>10% off your first order</strong> plus member perks.
           </div>
           <form onsubmit="return doSignup(event)">
             <div class="field"><label>Full name</label><input id="suName" required></div>
             <div class="field"><label>Email</label><input id="suEmail" type="email" required></div>
             <div class="field"><label>Create a password</label><div class="pw-wrap"><input id="suPass" type="password" required>${eye}</div></div>
-            <button type="submit" class="btn btn--primary btn--block">Create my account &amp; get 20% off</button>
+            <button type="submit" class="btn btn--primary btn--block">Create my account &amp; get 10% off</button>
           </form>
           ${legal}`;
       } else {
@@ -176,7 +176,7 @@
             <div class="field"><label>Password</label><div class="pw-wrap"><input id="liPass" type="password" required>${eye}</div></div>
             <a class="forgot-link" href="#" onclick="forgotPw();return false;">Forgot password?</a>
             <button type="submit" class="btn btn--primary btn--block">Sign in</button>
-            <p class="form-note" style="text-align:center;margin-top:12px">New here? <a href="#" onclick="setMode('signup');return false;">Create an account</a> for 20% off.</p>
+            <p class="form-note" style="text-align:center;margin-top:12px">New here? <a href="#" onclick="setMode('signup');return false;">Create an account</a> for 10% off.</p>
           </form>
           ${legal}`;
       }
@@ -211,7 +211,7 @@
       if (!email || !/.+@.+\..+/.test(email)) { if (email) showToast("Please enter a valid email"); return; }
       const existing = getAccount();
       if (existing && existing.email) { existing.email = email; existing.provider = label; saveAccount(existing); showToast("Welcome back! 👋"); render(); return; }
-      saveAccount({ name: "", email, provider: label, member: true, memberSince: todayAU(), coupon: "WELCOME20",
+      saveAccount({ name: "", email, provider: label, member: true, memberSince: todayAU(), coupon: "WELCOME10",
         memberNo: genMemberNo(), orders: [], points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
       try { localStorage.setItem("dm_member", "1"); } catch (err) {}
       showToast(`Signed in with ${label} — welcome to Samira Home Decor! 🎉`);
@@ -222,7 +222,7 @@
         const p = JSON.parse(atob(resp.credential.split(".")[1]));
         const existing = getAccount() || {};
         saveAccount(Object.assign(existing, { name: p.name || existing.name || "", email: p.email, provider: "Google",
-          member: true, memberSince: existing.memberSince || todayAU(), coupon: existing.coupon || "WELCOME20",
+          member: true, memberSince: existing.memberSince || todayAU(), coupon: existing.coupon || "WELCOME10",
           memberNo: existing.memberNo || genMemberNo(), orders: existing.orders || [], points: existing.points || 0,
           vouchers: existing.vouchers || [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] }));
         try { localStorage.setItem("dm_member", "1"); } catch (err) {}
@@ -234,10 +234,10 @@
       e.preventDefault();
       const name = document.getElementById("suName").value.trim();
       const email = document.getElementById("suEmail").value.trim();
-      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME20", memberNo: genMemberNo(), orders: [],
+      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME10", memberNo: genMemberNo(), orders: [],
         points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
       try { localStorage.setItem("dm_member","1"); } catch(err){}
-      showToast("Welcome to Samira Home Decor! Your 20% code is ready 🎉");
+      showToast("Welcome to Samira Home Decor! Your 10% code is ready 🎉");
       render();
       return false;
     }
@@ -247,7 +247,7 @@
       const existing = getAccount();
       // Demo: log into existing account, or create a lightweight member on the fly
       const acc = (existing && existing.email) ? existing
-        : { name: "", email, member: true, memberSince: todayAU(), coupon: "WELCOME20" };
+        : { name: "", email, member: true, memberSince: todayAU(), coupon: "WELCOME10" };
       acc.email = email;
       saveAccount(acc);
       showToast("Welcome back! 👋");
@@ -288,8 +288,8 @@
 
         <div class="reward">
           <div>
-            <small>Your welcome reward, 20% off</small>
-            <span class="code" id="couponCode">${acc.coupon || "WELCOME20"}</span>
+            <small>Your welcome reward, 10% off</small>
+            <span class="code" id="couponCode">${acc.coupon || "WELCOME10"}</span>
           </div>
           <button class="btn btn--dark btn--sm" onclick="copyCoupon()">Copy code</button>
         </div>

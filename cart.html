@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=32">
+  <link rel="stylesheet" href="css/styles.css?v=33">
 </head>
 <body data-page="cart.html">
   <div id="site-header"></div>
@@ -47,7 +47,7 @@
 
   <div id="site-footer"></div>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=32"></script>
+  <script src="js/components.js?v=33"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script>
@@ -174,11 +174,11 @@
           <summary>🏷️ Use a promotional code</summary>
           <div class="fold-body">
             <div style="display:flex;gap:8px">
-              <input id="couponInput" placeholder="Promo code (try WELCOME20)" value="${window._coupon || ""}"
+              <input id="couponInput" placeholder="Promo code (try WELCOME10)" value="${window._coupon || ""}"
                      style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
               <button class="btn btn--outline btn--sm" onclick="applyCoupon()">Apply</button>
             </div>
-            ${window._coupon === "WELCOME20" ? `<div style="font-size:0.82rem;color:var(--forest);margin-top:8px">✓ Member code applied — 20% off</div>` : ""}
+            ${window._coupon === "WELCOME10" ? `<div style="font-size:0.82rem;color:var(--forest);margin-top:8px">✓ Member code applied — 10% off</div>` : ""}
           </div>
         </details>
 
@@ -214,7 +214,7 @@
 
     function applyCoupon() {
       const val = (document.getElementById("couponInput").value || "").trim().toUpperCase();
-      if (val === "WELCOME20") { window._coupon = "WELCOME20"; localStorage.setItem("dm_coupon", "WELCOME20"); showToast("Member code applied, 20% off 🎉"); }
+      if (val === "WELCOME10" || val === "WELCOME20") { window._coupon = "WELCOME10"; localStorage.setItem("dm_coupon", "WELCOME10"); showToast("Member code applied, 10% off 🎉"); }
       else if (!val) { window._coupon = null; localStorage.removeItem("dm_coupon"); }
       else { showToast("Sorry, that code isn't valid"); }
       renderCartPage();

@@ -429,7 +429,7 @@ function buildFooter() {
       <div class="container news-bar-inner">
         <div class="news-copy">
           <span class="news-badge">✦ The Edit</span>
-          <div><strong>Sign up &amp; save 20% on your first order</strong><span>New arrivals, member offers &amp; styling inspiration, straight to your inbox.</span></div>
+          <div><strong>Sign up &amp; save 10% on your first order</strong><span>New arrivals, member offers &amp; styling inspiration, straight to your inbox.</span></div>
         </div>
         <form class="news-form2" data-newsletter>
           <input type="email" placeholder="Your email address" aria-label="Email" required>
@@ -1023,7 +1023,7 @@ function buildMemberBanner() {
     <button class="promo-close" id="promoClose" aria-label="Close">✕</button>
     <span class="promo-badge">✦ Samira Members</span>
     <div class="promo-copy">
-      <strong>Save 20% on your first Samira Home Decor order</strong>
+      <strong>Save 10% on your first Samira Home Decor order</strong>
       <span>Early access · member-only offers · a birthday treat</span>
     </div>
     <button class="btn btn--primary btn--sm" onclick="openMemberModal();hideMemberBanner();">Become a member</button>
@@ -1058,7 +1058,7 @@ function initMemberBanner() {
 }
 
 /* ============================================================
-   Membership sign-up modal (20% off + perks)
+   Membership sign-up modal (10% off + perks)
    ============================================================ */
 function buildMemberModal() {
   const icGift = `<svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><rect x="7" y="18" width="34" height="9" rx="1.5"/><path d="M10 27v14a1.5 1.5 0 0 0 1.5 1.5h25A1.5 1.5 0 0 0 38 41V27M24 18v24"/><path d="M24 18s-3-8-8-7c-3.4.7-3 6 1 7h7zM24 18s3-8 8-7c3.4.7 3 6-1 7h-7z"/></svg>`;
@@ -1071,7 +1071,7 @@ function buildMemberModal() {
       <button class="member-close" id="memberClose" aria-label="Close">✕</button>
       <div class="rw-head">
         <span class="rw-brand">SAMIRA <strong>REWARDS</strong></span>
-        <p class="rw-offer">Sign up &amp; get <strong>20% off</strong> your first order, plus a <strong>$10 voucher</strong> for your next purchase</p>
+        <p class="rw-offer">Sign up &amp; get <strong>10% off</strong> your first order, plus a <strong>$10 voucher</strong> for your next purchase</p>
       </div>
       <div class="rw-benefits">
         <div class="rw-benefit">
@@ -1134,11 +1134,11 @@ function initMemberModal() {
         email: email.trim() || existing.email || "",
         member: true,
         memberSince: existing.memberSince || todayAU(),
-        coupon: existing.coupon || "WELCOME20"
+        coupon: existing.coupon || "WELCOME10"
       });
     }
     closeMemberModal();
-    showToast("Welcome to Samira Home Decor! Your 20% code WELCOME20 is ready 🎉");
+    showToast("Welcome to Samira Home Decor! Your 10% code WELCOME10 is ready 🎉");
   });
 
   // Auto-show once per session on visit (unless already a member or dismissed)
@@ -1349,10 +1349,10 @@ function chatReply(text) {
     html = `Yes, shop now, pay later! 💳 We offer <strong>Afterpay, Klarna and Zip</strong> at checkout, alongside Visa, Mastercard, Amex, PayPal and Apple/Google Pay.`;
 
   else if (has(/\b(member|membership|join|sign up|loyalty|rewards)\b/))
-    html = `Join free and get <strong>20% off your first purchase</strong> 🎉, plus early access to new arrivals, member-only offers and a birthday treat. Look for the "Become a member" banner, or I can pop it open for you!`;
+    html = `Join free and get <strong>10% off your first purchase</strong> 🎉, plus early access to new arrivals, member-only offers and a birthday treat. Look for the "Become a member" banner, or I can pop it open for you!`;
 
   else if (has(/\b(price|cost|how much|expensive|cheap|budget|afford|discount|sale|coupon|promo|voucher)\b/))
-    html = `We have something for every budget, from $14 coasters to statement furniture 💛. New here? <strong>Become a member for 20% off your first order</strong>, then filter by category in the ${link("shop.html", "Shop")}. Gift cards are available too!`;
+    html = `We have something for every budget, from $14 coasters to statement furniture 💛. New here? <strong>Become a member for 10% off your first order</strong>, then filter by category in the ${link("shop.html", "Shop")}. Gift cards are available too!`;
 
   else if (has(/\b(track|tracking|where.*order|order status|my order|find my order)\b/))
     html = `You can track your order anytime on our ${link("track.html", "Track Your Order")} page, just enter your order number, email or phone used at checkout 📦. You'll also get a tracking link by email when it ships.`;

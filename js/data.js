@@ -16,7 +16,7 @@ const SAMIRA = {
   // Site-wide sale campaign. Set percent:0 (or endsAt in the past) to turn OFF.
   // OFF (percent: 0). To run a sale: set percent + a future endsAt, update the
   // headline/label, then re-run `npm run catalogue` so the server-side discount
-  // ceiling matches. Expired 20% "Winter Décor Refresh" retired 2026-09-20.
+  // ceiling matches. Expired 10% "Winter Décor Refresh" retired 2026-09-20.
   campaign: { headline: "", label: "", percent: 0, endsAt: "" },
   formEmail: "hello@samirahomedecor.com",
   formEndpoint: "",
@@ -437,7 +437,7 @@ const ANNOUNCEMENTS = [
   "✦ Free shipping on orders over $500, Australia-wide",
   "🌏 We ship to Australia, NZ, UK, USA, Canada &amp; Nigeria",
   "🌸 New décor finds added weekly",
-  "💝 Members save 20% on their first order, join free",
+  "💝 Members save 10% on their first order, join free",
   "⭐ Loved by 500+ Australian homes · 4.9★ average review",
   "🎁 Build your own luxury hamper, gifting made effortless",
   "💡 Tip: tap the ♡ on any piece to save it to your wishlist for later",
