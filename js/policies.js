@@ -42,7 +42,7 @@ const FAQ_ITEMS = [
   { q: "How long do customised orders take to be delivered?",
     a: "Standard orders are dispatched within 1 to 2 business days. Customised, personalised and made-to-order items take a few additional days to create before they ship, so your total delivery time will be a little longer. We'll always confirm an estimated timeframe once we accept your custom order." },
   { q: "How can I contact Samira Home Decor?",
-    a: "Email <a href='mailto:Decormuseofficial@outlook.com'>Decormuseofficial@outlook.com</a>, or message us on WhatsApp. We're a proudly Australian online store 🇦🇺." }
+    a: "Email <a href='mailto:hello@samirahomedecor.com'>hello@samirahomedecor.com</a>, or message us on WhatsApp. We're a proudly Australian online store 🇦🇺." }
 ];
 
 const POLICIES = {
@@ -86,7 +86,7 @@ const POLICIES = {
       <p>Please ensure your delivery details are correct. Re-delivery or redirection caused by an incorrect address may incur additional charges. If a parcel is returned to us as undeliverable, we'll contact you to arrange re-delivery (additional postage may apply).</p>
 
       <h3>8. Damaged or lost in transit</h3>
-      <p>If your order arrives damaged, or does not arrive within a reasonable time, please contact us within 7 days at <a href="mailto:Decormuseofficial@outlook.com">Decormuseofficial@outlook.com</a> so we can help resolve it. Nothing in this policy limits your rights under the Australian Consumer Law.</p>
+      <p>If your order arrives damaged, or does not arrive within a reasonable time, please contact us within 7 days at <a href="mailto:hello@samirahomedecor.com">hello@samirahomedecor.com</a> so we can help resolve it. Nothing in this policy limits your rights under the Australian Consumer Law.</p>
     `
   },
 
@@ -119,7 +119,7 @@ const POLICIES = {
       <p>This does not exclude your ACL rights where such an item is faulty.</p>
 
       <h3>5. How to request a return</h3>
-      <p>Email <a href="mailto:Decormuseofficial@outlook.com">Decormuseofficial@outlook.com</a>, or message us on WhatsApp, with your order number and reason for return. We'll provide return instructions. Please do not send items back before contacting us.</p>
+      <p>Email <a href="mailto:hello@samirahomedecor.com">hello@samirahomedecor.com</a>, or message us on WhatsApp, with your order number and reason for return. We'll provide return instructions. Please do not send items back before contacting us.</p>
 
       <h3>6. Refunds</h3>
       <p>Approved refunds are made to your original payment method within <strong>5 to 10 business days</strong> of us receiving and inspecting the returned item. Payment processing times may vary by provider.</p>
@@ -167,7 +167,7 @@ const POLICIES = {
       <p>Our website uses cookies to remember your cart and preferences and to understand site usage. You can control cookies through your browser settings; disabling them may affect some features.</p>
 
       <h3>9. Contact</h3>
-      <p>Privacy enquiries: <a href="mailto:Decormuseofficial@outlook.com">Decormuseofficial@outlook.com</a> · Australia 🇦🇺.</p>
+      <p>Privacy enquiries: <a href="mailto:hello@samirahomedecor.com">hello@samirahomedecor.com</a> · Australia 🇦🇺.</p>
     `
   },
 

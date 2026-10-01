@@ -7,7 +7,7 @@
 const DECOMUSE = {
   brand: "Samira Home Decor",
   tagline: "Home Décor Store",
-  email: "Decormuseofficial@outlook.com",
+  email: "hello@samirahomedecor.com",
   location: "Australia",
   flag: "🇦🇺",
   abn: "41 991 812 955",
@@ -18,14 +18,14 @@ const DECOMUSE = {
   // headline/label, then re-run `npm run catalogue` so the server-side discount
   // ceiling matches. Expired 20% "Winter Décor Refresh" retired 2026-09-20.
   campaign: { headline: "", label: "", percent: 0, endsAt: "" },
-  formEmail: "decormuseofficial@outlook.com",
+  formEmail: "hello@samirahomedecor.com",
   formEndpoint: "",
   formAccessKey: "f59d2f99-262b-46a0-987c-d94bcfe4b1bb",
   stripe: { publishableKey: "", checkoutEndpoint: "/.netlify/functions/create-checkout-session" },
   bookingsUrl: "",
   availability: { 0: null, 1: [9, 17], 2: [9, 17], 3: [9, 17], 4: [9, 17], 5: [9, 17], 6: [10, 16] },
   socials: {
-    instagram: "https://www.instagram.com/decormuseofficial?igsh=MTU3ZWowNnUyNmI0dQ%3D%3D&utm_source=qr",
+    instagram: "https://www.instagram.com/samirahomedecor",
     facebook: "https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr",
     tiktok: "https://www.tiktok.com/@decormuseofficial",
     youtube: "https://www.youtube.com/@decormuseofficial",
