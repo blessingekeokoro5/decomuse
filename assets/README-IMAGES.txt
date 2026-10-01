@@ -1,4 +1,4 @@
-DECOMUSE — HOW TO ADD YOUR REAL PHOTOS
+SAMIRA HOME DECOR — HOW TO ADD YOUR REAL PHOTOS
 ========================================
 
 Drop your image files into this "assets" folder using the exact

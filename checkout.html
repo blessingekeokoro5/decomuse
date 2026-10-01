@@ -46,7 +46,7 @@
   <script src="js/data.js?v=15"></script>
   <!-- Load Stripe.js only if a publishable key is configured (kept optional/self-contained) -->
   <script>
-    if (window.DECOMUSE && DECOMUSE.stripe && DECOMUSE.stripe.publishableKey) {
+    if (window.SAMIRA && SAMIRA.stripe && SAMIRA.stripe.publishableKey) {
       var s = document.createElement("script"); s.src = "https://js.stripe.com/v3/"; document.head.appendChild(s);
     }
   </script>

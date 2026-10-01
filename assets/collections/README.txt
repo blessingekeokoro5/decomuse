@@ -1,4 +1,4 @@
-Collection hero images for DecoMuse room / collection pages.
+Collection hero images for Samira Home Decor room / collection pages.
 
 Save each collection's hero photo here with these EXACT names:
 

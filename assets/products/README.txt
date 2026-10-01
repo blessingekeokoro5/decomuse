@@ -1,4 +1,4 @@
-DECOMUSE — PRODUCT PHOTOS
+SAMIRA HOME DECOR — PRODUCT PHOTOS
 ==========================
 
 Save each product's photo in THIS folder, named after the product's ID.

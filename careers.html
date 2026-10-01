@@ -120,7 +120,7 @@
           say("Your CV is over 5MB. Please upload a smaller file, or email it to <a href='mailto:hello@samirahomedecor.com'>hello@samirahomedecor.com</a>.", true);
           return;
         }
-        var key = (typeof DECOMUSE !== "undefined" && DECOMUSE.formAccessKey) || "";
+        var key = (typeof SAMIRA !== "undefined" && SAMIRA.formAccessKey) || "";
         var fd = new FormData(form);
         fd.append("access_key", key);
         fd.append("subject", "Samira Home Decor — Careers application");
