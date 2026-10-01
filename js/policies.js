@@ -140,7 +140,7 @@ const POLICIES = {
       <p>We may collect personal information including your name, delivery and billing address, email, phone number, order details and, where relevant, information you provide when booking a service, applying for a role, or contacting us. We do not store full card numbers, payments are handled by secure third-party processors.</p>
 
       <h3>2. How we collect it</h3>
-      <p>We collect information directly from you when you place an order, create an account, subscribe to our newsletter, book a service, use the Samira Assistant or chat, or contact us. Some information (such as cookies and site analytics) is collected automatically when you use our website.</p>
+      <p>We collect information directly from you when you place an order, create an account, subscribe to our newsletter, book a service, use the Samira Stylera or chat, or contact us. Some information (such as cookies and site analytics) is collected automatically when you use our website.</p>
 
       <h3>3. Why we use it</h3>
       <ul>
@@ -157,8 +157,8 @@ const POLICIES = {
       <h3>5. Storage &amp; security</h3>
       <p>We take reasonable steps to protect your personal information from misuse, loss, and unauthorised access, including secure systems and access controls. No method of transmission over the internet is completely secure, but we work to safeguard your data.</p>
 
-      <h3>6. The Samira Assistant &amp; images</h3>
-      <p>Photos uploaded to the Samira Assistant tool are processed to generate styling recommendations. In the current version, images are processed in your browser and are not stored on our servers.</p>
+      <h3>6. The Samira Stylera &amp; images</h3>
+      <p>Photos uploaded to the Samira Stylera tool are processed to generate styling recommendations. In the current version, images are processed in your browser and are not stored on our servers.</p>
 
       <h3>7. Access, correction &amp; complaints</h3>
       <p>You may request access to, or correction of, the personal information we hold about you by contacting us. If you have a privacy concern, contact us first and we'll work to resolve it. You may also contact the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>.</p>
@@ -188,7 +188,7 @@ const POLICIES = {
       <p>We accept the payment methods shown at checkout. Payments are processed securely by third-party providers. You warrant that you are authorised to use the chosen payment method.</p>
 
       <h3>5. Services &amp; bookings</h3>
-      <p>Samira Assistant recommendations are provided as a guide only. Custom hampers, personalised gifts and gift cards are made to order.</p>
+      <p>Samira Stylera recommendations are provided as a guide only. Custom hampers, personalised gifts and gift cards are made to order.</p>
 
       <h3>6. External links</h3>
       <p>Our site may link to third-party sites and services (for example payment providers, delivery partners and social media). We are not responsible for the content or practices of third-party websites.</p>
