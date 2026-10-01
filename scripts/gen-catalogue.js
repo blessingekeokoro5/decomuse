@@ -35,12 +35,12 @@ sandbox.globalThis = sandbox;
 
 const source =
   fs.readFileSync(SRC, "utf8") +
-  "\n;globalThis.__out = { PRODUCTS, HAMPER_ITEMS, HAMPER_MIN, DECOMUSE };\n";
+  "\n;globalThis.__out = { PRODUCTS, HAMPER_ITEMS, HAMPER_MIN, SAMIRA };\n";
 
 vm.createContext(sandbox);
 vm.runInContext(source, sandbox, { filename: "js/data.js" });
 
-const { PRODUCTS, HAMPER_ITEMS, HAMPER_MIN, DECOMUSE } = sandbox.__out;
+const { PRODUCTS, HAMPER_ITEMS, HAMPER_MIN, SAMIRA } = sandbox.__out;
 
 function num(v) {
   // Take the FIRST number in the string. Stripping every non-digit instead
@@ -78,7 +78,7 @@ const hamperItems = {};
   if (h && h.id) hamperItems[h.id] = { name: String(h.name || ""), price: num(h.price) };
 });
 
-const campaign = (DECOMUSE && DECOMUSE.campaign) || null;
+const campaign = (SAMIRA && SAMIRA.campaign) || null;
 
 const out = {
   generatedAt: new Date().toISOString(),

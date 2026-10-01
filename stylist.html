@@ -234,7 +234,7 @@
       }).join("") + `</div>`;
     }
     function museReply(r) {
-      let html = `<div class="mc-lbl">MUSE STYLIST</div>${r.text}`;
+      let html = `<div class="mc-lbl">SAMIRA ASSISTANT</div>${r.text}`;
       if (r.cards && r.cards.length) html += museCards(r.cards);
       if (r.link) html += `<a class="mc-link" href="${r.link[1]}">${r.link[0]} →</a>`;
       museAddMsg(html, "bot");

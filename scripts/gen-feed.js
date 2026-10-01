@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   DÉCOMUSE — Google Shopping feed generator
+   SAMIRA HOME DECOR — Google Shopping feed generator
    Reads js/data.js (the single source of truth) and writes
    feed.xml at the site root — a valid Google Merchant Center
    product feed (RSS 2.0 with the g: namespace).
@@ -26,10 +26,10 @@ const sandbox = { localStorage: { getItem: () => null }, console };
 vm.createContext(sandbox);
 // Run the data file, then export the top-level consts onto the sandbox
 // (vm does not attach `const`/`let` bindings to the context object).
-vm.runInContext(code + "\n;globalThis.__PRODUCTS = PRODUCTS; globalThis.__DECOMUSE = DECOMUSE;", sandbox, { filename: "data.js" });
+vm.runInContext(code + "\n;globalThis.__PRODUCTS = PRODUCTS; globalThis.__SAMIRA = SAMIRA;", sandbox, { filename: "data.js" });
 
 const PRODUCTS = sandbox.__PRODUCTS || [];
-const BRAND = (sandbox.__DECOMUSE && sandbox.__DECOMUSE.brand) || "Samira Home Decor";
+const BRAND = (sandbox.__SAMIRA && sandbox.__SAMIRA.brand) || "Samira Home Decor";
 
 const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")

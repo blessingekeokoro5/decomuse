@@ -1,4 +1,4 @@
-# DecoMuse — Stripe Payments Setup
+# Samira Home Decor — Stripe Payments Setup
 
 Professional, low-maintenance setup: a static site on Netlify + two serverless
 functions + Stripe's hosted checkout. You never handle raw card data, and every
@@ -66,7 +66,7 @@ Stripe starts in **Test mode** (toggle, top-right). Go to **Developers → API k
 1. Push this folder to a GitHub repo (or drag-and-drop deploy).
 2. At https://app.netlify.com → **Add new site → Import**, pick the repo.
 3. Build settings: leave build command empty, publish directory `.` (netlify.toml already sets this).
-4. Deploy. Note your URL, e.g. `https://decomuse.netlify.app`.
+4. Deploy. Note your URL, e.g. `https://samirahomedecor.netlify.app`.
 
 ## Step 4 — Add environment variables (Netlify)
 **Site configuration → Environment variables → Add:**
@@ -74,7 +74,7 @@ Stripe starts in **Test mode** (toggle, top-right). Go to **Developers → API k
 | Key | Value |
 |-----|-------|
 | `STRIPE_SECRET_KEY` | `sk_test_...` (your test secret key) |
-| `SITE_URL` | your live URL **including `www`**, e.g. `https://www.decomuse.com.au` — this is where Stripe returns the shopper after payment. If unset it falls back to `https://www.decomuse.com.au`. |
+| `SITE_URL` | your live URL **including `www`**, e.g. `https://www.samirahomedecor.com.au` — this is where Stripe returns the shopper after payment. If unset it falls back to `https://www.samirahomedecor.com.au`. |
 | `ORDER_EMAIL` | `Decormuseofficial@outlook.com` |
 | `WEB3FORMS_KEY` | access key from https://web3forms.com — also how gift-card-paid orders reach you, so worth setting |
 | `ADMIN_SECRET` | a long random string, known only to you. Required to issue store credit; without it, nobody can (including you). |
@@ -131,7 +131,7 @@ whose id is the card code), holding its remaining balance.
 2. **Issued by you**, for approved returns credit, goodwill or prizes:
 
 ```bash
-curl -X POST https://www.decomuse.com.au/api/issue-gift-card \
+curl -X POST https://www.samirahomedecor.com.au/api/issue-gift-card \
   -H "Content-Type: application/json" \
   -d '{"secret":"YOUR_ADMIN_SECRET","amount":52.50,"note":"Return RET-1234"}'
 ```
@@ -149,7 +149,7 @@ to you — this is the only record of it, since no Stripe payment takes place.
 The returns page used to create a spendable gift card directly in the customer's
 browser, with a 5% bonus, the moment they chose "gift card". Anyone could grant
 themselves credit and check out for nothing — and the resulting "order" never
-reached DecoMuse at all, so nothing would have shipped, but the confirmation
+reached Samira Home Decor at all, so nothing would have shipped, but the confirmation
 page said it had.
 
 It now records a credit **request** and tells the customer their code will be

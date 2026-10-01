@@ -7,4 +7,4 @@ Disallow: /agreement.html
 Disallow: /checkout.html
 Disallow: /order-confirmed.html
 
-Sitemap: https://www.decomuse.com.au/sitemap.xml
+Sitemap: https://www.samirahomedecor.com.au/sitemap.xml

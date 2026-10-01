@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   DÉCOMUSE — Sitemap generator
+   SAMIRA HOME DECOR — Sitemap generator
    Reads js/data.js (PRODUCTS) and js/blog.js (POSTS) and writes
    sitemap.xml at the site root, using the canonical www host and
    only real, indexable pages (+ every product & blog article).
