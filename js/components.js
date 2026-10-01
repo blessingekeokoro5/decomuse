@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Shared components (header, mega-menu, footer)
+   SAMIRA HOME DECOR, Shared components (header, mega-menu, footer)
    Injected into every page for a single source of truth.
    ============================================================ */
 
@@ -243,7 +243,7 @@ function buildHeader() {
     { label: "Vacation Rentals", href: "vacation-rentals.html" },
     { label: "Interior Design", href: "interior-design.html" }
   ];
-  const socials = DECOMUSE.socials || {};
+  const socials = SAMIRA.socials || {};
   const socialLinks = [];
   if (socials.facebook) socialLinks.push(`<a href="${socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>`);
   if (socials.instagram) socialLinks.push(`<a href="${socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>`);
@@ -385,7 +385,7 @@ function buildFooter() {
     { t: "Gift Cards", h: "gift-cards.html" },
     { t: "Gift Hamper Maker", h: "hamper-maker.html" }
   ];
-  const decomuseLinks = [
+  const samiraLinks = [
     { t: "About Us", h: "about.html" },
     { t: "Property Styling & Design", h: "staging.html" },
     { t: "Portfolio", h: "portfolio.html" },
@@ -444,16 +444,16 @@ function buildFooter() {
           <div class="fb-name">Style Your Space by Samira</div>
           <div class="fb-tag">Home décor for every house</div>
           <p>Objects worth living with. Australia's curated home, lifestyle &amp; fragrance store, décor, fragrance, wellness, everyday essentials &amp; beautiful gifting.</p>
-          <div class="fc-row" style="color:#ddccc2;margin-top:14px"><span class="fc-ic">${DECOMUSE.flag}</span> <strong>${DECOMUSE.location}</strong></div>
+          <div class="fc-row" style="color:#ddccc2;margin-top:14px"><span class="fc-ic">${SAMIRA.flag}</span> <strong>${SAMIRA.location}</strong></div>
           <div class="socials" style="margin-top:16px">
-            <a href="${DECOMUSE.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>
-            <a href="${DECOMUSE.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
-            <a href="${DECOMUSE.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>
-            <a href="${DECOMUSE.socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${YOUTUBE_SVG}</a>
+            <a href="${SAMIRA.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>
+            <a href="${SAMIRA.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
+            <a href="${SAMIRA.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>
+            <a href="${SAMIRA.socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${YOUTUBE_SVG}</a>
           </div>
         </div>
 
-        ${col("Samira Home Decor", decomuseLinks)}
+        ${col("Samira Home Decor", samiraLinks)}
         ${col("Information of interest", infoLinks)}
         ${col("Our policies", policyLinks)}
         ${col("Shop & occasions", occasionLinks)}
@@ -498,7 +498,7 @@ function buildFooter() {
       </div>
 
       <div class="footer-bottom">
-        <span>© ${DECOMUSE.est} Samira Home Decor. All rights reserved · Proudly Australian ${DECOMUSE.flag}</span>
+        <span>© ${SAMIRA.est} Samira Home Decor. All rights reserved · Proudly Australian ${SAMIRA.flag}</span>
         <span class="footer-bottom-links">
           <a href="policy.html?doc=delivery">Delivery &amp; Shipping</a> ·
           <a href="policy.html?doc=returns">Returns</a> ·
@@ -1293,7 +1293,7 @@ function dmSelectIssue(issue) {
 }
 
 // Pre-filled WhatsApp handoff to a real team member
-const WA_HANDOFF = (DECOMUSE.socials.whatsapp || "https://wa.me/61451609398") +
+const WA_HANDOFF = (SAMIRA.socials.whatsapp || "https://wa.me/61451609398") +
   "?text=" + encodeURIComponent("Hi Samira Home Decor 🙂 I'd like to chat with a team member about ");
 function waButton(label) {
   return `<a class="chat-wa" href="${WA_HANDOFF}" target="_blank" rel="noopener">${IC.wa} ${label || "Chat with a human on WhatsApp"}</a>`;
@@ -1310,7 +1310,7 @@ function chatReply(text) {
     html = `Hi, lovely to meet you! 👋 I'm Samira Assistant, your personal shopping assistant. I can help you find a home fragrance, styling piece or gift, build a gift hamper, or track an order. What are you after today?`;
 
   else if (has(/\b(human|real person|agent|team member|speak to someone|talk to someone|representative|customer service)\b/))
-    html = `Of course, I'll connect you with a real Samira Home Decor team member. Reach us straight away on WhatsApp, or email ${DECOMUSE.email}.<br>${waButton()}`;
+    html = `Of course, I'll connect you with a real Samira Home Decor team member. Reach us straight away on WhatsApp, or email ${SAMIRA.email}.<br>${waButton()}`;
 
   else if (has(/\b(fragrance|scent|diffuser|candle|room spray|essential oil)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Home Fragrances")} edit (in Lifestyle) has reed diffusers, scented candles, room sprays and essential oils 🌸, everything to layer your home with scent.`;
@@ -1373,10 +1373,10 @@ function chatReply(text) {
     html = `We love this question 🌱, we curate quality, considered pieces made to last, favour natural materials, and offer eco-friendly options (including for cleaning). Ask about a specific piece and I'll share what I know.`;
 
   else if (has(/\b(career|job|hiring|work with|vacancy|apply|position)\b/))
-    html = `Thanks for your interest! For any opportunities, email us at ${DECOMUSE.email} 🌿.`;
+    html = `Thanks for your interest! For any opportunities, email us at ${SAMIRA.email} 🌿.`;
 
   else if (has(/\b(contact|call|phone|email|reach|number)\b/))
-    html = `You can email us at ${DECOMUSE.email}, or via ${link("contact.html", "Contact")} 💬. Prefer a real person now? ${waButton("Chat on WhatsApp")}`;
+    html = `You can email us at ${SAMIRA.email}, or via ${link("contact.html", "Contact")} 💬. Prefer a real person now? ${waButton("Chat on WhatsApp")}`;
 
   else if (has(/\b(thank|thanks|cheers|awesome|great|perfect|love)\b/))
     html = `You're so welcome! 💛 Is there anything else I can help you find or style today?`;

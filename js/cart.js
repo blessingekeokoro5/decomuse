@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Cart (localStorage) + toast + product helpers
+   SAMIRA HOME DECOR, Cart (localStorage) + toast + product helpers
    ============================================================ */
 
 const CART_KEY = "decomuse_cart";
@@ -52,9 +52,9 @@ function setQty(key, qty) {
   if (typeof renderCartPage === "function") renderCartPage();
 }
 
-/* Live sale campaign (Winter Décor Refresh, etc.) — set in DECOMUSE.campaign */
+/* Live sale campaign (Winter Décor Refresh, etc.) — set in SAMIRA.campaign */
 function getCampaign() {
-  const c = (typeof DECOMUSE !== "undefined" && DECOMUSE.campaign) || null;
+  const c = (typeof SAMIRA !== "undefined" && SAMIRA.campaign) || null;
   if (!c || !c.percent || !c.endsAt) return { active: false, percent: 0 };
   const ends = new Date(c.endsAt).getTime();
   return { active: Date.now() < ends, percent: c.percent, label: c.label || "Sale", headline: c.headline, endsAt: ends };
@@ -302,7 +302,7 @@ async function emailMyBag() {
   const cart = getCart();
   if (!cart.length) { showToast("Your shopping list is empty"); return; }
 
-  const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE) || {};
+  const cfg = (typeof SAMIRA !== "undefined" && SAMIRA) || {};
   const endpoint = cfg.emailListEndpoint || "/.netlify/functions/send-shopping-list";
 
   // Pre-fill with the logged-in member's email if we have one.

@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Policy content (Australian standards)
+   SAMIRA HOME DECOR, Policy content (Australian standards)
    ------------------------------------------------------------
    NOTE: These are good-faith template policies aligned to the
    Australian Consumer Law (ACL), Privacy Act 1988 (Cth) and the

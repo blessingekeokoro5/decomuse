@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Checkout
+   SAMIRA HOME DECOR, Checkout
    Renders the order summary + collects shipping details, then
    pays via Stripe Checkout when configured, else demo mode.
    ============================================================ */
@@ -288,7 +288,7 @@ async function startPayment(e) {
     return;
   }
   const btn = document.getElementById("payBtn");
-  const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE.stripe) || {};
+  const cfg = (typeof SAMIRA !== "undefined" && SAMIRA.stripe) || {};
   const cart = getCart();
   const t = checkoutTotals();
 

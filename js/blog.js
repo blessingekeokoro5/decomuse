@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE — The Edit (journal / blog)
+   SAMIRA HOME DECOR — The Edit (journal / blog)
    SEO content. Add a new object to POSTS to publish an article.
    Drop a cover photo at assets/blog/<slug>.jpg (optional; falls
    back to a tinted placeholder). Body is HTML.

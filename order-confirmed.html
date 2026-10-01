@@ -115,7 +115,7 @@
           shipping: (rec && rec.shipping) || 0,
           date: rec && rec.date, items: (rec && rec.items) || []
         };
-        const endpoint = ((typeof DECOMUSE !== "undefined" && DECOMUSE.orderEmailEndpoint) || "/.netlify/functions/send-order-confirmation");
+        const endpoint = ((typeof SAMIRA !== "undefined" && SAMIRA.orderEmailEndpoint) || "/.netlify/functions/send-order-confirmation");
         const res = await fetch(endpoint, { method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" }, body: JSON.stringify(payload) });
         const data = await res.json().catch(function () { return {}; });
         if (res.ok && data.ok) { doneList.push(o.orderNo); localStorage.setItem("dm_order_emailed", JSON.stringify(doneList)); }
@@ -150,7 +150,7 @@
 
       let sent = [];
       try { sent = JSON.parse(localStorage.getItem("dm_giftcards_sent") || "[]"); } catch (e) {}
-      const endpoint = ((typeof DECOMUSE !== "undefined" && DECOMUSE.giftCardEndpoint) || "/.netlify/functions/send-gift-card");
+      const endpoint = ((typeof SAMIRA !== "undefined" && SAMIRA.giftCardEndpoint) || "/.netlify/functions/send-gift-card");
 
       for (const item of cards) {
         const gc = item.giftCard;

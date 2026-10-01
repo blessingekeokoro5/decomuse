@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Design System
+   SAMIRA HOME DECOR, Design System
    Blush pink + emerald green · warm, refined, lifestyle
    ============================================================ */
 
@@ -974,7 +974,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .breadcrumb { font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 20px; }
 .breadcrumb a { color: var(--rose-deep); }
 
-/* ---- Muse Stylist AI ---- */
+/* ---- Samira Assistant ---- */
 .upload-zone { border: 2px dashed var(--rose-soft); border-radius: var(--radius); padding: 56px 24px;
   text-align: center; background: #fff; cursor: pointer; transition: all var(--tr); }
 .upload-zone:hover, .upload-zone.drag { border-color: var(--rose); background: var(--blush); }
@@ -1221,7 +1221,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .chat-wa svg { width: 17px; height: 17px; }
 @media (max-width: 480px) { .chat-nudge { display: none; } }
 
-/* ---- MuseStylist AI chat widget ---- */
+/* ---- Samira Assistant chat widget ---- */
 .chat-panel {
   position: fixed; right: 22px; bottom: 94px; z-index: 200; width: 370px; max-width: calc(100vw - 32px);
   height: 540px; max-height: calc(100vh - 130px); background: var(--cream); border: 1px solid var(--line);
@@ -1587,7 +1587,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .pdp-trade strong { color: var(--ink); }
 .pdp-trade:hover { border-color: var(--rose); color: var(--ink); }
 
-/* Chat: MuseStylist / Text-me-back tabs */
+/* Chat: Samira Assistant / Text-me-back tabs */
 .chat-tabs { display: flex; background: #fff; border-bottom: 1px solid var(--line); }
 .chat-tab { flex: 1; padding: 11px 8px; background: none; border: none; cursor: pointer; font-family: var(--font-body); font-size: 0.82rem; font-weight: 500; color: var(--muted); border-bottom: 2px solid transparent; transition: color var(--tr); }
 .chat-tab.active { color: var(--rose-deep); border-bottom-color: var(--rose); }
@@ -1852,7 +1852,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .start-return .sr-btn { display: inline-block; }
 .sr-policy-h { margin: 8px 0 12px; }
 
-/* "Ask MuseStylist" nav pill */
+/* "Ask Samira Assistant" nav pill */
 .ask-muse { display: inline-flex; align-items: center; gap: 6px; border: none; cursor: pointer;
   background: linear-gradient(120deg, var(--rose-deep), #a85f8f 45%, var(--gold));
   color: #fff; font-family: var(--font-body); font-weight: 500; font-size: 0.86rem; letter-spacing: 0.01em;

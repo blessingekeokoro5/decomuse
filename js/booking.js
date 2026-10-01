@@ -1,6 +1,6 @@
 /* ============================================================
-   DÉCOMUSE — Booking calendar (Property Styling, Staging & Interior Design)
-   Embeds a scheduling page if configured (DECOMUSE.bookingsUrl),
+   SAMIRA HOME DECOR — Booking calendar (Property Styling, Staging & Interior Design)
+   Embeds a scheduling page if configured (SAMIRA.bookingsUrl),
    else a built-in calendar that emails the business on submit.
    ============================================================ */
 
@@ -17,7 +17,7 @@ let bk = { type: "styling", date: "", slot: "" };
 function initBooking() {
   const host = document.getElementById("bookingWidget");
   if (!host) return;
-  const url = (typeof DECOMUSE !== "undefined" && DECOMUSE.bookingsUrl) || "";
+  const url = (typeof SAMIRA !== "undefined" && SAMIRA.bookingsUrl) || "";
   if (url) {
     host.innerHTML = `<iframe src="${url}" class="bookings-embed" title="Samira Home Decor booking calendar" loading="lazy"></iframe>`;
     return;
@@ -28,7 +28,7 @@ function initBooking() {
 function bkHour(h) { const ap = h >= 12 ? "pm" : "am"; return `${((h + 11) % 12) + 1}${ap}`; }
 
 function bkAvailabilityNote() {
-  const av = (typeof DECOMUSE !== "undefined" && DECOMUSE.availability) || {};
+  const av = (typeof SAMIRA !== "undefined" && SAMIRA.availability) || {};
   const rows = [];
   for (let d = 1; d <= 6; d++) {
     const a = av[d];
@@ -41,7 +41,7 @@ function bkAvailabilityNote() {
 function bkSlotsFor(dateStr) {
   if (!dateStr) return [];
   const d = new Date(dateStr + "T00:00:00");
-  const av = ((typeof DECOMUSE !== "undefined" && DECOMUSE.availability) || {})[d.getDay()];
+  const av = ((typeof SAMIRA !== "undefined" && SAMIRA.availability) || {})[d.getDay()];
   if (!av) return [];
   const slots = [];
   for (let h = av[0]; h < av[1]; h++) slots.push(`${String(h).padStart(2, "0")}:00`);

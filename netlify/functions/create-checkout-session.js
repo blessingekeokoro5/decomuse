@@ -311,7 +311,7 @@ exports.handler = async (event) => {
       success_url: `${SITE_URL}/order-confirmed.html?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${SITE_URL}/cart.html`,
       metadata: {
-        source: "decomuse-web",
+        source: "samira-web",
         fulfil: String(fulfil),
         suburb: customer.suburb || "",
         postcode: customer.postcode || "",

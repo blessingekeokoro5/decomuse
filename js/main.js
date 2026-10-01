@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Page interactions
+   SAMIRA HOME DECOR, Page interactions
    Hero carousel · scroll reveal · demo forms
    ============================================================ */
 
@@ -74,7 +74,7 @@ function formSubject(form) {
 
 // Deliver: POST to Formspree if configured, otherwise open a pre-addressed email
 async function deliverForm(data, subject) {
-  const cfg = (typeof DECOMUSE !== "undefined" && DECOMUSE) || {};
+  const cfg = (typeof SAMIRA !== "undefined" && SAMIRA) || {};
   const email = cfg.formEmail || "hello@samirahomedecor.com";
   const endpoint = cfg.formEndpoint || "";
   const accessKey = cfg.formAccessKey || "";
@@ -136,7 +136,7 @@ function initForms() {
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const email = (form.querySelector("input") || {}).value || "";
-      if (typeof DECOMUSE !== "undefined" && DECOMUSE.formEndpoint) {
+      if (typeof SAMIRA !== "undefined" && SAMIRA.formEndpoint) {
         deliverForm([["Newsletter subscriber", email]], "Samira Home Decor, New newsletter subscriber");
       }
       form.reset();

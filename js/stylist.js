@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Samira Assistant (client-side demo)
+   SAMIRA HOME DECOR, Samira Assistant (client-side demo)
    Upload a room photo → "analyse" → recommend shoppable pieces.
    (Simulated on-device; swap analyseRoom() for a real API later.)
    ============================================================ */

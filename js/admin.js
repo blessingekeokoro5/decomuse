@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Admin + customer base (client-side)
+   SAMIRA HOME DECOR, Admin + customer base (client-side)
    - Captures client-form submissions into a browser-side store (dm_admin_db)
    - Every submission is ALSO emailed to the business (authoritative record)
    NOTE: localStorage is per-device. For a true shared cross-device database,

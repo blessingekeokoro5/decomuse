@@ -1,5 +1,5 @@
 /* ============================================================
-   DÉCOMUSE, Form library + generic renderer
+   SAMIRA HOME DECOR, Form library + generic renderer
    All admin/client/employee forms are defined as data here and
    rendered by form.html?f=<slug>. Every form gets a compulsory
    drawn-signature block. Submissions save to the customer base

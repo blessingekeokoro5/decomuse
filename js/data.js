@@ -1,10 +1,10 @@
 /* ============================================================
-   DÉCOMUSE, Data layer
+   SAMIRA HOME DECOR, Data layer
    Home décor + lifestyle retail: fragrance, health & wellness,
    home & décor, lifestyle essentials, and gifting.
    ============================================================ */
 
-const DECOMUSE = {
+const SAMIRA = {
   brand: "Samira Home Decor",
   tagline: "Home Décor Store",
   email: "hello@samirahomedecor.com",
@@ -32,6 +32,10 @@ const DECOMUSE = {
     whatsapp: "https://wa.me/61451609398"
   }
 };
+
+/* The old name, kept as an alias so a page a visitor still has open
+   from before the rebrand keeps working. Safe to delete in a few months. */
+const DECOMUSE = SAMIRA;
 
 /* ---- Mega-menu categories (retail) ---- */
 const MEGA_MENU = [

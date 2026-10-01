@@ -317,12 +317,12 @@
     const shuffled = REVIEWS.slice().sort(() => Math.random() - 0.5);
     document.getElementById("reviewsGrid").innerHTML = shuffled.map(reviewCard).join("") + shuffled.map(reviewCard).join("");
 
-    // Sale countdown banner (Winter Décor Refresh) — reads DECOMUSE.campaign
+    // Sale countdown banner (Winter Décor Refresh) — reads SAMIRA.campaign
     (function () {
       const c = (typeof getCampaign === "function") ? getCampaign() : { active: false };
       const bar = document.getElementById("campaignBar");
       if (!bar || !c.active) return;
-      document.getElementById("campaignText").textContent = (DECOMUSE.campaign && DECOMUSE.campaign.headline) || "Sale on now";
+      document.getElementById("campaignText").textContent = (SAMIRA.campaign && SAMIRA.campaign.headline) || "Sale on now";
       bar.style.display = "block";
       const timer = document.getElementById("campaignTimer");
       const pad = (n) => String(n).padStart(2, "0");
