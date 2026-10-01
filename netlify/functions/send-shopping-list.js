@@ -12,10 +12,10 @@
      BREVO_API_KEY   = xkeysib-...   (Brevo → SMTP & API → API keys)
 
    Optional environment variables:
-     SENDER_EMAIL    = hello@samirahomedecor.com  (must be a
+     SENDER_EMAIL    = hello@samirahomedecor.com.au  (must be a
                        VERIFIED sender in Brevo → Senders)
      SENDER_NAME     = Samira Home Decor
-     BUSINESS_EMAIL  = hello@samirahomedecor.com  (gets a bcc)
+     BUSINESS_EMAIL  = hello@samirahomedecor.com.au  (gets a bcc)
      SITE_URL        = https://samirahomedecor.com.au
 
    The frontend (js/cart.js → emailMyBag) POSTs:
@@ -23,9 +23,9 @@
    ============================================================ */
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY || "";
-const SENDER_EMAIL  = process.env.SENDER_EMAIL || "hello@samirahomedecor.com";
+const SENDER_EMAIL  = process.env.SENDER_EMAIL || "hello@samirahomedecor.com.au";
 const SENDER_NAME   = process.env.SENDER_NAME || "Samira Home Decor";
-const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "hello@samirahomedecor.com";
+const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "hello@samirahomedecor.com.au";
 const SITE_URL = process.env.SITE_URL || "https://samirahomedecor.com.au";
 
 function jsonResponse(statusCode, obj) {

@@ -75,7 +75,7 @@ function formSubject(form) {
 // Deliver: POST to Formspree if configured, otherwise open a pre-addressed email
 async function deliverForm(data, subject) {
   const cfg = (typeof SAMIRA !== "undefined" && SAMIRA) || {};
-  const email = cfg.formEmail || "hello@samirahomedecor.com";
+  const email = cfg.formEmail || "hello@samirahomedecor.com.au";
   const endpoint = cfg.formEndpoint || "";
   const accessKey = cfg.formAccessKey || "";
   const replyto = (data.find(d => /email/i.test(d[0])) || [])[1] || "";
@@ -124,7 +124,7 @@ function initForms() {
         success.classList.add("show");
         success.textContent = ok
           ? (form.dataset.successMsg || "Thank you! Your request has been sent to the Samira Home Decor team, we'll be in touch within 2 business hours.")
-          : "Sorry, something went wrong. Please email hello@samirahomedecor.com or message us on WhatsApp.";
+          : "Sorry, something went wrong. Please email hello@samirahomedecor.com.au or message us on WhatsApp.";
       }
       form.reset();
       if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label; }

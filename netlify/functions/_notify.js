@@ -10,7 +10,7 @@
 async function emailShop(subject, body) {
   const key = process.env.WEB3FORMS_KEY;
   if (!key) { console.warn("WEB3FORMS_KEY not set — shop email skipped:", subject); return false; }
-  const to = process.env.ORDER_EMAIL || "hello@samirahomedecor.com";
+  const to = process.env.ORDER_EMAIL || "hello@samirahomedecor.com.au";
   try {
     const res = await fetch("https://api.web3forms.com/submit", {
       method: "POST",

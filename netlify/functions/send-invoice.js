@@ -12,9 +12,9 @@
    ============================================================ */
 
 const BREVO_API_KEY  = process.env.BREVO_API_KEY || "";
-const SENDER_EMAIL   = process.env.SENDER_EMAIL || "hello@samirahomedecor.com";
+const SENDER_EMAIL   = process.env.SENDER_EMAIL || "hello@samirahomedecor.com.au";
 const SENDER_NAME    = process.env.SENDER_NAME || "Samira Home Decor";
-const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "hello@samirahomedecor.com";
+const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "hello@samirahomedecor.com.au";
 const SITE_URL       = process.env.SITE_URL || "https://samirahomedecor.com.au";
 const BIZ_PHONE      = process.env.BUSINESS_PHONE || "0451 609 398";
 const ABN            = "41 991 812 955";

@@ -286,7 +286,7 @@ document.addEventListener("DOMContentLoaded", () => { updateCartCount(); updateW
 
 /* ---- Email my shopping list ----
    If the Brevo email service is configured (server env var BREVO_API_KEY),
-   the list is sent FROM hello@samirahomedecor.com TO the shopper, with
+   the list is sent FROM hello@samirahomedecor.com.au TO the shopper, with
    a copy to the business inbox. If not configured, it gracefully falls back
    to opening the shopper's own email app pre-filled. */
 function bagMailtoFallback(cart) {

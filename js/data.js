@@ -7,7 +7,7 @@
 const SAMIRA = {
   brand: "Samira Home Decor",
   tagline: "Home Décor Store",
-  email: "hello@samirahomedecor.com",
+  email: "hello@samirahomedecor.com.au",
   location: "Australia",
   flag: "🇦🇺",
   abn: "41 991 812 955",
@@ -18,7 +18,7 @@ const SAMIRA = {
   // headline/label, then re-run `npm run catalogue` so the server-side discount
   // ceiling matches. Expired 10% "Winter Décor Refresh" retired 2026-09-20.
   campaign: { headline: "", label: "", percent: 0, endsAt: "" },
-  formEmail: "hello@samirahomedecor.com",
+  formEmail: "hello@samirahomedecor.com.au",
   formEndpoint: "",
   formAccessKey: "f59d2f99-262b-46a0-987c-d94bcfe4b1bb",
   stripe: { publishableKey: "", checkoutEndpoint: "/.netlify/functions/create-checkout-session" },

@@ -15,7 +15,7 @@
      STRIPE_WEBHOOK_SECRET  = whsec_...   (from the webhook you create in Stripe)
    Optional (to email yourself each paid order):
      WEB3FORMS_KEY          = <your Web3Forms access key>
-     ORDER_EMAIL            = hello@samirahomedecor.com
+     ORDER_EMAIL            = hello@samirahomedecor.com.au
    ============================================================ */
 
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
@@ -30,7 +30,7 @@ async function emailOrder(session, lineItems) {
   const key = process.env.WEB3FORMS_KEY;
   if (!key) return; // silently skip if not configured
 
-  const to = process.env.ORDER_EMAIL || "hello@samirahomedecor.com";
+  const to = process.env.ORDER_EMAIL || "hello@samirahomedecor.com.au";
   const ship = session.shipping_details || {};
   const addr = ship.address || {};
   const lines = (lineItems || [])
