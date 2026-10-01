@@ -181,7 +181,7 @@ function buildHeader() {
             <div class="mega-cols">${cols}</div>
           </div>
           <div class="mega-promo">
-            <div class="ph" data-label="decormuse">${CAT_IMG[cat.key] ? `<img class="ph-img" src="${CAT_IMG[cat.key]}" alt="${cat.label}" loading="lazy" onerror="this.remove()">` : ""}</div>
+            <div class="ph" data-label="Samira Home Decor">${CAT_IMG[cat.key] ? `<img class="ph-img" src="${CAT_IMG[cat.key]}" alt="${cat.label}" loading="lazy" onerror="this.remove()">` : ""}</div>
             <div class="mega-promo-actions">
               <a href="rewards.html">Rewards</a><a href="refer-a-friend.html">Referrals</a>
             </div>
