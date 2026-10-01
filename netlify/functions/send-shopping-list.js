@@ -16,7 +16,7 @@
                        VERIFIED sender in Brevo → Senders)
      SENDER_NAME     = Samira Home Decor
      BUSINESS_EMAIL  = decormuseofficial@outlook.com  (gets a bcc)
-     SITE_URL        = https://www.decomuse.com.au
+     SITE_URL        = https://samirahomedecor.com.au
 
    The frontend (js/cart.js → emailMyBag) POSTs:
      { to, items:[{name,qty,price,colour,size,id}], subtotal }
@@ -26,7 +26,7 @@ const BREVO_API_KEY = process.env.BREVO_API_KEY || "";
 const SENDER_EMAIL  = process.env.SENDER_EMAIL || "decormuseofficial@outlook.com";
 const SENDER_NAME   = process.env.SENDER_NAME || "Samira Home Decor";
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "decormuseofficial@outlook.com";
-const SITE_URL = process.env.SITE_URL || "https://www.decomuse.com.au";
+const SITE_URL = process.env.SITE_URL || "https://samirahomedecor.com.au";
 
 function jsonResponse(statusCode, obj) {
   return {

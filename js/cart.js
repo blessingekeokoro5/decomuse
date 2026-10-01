@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => { updateCartCount(); updateW
    a copy to the business inbox. If not configured, it gracefully falls back
    to opening the shopper's own email app pre-filled. */
 function bagMailtoFallback(cart) {
-  const origin = (location.origin && location.origin.indexOf("http") === 0) ? location.origin : "https://www.decomuse.com.au";
+  const origin = (location.origin && location.origin.indexOf("http") === 0) ? location.origin : "https://samirahomedecor.com.au";
   const lines = cart.map(i => {
     const variant = [i.colour, i.size].filter(Boolean).join(", ");
     return `• ${i.qty} x ${i.name}${variant ? " (" + variant + ")" : ""} — ${money(i.price * i.qty)}\n  ${origin}/product.html?id=${i.id}`;

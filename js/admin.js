@@ -37,7 +37,7 @@
       doc.splitTextToSize(str, maxW).forEach(function (ln) { brk(size * 1.45); doc.text(ln, M, y); y += size * 1.45; });
     }
     line(title || "Samira Home Decor", 20, true, [71, 86, 59]);
-    line("www.decomuse.com.au", 9, false, [150, 140, 132]); y += 8;
+    line("samirahomedecor.com.au", 9, false, [150, 140, 132]); y += 8;
     Array.prototype.forEach.call(form.querySelectorAll(".form-sec-title, .field, .consent, .terms, .sig-block"), function (el) {
       if (el.classList.contains("form-sec-title")) { y += 12; line(el.textContent.trim().toUpperCase(), 11, true, [165, 88, 106]); y += 2; }
       else if (el.classList.contains("terms")) {
@@ -76,7 +76,7 @@
       if (logo) { var lw = 118, lh = lw / (ratio || 1.4); try { doc.addImage(logo, "JPEG", M, y, lw, lh); } catch (e) {} }
       doc.setFont("helvetica", "bold"); doc.setFontSize(13); doc.setTextColor(71, 86, 59); doc.text("Samira Home Decor Official", PW - M, y + 12, { align: "right" });
       doc.setFont("helvetica", "normal"); doc.setFontSize(9.5); doc.setTextColor(90, 80, 76);
-      ["ABN 41 991 812 955", "decormuseofficial@outlook.com", "0451 609 398", "www.decomuse.com.au"].forEach(function (t, i) { doc.text(t, PW - M, y + 28 + i * 13, { align: "right" }); });
+      ["ABN 41 991 812 955", "decormuseofficial@outlook.com", "0451 609 398", "samirahomedecor.com.au"].forEach(function (t, i) { doc.text(t, PW - M, y + 28 + i * 13, { align: "right" }); });
       y += 96;
       doc.setDrawColor(71, 86, 59); doc.setLineWidth(1.4); doc.line(M, y, PW - M, y); y += 26;
       doc.setFont("helvetica", "bold"); doc.setFontSize(9); doc.setTextColor(165, 88, 106); doc.text("BILL TO", M, y);

@@ -12,7 +12,7 @@ const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const SITE = "https://www.decomuse.com.au";
+const SITE = "https://samirahomedecor.com.au";
 const root = path.resolve(__dirname, "..");
 
 function load(file, exportName) {

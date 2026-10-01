@@ -7,15 +7,15 @@
   <meta name="description" content="Contact Samira Home Decor, help with products, orders, gifting or general enquiries. Australian home, lifestyle & fragrance store. Email or message us on WhatsApp.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Samira Home Decor">
-  <meta property="og:image" content="https://www.decomuse.com.au/assets/hero.jpg">
+  <meta property="og:image" content="https://samirahomedecor.com.au/assets/hero.jpg">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://www.decomuse.com.au/assets/hero.jpg">
+  <meta name="twitter:image" content="https://samirahomedecor.com.au/assets/hero.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
   <link rel="apple-touch-icon" href="/assets/logo.jpg">
-  <link rel="stylesheet" href="css/styles.css?v=29">
+  <link rel="stylesheet" href="css/styles.css?v=30">
 </head>
 <body data-page="contact.html">
   <div id="site-header"></div>
@@ -130,7 +130,7 @@
 
   <div id="site-footer"></div>
   <script src="js/data.js?v=15"></script>
-  <script src="js/components.js?v=29"></script>
+  <script src="js/components.js?v=30"></script>
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js"></script>
   <script>
@@ -144,7 +144,7 @@
 
     // ---- Samira Home Decor card: save / share / download ----
     const DM_CARD_URL = "assets/contact-card.jpg";
-    const DM_PAGE_URL = "https://www.decomuse.com.au/contact.html";
+    const DM_PAGE_URL = "https://samirahomedecor.com.au/contact.html";
 
     async function dmCardFile() {
       try {
@@ -177,7 +177,7 @@
         "ORG:Samira Home Decor\nTITLE:Customer Representative\n" +
         "EMAIL;TYPE=INTERNET:decomuseofficial@outlook.com\n" +
         "TEL;TYPE=CELL:+61451609398\n" +
-        "URL:https://www.decomuse.com.au\n" +
+        "URL:https://samirahomedecor.com.au\n" +
         "ADR;TYPE=WORK:;;;;;;Australia\n" +
         "NOTE:Home Decor, Lifestyle & Snippets — Home Décor · Gift Hampers · Wellness Essentials\n" +
         photoLine +
@@ -192,7 +192,7 @@
     // Share the card image (native share sheet → WhatsApp/Facebook/anywhere),
     // with graceful fallbacks when the browser can't share.
     async function dmShareCard() {
-      const shareData = { title: "Samira Home Decor", text: "Samira Home Decor — Home Decor, Lifestyle & Snippets. www.decomuse.com.au", url: DM_PAGE_URL };
+      const shareData = { title: "Samira Home Decor", text: "Samira Home Decor — Home Decor, Lifestyle & Snippets. samirahomedecor.com.au", url: DM_PAGE_URL };
       const file = await dmCardFile();
       try {
         if (file && navigator.canShare && navigator.canShare({ files: [file] })) {

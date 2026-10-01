@@ -8,14 +8,14 @@
    Run it whenever you add or change products:
        node scripts/gen-feed.js
 
-   Then submit https://www.decomuse.com.au/feed.xml in
+   Then submit https://samirahomedecor.com.au/feed.xml in
    Google Merchant Center (Products → Feeds → scheduled fetch).
    ============================================================ */
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
 
-const SITE = "https://www.decomuse.com.au";
+const SITE = "https://samirahomedecor.com.au";
 const root = path.resolve(__dirname, "..");
 const dataPath = path.join(root, "js", "data.js");
 

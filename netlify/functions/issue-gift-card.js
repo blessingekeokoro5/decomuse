@@ -14,7 +14,7 @@
 
    Usage (from your own machine — never from the shop's pages):
 
-     curl -X POST https://www.decomuse.com.au/api/issue-gift-card \
+     curl -X POST https://samirahomedecor.com.au/api/issue-gift-card \
        -H "Content-Type: application/json" \
        -d '{"secret":"YOUR_ADMIN_SECRET","amount":52.50,"note":"Return RET-1234"}'
 

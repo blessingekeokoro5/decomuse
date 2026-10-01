@@ -13,7 +13,7 @@
   const qs = out.toString();
   const link = document.createElement("link");
   link.rel = "canonical";
-  link.href = "https://www.decomuse.com.au" + location.pathname + (qs ? "?" + qs : "");
+  link.href = "https://samirahomedecor.com.au" + location.pathname + (qs ? "?" + qs : "");
   document.head.appendChild(link);
 })();
 

@@ -16,7 +16,7 @@ const BREVO_API_KEY  = process.env.BREVO_API_KEY || "";
 const SENDER_EMAIL   = process.env.SENDER_EMAIL || "decormuseofficial@outlook.com";
 const SENDER_NAME    = process.env.SENDER_NAME || "Samira Home Decor";
 const BUSINESS_EMAIL = process.env.BUSINESS_EMAIL || "decormuseofficial@outlook.com";
-const SITE_URL       = process.env.SITE_URL || "https://www.decomuse.com.au";
+const SITE_URL       = process.env.SITE_URL || "https://samirahomedecor.com.au";
 
 function jsonResponse(statusCode, obj) {
   return {
@@ -63,7 +63,7 @@ exports.handler = async (event) => {
       <p style="color:#5a5049;line-height:1.6">Hi${name ? " " + esc(name) : ""},</p>
       <p style="color:#5a5049;line-height:1.6">${message ? esc(message) : "Please complete the form(s) below at your convenience. Just click each link, fill it in and submit, it only takes a few minutes and you can sign right on screen."}</p>
       <table role="presentation" width="100%" style="margin:14px 0 6px">${rows}</table>
-      <p style="color:#8a7f77;font-size:12px;line-height:1.6;margin-top:18px">If you have any questions, just reply to this email. Warm regards,<br>The Samira Home Decor team · <a href="${SITE_URL}" style="color:#A5586A">decomuse.com.au</a></p>
+      <p style="color:#8a7f77;font-size:12px;line-height:1.6;margin-top:18px">If you have any questions, just reply to this email. Warm regards,<br>The Samira Home Decor team · <a href="${SITE_URL}" style="color:#A5586A">samirahomedecor.com.au</a></p>
     </div>`;
 
     const payload = {

@@ -20,7 +20,7 @@
 
    Required environment variables (set in Netlify dashboard):
      STRIPE_SECRET_KEY   = sk_test_...  then later  sk_live_...
-     SITE_URL            = https://www.decomuse.com.au
+     SITE_URL            = https://samirahomedecor.com.au
    Optional:
      MAX_VOUCHER_AUD     = largest rewards voucher redeemable (default 20)
      WEB3FORMS_KEY       = so gift-card-paid orders still reach your inbox
@@ -38,7 +38,7 @@ function getStripe() {
   return _stripe;
 }
 
-const SITE_URL = process.env.SITE_URL || "https://www.decomuse.com.au";
+const SITE_URL = process.env.SITE_URL || "https://samirahomedecor.com.au";
 
 // Countries we ship to (ISO codes) — matches the site's shipping calculator regions
 const SHIP_COUNTRIES = ["AU", "NZ", "GB", "US", "CA", "NG"];
