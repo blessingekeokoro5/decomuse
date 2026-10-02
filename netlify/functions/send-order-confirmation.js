@@ -53,22 +53,22 @@ exports.handler = async (event) => {
 
     const rows = items.map((it) => `
       <tr>
-        <td style="padding:10px 0;border-bottom:1px solid #eaded5;color:#2C2623">${esc(it.name || "Item")}${(it.qty > 1) ? ` <span style="color:#8a7f77">× ${it.qty}</span>` : ""}</td>
-        <td style="padding:10px 0;border-bottom:1px solid #eaded5;text-align:right;color:#2C2623">${money((Number(it.price) || 0) * (Number(it.qty) || 1))}</td>
+        <td style="padding:10px 0;border-bottom:1px solid #E8DCC8;color:#0B1F3A">${esc(it.name || "Item")}${(it.qty > 1) ? ` <span style="color:#8a7f77">× ${it.qty}</span>` : ""}</td>
+        <td style="padding:10px 0;border-bottom:1px solid #E8DCC8;text-align:right;color:#0B1F3A">${money((Number(it.price) || 0) * (Number(it.qty) || 1))}</td>
       </tr>`).join("");
 
     const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#2C2623;padding:8px">
+    <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#0B1F3A;padding:8px">
       <div style="text-align:center;padding:22px 0 6px">
-        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#47563B">Samira Home Decor</div>
-        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home Décor Store</div>
+        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#0B1F3A">Samira Home Decor</div>
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home décor for every house</div>
       </div>
-      <div style="background:#47563B;color:#fff;border-radius:14px;padding:26px 28px;text-align:center">
-        <div style="font-size:22px;font-family:Georgia,serif">Thank you for your order! 🌿</div>
-        <p style="color:#e7ecdf;margin:8px 0 0">Hi ${esc(o.name || "there")}, we've received your order and we're getting it ready.</p>
-        <div style="margin-top:16px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#cdd6bf">Order</div>
+      <div style="background:#0B1F3A;color:#fff;border-radius:14px;padding:26px 28px;text-align:center">
+        <div style="font-size:22px;font-family:Georgia,serif">Thank you for your order! ✨</div>
+        <p style="color:#E0C992;margin:8px 0 0">Hi ${esc(o.name || "there")}, we've received your order and we're getting it ready.</p>
+        <div style="margin-top:16px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#C6A15B">Order</div>
         <div style="font-size:20px;font-weight:bold">${esc(o.orderNo || "")}</div>
-        ${o.date ? `<div style="font-size:12px;color:#cdd6bf;margin-top:4px">${esc(o.date)}</div>` : ""}
+        ${o.date ? `<div style="font-size:12px;color:#C6A15B;margin-top:4px">${esc(o.date)}</div>` : ""}
       </div>
 
       ${items.length ? `
@@ -82,11 +82,11 @@ exports.handler = async (event) => {
       </table>` : ""}
 
       <div style="background:#F6EEE8;border-radius:12px;padding:16px 18px;margin-top:20px;font-size:13px;color:#5a5049;line-height:1.6">
-        📦 <strong>What's next?</strong> We'll pick, pack and dispatch your order — you can watch it live in <a href="${SITE_URL}/account.html" style="color:#A5586A">your account → Orders → Track order</a>, with an estimated arrival time.
+        📦 <strong>What's next?</strong> We'll pick, pack and dispatch your order — you can watch it live in <a href="${SITE_URL}/account.html" style="color:#A9843C">your account → Orders → Track order</a>, with an estimated arrival time.
       </div>
 
       <div style="text-align:center;margin:22px 0">
-        <a href="${SITE_URL}/account.html" style="background:#B67280;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Track my order</a>
+        <a href="${SITE_URL}/account.html" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Track my order</a>
       </div>
       <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">
         Need a hand? Just reply to this email or contact us at ${esc(BUSINESS_EMAIL)}.<br>

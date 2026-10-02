@@ -53,17 +53,17 @@ exports.handler = async (event) => {
     const heading = kind === "employee" ? "Your onboarding forms" : "Your forms from Samira Home Decor";
     const rows = forms.map((f) =>
       `<tr><td style="padding:10px 0;border-bottom:1px solid #eee">
-        <a href="${esc(f.url)}" style="color:#A5586A;font-weight:bold;text-decoration:none;font-size:15px">${esc(f.title)} →</a>
+        <a href="${esc(f.url)}" style="color:#A9843C;font-weight:bold;text-decoration:none;font-size:15px">${esc(f.title)} →</a>
       </td></tr>`).join("");
 
     const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#2C2623;padding:8px">
-      <div style="text-align:center;font-family:Georgia,serif;font-size:26px;font-weight:bold;color:#47563B;margin:14px 0 4px">Samira Home Decor</div>
-      <h2 style="text-align:center;color:#2C2623;font-size:20px;margin:0 0 6px">${esc(heading)}</h2>
+    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#0B1F3A;padding:8px">
+      <div style="text-align:center;font-family:Georgia,serif;font-size:26px;font-weight:bold;color:#0B1F3A;margin:14px 0 4px">Samira Home Decor</div>
+      <h2 style="text-align:center;color:#0B1F3A;font-size:20px;margin:0 0 6px">${esc(heading)}</h2>
       <p style="color:#5a5049;line-height:1.6">Hi${name ? " " + esc(name) : ""},</p>
       <p style="color:#5a5049;line-height:1.6">${message ? esc(message) : "Please complete the form(s) below at your convenience. Just click each link, fill it in and submit, it only takes a few minutes and you can sign right on screen."}</p>
       <table role="presentation" width="100%" style="margin:14px 0 6px">${rows}</table>
-      <p style="color:#8a7f77;font-size:12px;line-height:1.6;margin-top:18px">If you have any questions, just reply to this email. Warm regards,<br>The Samira Home Decor team · <a href="${SITE_URL}" style="color:#A5586A">samirahomedecor.com.au</a></p>
+      <p style="color:#8a7f77;font-size:12px;line-height:1.6;margin-top:18px">If you have any questions, just reply to this email. Warm regards,<br>The Samira Home Decor team · <a href="${SITE_URL}" style="color:#A9843C">samirahomedecor.com.au</a></p>
     </div>`;
 
     const payload = {

@@ -65,44 +65,44 @@ exports.handler = async (event) => {
       <table role="presentation" width="100%"><tr>
         <td valign="top"><img src="${logo}" alt="Samira Home Decor" width="150" style="max-width:160px;height:auto"></td>
         <td valign="top" align="right" style="font-size:12px;color:#5a5049;line-height:1.7">
-          <strong style="color:#47563B;font-size:15px">Samira Home Decor Official</strong><br>
+          <strong style="color:#0B1F3A;font-size:15px">Samira Home Decor Official</strong><br>
           ABN ${ABN}<br>${esc(BUSINESS_EMAIL)}<br>${esc(BIZ_PHONE)}<br>${esc(SITE_URL.replace(/^https?:\/\//, ""))}
         </td>
       </tr></table>
-      <div style="height:2px;background:#47563B;margin:14px 0 18px"></div>`;
+      <div style="height:2px;background:#0B1F3A;margin:14px 0 18px"></div>`;
 
     let inner;
     if (isInvoice) {
       const status = g("Status") || "Unpaid";
       const s = status.toLowerCase();
-      const statusColor = s === "paid" ? "#47563B" : s === "overdue" ? "#b23a3a" : s.indexOf("partial") >= 0 ? "#C6A15B" : "#A5586A";
+      const statusColor = s === "paid" ? "#0B1F3A" : s === "overdue" ? "#b23a3a" : s.indexOf("partial") >= 0 ? "#C6A15B" : "#A9843C";
       const amtRow = (label, v, bold) => v ? `<tr>
         <td style="padding:8px 0;border-bottom:1px solid #eee;color:#5a5049">${label}</td>
-        <td align="right" style="padding:8px 0;border-bottom:1px solid #eee;${bold ? "font-weight:bold;font-size:16px;color:#2C2623" : "color:#2C2623"}">${money(v)}</td></tr>` : "";
+        <td align="right" style="padding:8px 0;border-bottom:1px solid #eee;${bold ? "font-weight:bold;font-size:16px;color:#0B1F3A" : "color:#0B1F3A"}">${money(v)}</td></tr>` : "";
       const due = g("Due date");
       const reminder = s === "paid"
-        ? `<div style="margin-top:16px;background:#eef2e8;border-radius:10px;padding:12px 16px;font-size:13px;color:#47563B">✓ This invoice is marked <strong>paid</strong> — thank you!</div>`
-        : `<div style="margin-top:16px;background:#fbeef0;border-radius:10px;padding:12px 16px;font-size:13px;color:#A5586A">⏰ <strong>Payment reminder:</strong> ${due ? "this invoice is due by <strong>" + esc(due) + "</strong>" : "please arrange payment at your earliest convenience"}${g("Invoice number") ? ", quoting reference <strong>" + esc(g("Invoice number")) + "</strong>" : ""}.</div>`;
+        ? `<div style="margin-top:16px;background:#E8DCC8;border-radius:10px;padding:12px 16px;font-size:13px;color:#0B1F3A">✓ This invoice is marked <strong>paid</strong> — thank you!</div>`
+        : `<div style="margin-top:16px;background:#F4EFE6;border-radius:10px;padding:12px 16px;font-size:13px;color:#A9843C">⏰ <strong>Payment reminder:</strong> ${due ? "this invoice is due by <strong>" + esc(due) + "</strong>" : "please arrange payment at your earliest convenience"}${g("Invoice number") ? ", quoting reference <strong>" + esc(g("Invoice number")) + "</strong>" : ""}.</div>`;
 
       inner = `
         <table role="presentation" width="100%"><tr>
           <td valign="top">
-            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#A5586A">Bill to</div>
-            <div style="font-size:14px;color:#2C2623;line-height:1.7;margin-top:4px">
+            <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#A9843C">Bill to</div>
+            <div style="font-size:14px;color:#0B1F3A;line-height:1.7;margin-top:4px">
               <strong>${esc(g("Client name")) || "&mdash;"}</strong><br>
               ${g("Client address") ? esc(g("Client address")) + "<br>" : ""}
               ${g("Client phone") ? esc(g("Client phone")) + "<br>" : ""}
               ${esc(email)}
             </div>
           </td>
-          <td valign="top" align="right" style="font-size:13px;color:#2C2623;line-height:1.8">
+          <td valign="top" align="right" style="font-size:13px;color:#0B1F3A;line-height:1.8">
             <div><span style="color:#8a7f77">Invoice&nbsp;#</span> <strong>${esc(g("Invoice number")) || "&mdash;"}</strong></div>
             <div><span style="color:#8a7f77">Date</span> ${esc(g("Invoice date")) || "&mdash;"}</div>
             <div><span style="color:#8a7f77">Due</span> ${esc(due) || "&mdash;"}</div>
             <div style="margin-top:8px"><span style="background:${statusColor};color:#fff;padding:5px 14px;border-radius:20px;font-size:12px;text-transform:uppercase;letter-spacing:1px">${esc(status)}</span></div>
           </td>
         </tr></table>
-        ${g("Description") ? `<div style="margin:20px 0 6px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#A5586A">Details</div><div style="font-size:14px;color:#2C2623;line-height:1.6;white-space:pre-wrap">${esc(g("Description"))}</div>` : ""}
+        ${g("Description") ? `<div style="margin:20px 0 6px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#A9843C">Details</div><div style="font-size:14px;color:#0B1F3A;line-height:1.6;white-space:pre-wrap">${esc(g("Description"))}</div>` : ""}
         <table role="presentation" width="100%" style="margin-top:16px;border-collapse:collapse;font-size:14px">
           ${amtRow("Amount (ex GST)", g("Amount"))}
           ${amtRow("GST", g("GST"))}
@@ -110,18 +110,18 @@ exports.handler = async (event) => {
           ${amtRow("Amount paid", g("Amount paid"))}
           ${amtRow("Balance due", g("Balance due"), true)}
         </table>
-        ${g("Payment details") ? `<div style="margin-top:18px;background:#F6EEE8;border-radius:10px;padding:14px 16px;font-size:13px;color:#5a5049"><strong style="color:#2C2623">Payment details</strong><br>${esc(g("Payment details")).replace(/\n/g, "<br>")}${g("Payment terms") ? "<br><em>Terms: " + esc(g("Payment terms")) + "</em>" : ""}</div>` : ""}
+        ${g("Payment details") ? `<div style="margin-top:18px;background:#F6EEE8;border-radius:10px;padding:14px 16px;font-size:13px;color:#5a5049"><strong style="color:#0B1F3A">Payment details</strong><br>${esc(g("Payment details")).replace(/\n/g, "<br>")}${g("Payment terms") ? "<br><em>Terms: " + esc(g("Payment terms")) + "</em>" : ""}</div>` : ""}
         ${reminder}`;
     } else {
       const rows = (Array.isArray(fields) ? fields : [])
         .filter((p) => p && p[1] != null && String(p[1]).trim() !== "" && !/^data:image\//.test(String(p[1])))
-        .map((p) => `<tr><td style="padding:9px 0;border-bottom:1px solid #eee;color:#5a5049">${esc(p[0])}</td><td align="right" style="padding:9px 0;border-bottom:1px solid #eee;color:#2C2623">${esc(p[1])}</td></tr>`).join("");
+        .map((p) => `<tr><td style="padding:9px 0;border-bottom:1px solid #eee;color:#5a5049">${esc(p[0])}</td><td align="right" style="padding:9px 0;border-bottom:1px solid #eee;color:#0B1F3A">${esc(p[1])}</td></tr>`).join("");
       inner = `<p style="color:#5a5049;line-height:1.6">Hi${name ? " " + esc(name) : ""}, please find your ${esc(heading.toLowerCase())} below.</p>
         <table role="presentation" width="100%" style="border-collapse:collapse;font-size:14px">${rows}</table>`;
     }
 
     const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#2C2623;padding:10px">
+    <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#0B1F3A;padding:10px">
       ${fromBlock}
       ${inner}
       <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6;margin-top:22px">Thank you for choosing Samira Home Decor ✦<br>Questions? Just reply to this email.</p>

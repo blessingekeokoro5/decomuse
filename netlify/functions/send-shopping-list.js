@@ -68,7 +68,7 @@ exports.handler = async (event) => {
       const link = SITE_URL + "/product.html?id=" + encodeURIComponent(i.id || "");
       return `<tr>
         <td style="padding:10px 0;border-bottom:1px solid #eee">
-          <a href="${link}" style="color:#A5586A;text-decoration:none;font-weight:600">${esc(i.name)}</a>
+          <a href="${link}" style="color:#A9843C;text-decoration:none;font-weight:600">${esc(i.name)}</a>
           ${variant ? `<div style="color:#8a7f77;font-size:13px">${esc(variant)}</div>` : ""}
           <div style="color:#8a7f77;font-size:13px">Qty ${parseInt(i.qty, 10) || 1}</div>
         </td>
@@ -80,9 +80,9 @@ exports.handler = async (event) => {
       : items.reduce((s, i) => s + (i.price || 0) * (parseInt(i.qty, 10) || 1), 0);
 
     const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#2C2623">
+    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#0B1F3A">
       <div style="text-align:center;padding:24px 0">
-        <h1 style="font-family:Georgia,serif;color:#A5586A;margin:0">Samira Home Decor</h1>
+        <h1 style="font-family:Georgia,serif;color:#A9843C;margin:0">Samira Home Decor</h1>
         <p style="color:#8a7f77;margin:6px 0 0">Your saved shopping list 🛍️</p>
       </div>
       <table style="width:100%;border-collapse:collapse">${rows}</table>
@@ -91,7 +91,7 @@ exports.handler = async (event) => {
             <td style="padding:12px 0;text-align:right;font-weight:700">${money(total)}</td></tr>
       </table>
       <div style="text-align:center;margin:26px 0">
-        <a href="${SITE_URL}/shop.html" style="background:#B67280;color:#fff;text-decoration:none;padding:13px 26px;border-radius:30px;font-weight:600">Return to your list</a>
+        <a href="${SITE_URL}/shop.html" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 26px;border-radius:30px;font-weight:600">Return to your list</a>
       </div>
       <p style="color:#8a7f77;font-size:12px;text-align:center">Prices and availability may change. Free shipping on orders over $500, Australia-wide.</p>
     </div>`;
