@@ -125,7 +125,7 @@ const MEGA_MENU = [
 /* ---- Products (AUD) ---- */
 const PRODUCTS = [
   // ── Bathroom ──
-  { id: "bt01", name: "Aurelia Marble & Gold Bathroom Set (5-Piece)", cat: "Bathroom", price: 250, memberPrice: 220, sku: "DM-10109", tag: "New", ph: "", img: "assets/products/bt01-5.png",
+  { id: "bt01", name: "Aurelia Marble & Gold Bathroom Set (5-Piece)", cat: "Bathroom", price: 250, memberPrice: 220, sku: "SH-10109", tag: "New", ph: "", img: "assets/products/bt01-5.png",
     imgs: ["assets/products/bt01-5.png", "assets/products/bt01.png", "assets/products/bt01-2.png", "assets/products/bt01-3.png", "assets/products/bt01-4.png"],
     colours: [{ name: "White", hex: "#ece7de" }, { name: "Emerald Green", hex: "#134a38" }, { name: "Black", hex: "#171512" }],
     desc: "Turn a daily routine into a five-star ritual. The Aurelia set brings hand-glazed marble ceramic and hand-painted gold veining to your basin, each piece finished with a gilded base that catches the light. A complete five-piece collection that makes even the smallest bathroom feel like a boutique hotel, choose classic white, deep emerald green or midnight black, all pooled with liquid-gold marbling.",
@@ -140,11 +140,27 @@ const PRODUCTS = [
     boxContents: ["1 × soap / lotion dispenser", "1 × toothbrush holder", "2 × tumblers", "1 × soap dish"],
     care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners to protect the gold detailing." },
 
+  { id: "bt02", name: "Emperador Dark Marble Bathroom Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 650, memberPrice: 585, sku: "SH-10115", tag: "New", ph: "", img: "assets/products/bt02-4.jpg",
+    imgs: ["assets/products/bt02-4.jpg", "assets/products/bt02-2.jpg", "assets/products/bt02-3.jpg", "assets/products/bt02.jpg", "assets/products/bt02-5.jpg", "assets/products/bt02-6.jpg", "assets/products/bt02-7.jpg", "assets/products/bt02-8.jpg"],
+    colours: [{ name: "Emperador Dark", hex: "#4a3228" }],
+    desc: "Cut from solid Emperador Dark marble, this is the set that makes a bathroom feel like a hotel suite. The stone is a deep espresso brown shot through with pale gold and cream veining, and because every block is quarried rather than moulded, no two pieces in your set will ever match exactly. Weighty in the hand, cool to the touch, and finished with a polished gold pump. Four pieces that sit beautifully together on a vanity, or apart across the tray by the bath, the dispenser at the basin.",
+    features: [
+      "Four pieces: soap dispenser, toothbrush holder, soap dish and vanity tray",
+      "Solid natural Emperador Dark marble, not a printed or moulded look",
+      "Unique veining in every piece, yours will not look like the photograph",
+      "Polished gold pump with a smooth, quiet action",
+      "Substantial weight that keeps each piece exactly where you put it",
+      "Hand-finished, so slight variations in tone and size are part of the stone"
+    ],
+    specs: { "Type": "Bathroom accessory set", "Pieces": "4", "Material": "Natural Emperador Dark marble", "Finish": "Polished, with gold pump", "Colour": "Emperador Dark brown" },
+    boxContents: ["1 × soap dispenser", "1 × toothbrush holder", "1 × soap dish", "1 × vanity tray"],
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from acidic cleaners, vinegar, citrus and bleach, which will dull and etch the surface. Stand bottles on the tray rather than directly on the stone to avoid rings." },
+
   // ── Home Décor ──
-  { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "DM-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
+  { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "SH-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
-  { id: "hd09", name: "Flame-Effect Ultrasonic Humidifier & Diffuser", cat: "Home Décor", room: "Home Décor", price: 90.10, memberPrice: 85.75, sku: "DM-10111", tag: "New", ph: "", img: "assets/products/hd09.png",
+  { id: "hd09", name: "Flame-Effect Ultrasonic Humidifier & Diffuser", cat: "Home Décor", room: "Home Décor", price: 90.10, memberPrice: 85.75, sku: "SH-10111", tag: "New", ph: "", img: "assets/products/hd09.png",
     imgs: ["assets/products/hd09.png", "assets/products/hd09-2.png", "assets/products/hd09-3.png", "assets/products/hd09-4.png", "assets/products/hd09-5.png"],
     colours: [{ name: "White", hex: "#f2efe9" }, { name: "Black", hex: "#1c1c1c" }],
     desc: "Set the mood with the gentle flicker of a flame, without the flame. A 3-in-1 essential-oil diffuser, air humidifier and flame-effect night light in one 200ml unit, it projects a remarkably realistic dancing flame while releasing a fine, whisper-quiet mist (as low as 40 decibels) that softens dry air and carries your favourite oils through the room. A calming centrepiece for the living room, bedroom, office, yoga studio or gym, with 1/3/5-hour timers and an auto shut-off when the water runs low. Add a few drops of oil, dim the lights, and unwind.",
@@ -159,7 +175,7 @@ const PRODUCTS = [
     specs: { "Type": "3-in-1 diffuser / humidifier / night light", "Capacity": "200ml", "Timer": "1 / 3 / 5 hours", "Noise level": "As low as 40 dB", "Feature": "Flame-effect light" },
     boxContents: ["1 × Oil Diffuser", "1 × English manual"],
     care: "Do not open the cap while in use, to avoid water leakage. Fill with water below the maximum line, overfilling can let water re-enter the main unit and damage the circuit board. Keep water away from the heat-dissipation vents (they are not waterproof). Empty and wipe dry after use." },
-  { id: "hd08", name: "Alban Bouclé Pillow Cover", cat: "Home Décor", room: "Living Room", price: 59, memberPrice: 55, sku: "DM-10110", tag: "New", ph: "", img: "assets/products/hd08.png?v=2",
+  { id: "hd08", name: "Alban Bouclé Pillow Cover", cat: "Home Décor", room: "Living Room", price: 59, memberPrice: 55, sku: "SH-10110", tag: "New", ph: "", img: "assets/products/hd08.png?v=2",
     imgs: ["assets/products/hd08.png?v=2", "assets/products/hd08-2.png?v=2", "assets/products/hd08-3.png?v=2", "assets/products/hd08-4.png?v=2", "assets/products/hd08-5.png?v=2", "assets/products/hd08-6.png?v=2", "assets/products/hd08-7.png?v=2", "assets/products/hd08-8.png?v=2", "assets/products/hd08-9.png?v=2"],
     colours: [{ name: "Red", hex: "#7c1c26" }, { name: "Pink", hex: "#e9c3cb" }, { name: "White", hex: "#f2efe9" }, { name: "Brown", hex: "#5b4636" }, { name: "Blue", hex: "#9fb2c4" }, { name: "Khaki", hex: "#b3a37a" }, { name: "Green", hex: "#b9c7a8" }],
     sizes: ["30cm x 50cm", "45cm x 45cm", "50cm x 50cm"],
@@ -173,7 +189,7 @@ const PRODUCTS = [
     ],
     specs: { "Type": "Cushion cover", "Material": "Bouclé", "Closure": "Hidden zip", "Insert included": "No" },
     care: "Spot clean, or gentle cold machine wash on a delicate cycle. Do not tumble dry." },
-  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "DM-10102", ph: "", img: "assets/products/hd02.png",
+  { id: "hd02", name: "Fleur Sculptural Glass Vase", cat: "Home Décor", price: 225, memberPrice: 205, sku: "SH-10102", ph: "", img: "assets/products/hd02.png",
     imgs: ["assets/products/hd02.png", "assets/products/hd02-2.png", "assets/products/hd02-3.png", "assets/products/hd02-4.png"],
     desc: "The Fleur glass vase brings sculptural charm to any room with a wavy silhouette that resembles an open flower. This visual statement piece is a work of art and enhances any floral arrangement you choose. Made from glass and designed for tabletop display, it suits both real and everlasting flowers. Place it on a dining table, bedside table, coffee table or kitchen bench to create an effortless centrepiece, or let it stand alone to add sculptural interest to a living space and brighten your home.",
     features: [
@@ -184,7 +200,7 @@ const PRODUCTS = [
     ],
     specs: { "Type": "Vase", "Location": "Tabletop", "Material": "Glass", "Primary Colour": "Blue" },
     dimensions: "26cm H x 23cm W x 23cm D", weight: "1.97 kg", boxContents: "1 x vase", care: "Wipe clean with a dry cloth" },
-  { id: "hd03", name: "Ceramic Electric Oil Vaporiser", cat: "Home Décor", price: 98.90, memberPrice: 78.95, sku: "DM-10103", tag: "New", ph: "", img: "assets/products/hd03.png",
+  { id: "hd03", name: "Ceramic Electric Oil Vaporiser", cat: "Home Décor", price: 98.90, memberPrice: 78.95, sku: "SH-10103", tag: "New", ph: "", img: "assets/products/hd03.png",
     imgs: ["assets/products/hd03.png", "assets/products/hd03-2.png", "assets/products/hd03-3.png", "assets/products/hd03-4.png", "assets/products/hd03-5.png"],
     colours: [{ name: "Black", hex: "#1c1c1c" }, { name: "Natural", hex: "#cbb291" }, { name: "White", hex: "#f2efe9" }],
     desc: "Bring a subtle, calming fragrance to any room with this ceramic electric oil vaporiser that gently warms essential oils without harming them. Designed to run safely for long periods, it emits heat only from the recessed bowl, so the outer surface stays cool to the touch. No water is needed, making it a drip-free option ideal for aromatherapy at night or when hosting friends, creating a calm, fragrant atmosphere in living areas, bedrooms and for quiet evenings.",
@@ -201,7 +217,7 @@ const PRODUCTS = [
     boxContents: ["1 × vaporiser", "1 × user manual"], warranty: "1 Year",
     care: "Use a damp cloth to wipe the vaporiser bowl after use.",
     about: "Established in 1992 and proudly 100% Australian owned, the maker is a market leader in the aromatherapy and wellness space, specialising in safe, clean and efficient essential oil mist diffusers and electric vaporisers." },
-  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, sku: "DM-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
+  { id: "hd04", name: "Diamond Velvet Throw Pillow Cover", cat: "Home Décor", price: 15.99, sku: "SH-10104", tag: "New", ph: "", img: "assets/products/hd04.png",
     imgs: ["assets/products/hd04.png", "assets/products/hd04-2.png", "assets/products/hd04-3.png", "assets/products/hd04-4.png", "assets/products/hd04-5.png", "assets/products/hd04-6.png", "assets/products/hd04-7.png"],
     colours: [{ name: "Beige", hex: "#d9c7a8" }, { name: "Cerulean", hex: "#2a7fba" }, { name: "Forest Green", hex: "#33513a" }, { name: "Grey", hex: "#9b9b9b" }, { name: "Navy", hex: "#232f4d" }, { name: "Orange", hex: "#d5843a" }, { name: "Rosy Brown", hex: "#bc8f8f" }, { name: "Turquoise", hex: "#3fb8ad" }],
     sizes: [{ label: "30 × 50 cm", price: 15.99 }, { label: "45 × 45 cm", price: 18.99 }, { label: "50 × 50 cm", price: 21.99 }],
@@ -217,7 +233,7 @@ const PRODUCTS = [
     care: "Machine wash cold on a gentle cycle with like colours; do not tumble dry; cool iron if needed." },
 
   // ── Lifestyle ──
-  { id: "l07", name: "Soft Cotton Face Washer Towels — 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, sku: "DM-10105", tag: "New", ph: "", img: "assets/products/l07.png",
+  { id: "l07", name: "Soft Cotton Face Washer Towels — 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, sku: "SH-10105", tag: "New", ph: "", img: "assets/products/l07.png",
     imgs: ["assets/products/l07.png", "assets/products/l07-2.png", "assets/products/l07-3.png", "assets/products/l07-4.png", "assets/products/l07-5.png", "assets/products/l07-6.png"],
     colours: [{ name: "Teal", hex: "#2a8d8d" }, { name: "Navy", hex: "#1f2a44" }, { name: "Blue Suede", hex: "#6a7fa0" }, { name: "Pea Pod", hex: "#a3b18a" }, { name: "Coral", hex: "#e0897a" }, { name: "Burgundy", hex: "#7b2d3a" }, { name: "Chocolate Brown", hex: "#4a3428" }, { name: "Charcoal", hex: "#4a4a4f" }, { name: "Linen", hex: "#d9cbb2" }, { name: "Silver", hex: "#c7c7c7" }, { name: "White", hex: "#f2f0ea" }],
     desc: "Wrap your everyday routine in softness with this set of 10 premium 450GSM cotton face washers. Beautifully plush yet quick-drying, with a satin-finish border and double-stitched hems that hold their shape wash after wash. Gentle on skin and endlessly useful for face, hands and travel, in a rich palette of eleven colours to suit any bathroom.",
@@ -231,7 +247,7 @@ const PRODUCTS = [
     specs: { "Material": "100% Cotton", "Weight": "450 GSM", "Pack size": "10 pieces", "Type": "Face washer / flannel" },
     care: "Machine wash cold and separately before first use. Gentle cycle; wash dark colours separately. Do not bleach. Tumble dry low. Do not iron. Do not dry clean." },
 
-  { id: "hd05", name: "Oval Marble-Effect Coffee Table", cat: "Furniture", room: "Living Room", price: 115.37, memberPrice: 99.99, sku: "DM-10106", tag: "New", ph: "", img: "assets/products/hd05.jpg",
+  { id: "hd05", name: "Oval Marble-Effect Coffee Table", cat: "Furniture", room: "Living Room", price: 115.37, memberPrice: 99.99, sku: "SH-10106", tag: "New", ph: "", img: "assets/products/hd05.jpg",
     imgs: ["assets/products/hd05.jpg", "assets/products/hd05-2.jpg", "assets/products/hd05-3.jpg", "assets/products/hd05-4.jpg", "assets/products/hd05-5.jpg", "assets/products/hd05-6.jpg"],
     desc: "A sculptural centrepiece for the living room, this oval coffee table pairs a smooth marble-effect top with a warm, angular timber-look base. The soft oval silhouette keeps the room feeling open, while the crossed legs add architectural interest, a timeless, mid-century-inspired piece that anchors a lounge with quiet luxury. Style it with a stack of design books, a low vase or a scented candle to complete the look.",
     features: [
@@ -246,7 +262,7 @@ const PRODUCTS = [
     spin360: ["assets/products/hd05.jpg"],
     care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." },
 
-  { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", room: "Living Room", price: 198.37, memberPrice: 168.55, sku: "DM-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
+  { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", room: "Living Room", price: 198.37, memberPrice: 168.55, sku: "SH-10107", tag: "New", ph: "", img: "assets/products/hd06.jpg",
     imgs: ["assets/products/hd06.jpg", "assets/products/hd06-3.jpg", "assets/products/hd06-4.jpg", "assets/products/hd06-5.jpg", "assets/products/hd06-6.jpg", "assets/products/hd06-7.jpg", "assets/products/hd06-8.jpg", "assets/products/hd06-9.jpg", "assets/products/hd06-10.jpg"],
     desc: "A refined two-piece table set that brings a soft, luxe finish to any living space. Each table is topped with marble-look tempered glass, tough enough for everyday use yet elegant enough to feel like a designer piece. Nest them together for a compact footprint, or set them apart as a coffee table and matching side table. With clean lines and neutral marble tones, they layer effortlessly with sofas, rugs and accent chairs, an easy way to elevate a lounge, bedroom or reading corner.",
     features: [
@@ -261,7 +277,7 @@ const PRODUCTS = [
     spin360: ["assets/products/hd06-4.jpg"],
     care: "Clean the glass with a soft, damp cloth and a mild glass cleaner; avoid abrasive or harsh chemicals. Lift rather than drag when moving, and use coasters to protect from heat and moisture." },
 
-  { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", room: "Living Room", price: 155.09, memberPrice: 135.55, sku: "DM-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
+  { id: "hd07", name: "Modern Coffee Table with Storage Drawer & Open Shelf", cat: "Furniture", room: "Living Room", price: 155.09, memberPrice: 135.55, sku: "SH-10108", tag: "New", ph: "", img: "assets/products/hd07.jpg",
     imgs: ["assets/products/hd07.jpg", "assets/products/hd07-2.jpg", "assets/products/hd07-3.jpg", "assets/products/hd07-4.jpg", "assets/products/hd07-5.jpg", "assets/products/hd07-6.jpg", "assets/products/hd07-7.jpg", "assets/products/hd07-8.jpg"],
     desc: "Style and storage in one considered piece. This modern coffee table pairs a sleek marble-look top with a smart two-tone body, a soft-close drawer keeps remotes, chargers and clutter neatly out of sight, while the open shelf is ideal for books, baskets or a styling tray. Raised on slender metal legs, it feels light and contemporary, the perfect centrepiece for a living room that likes to stay tidy and effortlessly put-together.",
     features: [
@@ -276,7 +292,7 @@ const PRODUCTS = [
     spin360: ["assets/products/hd07-2.jpg"],
     care: "Wipe clean with a soft, damp cloth; avoid abrasive cleaners and excess water. Use coasters to protect the surface from heat and moisture." },
 
-  { id: "of01", name: "Ergolux Plus Ergonomic Mesh Office Chair with Footrest (Grey)", brand: "Ergolux", cat: "Office", room: "Office", price: 150.45, memberPrice: 135.45, sku: "DM-10112", tag: "New", ph: "", img: "assets/products/of01.png",
+  { id: "of01", name: "Ergolux Plus Ergonomic Mesh Office Chair with Footrest (Grey)", brand: "Ergolux", cat: "Office", room: "Office", price: 150.45, memberPrice: 135.45, sku: "SH-10112", tag: "New", ph: "", img: "assets/products/of01.png",
     imgs: ["assets/products/of01.png", "assets/products/of01-2.png", "assets/products/of01-3.png", "assets/products/of01-4.png", "assets/products/of01-5.png", "assets/products/of01-6.png", "assets/products/of01-7.png", "assets/products/of01-8.png", "assets/products/of01-9.png"],
     colours: [{ name: "Grey", hex: "#9b9b9b" }],
     sizes: [{ label: "Core", price: 150.45 }, { label: "Plus", price: 171.45 }, { label: "Elite (Mesh)", price: 517.95 }, { label: "Elite (Foam)", price: 591.45 }],
@@ -293,7 +309,7 @@ const PRODUCTS = [
     specs: { "Type": "Ergonomic office chair", "Back": "Breathable mesh", "Armrests": "3D adjustable", "Recline": "Up to 140°", "Footrest": "Retractable", "Base": "Chrome with castor wheels", "Colour": "Grey" },
     care: "Wipe the mesh and frame with a soft, dry or lightly damp cloth. Avoid harsh chemicals. Periodically check and tighten fittings, and keep the castors clear of debris for smooth rolling." },
 
-  { id: "pk01", name: "Food-Vendor Stand-Up Pouches — Resealable Zipper (10-Pack)", cat: "Packaging", room: "Packaging", price: 12.95, memberPrice: 11.65, sku: "DM-10113", tag: "New", ph: "", img: "assets/products/foodpouch-1.png",
+  { id: "pk01", name: "Food-Vendor Stand-Up Pouches — Resealable Zipper (10-Pack)", cat: "Packaging", room: "Packaging", price: 12.95, memberPrice: 11.65, sku: "SH-10113", tag: "New", ph: "", img: "assets/products/foodpouch-1.png",
     imgs: ["assets/products/foodpouch-1.png", "assets/products/foodpouch-2.png", "assets/products/foodpouch-3.png"],
     sizes: [{ label: "100 × 150 + 35 mm · 10-pack", price: 12.95 }, { label: "120 × 170 + 35 mm · 10-pack", price: 15.95 }],
     desc: "Food-safe, resealable stand-up pouches that keep your product fresh and looking retail-ready — ideal for coffee, granola, nuts, dried fruit, spices, lollies, protein and pet treats. The multi-layer PET + PA + PE structure blocks moisture and odour, while the zipper top opens and reseals again and again. Made with recycled materials and finished with vibrant flexo printing. Buy retail packs here, or order wholesale in bulk with your own logo and artwork — message us on WhatsApp for the rate card, samples or custom branding.",
@@ -308,7 +324,7 @@ const PRODUCTS = [
     ],
     specs: { "Material structure": "PET + PA + PE", "Sealing & handle": "Resealable zipper top", "Bag type": "Stand-up pouch", "Feature": "Recycled materials", "Industrial use": "Food-grade", "Surface handling": "Flexo printing", "Thickness": "0.1 mm / 0.3 mm" },
     care: "Store in a cool, dry place out of direct sunlight. For food use, fill with dry or sealed goods and press the zipper fully closed to keep contents fresh." },
-  { id: "bd01", name: "Amara Upholstered Bed Frame with 3 Drawers \u2014 Oat White", cat: "Bedroom", room: "Bedroom", price: 1350, memberPrice: 1300, sku: "DM-10114", tag: "New", ph: "", img: "assets/products/bd01.jpg",
+  { id: "bd01", name: "Amara Upholstered Bed Frame with 3 Drawers \u2014 Oat White", cat: "Bedroom", room: "Bedroom", price: 1350, memberPrice: 1300, sku: "SH-10114", tag: "New", ph: "", img: "assets/products/bd01.jpg",
     imgs: ["assets/products/bd01.jpg", "assets/products/bd01-2.jpg", "assets/products/bd01-3.jpg", "assets/products/bd01-4.jpg", "assets/products/bd01-5.jpg", "assets/products/bd01-6.jpg"],
     dims: { w: 286.6, d: 219, h: 141.2, unit: "cm", img: "assets/products/bd01-3.jpg", note: "King shown. Queen is the same height and depth with a narrower bedhead \u2014 see the size guide images." },
     colours: [{ name: "Oat White", hex: "#e6ded0" }],
