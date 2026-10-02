@@ -5,6 +5,28 @@
   <link>https://samirahomedecor.com.au</link>
   <description>Curated pieces for elevated living. Shipped Australia-wide.</description>
   <item>
+    <g:id>DM-10109</g:id>
+    <g:title>Aurelia Marble &amp; Gold Bathroom Set (5-Piece)</g:title>
+    <g:description>Turn a daily routine into a five-star ritual. The Aurelia set brings hand-glazed marble ceramic and hand-painted gold veining to your basin, each piece finished with a gilded base that catches the light. A complete five-piece collection that makes even the smallest bathroom feel like a boutique hotel, choose classic white, deep emerald green or midnight black, all pooled with liquid-gold marbling.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=bt01</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/bt01-5.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>250.00 AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>DM-10109</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Bathroom</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:color>White/Emerald Green/Black</g:color>
+    <g:sale_price>220.00 AUD</g:sale_price>
+  </item>
+  <item>
     <g:id>DM-10101</g:id>
     <g:title>Aura Mist Ultrasonic Diffuser 160ml</g:title>
     <g:description>A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room.</g:description>
@@ -24,6 +46,50 @@
       <g:price>19.00 AUD</g:price>
     </g:shipping>
     <g:sale_price>154.00 AUD</g:sale_price>
+  </item>
+  <item>
+    <g:id>DM-10111</g:id>
+    <g:title>Flame-Effect Ultrasonic Humidifier &amp; Diffuser</g:title>
+    <g:description>Set the mood with the gentle flicker of a flame, without the flame. A 3-in-1 essential-oil diffuser, air humidifier and flame-effect night light in one 200ml unit, it projects a remarkably realistic dancing flame while releasing a fine, whisper-quiet mist (as low as 40 decibels) that softens dry air and carries your favourite oils through the room. A calming centrepiece for the living room, bedroom, office, yoga studio or gym, with 1/3/5-hour timers and an auto shut-off when the water runs low. Add a few drops of oil, dim the lights, and unwind.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=hd09</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/hd09.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>90.10 AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>DM-10111</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Home Décor</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:color>White/Black</g:color>
+    <g:sale_price>85.75 AUD</g:sale_price>
+  </item>
+  <item>
+    <g:id>DM-10110</g:id>
+    <g:title>Alban Bouclé Pillow Cover</g:title>
+    <g:description>Wrap your space in texture. The Alban cushion cover is crafted from a deep, curly bouclé with a soft, teddy-like pile that instantly adds warmth and understated luxury to sofas, beds, benches and reading nooks. In a considered palette of seven rich tones, from berry red to sage, soft blush and espresso, it layers effortlessly with linen, wool and neutrals to refresh a room in seconds. A concealed zip keeps the finish clean and makes seasonal swaps easy, and because it&#39;s sold as a cover only (insert not included), you can restyle again and again without the bulk.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=hd08</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/hd08.png?v=2</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>NaN AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>DM-10110</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Home Décor</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:color>Red/Pink/White/Brown/Blue/Khaki/Green</g:color>
+    <g:sale_price>55.00 AUD</g:sale_price>
   </item>
   <item>
     <g:id>DM-10102</g:id>
@@ -173,6 +239,71 @@
       <g:price>19.00 AUD</g:price>
     </g:shipping>
     <g:sale_price>135.55 AUD</g:sale_price>
+  </item>
+  <item>
+    <g:id>DM-10112</g:id>
+    <g:title>Ergolux Plus Ergonomic Mesh Office Chair with Footrest (Grey)</g:title>
+    <g:description>Work, study or game in all-day comfort with the Ergolux Plus ergonomic mesh office chair. The breathable mesh back keeps you cool through the longest sessions, while adaptive lumbar support, an adjustable headrest and 3D armrests shape the chair around you. Recline up to 140°, put your feet up on the retractable footrest, and glide silently on quiet castor wheels. Choose the model that suits you, from the everyday Core to the fully loaded Elite, each finished in a cool, contemporary grey.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=of01</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/of01.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>150.45 AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>DM-10112</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Office</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:color>Grey</g:color>
+    <g:sale_price>135.45 AUD</g:sale_price>
+  </item>
+  <item>
+    <g:id>DM-10113</g:id>
+    <g:title>Food-Vendor Stand-Up Pouches — Resealable Zipper (10-Pack)</g:title>
+    <g:description>Food-safe, resealable stand-up pouches that keep your product fresh and looking retail-ready — ideal for coffee, granola, nuts, dried fruit, spices, lollies, protein and pet treats. The multi-layer PET + PA + PE structure blocks moisture and odour, while the zipper top opens and reseals again and again. Made with recycled materials and finished with vibrant flexo printing. Buy retail packs here, or order wholesale in bulk with your own logo and artwork — message us on WhatsApp for the rate card, samples or custom branding.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=pk01</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/foodpouch-1.png</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>12.95 AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>DM-10113</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Packaging</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:sale_price>11.65 AUD</g:sale_price>
+  </item>
+  <item>
+    <g:id>DM-10114</g:id>
+    <g:title>Amara Upholstered Bed Frame with 3 Drawers — Oat White</g:title>
+    <g:description>A bed that anchors the whole room. The Amara&#39;s bedhead runs extra wide and stands tall, softly padded and panelled with angled stitching that catches the light differently through the day, so the wall behind your bed stops being an afterthought. It is upholstered in a warm oat white that reads cream rather than grey, and sits on a sturdy slatted platform base, so your mattress needs no box spring underneath. Three deep drawers roll out on castors for spare linen, winter blankets and everything a bedroom quietly accumulates. Wide enough that bedside tables tuck neatly against either side, which is exactly how it is meant to be styled.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=bd01</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/bd01.jpg</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>1350.00 AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>DM-10114</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Bedroom</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:color>Oat White</g:color>
+    <g:sale_price>1300.00 AUD</g:sale_price>
   </item>
 </channel>
 </rss>
