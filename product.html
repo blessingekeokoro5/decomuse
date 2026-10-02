@@ -108,6 +108,22 @@
     .pdp-social b { color: var(--rose-deep); font-weight: 700; }
     .pdp-trust { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 18px; font-size: 0.85rem; color: var(--body); }
     .pdp-trust span { display: flex; align-items: center; gap: 7px; }
+    /* Assurance list (satisfaction / money-back / secure / trusted) */
+    .pdp-assurance { list-style: none; padding: 16px 0 4px; margin: 18px 0 0; border-top: 1px solid var(--line); }
+    .pdp-assurance li { display: flex; align-items: center; gap: 12px; padding: 8px 0; font-size: 0.94rem; color: var(--body); }
+    .pdp-assurance .pa-ic { width: 26px; text-align: center; flex: 0 0 auto; font-size: 1.1rem; }
+    /* Collapsible product info (Description / Features + Specs / Shipping + Returns) */
+    .pdp-accordion { margin: 22px 0 6px; border-top: 1px solid var(--line); }
+    .pdp-accordion details { border-bottom: 1px solid var(--line); }
+    .pdp-accordion summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;
+      padding: 16px 2px; font-family: var(--font-body); font-weight: 600; font-size: 1rem; color: var(--ink); }
+    .pdp-accordion summary::-webkit-details-marker { display: none; }
+    .pdp-accordion summary::after { content: "⌄"; font-size: 1.3rem; line-height: 1; color: var(--muted); transition: transform var(--tr); }
+    .pdp-accordion details[open] summary::after { transform: rotate(180deg); }
+    .pdp-accordion .acc-body { padding: 2px 2px 18px; color: var(--body); line-height: 1.6; font-size: 0.94rem; }
+    .pdp-accordion .acc-body h3 { font-size: 0.98rem; margin: 10px 0 8px; }
+    .pdp-accordion .acc-body .pdp-spec-block { margin-bottom: 14px; }
+    .pdp-accordion .acc-body .pdp-spec-block:first-child h3 { margin-top: 0; }
     @media (max-width: 860px){ .pdp { grid-template-columns: 1fr; gap: 28px; } }
     .pdp-brand { color: var(--rose-deep); font-weight: 500; font-size: 0.8rem; letter-spacing: 0.14em; text-transform: uppercase; }
     .pdp .main { position: relative; }
@@ -315,7 +331,8 @@
       return false;
     }
 
-    function productSpecs(p) {
+    // Shared "Features + Specs" inner HTML (used inside the accordion)
+    function productSpecsHtml(p) {
       let html = "";
       if (p.features && p.features.length)
         html += `<div class="pdp-spec-block"><h3>Highlights</h3><ul class="pdp-highlights">${p.features.map(f => `<li>${f}</li>`).join("")}</ul></div>`;
@@ -339,7 +356,34 @@
       if (p.warranty) html += `<div class="pdp-spec-block"><h3>Warranty</h3><p>${p.warranty}</p></div>`;
       if (p.care) html += `<div class="pdp-spec-block"><h3>Care instructions</h3><p>${p.care}</p></div>`;
       if (p.about) html += `<div class="pdp-spec-block"><h3>About the maker</h3><p>${p.about}</p></div>`;
-      return html ? `<section class="pdp-specs">${html}</section>` : "";
+      return html;
+    }
+
+    // Collapsible product info: Description · Features + Specs · Shipping + Returns
+    function productAccordion(p) {
+      const desc = p.desc || blurb(p);
+      const specs = productSpecsHtml(p);
+      const shipping = `
+        <h3>Shipping</h3>
+        <ul class="pdp-highlights">
+          <li>Dispatched from our warehouse in 1–2 business days</li>
+          <li>Delivery in 3–8 business days, depending on your location</li>
+          <li>Ships Australia-wide &amp; to NZ, UK, USA, Canada &amp; Nigeria</li>
+          <li>Free standard shipping on Australian orders over $500</li>
+          <li>Tracking provided — follow your order online</li>
+        </ul>
+        <h3>Returns</h3>
+        <ul class="pdp-highlights">
+          <li>30-day change-of-mind returns, in original condition</li>
+          <li>Faulty or damaged items are covered under the Australian Consumer Law</li>
+        </ul>
+        <p style="margin-top:10px"><a href="policy.html?doc=delivery">Delivery &amp; Shipping policy</a> · <a href="policy.html?doc=returns">Returns policy</a></p>`;
+      return `
+        <div class="pdp-accordion">
+          <details open><summary>Description</summary><div class="acc-body"><p>${desc}</p></div></details>
+          ${specs ? `<details><summary>Features + Specs</summary><div class="acc-body">${specs}</div></details>` : ""}
+          <details><summary>Shipping + Returns</summary><div class="acc-body">${shipping}</div></details>
+        </div>`;
     }
 
     function pdpSetImg(src, btn) {
@@ -458,7 +502,6 @@
               </ul>
               <a class="btn btn--dark btn--block ms-cta" href="account.html">+ Join Membership for Free</a>
             </div>` : ""}
-            <p style="margin-top:16px">${p.desc || blurb(p)}</p>
             <ul class="pdp-detail-list">
               ${p.brand ? `<li><span>Brand</span><span>${p.brand}</span></li>` : ""}
               <li><span>Category</span><span>${p.cat}</span></li>
@@ -496,14 +539,18 @@
               <button type="button" onclick="toggleWishlist('${p.id}', this)">${saved ? "♥ Saved" : "♡ Save"}</button>
             </div>
             <div class="pdp-social">🛒 <span><strong>Other people want this.</strong> Over <b>${cartWant(p)}</b> people have this in their carts right now.</span></div>
-            <div class="pdp-trust">
-              <span>🚚 Free shipping over $500</span><span>↩️ 30-day returns</span><span>🔒 Secure checkout</span>
-            </div>
+            <ul class="pdp-assurance">
+              <li><span class="pa-ic">😊</span> 100% Satisfaction Guarantee</li>
+              <li><span class="pa-ic">✅</span> Money Back Guarantee</li>
+              <li><span class="pa-ic">🔒</span> Secure Checkout</li>
+              <li><span class="pa-ic">⭐</span> Trusted By Thousands</li>
+            </ul>
+            ${productAccordion(p)}
             <a class="pdp-trade" href="trade.html">🧳 <span><strong>Shopping for a business?</strong> Join our Trade &amp; Commercial Program for exclusive trade pricing →</span></a>
           </div>
         </div>`;
 
-      wrap.insertAdjacentHTML("beforeend", productSpecs(p) + productReviews(p) + productReviewForm(p));
+      wrap.insertAdjacentHTML("beforeend", productReviews(p) + productReviewForm(p));
 
       let related = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id);
       related = related.concat(PRODUCTS.filter(x => x.cat !== p.cat && x.id !== p.id));
