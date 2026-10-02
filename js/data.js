@@ -156,6 +156,577 @@ const PRODUCTS = [
     boxContents: ["1 × soap dispenser", "1 × toothbrush holder", "1 × soap dish", "1 × vanity tray"],
     care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from acidic cleaners, vinegar, citrus and bleach, which will dull and etch the surface. Stand bottles on the tray rather than directly on the stone to avoid rings." },
 
+  { id: "bt03", name: "Minimalist Pump Soap Dispenser", cat: "Bathroom", room: "Bathroom", price: 77, memberPrice: 69, sku: "SH-10161", tag: "New", ph: "", img: "assets/products/bt03.jpg",
+    imgs: ["assets/products/bt03.jpg", "assets/products/bt03-2.jpg", "assets/products/bt03-3.jpg", "assets/products/bt03-4.jpg", "assets/products/bt03-5.jpg", "assets/products/bt03-6.jpg"],
+    sizes: [{ label: "Black / Small", price: 77 }, { label: "Silver / Small", price: 77 }, { label: "Ivory / Small", price: 77 }, { label: "Black / Large", price: 98 }, { label: "Silver / Large", price: 98 }, { label: "Ivory / Large", price: 98 }],
+    desc: "A plain, well-proportioned pump dispenser for hand soap or lotion, in a finish that doesn't shout. Two sizes, so it suits a small powder room or a busy family basin, and three colours that sit quietly against most tiles.",
+    features: [
+      "Smooth pump action, built for daily use",
+      "Two sizes: Small and Large",
+      "Black, Silver or Ivory",
+      "Minimalist shape that suits most bathrooms"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "6" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt04", name: "Black Marble-Look & Gold Bathroom Collection", cat: "Bathroom", room: "Bathroom", price: 50, memberPrice: 45, sku: "SH-10162", tag: "New", ph: "", img: "assets/products/bt04.jpg",
+    imgs: ["assets/products/bt04.jpg", "assets/products/bt04-2.jpg", "assets/products/bt04-3.jpg", "assets/products/bt04-4.jpg", "assets/products/bt04-5.jpg", "assets/products/bt04-6.jpg"],
+    sizes: [{ label: "Toothbrush Holder B", price: 50 }, { label: "Mouthwash Cup", price: 50 }, { label: "Soap Dish", price: 69 }, { label: "Soap Dispenser", price: 70 }, { label: "Cotton Swab Box", price: 70 }, { label: "Tray A", price: 83 }, { label: "Toothbrush Holder A", price: 88 }, { label: "Tray B", price: 116 }, { label: "Tissue Box", price: 133 }, { label: "Tray C", price: 136 }, { label: "Tray D", price: 139 }],
+    desc: "Black marble-look pieces with slim gold detailing, bought individually so you take only what your basin needs. Toothbrush holders, cups, a dispenser, a cotton swab box, soap dish, tissue box and two tray sizes, all cut to the same restrained line.",
+    features: [
+      "Black marble-look finish with gold accents",
+      "Pieces sold individually, so you buy what you need",
+      "Includes dispenser, holders, soap dish, tissue box and trays",
+      "Coordinated across the whole range"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "11" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt05", name: "White Marble & Gold Bathroom Collection", cat: "Bathroom", room: "Bathroom", price: 140, memberPrice: 126, sku: "SH-10163", tag: "New", ph: "", img: "assets/products/bt05.jpg",
+    imgs: ["assets/products/bt05.jpg", "assets/products/bt05-2.jpg", "assets/products/bt05-3.jpg", "assets/products/bt05-4.jpg", "assets/products/bt05-5.jpg", "assets/products/bt05-6.jpg"],
+    sizes: [{ label: "Soap Dish (square)", price: 140 }, { label: "Soap Dish (round)", price: 140 }, { label: "Diffuser", price: 189 }, { label: "Cotton Swab (square)", price: 210 }, { label: "Cotton Swab (round)", price: 210 }, { label: "Soap Dispenser (square)", price: 210 }, { label: "Soap Dispenser (round)", price: 210 }, { label: "Toothbrush Holder (square)", price: 210 }, { label: "Toothbrush Holder (round)", price: 210 }, { label: "Tray 01", price: 210 }, { label: "Toothbrush Holder (long)", price: 231 }, { label: "Tray 03", price: 238 }, { label: "Tray 02", price: 252 }, { label: "Tray 04", price: 294 }, { label: "Tissue Holder (Small)", price: 301 }, { label: "Tissue Holder (Big)", price: 350 }],
+    desc: "Natural white marble with gold trim, in square or round shapes depending on how soft you want the look. The veining runs differently through every piece, so a set assembled from these never looks mass-produced.",
+    features: [
+      "Natural white marble with gold accents",
+      "Square or round shapes across the range",
+      "Veining differs in every piece",
+      "Pieces sold individually"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "16" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt06", name: "Two-Tone Bathroom Bin", cat: "Bathroom", room: "Bathroom", price: 209, memberPrice: 188, sku: "SH-10164", tag: "New", ph: "", img: "assets/products/bt06.jpg",
+    imgs: ["assets/products/bt06.jpg", "assets/products/bt06-2.jpg", "assets/products/bt06-3.jpg", "assets/products/bt06-4.jpg", "assets/products/bt06-5.jpg", "assets/products/bt06-6.jpg"],
+    sizes: [{ label: "Orange (with lid)", price: 209 }, { label: "White + Gold (no lid)", price: 209 }, { label: "Green + Gold (no lid)", price: 209 }, { label: "White + Pink (with lid)", price: 209 }, { label: "Lime + Gold (with lid)", price: 209 }, { label: "White + Grey (with lid)", price: 209 }],
+    desc: "A bin you don't have to hide. Clean-sided and weighted enough to stay put, in two-tone colourways with and without a lid, so it works beside a vanity or under a desk just as well.",
+    features: [
+      "Sleek silhouette that suits a visible spot",
+      "With or without lid, depending on the colourway",
+      "Six two-tone colour combinations",
+      "Wipe-clean finish"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Resin / composite", "Options": "6" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents, which can dull the finish." },
+
+  { id: "bt07", name: "Touchless Sensor Bathroom Bin", cat: "Bathroom", room: "Bathroom", price: 307, memberPrice: 276, sku: "SH-10165", tag: "New", ph: "", img: "assets/products/bt07.jpg",
+    imgs: ["assets/products/bt07.jpg", "assets/products/bt07-2.jpg", "assets/products/bt07-3.jpg", "assets/products/bt07-4.jpg"],
+    sizes: [{ label: "Round - 10L", price: 307 }, { label: "Oval - 10L", price: 307 }, { label: "Square - 10L", price: 307 }, { label: "Square - 15L", price: 307 }],
+    desc: "Opens as your hand approaches and closes itself afterwards, which matters more in a bathroom than anywhere else in the house. Fully waterproof, in round, oval and square shapes, at 10 or 15 litres.",
+    features: [
+      "Touchless sensor lid, no contact needed",
+      "Fully waterproof construction",
+      "Round, oval or square",
+      "10L and 15L capacities"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt08", name: "Emerald Marble Bathroom Accessories", cat: "Bathroom", room: "Bathroom", price: 123, memberPrice: 111, sku: "SH-10166", tag: "New", ph: "", img: "assets/products/bt08.jpg",
+    imgs: ["assets/products/bt08.jpg", "assets/products/bt08-2.jpg", "assets/products/bt08-3.jpg", "assets/products/bt08-4.jpg", "assets/products/bt08-5.jpg", "assets/products/bt08-6.jpg"],
+    sizes: [{ label: "Soap Dish (square)", price: 123 }, { label: "Soap Dish (round)", price: 123 }, { label: "Soap Dispenser (square)", price: 206 }, { label: "Soap Dispenser  (round)", price: 206 }, { label: "Toothbrush Holder (Round)", price: 207 }, { label: "Toothbrush Holder (square)", price: 207 }, { label: "3-Hole Holder", price: 207 }, { label: "Cotton Swab Box (square)", price: 223 }, { label: "Cotton Swab Box (round)", price: 223 }, { label: "Diffuser (square)", price: 223 }, { label: "Diffuser (round)", price: 223 }, { label: "Tray", price: 227 }, { label: "Handle Tray", price: 237 }, { label: "Tissue Box (tall)", price: 384 }, { label: "Tissue Box (long)", price: 419 }],
+    desc: "Deep green natural marble with pale veining running through it, which is a far braver choice than white and looks remarkable against brass tapware. Square or round pieces, bought one at a time.",
+    features: [
+      "Premium natural green marble",
+      "Dramatic pale veining, unique to each piece",
+      "Square or round shapes",
+      "Dispenser, cotton swab box, soap dish and holders"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "15" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt09", name: "Fluted Sandstone-Look Bathroom Accessories", cat: "Bathroom", room: "Bathroom", price: 91, memberPrice: 82, sku: "SH-10167", tag: "New", ph: "", img: "assets/products/bt09.jpg",
+    imgs: ["assets/products/bt09.jpg", "assets/products/bt09-2.jpg", "assets/products/bt09-3.jpg", "assets/products/bt09-4.jpg", "assets/products/bt09-5.jpg", "assets/products/bt09-6.jpg"],
+    sizes: [{ label: "Marble White Soap Dish", price: 91 }, { label: "Black Soap Dish", price: 91 }, { label: "White & Gold Soap Dish", price: 91 }, { label: "Marble White Toothbrush Cup", price: 94 }, { label: "Black Toothbrush Cup", price: 94 }, { label: "White & Gold Toothbrush Cup", price: 94 }, { label: "Marble White Cotton Swab Box", price: 97 }, { label: "Black Cotton Swab Box", price: 97 }, { label: "White & Gold Cotton Swab Box", price: 97 }, { label: "Marble White & Silver Soap Dispenser", price: 125 }, { label: "Marble White Diffuser", price: 125 }, { label: "Black & Silver Soap Dispenser", price: 125 }, { label: "Black Diffuser", price: 125 }, { label: "White & Gold Soap Dispenser", price: 125 }, { label: "White & Gold Diffuser", price: 125 }, { label: "Marble White Tray", price: 181 }, { label: "Black Tray", price: 181 }, { label: "White & Gold Tray", price: 181 }],
+    desc: "Bevelled vertical grooves give these pieces their texture, catching the light down the sides so a plain basin suddenly has something to look at. In marble white and warmer sandstone tones.",
+    features: [
+      "Bevelled vertical fluting with real depth",
+      "Marble white and sandstone colourways",
+      "Dispenser, cotton swab box, diffuser, cup and soap dish",
+      "Pieces sold individually"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural stone", "Options": "18" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid acidic or abrasive cleaners, which mark natural stone. Wipe spills promptly, especially oils and toothpaste." },
+
+  { id: "bt10", name: "Sandstone Bathroom Collection", cat: "Bathroom", room: "Bathroom", price: 104, memberPrice: 94, sku: "SH-10168", tag: "New", ph: "", img: "assets/products/bt10.jpg",
+    imgs: ["assets/products/bt10.jpg", "assets/products/bt10-2.jpg", "assets/products/bt10-3.jpg", "assets/products/bt10-4.jpg", "assets/products/bt10-5.jpg", "assets/products/bt10-6.jpg"],
+    sizes: [{ label: "Soap Dish", price: 104 }, { label: "Cup", price: 151 }, { label: "Soap Dispenser", price: 185 }, { label: "Tooth Brush Holder", price: 202 }, { label: "Tray", price: 206 }, { label: "Complete Set", price: 769 }],
+    desc: "Premium sandstone, where the texture is the whole point: matte, grainy and warm rather than polished and cold. Buy the complete set, or add pieces one at a time.",
+    features: [
+      "Premium natural sandstone with a matte finish",
+      "Complete set, or individual pieces",
+      "Cup, tray, soap dish, dispenser and toothbrush holder",
+      "Natural variation in every piece"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural stone", "Options": "6" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid acidic or abrasive cleaners, which mark natural stone. Wipe spills promptly, especially oils and toothpaste." },
+
+  { id: "bt11", name: "Black Marble Bathroom Accessories Collection", cat: "Bathroom", room: "Bathroom", price: 168, memberPrice: 151, sku: "SH-10169", tag: "New", ph: "", img: "assets/products/bt11.jpg",
+    imgs: ["assets/products/bt11.jpg", "assets/products/bt11-2.jpg", "assets/products/bt11-3.jpg", "assets/products/bt11-4.jpg", "assets/products/bt11-5.jpg", "assets/products/bt11-6.jpg"],
+    sizes: [{ label: "Soap Dish A", price: 168 }, { label: "Soap Dish B", price: 168 }, { label: "Soap Dispenser (gold)", price: 210 }, { label: "Soap Dispenser (silver)", price: 210 }, { label: "Soap Dispenser A (gold)", price: 210 }, { label: "Soap Dispenser A (silver)", price: 210 }, { label: "Cotton Swab box (silver)", price: 210 }, { label: "Cotton Swab box (gold)", price: 210 }, { label: "Toothbrush Holder B", price: 210 }, { label: "Toothbrush Holder C", price: 210 }, { label: "Toothbrush Holder A", price: 231 }, { label: "Aromatherapy Bottle (gold)", price: 231 }, { label: "Aromatherapy Bottle (silver)", price: 231 }, { label: "Cosmetic Mirror (silver)", price: 238 }, { label: "Cosmetic Mirror (gold)", price: 238 }, { label: "Tray A", price: 294 }, { label: "Tray B", price: 378 }, { label: "Tray C", price: 420 }, { label: "Tray D", price: 420 }],
+    desc: "Black natural marble with your choice of gold or silver fittings, which is the detail that decides whether a bathroom reads warm or cool. Each piece is cut from stone, so the veining is never repeated.",
+    features: [
+      "Premium black natural marble",
+      "Gold or silver fittings throughout",
+      "Veining unique to every piece",
+      "Dispensers, cotton swab boxes and more, sold individually"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "19" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt12", name: "Crystal Glass Bathroom Accessories", cat: "Bathroom", room: "Bathroom", price: 672, memberPrice: 605, sku: "SH-10170", tag: "New", ph: "", img: "assets/products/bt12.jpg",
+    imgs: ["assets/products/bt12.jpg", "assets/products/bt12-2.jpg", "assets/products/bt12-3.jpg", "assets/products/bt12-4.jpg", "assets/products/bt12-5.jpg", "assets/products/bt12-6.jpg"],
+    sizes: [{ label: "1", price: 672 }, { label: "2", price: 672 }, { label: "3", price: 672 }, { label: "4", price: 672 }, { label: "5", price: 672 }],
+    desc: "Crystal glass with faceted sides that throw light around a basin the way cut glass does on a dining table. Five styles to choose between, all finished to the same standard.",
+    features: [
+      "Faceted crystal glass that catches the light",
+      "Five styles available",
+      "Weighty, substantial feel in the hand",
+      "A quiet touch of luxury for a vanity"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Glass", "Options": "5" },
+    care: "Wipe with a soft, damp cloth and buff dry to keep the clarity. Avoid abrasive cleaners, and lift rather than slide the pieces across stone benchtops." },
+
+  { id: "bt13", name: "Countertop Hand Towel Rack", cat: "Bathroom", room: "Bathroom", price: 209, memberPrice: 188, sku: "SH-10171", tag: "New", ph: "", img: "assets/products/bt13.jpg",
+    imgs: ["assets/products/bt13.jpg", "assets/products/bt13-2.jpg", "assets/products/bt13-3.jpg", "assets/products/bt13-4.jpg", "assets/products/bt13-5.jpg", "assets/products/bt13-6.jpg"],
+    sizes: [{ label: "Black", price: 209 }, { label: "Gold", price: 209 }, { label: "Silver", price: 209 }],
+    desc: "A 32cm standing rack for the bench or vanity, so a hand towel has somewhere to live that isn't the edge of the basin. Black, gold or silver.",
+    features: [
+      "32cm tall, sized for benches and vanities",
+      "Keeps hand towels off the basin edge",
+      "Black, Gold or Silver",
+      "Freestanding, no fixing required"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt14", name: "Egyptian Cotton Towel Set (700GSM, 3-Piece)", cat: "Bathroom", room: "Bathroom", price: 167, memberPrice: 150, sku: "SH-10172", tag: "New", ph: "", img: "assets/products/bt14.jpg",
+    imgs: ["assets/products/bt14.jpg", "assets/products/bt14-2.jpg", "assets/products/bt14-3.jpg", "assets/products/bt14-4.jpg", "assets/products/bt14-5.jpg", "assets/products/bt14-6.jpg"],
+    sizes: [{ label: "Light Grey / 3 Piece Towel Set", price: 167 }, { label: "Royal Blue / 3 Piece Towel Set", price: 167 }, { label: "Dark Grey / 3 Piece Towel Set", price: 167 }, { label: "White / 3 Piece Towel Set", price: 167 }, { label: "Peachy Pink / 3 Piece Towel Set", price: 167 }, { label: "Tuscan Tan / 3 Piece Towel Set", price: 167 }],
+    desc: "700GSM Egyptian cotton, which is the weight where a towel stops being thin and starts feeling like a hotel. Three pieces per set, in six colours, absorbent from the first wash and soft after many.",
+    features: [
+      "700GSM Egyptian cotton",
+      "Three-piece set",
+      "Highly absorbent with a plush hand",
+      "Six colours: light grey, royal blue, dark grey, white, peachy pink and more"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Egyptian cotton", "Options": "6" },
+    care: "Machine wash warm with like colours. Avoid fabric softener, which coats the fibres and reduces absorbency. Tumble dry low, and skip the iron." },
+
+  { id: "bt15", name: "Black & White Veined Bathroom Collection", cat: "Bathroom", room: "Bathroom", price: 76, memberPrice: 68, sku: "SH-10173", tag: "New", ph: "", img: "assets/products/bt15.jpg",
+    imgs: ["assets/products/bt15.jpg", "assets/products/bt15-2.jpg", "assets/products/bt15-3.jpg", "assets/products/bt15-4.jpg", "assets/products/bt15-5.jpg", "assets/products/bt15-6.jpg"],
+    sizes: [{ label: "Soap Dish", price: 76 }, { label: "Soap Dispenser", price: 81 }, { label: "Mouthwash Cup", price: 81 }, { label: "Cotton Swab Box", price: 81 }, { label: "Toothbrush Holder", price: 90 }, { label: "Tray", price: 206 }],
+    desc: "A black finish with white veining running across it, which reads as marble from across the room and costs considerably less. The tray pulls the set together on a vanity.",
+    features: [
+      "Black finish with elegant white veining",
+      "Dispenser, mouthwash cup, toothbrush holder, cotton swab box, soap dish and tray",
+      "Pieces sold individually",
+      "Contemporary look at an accessible price"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "6" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt16", name: "Travertine Bathroom Collection", cat: "Bathroom", room: "Bathroom", price: 164, memberPrice: 148, sku: "SH-10174", tag: "New", ph: "", img: "assets/products/bt16.jpg",
+    imgs: ["assets/products/bt16.jpg", "assets/products/bt16-2.jpg", "assets/products/bt16-3.jpg", "assets/products/bt16-4.jpg", "assets/products/bt16-5.jpg", "assets/products/bt16-6.jpg"],
+    sizes: [{ label: "Soap Dish A", price: 164 }, { label: "Soap Dish B", price: 164 }, { label: "Cup", price: 188 }, { label: "Toothbrush Holder", price: 195 }, { label: "Soap Dispenser A", price: 202 }, { label: "Soap Dispenser B", price: 202 }, { label: "Cotton Swab Box A", price: 202 }, { label: "Cotton Swab Box B", price: 202 }, { label: "Storage Container", price: 202 }, { label: "Tray A", price: 258 }, { label: "Aromatherapy Bottle", price: 262 }, { label: "Tray C", price: 319 }, { label: "Tray B", price: 402 }, { label: "Tissue Box", price: 414 }],
+    desc: "Travertine has an open, pitted texture that reads as old-world rather than glossy, and it suits a bathroom that's meant to feel calm. The widest set of pieces we carry, including a storage container and two soap dish shapes.",
+    features: [
+      "Natural travertine with an open, tactile texture",
+      "Includes dispensers, cotton swab boxes, cup, storage container and soap dishes",
+      "Two shapes across several pieces",
+      "Calm, understated finish"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural stone", "Options": "14" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid acidic or abrasive cleaners, which mark natural stone. Wipe spills promptly, especially oils and toothpaste." },
+
+  { id: "bt17", name: "Rose Gold Bathroom Accessories Set", cat: "Bathroom", room: "Bathroom", price: 94, memberPrice: 85, sku: "SH-10175", tag: "New", ph: "", img: "assets/products/bt17.jpg",
+    imgs: ["assets/products/bt17.jpg", "assets/products/bt17-2.jpg", "assets/products/bt17-3.jpg", "assets/products/bt17-4.jpg", "assets/products/bt17-5.jpg", "assets/products/bt17-6.jpg"],
+    sizes: [{ label: "Toothbrush Holder", price: 94 }, { label: "Soap Dispenser", price: 94 }, { label: "Soap Dish", price: 94 }, { label: "Cup", price: 94 }, { label: "Complete Set", price: 346 }],
+    desc: "Rose gold detailing across a four-piece set: toothbrush holder, dispenser, soap dish and cup. Take the set, or fill a gap with a single piece.",
+    features: [
+      "Rose gold accents throughout",
+      "Complete four-piece set or individual pieces",
+      "Toothbrush holder, soap dispenser, soap dish and cup",
+      "Warm metallic tone that flatters most tiles"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "5" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt18", name: "Expandable Bamboo Bath Caddy", cat: "Bathroom", room: "Bathroom", price: 189, memberPrice: 170, sku: "SH-10176", tag: "New", ph: "", img: "assets/products/bt18.jpg",
+    imgs: ["assets/products/bt18.jpg", "assets/products/bt18-2.jpg", "assets/products/bt18-3.jpg", "assets/products/bt18-4.jpg", "assets/products/bt18-5.jpg", "assets/products/bt18-6.jpg"],
+    sizes: [{ label: "White", price: 189 }, { label: "Black", price: 189 }],
+    desc: "Extends to fit across the bath, then holds a book, a glass and a candle where you can reach them. Bamboo, so it copes with the steam, in white or black.",
+    features: [
+      "Extends to fit most baths",
+      "Holds a book, glass and candle",
+      "Bamboo, suited to a humid room",
+      "White or Black"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Timber", "Options": "2" },
+    care: "Wipe dry after each use and let it air properly, since standing water is what eventually splits timber. Avoid soaking, and oil occasionally to keep the grain fed." },
+
+  { id: "bt19", name: "Clear Cosmetic Storage Box", cat: "Bathroom", room: "Bathroom", price: 77, memberPrice: 69, sku: "SH-10177", tag: "New", ph: "", img: "assets/products/bt19.jpg",
+    imgs: ["assets/products/bt19.jpg", "assets/products/bt19-2.jpg", "assets/products/bt19-3.jpg", "assets/products/bt19-4.jpg", "assets/products/bt19-5.jpg"],
+    sizes: [{ label: "Small", price: 77 }, { label: "Large", price: 104 }],
+    desc: "A clear box that keeps brushes, lipsticks and skincare upright and visible instead of rolling loose in a drawer. Two sizes, and tidy enough to leave out on the vanity.",
+    features: [
+      "Clear sides, so you can see what you have",
+      "Keeps brushes and bottles upright",
+      "Two sizes: Small and Large",
+      "Smart enough to leave on display"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Resin / composite", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents, which can dull the finish." },
+
+  { id: "bt20", name: "Glass Bathroom Accessories Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 412, memberPrice: 371, sku: "SH-10178", tag: "New", ph: "", img: "assets/products/bt20.jpg",
+    imgs: ["assets/products/bt20.jpg", "assets/products/bt20-2.jpg", "assets/products/bt20-3.jpg", "assets/products/bt20-4.jpg", "assets/products/bt20-5.jpg", "assets/products/bt20-6.jpg"],
+    sizes: [{ label: "4 x Piece Set / Black", price: 412 }, { label: "4 x Piece Set / White", price: 412 }],
+    desc: "Four pieces in high-quality glass, in black or white, with the weight and clarity that cheap acrylic never manages. A whole basin dressed in one purchase.",
+    features: [
+      "High-quality glass construction",
+      "Four-piece set",
+      "Black or White",
+      "Substantial weight and clarity"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Glass", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and buff dry to keep the clarity. Avoid abrasive cleaners, and lift rather than slide the pieces across stone benchtops." },
+
+  { id: "bt21", name: "Ceramic Marble-Look Bathroom Set (5-Piece)", cat: "Bathroom", room: "Bathroom", price: 266, memberPrice: 239, sku: "SH-10179", tag: "New", ph: "", img: "assets/products/bt21.jpg",
+    imgs: ["assets/products/bt21.jpg", "assets/products/bt21-2.jpg", "assets/products/bt21-3.jpg", "assets/products/bt21-4.jpg", "assets/products/bt21-5.jpg", "assets/products/bt21-6.jpg"],
+    sizes: [{ label: "Emerald Green: 5 x Piece Set", price: 266 }, { label: "Snow White: 5 x Piece Set", price: 266 }, { label: "Black: 5 x Piece Set", price: 266 }],
+    desc: "Five ceramic pieces finished to look like marble, with gold accents, in emerald green, snow white or black. All the drama of stone, at a fraction of the price and weight.",
+    features: [
+      "Five-piece ceramic set",
+      "Marble-look finish with gold accents",
+      "Emerald Green, Snow White or Black",
+      "Lighter and more affordable than natural stone"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt22", name: "Marble & Copper Floor Towel Holder", cat: "Bathroom", room: "Bathroom", price: 1537, memberPrice: 1383, sku: "SH-10180", tag: "New", ph: "", img: "assets/products/bt22.jpg",
+    imgs: ["assets/products/bt22.jpg", "assets/products/bt22-2.jpg", "assets/products/bt22-3.jpg", "assets/products/bt22-4.jpg", "assets/products/bt22-5.jpg", "assets/products/bt22-6.jpg"],
+    sizes: [{ label: "White + Gold", price: 1537 }, { label: "White + Black", price: 1537 }, { label: "Black + Black", price: 1537 }, { label: "Black + Gold", price: 1537 }],
+    desc: "A freestanding towel holder on a solid marble base with copper rods, heavy enough to stay exactly where you put it. The piece that makes a bathroom look finished rather than furnished.",
+    features: [
+      "Solid marble base with copper rods",
+      "Freestanding, no wall fixing",
+      "Four colour combinations",
+      "Weighted for stability"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt23", name: "Porcelain Bathroom Set (5-Piece)", cat: "Bathroom", room: "Bathroom", price: 262, memberPrice: 236, sku: "SH-10181", tag: "New", ph: "", img: "assets/products/bt23.jpg",
+    imgs: ["assets/products/bt23.jpg", "assets/products/bt23-2.jpg", "assets/products/bt23-3.jpg", "assets/products/bt23-4.jpg", "assets/products/bt23-5.jpg"],
+    sizes: [{ label: "5 Piece Set", price: 262 }],
+    desc: "Five porcelain pieces with clean lines and nothing superfluous, made to work together on a single vanity.",
+    features: [
+      "Five coordinated porcelain pieces",
+      "Minimalist, contemporary lines",
+      "Designed to be used as a set",
+      "Smooth, wipe-clean glaze"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt24", name: "Ceramic Bathroom Accessories Collection", cat: "Bathroom", room: "Bathroom", price: 97, memberPrice: 87, sku: "SH-10182", tag: "New", ph: "", img: "assets/products/bt24.jpg",
+    imgs: ["assets/products/bt24.jpg", "assets/products/bt24-2.jpg", "assets/products/bt24-3.jpg", "assets/products/bt24-4.jpg", "assets/products/bt24-5.jpg", "assets/products/bt24-6.jpg"],
+    sizes: [{ label: "Soap Dish / Silver", price: 97 }, { label: "Soap Dish / White", price: 97 }, { label: "Soap Dish / Gold", price: 97 }, { label: "Holder / Silver", price: 104 }, { label: "Holder / White", price: 104 }, { label: "Holder / Gold", price: 104 }, { label: "Cup / Silver", price: 108 }, { label: "Cup / White", price: 108 }, { label: "Cup / Gold", price: 108 }, { label: "Dispenser / Silver", price: 111 }, { label: "Dispenser / White", price: 111 }, { label: "Dispenser / Gold", price: 111 }],
+    desc: "Good ceramic in silver, white or gold trims, sold piece by piece: dispenser, cup and holder. The easy way to replace one tired item without rebuying the lot.",
+    features: [
+      "High-quality ceramic",
+      "Silver, White or Gold trims",
+      "Dispenser, cup and holder",
+      "Buy single pieces to fill a gap"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "12" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt25", name: "Marble-Base Rotating Vanity Mirror", cat: "Bathroom", room: "Bathroom", price: 482, memberPrice: 434, sku: "SH-10183", tag: "New", ph: "", img: "assets/products/bt25.jpg",
+    imgs: ["assets/products/bt25.jpg", "assets/products/bt25-2.jpg", "assets/products/bt25-3.jpg", "assets/products/bt25-4.jpg", "assets/products/bt25-5.jpg", "assets/products/bt25-6.jpg"],
+    sizes: [{ label: "White", price: 482 }, { label: "Black", price: 482 }],
+    desc: "A vanity mirror on a marble base that turns to the angle you need and stays there. Heavy enough not to creep across the bench while you use it.",
+    features: [
+      "Rotates to the angle you need",
+      "Solid marble base",
+      "White or Black",
+      "Weighted so it stays put"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt26", name: "Marble Toiletry Collection", cat: "Bathroom", room: "Bathroom", price: 140, memberPrice: 126, sku: "SH-10184", tag: "New", ph: "", img: "assets/products/bt26.jpg",
+    imgs: ["assets/products/bt26.jpg", "assets/products/bt26-2.jpg", "assets/products/bt26-3.jpg", "assets/products/bt26-4.jpg", "assets/products/bt26-5.jpg", "assets/products/bt26-6.jpg"],
+    sizes: [{ label: "Soap Dish", price: 140 }, { label: "Mouth Cup", price: 196 }, { label: "Soap Dispenser (gold)", price: 210 }, { label: "Soap Dispenser (silver)", price: 210 }, { label: "Cotton Swab Box", price: 210 }, { label: "Toothbrush Holder", price: 231 }, { label: "Tissue Box B", price: 308 }, { label: "Tissue Box A", price: 350 }, { label: "Tray", price: 420 }],
+    desc: "Marble pieces at a larger scale than most: two tissue box designs, a generous tray, dispensers in gold or silver. For a bathroom with the bench space to carry them.",
+    features: [
+      "Genuine marble throughout",
+      "Two tissue box designs and a generous tray",
+      "Gold or silver dispenser fittings",
+      "Larger scale than most accessory ranges"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "9" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt27", name: "Expandable Timber Bath Caddy", cat: "Bathroom", room: "Bathroom", price: 223, memberPrice: 201, sku: "SH-10185", tag: "New", ph: "", img: "assets/products/bt27.jpg",
+    imgs: ["assets/products/bt27.jpg", "assets/products/bt27-2.jpg", "assets/products/bt27-3.jpg", "assets/products/bt27-4.jpg", "assets/products/bt27-5.jpg", "assets/products/bt27-6.jpg"],
+    desc: "Solid timber that extends across the bath, with room for a book, a glass and whatever else turns a bath into an hour to yourself.",
+    features: [
+      "Quality timber construction",
+      "Expands to fit most baths",
+      "Room for a book, glass and candle",
+      "Warm, natural finish"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Timber" },
+    care: "Wipe dry after each use and let it air properly, since standing water is what eventually splits timber. Avoid soaking, and oil occasionally to keep the grain fed." },
+
+  { id: "bt28", name: "Luxe Bathroom Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 455, memberPrice: 410, sku: "SH-10186", tag: "New", ph: "", img: "assets/products/bt28.jpg",
+    imgs: ["assets/products/bt28.jpg", "assets/products/bt28-2.jpg", "assets/products/bt28-3.jpg", "assets/products/bt28-4.jpg", "assets/products/bt28-5.jpg", "assets/products/bt28-6.jpg"],
+    sizes: [{ label: "4 Piece Set A", price: 455 }, { label: "4 Piece Set B", price: 455 }],
+    desc: "A four-piece set in two arrangements, made to dress a whole basin at once rather than be collected slowly.",
+    features: [
+      "Four-piece set",
+      "Two arrangements to choose from",
+      "Coordinated finish across every piece",
+      "A complete basin in one purchase"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt29", name: "Gilded Bathroom Accessories Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 83, memberPrice: 75, sku: "SH-10187", tag: "New", ph: "", img: "assets/products/bt29.jpg",
+    imgs: ["assets/products/bt29.jpg", "assets/products/bt29-2.jpg", "assets/products/bt29-3.jpg"],
+    sizes: [{ label: "Soap Dish", price: 83 }, { label: "Toothbrush Holder", price: 83 }, { label: "Soap Dispenser", price: 83 }, { label: "Cup", price: 83 }, { label: "4 Piece Set", price: 321 }],
+    desc: "Four pieces with gilded detailing, available as a set or individually, so a single soap dish can be replaced without starting again.",
+    features: [
+      "Four-piece set or individual pieces",
+      "Gilded detailing",
+      "Soap dish, toothbrush holder, dispenser and cup",
+      "Consistent finish across the range"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "5" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt30", name: "Three-Tier Standing Towel Rack", cat: "Bathroom", room: "Bathroom", price: 966, memberPrice: 869, sku: "SH-10188", tag: "New", ph: "", img: "assets/products/bt30.jpg",
+    imgs: ["assets/products/bt30.jpg", "assets/products/bt30-2.jpg", "assets/products/bt30-3.jpg", "assets/products/bt30-4.jpg", "assets/products/bt30-5.jpg", "assets/products/bt30-6.jpg"],
+    sizes: [{ label: "Black / Small", price: 966 }, { label: "Gold / Small", price: 966 }, { label: "Black / Large", price: 1036 }, { label: "Gold / Large", price: 1036 }],
+    desc: "Three hanging levels on a freestanding frame, which is what a family bathroom actually needs: somewhere for three towels to dry properly rather than overlap on one rail.",
+    features: [
+      "Three hanging levels",
+      "Freestanding, no wall fixing required",
+      "Black or Gold",
+      "Small and Large sizes"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt31", name: "Stainless Steel & Marble Towel Holder", cat: "Bathroom", room: "Bathroom", price: 349, memberPrice: 314, sku: "SH-10189", tag: "New", ph: "", img: "assets/products/bt31.jpg",
+    imgs: ["assets/products/bt31.jpg", "assets/products/bt31-2.jpg", "assets/products/bt31-3.jpg", "assets/products/bt31-4.jpg", "assets/products/bt31-5.jpg", "assets/products/bt31-6.jpg"],
+    sizes: [{ label: "Black", price: 349 }, { label: "Brushed Gold", price: 349 }],
+    desc: "Stainless steel rods on a marble foot: the steel handles the damp, the marble handles the standing still. Black or brushed gold.",
+    features: [
+      "Premium stainless steel with a marble base",
+      "Resists rust in a humid room",
+      "Black or Brushed Gold",
+      "Freestanding"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt32", name: "Beige Bathroom Set (5-Piece)", cat: "Bathroom", room: "Bathroom", price: 314, memberPrice: 283, sku: "SH-10190", tag: "New", ph: "", img: "assets/products/bt32.jpg",
+    imgs: ["assets/products/bt32.jpg", "assets/products/bt32-2.jpg", "assets/products/bt32-3.jpg", "assets/products/bt32-4.jpg", "assets/products/bt32-5.jpg", "assets/products/bt32-6.jpg"],
+    sizes: [{ label: "Beige / 5pc Set", price: 314 }],
+    desc: "Five pieces in a soft beige that works with timber vanities and warm tiles, where a stark white set would look cold.",
+    features: [
+      "Five-piece set",
+      "Soft beige tone",
+      "Suits timber and warm-toned bathrooms",
+      "Coordinated across every piece"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt33", name: "Tree Branch Wall Hook (78cm)", cat: "Bathroom", room: "Bathroom", price: 434, memberPrice: 391, sku: "SH-10191", tag: "New", ph: "", img: "assets/products/bt33.jpg",
+    imgs: ["assets/products/bt33.jpg", "assets/products/bt33-2.jpg", "assets/products/bt33-3.jpg", "assets/products/bt33-4.jpg", "assets/products/bt33-5.jpg", "assets/products/bt33-6.jpg"],
+    sizes: [{ label: "Black + Gold / 78cm x 1.5cm", price: 434 }],
+    desc: "A branching wall hook, 78cm long, that holds robes, towels and bags without looking like hardware. Black with gold.",
+    features: [
+      "78cm branching design",
+      "Holds robes, towels and bags",
+      "Black and gold finish",
+      "A decorative piece as much as storage"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt34", name: "Dual-Rod Rotating Towel Rack", cat: "Bathroom", room: "Bathroom", price: 686, memberPrice: 617, sku: "SH-10192", tag: "New", ph: "", img: "assets/products/bt34.jpg",
+    imgs: ["assets/products/bt34.jpg", "assets/products/bt34-2.jpg", "assets/products/bt34-3.jpg", "assets/products/bt34-4.jpg", "assets/products/bt34-5.jpg"],
+    sizes: [{ label: "Silver", price: 686 }, { label: "Gold", price: 686 }],
+    desc: "Two rods that rotate independently, so towels can be spread out to dry rather than bunched together. Silver or gold.",
+    features: [
+      "Two independently rotating rods",
+      "Spreads towels so they dry properly",
+      "Silver or Gold",
+      "Freestanding frame"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt35", name: "Standing Stainless Steel Towel Rack", cat: "Bathroom", room: "Bathroom", price: 259, memberPrice: 233, sku: "SH-10193", tag: "New", ph: "", img: "assets/products/bt35.jpg",
+    imgs: ["assets/products/bt35.jpg", "assets/products/bt35-2.jpg", "assets/products/bt35-3.jpg", "assets/products/bt35-4.jpg", "assets/products/bt35-5.jpg", "assets/products/bt35-6.jpg"],
+    sizes: [{ label: "Black", price: 259 }, { label: "Brushed Gold", price: 259 }, { label: "Brushed Silver", price: 259 }],
+    desc: "A simple standing rack in stainless steel, which is the material that survives a wet bathroom without rusting at the joints. Black, brushed gold or brushed silver.",
+    features: [
+      "High-quality stainless steel",
+      "Resists rust and water spotting",
+      "Black, Brushed Gold or Brushed Silver",
+      "Clean, modern lines"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt36", name: "Two-Bar Floor Towel Rack with Storage", cat: "Bathroom", room: "Bathroom", price: 1182, memberPrice: 1064, sku: "SH-10194", tag: "New", ph: "", img: "assets/products/bt36.jpg",
+    imgs: ["assets/products/bt36.jpg", "assets/products/bt36-2.jpg", "assets/products/bt36-3.jpg", "assets/products/bt36-4.jpg", "assets/products/bt36-5.jpg", "assets/products/bt36-6.jpg"],
+    sizes: [{ label: "Black", price: 1182 }, { label: "Gold", price: 1182 }],
+    desc: "Two sturdy bars for towels with storage built into the frame below, so the bathroom gains a shelf as well as a rail.",
+    features: [
+      "Two sturdy towel bars",
+      "Built-in storage below",
+      "Durable metal construction",
+      "Black or Gold"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt37", name: "Marble-Base Vertical Towel Rack", cat: "Bathroom", room: "Bathroom", price: 1232, memberPrice: 1109, sku: "SH-10195", tag: "New", ph: "", img: "assets/products/bt37.jpg",
+    imgs: ["assets/products/bt37.jpg", "assets/products/bt37-2.jpg", "assets/products/bt37-3.jpg", "assets/products/bt37-4.jpg", "assets/products/bt37-5.jpg"],
+    sizes: [{ label: "Black", price: 1232 }],
+    desc: "A tall vertical rack on a marble base, which keeps the footprint small while holding full-size bath towels. Black.",
+    features: [
+      "Solid marble base",
+      "Vertical design with a small footprint",
+      "Holds full-size bath towels",
+      "Movable, no fixing required"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt38", name: "Modern Bath Accessories Collection", cat: "Bathroom", room: "Bathroom", price: 90, memberPrice: 81, sku: "SH-10196", tag: "New", ph: "", img: "assets/products/bt38.jpg",
+    imgs: ["assets/products/bt38.jpg", "assets/products/bt38-2.jpg", "assets/products/bt38-3.jpg", "assets/products/bt38-4.jpg", "assets/products/bt38-5.jpg", "assets/products/bt38-6.jpg"],
+    sizes: [{ label: "Soap dish", price: 90 }, { label: "Cotton Swab Box", price: 101 }, { label: "Soap Dispenser", price: 101 }, { label: "Tray", price: 168 }],
+    desc: "Clean lines and a contemporary finish across a cotton swab box, dispenser, soap dish and tray. Unfussy pieces for a bathroom that doesn't want a theme.",
+    features: [
+      "Cotton swab box, dispenser, soap dish and tray",
+      "Clean contemporary lines",
+      "Pieces sold individually",
+      "Easy to wipe down"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Resin / composite", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents, which can dull the finish." },
+
+  { id: "bt39", name: "Matte Bathroom Accessories Set (5-Piece)", cat: "Bathroom", room: "Bathroom", price: 349, memberPrice: 314, sku: "SH-10197", tag: "New", ph: "", img: "assets/products/bt39.jpg",
+    imgs: ["assets/products/bt39.jpg", "assets/products/bt39-2.jpg", "assets/products/bt39-3.jpg", "assets/products/bt39-4.jpg", "assets/products/bt39-5.jpg", "assets/products/bt39-6.jpg"],
+    sizes: [{ label: "Grey - 5 Pcs", price: 349 }, { label: "Sandstone- 5 Pcs", price: 349 }],
+    desc: "A five-piece set in a soft matte finish, in grey or sandstone, that hides water spots far better than anything glossy.",
+    features: [
+      "Five-piece set",
+      "Soft matte finish",
+      "Grey or Sandstone",
+      "Hides water marks better than gloss"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Resin / composite", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents, which can dull the finish." },
+
+  { id: "bt40", name: "Veined Marble Bathroom Accessories", cat: "Bathroom", room: "Bathroom", price: 167, memberPrice: 150, sku: "SH-10198", tag: "New", ph: "", img: "assets/products/bt40.jpg",
+    imgs: ["assets/products/bt40.jpg", "assets/products/bt40-2.jpg", "assets/products/bt40-3.jpg", "assets/products/bt40-4.jpg", "assets/products/bt40-5.jpg", "assets/products/bt40-6.jpg"],
+    sizes: [{ label: "Soap dish", price: 167 }, { label: "Soap Dispenser", price: 207 }, { label: "Cup", price: 207 }, { label: "Cotton Swab Box", price: 248 }, { label: "Tray A", price: 357 }, { label: "Tray B", price: 382 }],
+    desc: "Premium marble with pronounced veining, including two tray sizes for whatever bench space you have. Sold piece by piece.",
+    features: [
+      "Premium marble with pronounced veining",
+      "Two tray sizes",
+      "Dispenser, cotton swab box, cup and soap dish",
+      "Each piece individually cut"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "6" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt41", name: "Faceted Ceramic Bathroom Set (5-Piece)", cat: "Bathroom", room: "Bathroom", price: 277, memberPrice: 249, sku: "SH-10199", tag: "New", ph: "", img: "assets/products/bt41.jpg",
+    imgs: ["assets/products/bt41.jpg", "assets/products/bt41-2.jpg", "assets/products/bt41-3.jpg", "assets/products/bt41-4.jpg", "assets/products/bt41-5.jpg", "assets/products/bt41-6.jpg"],
+    sizes: [{ label: "5 Pcs White Set", price: 277 }, { label: "5 Pcs Black Set", price: 277 }],
+    desc: "Five ceramic pieces with faceted, polygonal sides that give a plain white or black set some shape and shadow.",
+    features: [
+      "Faceted, polygonal shape",
+      "Five-piece ceramic set",
+      "White or Black",
+      "Smooth, wipe-clean glaze"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt42", name: "Natural Marble Bathroom Accessories", cat: "Bathroom", room: "Bathroom", price: 188, memberPrice: 169, sku: "SH-10200", tag: "New", ph: "", img: "assets/products/bt42.jpg",
+    imgs: ["assets/products/bt42.jpg", "assets/products/bt42-2.jpg", "assets/products/bt42-3.jpg", "assets/products/bt42-4.jpg", "assets/products/bt42-5.jpg", "assets/products/bt42-6.jpg"],
+    sizes: [{ label: "Toothbrush Cup", price: 188 }, { label: "Soap Dispenser A", price: 210 }, { label: "Soap Dispenser B", price: 210 }, { label: "Cotton Swab Box", price: 210 }, { label: "Diffuser", price: 230 }, { label: "Soap Dish", price: 308 }, { label: "Tray", price: 412 }],
+    desc: "Genuine marble, including a diffuser and a generous tray alongside the usual pieces, so the whole vanity can be in one stone.",
+    features: [
+      "Genuine natural marble",
+      "Includes diffuser and tray as well as the basics",
+      "Two dispenser designs",
+      "Veining unique to each piece"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Natural marble", "Options": "7" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from vinegar, citrus and bleach, which dull and etch the surface. Stand bottles on a tray rather than directly on the stone." },
+
+  { id: "bt43", name: "Ceramic Bathroom Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 328, memberPrice: 295, sku: "SH-10201", tag: "New", ph: "", img: "assets/products/bt43.jpg",
+    imgs: ["assets/products/bt43.jpg", "assets/products/bt43-2.jpg", "assets/products/bt43-3.jpg", "assets/products/bt43-4.jpg", "assets/products/bt43-5.jpg", "assets/products/bt43-6.jpg"],
+    sizes: [{ label: "Green Set", price: 328 }, { label: "Coffee Set", price: 328 }],
+    desc: "Four premium ceramic pieces in green or coffee, a quieter palette than the usual white and gold.",
+    features: [
+      "Four-piece premium ceramic set",
+      "Green or Coffee colourway",
+      "Minimalist shape",
+      "Coordinated finish"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
+  { id: "bt44", name: "Crystal Glass Bathroom Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 1016, memberPrice: 914, sku: "SH-10202", tag: "New", ph: "", img: "assets/products/bt44.jpg",
+    imgs: ["assets/products/bt44.jpg", "assets/products/bt44-2.jpg", "assets/products/bt44-3.jpg", "assets/products/bt44-4.jpg", "assets/products/bt44-5.jpg"],
+    sizes: [{ label: "4 Piece Set", price: 1016 }],
+    desc: "Four pieces in crystal glass, bought together, for a vanity that catches the light every time someone walks past.",
+    features: [
+      "Four-piece crystal glass set",
+      "Catches and throws light",
+      "Substantial, weighty feel",
+      "Timeless finish"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Glass", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and buff dry to keep the clarity. Avoid abrasive cleaners, and lift rather than slide the pieces across stone benchtops." },
+
+  { id: "bt45", name: "Corner Towel Rack (40 × 50cm)", cat: "Bathroom", room: "Bathroom", price: 448, memberPrice: 403, sku: "SH-10203", tag: "New", ph: "", img: "assets/products/bt45.jpg",
+    imgs: ["assets/products/bt45.jpg", "assets/products/bt45-2.jpg", "assets/products/bt45-3.jpg", "assets/products/bt45-4.jpg", "assets/products/bt45-5.jpg"],
+    sizes: [{ label: "Black / 40cm x 50cm", price: 448 }, { label: "Gold / 40cm x 50cm", price: 448 }],
+    desc: "Built for the corner that nothing else fits, 40 by 50cm, keeping towels off the floor and out of the way. Black or gold.",
+    features: [
+      "Fits an unused corner",
+      "40 × 50cm",
+      "Black or Gold",
+      "Keeps towels tidy and off the floor"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Stainless steel / metal", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water spotting, which is the usual reason a finish looks tired. Avoid abrasive cleaners on brushed and coloured finishes." },
+
+  { id: "bt46", name: "Granite-Look Bathroom Set (4-Piece)", cat: "Bathroom", room: "Bathroom", price: 406, memberPrice: 365, sku: "SH-10204", tag: "New", ph: "", img: "assets/products/bt46.jpg",
+    imgs: ["assets/products/bt46.jpg", "assets/products/bt46-2.jpg", "assets/products/bt46-3.jpg", "assets/products/bt46-4.jpg", "assets/products/bt46-5.jpg", "assets/products/bt46-6.jpg"],
+    sizes: [{ label: "4 x Piece Set", price: 406 }],
+    desc: "Four pieces in a granite-look finish, including a toilet brush, which most sets quietly leave out.",
+    features: [
+      "Four-piece set",
+      "Granite-look finish",
+      "Includes soap dish, dispenser, cup and toilet brush",
+      "Hard-wearing and easy to clean"
+    ],
+    specs: { "Type": "Bathroom accessory", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
+
   // ── Outdoor ──
   { id: "od01", name: "Steel Fire Pit with Built-In Log Store", cat: "Outdoor", room: "Outdoor", price: 5370, memberPrice: 4833, sku: "SH-10116", tag: "New", ph: "", img: "assets/products/od01.jpg",
     imgs: ["assets/products/od01.jpg", "assets/products/od01-2.jpg", "assets/products/od01-3.jpg", "assets/products/od01-4.jpg", "assets/products/od01-5.jpg", "assets/products/od01-6.jpg", "assets/products/od01-7.jpg", "assets/products/od01-8.jpg"],
