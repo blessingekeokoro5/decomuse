@@ -234,6 +234,566 @@ const PRODUCTS = [
     specs: { "Type": "Outdoor lounge collection", "Weave": "Weatherproof rattan", "Pieces": "Chair, sofa chair, two seater, sun lounge, footstool", "Colours": "Chocolate, Beige", "Sold as": "Individual pieces", "Use": "Outdoor" },
     care: "Rinse the weave with fresh water and let it air dry, especially near salt water. Wipe spills before they dry in. Bring cushions inside when it rains, and cover or shelter the pieces through long wet or very hot spells." },
 
+  { id: "od06", name: "Sandrine Sun Lounge", cat: "Outdoor", room: "Outdoor", price: 1377, memberPrice: 1239, sku: "SH-10121", tag: "New", ph: "", img: "assets/products/od06.jpg",
+    imgs: ["assets/products/od06.jpg", "assets/products/od06-2.jpg", "assets/products/od06-3.jpg", "assets/products/od06-4.jpg", "assets/products/od06-5.jpg"],
+    sizes: [{ label: "Champagne Table", price: 1377 }, { label: "White Table", price: 1377 }, { label: "Champagne Lounge", price: 3861 }, { label: "White Lounge", price: 3861 }],
+    desc: "A sun lounge with a curve to it, shaped so your back is supported whether you're reading or dozing. The hollow sculptural base lifts it off the ground and makes it look like a piece of furniture rather than a poolside afterthought, and the matching side table keeps a drink within arm's reach. In champagne or white, both of which sit well beside water and pale paving.",
+    features: [
+      "Curved, ergonomic frame shaped for long afternoons",
+      "Sculptural hollow base that lifts the lounge off the ground",
+      "Matching side table available separately",
+      "Champagne or White",
+      "Built for poolside and terrace use"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od07", name: "Marie Outdoor Retreat", cat: "Outdoor", room: "Outdoor", price: 2912, memberPrice: 2621, sku: "SH-10122", tag: "New", ph: "", img: "assets/products/od07.jpg",
+    imgs: ["assets/products/od07.jpg", "assets/products/od07-2.jpg", "assets/products/od07-3.jpg", "assets/products/od07-4.jpg", "assets/products/od07-5.jpg", "assets/products/od07-6.jpg"],
+    colours: [{ name: "Grey", hex: "#9a9892" }],
+    sizes: [{ label: "Table", price: 2912 }, { label: "Chair", price: 3702 }, { label: "140cm Sofa", price: 4360 }, { label: "180cm Sofa", price: 6555 }],
+    desc: "A grey rattan setting that does the whole corner: armchair, sofa in two lengths, and a table to pull between them. The weave is fine and even, the tone is a soft mid-grey rather than the orange-brown of cheaper rattan, and the proportions are generous enough that people stay put. Buy the pieces as your space allows.",
+    features: [
+      "Finely woven grey rattan over a sturdy frame",
+      "Sofas in 140cm and 180cm, plus a matching armchair",
+      "Coffee table sold separately",
+      "Deep, relaxed seating proportions",
+      "Suits a garden, patio or balcony"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od08", name: "Cour Moderne Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1816, memberPrice: 1634, sku: "SH-10123", tag: "New", ph: "", img: "assets/products/od08.jpg",
+    imgs: ["assets/products/od08.jpg", "assets/products/od08-2.jpg", "assets/products/od08-3.jpg", "assets/products/od08-4.jpg", "assets/products/od08-5.jpg", "assets/products/od08-6.jpg"],
+    sizes: [{ label: "Khaki - Table Option (B)", price: 1816 }, { label: "Grey - Table Option (B)", price: 1816 }, { label: "Khaki - Table Option (A)", price: 1847 }, { label: "Grey - Table Option (A)", price: 1847 }, { label: "Khaki - Single Seater", price: 3883 }, { label: "Grey - Single Seater", price: 3883 }, { label: "Khaki - Two Seater", price: 6006 }, { label: "Grey - Two Seater", price: 6006 }, { label: "Khaki - Three Seater", price: 8112 }, { label: "Grey - Three Seater", price: 8112 }],
+    desc: "Clean-lined modular seating for an outdoor room you build yourself: single, two or three seater, with a choice of two tables. The frames are substantial, the cushions deep, and the khaki and grey colourways both sit quietly against greenery and stone. Start with a single seater and add as the space asks for it.",
+    features: [
+      "Single, two and three seater, plus two table designs",
+      "Deep cushioned seating on a substantial frame",
+      "Khaki or Grey",
+      "Modular, so the setting can grow over time",
+      "Contemporary lines that suit a courtyard or terrace"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "10" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od09", name: "Alessandro Lounge Chair", cat: "Outdoor", room: "Outdoor", price: 1556, memberPrice: 1400, sku: "SH-10124", tag: "New", ph: "", img: "assets/products/od09.jpg",
+    imgs: ["assets/products/od09.jpg", "assets/products/od09-2.jpg", "assets/products/od09-3.jpg", "assets/products/od09-4.jpg", "assets/products/od09-5.jpg", "assets/products/od09-6.jpg"],
+    sizes: [{ label: "Khaki Chair", price: 1556 }, { label: "Black Chair", price: 1556 }, { label: "Black Set", price: 2294 }, { label: "Khaki Set", price: 2294 }],
+    desc: "A lounge chair with plush cushions and a quiet, timeless frame, the sort you end up reading in for an hour longer than you planned. Take the chair on its own, or the set with its matching footstool for a proper afternoon. Khaki or black, both easy to live with.",
+    features: [
+      "Plush cushions over a weather-resistant frame",
+      "Chair alone, or the set with matching footstool",
+      "Khaki or Black",
+      "Timeless shape that suits a patio, balcony or garden",
+      "Comfortable enough for reading, not just sitting"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od10", name: "Leaf Sun Lounge", cat: "Outdoor", room: "Outdoor", price: 2911, memberPrice: 2620, sku: "SH-10125", tag: "New", ph: "", img: "assets/products/od10.jpg",
+    imgs: ["assets/products/od10.jpg", "assets/products/od10-2.jpg", "assets/products/od10-3.jpg", "assets/products/od10-4.jpg", "assets/products/od10-5.jpg"],
+    sizes: [{ label: "Coffee / Small", price: 2911 }, { label: "Beige / Small", price: 2911 }, { label: "Coffee / Large", price: 3119 }, { label: "Beige / Large", price: 3119 }],
+    desc: "Shaped after a leaf, which sounds fanciful until you lie on one: the curve holds your shoulders and knees exactly where they want to be. A sculptural piece that earns its spot by the pool or under a tree, in coffee or beige, and in two sizes so it suits the space you have.",
+    features: [
+      "Leaf-shaped frame that supports the whole body",
+      "Sculptural enough to stand alone as a feature",
+      "Two sizes: Small and Large",
+      "Coffee or Beige",
+      "Made for poolside, deck and garden"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od11", name: "Marius Outdoor Coffee Table", cat: "Outdoor", room: "Outdoor", price: 2178, memberPrice: 1960, sku: "SH-10126", tag: "New", ph: "", img: "assets/products/od11.jpg",
+    imgs: ["assets/products/od11.jpg", "assets/products/od11-2.jpg", "assets/products/od11-3.jpg", "assets/products/od11-4.jpg", "assets/products/od11-5.jpg", "assets/products/od11-6.jpg"],
+    colours: [{ name: "White", hex: "#f0ece4" }, { name: "Grey", hex: "#9a9892" }],
+    desc: "A low, streamlined coffee table that gives an outdoor lounge its centre. The surface is broad enough for a tray, a stack of books and a pot of something green, and the simple silhouette keeps the focus on the seating around it. White or grey.",
+    features: [
+      "Broad, low surface built for trays, books and drinks",
+      "Streamlined silhouette that sits under the furniture, not over it",
+      "White or Grey",
+      "Weather-resistant for full outdoor use",
+      "Pairs with rattan, teak or metal seating"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Fibre cement / weather-resistant composite", "Use": "Outdoor" },
+    care: "Wipe with a soft, damp cloth. Keep it away from acidic cleaners. Stand drinks on coasters, since cement and stone surfaces can mark, and cover it through the worst of winter." },
+
+  { id: "od12", name: "Bertrand Outdoor Chair", cat: "Outdoor", room: "Outdoor", price: 1651, memberPrice: 1486, sku: "SH-10127", tag: "New", ph: "", img: "assets/products/od12.jpg",
+    imgs: ["assets/products/od12.jpg", "assets/products/od12-2.jpg", "assets/products/od12-3.jpg", "assets/products/od12-4.jpg", "assets/products/od12-5.jpg"],
+    colours: [{ name: "Black", hex: "#20201e" }, { name: "Black + Tan", hex: "#5a4634" }, { name: "Tan", hex: "#b08b5e" }],
+    desc: "Handwoven rattan with a resort feel, the kind of chair you see on a terrace in the south of France. Sleek enough to pull up to a dining table, comfortable enough to leave in a corner with a cushion. Three colourways, including a two-tone black and tan.",
+    features: [
+      "Handwoven premium rattan",
+      "Slim enough to use as dining or occasional seating",
+      "Three colourways: Black, Tan, and two-tone Black + Tan",
+      "Resort-style look that suits a pool or terrace",
+      "Durable weave built for outdoor life"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od13", name: "Paloma Outdoor Chair", cat: "Outdoor", room: "Outdoor", price: 2080, memberPrice: 1872, sku: "SH-10128", tag: "New", ph: "", img: "assets/products/od13.jpg",
+    imgs: ["assets/products/od13.jpg", "assets/products/od13-2.jpg", "assets/products/od13-3.jpg", "assets/products/od13-4.jpg", "assets/products/od13-5.jpg"],
+    colours: [{ name: "Khaki", hex: "#8d8365" }, { name: "Black", hex: "#20201e" }],
+    desc: "The intricate handwoven pattern is what you notice first, catching the light differently through the day and giving an outdoor setting some texture to look at. Underneath it is a solid, comfortable chair that will take whatever the season does to it. Khaki or black.",
+    features: [
+      "Intricate handwoven pattern with real texture",
+      "Premium rattan over a sturdy frame",
+      "Khaki or Black",
+      "Works as dining or occasional seating",
+      "Built to stay outside year round"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od14", name: "Ellipse Comfort Outdoor Lounge", cat: "Outdoor", room: "Outdoor", price: 1937, memberPrice: 1743, sku: "SH-10129", tag: "New", ph: "", img: "assets/products/od14.jpg",
+    imgs: ["assets/products/od14.jpg", "assets/products/od14-2.jpg", "assets/products/od14-3.jpg", "assets/products/od14-4.jpg", "assets/products/od14-5.jpg", "assets/products/od14-6.jpg"],
+    sizes: [{ label: "Coffee Table", price: 1937 }, { label: "Sofa Set", price: 8736 }],
+    desc: "A two-in-one lounge with its own overhead shade: sit under it through the middle of the day, fold it back when you want the sun. A generous piece for a poolside or a lawn, with a matching coffee table if you want the full setting.",
+    features: [
+      "Integrated overhead shade for sun or shelter",
+      "Two-in-one design: shaded lounge or open seating",
+      "Generous proportions for poolside and lawn",
+      "Matching coffee table available separately",
+      "Weather-resistant construction"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "2" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od15", name: "Riveria Retreat Set", cat: "Outdoor", room: "Outdoor", price: 2426, memberPrice: 2183, sku: "SH-10130", tag: "New", ph: "", img: "assets/products/od15.jpg",
+    imgs: ["assets/products/od15.jpg", "assets/products/od15-2.jpg", "assets/products/od15-3.jpg", "assets/products/od15-4.jpg", "assets/products/od15-5.jpg", "assets/products/od15-6.jpg"],
+    sizes: [{ label: "1 x Chair", price: 2426 }, { label: "1 x Chair + Coffee Table", price: 3076 }, { label: "2 x Chairs + Coffee Table", price: 5158 }],
+    desc: "The chair is the statement here: an oval hollow base that reads as sculpture from across the garden, with a seat deep enough to actually live in. Take one chair, one chair with the coffee table, or a pair with the table for a corner that's finished.",
+    features: [
+      "Sculptural oval hollow base, a feature in its own right",
+      "Deep, relaxed seat",
+      "Three ways to buy: chair, chair + table, or two chairs + table",
+      "Weather-resistant materials throughout",
+      "Suits a courtyard, terrace or poolside"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "3" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od16", name: "Zaira Outdoor Sofa", cat: "Outdoor", room: "Outdoor", price: 14554, memberPrice: 13099, sku: "SH-10131", tag: "New", ph: "", img: "assets/products/od16.jpg",
+    imgs: ["assets/products/od16.jpg", "assets/products/od16-2.jpg", "assets/products/od16-3.jpg", "assets/products/od16-4.jpg", "assets/products/od16-5.jpg", "assets/products/od16-6.jpg"],
+    desc: "The centrepiece sofa, built on a solid teak base with the proportions of indoor furniture. Generous, low and quietly expensive-looking, it anchors a large terrace the way a good sofa anchors a living room. One piece, no compromises.",
+    features: [
+      "Solid teak timber base",
+      "Generous, low-slung proportions",
+      "Made as a single statement piece for a large space",
+      "Natural strength that weathers beautifully",
+      "Indoor-quality comfort, built for outside"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od17", name: "Alba Outdoor Swing Chair", cat: "Outdoor", room: "Outdoor", price: 3952, memberPrice: 3557, sku: "SH-10132", tag: "New", ph: "", img: "assets/products/od17.jpg",
+    imgs: ["assets/products/od17.jpg", "assets/products/od17-2.jpg", "assets/products/od17-3.jpg", "assets/products/od17-4.jpg", "assets/products/od17-5.jpg", "assets/products/od17-6.jpg"],
+    desc: "A rattan swing chair with a soft cotton cushion, hung for gentle movement rather than theatrics. Put it on a covered deck or in a corner of the garden and it will be the seat everyone reaches for first.",
+    features: [
+      "Handwoven rattan with a sturdy hanging frame",
+      "Soft cotton cushion included",
+      "Gentle swing, built for lounging",
+      "Suits a covered deck, patio or garden corner",
+      "Natural, elegant finish"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od18", name: "Veranda Vue Chair", cat: "Outdoor", room: "Outdoor", price: 3307, memberPrice: 2976, sku: "SH-10133", tag: "New", ph: "", img: "assets/products/od18.jpg",
+    imgs: ["assets/products/od18.jpg", "assets/products/od18-2.jpg", "assets/products/od18-3.jpg", "assets/products/od18-4.jpg", "assets/products/od18-5.jpg", "assets/products/od18-6.jpg"],
+    colours: [{ name: "Ivory + Tan", hex: "#cbb79a" }],
+    desc: "Hundreds of woven strings arranged across a sculptural outer frame, so the chair throws a pattern of light and shadow as the sun moves. As much a design piece as a seat, in ivory and tan that suits a pale, coastal palette.",
+    features: [
+      "Meticulously woven string detail across a sculptural frame",
+      "Casts changing light and shadow through the day",
+      "Ivory and tan colourway",
+      "A design statement as much as a chair",
+      "Weather-resistant construction"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od19", name: "Concetta Swing Chair", cat: "Outdoor", room: "Outdoor", price: 3181, memberPrice: 2863, sku: "SH-10134", tag: "New", ph: "", img: "assets/products/od19.jpg",
+    imgs: ["assets/products/od19.jpg", "assets/products/od19-2.jpg", "assets/products/od19-3.jpg", "assets/products/od19-4.jpg", "assets/products/od19-5.jpg", "assets/products/od19-6.jpg"],
+    desc: "Fibre rattan over an aluminium alloy frame, which means it's light to move, strong to sit in, and happy indoors or out. A hanging chair for a reading corner, a balcony or a shaded part of the garden.",
+    features: [
+      "Fibre rattan over an aluminium alloy frame",
+      "Light enough to move, strong enough to last",
+      "Suits indoor rooms as well as covered outdoor spaces",
+      "Comfortable, enveloping seat",
+      "Weather-resistant finish"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od20", name: "Dalila Teak Outdoor Dining Collection", cat: "Outdoor", room: "Outdoor", price: 2044, memberPrice: 1840, sku: "SH-10135", tag: "New", ph: "", img: "assets/products/od20.jpg",
+    imgs: ["assets/products/od20.jpg", "assets/products/od20-2.jpg", "assets/products/od20-3.jpg", "assets/products/od20-4.jpg", "assets/products/od20-5.jpg", "assets/products/od20-6.jpg"],
+    sizes: [{ label: "Armless Chair", price: 2044 }, { label: "Dining Chair", price: 2209 }, { label: "Coffee Table", price: 3883 }, { label: "180cm Table", price: 5716 }, { label: "240cm Table", price: 10221 }, { label: "300cm Table", price: 12444 }],
+    desc: "Handcrafted teak dining, from a coffee table up to a 300cm table that seats a proper gathering. The timber is warm and open-grained, the chairs are made to match, and the whole collection ages into that soft silver teak colour if you let it.",
+    features: [
+      "Handcrafted solid teak timber",
+      "Dining tables at 180, 240 and 300cm, plus a coffee table",
+      "Matching armless and dining chairs, sold individually",
+      "Warm, open grain that weathers to silver-grey",
+      "Built for courtyards, patios and gardens"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "6" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od21", name: "Giulio Teak Outdoor Dining Set", cat: "Outdoor", room: "Outdoor", price: 2469, memberPrice: 2222, sku: "SH-10136", tag: "New", ph: "", img: "assets/products/od21.jpg",
+    imgs: ["assets/products/od21.jpg", "assets/products/od21-2.jpg", "assets/products/od21-3.jpg", "assets/products/od21-4.jpg", "assets/products/od21-5.jpg", "assets/products/od21-6.jpg"],
+    sizes: [{ label: "Chair", price: 2469 }, { label: "Table", price: 6916 }],
+    desc: "Premium teak, a generous table and chairs cut to match it. Simple, heavy, well-made outdoor dining that doesn't try to be clever and will still be here in ten years.",
+    features: [
+      "Premium solid teak timber",
+      "Generous dining table with matching chairs",
+      "Chairs sold individually, so you seat exactly who you need",
+      "Weathers to a natural silver-grey, or oil to keep the honey tone",
+      "Built for full outdoor use"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "2" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od22", name: "Liliana Teak & Rattan Sofa Collection", cat: "Outdoor", room: "Outdoor", price: 4549, memberPrice: 4094, sku: "SH-10137", tag: "New", ph: "", img: "assets/products/od22.jpg",
+    imgs: ["assets/products/od22.jpg", "assets/products/od22-2.jpg", "assets/products/od22-3.jpg", "assets/products/od22-4.jpg", "assets/products/od22-5.jpg", "assets/products/od22-6.jpg"],
+    sizes: [{ label: "Single Seater", price: 4549 }, { label: "Double Seater", price: 8160 }, { label: "Double Seater + Table", price: 8944 }, { label: "Three Seater + Chaise", price: 10893 }],
+    desc: "A solid teak frame with rattan detailing woven into it, so you get the warmth of timber and the texture of weave in one piece. Single and double seaters, a double with table, and a three seater with chaise for the long end of a terrace.",
+    features: [
+      "Solid teak timber frame with woven rattan detail",
+      "Single, double, double + table, and three seater with chaise",
+      "Deep cushioned seating",
+      "Natural materials that weather gracefully",
+      "Made for terraces, gardens and poolsides"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "4" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od23", name: "Margherita Aluminium & Rattan Collection", cat: "Outdoor", room: "Outdoor", price: 1400, memberPrice: 1260, sku: "SH-10138", tag: "New", ph: "", img: "assets/products/od23.jpg",
+    imgs: ["assets/products/od23.jpg", "assets/products/od23-2.jpg", "assets/products/od23-3.jpg", "assets/products/od23-4.jpg", "assets/products/od23-5.jpg", "assets/products/od23-6.jpg"],
+    sizes: [{ label: "Small Table", price: 1400 }, { label: "Large Table", price: 2630 }, { label: "Single Seater", price: 3727 }, { label: "Double Seater", price: 8122 }, { label: "Three Seater", price: 11439 }],
+    desc: "A sleek aluminium frame with rattan detail: light to move, rust-resistant, and modern without being cold. Singles through to a three seater, with small and large tables to match.",
+    features: [
+      "Lightweight aluminium frame, rust resistant",
+      "Rattan detailing for warmth and texture",
+      "Single, double and three seater, plus two table sizes",
+      "Easy to rearrange as the day moves",
+      "Contemporary look for a patio or balcony"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Aluminium frame", "Use": "Outdoor", "Pieces": "5" },
+    care: "Wash the frame with mild soapy water and rinse, then dry. Rinse more often near salt air. Wipe spills from the weave promptly, and store cushions dry." },
+
+  { id: "od24", name: "Zita Teak Outdoor Sofa Collection", cat: "Outdoor", room: "Outdoor", price: 3311, memberPrice: 2980, sku: "SH-10139", tag: "New", ph: "", img: "assets/products/od24.jpg",
+    imgs: ["assets/products/od24.jpg", "assets/products/od24-2.jpg", "assets/products/od24-3.jpg", "assets/products/od24-4.jpg", "assets/products/od24-5.jpg", "assets/products/od24-6.jpg"],
+    sizes: [{ label: "Side Table", price: 3311 }, { label: "Coffee Table", price: 4185 }, { label: "Sofa Collection A", price: 17052 }, { label: "Sofa Collection Type C", price: 19295 }, { label: "Sofa Collection Type B", price: 19738 }],
+    desc: "The largest of our outdoor sofa settings, built on solid teak and sold in three configurations so you can match it to a big terrace or a long garden room. Side and coffee tables complete it. This is the one for the house that entertains.",
+    features: [
+      "Solid teak timber frame",
+      "Three full sofa configurations to choose from",
+      "Matching side table and coffee table",
+      "Scaled for large terraces and entertaining",
+      "Timeless material that improves with age"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "5" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od25", name: "Nerina Rattan Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1283, memberPrice: 1155, sku: "SH-10140", tag: "New", ph: "", img: "assets/products/od25.jpg",
+    imgs: ["assets/products/od25.jpg", "assets/products/od25-2.jpg", "assets/products/od25-3.jpg", "assets/products/od25-4.jpg", "assets/products/od25-5.jpg", "assets/products/od25-6.jpg"],
+    sizes: [{ label: "Small Table", price: 1283 }, { label: "Large Table", price: 2024 }, { label: "Single Chair", price: 2630 }, { label: "Double Seater Sofa", price: 4078 }],
+    desc: "Rattan with soft cushion seats and a cosy, informal feel, at a price that makes a whole corner achievable. Chairs, a double seater sofa, and two table sizes.",
+    features: [
+      "Stylish rattan weave with soft cushioned seats",
+      "Single chair and double seater sofa",
+      "Small and large tables",
+      "Sturdy construction for everyday outdoor use",
+      "An easy way to furnish a balcony or courtyard"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od26", name: "Lilia Rattan & Metal Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1742, memberPrice: 1568, sku: "SH-10141", tag: "New", ph: "", img: "assets/products/od26.jpg",
+    imgs: ["assets/products/od26.jpg", "assets/products/od26-2.jpg", "assets/products/od26-3.jpg", "assets/products/od26-4.jpg", "assets/products/od26-5.jpg", "assets/products/od26-6.jpg"],
+    sizes: [{ label: "Table", price: 1742 }, { label: "Single Seater", price: 1748 }, { label: "Double Seater", price: 8346 }, { label: "Three-Seater", price: 10027 }],
+    desc: "Rattan over a reinforced metal frame, which is the combination that survives being left out all summer. Single, double and three seaters with a matching table, in a classic weave that suits almost any garden.",
+    features: [
+      "Rattan weave over a reinforced metal frame",
+      "Single, double and three seater, plus matching table",
+      "Classic look that sits well in most gardens",
+      "Built for longevity outdoors",
+      "Comfortable cushioned seating"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od27", name: "Michel Iron Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1287, memberPrice: 1158, sku: "SH-10142", tag: "New", ph: "", img: "assets/products/od27.jpg",
+    imgs: ["assets/products/od27.jpg", "assets/products/od27-2.jpg", "assets/products/od27-3.jpg", "assets/products/od27-4.jpg", "assets/products/od27-5.jpg", "assets/products/od27-6.jpg"],
+    sizes: [{ label: "Black / Single Chair", price: 1287 }, { label: "Green / Single Chair", price: 1287 }, { label: "White / Single Chair", price: 1287 }, { label: "Black / 3-Person Chair", price: 3484 }, { label: "Green / 3-Person Chair", price: 3484 }, { label: "White / 3-Person Chair", price: 3484 }, { label: "Black / Short Table", price: 4238 }, { label: "Green / Short Table", price: 4238 }, { label: "White / Short Table", price: 4238 }, { label: "Black / Long Table", price: 5408 }, { label: "Green / Long Table", price: 5408 }, { label: "White / Long Table", price: 5408 }],
+    desc: "Iron, powder-coated and built to be left out through whatever the weather does. Long and short tables, single chairs and a three-person bench, in black or a deep garden green. The most hard-wearing setting we stock.",
+    features: [
+      "Durable iron frame with a weather-resistant coat",
+      "Long table, short table, single chair and three-person seat",
+      "Black or deep green",
+      "Stands up to harsh weather without fuss",
+      "Contemporary lines for a courtyard, balcony or garden"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Powder-coated iron", "Use": "Outdoor", "Pieces": "12" },
+    care: "Wipe the frame with a damp cloth and dry it. Check the powder coat now and then for chips, and touch them up so moisture can't get underneath. Cover or shelter it through long wet spells." },
+
+  { id: "od28", name: "Federico Teak Outdoor Dining Set", cat: "Outdoor", room: "Outdoor", price: 2067, memberPrice: 1860, sku: "SH-10143", tag: "New", ph: "", img: "assets/products/od28.jpg",
+    imgs: ["assets/products/od28.jpg", "assets/products/od28-2.jpg", "assets/products/od28-3.jpg", "assets/products/od28-4.jpg", "assets/products/od28-5.jpg", "assets/products/od28-6.jpg"],
+    sizes: [{ label: "Chair", price: 2067 }, { label: "Table", price: 6486 }],
+    desc: "Minimalist teak dining: clean lines, a natural finish and nothing extra. The table has real presence without ornament, and the chairs are cut to the same quiet logic.",
+    features: [
+      "Premium teak timber with a natural finish",
+      "Clean, minimalist lines",
+      "Table and chairs sold separately",
+      "Warm grain that weathers to silver-grey",
+      "Suits a modern alfresco setting"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "2" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od29", name: "Alessio Outdoor Table Collection", cat: "Outdoor", room: "Outdoor", price: 3492, memberPrice: 3143, sku: "SH-10144", tag: "New", ph: "", img: "assets/products/od29.jpg",
+    imgs: ["assets/products/od29.jpg", "assets/products/od29-2.jpg", "assets/products/od29-3.jpg", "assets/products/od29-4.jpg", "assets/products/od29-5.jpg", "assets/products/od29-6.jpg"],
+    sizes: [{ label: "Grey / Side Table", price: 3492 }, { label: "Grey / Coffee Table", price: 4492 }],
+    desc: "A side table and a coffee table in weather-resistant materials, designed to hold their look through a full year outside. Grey, low and unfussy, they work with rattan, teak and metal seating alike.",
+    features: [
+      "Weather-resistant construction that keeps its finish",
+      "Side table and coffee table",
+      "Grey, in a low unfussy shape",
+      "Pairs with any outdoor seating",
+      "Built for year-round use"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Fibre cement / weather-resistant composite", "Use": "Outdoor", "Pieces": "2" },
+    care: "Wipe with a soft, damp cloth. Keep it away from acidic cleaners. Stand drinks on coasters, since cement and stone surfaces can mark, and cover it through the worst of winter." },
+
+  { id: "od30", name: "Ursula Teak Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 2570, memberPrice: 2313, sku: "SH-10145", tag: "New", ph: "", img: "assets/products/od30.jpg",
+    imgs: ["assets/products/od30.jpg", "assets/products/od30-2.jpg", "assets/products/od30-3.jpg", "assets/products/od30-4.jpg", "assets/products/od30-5.jpg", "assets/products/od30-6.jpg"],
+    colours: [{ name: "Beige", hex: "#d3c6ae" }],
+    sizes: [{ label: "Dining Chair", price: 2570 }, { label: "Coffee Table", price: 3159 }, { label: "Lounge Chair", price: 3367 }, { label: "Sun Bed", price: 3884 }, { label: "Two Seater Sofa", price: 5460 }, { label: "Three Seater Sofa", price: 6483 }],
+    desc: "High-quality teak in a warm beige tone, across the widest spread of pieces we carry: lounge chairs, two and three seater sofas, a coffee table, dining chairs and a sun bed. Furnish a whole outdoor area from one collection and have it all match.",
+    features: [
+      "High-quality teak in a warm beige tone",
+      "Six pieces: lounge chair, two and three seater, coffee table, dining chair and sun bed",
+      "Furnish a whole outdoor area in one collection",
+      "Natural charm that deepens with weathering",
+      "Dining and lounging in the same family"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "6" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od31", name: "Camille Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 4726, memberPrice: 4253, sku: "SH-10146", tag: "New", ph: "", img: "assets/products/od31.jpg",
+    imgs: ["assets/products/od31.jpg", "assets/products/od31-2.jpg", "assets/products/od31-3.jpg", "assets/products/od31-4.jpg", "assets/products/od31-5.jpg", "assets/products/od31-6.jpg"],
+    colours: [{ name: "Brown", hex: "#6b5443" }],
+    sizes: [{ label: "Coffee Table", price: 4726 }, { label: "Single Seat", price: 5199 }, { label: "2-Seater Sofa", price: 9474 }, { label: "3-Seater Sofa", price: 13325 }],
+    desc: "A warm brown wood tone and generous, sink-into proportions. Coffee table, single seat, two and three seater sofas, for a terrace that's meant for sitting rather than passing through.",
+    features: [
+      "Warm brown wood tone throughout",
+      "Coffee table, single seat, two and three seater sofas",
+      "Generous, comfortable proportions",
+      "Sophisticated look for a terrace or garden room",
+      "Weather-resistant materials"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od32", name: "Hortense Aluminium Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 3216, memberPrice: 2894, sku: "SH-10147", tag: "New", ph: "", img: "assets/products/od32.jpg",
+    imgs: ["assets/products/od32.jpg", "assets/products/od32-2.jpg", "assets/products/od32-3.jpg", "assets/products/od32-4.jpg", "assets/products/od32-5.jpg", "assets/products/od32-6.jpg"],
+    sizes: [{ label: "Black / Rectangle Coffee Table", price: 3216 }, { label: "White / Rectangle Coffee Table", price: 3216 }, { label: "Black / Square Coffee Table", price: 3731 }, { label: "White / Square Coffee Table", price: 3731 }, { label: "Black / Foot Stool", price: 3858 }, { label: "White / Foot Stool", price: 3858 }, { label: "Black / Middle Seat", price: 4287 }, { label: "White / Middle Seat", price: 4287 }, { label: "Black / Corner Seat", price: 4716 }, { label: "White / Corner Seat", price: 4716 }, { label: "Black / Sun Bed", price: 7797 }, { label: "White / Sun Bed", price: 7797 }],
+    desc: "Black and white against premium aluminium, in a modular layout: corner seats, middle seats, a sun bed, two coffee table shapes and a footstool. Lay it out along a wall, wrap it round a corner, or spread it across a deck.",
+    features: [
+      "Premium aluminium frame in a black and white palette",
+      "Modular: corner seats, middle seats, footstool",
+      "Sun bed and two coffee table shapes",
+      "Arrange it to fit the shape of your space",
+      "Light, rust-resistant and easy to move"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Aluminium frame", "Use": "Outdoor", "Pieces": "12" },
+    care: "Wash the frame with mild soapy water and rinse, then dry. Rinse more often near salt air. Wipe spills from the weave promptly, and store cushions dry." },
+
+  { id: "od33", name: "Isabeau Aluminium Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 3960, memberPrice: 3564, sku: "SH-10148", tag: "New", ph: "", img: "assets/products/od33.jpg",
+    imgs: ["assets/products/od33.jpg", "assets/products/od33-2.jpg", "assets/products/od33-3.jpg", "assets/products/od33-4.jpg", "assets/products/od33-5.jpg", "assets/products/od33-6.jpg"],
+    sizes: [{ label: "Chair", price: 3960 }, { label: "High Back Chair", price: 4092 }, { label: "Double Sofa", price: 8783 }, { label: "Three-Person Sofa", price: 9828 }],
+    desc: "An aluminium alloy frame under clean modern seating, in chairs, high-back chairs and double or three-person sofas. Strong, light and built to look new for longer than most outdoor furniture manages.",
+    features: [
+      "Robust aluminium alloy frame",
+      "Chair, high back chair, double and three-person sofa",
+      "Light enough to rearrange, strong enough to last",
+      "Modern lines for a statement setting",
+      "Rust resistant, including near the coast"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Aluminium frame", "Use": "Outdoor", "Pieces": "4" },
+    care: "Wash the frame with mild soapy water and rinse, then dry. Rinse more often near salt air. Wipe spills from the weave promptly, and store cushions dry." },
+
+  { id: "od34", name: "Yuanmao Outdoor Occasional Chair", cat: "Outdoor", room: "Outdoor", price: 5018, memberPrice: 4516, sku: "SH-10149", tag: "New", ph: "", img: "assets/products/od34.jpg",
+    imgs: ["assets/products/od34.jpg", "assets/products/od34-2.jpg", "assets/products/od34-3.jpg", "assets/products/od34-4.jpg", "assets/products/od34-5.jpg", "assets/products/od34-6.jpg"],
+    colours: [{ name: "Natural Tan", hex: "#c49a6c" }, { name: "Chocolate", hex: "#4b3a2c" }],
+    desc: "A round, enveloping occasional chair in tan or chocolate, the one you put where you want someone to stop and sit. Contemporary in shape, generous in scale, and comfortable enough to use every day.",
+    features: [
+      "Contemporary round silhouette",
+      "Natural Tan or Chocolate",
+      "Generous, enveloping seat",
+      "Works as an accent chair indoors or out",
+      "Weather-resistant construction"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od35", name: "Oriane Teak Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 2548, memberPrice: 2293, sku: "SH-10150", tag: "New", ph: "", img: "assets/products/od35.jpg",
+    imgs: ["assets/products/od35.jpg", "assets/products/od35-2.jpg", "assets/products/od35-3.jpg", "assets/products/od35-4.jpg", "assets/products/od35-5.jpg", "assets/products/od35-6.jpg"],
+    sizes: [{ label: "High Chair", price: 2548 }, { label: "Chair", price: 2548 }, { label: "Bars Stool", price: 2548 }, { label: "Bar Table", price: 3050 }, { label: "Square Table", price: 3822 }, { label: "Coffee Table", price: 4537 }],
+    desc: "Light tan teak across a full set of pieces, including bar stools and a bar table, which almost nobody makes well for outdoors. Square and coffee tables, high chairs and dining chairs complete it.",
+    features: [
+      "Light tan teak timber finish",
+      "Includes bar table and bar stools, as well as dining",
+      "Square table, coffee table, high chair and chair",
+      "A complete outdoor setting from one family",
+      "Timeless material built to weather"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Solid teak timber", "Use": "Outdoor", "Pieces": "6" },
+    care: "Teak left to itself fades to a soft silver-grey, which is natural and harms nothing. To hold the honey tone, wash it down and oil it once or twice a year. Wipe spills, especially oil and wine, before they soak in." },
+
+  { id: "od36", name: "Constante Fibre Cement Outdoor Table", cat: "Outdoor", room: "Outdoor", price: 1162, memberPrice: 1046, sku: "SH-10151", tag: "New", ph: "", img: "assets/products/od36.jpg",
+    imgs: ["assets/products/od36.jpg", "assets/products/od36-2.jpg", "assets/products/od36-3.jpg", "assets/products/od36-4.jpg", "assets/products/od36-5.jpg", "assets/products/od36-6.jpg"],
+    sizes: [{ label: "Side Table", price: 1162 }, { label: "Coffee Table", price: 1942 }],
+    desc: "Fibre cement, which gives you the look of poured concrete without the weight of it, in a coffee table and a side table. Tough, modern and completely at ease in the weather.",
+    features: [
+      "High-quality fibre cement with a concrete look",
+      "Coffee table and side table",
+      "Exceptionally durable in the weather",
+      "Modern, architectural shape",
+      "Pairs with rattan and timber seating"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Fibre cement / weather-resistant composite", "Use": "Outdoor", "Pieces": "2" },
+    care: "Wipe with a soft, damp cloth. Keep it away from acidic cleaners. Stand drinks on coasters, since cement and stone surfaces can mark, and cover it through the worst of winter." },
+
+  { id: "od37", name: "Perrine Outdoor Sofa Collection", cat: "Outdoor", room: "Outdoor", price: 3740, memberPrice: 3366, sku: "SH-10152", tag: "New", ph: "", img: "assets/products/od37.jpg",
+    imgs: ["assets/products/od37.jpg", "assets/products/od37-2.jpg", "assets/products/od37-3.jpg", "assets/products/od37-4.jpg", "assets/products/od37-5.jpg", "assets/products/od37-6.jpg"],
+    sizes: [{ label: "Coffee Table", price: 3740 }, { label: "Single Seater", price: 4940 }, { label: "Two Seater", price: 8416 }, { label: "Three Seater", price: 10660 }],
+    desc: "Sleek, clean-lined sofa seating in singles through to a three seater, with a coffee table to match. Premium materials and a modern silhouette that suits a contemporary house.",
+    features: [
+      "Clean modern lines in premium materials",
+      "Single, two and three seater",
+      "Matching coffee table",
+      "Deep cushioned comfort",
+      "Suits a patio, poolside or terrace"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od38", name: "Selene Rattan Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1399, memberPrice: 1259, sku: "SH-10153", tag: "New", ph: "", img: "assets/products/od38.jpg",
+    imgs: ["assets/products/od38.jpg", "assets/products/od38-2.jpg", "assets/products/od38-3.jpg", "assets/products/od38-4.jpg", "assets/products/od38-5.jpg", "assets/products/od38-6.jpg"],
+    sizes: [{ label: "Foot Petal", price: 1399 }, { label: "Chair", price: 1482 }, { label: "Bar Stool", price: 1547 }, { label: "Coffee Table", price: 2036 }, { label: "Sofa Chair", price: 3034 }, { label: "Bar Table", price: 3120 }, { label: "Table", price: 3393 }, { label: "Three Seat Sofa", price: 7410 }],
+    desc: "The most versatile collection we carry: chair, sofa chair, footstool, table, bar table, bar stool, coffee table and a three seat sofa. Durable rattan throughout, so dining, lounging and the bar corner can all match.",
+    features: [
+      "Eight pieces, from dining chair to three seat sofa",
+      "Includes bar table and bar stool",
+      "Durable rattan that holds its look",
+      "Mix lounging and dining in one material",
+      "Build the setting piece by piece"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "8" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od39", name: "Melina Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1687, memberPrice: 1518, sku: "SH-10154", tag: "New", ph: "", img: "assets/products/od39.jpg",
+    imgs: ["assets/products/od39.jpg", "assets/products/od39-2.jpg", "assets/products/od39-3.jpg", "assets/products/od39-4.jpg", "assets/products/od39-5.jpg", "assets/products/od39-6.jpg"],
+    sizes: [{ label: "Chair", price: 1687 }, { label: "Sofa Chair", price: 2189 }, { label: "Two Seat Sofa", price: 5044 }, { label: "Three Seat Sofa", price: 5499 }],
+    desc: "Dining chairs and sofa seating from the same family, so an outdoor area can do both without looking like two separate purchases. Modern, well-made and sensibly priced for the size of the pieces.",
+    features: [
+      "Dining chairs and sofa seating that match",
+      "Chair, sofa chair, two and three seat sofa",
+      "Modern design with lasting construction",
+      "One look across dining and lounging",
+      "Weather-resistant materials"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od40", name: "Alvise Rattan Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 3687, memberPrice: 3318, sku: "SH-10155", tag: "New", ph: "", img: "assets/products/od40.jpg",
+    imgs: ["assets/products/od40.jpg", "assets/products/od40-2.jpg", "assets/products/od40-3.jpg", "assets/products/od40-4.jpg", "assets/products/od40-5.jpg"],
+    sizes: [{ label: "Coffee Table", price: 3687 }, { label: "Single Seater", price: 5179 }, { label: "Double Seater", price: 8618 }],
+    desc: "Durable rattan in a modern shape, made for everyday lounging rather than occasional use. Single and double seaters with a coffee table, equally at home on a balcony or a patio.",
+    features: [
+      "Durable rattan built for daily use",
+      "Single seater, double seater and coffee table",
+      "Modern silhouette that suits a balcony or patio",
+      "Comfortable for long sitting",
+      "Long-lasting outdoor performance"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "3" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od41", name: "Lorraine Outdoor Sofa Collection", cat: "Outdoor", room: "Outdoor", price: 1430, memberPrice: 1287, sku: "SH-10156", tag: "New", ph: "", img: "assets/products/od41.jpg",
+    imgs: ["assets/products/od41.jpg", "assets/products/od41-2.jpg", "assets/products/od41-3.jpg", "assets/products/od41-4.jpg", "assets/products/od41-5.jpg", "assets/products/od41-6.jpg"],
+    sizes: [{ label: "Chair", price: 1430 }, { label: "Single Seater", price: 1664 }, { label: "Two Seater", price: 3575 }, { label: "Three Seater", price: 4745 }],
+    desc: "Weather-resistant seating from a single chair up to a three seater, at the friendlier end of our outdoor range. A straightforward way to make a balcony or courtyard properly usable.",
+    features: [
+      "Premium weather-resistant materials",
+      "Chair, single, two and three seater",
+      "Comfortable cushioned seats",
+      "An accessible way to furnish an outdoor area",
+      "Modern style that suits most houses"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od42", name: "Leisure Luxury Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 1807, memberPrice: 1626, sku: "SH-10157", tag: "New", ph: "", img: "assets/products/od42.jpg",
+    imgs: ["assets/products/od42.jpg", "assets/products/od42-2.jpg", "assets/products/od42-3.jpg", "assets/products/od42-4.jpg", "assets/products/od42-5.jpg", "assets/products/od42-6.jpg"],
+    sizes: [{ label: "Coffee Table", price: 1807 }, { label: "Single Seater", price: 2484 }, { label: "2 Seater Sofa", price: 3869 }, { label: "3 Seater Sofa", price: 6102 }],
+    desc: "A curated set: three seater sofa, occasional chairs and a coffee table, meant to be bought together and laid out as one outdoor room. Relaxed, refined and quick to make a space feel finished.",
+    features: [
+      "Curated set: three seater, occasional chairs and coffee table",
+      "Designed to work together as one setting",
+      "Relaxed proportions for real lounging",
+      "Weather-resistant throughout",
+      "Transforms a terrace in a single purchase"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od43", name: "Maison Outdoor Table & Chairs", cat: "Outdoor", room: "Outdoor", price: 1166, memberPrice: 1049, sku: "SH-10158", tag: "New", ph: "", img: "assets/products/od43.jpg",
+    imgs: ["assets/products/od43.jpg", "assets/products/od43-2.jpg", "assets/products/od43-3.jpg", "assets/products/od43-4.jpg", "assets/products/od43-5.jpg", "assets/products/od43-6.jpg"],
+    sizes: [{ label: "1 x Chair", price: 1166 }, { label: "Set - Table + 2 x Chairs", price: 3515 }],
+    desc: "A chair on its own, or the set with a table and two chairs: the right size for a balcony, a courtyard corner or a morning coffee spot. Contemporary without being stark.",
+    features: [
+      "Buy a single chair, or the table with two chairs",
+      "Scaled for balconies and small courtyards",
+      "Contemporary design with durable construction",
+      "An easy first outdoor setting",
+      "Weather-resistant materials"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "2" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od44", name: "Terrasse Woven Rattan Collection", cat: "Outdoor", room: "Outdoor", price: 1153, memberPrice: 1038, sku: "SH-10159", tag: "New", ph: "", img: "assets/products/od44.jpg",
+    imgs: ["assets/products/od44.jpg", "assets/products/od44-2.jpg", "assets/products/od44-3.jpg", "assets/products/od44-4.jpg", "assets/products/od44-5.jpg", "assets/products/od44-6.jpg"],
+    sizes: [{ label: "Wooden Round Coffee Table", price: 1153 }, { label: "Wooden Square Table", price: 2319 }, { label: "High Back Chair", price: 2587 }, { label: "Single Seater - Low back", price: 3708 }, { label: "Wooden Rectangle Table", price: 4091 }, { label: "Sun Bed", price: 4342 }, { label: "Single Seater - High Back", price: 5161 }, { label: "Wooden Oval Table", price: 5364 }, { label: "Three Seater - Low back Sofa", price: 6806 }, { label: "Three Seater - High Back Sofa", price: 9357 }],
+    desc: "Woven rattan in both low-back and high-back shapes, so you can choose between a relaxed lounge line and something more upright and supportive. Singles, three seaters and a sun bed.",
+    features: [
+      "Low-back and high-back options across the range",
+      "Single seaters, three seaters and a sun bed",
+      "Finely woven rattan over a solid frame",
+      "Choose relaxed lounging or upright support",
+      "Made for terraces, gardens and poolsides"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "10" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
+  { id: "od45", name: "Fleur Outdoor Range", cat: "Outdoor", room: "Outdoor", price: 1816, memberPrice: 1634, sku: "SH-10160", tag: "New", ph: "", img: "assets/products/od45.jpg",
+    imgs: ["assets/products/od45.jpg", "assets/products/od45-2.jpg", "assets/products/od45-3.jpg", "assets/products/od45-4.jpg", "assets/products/od45-5.jpg", "assets/products/od45-6.jpg"],
+    sizes: [{ label: "Glass Table", price: 1816 }, { label: "Round - Single Seater", price: 3112 }, { label: "Square - Single Seater", price: 3245 }, { label: "Double Seater", price: 7379 }],
+    desc: "Square or round single seaters, a double seater, and a glass-topped table to finish the group. A softer, more decorative shape than most outdoor seating, and lovely in a garden setting.",
+    features: [
+      "Square or round single seaters",
+      "Double seater and matching glass table",
+      "Softer, more decorative shape",
+      "Natural woven charm",
+      "Suits a garden, terrace or poolside"
+    ],
+    specs: { "Type": "Outdoor furniture", "Material": "Weather-resistant rattan", "Use": "Outdoor", "Pieces": "4" },
+    care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
+
   // ── Home Décor ──
   { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "SH-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
