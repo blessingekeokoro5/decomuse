@@ -80,6 +80,20 @@ async function deliverForm(data, subject) {
   const accessKey = cfg.formAccessKey || "";
   const replyto = (data.find(d => /email/i.test(d[0])) || [])[1] || "";
   const body = data.map(([k, v]) => `${k}: ${v}`).join("\n") + "\n\n, Sent from the Samira Home Decor website";
+  const name = (data.find(d => /name/i.test(d[0])) || [])[1] || "";
+
+  // 0) Branded Brevo submission (primary): blue+gold notice to the shop + a
+  //    branded confirmation to the customer. Falls through to Web3Forms on any issue.
+  try {
+    const res = await fetch("/.netlify/functions/send-submission", {
+      method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ subject, fields: data, replyto, name })
+    });
+    if (res.ok) {
+      const j = await res.json().catch(() => ({}));
+      if (j && j.ok) return true; // sent + branded; done
+    }
+  } catch (e) { /* fall through to Web3Forms */ }
 
   // 1) Web3Forms silent delivery (recommended, just an access key, no account)
   if (accessKey) {
