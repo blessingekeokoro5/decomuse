@@ -156,6 +156,84 @@ const PRODUCTS = [
     boxContents: ["1 × soap dispenser", "1 × toothbrush holder", "1 × soap dish", "1 × vanity tray"],
     care: "Wipe with a soft, damp cloth and dry straight away. Marble is porous, so keep it away from acidic cleaners, vinegar, citrus and bleach, which will dull and etch the surface. Stand bottles on the tray rather than directly on the stone to avoid rings." },
 
+  // ── Outdoor ──
+  { id: "od01", name: "Fabrizio Fire Pit with Built-In Log Store", cat: "Outdoor", room: "Outdoor", price: 4987, memberPrice: 4488, sku: "SH-10116", tag: "New", ph: "", img: "assets/products/od01.jpg",
+    imgs: ["assets/products/od01.jpg", "assets/products/od01-2.jpg", "assets/products/od01-3.jpg", "assets/products/od01-4.jpg", "assets/products/od01-5.jpg", "assets/products/od01-6.jpg", "assets/products/od01-7.jpg", "assets/products/od01-8.jpg"],
+    sizes: [{ label: "80cm", price: 4987 }, { label: "90cm", price: 5225 }, { label: "100cm", price: 5742 }, { label: "120cm", price: 6890 }, { label: "150cm", price: 8151 }],
+    desc: "The reason everyone ends up outside. A broad steel fire bowl sits at the centre of a sculptural low table, with the firewood stacked in the open curve beneath it, so the fuel is part of the design rather than something to hide. The surround gives you somewhere to rest drinks, a board or a hand while the fire does the work. Stainless steel under a textured, heat-resistant black powder coat, built to live outside through an Australian winter. Five diameters, from 80cm for a courtyard to 150cm for a lawn that gathers a crowd, with matching seats sold separately.",
+    features: [
+      "Generous steel fire bowl that takes full-size logs, not kindling",
+      "Open log store curved into the base, so the firewood is part of the look",
+      "Flat surround for drinks, platters and warming hands",
+      "Stainless steel with a textured, heat-resistant black powder coat",
+      "Five diameters: 80, 90, 100, 120 and 150cm",
+      "Matching seats available on request"
+    ],
+    specs: { "Type": "Wood-burning fire pit", "Material": "Stainless steel", "Finish": "Textured heat-resistant black powder coat", "Fuel": "Firewood", "Sizes": "80 / 90 / 100 / 120 / 150cm", "Use": "Outdoor only" },
+    care: "Let the pit cool completely, then empty the ash so it doesn't hold moisture against the steel. Wipe the surround with a damp cloth. Cover it or store it under shelter through long wet spells, and keep it on a non-combustible surface, clear of decking, fences and anything overhanging." },
+
+  { id: "od02", name: "Birdcage Solar Lantern", cat: "Outdoor", room: "Outdoor", price: 582, memberPrice: 524, sku: "SH-10117", tag: "New", ph: "", img: "assets/products/od02.jpg",
+    imgs: ["assets/products/od02.jpg", "assets/products/od02-2.jpg", "assets/products/od02-3.jpg", "assets/products/od02-4.jpg", "assets/products/od02-5.jpg", "assets/products/od02-6.jpg", "assets/products/od02-7.jpg"],
+    sizes: [{ label: "Small", price: 582 }, { label: "Medium", price: 712 }, { label: "Large", price: 842 }],
+    colours: [{ name: "Warm White", hex: "#f2e4c4" }],
+    desc: "A slender cage of stainless steel ribs around a column of warm light, charged by the sun and switched on by the dusk. No cable to run, no socket to find, so it can stand where you actually want light: along a path, beside the steps, at the end of a daybed, in a planter among the greenery. The frame is weather-resistant and heavy enough not to wander in the wind, and the glow is warm rather than blue-white, so an evening outside still feels like an evening. Three sizes, lovely in a row or in a cluster of mixed heights.",
+    features: [
+      "Solar powered, charges by day and lights itself at dusk",
+      "Warm white light, not the cold blue of most garden solar",
+      "Stainless steel birdcage frame, weather resistant",
+      "No wiring, so it can stand anywhere you like",
+      "Three sizes: Small, Medium and Large",
+      "Group different heights together, or line a path with one size"
+    ],
+    specs: { "Type": "Solar lantern", "Frame": "Stainless steel", "Light": "Warm white LED", "Power": "Solar, no wiring required", "Sizes": "Small / Medium / Large", "Use": "Outdoor" },
+    care: "Wipe the solar panel on the lid clear of dust and leaves now and then, since a dirty panel is the usual reason a solar light dims. Clean the frame with a damp cloth. In a long run of grey days, move it somewhere brighter to charge." },
+
+  { id: "od03", name: "Walter Rattan Outdoor Chair, Ottoman & Table", cat: "Outdoor", room: "Outdoor", price: 737, memberPrice: 663, sku: "SH-10118", tag: "New", ph: "", img: "assets/products/od03.jpg",
+    imgs: ["assets/products/od03.jpg", "assets/products/od03-2.jpg", "assets/products/od03-3.jpg", "assets/products/od03-4.jpg", "assets/products/od03-5.jpg", "assets/products/od03-6.jpg", "assets/products/od03-7.jpg"],
+    sizes: [{ label: "Ottoman", price: 737 }, { label: "Chair", price: 1932 }, { label: "Side table", price: 2157 }],
+    desc: "Built for the balcony, the courtyard and the shady corner that never quite had the right chair. The Walter is woven in weather-resistant rattan over a steel frame, with a high curved back that cradles your shoulders and a seat deep enough to stay in. The ottoman slides under when you want the floor back, and doubles as a low table for a drink and a book. Buy the chair on its own, add the ottoman for proper lounging, or take all three and have a corner that's finished.",
+    features: [
+      "Weather-resistant woven rattan over a steel frame",
+      "High curved back shaped for long sitting, not perching",
+      "Ottoman tucks under the chair and doubles as a low table",
+      "Pieces sold separately: chair, ottoman and side table",
+      "Light enough to move into the shade as the sun comes round",
+      "Suits balconies and courtyards where space is tight"
+    ],
+    specs: { "Type": "Outdoor lounge chair, ottoman and table", "Weave": "Weather-resistant rattan", "Frame": "Steel", "Sold as": "Individual pieces", "Use": "Outdoor, covered or open" },
+    care: "Hose the weave down and let it dry in the air. Wipe spills before they dry into the rattan. Under long sun or heavy rain, a cover or a spot under the eaves will add years to it. Cushions, where used, should come inside when wet." },
+
+  { id: "od04", name: "Elena Teak & Metal Outdoor Dining Collection", cat: "Outdoor", room: "Outdoor", price: 936, memberPrice: 842, sku: "SH-10119", tag: "New", ph: "", img: "assets/products/od04.jpg",
+    imgs: ["assets/products/od04.jpg", "assets/products/od04-2.jpg", "assets/products/od04-3.jpg", "assets/products/od04-4.jpg", "assets/products/od04-5.jpg", "assets/products/od04-6.jpg", "assets/products/od04-7.jpg", "assets/products/od04-8.jpg"],
+    sizes: [{ label: "Chair", price: 936 }, { label: "Round table", price: 4056 }, { label: "Square table", price: 4056 }, { label: "Dining table 160cm", price: 6714 }, { label: "Dining table 220cm", price: 7371 }, { label: "Dining table 260cm", price: 7774 }],
+    desc: "Solid teak over a steel base, which is the combination that survives summers outside and still looks good doing it. The timber is warm and open-grained, the kind that silvers gracefully if you let it, and the metal base keeps the whole table steady on decking or pavers. Choose the shape your space wants: a round or square table for four, or a long dining table at 160, 220 or 260cm for the gatherings that run past dark. Chairs are priced individually, so you buy exactly the number you seat.",
+    features: [
+      "Premium solid teak top with warm, open grain",
+      "Steel base for stability on decking, pavers or lawn",
+      "Round and square tables, plus 160, 220 and 260cm dining lengths",
+      "Chairs sold individually, so you buy the number you need",
+      "Teak weathers to a soft silver-grey, or keep the honey tone with oil",
+      "Built for full outdoor use, year round"
+    ],
+    specs: { "Type": "Outdoor dining collection", "Top": "Solid teak timber", "Base": "Metal", "Table sizes": "Round / Square / 160cm / 220cm / 260cm", "Chairs": "Sold individually", "Use": "Outdoor" },
+    care: "Left alone, teak fades to a silver-grey, which is natural and does no harm. To keep the honey colour, clean it and apply teak oil once or twice a year. Wipe spills promptly, especially oil and wine, and use a cover through the worst of winter." },
+
+  { id: "od05", name: "Antole Weatherproof Rattan Outdoor Collection", cat: "Outdoor", room: "Outdoor", price: 922, memberPrice: 830, sku: "SH-10120", tag: "New", ph: "", img: "assets/products/od05.jpg",
+    imgs: ["assets/products/od05.jpg", "assets/products/od05-2.jpg", "assets/products/od05-3.jpg", "assets/products/od05-4.jpg", "assets/products/od05-5.jpg", "assets/products/od05-6.jpg", "assets/products/od05-7.jpg", "assets/products/od05-8.jpg"],
+    colours: [{ name: "Chocolate", hex: "#4b3a2c" }, { name: "Beige", hex: "#cdbfa6" }],
+    sizes: [{ label: "Footstool", price: 922 }, { label: "Chair", price: 1296 }, { label: "Sofa chair", price: 2929 }, { label: "Sun lounge", price: 5344 }, { label: "Two seater", price: 8765 }],
+    desc: "A full outdoor living room you can build up a piece at a time. The Antole is woven in weatherproof rattan over a sturdy frame, in a clean modern line that sits as happily by a pool as on a terrace. Start with a chair, add the deep sofa chair and footstool for the end of the day, stretch out on the sun lounge, or bring in the two seater when there's always someone staying. In chocolate for a darker, more grounded look, or beige to keep things light and coastal.",
+    features: [
+      "Weatherproof rattan weave over a sturdy frame",
+      "Five pieces: chair, sofa chair, two seater, sun lounge and footstool",
+      "Two colourways: Chocolate and Beige",
+      "Build the setting up over time, a piece at a time",
+      "Deep, relaxed seating made for long afternoons",
+      "Clean modern lines that suit a pool, terrace or courtyard"
+    ],
+    specs: { "Type": "Outdoor lounge collection", "Weave": "Weatherproof rattan", "Pieces": "Chair, sofa chair, two seater, sun lounge, footstool", "Colours": "Chocolate, Beige", "Sold as": "Individual pieces", "Use": "Outdoor" },
+    care: "Rinse the weave with fresh water and let it air dry, especially near salt water. Wipe spills before they dry in. Bring cushions inside when it rains, and cover or shelter the pieces through long wet or very hot spells." },
+
   // ── Home Décor ──
   { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "SH-10101", tag: "New", ph: "", img: "assets/products/hd01.png",
     imgs: ["assets/products/hd01.png", "assets/products/hd01-2.png"],
