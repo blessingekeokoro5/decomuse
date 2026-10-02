@@ -60,10 +60,10 @@ exports.handler = async (event) => {
     const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:580px;margin:0 auto;color:#0B1F3A;padding:8px">
       <div style="text-align:center;padding:22px 0 6px">
-        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#0B1F3A">Samira Home Decor</div>
+        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#14365F">Samira Home Decor</div>
         <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home décor for every house</div>
       </div>
-      <div style="background:#0B1F3A;color:#fff;border-radius:14px;padding:26px 28px;text-align:center">
+      <div style="background:#14365F;color:#fff;border-radius:14px;padding:26px 28px;text-align:center;border-bottom:4px solid #C6A15B">
         <div style="font-size:22px;font-family:Georgia,serif">Thank you for your order! ✨</div>
         <p style="color:#E0C992;margin:8px 0 0">Hi ${esc(o.name || "there")}, we've received your order and we're getting it ready.</p>
         <div style="margin-top:16px;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#C6A15B">Order</div>
