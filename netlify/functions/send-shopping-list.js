@@ -80,12 +80,16 @@ exports.handler = async (event) => {
       : items.reduce((s, i) => s + (i.price || 0) * (parseInt(i.qty, 10) || 1), 0);
 
     const html = `
-    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#0B1F3A">
-      <div style="text-align:center;padding:24px 0">
-        <h1 style="font-family:Georgia,serif;color:#A9843C;margin:0">Samira Home Decor</h1>
-        <p style="color:#8a7f77;margin:6px 0 0">Your saved shopping list 🛍️</p>
+    <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#0B1F3A;padding:8px">
+      <div style="text-align:center;padding:22px 0 6px">
+        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#14365F">Samira Home Decor</div>
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home décor for every house</div>
       </div>
-      <table style="width:100%;border-collapse:collapse">${rows}</table>
+      <div style="background:#14365F;color:#fff;border-radius:14px;padding:24px 28px;text-align:center;border-bottom:4px solid #C6A15B">
+        <div style="font-size:22px;font-family:Georgia,serif">Your shopping list 🛍️</div>
+        <p style="color:#E0C992;margin:8px 0 0">Here are the pieces you saved — ready whenever you are.</p>
+      </div>
+      <table style="width:100%;border-collapse:collapse;margin-top:20px">${rows}</table>
       <table style="width:100%;border-collapse:collapse;margin-top:8px">
         <tr><td style="padding:12px 0;font-weight:700">Subtotal</td>
             <td style="padding:12px 0;text-align:right;font-weight:700">${money(total)}</td></tr>

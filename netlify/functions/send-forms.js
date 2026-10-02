@@ -58,9 +58,14 @@ exports.handler = async (event) => {
 
     const html = `
     <div style="font-family:Arial,Helvetica,sans-serif;max-width:560px;margin:0 auto;color:#0B1F3A;padding:8px">
-      <div style="text-align:center;font-family:Georgia,serif;font-size:26px;font-weight:bold;color:#0B1F3A;margin:14px 0 4px">Samira Home Decor</div>
-      <h2 style="text-align:center;color:#0B1F3A;font-size:20px;margin:0 0 6px">${esc(heading)}</h2>
-      <p style="color:#5a5049;line-height:1.6">Hi${name ? " " + esc(name) : ""},</p>
+      <div style="text-align:center;padding:22px 0 6px">
+        <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#14365F">Samira Home Decor</div>
+        <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home décor for every house</div>
+      </div>
+      <div style="background:#14365F;color:#fff;border-radius:14px;padding:24px 28px;text-align:center;border-bottom:4px solid #C6A15B">
+        <div style="font-size:22px;font-family:Georgia,serif">${esc(heading)} ✦</div>
+      </div>
+      <p style="color:#5a5049;line-height:1.6;margin-top:20px">Hi${name ? " " + esc(name) : ""},</p>
       <p style="color:#5a5049;line-height:1.6">${message ? esc(message) : "Please complete the form(s) below at your convenience. Just click each link, fill it in and submit, it only takes a few minutes and you can sign right on screen."}</p>
       <table role="presentation" width="100%" style="margin:14px 0 6px">${rows}</table>
       <p style="color:#8a7f77;font-size:12px;line-height:1.6;margin-top:18px">If you have any questions, just reply to this email. Warm regards,<br>The Samira Home Decor team · <a href="${SITE_URL}" style="color:#A9843C">samirahomedecor.com.au</a></p>

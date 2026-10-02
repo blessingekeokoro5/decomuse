@@ -65,11 +65,11 @@ exports.handler = async (event) => {
       <table role="presentation" width="100%"><tr>
         <td valign="top"><img src="${logo}" alt="Samira Home Decor" width="150" style="max-width:160px;height:auto"></td>
         <td valign="top" align="right" style="font-size:12px;color:#5a5049;line-height:1.7">
-          <strong style="color:#0B1F3A;font-size:15px">Samira Home Decor Official</strong><br>
+          <strong style="color:#14365F;font-size:15px">Samira Home Decor Official</strong><br>
           ABN ${ABN}<br>${esc(BUSINESS_EMAIL)}<br>${esc(BIZ_PHONE)}<br>${esc(SITE_URL.replace(/^https?:\/\//, ""))}
         </td>
       </tr></table>
-      <div style="height:2px;background:#0B1F3A;margin:14px 0 18px"></div>`;
+      <div style="height:3px;background:#14365F;border-bottom:1px solid #C6A15B;margin:14px 0 18px"></div>`;
 
     let inner;
     if (isInvoice) {
