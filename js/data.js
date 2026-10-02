@@ -27,8 +27,8 @@ const SAMIRA = {
   socials: {
     instagram: "https://www.instagram.com/samirahomedecor",
     facebook: "https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr",
-    tiktok: "https://www.tiktok.com/@decormuseofficial",
-    youtube: "https://www.youtube.com/@decormuseofficial",
+    tiktok: "https://www.tiktok.com/@sys_samira",
+    youtube: "https://www.youtube.com/@sys_samira",
     whatsapp: "https://wa.me/61451609398"
   }
 };
