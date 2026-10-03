@@ -3788,6 +3788,2620 @@ const PRODUCTS = [
     specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
 
+  // ── Living Room, Office & lighting (final batch) ──
+  { id: "lr001q", name: "Timber Wall Light", cat: "Home Décor", room: "Home Décor", price: 350, memberPrice: 315, sku: "SH-10783", tag: "New", ph: "", img: "assets/products/lr001q.webp",
+    imgs: ["assets/products/lr001q.webp", "assets/products/lr001q-2.webp", "assets/products/lr001q-3.webp", "assets/products/lr001q-4.webp"],
+    sizes: [{ label: "Black", price: 350 }, { label: "White", price: 350 }],
+    desc: "Timber wall light. In Black or White.",
+    features: [
+      "Timber construction",
+      "Black, White colourways",
+      "2 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Timber", "Options": "2", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr002q", name: "Table Lamp", cat: "Home Décor", room: "Home Décor", price: 535, memberPrice: 482, sku: "SH-10784", tag: "New", ph: "", img: "assets/products/lr002q.webp",
+    imgs: ["assets/products/lr002q.webp", "assets/products/lr002q-2.webp", "assets/products/lr002q-3.webp", "assets/products/lr002q-4.webp"],
+    sizes: [{ label: "Black", price: 535 }],
+    desc: "A table lamp, for a console, a sideboard or a bedside. In Black.",
+    features: [
+      "Black colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Mixed", "Options": "1", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr003q", name: "Travertine Pendant, Round or Rectangle", cat: "Home Décor", room: "Home Décor", price: 537, memberPrice: 483, sku: "SH-10785", tag: "New", ph: "", img: "assets/products/lr003q.webp",
+    imgs: ["assets/products/lr003q.webp", "assets/products/lr003q-2.webp", "assets/products/lr003q-3.webp", "assets/products/lr003q-4.webp"],
+    sizes: [{ label: "Rectangle", price: 537 }, { label: "Round", price: 537 }],
+    desc: "Travertine pendant, sized to hang over a table or a kitchen bench. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Travertine construction",
+      "2 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Travertine", "Options": "2", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr004q", name: "Square Travertine Wall Light", cat: "Home Décor", room: "Home Décor", price: 554, memberPrice: 499, sku: "SH-10786", tag: "New", ph: "", img: "assets/products/lr004q.webp",
+    imgs: ["assets/products/lr004q.webp", "assets/products/lr004q-2.webp", "assets/products/lr004q-3.webp", "assets/products/lr004q-4.webp"],
+    sizes: [{ label: "Square / Warm White", price: 554 }, { label: "Square / Neutral", price: 554 }, { label: "Square / Cool White", price: 554 }, { label: "Rectangle / Cool White", price: 643 }, { label: "Rectangle / Warm White", price: 643 }, { label: "Rectangle / Neutral", price: 643 }],
+    desc: "Travertine wall light. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Travertine construction",
+      "White colourway",
+      "6 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Travertine", "Options": "6", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr005q", name: "Wall Light", cat: "Home Décor", room: "Home Décor", price: 617, memberPrice: 555, sku: "SH-10787", tag: "New", ph: "", img: "assets/products/lr005q.webp",
+    imgs: ["assets/products/lr005q.webp", "assets/products/lr005q-2.webp", "assets/products/lr005q-3.webp", "assets/products/lr005q-4.webp"],
+    sizes: [{ label: "Gold / 40cm / Warm White", price: 617 }, { label: "Gold / 40cm / Cool White", price: 617 }, { label: "Black / 40cm / Warm White", price: 617 }, { label: "Black / 40cm / Cool White", price: 617 }, { label: "Gold / 60cm / Warm White", price: 878 }, { label: "Gold / 60cm / Cool White", price: 878 }, { label: "Black / 60cm / Warm White", price: 878 }, { label: "Black / 60cm / Cool White", price: 878 }, { label: "Gold / 80cm / Warm White", price: 989 }, { label: "Gold / 80cm / Cool White", price: 989 }, { label: "Black / 80cm / Warm White", price: 989 }, { label: "Black / 80cm / Cool White", price: 989 }, { label: "Gold / 100cm / Warm White", price: 1106 }, { label: "Gold / 100cm / Cool White", price: 1106 }, { label: "Black / 100cm / Warm White", price: 1106 }, { label: "Black / 100cm / Cool White", price: 1106 }],
+    desc: "A wall light from 40cm to 100cm. In Black, White or Gold.",
+    features: [
+      "Sizes from 40cm to 100cm",
+      "Black, White, Gold colourways",
+      "16 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Mixed", "Options": "16", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr006q", name: "Wall Light (Black / White)", cat: "Home Décor", room: "Home Décor", price: 643, memberPrice: 579, sku: "SH-10788", tag: "New", ph: "", img: "assets/products/lr006q.webp",
+    imgs: ["assets/products/lr006q.webp", "assets/products/lr006q-2.webp", "assets/products/lr006q-3.webp", "assets/products/lr006q-4.webp"],
+    sizes: [{ label: "Gold / Left / Warm White", price: 643 }, { label: "Gold / Left / Cool White", price: 643 }, { label: "Gold / Right / Warm White", price: 643 }, { label: "Gold / Right / Cool White", price: 643 }, { label: "Black / Left / Warm White", price: 643 }, { label: "Black / Left / Cool White", price: 643 }, { label: "Black / Right / Warm White", price: 643 }, { label: "Black / Right / Cool White", price: 643 }],
+    desc: "A wall light. In Black, White or Gold.",
+    features: [
+      "Black, White, Gold colourways",
+      "8 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Mixed", "Options": "8", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr007q", name: "Pendant Light", cat: "Home Décor", room: "Home Décor", price: 680, memberPrice: 612, sku: "SH-10789", tag: "New", ph: "", img: "assets/products/lr007q.webp",
+    imgs: ["assets/products/lr007q.webp", "assets/products/lr007q-2.webp", "assets/products/lr007q-3.webp", "assets/products/lr007q-4.webp"],
+    sizes: [{ label: "30cm", price: 680 }, { label: "40cm", price: 850 }, { label: "50cm", price: 989 }, { label: "60cm", price: 1163 }],
+    desc: "A pendant from 30cm to 60cm, sized to hang over a table or a kitchen bench.",
+    features: [
+      "Sizes from 30cm to 60cm",
+      "4 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Mixed", "Options": "4", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr008q", name: "Travertine Pendant Light (White)", cat: "Home Décor", room: "Home Décor", price: 722, memberPrice: 650, sku: "SH-10790", tag: "New", ph: "", img: "assets/products/lr008q.webp",
+    imgs: ["assets/products/lr008q.webp", "assets/products/lr008q-2.webp", "assets/products/lr008q-3.webp", "assets/products/lr008q-4.webp"],
+    sizes: [{ label: "Travertine / 3000K - Warm White", price: 722 }],
+    desc: "Travertine pendant, sized to hang over a table or a kitchen bench. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Travertine construction",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Travertine", "Options": "1", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr009q", name: "Pendant Light (40cm to 80cm)", cat: "Home Décor", room: "Home Décor", price: 735, memberPrice: 662, sku: "SH-10791", tag: "New", ph: "", img: "assets/products/lr009q.webp",
+    imgs: ["assets/products/lr009q.webp", "assets/products/lr009q-2.webp", "assets/products/lr009q-3.webp", "assets/products/lr009q-4.webp"],
+    sizes: [{ label: "40cm / Neutral White", price: 735 }, { label: "40cm / Warm White", price: 735 }, { label: "40cm / Cool White", price: 735 }, { label: "50cm / Neutral White", price: 861 }, { label: "50cm / Warm White", price: 861 }, { label: "50cm / Cool White", price: 861 }, { label: "60cm / Neutral White", price: 1146 }, { label: "60cm / Warm White", price: 1146 }, { label: "60cm / Cool White", price: 1146 }, { label: "80cm / Neutral White", price: 1661 }, { label: "80cm / Warm White", price: 1661 }, { label: "80cm / Cool White", price: 1661 }],
+    desc: "A pendant from 40cm to 80cm, sized to hang over a table or a kitchen bench. In White.",
+    features: [
+      "Sizes from 40cm to 80cm",
+      "White colourway",
+      "12 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Mixed", "Options": "12", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr010q", name: "Rattan Pendant Light", cat: "Home Décor", room: "Home Décor", price: 735, memberPrice: 662, sku: "SH-10792", tag: "New", ph: "", img: "assets/products/lr010q.webp",
+    imgs: ["assets/products/lr010q.webp", "assets/products/lr010q-2.webp", "assets/products/lr010q-3.webp", "assets/products/lr010q-4.webp"],
+    sizes: [{ label: "Tan / S / Neutral White", price: 735 }, { label: "Tan / S / Warm White", price: 735 }, { label: "Tan / S / Cool White", price: 735 }, { label: "Black / S / Neutral White", price: 735 }, { label: "Black / S / Warm White", price: 735 }, { label: "Black / S / Cool White", price: 735 }, { label: "Tan / M / Neutral White", price: 917 }, { label: "Tan / M / Warm White", price: 917 }, { label: "Tan / M / Cool White", price: 917 }, { label: "Black / M / Neutral White", price: 917 }, { label: "Black / M / Warm White", price: 917 }, { label: "Black / M / Cool White", price: 917 }, { label: "Tan / L / Neutral White", price: 1198 }, { label: "Tan / L / Warm White", price: 1198 }, { label: "Tan / L / Cool White", price: 1198 }, { label: "Black / L / Neutral White", price: 1198 }, { label: "Black / L / Warm White", price: 1198 }, { label: "Black / L / Cool White", price: 1198 }],
+    desc: "Rattan pendant, sized to hang over a table or a kitchen bench. In Black, White or Tan.",
+    features: [
+      "Rattan construction",
+      "Black, White, Tan colourways",
+      "18 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Rattan", "Options": "18", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr011q", name: "Travertine Table Lamp", cat: "Home Décor", room: "Home Décor", price: 739, memberPrice: 665, sku: "SH-10793", tag: "New", ph: "", img: "assets/products/lr011q.webp",
+    imgs: ["assets/products/lr011q.webp", "assets/products/lr011q-2.webp", "assets/products/lr011q-3.webp", "assets/products/lr011q-4.webp"],
+    desc: "Travertine table lamp, for a console, a sideboard or a bedside. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Travertine construction",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Travertine", "Options": "1", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr012q", name: "Chandelier", cat: "Home Décor", room: "Home Décor", price: 898, memberPrice: 808, sku: "SH-10794", tag: "New", ph: "", img: "assets/products/lr012q.webp",
+    imgs: ["assets/products/lr012q.webp", "assets/products/lr012q-2.webp", "assets/products/lr012q-3.webp", "assets/products/lr012q-4.webp"],
+    sizes: [{ label: "Black / 60cm ø / Warm White", price: 898 }, { label: "Khaki / 60cm ø / Warm White", price: 898 }, { label: "White / 60cm ø / Warm White", price: 898 }, { label: "Black / 80cm ø / Warm White", price: 1787 }, { label: "Khaki / 80cm ø / Warm White", price: 1787 }, { label: "White / 80cm ø / Warm White", price: 1787 }, { label: "Black / 100cm ø / Warm White", price: 2926 }, { label: "Khaki / 100cm ø / Warm White", price: 2926 }, { label: "White / 100cm ø / Warm White", price: 2926 }, { label: "Black / 120cm ø / Warm White", price: 4978 }, { label: "Khaki / 120cm ø / Warm White", price: 4978 }, { label: "White / 120cm ø / Warm White", price: 4978 }],
+    desc: "A chandelier from 60cm to 120cm, for a dining table, an entry or a stairwell. In Black, White or Khaki. The shade is made of feathers, which is as soft-edged as a light fitting gets.",
+    features: [
+      "Sizes from 60cm to 120cm",
+      "Black, White, Khaki colourways",
+      "12 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Mixed", "Options": "12", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr013q", name: "Rattan Pendant Light (40cm to 100cm)", cat: "Home Décor", room: "Home Décor", price: 917, memberPrice: 825, sku: "SH-10795", tag: "New", ph: "", img: "assets/products/lr013q.webp",
+    imgs: ["assets/products/lr013q.webp", "assets/products/lr013q-2.webp", "assets/products/lr013q-3.webp", "assets/products/lr013q-4.webp"],
+    sizes: [{ label: "Single / 40cm / Warm White", price: 917 }, { label: "Single / 40cm / Cool White", price: 917 }, { label: "Single / 50cm / Warm White", price: 1056 }, { label: "Single / 50cm / Cool White", price: 1056 }, { label: "Single / 60cm / Warm White", price: 1198 }, { label: "Single / 60cm / Cool White", price: 1198 }, { label: "Double / 40cm / Warm White", price: 1204 }, { label: "Double / 40cm / Cool White", price: 1204 }, { label: "Double / 50cm / Warm White", price: 1287 }, { label: "Double / 50cm / Cool White", price: 1287 }, { label: "Single / 80cm / Warm White", price: 1383 }, { label: "Single / 80cm / Cool White", price: 1383 }, { label: "Double / 60cm / Warm White", price: 1481 }, { label: "Double / 60cm / Cool White", price: 1481 }, { label: "Single / 100cm / Warm White", price: 1528 }, { label: "Single / 100cm / Cool White", price: 1528 }, { label: "Double / 80cm / Warm White", price: 1846 }, { label: "Double / 80cm / Cool White", price: 1846 }, { label: "Double / 100cm / Warm White", price: 2219 }, { label: "Double / 100cm / Cool White", price: 2219 }],
+    desc: "Rattan pendant from 40cm to 100cm, sized to hang over a table or a kitchen bench. In White.",
+    features: [
+      "Rattan construction",
+      "Sizes from 40cm to 100cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Rattan", "Options": "20", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr014q", name: "Crystal Chandelier", cat: "Home Décor", room: "Home Décor", price: 944, memberPrice: 850, sku: "SH-10796", tag: "New", ph: "", img: "assets/products/lr014q.webp",
+    imgs: ["assets/products/lr014q.webp", "assets/products/lr014q-2.webp", "assets/products/lr014q-3.webp", "assets/products/lr014q-4.webp"],
+    sizes: [{ label: "Single Ring: 60cm / Gold / Neutral Light", price: 944 }, { label: "Single Ring: 60cm / Gold / Warm White", price: 944 }, { label: "Single Ring: 60cm / Gold / Cold White", price: 944 }, { label: "Single Ring: 80cm / Gold / Neutral Light", price: 1398 }, { label: "Single Ring: 80cm / Gold / Warm White", price: 1398 }, { label: "Single Ring: 80cm / Gold / Cold White", price: 1398 }, { label: "Double Ring: 60cm / Gold / Neutral Light", price: 1519 }, { label: "Double Ring: 60cm / Gold / Warm White", price: 1519 }, { label: "Double Ring: 60cm / Gold / Cold White", price: 1519 }, { label: "Single Ring: 100cm / Gold / Neutral Light", price: 2085 }, { label: "Single Ring: 100cm / Gold / Warm White", price: 2085 }, { label: "Single Ring: 100cm / Gold / Cold White", price: 2085 }, { label: "Double Ring: 80cm / Gold / Neutral Light", price: 2407 }, { label: "Double Ring: 80cm / Gold / Warm White", price: 2407 }, { label: "Double Ring: 80cm / Gold / Cold White", price: 2407 }, { label: "Tripple Ring: 80cm / Gold / Neutral Light", price: 2937 }, { label: "Tripple Ring: 80cm / Gold / Warm White", price: 2937 }, { label: "Tripple Ring: 80cm / Gold / Cold White", price: 2937 }, { label: "Double Ring: 100cm / Gold / Neutral Light", price: 3219 }, { label: "Double Ring: 100cm / Gold / Warm White", price: 3219 }, { label: "Double Ring: 100cm / Gold / Cold White", price: 3219 }, { label: "Tripple Ring: 100cm / Gold / Neutral Light", price: 5237 }, { label: "Tripple Ring: 100cm / Gold / Warm White", price: 5237 }, { label: "Tripple Ring: 100cm / Gold / Cold White", price: 5237 }],
+    desc: "Crystal chandelier from 60cm to 100cm, for a dining table, an entry or a stairwell. In White or Gold. Glass spreads the light rather than concentrating it.",
+    features: [
+      "Crystal construction",
+      "Sizes from 60cm to 100cm",
+      "White, Gold colourways",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Crystal", "Options": "24", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr015q", name: "Dining Chair", cat: "Living Room", room: "Living Room", price: 944, memberPrice: 850, sku: "SH-10797", tag: "New", ph: "", img: "assets/products/lr015q.webp",
+    imgs: ["assets/products/lr015q.webp", "assets/products/lr015q-2.webp", "assets/products/lr015q-3.webp", "assets/products/lr015q-4.webp"],
+    sizes: [{ label: "Orange", price: 944 }, { label: "Blue", price: 944 }, { label: "Grey", price: 944 }],
+    desc: "A dining chair. In Grey, Blue or Orange.",
+    features: [
+      "Grey, Blue, Orange colourways",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Mixed", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr016q", name: "Wall Light (8 options)", cat: "Home Décor", room: "Home Décor", price: 978, memberPrice: 880, sku: "SH-10798", tag: "New", ph: "", img: "assets/products/lr016q.webp",
+    imgs: ["assets/products/lr016q.webp", "assets/products/lr016q-2.webp", "assets/products/lr016q-3.webp", "assets/products/lr016q-4.webp"],
+    sizes: [{ label: "Gold / S / Warm White", price: 978 }, { label: "Gold / S / Cool White", price: 978 }, { label: "Black / S / Warm White", price: 978 }, { label: "Black / S / Cool White", price: 978 }, { label: "Gold / L / Warm White", price: 1370 }, { label: "Gold / L / Cool White", price: 1370 }, { label: "Black / L / Warm White", price: 1370 }, { label: "Black / L / Cool White", price: 1370 }],
+    desc: "A wall light. In Black, White or Gold.",
+    features: [
+      "Black, White, Gold colourways",
+      "8 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Mixed", "Options": "8", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr017q", name: "Marble Table Lamp", cat: "Home Décor", room: "Home Décor", price: 994, memberPrice: 895, sku: "SH-10799", tag: "New", ph: "", img: "assets/products/lr017q.webp",
+    imgs: ["assets/products/lr017q.webp", "assets/products/lr017q-2.webp", "assets/products/lr017q-3.webp", "assets/products/lr017q-4.webp"],
+    sizes: [{ label: "Smokey Grey", price: 994 }, { label: "Amber", price: 994 }],
+    desc: "Marble table lamp, for a console, a sideboard or a bedside. In Grey. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Grey colourway",
+      "2 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Marble", "Options": "2", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr018q", name: "Marble Wall Light", cat: "Home Décor", room: "Home Décor", price: 1000, memberPrice: 900, sku: "SH-10800", tag: "New", ph: "", img: "assets/products/lr018q.webp",
+    imgs: ["assets/products/lr018q.webp", "assets/products/lr018q-2.webp", "assets/products/lr018q-3.webp", "assets/products/lr018q-4.webp"],
+    sizes: [{ label: "40cm / Cool White", price: 1000 }, { label: "40cm / Warm White", price: 1000 }, { label: "50cm / Cool White", price: 1148 }, { label: "50cm / Warm White", price: 1148 }, { label: "60cm / Cool White", price: 1291 }, { label: "60cm / Warm White", price: 1291 }],
+    desc: "Marble wall light from 40cm to 60cm. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Sizes from 40cm to 60cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Marble", "Options": "6", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr019q", name: "Wall Light 2", cat: "Home Décor", room: "Home Décor", price: 1017, memberPrice: 915, sku: "SH-10801", tag: "New", ph: "", img: "assets/products/lr019q.webp",
+    imgs: ["assets/products/lr019q.webp", "assets/products/lr019q-2.webp", "assets/products/lr019q-3.webp", "assets/products/lr019q-4.webp"],
+    sizes: [{ label: "Gold / Warm White", price: 1017 }, { label: "Gold / Natural White", price: 1017 }, { label: "Gold / Cool White", price: 1017 }, { label: "Gold / Tri-Color", price: 1017 }, { label: "Black / Warm White", price: 1017 }, { label: "Black / Natural White", price: 1017 }, { label: "Black / Cool White", price: 1017 }, { label: "Black / Tri-Color", price: 1017 }],
+    desc: "A wall light. In Black, White, Gold or Natural.",
+    features: [
+      "Black, White, Gold, Natural colourways",
+      "8 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Mixed", "Options": "8", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr020q", name: "Marble Wall Light (50cm to 60cm)", cat: "Home Décor", room: "Home Décor", price: 1072, memberPrice: 965, sku: "SH-10802", tag: "New", ph: "", img: "assets/products/lr020q.webp",
+    imgs: ["assets/products/lr020q.webp", "assets/products/lr020q-2.webp", "assets/products/lr020q-3.webp", "assets/products/lr020q-4.webp"],
+    sizes: [{ label: "50cm / 3 Colors / Oval", price: 1072 }, { label: "50cm / 3 Colors / Rectangle", price: 1072 }, { label: "60cm / 3 Colors / Oval", price: 1356 }, { label: "60cm / 3 Colors / Rectangle", price: 1356 }],
+    desc: "Marble wall light from 50cm to 60cm. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Sizes from 50cm to 60cm",
+      "4 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Marble", "Options": "4", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr021q", name: "Chandelier (40cm to 100cm)", cat: "Home Décor", room: "Home Décor", price: 1091, memberPrice: 982, sku: "SH-10803", tag: "New", ph: "", img: "assets/products/lr021q.webp",
+    imgs: ["assets/products/lr021q.webp", "assets/products/lr021q-2.webp", "assets/products/lr021q-3.webp", "assets/products/lr021q-4.webp"],
+    sizes: [{ label: "40cm / Warm White", price: 1091 }, { label: "40cm / Neutral White", price: 1091 }, { label: "40cm / White", price: 1091 }, { label: "50cm / Warm White", price: 1452 }, { label: "50cm / Neutral White", price: 1452 }, { label: "50cm / White", price: 1452 }, { label: "60cm / Warm White", price: 2222 }, { label: "60cm / Neutral White", price: 2222 }, { label: "60cm / White", price: 2222 }, { label: "80cm / Warm White", price: 2902 }, { label: "80cm / Neutral White", price: 2902 }, { label: "80cm / White", price: 2902 }, { label: "100cm / Warm White", price: 3211 }, { label: "100cm / Neutral White", price: 3211 }, { label: "100cm / White", price: 3211 }],
+    desc: "A chandelier from 40cm to 100cm, for a dining table, an entry or a stairwell. In White.",
+    features: [
+      "Sizes from 40cm to 100cm",
+      "White colourway",
+      "15 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Mixed", "Options": "15", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr022q", name: "Marble Pendant Light", cat: "Home Décor", room: "Home Décor", price: 1102, memberPrice: 992, sku: "SH-10804", tag: "New", ph: "", img: "assets/products/lr022q.webp",
+    imgs: ["assets/products/lr022q.webp", "assets/products/lr022q-2.webp", "assets/products/lr022q-3.webp", "assets/products/lr022q-4.webp"],
+    sizes: [{ label: "S / Warm White", price: 1102 }, { label: "S / Natural White", price: 1102 }, { label: "S / Cool White", price: 1102 }, { label: "L / Warm White", price: 1383 }, { label: "L / Natural White", price: 1383 }, { label: "L / Cool White", price: 1383 }],
+    desc: "Marble pendant, sized to hang over a table or a kitchen bench. In White or Natural. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "White, Natural colourways",
+      "6 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Marble", "Options": "6", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr023q", name: "Marble Pendant Light (41cm to 71cm)", cat: "Home Décor", room: "Home Décor", price: 1256, memberPrice: 1130, sku: "SH-10805", tag: "New", ph: "", img: "assets/products/lr023q.webp",
+    imgs: ["assets/products/lr023q.webp", "assets/products/lr023q-2.webp", "assets/products/lr023q-3.webp", "assets/products/lr023q-4.webp"],
+    sizes: [{ label: "41cm / Neutral White", price: 1256 }, { label: "41cm / Cool White", price: 1256 }, { label: "41cm / Warm White", price: 1256 }, { label: "51cm / Neutral White", price: 1296 }, { label: "51cm / Cool White", price: 1296 }, { label: "51cm / Warm White", price: 1296 }, { label: "61cm / Neutral White", price: 1700 }, { label: "61cm / Cool White", price: 1700 }, { label: "61cm / Warm White", price: 1700 }, { label: "71cm / Neutral White", price: 2107 }, { label: "71cm / Cool White", price: 2107 }, { label: "71cm / Warm White", price: 2107 }],
+    desc: "Marble pendant from 41cm to 71cm, sized to hang over a table or a kitchen bench. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Sizes from 41cm to 71cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Marble", "Options": "12", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr024q", name: "Dining Chair (Black / Grey)", cat: "Living Room", room: "Living Room", price: 1326, memberPrice: 1193, sku: "SH-10806", tag: "New", ph: "", img: "assets/products/lr024q.webp",
+    imgs: ["assets/products/lr024q.webp", "assets/products/lr024q-2.webp", "assets/products/lr024q-3.webp", "assets/products/lr024q-4.webp"],
+    sizes: [{ label: "Orange", price: 1326 }, { label: "Black", price: 1326 }, { label: "Grey", price: 1326 }, { label: "Navy", price: 1326 }],
+    desc: "A dining chair. In Black, Grey, Navy or Orange.",
+    features: [
+      "Black, Grey, Navy, Orange colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Mixed", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr025q", name: "Glass Chandelier", cat: "Home Décor", room: "Home Décor", price: 1346, memberPrice: 1211, sku: "SH-10807", tag: "New", ph: "", img: "assets/products/lr025q.webp",
+    imgs: ["assets/products/lr025q.webp", "assets/products/lr025q-2.webp", "assets/products/lr025q-3.webp", "assets/products/lr025q-4.webp"],
+    sizes: [{ label: "3 Light", price: 1346 }, { label: "6 Light", price: 2056 }, { label: "8 Light", price: 2535 }, { label: "10 Light", price: 3056 }, { label: "12 Light", price: 3313 }, { label: "15 Light", price: 4537 }, { label: "18 Light", price: 5126 }, { label: "20 Light", price: 5552 }, { label: "25 Light", price: 6754 }, { label: "30 Light", price: 8954 }],
+    desc: "Glass chandelier, for a dining table, an entry or a stairwell. Glass spreads the light rather than concentrating it.",
+    features: [
+      "Glass construction",
+      "10 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Glass", "Options": "10", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr026q", name: "Marble Wall Light (60cm to 80cm)", cat: "Home Décor", room: "Home Décor", price: 1406, memberPrice: 1265, sku: "SH-10808", tag: "New", ph: "", img: "assets/products/lr026q.webp",
+    imgs: ["assets/products/lr026q.webp", "assets/products/lr026q-2.webp", "assets/products/lr026q-3.webp", "assets/products/lr026q-4.webp"],
+    sizes: [{ label: "60cm / Warm White", price: 1406 }, { label: "80cm / Warm White", price: 2372 }],
+    desc: "Marble wall light from 60cm to 80cm. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Sizes from 60cm to 80cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Wall Light", "Material": "Marble", "Options": "2", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr027q", name: "Chandelier (50cm to 80cm)", cat: "Home Décor", room: "Home Décor", price: 1415, memberPrice: 1274, sku: "SH-10809", tag: "New", ph: "", img: "assets/products/lr027q.webp",
+    imgs: ["assets/products/lr027q.webp", "assets/products/lr027q-2.webp", "assets/products/lr027q-3.webp", "assets/products/lr027q-4.webp"],
+    sizes: [{ label: "50cm ø / Warm White", price: 1415 }, { label: "60cm ø / Warm White", price: 1661 }, { label: "70cm ø / Warm White", price: 2311 }, { label: "80cm ø / Warm White", price: 2776 }],
+    desc: "A chandelier from 50cm to 80cm, for a dining table, an entry or a stairwell. In White.",
+    features: [
+      "Sizes from 50cm to 80cm",
+      "White colourway",
+      "4 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Mixed", "Options": "4", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr028q", name: "Steel Chandelier", cat: "Home Décor", room: "Home Décor", price: 1426, memberPrice: 1283, sku: "SH-10810", tag: "New", ph: "", img: "assets/products/lr028q.webp",
+    imgs: ["assets/products/lr028q.webp", "assets/products/lr028q-2.webp", "assets/products/lr028q-3.webp", "assets/products/lr028q-4.webp"],
+    sizes: [{ label: "40cm / Warm White / Silver", price: 1426 }, { label: "40cm / Natural Light / Silver", price: 1426 }, { label: "40cm / White Light / Silver", price: 1426 }, { label: "40cm / Warm White / Gold", price: 1426 }, { label: "40cm / Natural Light / Gold", price: 1426 }, { label: "40cm / White Light / Gold", price: 1426 }, { label: "60cm / Warm White / Silver", price: 2333 }, { label: "60cm / Natural Light / Silver", price: 2333 }, { label: "60cm / White Light / Silver", price: 2333 }, { label: "60cm / Warm White / Gold", price: 2333 }, { label: "60cm / Natural Light / Gold", price: 2333 }, { label: "60cm / White Light / Gold", price: 2333 }, { label: "80cm / Warm White / Silver", price: 4583 }, { label: "80cm / Natural Light / Silver", price: 4583 }, { label: "80cm / White Light / Silver", price: 4583 }, { label: "80cm / Warm White / Gold", price: 4583 }, { label: "80cm / Natural Light / Gold", price: 4583 }, { label: "80cm / White Light / Gold", price: 4583 }, { label: "100cm / Warm White / Silver", price: 5926 }, { label: "100cm / Natural Light / Silver", price: 5926 }, { label: "100cm / Warm White / Gold", price: 5926 }, { label: "100cm / White Light / Silver", price: 5926 }, { label: "100cm / Natural Light / Gold", price: 5926 }, { label: "100cm / White Light / Gold", price: 5926 }],
+    desc: "Steel chandelier from 40cm to 100cm, for a dining table, an entry or a stairwell. In White, Gold, Silver or Natural.",
+    features: [
+      "Steel construction",
+      "Sizes from 40cm to 100cm",
+      "White, Gold, Silver, Natural colourways",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Steel", "Options": "24", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr029q", name: "Pendant Light (White)", cat: "Home Décor", room: "Home Décor", price: 1463, memberPrice: 1317, sku: "SH-10811", tag: "New", ph: "", img: "assets/products/lr029q.webp",
+    imgs: ["assets/products/lr029q.webp", "assets/products/lr029q-2.webp", "assets/products/lr029q-3.webp", "assets/products/lr029q-4.webp"],
+    sizes: [{ label: "Cool White", price: 1463 }, { label: "Warm White", price: 1463 }, { label: "Neutral White", price: 1463 }],
+    desc: "A pendant, sized to hang over a table or a kitchen bench. In White.",
+    features: [
+      "White colourway",
+      "3 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Mixed", "Options": "3", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr030q", name: "Timber Pendant Light", cat: "Home Décor", room: "Home Décor", price: 1500, memberPrice: 1350, sku: "SH-10812", tag: "New", ph: "", img: "assets/products/lr030q.webp",
+    imgs: ["assets/products/lr030q.webp", "assets/products/lr030q-2.webp", "assets/products/lr030q-3.webp", "assets/products/lr030q-4.webp"],
+    sizes: [{ label: "Natural / Single Head", price: 1500 }, { label: "Walnut / Single Head", price: 1500 }],
+    desc: "Timber pendant, sized to hang over a table or a kitchen bench. In Walnut or Natural.",
+    features: [
+      "Timber construction",
+      "Walnut, Natural colourways",
+      "2 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Timber", "Options": "2", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr031q", name: "Leather Dining Chair", cat: "Living Room", room: "Living Room", price: 1513, memberPrice: 1362, sku: "SH-10813", tag: "New", ph: "", img: "assets/products/lr031q.webp",
+    imgs: ["assets/products/lr031q.webp", "assets/products/lr031q-2.webp", "assets/products/lr031q-3.webp", "assets/products/lr031q-4.webp"],
+    sizes: [{ label: "Black", price: 1513 }, { label: "Beige", price: 1513 }, { label: "White", price: 1513 }],
+    desc: "Leather dining chair. In Black, White or Beige.",
+    features: [
+      "Leather construction",
+      "Black, White, Beige colourways",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Leather", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr032q", name: "Leather Bar Stool in Four Colours", cat: "Living Room", room: "Living Room", price: 1572, memberPrice: 1415, sku: "SH-10814", tag: "New", ph: "", img: "assets/products/lr032q.webp",
+    imgs: ["assets/products/lr032q.webp", "assets/products/lr032q-2.webp", "assets/products/lr032q-3.webp", "assets/products/lr032q-4.webp"],
+    sizes: [{ label: "Black", price: 1572 }, { label: "Tan", price: 1572 }, { label: "Grey", price: 1572 }, { label: "White", price: 1572 }],
+    desc: "Leather bar stool. In Black, White, Grey or Tan.",
+    features: [
+      "Leather construction",
+      "Black, White, Grey, Tan colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Leather", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr033q", name: "Timber Pendant Light (80cm to 150cm)", cat: "Home Décor", room: "Home Décor", price: 1600, memberPrice: 1440, sku: "SH-10815", tag: "New", ph: "", img: "assets/products/lr033q.webp",
+    imgs: ["assets/products/lr033q.webp", "assets/products/lr033q-2.webp", "assets/products/lr033q-3.webp", "assets/products/lr033q-4.webp"],
+    sizes: [{ label: "80cm / Warm White", price: 1600 }, { label: "80cm / Cool White", price: 1600 }, { label: "100cm / Warm White", price: 1848 }, { label: "100cm / Cool White", price: 1848 }, { label: "120cm / Warm White", price: 2017 }, { label: "120cm / Cool White", price: 2017 }, { label: "150cm / Warm White", price: 2550 }, { label: "150cm / Cool White", price: 2550 }],
+    desc: "Timber pendant from 80cm to 150cm, sized to hang over a table or a kitchen bench. In White.",
+    features: [
+      "Timber construction",
+      "Sizes from 80cm to 150cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Timber", "Options": "8", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr034q", name: "Steel Chandelier (White)", cat: "Home Décor", room: "Home Décor", price: 1633, memberPrice: 1470, sku: "SH-10816", tag: "New", ph: "", img: "assets/products/lr034q.webp",
+    imgs: ["assets/products/lr034q.webp", "assets/products/lr034q-2.webp", "assets/products/lr034q-3.webp", "assets/products/lr034q-4.webp"],
+    sizes: [{ label: "3 x Rings / 4000K - Cold White", price: 1633 }, { label: "3 x Rings / 3000K - Warm White", price: 1633 }, { label: "4 x Rings / 4000K - Cold White", price: 1828 }, { label: "4 x Rings / 3000K - Warm White", price: 1828 }, { label: "5 x Rings / 4000K - Cold White", price: 2331 }, { label: "5 x Rings / 3000K - Warm White", price: 2331 }, { label: "6 x Rings / 4000K - Cold White", price: 2809 }, { label: "6 x Rings / 3000K - Warm White", price: 2809 }, { label: "7 x Rings / 4000K - Cold White", price: 4070 }, { label: "7 x Rings / 3000K - Warm White", price: 4070 }],
+    desc: "Steel chandelier, for a dining table, an entry or a stairwell. In White.",
+    features: [
+      "Steel construction",
+      "White colourway",
+      "10 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Steel", "Options": "10", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr035q", name: "Leather Dining Chair (Black / Beige)", cat: "Living Room", room: "Living Room", price: 1639, memberPrice: 1475, sku: "SH-10817", tag: "New", ph: "", img: "assets/products/lr035q.webp",
+    imgs: ["assets/products/lr035q.webp", "assets/products/lr035q-2.webp", "assets/products/lr035q-3.webp", "assets/products/lr035q-4.webp"],
+    sizes: [{ label: "Orange + Black", price: 1639 }, { label: "Orange + Gold", price: 1639 }, { label: "Beige + Gold", price: 1639 }, { label: "Beige + Black", price: 1639 }],
+    desc: "Leather dining chair. In Black, Beige, Gold or Orange.",
+    features: [
+      "Leather construction",
+      "Black, Beige, Gold, Orange colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Leather", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr036q", name: "Marble Table Lamp (White)", cat: "Home Décor", room: "Home Décor", price: 1648, memberPrice: 1483, sku: "SH-10818", tag: "New", ph: "", img: "assets/products/lr036q.webp",
+    imgs: ["assets/products/lr036q.webp", "assets/products/lr036q-2.webp", "assets/products/lr036q-3.webp", "assets/products/lr036q-4.webp"],
+    sizes: [{ label: "Cool White", price: 1648 }, { label: "Warm White", price: 1648 }, { label: "Neutral White", price: 1648 }],
+    desc: "Marble table lamp, for a console, a sideboard or a bedside. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "White colourway",
+      "3 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Marble", "Options": "3", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr037q", name: "Leather Dining Chair (Black / Tan)", cat: "Living Room", room: "Living Room", price: 1726, memberPrice: 1553, sku: "SH-10819", tag: "New", ph: "", img: "assets/products/lr037q.webp",
+    imgs: ["assets/products/lr037q.webp", "assets/products/lr037q-2.webp", "assets/products/lr037q-3.webp", "assets/products/lr037q-4.webp"],
+    sizes: [{ label: "Black", price: 1726 }, { label: "Tan", price: 1726 }],
+    desc: "Leather dining chair. In Black or Tan.",
+    features: [
+      "Leather construction",
+      "Black, Tan colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Leather", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr038q", name: "Leather Dining Chair (Gold / Silver)", cat: "Living Room", room: "Living Room", price: 1778, memberPrice: 1600, sku: "SH-10820", tag: "New", ph: "", img: "assets/products/lr038q.webp",
+    imgs: ["assets/products/lr038q.webp", "assets/products/lr038q-2.webp", "assets/products/lr038q-3.webp", "assets/products/lr038q-4.webp"],
+    sizes: [{ label: "Gold", price: 1778 }, { label: "Silver", price: 1778 }],
+    desc: "Leather dining chair. In Gold or Silver.",
+    features: [
+      "Leather construction",
+      "Gold, Silver colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Leather", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr039q", name: "Table Lamp (120cm to 200cm)", cat: "Home Décor", room: "Home Décor", price: 1806, memberPrice: 1625, sku: "SH-10821", tag: "New", ph: "", img: "assets/products/lr039q.webp",
+    imgs: ["assets/products/lr039q.webp", "assets/products/lr039q-2.webp", "assets/products/lr039q-3.webp", "assets/products/lr039q-4.webp"],
+    sizes: [{ label: "White / 120cm H", price: 1806 }, { label: "Black / 120cm H", price: 1806 }, { label: "Khaki / 120cm H", price: 1806 }, { label: "White / 170cm H", price: 2963 }, { label: "Black / 170cm H", price: 2963 }, { label: "Khaki / 170cm H", price: 2963 }, { label: "White / 200cm H", price: 3694 }, { label: "Black / 200cm H", price: 3694 }, { label: "Khaki / 200cm H", price: 3694 }],
+    desc: "A table lamp from 120cm to 200cm, for a console, a sideboard or a bedside. In Black, White or Khaki.",
+    features: [
+      "Sizes from 120cm to 200cm",
+      "Black, White, Khaki colourways",
+      "9 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Mixed", "Options": "9", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr040q", name: "Metal Dining Chair", cat: "Living Room", room: "Living Room", price: 1806, memberPrice: 1625, sku: "SH-10822", tag: "New", ph: "", img: "assets/products/lr040q.webp",
+    imgs: ["assets/products/lr040q.webp", "assets/products/lr040q-2.webp", "assets/products/lr040q-3.webp", "assets/products/lr040q-4.webp"],
+    sizes: [{ label: "White + Orange", price: 1806 }, { label: "White + Grey", price: 1806 }, { label: "White", price: 1806 }, { label: "Emerald Green", price: 1806 }, { label: "Mocha", price: 1806 }, { label: "Grey", price: 1806 }, { label: "Tan", price: 1806 }],
+    desc: "Metal dining chair. In White, Grey, Tan or Green.",
+    features: [
+      "Metal construction",
+      "White, Grey, Tan, Green colourways",
+      "7 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Metal", "Options": "7", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "lr041q", name: "Leather Dining Chair (Black / White)", cat: "Living Room", room: "Living Room", price: 1828, memberPrice: 1645, sku: "SH-10823", tag: "New", ph: "", img: "assets/products/lr041q.webp",
+    imgs: ["assets/products/lr041q.webp", "assets/products/lr041q-2.webp", "assets/products/lr041q-3.webp", "assets/products/lr041q-4.webp"],
+    sizes: [{ label: "Beige", price: 1828 }, { label: "White", price: 1828 }, { label: "Grey", price: 1828 }, { label: "Dark Grey", price: 1828 }, { label: "Black", price: 1828 }, { label: "Brown", price: 1828 }],
+    desc: "Leather dining chair. In Black, White, Grey or Beige.",
+    features: [
+      "Leather construction",
+      "Black, White, Grey, Beige colourways",
+      "6 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Leather", "Options": "6", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr042q", name: "Bar Stool", cat: "Living Room", room: "Living Room", price: 1833, memberPrice: 1650, sku: "SH-10824", tag: "New", ph: "", img: "assets/products/lr042q.webp",
+    imgs: ["assets/products/lr042q.webp", "assets/products/lr042q-2.webp", "assets/products/lr042q-3.webp", "assets/products/lr042q-4.webp"],
+    sizes: [{ label: "Black / 60cm", price: 1833 }, { label: "Grey / 60cm", price: 1833 }, { label: "Blue / 60cm", price: 1833 }, { label: "Green / 60cm", price: 1833 }, { label: "Black / 90cm", price: 2387 }, { label: "Grey / 90cm", price: 2387 }, { label: "Blue / 90cm", price: 2387 }, { label: "Green / 90cm", price: 2387 }, { label: "Black / 100cm", price: 2685 }, { label: "Grey / 100cm", price: 2685 }, { label: "Blue / 100cm", price: 2685 }, { label: "Green / 100cm", price: 2685 }, { label: "Black / 120cm", price: 3087 }, { label: "Grey / 120cm", price: 3087 }, { label: "Blue / 120cm", price: 3087 }, { label: "Green / 120cm", price: 3087 }],
+    desc: "A bar stool from 60cm to 120cm. In Black, Grey, Green or Blue. A long upholstered stool, useful at the end of a sofa or across a bay window.",
+    features: [
+      "Sizes from 60cm to 120cm",
+      "Black, Grey, Green, Blue colourways",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Mixed", "Options": "16", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr043q", name: "Chandelier (White)", cat: "Home Décor", room: "Home Décor", price: 1887, memberPrice: 1698, sku: "SH-10825", tag: "New", ph: "", img: "assets/products/lr043q.webp",
+    imgs: ["assets/products/lr043q.webp", "assets/products/lr043q-2.webp", "assets/products/lr043q-3.webp", "assets/products/lr043q-4.webp"],
+    sizes: [{ label: "1 Ring x 12 Balls / Cool White", price: 1887 }, { label: "1 Ring x 12 Balls / Warm White", price: 1887 }, { label: "3 Rings x 36 Balls / Cool White", price: 4628 }, { label: "3 Rings x 36 Balls / Warm White", price: 4628 }],
+    desc: "A chandelier, for a dining table, an entry or a stairwell. In White.",
+    features: [
+      "White colourway",
+      "4 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Mixed", "Options": "4", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr044q", name: "Bouclé Dining Chair", cat: "Living Room", room: "Living Room", price: 1957, memberPrice: 1761, sku: "SH-10826", tag: "New", ph: "", img: "assets/products/lr044q.webp",
+    imgs: ["assets/products/lr044q.webp", "assets/products/lr044q-2.webp", "assets/products/lr044q-3.webp", "assets/products/lr044q-4.webp"],
+    sizes: [{ label: "White", price: 1957 }, { label: "Charcoal", price: 1957 }],
+    desc: "Bouclé dining chair. In White or Charcoal.",
+    features: [
+      "Bouclé construction",
+      "White, Charcoal colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Bouclé", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr045q", name: "Table Lamp (80cm)", cat: "Home Décor", room: "Home Décor", price: 1963, memberPrice: 1767, sku: "SH-10827", tag: "New", ph: "", img: "assets/products/lr045q.webp",
+    imgs: ["assets/products/lr045q.webp", "assets/products/lr045q-2.webp", "assets/products/lr045q-3.webp", "assets/products/lr045q-4.webp"],
+    sizes: [{ label: "Warm White LED / 80cm", price: 1963 }],
+    desc: "A table lamp at 80cm, for a console, a sideboard or a bedside. In White. A half-moon rather than a circle, so it sits flush against a wall.",
+    features: [
+      "80cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Mixed", "Options": "1", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr046q", name: "Leather Bar Stool (65cm to 75cm)", cat: "Living Room", room: "Living Room", price: 2130, memberPrice: 1917, sku: "SH-10828", tag: "New", ph: "", img: "assets/products/lr046q.webp",
+    imgs: ["assets/products/lr046q.webp", "assets/products/lr046q-2.webp", "assets/products/lr046q-3.webp", "assets/products/lr046q-4.webp"],
+    sizes: [{ label: "Light Grey / 65cm", price: 2130 }, { label: "Dark Grey / 65cm", price: 2130 }, { label: "Orange / 65cm", price: 2130 }, { label: "Ocean Blue / 65cm", price: 2130 }, { label: "Light Grey / 75cm", price: 2315 }, { label: "Dark Grey / 75cm", price: 2315 }, { label: "Orange / 75cm", price: 2315 }, { label: "Ocean Blue / 75cm", price: 2315 }],
+    desc: "Leather bar stool from 65cm to 75cm. In Grey, Blue or Orange.",
+    features: [
+      "Leather construction",
+      "Sizes from 65cm to 75cm",
+      "Grey, Blue, Orange colourways"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Leather", "Options": "8", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr047q", name: "Leather Bar Stool (Gold / Silver)", cat: "Living Room", room: "Living Room", price: 2148, memberPrice: 1933, sku: "SH-10829", tag: "New", ph: "", img: "assets/products/lr047q.webp",
+    imgs: ["assets/products/lr047q.webp", "assets/products/lr047q-2.webp", "assets/products/lr047q-3.webp", "assets/products/lr047q-4.webp"],
+    sizes: [{ label: "Titanium Gold", price: 2148 }, { label: "Silver", price: 2148 }, { label: "Rose Gold", price: 2148 }],
+    desc: "Leather bar stool. In Gold or Silver.",
+    features: [
+      "Leather construction",
+      "Gold, Silver colourways",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Leather", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr048q", name: "Velvet Bar Stool", cat: "Living Room", room: "Living Room", price: 2185, memberPrice: 1966, sku: "SH-10830", tag: "New", ph: "", img: "assets/products/lr048q.webp",
+    imgs: ["assets/products/lr048q.webp", "assets/products/lr048q-2.webp", "assets/products/lr048q-3.webp", "assets/products/lr048q-4.webp"],
+    sizes: [{ label: "Charcoal Grey / 65cm", price: 2185 }, { label: "Charcoal Grey / 75cm", price: 2185 }, { label: "Navy Blue / 65cm", price: 2185 }, { label: "Navy Blue / 75cm", price: 2185 }, { label: "Emerald Green / 65cm", price: 2185 }, { label: "Emerald Green / 75cm", price: 2185 }, { label: "Off White / 65cm", price: 2185 }, { label: "Off White / 75cm", price: 2185 }, { label: "Pink / 65cm", price: 2185 }, { label: "Pink / 75cm", price: 2185 }, { label: "Black / 65cm", price: 2185 }, { label: "Black / 75cm", price: 2185 }],
+    desc: "Velvet bar stool from 65cm to 75cm. In Black, White, Grey or Charcoal.",
+    features: [
+      "Velvet construction",
+      "Sizes from 65cm to 75cm",
+      "Black, White, Grey, Charcoal colourways"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Velvet", "Options": "12", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr049q", name: "Marble Pendant Light (80cm to 140cm)", cat: "Home Décor", room: "Home Décor", price: 2198, memberPrice: 1978, sku: "SH-10831", tag: "New", ph: "", img: "assets/products/lr049q.webp",
+    imgs: ["assets/products/lr049q.webp", "assets/products/lr049q-2.webp", "assets/products/lr049q-3.webp", "assets/products/lr049q-4.webp"],
+    sizes: [{ label: "80cm / Warm White", price: 2198 }, { label: "100cm / Warm White", price: 3424 }, { label: "120cm / Warm White", price: 4406 }, { label: "140cm / Warm White", price: 4987 }],
+    desc: "Marble pendant from 80cm to 140cm, sized to hang over a table or a kitchen bench. In White. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Sizes from 80cm to 140cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Marble", "Options": "4", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr050q", name: "Dining Chair (Grey / Blue)", cat: "Living Room", room: "Living Room", price: 2204, memberPrice: 1984, sku: "SH-10832", tag: "New", ph: "", img: "assets/products/lr050q.webp",
+    imgs: ["assets/products/lr050q.webp", "assets/products/lr050q-2.webp", "assets/products/lr050q-3.webp", "assets/products/lr050q-4.webp"],
+    sizes: [{ label: "Coffee", price: 2204 }, { label: "Smoke Grey", price: 2204 }, { label: "Clear", price: 2204 }, { label: "Light Blue", price: 2204 }],
+    desc: "A dining chair. In Grey, Blue or Coffee.",
+    features: [
+      "Grey, Blue, Coffee colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Mixed", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr051q", name: "Leather Dining Chair (Beige)", cat: "Living Room", room: "Living Room", price: 2204, memberPrice: 1984, sku: "SH-10833", tag: "New", ph: "", img: "assets/products/lr051q.webp",
+    imgs: ["assets/products/lr051q.webp", "assets/products/lr051q-2.webp", "assets/products/lr051q-3.webp", "assets/products/lr051q-4.webp"],
+    sizes: [{ label: "Beige", price: 2204 }],
+    desc: "Leather dining chair. In Beige.",
+    features: [
+      "Leather construction",
+      "Beige colourway"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Leather", "Options": "1", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr052q", name: "Chandelier (180cm to 400cm)", cat: "Home Décor", room: "Home Décor", price: 2222, memberPrice: 2000, sku: "SH-10834", tag: "New", ph: "", img: "assets/products/lr052q.webp",
+    imgs: ["assets/products/lr052q.webp", "assets/products/lr052q-2.webp", "assets/products/lr052q-3.webp", "assets/products/lr052q-4.webp"],
+    sizes: [{ label: "45 ø x 180cm H / Warm White", price: 2222 }, { label: "60 ø x 210cm H / Warm White", price: 4119 }, { label: "75 ø x 250cm H / Warm White", price: 5741 }, { label: "80 ø x 300cm H / Warm White", price: 7074 }, { label: "100 ø x 300cm H / Warm White", price: 8833 }, { label: "100 ø x 400cm H / Warm White", price: 10800 }],
+    desc: "A chandelier from 180cm to 400cm, for a dining table, an entry or a stairwell. In White.",
+    features: [
+      "Sizes from 180cm to 400cm",
+      "White colourway",
+      "6 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Mixed", "Options": "6", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr053q", name: "Table Lamp (White / Gold)", cat: "Home Décor", room: "Home Décor", price: 2222, memberPrice: 2000, sku: "SH-10835", tag: "New", ph: "", img: "assets/products/lr053q.webp",
+    imgs: ["assets/products/lr053q.webp", "assets/products/lr053q-2.webp", "assets/products/lr053q-3.webp", "assets/products/lr053q-4.webp"],
+    sizes: [{ label: "5 Head - Gold / Warm White", price: 2222 }, { label: "5 Head - Gold / Cool White", price: 2222 }],
+    desc: "A table lamp, for a console, a sideboard or a bedside. In White or Gold.",
+    features: [
+      "White, Gold colourways",
+      "2 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Mixed", "Options": "2", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr054q", name: "Bar Stool (Black / Gold)", cat: "Living Room", room: "Living Room", price: 2313, memberPrice: 2082, sku: "SH-10836", tag: "New", ph: "", img: "assets/products/lr054q.webp",
+    imgs: ["assets/products/lr054q.webp", "assets/products/lr054q-2.webp", "assets/products/lr054q-3.webp", "assets/products/lr054q-4.webp"],
+    sizes: [{ label: "Titanium Gold", price: 2313 }, { label: "Titanium Black", price: 2648 }],
+    desc: "A bar stool. In Black or Gold.",
+    features: [
+      "Black, Gold colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Mixed", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr055q", name: "Marble Pendant Light (White / Natural)", cat: "Home Décor", room: "Home Décor", price: 2526, memberPrice: 2273, sku: "SH-10837", tag: "New", ph: "", img: "assets/products/lr055q.webp",
+    imgs: ["assets/products/lr055q.webp", "assets/products/lr055q-2.webp", "assets/products/lr055q-3.webp", "assets/products/lr055q-4.webp"],
+    sizes: [{ label: "80cm / Warm White", price: 2526 }, { label: "80cm / Natural White", price: 2526 }, { label: "80cm / Cool White", price: 2526 }, { label: "100cm / Warm White", price: 2904 }, { label: "100cm / Natural White", price: 2904 }, { label: "100cm / Cool White", price: 2904 }, { label: "120cm / Warm White", price: 3385 }, { label: "120cm / Natural White", price: 3385 }, { label: "120cm / Cool White", price: 3385 }, { label: "140cm / Warm White", price: 4111 }, { label: "140cm / Natural White", price: 4111 }, { label: "140cm / Cool White", price: 4111 }],
+    desc: "Marble pendant from 80cm to 140cm, sized to hang over a table or a kitchen bench. In White or Natural. Stone and glass diffuse the light softly rather than throwing a hard beam.",
+    features: [
+      "Marble construction",
+      "Sizes from 80cm to 140cm",
+      "White, Natural colourways",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Marble", "Options": "12", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr056q", name: "Table Lamp (60cm)", cat: "Home Décor", room: "Home Décor", price: 2741, memberPrice: 2467, sku: "SH-10838", tag: "New", ph: "", img: "assets/products/lr056q.webp",
+    imgs: ["assets/products/lr056q.webp", "assets/products/lr056q-2.webp", "assets/products/lr056q-3.webp", "assets/products/lr056q-4.webp"],
+    sizes: [{ label: "Gold / 60cm", price: 2741 }],
+    desc: "A table lamp at 60cm, for a console, a sideboard or a bedside. In Gold. A halo of light on a slim stem, more sculpture than lamp.",
+    features: [
+      "60cm",
+      "Gold colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Table Lamp", "Material": "Mixed", "Options": "1", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr057q", name: "Pendant Light (80cm to 120cm)", cat: "Home Décor", room: "Home Décor", price: 2920, memberPrice: 2628, sku: "SH-10839", tag: "New", ph: "", img: "assets/products/lr057q.webp",
+    imgs: ["assets/products/lr057q.webp", "assets/products/lr057q-2.webp", "assets/products/lr057q-3.webp", "assets/products/lr057q-4.webp"],
+    sizes: [{ label: "80cm / Cool White", price: 2920 }, { label: "80cm / Warm White", price: 2920 }, { label: "100cm / Cool White", price: 3880 }, { label: "100cm / Warm White", price: 3880 }, { label: "120cm / Cool White", price: 4596 }, { label: "120cm / Warm White", price: 4596 }],
+    desc: "A pendant from 80cm to 120cm, sized to hang over a table or a kitchen bench. In White.",
+    features: [
+      "Sizes from 80cm to 120cm",
+      "White colourway",
+      "6 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Pendant Light", "Material": "Mixed", "Options": "6", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr058q", name: "Slate Console Table", cat: "Living Room", room: "Living Room", price: 3026, memberPrice: 2723, sku: "SH-10840", tag: "New", ph: "", img: "assets/products/lr058q.webp",
+    imgs: ["assets/products/lr058q.webp", "assets/products/lr058q-2.webp", "assets/products/lr058q-3.webp", "assets/products/lr058q-4.webp"],
+    sizes: [{ label: "Gold + White / 80cm", price: 3026 }, { label: "Gold + Black / 80cm", price: 3026 }, { label: "Gold + White / 100cm", price: 3269 }, { label: "Gold + Black / 100cm", price: 3269 }, { label: "Gold + White / 120cm", price: 3489 }, { label: "Gold + Black / 120cm", price: 3489 }],
+    desc: "Slate console table from 80cm to 120cm, for a hallway or behind a sofa. In Black, White or Gold.",
+    features: [
+      "Slate construction",
+      "Sizes from 80cm to 120cm",
+      "Black, White, Gold colourways"
+    ],
+    specs: { "Type": "Console Table", "Material": "Slate", "Options": "6", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr059q", name: "Timber Bar Stool", cat: "Living Room", room: "Living Room", price: 3106, memberPrice: 2795, sku: "SH-10841", tag: "New", ph: "", img: "assets/products/lr059q.webp",
+    imgs: ["assets/products/lr059q.webp", "assets/products/lr059q-2.webp", "assets/products/lr059q-3.webp", "assets/products/lr059q-4.webp"],
+    sizes: [{ label: "Beige / 90cm", price: 3106 }, { label: "Beige / 120cm", price: 3630 }],
+    desc: "Timber bar stool from 90cm to 120cm. In Beige. A padded bench at 90cm or 120cm, made for pulling shoes on and off.",
+    features: [
+      "Timber construction",
+      "Sizes from 90cm to 120cm",
+      "Beige colourway"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Timber", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr060q", name: "Walnut Bar Stool", cat: "Living Room", room: "Living Room", price: 3109, memberPrice: 2798, sku: "SH-10842", tag: "New", ph: "", img: "assets/products/lr060q.webp",
+    imgs: ["assets/products/lr060q.webp", "assets/products/lr060q-2.webp", "assets/products/lr060q-3.webp", "assets/products/lr060q-4.webp"],
+    sizes: [{ label: "Brown", price: 3109 }, { label: "Blue", price: 3109 }, { label: "Grey", price: 3109 }, { label: "Black", price: 3109 }],
+    desc: "Walnut bar stool. In Black, Grey, Brown or Blue.",
+    features: [
+      "Walnut construction",
+      "Black, Grey, Brown, Blue colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Walnut", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr061q", name: "Leather Bar Stool (2 options)", cat: "Living Room", room: "Living Room", price: 3330, memberPrice: 2997, sku: "SH-10843", tag: "New", ph: "", img: "assets/products/lr061q.webp",
+    imgs: ["assets/products/lr061q.webp", "assets/products/lr061q-2.webp", "assets/products/lr061q-3.webp", "assets/products/lr061q-4.webp"],
+    sizes: [{ label: "Silver", price: 3330 }, { label: "Gold", price: 3330 }],
+    desc: "Leather bar stool. In Gold or Silver.",
+    features: [
+      "Leather construction",
+      "Gold, Silver colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Leather", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr062q", name: "Timber Dining Chair", cat: "Living Room", room: "Living Room", price: 3369, memberPrice: 3032, sku: "SH-10844", tag: "New", ph: "", img: "assets/products/lr062q.webp",
+    imgs: ["assets/products/lr062q.webp", "assets/products/lr062q-2.webp", "assets/products/lr062q-3.webp", "assets/products/lr062q-4.webp"],
+    sizes: [{ label: "Off White + Natural", price: 3369 }, { label: "Off White + Walnut", price: 3369 }, { label: "Red + Natural", price: 3369 }],
+    desc: "Timber dining chair. In White, Walnut, Natural or Off White.",
+    features: [
+      "Timber construction",
+      "White, Walnut, Natural, Off White colourways",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Dining Chair", "Material": "Timber", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr063q", name: "Console Table", cat: "Living Room", room: "Living Room", price: 3661, memberPrice: 3295, sku: "SH-10845", tag: "New", ph: "", img: "assets/products/lr063q.webp",
+    imgs: ["assets/products/lr063q.webp", "assets/products/lr063q-2.webp", "assets/products/lr063q-3.webp", "assets/products/lr063q-4.webp"],
+    sizes: [{ label: "A / 100cm", price: 3661 }, { label: "B / 100cm", price: 3661 }, { label: "C / 100cm", price: 3661 }, { label: "D / 100cm", price: 3661 }, { label: "A / 120cm", price: 4041 }, { label: "B / 120cm", price: 4041 }, { label: "C / 120cm", price: 4041 }, { label: "D / 120cm", price: 4041 }, { label: "A / 150cm", price: 4341 }, { label: "B / 150cm", price: 4341 }, { label: "C / 150cm", price: 4341 }, { label: "D / 150cm", price: 4341 }],
+    desc: "A console table from 100cm to 150cm, for a hallway or behind a sofa.",
+    features: [
+      "Sizes from 100cm to 150cm",
+      "12 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Mixed", "Options": "12", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr064q", name: "Leather Bar Stool (Grey / Beige)", cat: "Living Room", room: "Living Room", price: 4037, memberPrice: 3633, sku: "SH-10846", tag: "New", ph: "", img: "assets/products/lr064q.webp",
+    imgs: ["assets/products/lr064q.webp", "assets/products/lr064q-2.webp", "assets/products/lr064q-3.webp", "assets/products/lr064q-4.webp"],
+    sizes: [{ label: "Coffee", price: 4037 }, { label: "Grey", price: 4037 }, { label: "Green", price: 4037 }, { label: "Beige", price: 4037 }],
+    desc: "Leather bar stool. In Grey, Beige, Green or Coffee. A padded stool with shoe storage inside, for the spot by the front door.",
+    features: [
+      "Leather construction",
+      "Grey, Beige, Green, Coffee colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Leather", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr065q", name: "Bar Stool (100cm to 120cm)", cat: "Living Room", room: "Living Room", price: 4167, memberPrice: 3750, sku: "SH-10847", tag: "New", ph: "", img: "assets/products/lr065q.webp",
+    imgs: ["assets/products/lr065q.webp", "assets/products/lr065q-2.webp", "assets/products/lr065q-3.webp", "assets/products/lr065q-4.webp"],
+    sizes: [{ label: "100cm", price: 4167 }, { label: "120cm", price: 4881 }],
+    desc: "A bar stool from 100cm to 120cm. Built for an entry: sit down, change your shoes, and there is storage underneath.",
+    features: [
+      "Sizes from 100cm to 120cm",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Bar Stool", "Material": "Mixed", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr066q", name: "Console Table (100cm to 160cm)", cat: "Living Room", room: "Living Room", price: 4507, memberPrice: 4056, sku: "SH-10848", tag: "New", ph: "", img: "assets/products/lr066q.webp",
+    imgs: ["assets/products/lr066q.webp", "assets/products/lr066q-2.webp", "assets/products/lr066q-3.webp", "assets/products/lr066q-4.webp"],
+    sizes: [{ label: "White + Gold / 100cm", price: 4507 }, { label: "Black + Gold / 100cm", price: 4507 }, { label: "White + Gold / 120cm", price: 4948 }, { label: "Black + Gold / 120cm", price: 4948 }, { label: "White + Gold / 140cm", price: 5315 }, { label: "Black + Gold / 140cm", price: 5315 }, { label: "White + Gold / 160cm", price: 5533 }, { label: "Black + Gold / 160cm", price: 5533 }],
+    desc: "A console table from 100cm to 160cm, for a hallway or behind a sofa. In Black, White or Gold.",
+    features: [
+      "Sizes from 100cm to 160cm",
+      "Black, White, Gold colourways",
+      "8 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Mixed", "Options": "8", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr067q", name: "Slate Console Table (90cm to 150cm)", cat: "Living Room", room: "Living Room", price: 4570, memberPrice: 4113, sku: "SH-10849", tag: "New", ph: "", img: "assets/products/lr067q.webp",
+    imgs: ["assets/products/lr067q.webp", "assets/products/lr067q-2.webp", "assets/products/lr067q-3.webp", "assets/products/lr067q-4.webp"],
+    sizes: [{ label: "90cm", price: 4570 }, { label: "100cm", price: 5326 }, { label: "120cm", price: 6367 }, { label: "150cm", price: 7385 }],
+    desc: "Slate console table from 90cm to 150cm, for a hallway or behind a sofa.",
+    features: [
+      "Slate construction",
+      "Sizes from 90cm to 150cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Slate", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr068q", name: "Crystal Chandelier (White)", cat: "Home Décor", room: "Home Décor", price: 4722, memberPrice: 4250, sku: "SH-10850", tag: "New", ph: "", img: "assets/products/lr068q.webp",
+    imgs: ["assets/products/lr068q.webp", "assets/products/lr068q-2.webp", "assets/products/lr068q-3.webp", "assets/products/lr068q-4.webp"],
+    sizes: [{ label: "4 Rings / Warm White", price: 4722 }, { label: "4 Rings / Cool White", price: 4722 }, { label: "5 Rings / Warm White", price: 6013 }, { label: "5 Rings / Cool White", price: 6013 }, { label: "6 Rings / Warm White", price: 7402 }, { label: "6 Rings / Cool White", price: 7402 }, { label: "7 Rings / Warm White", price: 8241 }, { label: "7 Rings / Cool White", price: 8241 }],
+    desc: "Crystal chandelier, for a dining table, an entry or a stairwell. In White. Glass spreads the light rather than concentrating it.",
+    features: [
+      "Crystal construction",
+      "White colourway",
+      "8 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Crystal", "Options": "8", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr069q", name: "Chandelier (73cm to 85cm)", cat: "Home Décor", room: "Home Décor", price: 4865, memberPrice: 4378, sku: "SH-10851", tag: "New", ph: "", img: "assets/products/lr069q.webp",
+    imgs: ["assets/products/lr069q.webp", "assets/products/lr069q-2.webp", "assets/products/lr069q-3.webp", "assets/products/lr069q-4.webp"],
+    sizes: [{ label: "Black / 73cm / Cool White", price: 4865 }, { label: "Black / 73cm / Warm White", price: 4865 }, { label: "Gold / 73cm / Cool White", price: 4865 }, { label: "Gold / 73cm / Warm White", price: 4865 }, { label: "Black / 85cm / Cool White", price: 6089 }, { label: "Black / 85cm / Warm White", price: 6089 }, { label: "Gold / 85cm / Cool White", price: 6089 }, { label: "Gold / 85cm / Warm White", price: 6089 }],
+    desc: "A chandelier from 73cm to 85cm, for a dining table, an entry or a stairwell. In Black, White or Gold.",
+    features: [
+      "Sizes from 73cm to 85cm",
+      "Black, White, Gold colourways",
+      "8 options to choose from",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Mixed", "Options": "8", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr070q", name: "Walnut Console Table", cat: "Living Room", room: "Living Room", price: 4957, memberPrice: 4461, sku: "SH-10852", tag: "New", ph: "", img: "assets/products/lr070q.webp",
+    imgs: ["assets/products/lr070q.webp", "assets/products/lr070q-2.webp", "assets/products/lr070q-3.webp", "assets/products/lr070q-4.webp"],
+    sizes: [{ label: "Black", price: 4957 }, { label: "Walnut", price: 4957 }],
+    desc: "Walnut console table, for a hallway or behind a sofa. In Black or Walnut. Wall-hung, so the floor stays clear underneath and the room feels bigger.",
+    features: [
+      "Walnut construction",
+      "Black, Walnut colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Walnut", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr071q", name: "Timber Dining Table", cat: "Living Room", room: "Living Room", price: 6461, memberPrice: 5815, sku: "SH-10853", tag: "New", ph: "", img: "assets/products/lr071q.webp",
+    imgs: ["assets/products/lr071q.webp", "assets/products/lr071q-2.webp", "assets/products/lr071q-3.webp", "assets/products/lr071q-4.webp"],
+    sizes: [{ label: "120cm / 0 x Dining Chairs (table only)", price: 6461 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 8426 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 11370 }, { label: "120cm / Table + 2 x Dining Chairs", price: 11646 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 12178 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 13600 }, { label: "140cm / Table + 2 x Dining Chairs", price: 13611 }, { label: "160cm / Table + 2 x Dining Chairs", price: 16556 }, { label: "120cm / Table + 4 x Dining Chairs", price: 16831 }, { label: "180cm / Table + 2 x Dining Chairs", price: 17363 }, { label: "200cm / Table + 2 x Dining Chairs", price: 18785 }, { label: "140cm / Table + 4 x Dining Chairs", price: 18796 }, { label: "160cm / Table + 4 x Dining Chairs", price: 21741 }, { label: "120cm / Table + 6 x Dining Chairs", price: 22017 }, { label: "180cm / Table + 4 x Dining Chairs", price: 22548 }, { label: "200cm / Table + 4 x Dining Chairs", price: 23970 }, { label: "140cm / Table + 6 x Dining Chairs", price: 23981 }, { label: "160cm / Table + 6 x Dining Chairs", price: 26759 }, { label: "180cm / Table + 6 x Dining Chairs", price: 27733 }, { label: "200cm / Table + 6 x Dining Chairs", price: 29156 }],
+    desc: "Timber dining table from 120cm to 200cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 120cm to 200cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "20", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr072q", name: "Slate Dining Table", cat: "Living Room", room: "Living Room", price: 6583, memberPrice: 5925, sku: "SH-10854", tag: "New", ph: "", img: "assets/products/lr072q.webp",
+    imgs: ["assets/products/lr072q.webp", "assets/products/lr072q-2.webp", "assets/products/lr072q-3.webp", "assets/products/lr072q-4.webp"],
+    sizes: [{ label: "120cm / 0 x Dining Chairs (table only)", price: 6583 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 7593 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 9237 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 10326 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 11407 }, { label: "120cm / Table + 2 x Dining Chairs", price: 11769 }, { label: "130cm / Table + 2 x Dining Chairs", price: 12778 }, { label: "140cm / Table + 2 x Dining Chairs", price: 14422 }, { label: "150cm / Table + 2 x Dining Chairs", price: 15511 }, { label: "160cm / Table + 2 x Dining Chairs", price: 16593 }, { label: "120cm / Table + 4 x Dining Chairs", price: 16954 }, { label: "130cm / Table + 4 x Dining Chairs", price: 17963 }, { label: "140cm / Table + 4 x Dining Chairs", price: 19607 }, { label: "150cm / Table + 4 x Dining Chairs", price: 20696 }, { label: "160cm / Table + 4 x Dining Chairs", price: 21778 }, { label: "120cm / Table + 6 x Dining Chairs", price: 22139 }, { label: "130cm / Table + 6 x Dining Chairs", price: 23148 }, { label: "140cm / Table + 6 x Dining Chairs", price: 24793 }, { label: "150cm / Table + 6 x Dining Chairs", price: 25881 }, { label: "160cm / Table + 6 x Dining Chairs", price: 26963 }],
+    desc: "Slate dining table from 120cm to 160cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 120cm to 160cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "20", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr073q", name: "Crystal Chandelier (80cm to 120cm)", cat: "Home Décor", room: "Home Décor", price: 7398, memberPrice: 6658, sku: "SH-10855", tag: "New", ph: "", img: "assets/products/lr073q.webp",
+    imgs: ["assets/products/lr073q.webp", "assets/products/lr073q-2.webp", "assets/products/lr073q-3.webp", "assets/products/lr073q-4.webp"],
+    sizes: [{ label: "6 Heads / 80cm / Cold White", price: 7398 }, { label: "6 Heads / 80cm / Warm White", price: 7398 }, { label: "8 Heads / 100cm / Cold White", price: 8930 }, { label: "8 Heads / 100cm / Warm White", price: 8930 }, { label: "6 Heads / 100cm / Cold White", price: 10059 }, { label: "6 Heads / 100cm / Warm White", price: 10059 }, { label: "6 Heads / 120cm / Cold White", price: 13704 }, { label: "6 Heads / 120cm / Warm White", price: 13704 }, { label: "8 Heads / 120cm / Cold White", price: 20000 }, { label: "8 Heads / 120cm / Warm White", price: 20000 }],
+    desc: "Crystal chandelier from 80cm to 120cm, for a dining table, an entry or a stairwell. In White. Glass spreads the light rather than concentrating it.",
+    features: [
+      "Crystal construction",
+      "Sizes from 80cm to 120cm",
+      "White colourway",
+      "Licensed electrician for hard-wired fittings"
+    ],
+    specs: { "Type": "Chandelier", "Material": "Crystal", "Options": "10", "Room": "Home Décor" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; glass and crystal want a barely damp cloth then buffing. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lr074q", name: "Leather Dining Table", cat: "Living Room", room: "Living Room", price: 7959, memberPrice: 7163, sku: "SH-10856", tag: "New", ph: "", img: "assets/products/lr074q.webp",
+    imgs: ["assets/products/lr074q.webp", "assets/products/lr074q-2.webp", "assets/products/lr074q-3.webp", "assets/products/lr074q-4.webp"],
+    sizes: [{ label: "130cm / Square", price: 7959 }, { label: "130cm / Oval", price: 7959 }, { label: "140cm / Square", price: 9237 }, { label: "140cm / Oval", price: 9237 }, { label: "160cm / Square", price: 10093 }, { label: "160cm / Oval", price: 10093 }, { label: "180cm / Square", price: 11074 }, { label: "180cm / Oval", price: 11074 }],
+    desc: "Leather dining table from 130cm to 180cm.",
+    features: [
+      "Leather construction",
+      "Sizes from 130cm to 180cm",
+      "8 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Leather", "Options": "8", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr075q", name: "Slate Dining Table (110cm to 135cm)", cat: "Living Room", room: "Living Room", price: 8241, memberPrice: 7417, sku: "SH-10857", tag: "New", ph: "", img: "assets/products/lr075q.webp",
+    imgs: ["assets/products/lr075q.webp", "assets/products/lr075q-2.webp", "assets/products/lr075q-3.webp", "assets/products/lr075q-4.webp"],
+    sizes: [{ label: "110cm / '+ Turntable / 0 x Dining Chairs (table only)", price: 8241 }, { label: "110cm / '- Turntable / 0 x Dining Chairs (table only)", price: 8241 }, { label: "120cm / '+ Turntable / 0 x Dining Chairs (table only)", price: 9200 }, { label: "120cm / '- Turntable / 0 x Dining Chairs (table only)", price: 9200 }, { label: "135cm / '+ Turntable / 0 x Dining Chairs (table only)", price: 10083 }, { label: "135cm / '- Turntable / 0 x Dining Chairs (table only)", price: 10083 }, { label: "110cm / '+ Turntable / Table + 2 x Dining Chairs", price: 13426 }, { label: "110cm / '- Turntable / Table + 2 x Dining Chairs", price: 13426 }, { label: "120cm / '+ Turntable / Table + 2 x Dining Chairs", price: 14385 }, { label: "120cm / '- Turntable / Table + 2 x Dining Chairs", price: 14385 }, { label: "135cm / '+ Turntable / Table + 2 x Dining Chairs", price: 15269 }, { label: "135cm / '- Turntable / Table + 2 x Dining Chairs", price: 15269 }, { label: "110cm / '+ Turntable / Table + 4 x Dining Chairs", price: 18611 }, { label: "110cm / '- Turntable / Table + 4 x Dining Chairs", price: 18611 }, { label: "120cm / '+ Turntable / Table + 4 x Dining Chairs", price: 19570 }, { label: "120cm / '- Turntable / Table + 4 x Dining Chairs", price: 19570 }, { label: "135cm / '+ Turntable / Table + 4 x Dining Chairs", price: 20454 }, { label: "135cm / '- Turntable / Table + 4 x Dining Chairs", price: 20454 }, { label: "110cm / '+ Turntable / Table + 6 x Dining Chairs", price: 23796 }, { label: "110cm / '- Turntable / Table + 6 x Dining Chairs", price: 23796 }, { label: "120cm / '+ Turntable / Table + 6 x Dining Chairs", price: 24756 }, { label: "120cm / '- Turntable / Table + 6 x Dining Chairs", price: 24756 }, { label: "135cm / '+ Turntable / Table + 6 x Dining Chairs", price: 25639 }, { label: "135cm / '- Turntable / Table + 6 x Dining Chairs", price: 25639 }],
+    desc: "Slate dining table from 110cm to 135cm. Comes with the option of a built-in turntable, which earns its keep at a shared meal.",
+    features: [
+      "Slate construction",
+      "Sizes from 110cm to 135cm",
+      "24 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "24", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr076q", name: "Marble Dining Table", cat: "Living Room", room: "Living Room", price: 8519, memberPrice: 7667, sku: "SH-10858", tag: "New", ph: "", img: "assets/products/lr076q.webp",
+    imgs: ["assets/products/lr076q.webp", "assets/products/lr076q-2.webp", "assets/products/lr076q-3.webp", "assets/products/lr076q-4.webp"],
+    sizes: [{ label: "White + Black / 120cm", price: 8519 }, { label: "Grey + Grey / 120cm", price: 8519 }, { label: "Black / 120cm", price: 8519 }, { label: "Slate White / 120cm", price: 8519 }, { label: "White + Black / 130cm", price: 9250 }, { label: "Grey + Grey / 130cm", price: 9250 }, { label: "Black / 130cm", price: 9250 }, { label: "Slate White / 130cm", price: 9250 }, { label: "White + Black / 150cm", price: 11444 }, { label: "Grey + Grey / 150cm", price: 11444 }, { label: "Black / 150cm", price: 11444 }, { label: "Slate White / 150cm", price: 11444 }, { label: "White + Black / 160cm", price: 12956 }, { label: "Grey + Grey / 160cm", price: 12956 }, { label: "Black / 160cm", price: 12956 }, { label: "Slate White / 160cm", price: 12956 }],
+    desc: "Marble dining table from 120cm to 160cm. In Black, White or Grey.",
+    features: [
+      "Marble construction",
+      "Sizes from 120cm to 160cm",
+      "Black, White, Grey colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "16", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr077q", name: "Travertine Dining Table", cat: "Living Room", room: "Living Room", price: 8770, memberPrice: 7893, sku: "SH-10859", tag: "New", ph: "", img: "assets/products/lr077q.webp",
+    imgs: ["assets/products/lr077q.webp", "assets/products/lr077q-2.webp", "assets/products/lr077q-3.webp", "assets/products/lr077q-4.webp"],
+    sizes: [{ label: "70cm / 0 x Dining Chairs (table only)", price: 8770 }, { label: "80cm / 0 x Dining Chairs (table only)", price: 9196 }, { label: "90cm / 0 x Dining Chairs (table only)", price: 9896 }, { label: "100cm / 0 x Dining Chairs (table only)", price: 10426 }, { label: "110cm / 0 x Dining Chairs (table only)", price: 10924 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 11333 }, { label: "70cm / Table + 2 x Dining Chairs", price: 13215 }, { label: "80cm / Table + 2 x Dining Chairs", price: 13641 }, { label: "90cm / Table + 2 x Dining Chairs", price: 14341 }, { label: "100cm / Table + 2 x Dining Chairs", price: 14870 }, { label: "110cm / Table + 2 x Dining Chairs", price: 15369 }, { label: "120cm / Table + 2 x Dining Chairs", price: 15778 }, { label: "70cm / Table + 4 x Dining Chairs", price: 17659 }, { label: "80cm / Table + 4 x Dining Chairs", price: 18085 }, { label: "90cm / Table + 4 x Dining Chairs", price: 18785 }, { label: "100cm / Table + 4 x Dining Chairs", price: 19315 }, { label: "110cm / Table + 4 x Dining Chairs", price: 19813 }, { label: "120cm / Table + 4 x Dining Chairs", price: 20222 }, { label: "70cm / Table + 6 x Dining Chairs", price: 22104 }, { label: "80cm / Table + 6 x Dining Chairs", price: 22530 }, { label: "90cm / Table + 6 x Dining Chairs", price: 23230 }, { label: "100cm / Table + 6 x Dining Chairs", price: 23759 }, { label: "110cm / Table + 6 x Dining Chairs", price: 24257 }, { label: "120cm / Table + 6 x Dining Chairs", price: 24667 }],
+    desc: "Travertine dining table from 70cm to 120cm.",
+    features: [
+      "Travertine construction",
+      "Sizes from 70cm to 120cm",
+      "24 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Travertine", "Options": "24", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "lr078q", name: "Timber Dining Table (140cm to 240cm)", cat: "Living Room", room: "Living Room", price: 8917, memberPrice: 8025, sku: "SH-10860", tag: "New", ph: "", img: "assets/products/lr078q.webp",
+    imgs: ["assets/products/lr078q.webp", "assets/products/lr078q-2.webp", "assets/products/lr078q-3.webp", "assets/products/lr078q-4.webp"],
+    sizes: [{ label: "Natural / 140cm / 0 x Dining Chairs (table only)", price: 8917 }, { label: "Walnut / 140cm / 0 x Dining Chairs (table only)", price: 8917 }, { label: "Natural / 160cm / 0 x Dining Chairs (table only)", price: 9822 }, { label: "Walnut / 160cm / 0 x Dining Chairs (table only)", price: 9822 }, { label: "Natural / 180cm / 0 x Dining Chairs (table only)", price: 10678 }, { label: "Walnut / 180cm / 0 x Dining Chairs (table only)", price: 10678 }, { label: "Natural / 200cm / 0 x Dining Chairs (table only)", price: 11585 }, { label: "Walnut / 200cm / 0 x Dining Chairs (table only)", price: 11585 }, { label: "Natural / 140cm / Table + 6 x Dining Chairs", price: 11689 }, { label: "Walnut / 140cm / Table + 6 x Dining Chairs", price: 11689 }, { label: "Natural / 200cm / Table + 2 x Dining Chairs", price: 12509 }, { label: "Walnut / 200cm / Table + 2 x Dining Chairs", price: 12509 }, { label: "Natural / 160cm / Table + 6 x Dining Chairs", price: 12594 }, { label: "Walnut / 160cm / Table + 6 x Dining Chairs", price: 12594 }, { label: "Natural / 180cm / Table + 6 x Dining Chairs", price: 13450 }, { label: "Walnut / 180cm / Table + 6 x Dining Chairs", price: 13450 }, { label: "Natural / 140cm / Table + 2 x Dining Chairs", price: 14102 }, { label: "Walnut / 140cm / Table + 2 x Dining Chairs", price: 14102 }, { label: "Natural / 200cm / Table + 6 x Dining Chairs", price: 14357 }, { label: "Walnut / 200cm / Table + 6 x Dining Chairs", price: 14357 }, { label: "Natural / 220cm / 0 x Dining Chairs (table only)", price: 14778 }, { label: "Walnut / 220cm / 0 x Dining Chairs (table only)", price: 14778 }, { label: "Natural / 160cm / Table + 2 x Dining Chairs", price: 15007 }, { label: "Walnut / 160cm / Table + 2 x Dining Chairs", price: 15007 }, { label: "Natural / 180cm / Table + 2 x Dining Chairs", price: 15863 }, { label: "Walnut / 180cm / Table + 2 x Dining Chairs", price: 15863 }, { label: "Natural / 240cm / 0 x Dining Chairs (table only)", price: 15970 }, { label: "Walnut / 240cm / 0 x Dining Chairs (table only)", price: 15970 }, { label: "Natural / 220cm / Table + 6 x Dining Chairs", price: 17550 }, { label: "Walnut / 220cm / Table + 6 x Dining Chairs", price: 17550 }, { label: "Natural / 240cm / Table + 6 x Dining Chairs", price: 18743 }, { label: "Walnut / 240cm / Table + 6 x Dining Chairs", price: 18743 }, { label: "Natural / 140cm / Table + 4 x Dining Chairs", price: 19287 }, { label: "Walnut / 140cm / Table + 4 x Dining Chairs", price: 19287 }, { label: "Natural / 220cm / Table + 2 x Dining Chairs", price: 19963 }, { label: "Walnut / 220cm / Table + 2 x Dining Chairs", price: 19963 }, { label: "Natural / 160cm / Table + 4 x Dining Chairs", price: 20193 }, { label: "Walnut / 160cm / Table + 4 x Dining Chairs", price: 20193 }, { label: "Natural / 180cm / Table + 4 x Dining Chairs", price: 21048 }, { label: "Walnut / 180cm / Table + 4 x Dining Chairs", price: 21048 }, { label: "Natural / 240cm / Table + 2 x Dining Chairs", price: 21156 }, { label: "Walnut / 240cm / Table + 2 x Dining Chairs", price: 21156 }, { label: "Natural / 200cm / Table + 4 x Dining Chairs", price: 21956 }, { label: "Walnut / 200cm / Table + 4 x Dining Chairs", price: 21956 }, { label: "Natural / 140cm / Table + 8 x Dining Chairs", price: 24472 }, { label: "Walnut / 140cm / Table + 8 x Dining Chairs", price: 24472 }, { label: "Natural / 220cm / Table + 4 x Dining Chairs", price: 25148 }, { label: "Walnut / 220cm / Table + 4 x Dining Chairs", price: 25148 }, { label: "Natural / 160cm / Table + 8 x Dining Chairs", price: 25378 }, { label: "Walnut / 160cm / Table + 8 x Dining Chairs", price: 25378 }, { label: "Natural / 180cm / Table + 8 x Dining Chairs", price: 26233 }, { label: "Walnut / 180cm / Table + 8 x Dining Chairs", price: 26233 }, { label: "Natural / 240cm / Table + 4 x Dining Chairs", price: 26341 }, { label: "Walnut / 240cm / Table + 4 x Dining Chairs", price: 26341 }, { label: "Natural / 200cm / Table + 8 x Dining Chairs", price: 27141 }, { label: "Walnut / 200cm / Table + 8 x Dining Chairs", price: 27141 }, { label: "Natural / 220cm / Table + 8 x Dining Chairs", price: 30333 }, { label: "Walnut / 220cm / Table + 8 x Dining Chairs", price: 30333 }, { label: "Natural / 240cm / Table + 8 x Dining Chairs", price: 31526 }, { label: "Walnut / 240cm / Table + 8 x Dining Chairs", price: 31526 }],
+    desc: "Timber dining table from 140cm to 240cm. In Walnut or Natural.",
+    features: [
+      "Timber construction",
+      "Sizes from 140cm to 240cm",
+      "Walnut, Natural colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "60", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr079q", name: "Oak Dining Table", cat: "Living Room", room: "Living Room", price: 9074, memberPrice: 8167, sku: "SH-10861", tag: "New", ph: "", img: "assets/products/lr079q.webp",
+    imgs: ["assets/products/lr079q.webp", "assets/products/lr079q-2.webp", "assets/products/lr079q-3.webp", "assets/products/lr079q-4.webp"],
+    sizes: [{ label: "90cm / 0 x Dining Chairs (table only)", price: 9074 }, { label: "100cm / 0 x Dining Chairs (table only)", price: 9611 }, { label: "110cm / 0 x Dining Chairs (table only)", price: 10500 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 10904 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 11741 }, { label: "90cm / Table + 2 x Dining Chairs", price: 13519 }, { label: "100cm / Table + 2 x Dining Chairs", price: 14056 }, { label: "110cm / Table + 2 x Dining Chairs", price: 14944 }, { label: "120cm / Table + 2 x Dining Chairs", price: 15348 }, { label: "130cm / Table + 2 x Dining Chairs", price: 16185 }, { label: "90cm / Table + 4 x Dining Chairs", price: 17963 }, { label: "100cm / Table + 4 x Dining Chairs", price: 18500 }, { label: "110cm / Table + 4 x Dining Chairs", price: 19389 }, { label: "120cm / Table + 4 x Dining Chairs", price: 19793 }, { label: "130cm / Table + 4 x Dining Chairs", price: 20630 }, { label: "90cm / Table + 6 x Dining Chairs", price: 22407 }, { label: "100cm / Table + 6 x Dining Chairs", price: 22944 }, { label: "110cm / Table + 6 x Dining Chairs", price: 23833 }, { label: "120cm / Table + 6 x Dining Chairs", price: 24237 }, { label: "130cm / Table + 6 x Dining Chairs", price: 25074 }],
+    desc: "Oak dining table from 90cm to 130cm.",
+    features: [
+      "Oak construction",
+      "Sizes from 90cm to 130cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Oak", "Options": "20", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr080q", name: "Slate Dining Table (130cm to 180cm)", cat: "Living Room", room: "Living Room", price: 9211, memberPrice: 8290, sku: "SH-10862", tag: "New", ph: "", img: "assets/products/lr080q.webp",
+    imgs: ["assets/products/lr080q.webp", "assets/products/lr080q-2.webp", "assets/products/lr080q-3.webp", "assets/products/lr080q-4.webp"],
+    sizes: [{ label: "130cm / 0 x Dining Chairs (table only)", price: 9211 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 9815 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 10685 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 11083 }, { label: "130cm / Table + 2 x Dining Chairs", price: 14396 }, { label: "140cm / Table + 2 x Dining Chairs", price: 15000 }, { label: "160cm / Table + 2 x Dining Chairs", price: 15870 }, { label: "180cm / Table + 2 x Dining Chairs", price: 16269 }, { label: "130cm / Table + 4 x Dining Chairs", price: 19581 }, { label: "140cm / Table + 4 x Dining Chairs", price: 20185 }, { label: "160cm / Table + 4 x Dining Chairs", price: 21056 }, { label: "180cm / Table + 4 x Dining Chairs", price: 21454 }, { label: "130cm / Table + 6 x Dining Chairs", price: 24767 }, { label: "140cm / Table + 6 x Dining Chairs", price: 25370 }, { label: "160cm / Table + 6 x Dining Chairs", price: 26241 }, { label: "180cm / Table + 6 x Dining Chairs", price: 26639 }],
+    desc: "Slate dining table from 130cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 130cm to 180cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "16", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr081q", name: "Marble Dining Table (140cm to 240cm)", cat: "Living Room", room: "Living Room", price: 9237, memberPrice: 8313, sku: "SH-10863", tag: "New", ph: "", img: "assets/products/lr081q.webp",
+    imgs: ["assets/products/lr081q.webp", "assets/products/lr081q-2.webp", "assets/products/lr081q-3.webp", "assets/products/lr081q-4.webp"],
+    sizes: [{ label: "140cm", price: 9237 }, { label: "160cm", price: 9685 }, { label: "180cm", price: 10296 }, { label: "200cm", price: 11093 }, { label: "220cm", price: 12352 }, { label: "240cm", price: 12759 }],
+    desc: "Marble dining table from 140cm to 240cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 240cm",
+      "6 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "6", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr082q", name: "Timber Dining Table (100cm to 150cm)", cat: "Living Room", room: "Living Room", price: 9257, memberPrice: 8331, sku: "SH-10864", tag: "New", ph: "", img: "assets/products/lr082q.webp",
+    imgs: ["assets/products/lr082q.webp", "assets/products/lr082q-2.webp", "assets/products/lr082q-3.webp", "assets/products/lr082q-4.webp"],
+    sizes: [{ label: "100cm", price: 9257 }, { label: "110cm", price: 10319 }, { label: "120cm", price: 11585 }, { label: "130cm", price: 12537 }, { label: "140cm", price: 13544 }, { label: "150cm", price: 14493 }],
+    desc: "Timber dining table from 100cm to 150cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 100cm to 150cm",
+      "6 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "6", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr083q", name: "Slate Dining Table (110cm to 150cm)", cat: "Living Room", room: "Living Room", price: 9402, memberPrice: 8462, sku: "SH-10865", tag: "New", ph: "", img: "assets/products/lr083q.webp",
+    imgs: ["assets/products/lr083q.webp", "assets/products/lr083q-2.webp", "assets/products/lr083q-3.webp", "assets/products/lr083q-4.webp"],
+    sizes: [{ label: "110cm / '- Turn Table / 0 x Dining Chairs (table only)", price: 9402 }, { label: "110cm / '+ Turn Table / 0 x Dining Chairs (table only)", price: 9402 }, { label: "120cm / '- Turn Table / 0 x Dining Chairs (table only)", price: 9748 }, { label: "120cm / '+ Turn Table / 0 x Dining Chairs (table only)", price: 9748 }, { label: "135cm / '- Turn Table / 0 x Dining Chairs (table only)", price: 11952 }, { label: "135cm / '+ Turn Table / 0 x Dining Chairs (table only)", price: 11952 }, { label: "150cm / '- Turn Table / 0 x Dining Chairs (table only)", price: 12572 }, { label: "150cm / '+ Turn Table / 0 x Dining Chairs (table only)", price: 12572 }, { label: "110cm / '- Turn Table / Table + 2 x Dining Chairs", price: 14587 }, { label: "110cm / '+ Turn Table / Table + 2 x Dining Chairs", price: 14587 }, { label: "120cm / '- Turn Table / Table + 2 x Dining Chairs", price: 14933 }, { label: "120cm / '+ Turn Table / Table + 2 x Dining Chairs", price: 14933 }, { label: "135cm / '- Turn Table / Table + 2 x Dining Chairs", price: 17137 }, { label: "135cm / '+ Turn Table / Table + 2 x Dining Chairs", price: 17137 }, { label: "150cm / '- Turn Table / Table + 2 x Dining Chairs", price: 17757 }, { label: "150cm / '+ Turn Table / Table + 2 x Dining Chairs", price: 17757 }, { label: "110cm / '- Turn Table / Table + 4 x Dining Chairs", price: 19772 }, { label: "110cm / '+ Turn Table / Table + 4 x Dining Chairs", price: 19772 }, { label: "120cm / '- Turn Table / Table + 4 x Dining Chairs", price: 20119 }, { label: "120cm / '+ Turn Table / Table + 4 x Dining Chairs", price: 20119 }, { label: "135cm / '- Turn Table / Table + 4 x Dining Chairs", price: 22322 }, { label: "135cm / '+ Turn Table / Table + 4 x Dining Chairs", price: 22322 }, { label: "150cm / '- Turn Table / Table + 4 x Dining Chairs", price: 22943 }, { label: "150cm / '+ Turn Table / Table + 4 x Dining Chairs", price: 22943 }, { label: "110cm / '- Turn Table / Table + 6 x Dining Chairs", price: 24957 }, { label: "110cm / '+ Turn Table / Table + 6 x Dining Chairs", price: 24957 }, { label: "120cm / '- Turn Table / Table + 6 x Dining Chairs", price: 25304 }, { label: "120cm / '+ Turn Table / Table + 6 x Dining Chairs", price: 25304 }, { label: "135cm / '- Turn Table / Table + 6 x Dining Chairs", price: 27507 }, { label: "135cm / '+ Turn Table / Table + 6 x Dining Chairs", price: 27507 }, { label: "150cm / '- Turn Table / Table + 6 x Dining Chairs", price: 28128 }, { label: "150cm / '+ Turn Table / Table + 6 x Dining Chairs", price: 28128 }],
+    desc: "Slate dining table from 110cm to 150cm. Available with or without the turntable in the centre.",
+    features: [
+      "Slate construction",
+      "Sizes from 110cm to 150cm",
+      "32 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "32", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr084q", name: "Walnut Dining Table", cat: "Living Room", room: "Living Room", price: 10272, memberPrice: 9245, sku: "SH-10866", tag: "New", ph: "", img: "assets/products/lr084q.webp",
+    imgs: ["assets/products/lr084q.webp", "assets/products/lr084q-2.webp", "assets/products/lr084q-3.webp", "assets/products/lr084q-4.webp"],
+    sizes: [{ label: "160cm", price: 10272 }, { label: "180cm", price: 11809 }, { label: "200cm", price: 12713 }, { label: "220cm", price: 14787 }],
+    desc: "Walnut dining table from 160cm to 220cm.",
+    features: [
+      "Walnut construction",
+      "Sizes from 160cm to 220cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Walnut", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr085q", name: "Slate Dining Table (Black / Brown)", cat: "Living Room", room: "Living Room", price: 10370, memberPrice: 9333, sku: "SH-10867", tag: "New", ph: "", img: "assets/products/lr085q.webp",
+    imgs: ["assets/products/lr085q.webp", "assets/products/lr085q-2.webp", "assets/products/lr085q-3.webp", "assets/products/lr085q-4.webp"],
+    sizes: [{ label: "Brown / 110cm / 0 x Dining Chairs (table only)", price: 10370 }, { label: "Black / 110cm / 0 x Dining Chairs (table only)", price: 10370 }, { label: "Brown / 120cm / 0 x Dining Chairs (table only)", price: 10741 }, { label: "Black / 120cm / 0 x Dining Chairs (table only)", price: 10741 }, { label: "Brown / 135cm / 0 x Dining Chairs (table only)", price: 11531 }, { label: "Black / 135cm / 0 x Dining Chairs (table only)", price: 11531 }, { label: "Brown / 150cm / 0 x Dining Chairs (table only)", price: 12213 }, { label: "Black / 150cm / 0 x Dining Chairs (table only)", price: 12213 }, { label: "Brown / 110cm / Table + 2 x Dining Chairs", price: 15556 }, { label: "Black / 110cm / Table + 2 x Dining Chairs", price: 15556 }, { label: "Brown / 120cm / Table + 2 x Dining Chairs", price: 15926 }, { label: "Black / 120cm / Table + 2 x Dining Chairs", price: 15926 }, { label: "Brown / 135cm / Table + 2 x Dining Chairs", price: 16717 }, { label: "Black / 135cm / Table + 2 x Dining Chairs", price: 16717 }, { label: "Brown / 150cm / Table + 2 x Dining Chairs", price: 17398 }, { label: "Black / 150cm / Table + 2 x Dining Chairs", price: 17398 }, { label: "Brown / 110cm / Table + 4 x Dining Chairs", price: 20741 }, { label: "Black / 110cm / Table + 4 x Dining Chairs", price: 20741 }, { label: "Brown / 120cm / Table + 4 x Dining Chairs", price: 21111 }, { label: "Black / 120cm / Table + 4 x Dining Chairs", price: 21111 }, { label: "Brown / 135cm / Table + 4 x Dining Chairs", price: 21902 }, { label: "Black / 135cm / Table + 4 x Dining Chairs", price: 21902 }, { label: "Brown / 150cm / Table + 4 x Dining Chairs", price: 22583 }, { label: "Black / 150cm / Table + 4 x Dining Chairs", price: 22583 }, { label: "Brown / 110cm / Table + 6 x Dining Chairs", price: 25926 }, { label: "Black / 110cm / Table + 6 x Dining Chairs", price: 25926 }, { label: "Brown / 120cm / Table + 6 x Dining Chairs", price: 26296 }, { label: "Black / 120cm / Table + 6 x Dining Chairs", price: 26296 }, { label: "Brown / 135cm / Table + 6 x Dining Chairs", price: 27087 }, { label: "Black / 135cm / Table + 6 x Dining Chairs", price: 27087 }, { label: "Brown / 150cm / Table + 6 x Dining Chairs", price: 27769 }, { label: "Black / 150cm / Table + 6 x Dining Chairs", price: 27769 }],
+    desc: "Slate dining table from 110cm to 150cm. In Black or Brown.",
+    features: [
+      "Slate construction",
+      "Sizes from 110cm to 150cm",
+      "Black, Brown colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "32", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr086q", name: "Leather Dining Table (140cm to 200cm)", cat: "Living Room", room: "Living Room", price: 11004, memberPrice: 9904, sku: "SH-10868", tag: "New", ph: "", img: "assets/products/lr086q.webp",
+    imgs: ["assets/products/lr086q.webp", "assets/products/lr086q-2.webp", "assets/products/lr086q-3.webp", "assets/products/lr086q-4.webp"],
+    sizes: [{ label: "Snow White / 140cm / 0 x Dining Chairs (table only)", price: 11004 }, { label: "Snow White / 160cm / 0 x Dining Chairs (table only)", price: 12356 }, { label: "Snow White / 140cm / Table + 2 x Dining Chairs", price: 16189 }, { label: "Snow White / 180cm / 0 x Dining Chairs (table only)", price: 17319 }, { label: "Snow White / 160cm / Table + 2 x Dining Chairs", price: 17541 }, { label: "Snow White / 140cm / Table + 4 x Dining Chairs", price: 19893 }, { label: "Snow White / 200cm / 0 x Dining Chairs (table only)", price: 19963 }, { label: "Snow White / 160cm / Table + 4 x Dining Chairs", price: 21244 }, { label: "Snow White / 180cm / Table + 2 x Dining Chairs", price: 22504 }, { label: "Snow White / 140cm / Table + 6 x Dining Chairs", price: 24337 }, { label: "Snow White / 200cm / Table + 2 x Dining Chairs", price: 25148 }, { label: "Snow White / 160cm / Table + 6 x Dining Chairs", price: 25689 }, { label: "Snow White / 180cm / Table + 4 x Dining Chairs", price: 26207 }, { label: "Snow White / 200cm / Table + 4 x Dining Chairs", price: 28852 }, { label: "Snow White / 180cm / Table + 6 x Dining Chairs", price: 30652 }, { label: "Snow White / 200cm / Table + 6 x Dining Chairs", price: 33296 }],
+    desc: "Leather dining table from 140cm to 200cm. In White.",
+    features: [
+      "Leather construction",
+      "Sizes from 140cm to 200cm",
+      "White colourway"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Leather", "Options": "16", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr087q", name: "Marble Dining Table (120cm to 180cm)", cat: "Living Room", room: "Living Room", price: 11007, memberPrice: 9906, sku: "SH-10869", tag: "New", ph: "", img: "assets/products/lr087q.webp",
+    imgs: ["assets/products/lr087q.webp", "assets/products/lr087q-2.webp", "assets/products/lr087q-3.webp", "assets/products/lr087q-4.webp"],
+    sizes: [{ label: "120cm / 0 x Dining Chairs (table only)", price: 11007 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 12630 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 14256 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 15878 }, { label: "120cm / Table + 2 x Dining Chairs", price: 16563 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 17500 }, { label: "130cm / Table + 2 x Dining Chairs", price: 18185 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 19122 }, { label: "140cm / Table + 2 x Dining Chairs", price: 19811 }, { label: "150cm / Table + 2 x Dining Chairs", price: 21433 }, { label: "120cm / Table + 4 x Dining Chairs", price: 22119 }, { label: "160cm / Table + 2 x Dining Chairs", price: 23056 }, { label: "130cm / Table + 4 x Dining Chairs", price: 23741 }, { label: "180cm / Table + 2 x Dining Chairs", price: 24678 }, { label: "140cm / Table + 4 x Dining Chairs", price: 25367 }, { label: "150cm / Table + 4 x Dining Chairs", price: 26989 }, { label: "120cm / Table + 6 x Dining Chairs", price: 27674 }, { label: "160cm / Table + 4 x Dining Chairs", price: 28611 }, { label: "130cm / Table + 6 x Dining Chairs", price: 29296 }, { label: "180cm / Table + 4 x Dining Chairs", price: 30233 }, { label: "140cm / Table + 6 x Dining Chairs", price: 30922 }, { label: "150cm / Table + 6 x Dining Chairs", price: 32544 }, { label: "160cm / Table + 6 x Dining Chairs", price: 34167 }, { label: "180cm / Table + 6 x Dining Chairs", price: 35789 }],
+    desc: "Marble dining table from 120cm to 180cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 120cm to 180cm",
+      "24 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "24", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr088q", name: "Timber Dining Table (Black / Tan)", cat: "Living Room", room: "Living Room", price: 11069, memberPrice: 9962, sku: "SH-10870", tag: "New", ph: "", img: "assets/products/lr088q.webp",
+    imgs: ["assets/products/lr088q.webp", "assets/products/lr088q-2.webp", "assets/products/lr088q-3.webp", "assets/products/lr088q-4.webp"],
+    sizes: [{ label: "Black / 100cm", price: 11069 }, { label: "Tan / 100cm", price: 11069 }, { label: "Black / 120cm", price: 11452 }, { label: "Tan / 120cm", price: 11452 }, { label: "Black / 130cm", price: 11944 }, { label: "Tan / 130cm", price: 11944 }, { label: "Black / 150cm", price: 12385 }, { label: "Tan / 150cm", price: 12385 }],
+    desc: "Timber dining table from 100cm to 150cm. In Black or Tan.",
+    features: [
+      "Timber construction",
+      "Sizes from 100cm to 150cm",
+      "Black, Tan colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "8", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr089q", name: "Travertine Dining Table (120cm to 180cm)", cat: "Living Room", room: "Living Room", price: 11093, memberPrice: 9984, sku: "SH-10871", tag: "New", ph: "", img: "assets/products/lr089q.webp",
+    imgs: ["assets/products/lr089q.webp", "assets/products/lr089q-2.webp", "assets/products/lr089q-3.webp", "assets/products/lr089q-4.webp"],
+    sizes: [{ label: "Travertine / 120cm", price: 11093 }, { label: "Travertine / 130cm", price: 11748 }, { label: "Travertine / 140cm", price: 12509 }, { label: "Travertine / 160cm", price: 12759 }, { label: "Travertine / 180cm", price: 13056 }],
+    desc: "Travertine dining table from 120cm to 180cm.",
+    features: [
+      "Travertine construction",
+      "Sizes from 120cm to 180cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Travertine", "Options": "5", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "lr090q", name: "Slate Dining Table (160cm to 220cm)", cat: "Living Room", room: "Living Room", price: 12185, memberPrice: 10966, sku: "SH-10872", tag: "New", ph: "", img: "assets/products/lr090q.webp",
+    imgs: ["assets/products/lr090q.webp", "assets/products/lr090q-2.webp", "assets/products/lr090q-3.webp", "assets/products/lr090q-4.webp"],
+    sizes: [{ label: "160cm", price: 12185 }, { label: "180cm", price: 13800 }, { label: "200cm", price: 16659 }, { label: "220cm", price: 18322 }],
+    desc: "Slate dining table from 160cm to 220cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 160cm to 220cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr091q", name: "Marble Dining Table (140cm to 180cm)", cat: "Living Room", room: "Living Room", price: 12426, memberPrice: 11183, sku: "SH-10873", tag: "New", ph: "", img: "assets/products/lr091q.webp",
+    imgs: ["assets/products/lr091q.webp", "assets/products/lr091q-2.webp", "assets/products/lr091q-3.webp", "assets/products/lr091q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 12426 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 14574 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 16343 }, { label: "140cm / Table + 2 x Dining Chairs", price: 17981 }, { label: "160cm / Table + 2 x Dining Chairs", price: 20130 }, { label: "180cm / Table + 2 x Dining Chairs", price: 21898 }, { label: "140cm / Table + 4 x Dining Chairs", price: 23537 }, { label: "160cm / Table + 4 x Dining Chairs", price: 25685 }, { label: "180cm / Table + 4 x Dining Chairs", price: 27454 }, { label: "140cm / Table + 6 x Dining Chairs", price: 29093 }, { label: "160cm / Table + 6 x Dining Chairs", price: 31241 }, { label: "180cm / Table + 6 x Dining Chairs", price: 33009 }, { label: "140cm / Table + 8 x Dining Chairs", price: 34648 }, { label: "160cm / Table + 8 x Dining Chairs", price: 36796 }, { label: "180cm / Table + 8 x Dining Chairs", price: 38565 }],
+    desc: "Marble dining table from 140cm to 180cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 180cm",
+      "15 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "15", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr092q", name: "Slate Dining Table (160cm to 180cm)", cat: "Living Room", room: "Living Room", price: 12550, memberPrice: 11295, sku: "SH-10874", tag: "New", ph: "", img: "assets/products/lr092q.webp",
+    imgs: ["assets/products/lr092q.webp", "assets/products/lr092q-2.webp", "assets/products/lr092q-3.webp", "assets/products/lr092q-4.webp"],
+    sizes: [{ label: "160cm / 0 x Dining Chairs (table only)", price: 12550 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 13954 }, { label: "160cm / Table + 2 x Dining Chairs", price: 17735 }, { label: "180cm / Table + 2 x Dining Chairs", price: 19139 }, { label: "160cm / Table + 4 x Dining Chairs", price: 22920 }, { label: "180cm / Table + 4 x Dining Chairs", price: 24324 }, { label: "160cm / Table + 6 x Dining Chairs", price: 28106 }, { label: "180cm / Table + 6 x Dining Chairs", price: 29509 }],
+    desc: "Slate dining table from 160cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 160cm to 180cm",
+      "8 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "8", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "lr093q", name: "Oak Dining Table (110cm to 150cm)", cat: "Living Room", room: "Living Room", price: 12778, memberPrice: 11500, sku: "SH-10875", tag: "New", ph: "", img: "assets/products/lr093q.webp",
+    imgs: ["assets/products/lr093q.webp", "assets/products/lr093q-2.webp", "assets/products/lr093q-3.webp", "assets/products/lr093q-4.webp"],
+    sizes: [{ label: "110cm / 0 x Dining Chairs (table only)", price: 12778 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 13304 }, { label: "135cm / 0 x Dining Chairs (table only)", price: 15589 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 16624 }, { label: "110cm / Table + 2 x Dining Chairs", price: 17963 }, { label: "120cm / Table + 2 x Dining Chairs", price: 18489 }, { label: "135cm / Table + 2 x Dining Chairs", price: 20774 }, { label: "150cm / Table + 2 x Dining Chairs", price: 21809 }, { label: "110cm / Table + 4 x Dining Chairs", price: 23148 }, { label: "120cm / Table + 4 x Dining Chairs", price: 23674 }, { label: "135cm / Table + 4 x Dining Chairs", price: 25959 }, { label: "150cm / Table + 4 x Dining Chairs", price: 26994 }, { label: "110cm / Table + 6 x Dining Chairs", price: 28333 }, { label: "120cm / Table + 6 x Dining Chairs", price: 28859 }, { label: "135cm / Table + 6 x Dining Chairs", price: 31144 }, { label: "150cm / Table + 6 x Dining Chairs", price: 32180 }],
+    desc: "Oak dining table from 110cm to 150cm.",
+    features: [
+      "Oak construction",
+      "Sizes from 110cm to 150cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Oak", "Options": "16", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr094q", name: "Travertine Dining Table (140cm to 200cm)", cat: "Living Room", room: "Living Room", price: 12778, memberPrice: 11500, sku: "SH-10876", tag: "New", ph: "", img: "assets/products/lr094q.webp",
+    imgs: ["assets/products/lr094q.webp", "assets/products/lr094q-2.webp", "assets/products/lr094q-3.webp", "assets/products/lr094q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 12778 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 14741 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 16722 }, { label: "140cm / Table + 2 x Dining Chairs", price: 17222 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 18963 }, { label: "160cm / Table + 2 x Dining Chairs", price: 19185 }, { label: "180cm / Table + 2 x Dining Chairs", price: 21167 }, { label: "140cm / Table + 4 x Dining Chairs", price: 21667 }, { label: "200cm / Table + 2 x Dining Chairs", price: 23407 }, { label: "160cm / Table + 4 x Dining Chairs", price: 23630 }, { label: "180cm / Table + 4 x Dining Chairs", price: 25611 }, { label: "140cm / Table + 6 x Dining Chairs", price: 26111 }, { label: "200cm / Table + 4 x Dining Chairs", price: 27852 }, { label: "160cm / Table + 6 x Dining Chairs", price: 28074 }, { label: "180cm / Table + 6 x Dining Chairs", price: 30056 }, { label: "140cm / Table + 8 x Dining Chairs", price: 30556 }, { label: "200cm / Table + 6 x Dining Chairs", price: 32296 }, { label: "160cm / Table + 8 x Dining Chairs", price: 32519 }, { label: "180cm / Table + 8 x Dining Chairs", price: 34500 }, { label: "200cm / Table + 8 x Dining Chairs", price: 36741 }],
+    desc: "Travertine dining table from 140cm to 200cm.",
+    features: [
+      "Travertine construction",
+      "Sizes from 140cm to 200cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Travertine", "Options": "20", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "lr095q", name: "Timber Dining Table (160cm to 280cm)", cat: "Living Room", room: "Living Room", price: 13496, memberPrice: 12146, sku: "SH-10877", tag: "New", ph: "", img: "assets/products/lr095q.webp",
+    imgs: ["assets/products/lr095q.webp", "assets/products/lr095q-2.webp", "assets/products/lr095q-3.webp", "assets/products/lr095q-4.webp"],
+    sizes: [{ label: "160cm / 0 x Dining Chairs (table only)", price: 13496 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 15056 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 17433 }, { label: "160cm / Table + 2 x Dining Chairs", price: 17941 }, { label: "220cm / 0 x Dining Chairs (table only)", price: 19015 }, { label: "180cm / Table + 2 x Dining Chairs", price: 19500 }, { label: "240cm / 0 x Dining Chairs (table only)", price: 20370 }, { label: "200cm / Table + 2 x Dining Chairs", price: 21878 }, { label: "260cm / 0 x Dining Chairs (table only)", price: 22056 }, { label: "160cm / Table + 4 x Dining Chairs", price: 22385 }, { label: "280cm / 0 x Dining Chairs (table only)", price: 23181 }, { label: "220cm / Table + 2 x Dining Chairs", price: 23459 }, { label: "180cm / Table + 4 x Dining Chairs", price: 23944 }, { label: "200cm / Table + 4 x Dining Chairs", price: 26322 }, { label: "240cm / Table + 2 x Dining Chairs", price: 26500 }, { label: "260cm / Table + 2 x Dining Chairs", price: 26500 }, { label: "160cm / Table + 6 x Dining Chairs", price: 26830 }, { label: "280cm / Table + 2 x Dining Chairs", price: 27626 }, { label: "220cm / Table + 4 x Dining Chairs", price: 27904 }, { label: "180cm / Table + 6 x Dining Chairs", price: 28389 }, { label: "240cm / Table + 4 x Dining Chairs", price: 29259 }, { label: "200cm / Table + 6 x Dining Chairs", price: 30767 }, { label: "260cm / Table + 4 x Dining Chairs", price: 30944 }, { label: "160cm / Table + 8 x Dining Chairs", price: 31274 }, { label: "280cm / Table + 4 x Dining Chairs", price: 32070 }, { label: "220cm / Table + 6 x Dining Chairs", price: 32348 }, { label: "180cm / Table + 8 x Dining Chairs", price: 32833 }, { label: "240cm / Table + 6 x Dining Chairs", price: 33704 }, { label: "200cm / Table + 8 x Dining Chairs", price: 35211 }, { label: "260cm / Table + 6 x Dining Chairs", price: 35389 }, { label: "280cm / Table + 6 x Dining Chairs", price: 36515 }, { label: "220cm / Table + 8 x Dining Chairs", price: 36793 }, { label: "240cm / Table + 8 x Dining Chairs", price: 38148 }, { label: "260cm / Table + 8 x Dining Chairs", price: 39833 }, { label: "280cm / Table + 8 x Dining Chairs", price: 40959 }],
+    desc: "Timber dining table from 160cm to 280cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 160cm to 280cm",
+      "35 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "35", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "lr096q", name: "Travertine Dining Table (1 options)", cat: "Living Room", room: "Living Room", price: 14072, memberPrice: 12665, sku: "SH-10878", tag: "New", ph: "", img: "assets/products/lr096q.webp",
+    imgs: ["assets/products/lr096q.webp", "assets/products/lr096q-2.webp", "assets/products/lr096q-3.webp", "assets/products/lr096q-4.webp"],
+    sizes: [{ label: "Travertine", price: 14072 }],
+    desc: "Travertine dining table.",
+    features: [
+      "Travertine construction"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Travertine", "Options": "1", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "lr097q", name: "Leather Dining Table (140cm to 160cm)", cat: "Living Room", room: "Living Room", price: 14741, memberPrice: 13267, sku: "SH-10879", tag: "New", ph: "", img: "assets/products/lr097q.webp",
+    imgs: ["assets/products/lr097q.webp", "assets/products/lr097q-2.webp", "assets/products/lr097q-3.webp", "assets/products/lr097q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 14741 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 15715 }, { label: "140cm / Table + 2 x Dining Chairs", price: 16859 }, { label: "160cm / Table + 2 x Dining Chairs", price: 17833 }, { label: "140cm / Table + 4 x Dining Chairs", price: 18978 }, { label: "160cm / Table + 4 x Dining Chairs", price: 19952 }, { label: "140cm / Table + 6 x Dining Chairs", price: 21096 }, { label: "160cm / Table + 6 x Dining Chairs", price: 22070 }, { label: "140cm / Table + 8 x Dining Chairs", price: 23215 }, { label: "160cm / Table + 8 x Dining Chairs", price: 24189 }],
+    desc: "Leather dining table from 140cm to 160cm.",
+    features: [
+      "Leather construction",
+      "Sizes from 140cm to 160cm",
+      "10 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Leather", "Options": "10", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "lr098q", name: "Marble Dining Table (160cm to 200cm)", cat: "Living Room", room: "Living Room", price: 16148, memberPrice: 14533, sku: "SH-10880", tag: "New", ph: "", img: "assets/products/lr098q.webp",
+    imgs: ["assets/products/lr098q.webp", "assets/products/lr098q-2.webp", "assets/products/lr098q-3.webp", "assets/products/lr098q-4.webp"],
+    sizes: [{ label: "160cm", price: 16148 }, { label: "180cm", price: 18291 }, { label: "200cm", price: 21017 }],
+    desc: "Marble dining table from 160cm to 200cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 160cm to 200cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "3", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr099q", name: "Marble Dining Table (140cm to 220cm)", cat: "Living Room", room: "Living Room", price: 16667, memberPrice: 15000, sku: "SH-10881", tag: "New", ph: "", img: "assets/products/lr099q.webp",
+    imgs: ["assets/products/lr099q.webp", "assets/products/lr099q-2.webp", "assets/products/lr099q-3.webp", "assets/products/lr099q-4.webp"],
+    sizes: [{ label: "White + Black / 140cm / 0 x Dining Chair (table only)", price: 16667 }, { label: "White + Gold / 140cm / 0 x Dining Chair (table only)", price: 16667 }, { label: "White + Black / 160cm / 0 x Dining Chair (table only)", price: 17944 }, { label: "White + Gold / 160cm / 0 x Dining Chair (table only)", price: 17944 }, { label: "White + Black / 180cm / 0 x Dining Chair (table only)", price: 18933 }, { label: "White + Gold / 180cm / 0 x Dining Chair (table only)", price: 18933 }, { label: "White + Black / 200cm / 0 x Dining Chair (table only)", price: 20156 }, { label: "White + Gold / 200cm / 0 x Dining Chair (table only)", price: 20156 }, { label: "White + Black / 140cm / Table + 2 x Dining Chairs", price: 21852 }, { label: "White + Gold / 140cm / Table + 2 x Dining Chairs", price: 21852 }, { label: "White + Black / 220cm / 0 x Dining Chair (table only)", price: 22198 }, { label: "White + Gold / 220cm / 0 x Dining Chair (table only)", price: 22198 }, { label: "White + Black / 160cm / Table + 2 x Dining Chairs", price: 23130 }, { label: "White + Gold / 160cm / Table + 2 x Dining Chairs", price: 23130 }, { label: "White + Black / 180cm / Table + 2 x Dining Chairs", price: 24119 }, { label: "White + Gold / 180cm / Table + 2 x Dining Chairs", price: 24119 }, { label: "White + Black / 200cm / Table + 2 x Dining Chairs", price: 25341 }, { label: "White + Gold / 200cm / Table + 2 x Dining Chairs", price: 25341 }, { label: "White + Black / 140cm / Table + 4 x Dining Chairs", price: 27037 }, { label: "White + Gold / 140cm / Table + 4 x Dining Chairs", price: 27037 }, { label: "White + Black / 220cm / Table + 2 x Dining Chairs", price: 27383 }, { label: "White + Gold / 220cm / Table + 2 x Dining Chairs", price: 27383 }, { label: "White + Black / 160cm / Table + 4 x Dining Chairs", price: 28315 }, { label: "White + Gold / 160cm / Table + 4 x Dining Chairs", price: 28315 }, { label: "White + Black / 180cm / Table + 4 x Dining Chairs", price: 29304 }, { label: "White + Gold / 180cm / Table + 4 x Dining Chairs", price: 29304 }, { label: "White + Black / 200cm / Table + 4 x Dining Chairs", price: 30526 }, { label: "White + Gold / 200cm / Table + 4 x Dining Chairs", price: 30526 }, { label: "White + Black / 140cm / Table + 6 x Dining Chairs", price: 32222 }, { label: "White + Gold / 140cm / Table + 6 x Dining Chairs", price: 32222 }, { label: "White + Black / 220cm / Table + 4 x Dining Chairs", price: 32569 }, { label: "White + Gold / 220cm / Table + 4 x Dining Chairs", price: 32569 }, { label: "White + Black / 160cm / Table + 6 x Dining Chairs", price: 33500 }, { label: "White + Gold / 160cm / Table + 6 x Dining Chairs", price: 33500 }, { label: "White + Black / 180cm / Table + 6 x Dining Chairs", price: 34489 }, { label: "White + Gold / 180cm / Table + 6 x Dining Chairs", price: 34489 }, { label: "White + Black / 200cm / Table + 6 x Dining Chairs", price: 35711 }, { label: "White + Gold / 200cm / Table + 6 x Dining Chairs", price: 35711 }, { label: "White + Black / 140cm / Table + 8 x Dining Chairs", price: 37407 }, { label: "White + Gold / 140cm / Table + 8 x Dining Chairs", price: 37407 }, { label: "White + Black / 220cm / Table + 6 x Dining Chairs", price: 37754 }, { label: "White + Gold / 220cm / Table + 6 x Dining Chairs", price: 37754 }, { label: "White + Black / 160cm / Table + 8 x Dining Chairs", price: 38685 }, { label: "White + Gold / 160cm / Table + 8 x Dining Chairs", price: 38685 }, { label: "White + Black / 180cm / Table + 8 x Dining Chairs", price: 39674 }, { label: "White + Gold / 180cm / Table + 8 x Dining Chairs", price: 39674 }, { label: "White + Black / 200cm / Table + 8 x Dining Chairs", price: 40896 }, { label: "White + Gold / 200cm / Table + 8 x Dining Chairs", price: 40896 }, { label: "White + Black / 220cm / Table + 8 x Dining Chairs", price: 42939 }, { label: "White + Gold / 220cm / Table + 8 x Dining Chairs", price: 42939 }],
+    desc: "Marble dining table from 140cm to 220cm. In Black, White or Gold.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 220cm",
+      "Black, White, Gold colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "50", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr100q", name: "Travertine Dining Table (130cm to 200cm)", cat: "Living Room", room: "Living Room", price: 21396, memberPrice: 19256, sku: "SH-10882", tag: "New", ph: "", img: "assets/products/lr100q.webp",
+    imgs: ["assets/products/lr100q.webp", "assets/products/lr100q-2.webp", "assets/products/lr100q-3.webp", "assets/products/lr100q-4.webp"],
+    sizes: [{ label: "130cm / 0 x Dining Chairs (table only)", price: 21396 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 22102 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 22813 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 23519 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 24426 }, { label: "130cm / Table + 2 x Dining Chairs", price: 25841 }, { label: "140cm / Table + 2 x Dining Chairs", price: 26546 }, { label: "160cm / Table + 2 x Dining Chairs", price: 27257 }, { label: "180cm / Table + 2 x Dining Chairs", price: 27963 }, { label: "200cm / Table + 2 x Dining Chairs", price: 28870 }, { label: "130cm / Table + 4 x Dining Chairs", price: 30285 }, { label: "140cm / Table + 4 x Dining Chairs", price: 30991 }, { label: "160cm / Table + 4 x Dining Chairs", price: 31702 }, { label: "180cm / Table + 4 x Dining Chairs", price: 32407 }, { label: "200cm / Table + 4 x Dining Chairs", price: 33315 }, { label: "130cm / Table + 6 x Dining Chairs", price: 34730 }, { label: "140cm / Table + 6 x Dining Chairs", price: 35435 }, { label: "160cm / Table + 6 x Dining Chairs", price: 36146 }, { label: "180cm / Table + 6 x Dining Chairs", price: 36852 }, { label: "200cm / Table + 6 x Dining Chairs", price: 37759 }],
+    desc: "Travertine dining table from 130cm to 200cm.",
+    features: [
+      "Travertine construction",
+      "Sizes from 130cm to 200cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Travertine", "Options": "20", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "lr101q", name: "Marble Dining Table (180cm to 220cm)", cat: "Living Room", room: "Living Room", price: 22206, memberPrice: 19985, sku: "SH-10883", tag: "New", ph: "", img: "assets/products/lr101q.webp",
+    imgs: ["assets/products/lr101q.webp", "assets/products/lr101q-2.webp", "assets/products/lr101q-3.webp", "assets/products/lr101q-4.webp"],
+    sizes: [{ label: "180cm", price: 22206 }, { label: "200cm", price: 23281 }, { label: "220cm", price: 24359 }],
+    desc: "Marble dining table from 180cm to 220cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 180cm to 220cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "3", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "lr102q", name: "Travertine Dining Table (180cm to 240cm)", cat: "Living Room", room: "Living Room", price: 22859, memberPrice: 20573, sku: "SH-10884", tag: "New", ph: "", img: "assets/products/lr102q.webp",
+    imgs: ["assets/products/lr102q.webp", "assets/products/lr102q-2.webp", "assets/products/lr102q-3.webp", "assets/products/lr102q-4.webp"],
+    sizes: [{ label: "180cm", price: 22859 }, { label: "240cm", price: 34646 }],
+    desc: "Travertine dining table from 180cm to 240cm.",
+    features: [
+      "Travertine construction",
+      "Sizes from 180cm to 240cm",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Travertine", "Options": "2", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "dn001q", name: "Steel Console Table", cat: "Living Room", room: "Living Room", price: 3026, memberPrice: 2723, sku: "SH-10885", tag: "New", ph: "", img: "assets/products/dn001q.webp",
+    imgs: ["assets/products/dn001q.webp", "assets/products/dn001q-2.webp", "assets/products/dn001q-3.webp", "assets/products/dn001q-4.webp"],
+    sizes: [{ label: "100cm", price: 3026 }, { label: "120cm", price: 3281 }, { label: "140cm", price: 3533 }, { label: "160cm", price: 3789 }],
+    desc: "Steel console table from 100cm to 160cm, for a hallway or behind a sofa.",
+    features: [
+      "Steel construction",
+      "Sizes from 100cm to 160cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Steel", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "dn002q", name: "Steel Console Table (100cm to 140cm)", cat: "Living Room", room: "Living Room", price: 3328, memberPrice: 2995, sku: "SH-10886", tag: "New", ph: "", img: "assets/products/dn002q.webp",
+    imgs: ["assets/products/dn002q.webp", "assets/products/dn002q-2.webp", "assets/products/dn002q-3.webp", "assets/products/dn002q-4.webp"],
+    sizes: [{ label: "100cm / Black + White", price: 3328 }, { label: "100cm / Black + Cream", price: 3328 }, { label: "100cm / Gold + Cream", price: 3328 }, { label: "100cm / Gold + Grey", price: 3328 }, { label: "120cm / Black + White", price: 3698 }, { label: "120cm / Black + Cream", price: 3698 }, { label: "120cm / Gold + Cream", price: 3698 }, { label: "120cm / Gold + Grey", price: 3698 }, { label: "140cm / Black + White", price: 4054 }, { label: "140cm / Black + Cream", price: 4054 }, { label: "140cm / Gold + Cream", price: 4054 }, { label: "140cm / Gold + Grey", price: 4054 }],
+    desc: "Steel console table from 100cm to 140cm, for a hallway or behind a sofa. In Black, White, Grey or Gold.",
+    features: [
+      "Steel construction",
+      "Sizes from 100cm to 140cm",
+      "Black, White, Grey, Gold colourways"
+    ],
+    specs: { "Type": "Console Table", "Material": "Steel", "Options": "12", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "dn003q", name: "Metal Console Table", cat: "Living Room", room: "Living Room", price: 3722, memberPrice: 3350, sku: "SH-10887", tag: "New", ph: "", img: "assets/products/dn003q.webp",
+    imgs: ["assets/products/dn003q.webp", "assets/products/dn003q-2.webp", "assets/products/dn003q-3.webp", "assets/products/dn003q-4.webp"],
+    sizes: [{ label: "Black", price: 3722 }, { label: "White", price: 3722 }],
+    desc: "Metal console table, for a hallway or behind a sofa. In Black or White.",
+    features: [
+      "Metal construction",
+      "Black, White colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Metal", "Options": "2", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "dn004q", name: "Travertine Console Table", cat: "Living Room", room: "Living Room", price: 4554, memberPrice: 4099, sku: "SH-10888", tag: "New", ph: "", img: "assets/products/dn004q.webp",
+    imgs: ["assets/products/dn004q.webp", "assets/products/dn004q-2.webp", "assets/products/dn004q-3.webp", "assets/products/dn004q-4.webp"],
+    sizes: [{ label: "100cm", price: 4554 }, { label: "120cm", price: 4980 }, { label: "140cm", price: 5778 }, { label: "160cm", price: 6185 }, { label: "180cm", price: 7200 }],
+    desc: "Travertine console table from 100cm to 180cm, for a hallway or behind a sofa.",
+    features: [
+      "Travertine construction",
+      "Sizes from 100cm to 180cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Travertine", "Options": "5", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so deal with spills immediately and never use acidic cleaners." },
+
+  { id: "dn005q", name: "Slate Console Table (100cm to 160cm)", cat: "Living Room", room: "Living Room", price: 5948, memberPrice: 5353, sku: "SH-10889", tag: "New", ph: "", img: "assets/products/dn005q.webp",
+    imgs: ["assets/products/dn005q.webp", "assets/products/dn005q-2.webp", "assets/products/dn005q-3.webp", "assets/products/dn005q-4.webp"],
+    sizes: [{ label: "100cm", price: 5948 }, { label: "120cm", price: 6556 }, { label: "140cm", price: 7156 }, { label: "160cm", price: 7574 }],
+    desc: "Slate console table from 100cm to 160cm, for a hallway or behind a sofa.",
+    features: [
+      "Slate construction",
+      "Sizes from 100cm to 160cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Slate", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn006q", name: "Slate Console Table (80cm to 160cm)", cat: "Living Room", room: "Living Room", price: 6365, memberPrice: 5728, sku: "SH-10890", tag: "New", ph: "", img: "assets/products/dn006q.webp",
+    imgs: ["assets/products/dn006q.webp", "assets/products/dn006q-2.webp", "assets/products/dn006q-3.webp", "assets/products/dn006q-4.webp"],
+    sizes: [{ label: "80cm", price: 6365 }, { label: "100cm", price: 6813 }, { label: "120cm", price: 7387 }, { label: "140cm", price: 7769 }, { label: "160cm", price: 7939 }],
+    desc: "Slate console table from 80cm to 160cm, for a hallway or behind a sofa.",
+    features: [
+      "Slate construction",
+      "Sizes from 80cm to 160cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Slate", "Options": "5", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn007q", name: "Marble Console Table", cat: "Living Room", room: "Living Room", price: 7333, memberPrice: 6600, sku: "SH-10891", tag: "New", ph: "", img: "assets/products/dn007q.webp",
+    imgs: ["assets/products/dn007q.webp", "assets/products/dn007q-2.webp", "assets/products/dn007q-3.webp", "assets/products/dn007q-4.webp"],
+    sizes: [{ label: "White", price: 7333 }, { label: "Green", price: 7333 }, { label: "Black", price: 7333 }],
+    desc: "Marble console table, for a hallway or behind a sofa. In Black, White or Green.",
+    features: [
+      "Marble construction",
+      "Black, White, Green colourways",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Marble", "Options": "3", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "dn008q", name: "Timber Dining Table (120cm to 180cm)", cat: "Living Room", room: "Living Room", price: 7546, memberPrice: 6791, sku: "SH-10892", tag: "New", ph: "", img: "assets/products/dn008q.webp",
+    imgs: ["assets/products/dn008q.webp", "assets/products/dn008q-2.webp", "assets/products/dn008q-3.webp", "assets/products/dn008q-4.webp"],
+    sizes: [{ label: "120cm / 0 x Dining Chairs (table only)", price: 7546 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 8244 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 8946 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 9296 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 10813 }, { label: "120cm / Table + 2 x Dining Chairs", price: 13102 }, { label: "130cm / Table + 2 x Dining Chairs", price: 13800 }, { label: "150cm / Table + 2 x Dining Chairs", price: 14502 }, { label: "160cm / Table + 2 x Dining Chairs", price: 14852 }, { label: "180cm / Table + 2 x Dining Chairs", price: 16369 }, { label: "120cm / Table + 4 x Dining Chairs", price: 18657 }, { label: "130cm / Table + 4 x Dining Chairs", price: 19356 }, { label: "150cm / Table + 4 x Dining Chairs", price: 20057 }, { label: "160cm / Table + 4 x Dining Chairs", price: 20407 }, { label: "180cm / Table + 4 x Dining Chairs", price: 21924 }, { label: "120cm / Table + 6 x Dining Chairs", price: 24213 }, { label: "130cm / Table + 6 x Dining Chairs", price: 24911 }, { label: "150cm / Table + 6 x Dining Chairs", price: 25613 }, { label: "160cm / Table + 6 x Dining Chairs", price: 25963 }, { label: "180cm / Table + 6 x Dining Chairs", price: 27480 }],
+    desc: "Timber dining table from 120cm to 180cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 120cm to 180cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "20", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn009q", name: "Timber Dining Table (80cm to 130cm)", cat: "Living Room", room: "Living Room", price: 7613, memberPrice: 6852, sku: "SH-10893", tag: "New", ph: "", img: "assets/products/dn009q.webp",
+    imgs: ["assets/products/dn009q.webp", "assets/products/dn009q-2.webp", "assets/products/dn009q-3.webp", "assets/products/dn009q-4.webp"],
+    sizes: [{ label: "80cm / 0 x Dining Chairs (table only)", price: 7613 }, { label: "90cm / 0 x Dining Chairs (table only)", price: 8237 }, { label: "100cm / 0 x Dining Chairs (table only)", price: 8470 }, { label: "110cm / 0 x Dining Chairs (table only)", price: 9600 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 10339 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 11380 }, { label: "80cm / Table + 2 x Dining Chairs", price: 12057 }, { label: "90cm / Table + 2 x Dining Chairs", price: 12681 }, { label: "100cm / Table + 2 x Dining Chairs", price: 12915 }, { label: "110cm / Table + 2 x Dining Chairs", price: 14044 }, { label: "120cm / Table + 2 x Dining Chairs", price: 14783 }, { label: "130cm / Table + 2 x Dining Chairs", price: 15824 }, { label: "80cm / Table + 4 x Dining Chairs", price: 16502 }, { label: "90cm / Table + 4 x Dining Chairs", price: 17126 }, { label: "100cm / Table + 4 x Dining Chairs", price: 17359 }, { label: "110cm / Table + 4 x Dining Chairs", price: 18489 }, { label: "120cm / Table + 4 x Dining Chairs", price: 19228 }, { label: "130cm / Table + 4 x Dining Chairs", price: 20269 }],
+    desc: "Timber dining table from 80cm to 130cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 80cm to 130cm",
+      "18 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "18", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn010q", name: "Marble Console Table (100cm to 160cm)", cat: "Living Room", room: "Living Room", price: 7935, memberPrice: 7142, sku: "SH-10894", tag: "New", ph: "", img: "assets/products/dn010q.webp",
+    imgs: ["assets/products/dn010q.webp", "assets/products/dn010q-2.webp", "assets/products/dn010q-3.webp", "assets/products/dn010q-4.webp"],
+    sizes: [{ label: "White + Black / 100cm", price: 7935 }, { label: "White / 100cm", price: 7935 }, { label: "Black / 100cm", price: 7935 }, { label: "White + Black / 120cm", price: 8704 }, { label: "White / 120cm", price: 8704 }, { label: "Black / 120cm", price: 8704 }, { label: "White + Black / 140cm", price: 9217 }, { label: "White / 140cm", price: 9217 }, { label: "Black / 140cm", price: 9217 }, { label: "White + Black / 160cm", price: 10139 }, { label: "White / 160cm", price: 10139 }, { label: "Black / 160cm", price: 10139 }],
+    desc: "Marble console table from 100cm to 160cm, for a hallway or behind a sofa. In Black or White.",
+    features: [
+      "Marble construction",
+      "Sizes from 100cm to 160cm",
+      "Black, White colourways"
+    ],
+    specs: { "Type": "Console Table", "Material": "Marble", "Options": "12", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "dn011q", name: "Leather Dining Table (130cm to 180cm)", cat: "Living Room", room: "Living Room", price: 8106, memberPrice: 7295, sku: "SH-10895", tag: "New", ph: "", img: "assets/products/dn011q.webp",
+    imgs: ["assets/products/dn011q.webp", "assets/products/dn011q-2.webp", "assets/products/dn011q-3.webp", "assets/products/dn011q-4.webp"],
+    sizes: [{ label: "130cm / 0 x Dining Chairs (table only)", price: 8106 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 9026 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 9789 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 10819 }, { label: "130cm / Table + 2 x Dining Chairs", price: 13661 }, { label: "140cm / Table + 2 x Dining Chairs", price: 14581 }, { label: "160cm / Table + 2 x Dining Chairs", price: 15344 }, { label: "180cm / Table + 2 x Dining Chairs", price: 16374 }, { label: "130cm / Table + 4 x Dining Chairs", price: 19217 }, { label: "140cm / Table + 4 x Dining Chairs", price: 20137 }, { label: "160cm / Table + 4 x Dining Chairs", price: 20900 }, { label: "180cm / Table + 4 x Dining Chairs", price: 21930 }, { label: "130cm / Table + 6 x Dining Chairs", price: 24772 }, { label: "140cm / Table + 6 x Dining Chairs", price: 25693 }, { label: "160cm / Table + 6 x Dining Chairs", price: 26456 }, { label: "180cm / Table + 6 x Dining Chairs", price: 27485 }],
+    desc: "Leather dining table from 130cm to 180cm.",
+    features: [
+      "Leather construction",
+      "Sizes from 130cm to 180cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Leather", "Options": "16", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "dn012q", name: "Oak Dining Table (90cm to 130cm)", cat: "Living Room", room: "Living Room", price: 8204, memberPrice: 7384, sku: "SH-10896", tag: "New", ph: "", img: "assets/products/dn012q.webp",
+    imgs: ["assets/products/dn012q.webp", "assets/products/dn012q-2.webp", "assets/products/dn012q-3.webp", "assets/products/dn012q-4.webp"],
+    sizes: [{ label: "Tan / 90cm", price: 8204 }, { label: "Chocolate / 90cm", price: 8204 }, { label: "White / 90cm", price: 8204 }, { label: "Natural / 90cm", price: 8204 }, { label: "Tan / 100cm", price: 8556 }, { label: "Chocolate / 100cm", price: 8556 }, { label: "White / 100cm", price: 8556 }, { label: "Natural / 100cm", price: 8556 }, { label: "Tan / 110cm", price: 9565 }, { label: "Chocolate / 110cm", price: 9565 }, { label: "White / 110cm", price: 9565 }, { label: "Natural / 110cm", price: 9565 }, { label: "Tan / 120cm", price: 10250 }, { label: "Chocolate / 120cm", price: 10250 }, { label: "White / 120cm", price: 10250 }, { label: "Natural / 120cm", price: 10250 }, { label: "Tan / 130cm", price: 10719 }, { label: "Chocolate / 130cm", price: 10719 }, { label: "White / 130cm", price: 10719 }, { label: "Natural / 130cm", price: 10719 }],
+    desc: "Oak dining table from 90cm to 130cm. In White, Tan, Natural or Chocolate.",
+    features: [
+      "Oak construction",
+      "Sizes from 90cm to 130cm",
+      "White, Tan, Natural, Chocolate colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Oak", "Options": "20", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn013q", name: "Slate Dining Table (80cm to 120cm)", cat: "Living Room", room: "Living Room", price: 8222, memberPrice: 7400, sku: "SH-10897", tag: "New", ph: "", img: "assets/products/dn013q.webp",
+    imgs: ["assets/products/dn013q.webp", "assets/products/dn013q-2.webp", "assets/products/dn013q-3.webp", "assets/products/dn013q-4.webp"],
+    sizes: [{ label: "80cm / 0 x Dining Chairs (table only)", price: 8222 }, { label: "90cm / 0 x Dining Chairs (table only)", price: 8444 }, { label: "100cm / 0 x Dining Chairs (table only)", price: 8833 }, { label: "110cm / 0 x Dining Chairs (table only)", price: 9074 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 9648 }, { label: "80cm / Table + 2 x Dining Chairs", price: 13407 }, { label: "90cm / Table + 2 x Dining Chairs", price: 13630 }, { label: "100cm / Table + 2 x Dining Chairs", price: 14019 }, { label: "110cm / Table + 2 x Dining Chairs", price: 14259 }, { label: "120cm / Table + 2 x Dining Chairs", price: 14833 }, { label: "80cm / Table + 4 x Dining Chairs", price: 18593 }, { label: "90cm / Table + 4 x Dining Chairs", price: 18815 }, { label: "100cm / Table + 4 x Dining Chairs", price: 19204 }, { label: "110cm / Table + 4 x Dining Chairs", price: 19444 }, { label: "120cm / Table + 4 x Dining Chairs", price: 20019 }, { label: "80cm / Table + 6 x Dining Chairs", price: 23778 }, { label: "90cm / Table + 6 x Dining Chairs", price: 24000 }, { label: "100cm / Table + 6 x Dining Chairs", price: 24389 }, { label: "110cm / Table + 6 x Dining Chairs", price: 24630 }, { label: "120cm / Table + 6 x Dining Chairs", price: 25204 }],
+    desc: "Slate dining table from 80cm to 120cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 80cm to 120cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "20", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn014q", name: "Slate Dining Table (Black / White)", cat: "Living Room", room: "Living Room", price: 8226, memberPrice: 7403, sku: "SH-10898", tag: "New", ph: "", img: "assets/products/dn014q.webp",
+    imgs: ["assets/products/dn014q.webp", "assets/products/dn014q-2.webp", "assets/products/dn014q-3.webp", "assets/products/dn014q-4.webp"],
+    sizes: [{ label: "Black / 80cm / 0 x Dining Chairs (table only)", price: 8226 }, { label: "White / 80cm / 0 x Dining Chairs (table only)", price: 8226 }, { label: "Black / 90cm / 0 x Dining Chairs (table only)", price: 9000 }, { label: "White / 90cm / 0 x Dining Chairs (table only)", price: 9000 }, { label: "Black / 100cm / 0 x Dining Chairs (table only)", price: 10052 }, { label: "White / 100cm / 0 x Dining Chairs (table only)", price: 10052 }, { label: "Black / 110cm / 0 x Dining Chairs (table only)", price: 10281 }, { label: "White / 110cm / 0 x Dining Chairs (table only)", price: 10281 }, { label: "Black / 120cm / 0 x Dining Chairs (table only)", price: 10496 }, { label: "White / 120cm / 0 x Dining Chairs (table only)", price: 10496 }, { label: "Black / 80cm / Table + 2 x Dining Chairs", price: 13041 }, { label: "White / 80cm / Table + 2 x Dining Chairs", price: 13041 }, { label: "Black / 90cm / Table + 2 x Dining Chairs", price: 13815 }, { label: "White / 90cm / Table + 2 x Dining Chairs", price: 13815 }, { label: "Black / 100cm / Table + 2 x Dining Chairs", price: 14867 }, { label: "White / 100cm / Table + 2 x Dining Chairs", price: 14867 }, { label: "Black / 110cm / Table + 2 x Dining Chairs", price: 15096 }, { label: "White / 110cm / Table + 2 x Dining Chairs", price: 15096 }, { label: "Black / 120cm / Table + 2 x Dining Chairs", price: 15311 }, { label: "White / 120cm / Table + 2 x Dining Chairs", price: 15311 }, { label: "Black / 80cm / Table + 4 x Dining Chairs", price: 17856 }, { label: "White / 80cm / Table + 4 x Dining Chairs", price: 17856 }, { label: "Black / 90cm / Table + 4 x Dining Chairs", price: 18630 }, { label: "White / 90cm / Table + 4 x Dining Chairs", price: 18630 }, { label: "Black / 100cm / Table + 4 x Dining Chairs", price: 19681 }, { label: "White / 100cm / Table + 4 x Dining Chairs", price: 19681 }, { label: "Black / 110cm / Table + 4 x Dining Chairs", price: 19911 }, { label: "White / 110cm / Table + 4 x Dining Chairs", price: 19911 }, { label: "Black / 120cm / Table + 4 x Dining Chairs", price: 20126 }, { label: "White / 120cm / Table + 4 x Dining Chairs", price: 20126 }, { label: "Black / 80cm / Table + 6 x Dining Chairs", price: 22670 }, { label: "White / 80cm / Table + 6 x Dining Chairs", price: 22670 }, { label: "Black / 90cm / Table + 6 x Dining Chairs", price: 23444 }, { label: "White / 90cm / Table + 6 x Dining Chairs", price: 23444 }, { label: "Black / 100cm / Table + 6 x Dining Chairs", price: 24496 }, { label: "White / 100cm / Table + 6 x Dining Chairs", price: 24496 }, { label: "Black / 110cm / Table + 6 x Dining Chairs", price: 24726 }, { label: "White / 110cm / Table + 6 x Dining Chairs", price: 24726 }, { label: "Black / 120cm / Table + 6 x Dining Chairs", price: 24941 }, { label: "White / 120cm / Table + 6 x Dining Chairs", price: 24941 }],
+    desc: "Slate dining table from 80cm to 120cm. In Black or White.",
+    features: [
+      "Slate construction",
+      "Sizes from 80cm to 120cm",
+      "Black, White colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "40", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn015q", name: "Glass Dining Table", cat: "Living Room", room: "Living Room", price: 8330, memberPrice: 7497, sku: "SH-10899", tag: "New", ph: "", img: "assets/products/dn015q.webp",
+    imgs: ["assets/products/dn015q.webp", "assets/products/dn015q-2.webp", "assets/products/dn015q-3.webp", "assets/products/dn015q-4.webp"],
+    sizes: [{ label: "Black / 120cm / 0 x Dining Chairs (table only)", price: 8330 }, { label: "Tan / 120cm / 0 x Dining Chairs (table only)", price: 8330 }, { label: "Transparent / 120cm / 0 x Dining Chairs (table only)", price: 8330 }, { label: "Black / 140cm / 0 x Dining Chairs (table only)", price: 9074 }, { label: "Tan / 140cm / 0 x Dining Chairs (table only)", price: 9074 }, { label: "Transparent / 140cm / 0 x Dining Chairs (table only)", price: 9074 }, { label: "Black / 160cm / 0 x Dining Chairs (table only)", price: 9804 }, { label: "Tan / 160cm / 0 x Dining Chairs (table only)", price: 9804 }, { label: "Transparent / 160cm / 0 x Dining Chairs (table only)", price: 9804 }, { label: "Black / 180cm / 0 x Dining Chairs (table only)", price: 10663 }, { label: "Tan / 180cm / 0 x Dining Chairs (table only)", price: 10663 }, { label: "Transparent / 180cm / 0 x Dining Chairs (table only)", price: 10663 }, { label: "Black / 200cm / 0 x Dining Chairs (table only)", price: 12741 }, { label: "Tan / 200cm / 0 x Dining Chairs (table only)", price: 12741 }, { label: "Transparent / 200cm / 0 x Dining Chairs (table only)", price: 12741 }, { label: "Black / 120cm / Table + 2 x Dining Chairs", price: 13885 }, { label: "Tan / 120cm / Table + 2 x Dining Chairs", price: 13885 }, { label: "Transparent / 120cm / Table + 2 x Dining Chairs", price: 13885 }, { label: "Black / 140cm / Table + 2 x Dining Chairs", price: 14630 }, { label: "Tan / 140cm / Table + 2 x Dining Chairs", price: 14630 }, { label: "Transparent / 140cm / Table + 2 x Dining Chairs", price: 14630 }, { label: "Black / 160cm / Table + 2 x Dining Chairs", price: 15359 }, { label: "Tan / 160cm / Table + 2 x Dining Chairs", price: 15359 }, { label: "Transparent / 160cm / Table + 2 x Dining Chairs", price: 15359 }, { label: "Black / 180cm / Table + 2 x Dining Chairs", price: 16219 }, { label: "Tan / 180cm / Table + 2 x Dining Chairs", price: 16219 }, { label: "Transparent / 180cm / Table + 2 x Dining Chairs", price: 16219 }, { label: "Black / 200cm / Table + 2 x Dining Chairs", price: 18296 }, { label: "Tan / 200cm / Table + 2 x Dining Chairs", price: 18296 }, { label: "Transparent / 200cm / Table + 2 x Dining Chairs", price: 18296 }, { label: "Black / 120cm / Table + 4 x Dining Chairs", price: 19441 }, { label: "Tan / 120cm / Table + 4 x Dining Chairs", price: 19441 }, { label: "Transparent / 120cm / Table + 4 x Dining Chairs", price: 19441 }, { label: "Black / 140cm / Table + 4 x Dining Chairs", price: 20185 }, { label: "Tan / 140cm / Table + 4 x Dining Chairs", price: 20185 }, { label: "Transparent / 140cm / Table + 4 x Dining Chairs", price: 20185 }, { label: "Black / 160cm / Table + 4 x Dining Chairs", price: 20915 }, { label: "Tan / 160cm / Table + 4 x Dining Chairs", price: 20915 }, { label: "Transparent / 160cm / Table + 4 x Dining Chairs", price: 20915 }, { label: "Black / 180cm / Table + 4 x Dining Chairs", price: 21774 }, { label: "Tan / 180cm / Table + 4 x Dining Chairs", price: 21774 }, { label: "Transparent / 180cm / Table + 4 x Dining Chairs", price: 21774 }, { label: "Black / 200cm / Table + 4 x Dining Chairs", price: 23852 }, { label: "Tan / 200cm / Table + 4 x Dining Chairs", price: 23852 }, { label: "Transparent / 200cm / Table + 4 x Dining Chairs", price: 23852 }, { label: "Black / 120cm / Table + 6 x Dining Chairs", price: 24996 }, { label: "Tan / 120cm / Table + 6 x Dining Chairs", price: 24996 }, { label: "Transparent / 120cm / Table + 6 x Dining Chairs", price: 24996 }, { label: "Black / 140cm / Table + 6 x Dining Chairs", price: 25741 }, { label: "Tan / 140cm / Table + 6 x Dining Chairs", price: 25741 }, { label: "Transparent / 140cm / Table + 6 x Dining Chairs", price: 25741 }, { label: "Black / 160cm / Table + 6 x Dining Chairs", price: 26470 }, { label: "Tan / 160cm / Table + 6 x Dining Chairs", price: 26470 }, { label: "Transparent / 160cm / Table + 6 x Dining Chairs", price: 26470 }, { label: "Black / 180cm / Table + 6 x Dining Chairs", price: 27330 }, { label: "Tan / 180cm / Table + 6 x Dining Chairs", price: 27330 }, { label: "Transparent / 180cm / Table + 6 x Dining Chairs", price: 27330 }, { label: "Black / 200cm / Table + 6 x Dining Chairs", price: 29407 }, { label: "Tan / 200cm / Table + 6 x Dining Chairs", price: 29407 }, { label: "Transparent / 200cm / Table + 6 x Dining Chairs", price: 29407 }, { label: "Black / 120cm / Table + 8 x Dining Chairs", price: 30552 }, { label: "Tan / 120cm / Table + 8 x Dining Chairs", price: 30552 }, { label: "Transparent / 120cm / Table + 8 x Dining Chairs", price: 30552 }, { label: "Black / 140cm / Table + 8 x Dining Chairs", price: 31296 }, { label: "Tan / 140cm / Table + 8 x Dining Chairs", price: 31296 }, { label: "Transparent / 140cm / Table + 8 x Dining Chairs", price: 31296 }, { label: "Black / 160cm / Table + 8 x Dining Chairs", price: 32026 }, { label: "Tan / 160cm / Table + 8 x Dining Chairs", price: 32026 }, { label: "Transparent / 160cm / Table + 8 x Dining Chairs", price: 32026 }, { label: "Black / 180cm / Table + 8 x Dining Chairs", price: 32885 }, { label: "Tan / 180cm / Table + 8 x Dining Chairs", price: 32885 }, { label: "Transparent / 180cm / Table + 8 x Dining Chairs", price: 32885 }, { label: "Black / 200cm / Table + 8 x Dining Chairs", price: 34963 }, { label: "Tan / 200cm / Table + 8 x Dining Chairs", price: 34963 }, { label: "Transparent / 200cm / Table + 8 x Dining Chairs", price: 34963 }],
+    desc: "Glass dining table from 120cm to 200cm. In Black or Tan.",
+    features: [
+      "Glass construction",
+      "Sizes from 120cm to 200cm",
+      "Black, Tan colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Glass", "Options": "75", "Room": "Living Room" },
+    care: "Clean with a soft cloth and a mild glass cleaner. Lift rather than drag when moving, and avoid knocking the edges, which is where glass chips." },
+
+  { id: "dn016q", name: "Oak Dining Table (160cm to 220cm)", cat: "Living Room", room: "Living Room", price: 8556, memberPrice: 7700, sku: "SH-10900", tag: "New", ph: "", img: "assets/products/dn016q.webp",
+    imgs: ["assets/products/dn016q.webp", "assets/products/dn016q-2.webp", "assets/products/dn016q-3.webp", "assets/products/dn016q-4.webp"],
+    sizes: [{ label: "160cm", price: 8556 }, { label: "180cm", price: 9167 }, { label: "200cm", price: 10124 }, { label: "220cm", price: 11628 }],
+    desc: "Oak dining table from 160cm to 220cm.",
+    features: [
+      "Oak construction",
+      "Sizes from 160cm to 220cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Oak", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn017q", name: "Console Table (120cm to 160cm)", cat: "Living Room", room: "Living Room", price: 8907, memberPrice: 8016, sku: "SH-10901", tag: "New", ph: "", img: "assets/products/dn017q.webp",
+    imgs: ["assets/products/dn017q.webp", "assets/products/dn017q-2.webp", "assets/products/dn017q-3.webp", "assets/products/dn017q-4.webp"],
+    sizes: [{ label: "120cm", price: 8907 }, { label: "140cm", price: 9976 }, { label: "160cm", price: 10722 }],
+    desc: "A console table from 120cm to 160cm, for a hallway or behind a sofa.",
+    features: [
+      "Sizes from 120cm to 160cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Console Table", "Material": "Mixed", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn018q", name: "Glass Dining Table (80cm to 120cm)", cat: "Living Room", room: "Living Room", price: 9022, memberPrice: 8120, sku: "SH-10902", tag: "New", ph: "", img: "assets/products/dn018q.webp",
+    imgs: ["assets/products/dn018q.webp", "assets/products/dn018q-2.webp", "assets/products/dn018q-3.webp", "assets/products/dn018q-4.webp"],
+    sizes: [{ label: "80cm / 0 x Dining Chairs (table only)", price: 9022 }, { label: "90cm / 0 x Dining Chairs (table only)", price: 9241 }, { label: "100cm / 0 x Dining Chairs (table only)", price: 9678 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 10444 }, { label: "80cm / Table + 2 x Dining Chairs", price: 13837 }, { label: "90cm / Table + 2 x Dining Chairs", price: 14056 }, { label: "100cm / Table + 2 x Dining Chairs", price: 14493 }, { label: "120cm / Table + 2 x Dining Chairs", price: 15259 }, { label: "80cm / Table + 4 x Dining Chairs", price: 18652 }, { label: "90cm / Table + 4 x Dining Chairs", price: 18870 }, { label: "100cm / Table + 4 x Dining Chairs", price: 19307 }, { label: "120cm / Table + 4 x Dining Chairs", price: 20074 }, { label: "80cm / Table + 6 x Dining Chairs", price: 23467 }, { label: "90cm / Table + 6 x Dining Chairs", price: 23685 }, { label: "100cm / Table + 6 x Dining Chairs", price: 24122 }, { label: "120cm / Table + 6 x Dining Chairs", price: 24889 }],
+    desc: "Glass dining table from 80cm to 120cm.",
+    features: [
+      "Glass construction",
+      "Sizes from 80cm to 120cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Glass", "Options": "16", "Room": "Living Room" },
+    care: "Clean with a soft cloth and a mild glass cleaner. Lift rather than drag when moving, and avoid knocking the edges, which is where glass chips." },
+
+  { id: "dn019q", name: "Slate Dining Table (140cm to 180cm)", cat: "Living Room", room: "Living Room", price: 9167, memberPrice: 8250, sku: "SH-10903", tag: "New", ph: "", img: "assets/products/dn019q.webp",
+    imgs: ["assets/products/dn019q.webp", "assets/products/dn019q-2.webp", "assets/products/dn019q-3.webp", "assets/products/dn019q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 9167 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 10500 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 12769 }, { label: "140cm / Table + 2 x Dining Chairs", price: 14352 }, { label: "160cm / Table + 2 x Dining Chairs", price: 15685 }, { label: "180cm / Table + 2 x Dining Chairs", price: 17954 }, { label: "140cm / Table + 4 x Dining Chairs", price: 19537 }, { label: "160cm / Table + 4 x Dining Chairs", price: 20870 }, { label: "180cm / Table + 4 x Dining Chairs", price: 23139 }, { label: "140cm / Table + 6 x Dining Chairs", price: 24722 }, { label: "160cm / Table + 6 x Dining Chairs", price: 26056 }, { label: "180cm / Table + 6 x Dining Chairs", price: 28324 }],
+    desc: "Slate dining table from 140cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 140cm to 180cm",
+      "12 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "12", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn020q", name: "Glass Dining Table (180cm to 260cm)", cat: "Living Room", room: "Living Room", price: 9406, memberPrice: 8465, sku: "SH-10904", tag: "New", ph: "", img: "assets/products/dn020q.webp",
+    imgs: ["assets/products/dn020q.webp", "assets/products/dn020q-2.webp", "assets/products/dn020q-3.webp", "assets/products/dn020q-4.webp"],
+    sizes: [{ label: "180cm / 0 x Dining Chairs (table only)", price: 9406 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 9959 }, { label: "220cm / 0 x Dining Chairs (table only)", price: 10813 }, { label: "240cm / 0 x Dining Chairs (table only)", price: 11287 }, { label: "180cm / Table + 2 x Dining Chairs", price: 11506 }, { label: "260cm / 0 x Dining Chairs (table only)", price: 11656 }, { label: "200cm / Table + 2 x Dining Chairs", price: 12059 }, { label: "220cm / Table + 2 x Dining Chairs", price: 12913 }, { label: "240cm / Table + 2 x Dining Chairs", price: 13387 }, { label: "180cm / Table + 4 x Dining Chairs", price: 13606 }, { label: "260cm / Table + 2 x Dining Chairs", price: 13756 }, { label: "200cm / Table + 4 x Dining Chairs", price: 14159 }, { label: "220cm / Table + 4 x Dining Chairs", price: 15013 }, { label: "240cm / Table + 4 x Dining Chairs", price: 15487 }, { label: "180cm / Table + 6 x Dining Chairs", price: 15706 }, { label: "260cm / Table + 4 x Dining Chairs", price: 15856 }, { label: "200cm / Table + 6 x Dining Chairs", price: 16259 }, { label: "220cm / Table + 6 x Dining Chairs", price: 17113 }, { label: "240cm / Table + 6 x Dining Chairs", price: 17587 }, { label: "180cm / Table + 8 x Dining Chairs", price: 17806 }, { label: "260cm / Table + 6 x Dining Chairs", price: 17956 }, { label: "200cm / Table + 8 x Dining Chairs", price: 18359 }, { label: "220cm / Table + 8 x Dining Chairs", price: 19213 }, { label: "240cm / Table + 8 x Dining Chairs", price: 19687 }, { label: "260cm / Table + 8 x Dining Chairs", price: 20056 }],
+    desc: "Glass dining table from 180cm to 260cm.",
+    features: [
+      "Glass construction",
+      "Sizes from 180cm to 260cm",
+      "25 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Glass", "Options": "25", "Room": "Living Room" },
+    care: "Clean with a soft cloth and a mild glass cleaner. Lift rather than drag when moving, and avoid knocking the edges, which is where glass chips." },
+
+  { id: "dn021q", name: "Slate Dining Table (80cm to 150cm)", cat: "Living Room", room: "Living Room", price: 9781, memberPrice: 8803, sku: "SH-10905", tag: "New", ph: "", img: "assets/products/dn021q.webp",
+    imgs: ["assets/products/dn021q.webp", "assets/products/dn021q-2.webp", "assets/products/dn021q-3.webp", "assets/products/dn021q-4.webp"],
+    sizes: [{ label: "80cm / 0 x Dining Chairs (table only)", price: 9781 }, { label: "90cm / 0 x Dining Chairs (table only)", price: 10370 }, { label: "100cm / 0 x Dining Chairs (table only)", price: 11944 }, { label: "110cm / 0 x Dining Chairs (table only)", price: 12515 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 13404 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 14407 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 15000 }, { label: "80cm / Table + 2 x Dining Chairs", price: 15337 }, { label: "90cm / Table + 2 x Dining Chairs", price: 15926 }, { label: "100cm / Table + 2 x Dining Chairs", price: 17500 }, { label: "110cm / Table + 2 x Dining Chairs", price: 18070 }, { label: "120cm / Table + 2 x Dining Chairs", price: 18959 }, { label: "130cm / Table + 2 x Dining Chairs", price: 19963 }, { label: "150cm / Table + 2 x Dining Chairs", price: 20556 }, { label: "80cm / Table + 4 x Dining Chairs", price: 20893 }, { label: "90cm / Table + 4 x Dining Chairs", price: 21481 }, { label: "100cm / Table + 4 x Dining Chairs", price: 23056 }, { label: "110cm / Table + 4 x Dining Chairs", price: 23626 }, { label: "120cm / Table + 4 x Dining Chairs", price: 24515 }, { label: "130cm / Table + 4 x Dining Chairs", price: 25519 }, { label: "150cm / Table + 4 x Dining Chairs", price: 26111 }, { label: "80cm / Table + 6 x Dining Chairs", price: 26448 }, { label: "90cm / Table + 6 x Dining Chairs", price: 27037 }, { label: "100cm / Table + 6 x Dining Chairs", price: 28611 }, { label: "110cm / Table + 6 x Dining Chairs", price: 29181 }, { label: "120cm / Table + 6 x Dining Chairs", price: 30070 }, { label: "130cm / Table + 6 x Dining Chairs", price: 31074 }, { label: "150cm / Table + 6 x Dining Chairs", price: 31667 }],
+    desc: "Slate dining table from 80cm to 150cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 80cm to 150cm",
+      "28 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "28", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn022q", name: "Slate Dining Table (120cm to 200cm)", cat: "Living Room", room: "Living Room", price: 10294, memberPrice: 9265, sku: "SH-10906", tag: "New", ph: "", img: "assets/products/dn022q.webp",
+    imgs: ["assets/products/dn022q.webp", "assets/products/dn022q-2.webp", "assets/products/dn022q-3.webp", "assets/products/dn022q-4.webp"],
+    sizes: [{ label: "120cm", price: 10294 }, { label: "140cm", price: 10919 }, { label: "160cm", price: 11439 }, { label: "180cm", price: 11809 }, { label: "200cm", price: 12776 }],
+    desc: "Slate dining table from 120cm to 200cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 120cm to 200cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "5", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn023q", name: "Marble Dining Table (25 options)", cat: "Living Room", room: "Living Room", price: 10504, memberPrice: 9454, sku: "SH-10907", tag: "New", ph: "", img: "assets/products/dn023q.webp",
+    imgs: ["assets/products/dn023q.webp", "assets/products/dn023q-2.webp", "assets/products/dn023q-3.webp", "assets/products/dn023q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 10504 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 11148 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 11791 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 12963 }, { label: "240cm / 0 x Dining Chairs (table only)", price: 13796 }, { label: "140cm / Table + 2 x Dining Chairs", price: 16059 }, { label: "160cm / Table + 2 x Dining Chairs", price: 16704 }, { label: "180cm / Table + 2 x Dining Chairs", price: 17346 }, { label: "200cm / Table + 2 x Dining Chairs", price: 18519 }, { label: "240cm / Table + 2 x Dining Chairs", price: 19352 }, { label: "140cm / Table + 4 x Dining Chairs", price: 21615 }, { label: "160cm / Table + 4 x Dining Chairs", price: 22259 }, { label: "180cm / Table + 4 x Dining Chairs", price: 22902 }, { label: "200cm / Table + 4 x Dining Chairs", price: 24074 }, { label: "240cm / Table + 4 x Dining Chairs", price: 24907 }, { label: "140cm / Table + 6 x Dining Chairs", price: 27170 }, { label: "160cm / Table + 6 x Dining Chairs", price: 27815 }, { label: "180cm / Table + 6 x Dining Chairs", price: 28457 }, { label: "200cm / Table + 6 x Dining Chairs", price: 29630 }, { label: "240cm / Table + 6 x Dining Chairs", price: 30463 }, { label: "140cm / Table + 8 x Dining Chairs", price: 32726 }, { label: "160cm / Table + 8 x Dining Chairs", price: 33370 }, { label: "180cm / Table + 8 x Dining Chairs", price: 34013 }, { label: "200cm / Table + 8 x Dining Chairs", price: 35185 }, { label: "240cm / Table + 8 x Dining Chairs", price: 36019 }],
+    desc: "Marble dining table from 140cm to 240cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 240cm",
+      "25 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "25", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "dn024q", name: "Slate Dining Table (2 options)", cat: "Living Room", room: "Living Room", price: 10593, memberPrice: 9534, sku: "SH-10908", tag: "New", ph: "", img: "assets/products/dn024q.webp",
+    imgs: ["assets/products/dn024q.webp", "assets/products/dn024q-2.webp", "assets/products/dn024q-3.webp", "assets/products/dn024q-4.webp"],
+    sizes: [{ label: "160cm", price: 10593 }, { label: "180cm", price: 11074 }],
+    desc: "Slate dining table from 160cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 160cm to 180cm",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "2", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn025q", name: "Marble Dining Table (140cm to 200cm)", cat: "Living Room", room: "Living Room", price: 10920, memberPrice: 9828, sku: "SH-10909", tag: "New", ph: "", img: "assets/products/dn025q.webp",
+    imgs: ["assets/products/dn025q.webp", "assets/products/dn025q-2.webp", "assets/products/dn025q-3.webp", "assets/products/dn025q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chair (table only)", price: 10920 }, { label: "160cm / 0 x Dining Chair (table only)", price: 11107 }, { label: "180cm / 0 x Dining Chair (table only)", price: 11341 }, { label: "200cm / 0 x Dining Chair (table only)", price: 14294 }, { label: "140cm / Table + 2 x Dining Chairs", price: 16476 }, { label: "160cm / Table + 2 x Dining Chairs", price: 16663 }, { label: "180cm / Table + 2 x Dining Chairs", price: 16896 }, { label: "200cm / Table + 2 x Dining Chairs", price: 19850 }, { label: "140cm / Table + 4 x Dining Chairs", price: 22031 }, { label: "160cm / Table + 4 x Dining Chairs", price: 22219 }, { label: "180cm / Table + 4 x Dining Chairs", price: 22452 }, { label: "200cm / Table + 4 x Dining Chairs", price: 25406 }, { label: "140cm / Table + 6 x Dining Chairs", price: 27587 }, { label: "160cm / Table + 6 x Dining Chairs", price: 27774 }, { label: "180cm / Table + 6 x Dining Chairs", price: 28007 }, { label: "200cm / Table + 6 x Dining Chairs", price: 30961 }],
+    desc: "Marble dining table from 140cm to 200cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 200cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "16", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "dn026q", name: "Marble Dining Table (16 options)", cat: "Living Room", room: "Living Room", price: 10954, memberPrice: 9859, sku: "SH-10910", tag: "New", ph: "", img: "assets/products/dn026q.webp",
+    imgs: ["assets/products/dn026q.webp", "assets/products/dn026q-2.webp", "assets/products/dn026q-3.webp", "assets/products/dn026q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 10954 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 11407 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 12026 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 13098 }, { label: "140cm / Table + 2 x Dining Chairs", price: 16509 }, { label: "160cm / Table + 2 x Dining Chairs", price: 16963 }, { label: "180cm / Table + 2 x Dining Chairs", price: 17581 }, { label: "200cm / Table + 2 x Dining Chairs", price: 18654 }, { label: "140cm / Table + 4 x Dining Chairs", price: 22065 }, { label: "160cm / Table + 4 x Dining Chairs", price: 22519 }, { label: "180cm / Table + 4 x Dining Chairs", price: 23137 }, { label: "200cm / Table + 4 x Dining Chairs", price: 24209 }, { label: "140cm / Table + 6 x Dining Chairs", price: 27620 }, { label: "160cm / Table + 6 x Dining Chairs", price: 28074 }, { label: "180cm / Table + 6 x Dining Chairs", price: 28693 }, { label: "200cm / Table + 6 x Dining Chairs", price: 29765 }],
+    desc: "Marble dining table from 140cm to 200cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 200cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "16", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "dn027q", name: "Slate Dining Table (100cm to 150cm)", cat: "Living Room", room: "Living Room", price: 11106, memberPrice: 9995, sku: "SH-10911", tag: "New", ph: "", img: "assets/products/dn027q.webp",
+    imgs: ["assets/products/dn027q.webp", "assets/products/dn027q-2.webp", "assets/products/dn027q-3.webp", "assets/products/dn027q-4.webp"],
+    sizes: [{ label: "100cm / 0 x Dining Chairs (table only)", price: 11106 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 12528 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 13439 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 14259 }, { label: "100cm / Table + 2 x Dining Chairs", price: 18057 }, { label: "120cm / Table + 2 x Dining Chairs", price: 19146 }, { label: "130cm / Table + 2 x Dining Chairs", price: 20057 }, { label: "150cm / Table + 2 x Dining Chairs", price: 20878 }, { label: "100cm / Table + 4 x Dining Chairs", price: 24343 }, { label: "120cm / Table + 4 x Dining Chairs", price: 25765 }, { label: "130cm / Table + 4 x Dining Chairs", price: 26676 }, { label: "150cm / Table + 4 x Dining Chairs", price: 27496 }, { label: "100cm / Table + 6 x Dining Chairs", price: 30928 }, { label: "120cm / Table + 6 x Dining Chairs", price: 32350 }, { label: "130cm / Table + 6 x Dining Chairs", price: 33261 }, { label: "150cm / Table + 6 x Dining Chairs", price: 34081 }, { label: "100cm / Table + 8 x Dining Chairs", price: 37580 }, { label: "120cm / Table + 8 x Dining Chairs", price: 39002 }, { label: "130cm / Table + 8 x Dining Chairs", price: 39913 }, { label: "150cm / Table + 8 x Dining Chairs", price: 40733 }],
+    desc: "Slate dining table from 100cm to 150cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 100cm to 150cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "20", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn028q", name: "Slate Dining Table (16 options)", cat: "Living Room", room: "Living Room", price: 11315, memberPrice: 10184, sku: "SH-10912", tag: "New", ph: "", img: "assets/products/dn028q.webp",
+    imgs: ["assets/products/dn028q.webp", "assets/products/dn028q-2.webp", "assets/products/dn028q-3.webp", "assets/products/dn028q-4.webp"],
+    sizes: [{ label: "110cm / 0 x Dining Chairs (table only)", price: 11315 }, { label: "120cm / 0 x Dining Chairs (table only)", price: 12167 }, { label: "130cm / 0 x Dining Chairs (table only)", price: 13037 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 14233 }, { label: "110cm / Table + 2 x Dining Chairs", price: 16500 }, { label: "120cm / Table + 2 x Dining Chairs", price: 17352 }, { label: "130cm / Table + 2 x Dining Chairs", price: 18222 }, { label: "150cm / Table + 2 x Dining Chairs", price: 19419 }, { label: "110cm / Table + 4 x Dining Chairs", price: 21685 }, { label: "120cm / Table + 4 x Dining Chairs", price: 22537 }, { label: "130cm / Table + 4 x Dining Chairs", price: 23407 }, { label: "150cm / Table + 4 x Dining Chairs", price: 24604 }, { label: "110cm / Table + 6 x Dining Chairs", price: 26870 }, { label: "120cm / Table + 6 x Dining Chairs", price: 27722 }, { label: "130cm / Table + 6 x Dining Chairs", price: 28593 }, { label: "150cm / Table + 6 x Dining Chairs", price: 29789 }],
+    desc: "Slate dining table from 110cm to 150cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 110cm to 150cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "16", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn029q", name: "Leather Dining Table (20 options)", cat: "Living Room", room: "Living Room", price: 11470, memberPrice: 10323, sku: "SH-10913", tag: "New", ph: "", img: "assets/products/dn029q.webp",
+    imgs: ["assets/products/dn029q.webp", "assets/products/dn029q-2.webp", "assets/products/dn029q-3.webp", "assets/products/dn029q-4.webp"],
+    sizes: [{ label: "130cm / 0 x Dining Chairs (table only)", price: 11470 }, { label: "140cm / 0 x Dining Chairs (table only)", price: 11915 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 12919 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 13600 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 14744 }, { label: "130cm / Table + 2 x Dining Chairs", price: 16656 }, { label: "140cm / Table + 2 x Dining Chairs", price: 17100 }, { label: "150cm / Table + 2 x Dining Chairs", price: 18104 }, { label: "160cm / Table + 2 x Dining Chairs", price: 18785 }, { label: "180cm / Table + 2 x Dining Chairs", price: 19930 }, { label: "130cm / Table + 4 x Dining Chairs", price: 21841 }, { label: "140cm / Table + 4 x Dining Chairs", price: 22285 }, { label: "150cm / Table + 4 x Dining Chairs", price: 23289 }, { label: "160cm / Table + 4 x Dining Chairs", price: 23970 }, { label: "180cm / Table + 4 x Dining Chairs", price: 25115 }, { label: "130cm / Table + 6 x Dining Chairs", price: 27026 }, { label: "140cm / Table + 6 x Dining Chairs", price: 27470 }, { label: "150cm / Table + 6 x Dining Chairs", price: 28474 }, { label: "160cm / Table + 6 x Dining Chairs", price: 29156 }, { label: "180cm / Table + 6 x Dining Chairs", price: 30300 }],
+    desc: "Leather dining table from 130cm to 180cm.",
+    features: [
+      "Leather construction",
+      "Sizes from 130cm to 180cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Leather", "Options": "20", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "dn030q", name: "Timber Dining Table (110cm to 150cm)", cat: "Living Room", room: "Living Room", price: 11807, memberPrice: 10626, sku: "SH-10914", tag: "New", ph: "", img: "assets/products/dn030q.webp",
+    imgs: ["assets/products/dn030q.webp", "assets/products/dn030q-2.webp", "assets/products/dn030q-3.webp", "assets/products/dn030q-4.webp"],
+    sizes: [{ label: "110cm / 0 x Dining Chair (table only)", price: 11807 }, { label: "120cm / 0 x Dining Chair (table only)", price: 12185 }, { label: "130cm / 0 x Dining Chair (table only)", price: 13459 }, { label: "150cm / 0 x Dining Chair (table only)", price: 16222 }, { label: "110cm / Table + 2 x Dining Chairs", price: 16252 }, { label: "120cm / Table + 2 x Dining Chairs", price: 16630 }, { label: "130cm / Table + 2 x Dining Chairs", price: 17904 }, { label: "150cm / Table + 2 x Dining Chairs", price: 20667 }, { label: "110cm / Table + 4 x Dining Chairs", price: 20696 }, { label: "120cm / Table + 4 x Dining Chairs", price: 21074 }, { label: "130cm / Table + 4 x Dining Chairs", price: 22348 }, { label: "150cm / Table + 4 x Dining Chairs", price: 25111 }, { label: "110cm / Table + 6 x Dining Chairs", price: 25141 }, { label: "120cm / Table + 6 x Dining Chairs", price: 25519 }, { label: "130cm / Table + 6 x Dining Chairs", price: 26793 }, { label: "150cm / Table + 6 x Dining Chairs", price: 29556 }],
+    desc: "Timber dining table from 110cm to 150cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 110cm to 150cm",
+      "16 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "16", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn031q", name: "Slate Dining Table (Gold / Silver)", cat: "Living Room", room: "Living Room", price: 12289, memberPrice: 11060, sku: "SH-10915", tag: "New", ph: "", img: "assets/products/dn031q.webp",
+    imgs: ["assets/products/dn031q.webp", "assets/products/dn031q-2.webp", "assets/products/dn031q-3.webp", "assets/products/dn031q-4.webp"],
+    sizes: [{ label: "Gold / 130cm / 0 x Dining Chairs (table only)", price: 12289 }, { label: "Silver / 130cm / 0 x Dining Chairs (table only)", price: 12289 }, { label: "Gold / 140cm / 0 x Dining Chairs (table only)", price: 12811 }, { label: "Silver / 140cm / 0 x Dining Chairs (table only)", price: 12811 }, { label: "Gold / 150cm / 0 x Dining Chairs (table only)", price: 13252 }, { label: "Silver / 150cm / 0 x Dining Chairs (table only)", price: 13252 }, { label: "Gold / 160cm / 0 x Dining Chairs (table only)", price: 13943 }, { label: "Silver / 160cm / 0 x Dining Chairs (table only)", price: 13943 }, { label: "Gold / 180cm / 0 x Dining Chairs (table only)", price: 14811 }, { label: "Silver / 180cm / 0 x Dining Chairs (table only)", price: 14811 }, { label: "Gold / 130cm / Table + 2 x Dining Chairs", price: 17844 }, { label: "Silver / 130cm / Table + 2 x Dining Chairs", price: 17844 }, { label: "Gold / 140cm / Table + 2 x Dining Chairs", price: 18367 }, { label: "Silver / 140cm / Table + 2 x Dining Chairs", price: 18367 }, { label: "Gold / 150cm / Table + 2 x Dining Chairs", price: 18807 }, { label: "Silver / 150cm / Table + 2 x Dining Chairs", price: 18807 }, { label: "Gold / 160cm / Table + 2 x Dining Chairs", price: 19498 }, { label: "Silver / 160cm / Table + 2 x Dining Chairs", price: 19498 }, { label: "Gold / 180cm / Table + 2 x Dining Chairs", price: 20367 }, { label: "Silver / 180cm / Table + 2 x Dining Chairs", price: 20367 }, { label: "Gold / 130cm / Table + 4 x Dining Chairs", price: 23400 }, { label: "Silver / 130cm / Table + 4 x Dining Chairs", price: 23400 }, { label: "Gold / 140cm / Table + 4 x Dining Chairs", price: 23922 }, { label: "Silver / 140cm / Table + 4 x Dining Chairs", price: 23922 }, { label: "Gold / 150cm / Table + 4 x Dining Chairs", price: 24363 }, { label: "Silver / 150cm / Table + 4 x Dining Chairs", price: 24363 }, { label: "Gold / 160cm / Table + 4 x Dining Chairs", price: 25054 }, { label: "Silver / 160cm / Table + 4 x Dining Chairs", price: 25054 }, { label: "Gold / 180cm / Table + 4 x Dining Chairs", price: 25922 }, { label: "Silver / 180cm / Table + 4 x Dining Chairs", price: 25922 }, { label: "Gold / 130cm / Table + 6 x Dining Chairs", price: 28956 }, { label: "Silver / 130cm / Table + 6 x Dining Chairs", price: 28956 }, { label: "Gold / 140cm / Table + 6 x Dining Chairs", price: 29478 }, { label: "Silver / 140cm / Table + 6 x Dining Chairs", price: 29478 }, { label: "Gold / 150cm / Table + 6 x Dining Chairs", price: 29919 }, { label: "Silver / 150cm / Table + 6 x Dining Chairs", price: 29919 }, { label: "Gold / 160cm / Table + 6 x Dining Chairs", price: 30609 }, { label: "Silver / 160cm / Table + 6 x Dining Chairs", price: 30609 }, { label: "Gold / 180cm / Table + 6 x Dining Chairs", price: 31478 }, { label: "Silver / 180cm / Table + 6 x Dining Chairs", price: 31478 }],
+    desc: "Slate dining table from 130cm to 180cm. In Gold or Silver.",
+    features: [
+      "Slate construction",
+      "Sizes from 130cm to 180cm",
+      "Gold, Silver colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "40", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn032q", name: "Slate Dining Table (120cm to 150cm)", cat: "Living Room", room: "Living Room", price: 12315, memberPrice: 11084, sku: "SH-10916", tag: "New", ph: "", img: "assets/products/dn032q.webp",
+    imgs: ["assets/products/dn032q.webp", "assets/products/dn032q-2.webp", "assets/products/dn032q-3.webp", "assets/products/dn032q-4.webp"],
+    sizes: [{ label: "120cm / 0 x Dining Chairs (table only)", price: 12315 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 12941 }, { label: "120cm / Table + 2 x Dining Chairs", price: 17870 }, { label: "150cm / Table + 2 x Dining Chairs", price: 18496 }, { label: "120cm / Table + 4 x Dining Chairs", price: 23426 }, { label: "150cm / Table + 4 x Dining Chairs", price: 24052 }, { label: "120cm / Table + 6 x Dining Chairs", price: 28981 }, { label: "150cm / Table + 6 x Dining Chairs", price: 29607 }],
+    desc: "Slate dining table from 120cm to 150cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 120cm to 150cm",
+      "8 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "8", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn033q", name: "Slate Dining Table (90cm to 150cm)", cat: "Living Room", room: "Living Room", price: 12467, memberPrice: 11220, sku: "SH-10917", tag: "New", ph: "", img: "assets/products/dn033q.webp",
+    imgs: ["assets/products/dn033q.webp", "assets/products/dn033q-2.webp", "assets/products/dn033q-3.webp", "assets/products/dn033q-4.webp"],
+    sizes: [{ label: "Tan / 90cm / 0 x Dining Chair (table only)", price: 12467 }, { label: "Dark Tan / 90cm / 0 x Dining Chair (table only)", price: 12467 }, { label: "Black / 90cm / 0 x Dining Chair (table only)", price: 12467 }, { label: "Tan / 100cm / 0 x Dining Chair (table only)", price: 13359 }, { label: "Dark Tan / 100cm / 0 x Dining Chair (table only)", price: 13359 }, { label: "Black / 100cm / 0 x Dining Chair (table only)", price: 13359 }, { label: "Tan / 110cm / 0 x Dining Chair (table only)", price: 13626 }, { label: "Dark Tan / 110cm / 0 x Dining Chair (table only)", price: 13626 }, { label: "Black / 110cm / 0 x Dining Chair (table only)", price: 13626 }, { label: "Tan / 120cm / 0 x Dining Chair (table only)", price: 14341 }, { label: "Dark Tan / 120cm / 0 x Dining Chair (table only)", price: 14341 }, { label: "Black / 120cm / 0 x Dining Chair (table only)", price: 14341 }, { label: "Tan / 130cm / 0 x Dining Chair (table only)", price: 15404 }, { label: "Dark Tan / 130cm / 0 x Dining Chair (table only)", price: 15404 }, { label: "Black / 130cm / 0 x Dining Chair (table only)", price: 15404 }, { label: "Tan / 150cm / 0 x Dining Chair (table only)", price: 16230 }, { label: "Dark Tan / 150cm / 0 x Dining Chair (table only)", price: 16230 }, { label: "Black / 150cm / 0 x Dining Chair (table only)", price: 16230 }, { label: "Tan / 90cm / Table + 2 x Dining Chairs", price: 17281 }, { label: "Dark Tan / 90cm / Table + 2 x Dining Chairs", price: 17281 }, { label: "Black / 90cm / Table + 2 x Dining Chairs", price: 17281 }, { label: "Tan / 100cm / Table + 2 x Dining Chairs", price: 18174 }, { label: "Dark Tan / 100cm / Table + 2 x Dining Chairs", price: 18174 }, { label: "Black / 100cm / Table + 2 x Dining Chairs", price: 18174 }, { label: "Tan / 110cm / Table + 2 x Dining Chairs", price: 18441 }, { label: "Dark Tan / 110cm / Table + 2 x Dining Chairs", price: 18441 }, { label: "Black / 110cm / Table + 2 x Dining Chairs", price: 18441 }, { label: "Tan / 120cm / Table + 2 x Dining Chairs", price: 19156 }, { label: "Dark Tan / 120cm / Table + 2 x Dining Chairs", price: 19156 }, { label: "Black / 120cm / Table + 2 x Dining Chairs", price: 19156 }, { label: "Tan / 130cm / Table + 2 x Dining Chairs", price: 20219 }, { label: "Dark Tan / 130cm / Table + 2 x Dining Chairs", price: 20219 }, { label: "Black / 130cm / Table + 2 x Dining Chairs", price: 20219 }, { label: "Tan / 150cm / Table + 2 x Dining Chairs", price: 21044 }, { label: "Dark Tan / 150cm / Table + 2 x Dining Chairs", price: 21044 }, { label: "Black / 150cm / Table + 2 x Dining Chairs", price: 21044 }, { label: "Tan / 90cm / Table + 4 x Dining Chairs", price: 22096 }, { label: "Dark Tan / 90cm / Table + 4 x Dining Chairs", price: 22096 }, { label: "Black / 90cm / Table + 4 x Dining Chairs", price: 22096 }, { label: "Tan / 100cm / Table + 4 x Dining Chairs", price: 22989 }, { label: "Dark Tan / 100cm / Table + 4 x Dining Chairs", price: 22989 }, { label: "Black / 100cm / Table + 4 x Dining Chairs", price: 22989 }, { label: "Tan / 110cm / Table + 4 x Dining Chairs", price: 23256 }, { label: "Dark Tan / 110cm / Table + 4 x Dining Chairs", price: 23256 }, { label: "Black / 110cm / Table + 4 x Dining Chairs", price: 23256 }, { label: "Tan / 120cm / Table + 4 x Dining Chairs", price: 23970 }, { label: "Dark Tan / 120cm / Table + 4 x Dining Chairs", price: 23970 }, { label: "Black / 120cm / Table + 4 x Dining Chairs", price: 23970 }, { label: "Tan / 130cm / Table + 4 x Dining Chairs", price: 25033 }, { label: "Dark Tan / 130cm / Table + 4 x Dining Chairs", price: 25033 }, { label: "Black / 130cm / Table + 4 x Dining Chairs", price: 25033 }, { label: "Tan / 150cm / Table + 4 x Dining Chairs", price: 25859 }, { label: "Dark Tan / 150cm / Table + 4 x Dining Chairs", price: 25859 }, { label: "Black / 150cm / Table + 4 x Dining Chairs", price: 25859 }, { label: "Tan / 90cm / Table + 6 x Dining Chairs", price: 26911 }, { label: "Dark Tan / 90cm / Table + 6 x Dining Chairs", price: 26911 }, { label: "Black / 90cm / Table + 6 x Dining Chairs", price: 26911 }, { label: "Tan / 100cm / Table + 6 x Dining Chairs", price: 27804 }, { label: "Dark Tan / 100cm / Table + 6 x Dining Chairs", price: 27804 }, { label: "Black / 100cm / Table + 6 x Dining Chairs", price: 27804 }, { label: "Tan / 110cm / Table + 6 x Dining Chairs", price: 28120 }, { label: "Dark Tan / 110cm / Table + 6 x Dining Chairs", price: 28120 }, { label: "Black / 110cm / Table + 6 x Dining Chairs", price: 28120 }, { label: "Tan / 120cm / Table + 6 x Dining Chairs", price: 28785 }, { label: "Dark Tan / 120cm / Table + 6 x Dining Chairs", price: 28785 }, { label: "Black / 120cm / Table + 6 x Dining Chairs", price: 28785 }, { label: "Tan / 130cm / Table + 6 x Dining Chairs", price: 29848 }, { label: "Dark Tan / 130cm / Table + 6 x Dining Chairs", price: 29848 }, { label: "Black / 130cm / Table + 6 x Dining Chairs", price: 29848 }, { label: "Tan / 150cm / Table + 6 x Dining Chairs", price: 30674 }, { label: "Dark Tan / 150cm / Table + 6 x Dining Chairs", price: 30674 }, { label: "Black / 150cm / Table + 6 x Dining Chairs", price: 30674 }],
+    desc: "Slate dining table from 90cm to 150cm. In Black or Tan.",
+    features: [
+      "Slate construction",
+      "Sizes from 90cm to 150cm",
+      "Black, Tan colourways"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "72", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn034q", name: "Slate Dining Table (20 options)", cat: "Living Room", room: "Living Room", price: 12593, memberPrice: 11334, sku: "SH-10918", tag: "New", ph: "", img: "assets/products/dn034q.webp",
+    imgs: ["assets/products/dn034q.webp", "assets/products/dn034q-2.webp", "assets/products/dn034q-3.webp", "assets/products/dn034q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 12593 }, { label: "150cm / 0 x Dining Chairs (table only)", price: 12907 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 14167 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 16459 }, { label: "140cm / Table + 2 x Dining Chairs", price: 17778 }, { label: "150cm / Table + 2 x Dining Chairs", price: 18093 }, { label: "160cm / Table + 2 x Dining Chairs", price: 19352 }, { label: "180cm / Table + 2 x Dining Chairs", price: 21644 }, { label: "140cm / Table + 4 x Dining Chairs", price: 22963 }, { label: "150cm / Table + 4 x Dining Chairs", price: 23281 }, { label: "160cm / Table + 4 x Dining Chairs", price: 24537 }, { label: "180cm / Table + 4 x Dining Chairs", price: 26830 }, { label: "140cm / Table + 6 x Dining Chairs", price: 28148 }, { label: "150cm / Table + 6 x Dining Chairs", price: 28463 }, { label: "160cm / Table + 6 x Dining Chairs", price: 29722 }, { label: "180cm / Table + 6 x Dining Chairs", price: 32015 }, { label: "140cm / Table + 8 x Dining Chairs", price: 33333 }, { label: "150cm / Table + 8 x Dining Chairs", price: 33648 }, { label: "160cm / Table + 8 x Dining Chairs", price: 34907 }, { label: "180cm / Table + 8 x Dining Chairs", price: 37200 }],
+    desc: "Slate dining table from 140cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 140cm to 180cm",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Slate", "Options": "20", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "dn035q", name: "Marble Dining Table (160cm to 240cm)", cat: "Living Room", room: "Living Room", price: 14600, memberPrice: 13140, sku: "SH-10919", tag: "New", ph: "", img: "assets/products/dn035q.webp",
+    imgs: ["assets/products/dn035q.webp", "assets/products/dn035q-2.webp", "assets/products/dn035q-3.webp", "assets/products/dn035q-4.webp"],
+    sizes: [{ label: "160cm / 0 x Dining Chairs (table only)", price: 14600 }, { label: "160cm / Table + 2 x Dining Chairs", price: 15156 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 15356 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 16722 }, { label: "220cm / 0 x Dining Chairs (table only)", price: 18287 }, { label: "240cm / 0 x Dining Chairs (table only)", price: 18889 }, { label: "180cm / Table + 2 x Dining Chairs", price: 20911 }, { label: "200cm / Table + 2 x Dining Chairs", price: 22278 }, { label: "220cm / Table + 2 x Dining Chairs", price: 23843 }, { label: "240cm / Table + 2 x Dining Chairs", price: 24444 }, { label: "160cm / Table + 4 x Dining Chairs", price: 25711 }, { label: "180cm / Table + 4 x Dining Chairs", price: 26467 }, { label: "200cm / Table + 4 x Dining Chairs", price: 27833 }, { label: "220cm / Table + 4 x Dining Chairs", price: 29398 }, { label: "240cm / Table + 4 x Dining Chairs", price: 30000 }, { label: "160cm / Table + 6 x Dining Chairs", price: 31267 }, { label: "180cm / Table + 6 x Dining Chairs", price: 32022 }, { label: "200cm / Table + 6 x Dining Chairs", price: 33389 }, { label: "220cm / Table + 6 x Dining Chairs", price: 34954 }, { label: "240cm / Table + 6 x Dining Chairs", price: 35556 }, { label: "160cm / Table + 8 x Dining Chairs", price: 36822 }, { label: "180cm / Table + 8 x Dining Chairs", price: 37578 }, { label: "200cm / Table + 8 x Dining Chairs", price: 38944 }, { label: "220cm / Table + 8 x Dining Chairs", price: 40509 }, { label: "240cm / Table + 8 x Dining Chairs", price: 41111 }],
+    desc: "Marble dining table from 160cm to 240cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 160cm to 240cm",
+      "25 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "25", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "dn036q", name: "Timber Dining Table (140cm to 280cm)", cat: "Living Room", room: "Living Room", price: 14628, memberPrice: 13165, sku: "SH-10920", tag: "New", ph: "", img: "assets/products/dn036q.webp",
+    imgs: ["assets/products/dn036q.webp", "assets/products/dn036q-2.webp", "assets/products/dn036q-3.webp", "assets/products/dn036q-4.webp"],
+    sizes: [{ label: "140cm / 0 x Dining Chairs (table only)", price: 14628 }, { label: "160cm / 0 x Dining Chairs (table only)", price: 16056 }, { label: "180cm / 0 x Dining Chairs (table only)", price: 18148 }, { label: "140cm / Table + 2 x Dining Chairs", price: 19072 }, { label: "200cm / 0 x Dining Chairs (table only)", price: 20143 }, { label: "160cm / Table + 2 x Dining Chairs", price: 20500 }, { label: "220cm / 0 x Dining Chairs (table only)", price: 20685 }, { label: "180cm / Table + 2 x Dining Chairs", price: 22593 }, { label: "240cm / 0 x Dining Chairs (table only)", price: 23435 }, { label: "140cm / Table + 4 x Dining Chairs", price: 23517 }, { label: "260cm / 0 x Dining Chairs (table only)", price: 23867 }, { label: "200cm / Table + 2 x Dining Chairs", price: 24587 }, { label: "280cm / 0 x Dining Chairs (table only)", price: 24907 }, { label: "160cm / Table + 4 x Dining Chairs", price: 24944 }, { label: "220cm / Table + 2 x Dining Chairs", price: 25130 }, { label: "180cm / Table + 4 x Dining Chairs", price: 27037 }, { label: "240cm / Table + 2 x Dining Chairs", price: 27880 }, { label: "140cm / Table + 6 x Dining Chairs", price: 27961 }, { label: "260cm / Table + 2 x Dining Chairs", price: 28311 }, { label: "200cm / Table + 4 x Dining Chairs", price: 29031 }, { label: "280cm / Table + 2 x Dining Chairs", price: 29352 }, { label: "160cm / Table + 6 x Dining Chairs", price: 29389 }, { label: "220cm / Table + 4 x Dining Chairs", price: 29574 }, { label: "180cm / Table + 6 x Dining Chairs", price: 31481 }, { label: "240cm / Table + 4 x Dining Chairs", price: 32324 }, { label: "140cm / Table + 8 x Dining Chairs", price: 32406 }, { label: "260cm / Table + 4 x Dining Chairs", price: 32756 }, { label: "200cm / Table + 6 x Dining Chairs", price: 33476 }, { label: "280cm / Table + 4 x Dining Chairs", price: 33796 }, { label: "160cm / Table + 8 x Dining Chairs", price: 33833 }, { label: "220cm / Table + 6 x Dining Chairs", price: 34019 }, { label: "180cm / Table + 8 x Dining Chairs", price: 35926 }, { label: "240cm / Table + 6 x Dining Chairs", price: 36769 }, { label: "260cm / Table + 6 x Dining Chairs", price: 37200 }, { label: "200cm / Table + 8 x Dining Chairs", price: 37920 }, { label: "280cm / Table + 6 x Dining Chairs", price: 38241 }, { label: "220cm / Table + 8 x Dining Chairs", price: 38463 }, { label: "240cm / Table + 8 x Dining Chairs", price: 41213 }, { label: "260cm / Table + 8 x Dining Chairs", price: 41644 }, { label: "280cm / Table + 8 x Dining Chairs", price: 42685 }],
+    desc: "Timber dining table from 140cm to 280cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 140cm to 280cm",
+      "40 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Timber", "Options": "40", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "dn037q", name: "Marble Dining Table (3 options)", cat: "Living Room", room: "Living Room", price: 14628, memberPrice: 13165, sku: "SH-10921", tag: "New", ph: "", img: "assets/products/dn037q.webp",
+    imgs: ["assets/products/dn037q.webp", "assets/products/dn037q-2.webp", "assets/products/dn037q-3.webp", "assets/products/dn037q-4.webp"],
+    sizes: [{ label: "140cm", price: 14628 }, { label: "160cm", price: 16269 }, { label: "180cm", price: 19793 }],
+    desc: "Marble dining table from 140cm to 180cm.",
+    features: [
+      "Marble construction",
+      "Sizes from 140cm to 180cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Dining Table", "Material": "Marble", "Options": "3", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "tv001q", name: "TV Cabinet", cat: "Living Room", room: "Living Room", price: 3300, memberPrice: 2970, sku: "SH-10922", tag: "New", ph: "", img: "assets/products/tv001q.webp",
+    imgs: ["assets/products/tv001q.webp", "assets/products/tv001q-2.webp", "assets/products/tv001q-3.webp", "assets/products/tv001q-4.webp"],
+    sizes: [{ label: "Grey / 160cm", price: 3300 }, { label: "White / 160cm", price: 3300 }, { label: "Grey / 180cm", price: 3559 }, { label: "White / 180cm", price: 3559 }, { label: "Grey / 200cm", price: 3841 }, { label: "White / 200cm", price: 3841 }, { label: "Grey / 220cm", price: 4139 }, { label: "White / 220cm", price: 4139 }, { label: "Grey / 240cm", price: 4420 }, { label: "White / 240cm", price: 4420 }],
+    desc: "A TV cabinet from 160cm to 240cm, with storage for everything that lives under a television. In White or Grey.",
+    features: [
+      "Sizes from 160cm to 240cm",
+      "White, Grey colourways",
+      "10 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "10", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv002q", name: "TV Cabinet (120cm to 240cm)", cat: "Living Room", room: "Living Room", price: 3541, memberPrice: 3187, sku: "SH-10923", tag: "New", ph: "", img: "assets/products/tv002q.webp",
+    imgs: ["assets/products/tv002q.webp", "assets/products/tv002q-2.webp", "assets/products/tv002q-3.webp", "assets/products/tv002q-4.webp"],
+    sizes: [{ label: "120cm / Natural Brown + White", price: 3541 }, { label: "140cm / Natural Brown + White", price: 4176 }, { label: "160cm / Natural Brown + White", price: 4796 }, { label: "180cm / Natural Brown + White", price: 5652 }, { label: "200cm / Natural Brown + White", price: 6217 }, { label: "220cm / Natural Brown + White", price: 6837 }, { label: "240cm / Natural Brown + White", price: 7593 }],
+    desc: "A TV cabinet from 120cm to 240cm, with storage for everything that lives under a television. In White, Brown or Natural.",
+    features: [
+      "Sizes from 120cm to 240cm",
+      "White, Brown, Natural colourways",
+      "7 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "7", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv003q", name: "Timber TV Cabinet", cat: "Living Room", room: "Living Room", price: 4176, memberPrice: 3758, sku: "SH-10924", tag: "New", ph: "", img: "assets/products/tv003q.webp",
+    imgs: ["assets/products/tv003q.webp", "assets/products/tv003q-2.webp", "assets/products/tv003q-3.webp"],
+    sizes: [{ label: "Natural Brown / 120cm", price: 4176 }, { label: "Natural Brown / 150cm", price: 5093 }, { label: "Natural Brown / 180cm", price: 5806 }],
+    desc: "Timber TV cabinet from 120cm to 180cm, with storage for everything that lives under a television. In Brown or Natural.",
+    features: [
+      "Timber construction",
+      "Sizes from 120cm to 180cm",
+      "Brown, Natural colourways"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv004q", name: "TV Cabinet (160cm to 240cm)", cat: "Living Room", room: "Living Room", price: 4730, memberPrice: 4257, sku: "SH-10925", tag: "New", ph: "", img: "assets/products/tv004q.webp",
+    imgs: ["assets/products/tv004q.webp", "assets/products/tv004q-2.webp", "assets/products/tv004q-3.webp", "assets/products/tv004q-4.webp"],
+    sizes: [{ label: "160cm / Off White", price: 4730 }, { label: "160cm / Grey", price: 4730 }, { label: "180cm / Off White", price: 5063 }, { label: "180cm / Grey", price: 5063 }, { label: "200cm / Off White", price: 5530 }, { label: "200cm / Grey", price: 5530 }, { label: "220cm / Off White", price: 6193 }, { label: "220cm / Grey", price: 6193 }, { label: "240cm / Off White", price: 6752 }, { label: "240cm / Grey", price: 6752 }],
+    desc: "A TV cabinet from 160cm to 240cm, with storage for everything that lives under a television. In White, Grey or Off White.",
+    features: [
+      "Sizes from 160cm to 240cm",
+      "White, Grey, Off White colourways",
+      "10 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "10", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv005q", name: "Timber TV Cabinet (160cm to 240cm)", cat: "Living Room", room: "Living Room", price: 5407, memberPrice: 4866, sku: "SH-10926", tag: "New", ph: "", img: "assets/products/tv005q.webp",
+    imgs: ["assets/products/tv005q.webp", "assets/products/tv005q-2.webp", "assets/products/tv005q-3.webp", "assets/products/tv005q-4.webp"],
+    sizes: [{ label: "160cm", price: 5407 }, { label: "180cm", price: 5704 }, { label: "200cm", price: 6481 }, { label: "220cm", price: 6926 }, { label: "240cm", price: 7333 }],
+    desc: "Timber TV cabinet from 160cm to 240cm, with storage for everything that lives under a television.",
+    features: [
+      "Timber construction",
+      "Sizes from 160cm to 240cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "5", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv006q", name: "Timber TV Cabinet (140cm to 200cm)", cat: "Living Room", room: "Living Room", price: 5454, memberPrice: 4909, sku: "SH-10927", tag: "New", ph: "", img: "assets/products/tv006q.webp",
+    imgs: ["assets/products/tv006q.webp", "assets/products/tv006q-2.webp", "assets/products/tv006q-3.webp", "assets/products/tv006q-4.webp"],
+    sizes: [{ label: "140cm", price: 5454 }, { label: "150cm", price: 6650 }, { label: "180cm", price: 7704 }, { label: "200cm", price: 8906 }],
+    desc: "Timber TV cabinet from 140cm to 200cm, with storage for everything that lives under a television.",
+    features: [
+      "Timber construction",
+      "Sizes from 140cm to 200cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv007q", name: "Timber TV Cabinet (180cm to 360cm)", cat: "Living Room", room: "Living Room", price: 5752, memberPrice: 5177, sku: "SH-10928", tag: "New", ph: "", img: "assets/products/tv007q.webp",
+    imgs: ["assets/products/tv007q.webp", "assets/products/tv007q-2.webp", "assets/products/tv007q-3.webp", "assets/products/tv007q-4.webp"],
+    sizes: [{ label: "180cm", price: 5752 }, { label: "200cm", price: 6696 }, { label: "220cm", price: 7270 }, { label: "240cm", price: 7831 }, { label: "300cm", price: 9902 }, { label: "360cm", price: 10765 }],
+    desc: "Timber TV cabinet from 180cm to 360cm, with storage for everything that lives under a television.",
+    features: [
+      "Timber construction",
+      "Sizes from 180cm to 360cm",
+      "6 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "6", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv008q", name: "TV Cabinet (180cm to 300cm)", cat: "Living Room", room: "Living Room", price: 6637, memberPrice: 5973, sku: "SH-10929", tag: "New", ph: "", img: "assets/products/tv008q.webp",
+    imgs: ["assets/products/tv008q.webp", "assets/products/tv008q-2.webp", "assets/products/tv008q-3.webp", "assets/products/tv008q-4.webp"],
+    sizes: [{ label: "180cm / Charcoal Grey", price: 6637 }, { label: "180cm / White", price: 6637 }, { label: "180cm / Brown + Black", price: 6637 }, { label: "180cm / Black", price: 6637 }, { label: "180cm / Brown + White", price: 6637 }, { label: "200cm / Charcoal Grey", price: 7830 }, { label: "200cm / White", price: 7830 }, { label: "200cm / Brown + Black", price: 7830 }, { label: "200cm / Black", price: 7830 }, { label: "200cm / Brown + White", price: 7830 }, { label: "240cm / Charcoal Grey", price: 8833 }, { label: "240cm / White", price: 8833 }, { label: "240cm / Brown + Black", price: 8833 }, { label: "240cm / Black", price: 8833 }, { label: "240cm / Brown + White", price: 8833 }, { label: "300cm / Charcoal Grey", price: 9778 }, { label: "300cm / White", price: 9778 }, { label: "300cm / Brown + Black", price: 9778 }, { label: "300cm / Black", price: 9778 }, { label: "300cm / Brown + White", price: 9778 }],
+    desc: "A TV cabinet from 180cm to 300cm, with storage for everything that lives under a television. In Black, White, Grey or Charcoal.",
+    features: [
+      "Sizes from 180cm to 300cm",
+      "Black, White, Grey, Charcoal colourways",
+      "20 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "20", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv009q", name: "Slate TV Cabinet", cat: "Living Room", room: "Living Room", price: 6694, memberPrice: 6025, sku: "SH-10930", tag: "New", ph: "", img: "assets/products/tv009q.webp",
+    imgs: ["assets/products/tv009q.webp", "assets/products/tv009q-2.webp", "assets/products/tv009q-3.webp", "assets/products/tv009q-4.webp"],
+    sizes: [{ label: "180cm", price: 6694 }, { label: "240cm", price: 8537 }, { label: "300cm", price: 10137 }, { label: "360cm", price: 11615 }],
+    desc: "Slate TV cabinet from 180cm to 360cm, with storage for everything that lives under a television.",
+    features: [
+      "Slate construction",
+      "Sizes from 180cm to 360cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Slate", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "tv010q", name: "TV Cabinet (180cm to 200cm)", cat: "Living Room", room: "Living Room", price: 6722, memberPrice: 6050, sku: "SH-10931", tag: "New", ph: "", img: "assets/products/tv010q.webp",
+    imgs: ["assets/products/tv010q.webp", "assets/products/tv010q-2.webp", "assets/products/tv010q-3.webp", "assets/products/tv010q-4.webp"],
+    sizes: [{ label: "180cm", price: 6722 }, { label: "200cm", price: 8722 }],
+    desc: "A TV cabinet from 180cm to 200cm, with storage for everything that lives under a television.",
+    features: [
+      "Sizes from 180cm to 200cm",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv011q", name: "TV Cabinet (160cm to 300cm)", cat: "Living Room", room: "Living Room", price: 6830, memberPrice: 6147, sku: "SH-10932", tag: "New", ph: "", img: "assets/products/tv011q.webp",
+    imgs: ["assets/products/tv011q.webp", "assets/products/tv011q-2.webp", "assets/products/tv011q-3.webp", "assets/products/tv011q-4.webp"],
+    sizes: [{ label: "160cm", price: 6830 }, { label: "180cm", price: 7593 }, { label: "200cm", price: 8044 }, { label: "220cm", price: 8804 }, { label: "240cm", price: 9396 }, { label: "260cm", price: 10556 }, { label: "280cm", price: 11959 }, { label: "300cm", price: 12552 }],
+    desc: "A TV cabinet from 160cm to 300cm, with storage for everything that lives under a television.",
+    features: [
+      "Sizes from 160cm to 300cm",
+      "8 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "8", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv012q", name: "TV Cabinet (Grey)", cat: "Living Room", room: "Living Room", price: 7019, memberPrice: 6317, sku: "SH-10933", tag: "New", ph: "", img: "assets/products/tv012q.webp",
+    imgs: ["assets/products/tv012q.webp", "assets/products/tv012q-2.webp", "assets/products/tv012q-3.webp", "assets/products/tv012q-4.webp"],
+    sizes: [{ label: "Grey", price: 7019 }],
+    desc: "A TV cabinet, with storage for everything that lives under a television. In Grey.",
+    features: [
+      "Grey colourway"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "1", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv013q", name: "Slate TV Cabinet (180cm to 300cm)", cat: "Living Room", room: "Living Room", price: 7222, memberPrice: 6500, sku: "SH-10934", tag: "New", ph: "", img: "assets/products/tv013q.webp",
+    imgs: ["assets/products/tv013q.webp", "assets/products/tv013q-2.webp", "assets/products/tv013q-3.webp", "assets/products/tv013q-4.webp"],
+    sizes: [{ label: "180cm", price: 7222 }, { label: "200cm", price: 7819 }, { label: "220cm", price: 8274 }, { label: "240cm", price: 8667 }, { label: "260cm", price: 9237 }, { label: "280cm", price: 10048 }, { label: "300cm", price: 10574 }],
+    desc: "Slate TV cabinet from 180cm to 300cm, with storage for everything that lives under a television.",
+    features: [
+      "Slate construction",
+      "Sizes from 180cm to 300cm",
+      "7 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Slate", "Options": "7", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "tv014q", name: "Walnut TV Cabinet", cat: "Living Room", room: "Living Room", price: 7333, memberPrice: 6600, sku: "SH-10935", tag: "New", ph: "", img: "assets/products/tv014q.webp",
+    imgs: ["assets/products/tv014q.webp", "assets/products/tv014q-2.webp", "assets/products/tv014q-3.webp", "assets/products/tv014q-4.webp"],
+    sizes: [{ label: "Walnut + White / 180cm", price: 7333 }, { label: "Walnut + Black / 180cm", price: 7333 }, { label: "Black + White / 180cm", price: 7333 }, { label: "Walnut + White / 200cm", price: 8204 }, { label: "Walnut + Black / 200cm", price: 8204 }, { label: "Black + White / 200cm", price: 8204 }, { label: "Walnut + White / 220cm", price: 9011 }, { label: "Walnut + Black / 220cm", price: 9011 }, { label: "Black + White / 220cm", price: 9011 }, { label: "Walnut + White / 240cm", price: 9772 }, { label: "Walnut + Black / 240cm", price: 9772 }, { label: "Black + White / 240cm", price: 9772 }],
+    desc: "Walnut TV cabinet from 180cm to 240cm, with storage for everything that lives under a television. In Black, White or Walnut.",
+    features: [
+      "Walnut construction",
+      "Sizes from 180cm to 240cm",
+      "Black, White, Walnut colourways"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Walnut", "Options": "12", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv015q", name: "Timber TV Cabinet (160cm to 260cm)", cat: "Living Room", room: "Living Room", price: 7370, memberPrice: 6633, sku: "SH-10936", tag: "New", ph: "", img: "assets/products/tv015q.webp",
+    imgs: ["assets/products/tv015q.webp", "assets/products/tv015q-2.webp", "assets/products/tv015q-3.webp", "assets/products/tv015q-4.webp"],
+    sizes: [{ label: "Brown / 160cm", price: 7370 }, { label: "Black / 160cm", price: 7370 }, { label: "Brown / 180cm", price: 7843 }, { label: "Black / 180cm", price: 7843 }, { label: "Brown / 200cm", price: 9106 }, { label: "Black / 200cm", price: 9106 }, { label: "Brown / 220cm", price: 10056 }, { label: "Black / 220cm", price: 10056 }, { label: "Brown / 240cm", price: 10611 }, { label: "Black / 240cm", price: 10611 }, { label: "Brown / 260cm", price: 11665 }, { label: "Black / 260cm", price: 11665 }],
+    desc: "Timber TV cabinet from 160cm to 260cm, with storage for everything that lives under a television. In Black or Brown.",
+    features: [
+      "Timber construction",
+      "Sizes from 160cm to 260cm",
+      "Black, Brown colourways"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "12", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv016q", name: "Marble TV Cabinet", cat: "Living Room", room: "Living Room", price: 7404, memberPrice: 6664, sku: "SH-10937", tag: "New", ph: "", img: "assets/products/tv016q.webp",
+    imgs: ["assets/products/tv016q.webp", "assets/products/tv016q-2.webp", "assets/products/tv016q-3.webp"],
+    sizes: [{ label: "200cm", price: 7404 }, { label: "260cm", price: 8444 }, { label: "300cm", price: 9235 }, { label: "360cm", price: 10122 }],
+    desc: "Marble TV cabinet from 200cm to 360cm, with storage for everything that lives under a television.",
+    features: [
+      "Marble construction",
+      "Sizes from 200cm to 360cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Marble", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "tv017q", name: "Timber TV Cabinet (180cm to 210cm)", cat: "Living Room", room: "Living Room", price: 7589, memberPrice: 6830, sku: "SH-10938", tag: "New", ph: "", img: "assets/products/tv017q.webp",
+    imgs: ["assets/products/tv017q.webp", "assets/products/tv017q-2.webp", "assets/products/tv017q-3.webp", "assets/products/tv017q-4.webp"],
+    sizes: [{ label: "180cm", price: 7589 }, { label: "210cm", price: 8781 }],
+    desc: "Timber TV cabinet from 180cm to 210cm, with storage for everything that lives under a television.",
+    features: [
+      "Timber construction",
+      "Sizes from 180cm to 210cm",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "2", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv018q", name: "TV Cabinet (180cm to 240cm)", cat: "Living Room", room: "Living Room", price: 7926, memberPrice: 7133, sku: "SH-10939", tag: "New", ph: "", img: "assets/products/tv018q.webp",
+    imgs: ["assets/products/tv018q.webp", "assets/products/tv018q-2.webp", "assets/products/tv018q-3.webp", "assets/products/tv018q-4.webp"],
+    sizes: [{ label: "180cm / Black", price: 7926 }, { label: "180cm / White", price: 7926 }, { label: "180cm / Cream", price: 7926 }, { label: "180cm / Black + White", price: 7926 }, { label: "180cm / Grey", price: 7926 }, { label: "180cm / White + Tan", price: 7926 }, { label: "180cm / Black + Grey", price: 7926 }, { label: "200cm / Black", price: 8213 }, { label: "200cm / White", price: 8213 }, { label: "200cm / Cream", price: 8213 }, { label: "200cm / Black + White", price: 8213 }, { label: "200cm / Grey", price: 8213 }, { label: "200cm / White + Tan", price: 8213 }, { label: "200cm / Black + Grey", price: 8213 }, { label: "220cm / Black", price: 8620 }, { label: "220cm / White", price: 8620 }, { label: "220cm / Cream", price: 8620 }, { label: "220cm / Black + White", price: 8620 }, { label: "220cm / Grey", price: 8620 }, { label: "220cm / White + Tan", price: 8620 }, { label: "220cm / Black + Grey", price: 8620 }, { label: "240cm / Black", price: 9222 }, { label: "240cm / White", price: 9222 }, { label: "240cm / Cream", price: 9222 }, { label: "240cm / Black + White", price: 9222 }, { label: "240cm / Grey", price: 9222 }, { label: "240cm / White + Tan", price: 9222 }, { label: "240cm / Black + Grey", price: 9222 }],
+    desc: "A TV cabinet from 180cm to 240cm, with storage for everything that lives under a television. In Black, White, Grey or Tan.",
+    features: [
+      "Sizes from 180cm to 240cm",
+      "Black, White, Grey, Tan colourways",
+      "28 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "28", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv019q", name: "TV Cabinet (200cm to 240cm)", cat: "Living Room", room: "Living Room", price: 8352, memberPrice: 7517, sku: "SH-10940", tag: "New", ph: "", img: "assets/products/tv019q.webp",
+    imgs: ["assets/products/tv019q.webp", "assets/products/tv019q-2.webp", "assets/products/tv019q-3.webp", "assets/products/tv019q-4.webp"],
+    sizes: [{ label: "200cm / Gold + Ivory", price: 8352 }, { label: "200cm / Ivory (Wall Mounted)", price: 8352 }, { label: "200cm / Silver + Ivory", price: 8352 }, { label: "220cm / Gold + Ivory", price: 8685 }, { label: "220cm / Ivory (Wall Mounted)", price: 8685 }, { label: "220cm / Silver + Ivory", price: 8685 }, { label: "240cm / Gold + Ivory", price: 9215 }, { label: "240cm / Silver + Ivory", price: 9215 }, { label: "240cm / Ivory (Wall Mounted)", price: 9215 }],
+    desc: "A TV cabinet from 200cm to 240cm, with storage for everything that lives under a television. In Ivory, Gold or Silver.",
+    features: [
+      "Sizes from 200cm to 240cm",
+      "Ivory, Gold, Silver colourways",
+      "9 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "9", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv020q", name: "Steel TV Cabinet", cat: "Living Room", room: "Living Room", price: 9237, memberPrice: 8313, sku: "SH-10941", tag: "New", ph: "", img: "assets/products/tv020q.webp",
+    imgs: ["assets/products/tv020q.webp", "assets/products/tv020q-2.webp", "assets/products/tv020q-3.webp", "assets/products/tv020q-4.webp"],
+    sizes: [{ label: "180 - 260cm", price: 9237 }],
+    desc: "Steel TV cabinet at 260cm, with storage for everything that lives under a television. Adjusts between 180cm and 260cm to suit the wall you have.",
+    features: [
+      "Steel construction",
+      "260cm"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Steel", "Options": "1", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "tv021q", name: "Timber TV Cabinet (150cm to 200cm)", cat: "Living Room", room: "Living Room", price: 9630, memberPrice: 8667, sku: "SH-10942", tag: "New", ph: "", img: "assets/products/tv021q.webp",
+    imgs: ["assets/products/tv021q.webp", "assets/products/tv021q-2.webp", "assets/products/tv021q-3.webp", "assets/products/tv021q-4.webp"],
+    sizes: [{ label: "150cm / Light Brown", price: 9630 }, { label: "150cm / Brown", price: 9630 }, { label: "150cm / Chocolate", price: 9630 }, { label: "180cm / Light Brown", price: 10722 }, { label: "180cm / Brown", price: 10722 }, { label: "180cm / Chocolate", price: 10722 }, { label: "200cm / Light Brown", price: 11630 }, { label: "200cm / Brown", price: 11630 }, { label: "200cm / Chocolate", price: 11630 }],
+    desc: "Timber TV cabinet from 150cm to 200cm, with storage for everything that lives under a television. In Brown or Chocolate. Open shelving above the cabinet, so the television sits within a wall of storage.",
+    features: [
+      "Timber construction",
+      "Sizes from 150cm to 200cm",
+      "Brown, Chocolate colourways"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Timber", "Options": "9", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv022q", name: "TV Cabinet (180cm to 220cm)", cat: "Living Room", room: "Living Room", price: 11606, memberPrice: 10445, sku: "SH-10943", tag: "New", ph: "", img: "assets/products/tv022q.webp",
+    imgs: ["assets/products/tv022q.webp", "assets/products/tv022q-2.webp", "assets/products/tv022q-3.webp", "assets/products/tv022q-4.webp"],
+    sizes: [{ label: "180cm", price: 11606 }, { label: "200cm", price: 12111 }, { label: "200cm (without feet)", price: 12111 }, { label: "220cm", price: 12926 }, { label: "220cm (without feet)", price: 12926 }],
+    desc: "A TV cabinet from 180cm to 220cm, with storage for everything that lives under a television.",
+    features: [
+      "Sizes from 180cm to 220cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "5", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv023q", name: "TV Cabinet (3 options)", cat: "Living Room", room: "Living Room", price: 11641, memberPrice: 10477, sku: "SH-10944", tag: "New", ph: "", img: "assets/products/tv023q.webp",
+    imgs: ["assets/products/tv023q.webp", "assets/products/tv023q-2.webp", "assets/products/tv023q-3.webp", "assets/products/tv023q-4.webp"],
+    sizes: [{ label: "200cm", price: 11641 }, { label: "220cm", price: 12919 }, { label: "240cm", price: 13796 }],
+    desc: "A TV cabinet from 200cm to 240cm, with storage for everything that lives under a television.",
+    features: [
+      "Sizes from 200cm to 240cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "3", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv024q", name: "Marble TV Cabinet (200cm to 260cm)", cat: "Living Room", room: "Living Room", price: 11822, memberPrice: 10640, sku: "SH-10945", tag: "New", ph: "", img: "assets/products/tv024q.webp",
+    imgs: ["assets/products/tv024q.webp", "assets/products/tv024q-2.webp", "assets/products/tv024q-3.webp", "assets/products/tv024q-4.webp"],
+    sizes: [{ label: "200cm", price: 11822 }, { label: "220cm", price: 12933 }, { label: "240cm", price: 14044 }, { label: "260cm", price: 15156 }],
+    desc: "Marble TV cabinet from 200cm to 260cm, with storage for everything that lives under a television.",
+    features: [
+      "Marble construction",
+      "Sizes from 200cm to 260cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Marble", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "tv025q", name: "Marble TV Cabinet (180cm to 240cm)", cat: "Living Room", room: "Living Room", price: 12528, memberPrice: 11275, sku: "SH-10946", tag: "New", ph: "", img: "assets/products/tv025q.webp",
+    imgs: ["assets/products/tv025q.webp", "assets/products/tv025q-2.webp", "assets/products/tv025q-3.webp"],
+    sizes: [{ label: "180cm", price: 12528 }, { label: "200cm", price: 13498 }, { label: "220cm", price: 14209 }, { label: "240cm", price: 14763 }],
+    desc: "Marble TV cabinet from 180cm to 240cm, with storage for everything that lives under a television.",
+    features: [
+      "Marble construction",
+      "Sizes from 180cm to 240cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Marble", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "tv026q", name: "Marble TV Cabinet (200cm to 240cm)", cat: "Living Room", room: "Living Room", price: 12546, memberPrice: 11291, sku: "SH-10947", tag: "New", ph: "", img: "assets/products/tv026q.webp",
+    imgs: ["assets/products/tv026q.webp", "assets/products/tv026q-2.webp", "assets/products/tv026q-3.webp", "assets/products/tv026q-4.webp"],
+    sizes: [{ label: "200cm", price: 12546 }, { label: "220cm", price: 13222 }, { label: "240cm", price: 13887 }],
+    desc: "Marble TV cabinet from 200cm to 240cm, with storage for everything that lives under a television.",
+    features: [
+      "Marble construction",
+      "Sizes from 200cm to 240cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Marble", "Options": "3", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "tv027q", name: "TV Cabinet (320cm)", cat: "Living Room", room: "Living Room", price: 13496, memberPrice: 12146, sku: "SH-10948", tag: "New", ph: "", img: "assets/products/tv027q.webp",
+    imgs: ["assets/products/tv027q.webp", "assets/products/tv027q-2.webp", "assets/products/tv027q-3.webp", "assets/products/tv027q-4.webp"],
+    sizes: [{ label: "240-320cm", price: 13496 }],
+    desc: "A TV cabinet at 320cm, with storage for everything that lives under a television. Extends from 240cm to 320cm, for a wall most cabinets can't fill.",
+    features: [
+      "320cm"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Mixed", "Options": "1", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "tv028q", name: "Marble TV Cabinet (5 options)", cat: "Living Room", room: "Living Room", price: 13857, memberPrice: 12471, sku: "SH-10949", tag: "New", ph: "", img: "assets/products/tv028q.webp",
+    imgs: ["assets/products/tv028q.webp", "assets/products/tv028q-2.webp", "assets/products/tv028q-3.webp", "assets/products/tv028q-4.webp"],
+    sizes: [{ label: "A", price: 13857 }, { label: "B", price: 13857 }, { label: "C", price: 13857 }, { label: "D", price: 13857 }, { label: "E", price: 13857 }],
+    desc: "Marble TV cabinet, with storage for everything that lives under a television.",
+    features: [
+      "Marble construction",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Marble", "Options": "5", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil. Avoid acidic or abrasive cleaners." },
+
+  { id: "tv029q", name: "Oak TV Cabinet", cat: "Living Room", room: "Living Room", price: 13870, memberPrice: 12483, sku: "SH-10950", tag: "New", ph: "", img: "assets/products/tv029q.webp",
+    imgs: ["assets/products/tv029q.webp", "assets/products/tv029q-2.webp", "assets/products/tv029q-3.webp", "assets/products/tv029q-4.webp"],
+    sizes: [{ label: "160cm", price: 13870 }, { label: "180cm", price: 16352 }, { label: "200cm", price: 16667 }, { label: "220cm", price: 18204 }, { label: "240cm", price: 19907 }],
+    desc: "Oak TV cabinet from 160cm to 240cm, with storage for everything that lives under a television.",
+    features: [
+      "Oak construction",
+      "Sizes from 160cm to 240cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "TV Cabinet", "Material": "Oak", "Options": "5", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "bk001q", name: "Bookshelf", cat: "Living Room", room: "Living Room", price: 1130, memberPrice: 1017, sku: "SH-10951", tag: "New", ph: "", img: "assets/products/bk001q.webp",
+    imgs: ["assets/products/bk001q.webp", "assets/products/bk001q-2.webp", "assets/products/bk001q-3.webp", "assets/products/bk001q-4.webp"],
+    sizes: [{ label: "Black / 2 x Shelves", price: 1130 }, { label: "Gold / 2 x Shelves", price: 1130 }, { label: "Black / 3 x Shelves", price: 2011 }, { label: "Gold / 3 x Shelves", price: 2011 }, { label: "Black / 4 x Shelves", price: 2939 }, { label: "Gold / 4 x Shelves", price: 2939 }, { label: "Black / 5 x Shelves", price: 3678 }, { label: "Gold / 5 x Shelves", price: 3678 }],
+    desc: "A bookshelf. In Black or Gold.",
+    features: [
+      "Black, Gold colourways",
+      "8 options to choose from"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Mixed", "Options": "8", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "bk002q", name: "Metal Bookshelf", cat: "Living Room", room: "Living Room", price: 2189, memberPrice: 1970, sku: "SH-10952", tag: "New", ph: "", img: "assets/products/bk002q.webp",
+    imgs: ["assets/products/bk002q.webp", "assets/products/bk002q-2.webp", "assets/products/bk002q-3.webp", "assets/products/bk002q-4.webp"],
+    sizes: [{ label: "White / 3 x Shelves", price: 2189 }, { label: "Gold / 3 x Shelves", price: 2189 }, { label: "Black / 3 x Shelves", price: 2189 }, { label: "White / 4 x Shelves", price: 2365 }, { label: "Gold / 4 x Shelves", price: 2365 }, { label: "Black / 4 x Shelves", price: 2365 }, { label: "White / 5 x Shelves", price: 2606 }, { label: "Gold / 5 x Shelves", price: 2606 }, { label: "Black / 5 x Shelves", price: 2606 }, { label: "White / 6 x Shelves", price: 2769 }, { label: "Gold / 6 x Shelves", price: 2769 }, { label: "Black / 6 x Shelves", price: 2769 }],
+    desc: "Metal bookshelf. In Black, White or Gold.",
+    features: [
+      "Metal construction",
+      "Black, White, Gold colourways",
+      "12 options to choose from"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Metal", "Options": "12", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "bk003q", name: "Timber Bookshelf", cat: "Living Room", room: "Living Room", price: 3074, memberPrice: 2767, sku: "SH-10953", tag: "New", ph: "", img: "assets/products/bk003q.webp",
+    imgs: ["assets/products/bk003q.webp", "assets/products/bk003q-2.webp", "assets/products/bk003q-3.webp"],
+    sizes: [{ label: "80cm / Black", price: 3074 }, { label: "80cm / Black + Brown", price: 3074 }, { label: "80cm / White + Brown", price: 3074 }, { label: "100cm / Black", price: 3230 }, { label: "100cm / Black + Brown", price: 3230 }, { label: "100cm / White + Brown", price: 3230 }, { label: "120cm / Black", price: 3815 }, { label: "120cm / Black + Brown", price: 3815 }, { label: "120cm / White + Brown", price: 3815 }, { label: "140cm / Black", price: 3981 }, { label: "140cm / Black + Brown", price: 3981 }, { label: "140cm / White + Brown", price: 3981 }, { label: "160cm / Black", price: 4163 }, { label: "160cm / Black + Brown", price: 4163 }, { label: "160cm / White + Brown", price: 4163 }],
+    desc: "Timber bookshelf from 80cm to 160cm. In Black, White or Brown.",
+    features: [
+      "Timber construction",
+      "Sizes from 80cm to 160cm",
+      "Black, White, Brown colourways"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Timber", "Options": "15", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "bk004q", name: "Bookshelf (Black / Gold)", cat: "Living Room", room: "Living Room", price: 4939, memberPrice: 4445, sku: "SH-10954", tag: "New", ph: "", img: "assets/products/bk004q.webp",
+    imgs: ["assets/products/bk004q.webp", "assets/products/bk004q-2.webp", "assets/products/bk004q-3.webp", "assets/products/bk004q-4.webp"],
+    sizes: [{ label: "Black / Rectangle", price: 4939 }, { label: "Gold / Rectangle", price: 4939 }, { label: "Black / Square", price: 5587 }, { label: "Gold / Square", price: 5587 }],
+    desc: "A bookshelf. In Black or Gold.",
+    features: [
+      "Black, Gold colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Mixed", "Options": "4", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "bk005q", name: "Steel Bookshelf", cat: "Living Room", room: "Living Room", price: 4991, memberPrice: 4492, sku: "SH-10955", tag: "New", ph: "", img: "assets/products/bk005q.webp",
+    imgs: ["assets/products/bk005q.webp", "assets/products/bk005q-2.webp", "assets/products/bk005q-3.webp", "assets/products/bk005q-4.webp"],
+    sizes: [{ label: "Black + Gold", price: 4991 }],
+    desc: "Steel bookshelf. In Black or Gold.",
+    features: [
+      "Steel construction",
+      "Black, Gold colourways"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Steel", "Options": "1", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "bk006q", name: "Timber Bookshelf (80cm to 120cm)", cat: "Living Room", room: "Living Room", price: 5637, memberPrice: 5073, sku: "SH-10956", tag: "New", ph: "", img: "assets/products/bk006q.webp",
+    imgs: ["assets/products/bk006q.webp", "assets/products/bk006q-2.webp", "assets/products/bk006q-3.webp", "assets/products/bk006q-4.webp"],
+    sizes: [{ label: "80cm", price: 5637 }, { label: "90cm", price: 6204 }, { label: "100cm", price: 6585 }, { label: "110cm", price: 6937 }, { label: "120cm", price: 7293 }],
+    desc: "Timber bookshelf from 80cm to 120cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 80cm to 120cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Timber", "Options": "5", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "bk007q", name: "Bookshelf (Gold)", cat: "Living Room", room: "Living Room", price: 8219, memberPrice: 7397, sku: "SH-10957", tag: "New", ph: "", img: "assets/products/bk007q.webp",
+    imgs: ["assets/products/bk007q.webp", "assets/products/bk007q-2.webp", "assets/products/bk007q-3.webp", "assets/products/bk007q-4.webp"],
+    sizes: [{ label: "Gold", price: 8219 }],
+    desc: "A bookshelf. In Gold.",
+    features: [
+      "Gold colourway"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Mixed", "Options": "1", "Room": "Living Room" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "bk008q", name: "Steel Bookshelf (210cm to 325cm)", cat: "Living Room", room: "Living Room", price: 8609, memberPrice: 7748, sku: "SH-10958", tag: "New", ph: "", img: "assets/products/bk008q.webp",
+    imgs: ["assets/products/bk008q.webp", "assets/products/bk008q-2.webp", "assets/products/bk008q-3.webp", "assets/products/bk008q-4.webp"],
+    sizes: [{ label: "210cm", price: 8609 }, { label: "240cm", price: 9204 }, { label: "256cm", price: 9978 }, { label: "310cm", price: 10181 }, { label: "325cm", price: 10513 }],
+    desc: "Steel bookshelf from 210cm to 325cm. Floating shelves with no visible frame, fixed to the wall rather than standing on the floor.",
+    features: [
+      "Steel construction",
+      "Sizes from 210cm to 325cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Steel", "Options": "5", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "bk009q", name: "Steel Bookshelf (180cm to 300cm)", cat: "Living Room", room: "Living Room", price: 10370, memberPrice: 9333, sku: "SH-10959", tag: "New", ph: "", img: "assets/products/bk009q.webp",
+    imgs: ["assets/products/bk009q.webp", "assets/products/bk009q-2.webp", "assets/products/bk009q-3.webp", "assets/products/bk009q-4.webp"],
+    sizes: [{ label: "180cm", price: 10370 }, { label: "200cm", price: 11352 }, { label: "240cm", price: 13252 }, { label: "300cm", price: 17259 }],
+    desc: "Steel bookshelf from 180cm to 300cm.",
+    features: [
+      "Steel construction",
+      "Sizes from 180cm to 300cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Bookshelf", "Material": "Steel", "Options": "4", "Room": "Living Room" },
+    care: "Wipe with a soft, damp cloth and dry to prevent water marks. Avoid abrasive pads, which scratch plated and brushed finishes." },
+
+  { id: "ow001q", name: "Office Chair", cat: "Office", room: "Office", price: 1643, memberPrice: 1479, sku: "SH-10960", tag: "New", ph: "", img: "assets/products/ow001q.webp",
+    imgs: ["assets/products/ow001q.webp", "assets/products/ow001q-2.webp", "assets/products/ow001q-3.webp", "assets/products/ow001q-4.webp"],
+    sizes: [{ label: "Blue + Gold", price: 1643 }, { label: "Grey + Gold", price: 1643 }, { label: "Green + Gold", price: 1643 }, { label: "Beige + Gold", price: 1643 }, { label: "Pink + Gold", price: 1643 }],
+    desc: "A office chair, built for a full working day. In Grey, Beige, Gold or Green.",
+    features: [
+      "Grey, Beige, Gold, Green colourways",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Mixed", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow002q", name: "Slate Office Desk", cat: "Office", room: "Office", price: 4370, memberPrice: 3933, sku: "SH-10961", tag: "New", ph: "", img: "assets/products/ow002q.webp",
+    imgs: ["assets/products/ow002q.webp", "assets/products/ow002q-2.webp", "assets/products/ow002q-3.webp", "assets/products/ow002q-4.webp"],
+    sizes: [{ label: "80cm", price: 4370 }, { label: "100cm", price: 4930 }, { label: "120cm", price: 5759 }, { label: "140cm", price: 5937 }, { label: "160cm", price: 6767 }, { label: "180cm", price: 7593 }],
+    desc: "Slate office desk from 80cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 80cm to 180cm",
+      "6 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "6", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow003q", name: "Leather Office Chair", cat: "Office", room: "Office", price: 4593, memberPrice: 4134, sku: "SH-10962", tag: "New", ph: "", img: "assets/products/ow003q.webp",
+    imgs: ["assets/products/ow003q.webp", "assets/products/ow003q-2.webp", "assets/products/ow003q-3.webp", "assets/products/ow003q-4.webp"],
+    sizes: [{ label: "Black", price: 4593 }, { label: "Brown + Beige", price: 4593 }, { label: "Brown", price: 4593 }, { label: "Dark Coffee + Brown", price: 4593 }, { label: "Purple", price: 4593 }],
+    desc: "Leather office chair, built for a full working day. In Black, Beige, Brown or Coffee.",
+    features: [
+      "Leather construction",
+      "Black, Beige, Brown, Coffee colourways",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow004q", name: "Leather Office Chair (0 options)", cat: "Office", room: "Office", price: 5259, memberPrice: 4733, sku: "SH-10963", tag: "New", ph: "", img: "assets/products/ow004q.webp",
+    imgs: ["assets/products/ow004q.webp", "assets/products/ow004q-2.webp", "assets/products/ow004q-3.webp", "assets/products/ow004q-4.webp"],
+    desc: "Leather office chair, built for a full working day.",
+    features: [
+      "Leather construction"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "1", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow005q", name: "Leather Office Chair (Brown)", cat: "Office", room: "Office", price: 5309, memberPrice: 4778, sku: "SH-10964", tag: "New", ph: "", img: "assets/products/ow005q.webp",
+    imgs: ["assets/products/ow005q.webp", "assets/products/ow005q-2.webp", "assets/products/ow005q-3.webp", "assets/products/ow005q-4.webp"],
+    sizes: [{ label: "Brown", price: 5309 }],
+    desc: "Leather office chair, built for a full working day. In Brown.",
+    features: [
+      "Leather construction",
+      "Brown colourway"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "1", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow006q", name: "Office Desk", cat: "Office", room: "Office", price: 5533, memberPrice: 4980, sku: "SH-10965", tag: "New", ph: "", img: "assets/products/ow006q.webp",
+    imgs: ["assets/products/ow006q.webp", "assets/products/ow006q-2.webp", "assets/products/ow006q-3.webp", "assets/products/ow006q-4.webp"],
+    sizes: [{ label: "80cm", price: 5533 }, { label: "100cm", price: 5963 }, { label: "120cm", price: 6398 }, { label: "140cm", price: 6663 }, { label: "160cm", price: 7776 }],
+    desc: "A office desk from 80cm to 160cm.",
+    features: [
+      "Sizes from 80cm to 160cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Mixed", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow007q", name: "Office Desk (100cm to 180cm)", cat: "Office", room: "Office", price: 5535, memberPrice: 4982, sku: "SH-10966", tag: "New", ph: "", img: "assets/products/ow007q.webp",
+    imgs: ["assets/products/ow007q.webp", "assets/products/ow007q-2.webp", "assets/products/ow007q-3.webp", "assets/products/ow007q-4.webp"],
+    sizes: [{ label: "100cm", price: 5535 }, { label: "120cm", price: 6593 }, { label: "140cm", price: 7878 }, { label: "160cm", price: 9030 }, { label: "180cm", price: 9906 }],
+    desc: "A office desk from 100cm to 180cm.",
+    features: [
+      "Sizes from 100cm to 180cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Mixed", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow008q", name: "Office Desk (120cm to 220cm)", cat: "Office", room: "Office", price: 5652, memberPrice: 5087, sku: "SH-10967", tag: "New", ph: "", img: "assets/products/ow008q.webp",
+    imgs: ["assets/products/ow008q.webp", "assets/products/ow008q-2.webp", "assets/products/ow008q-3.webp", "assets/products/ow008q-4.webp"],
+    sizes: [{ label: "120cm / Black", price: 5652 }, { label: "120cm / Brown", price: 5652 }, { label: "180cm / Black", price: 6296 }, { label: "180cm / Brown", price: 6296 }, { label: "140cm / Black", price: 6407 }, { label: "140cm / Brown", price: 6407 }, { label: "150cm / Black", price: 6796 }, { label: "150cm / Brown", price: 6796 }, { label: "160cm / Black", price: 7193 }, { label: "160cm / Brown", price: 7193 }, { label: "200cm / Black", price: 7315 }, { label: "200cm / Brown", price: 7315 }, { label: "220cm / Black", price: 8257 }, { label: "220cm / Brown", price: 8257 }],
+    desc: "A office desk from 120cm to 220cm. In Black or Brown.",
+    features: [
+      "Sizes from 120cm to 220cm",
+      "Black, Brown colourways",
+      "14 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Mixed", "Options": "14", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow009q", name: "Office Desk (120cm to 180cm)", cat: "Office", room: "Office", price: 5907, memberPrice: 5316, sku: "SH-10968", tag: "New", ph: "", img: "assets/products/ow009q.webp",
+    imgs: ["assets/products/ow009q.webp", "assets/products/ow009q-2.webp", "assets/products/ow009q-3.webp", "assets/products/ow009q-4.webp"],
+    sizes: [{ label: "120cm", price: 5907 }, { label: "130cm", price: 6641 }, { label: "140cm", price: 7385 }, { label: "160cm", price: 8019 }, { label: "180cm", price: 8789 }],
+    desc: "A office desk from 120cm to 180cm.",
+    features: [
+      "Sizes from 120cm to 180cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Mixed", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow010q", name: "Timber Office Desk", cat: "Office", room: "Office", price: 6052, memberPrice: 5447, sku: "SH-10969", tag: "New", ph: "", img: "assets/products/ow010q.webp",
+    imgs: ["assets/products/ow010q.webp", "assets/products/ow010q-2.webp", "assets/products/ow010q-3.webp", "assets/products/ow010q-4.webp"],
+    sizes: [{ label: "140cm", price: 6052 }, { label: "160cm", price: 6237 }, { label: "180cm", price: 6422 }],
+    desc: "Timber office desk from 140cm to 180cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 140cm to 180cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Timber", "Options": "3", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow011q", name: "Leather Office Chair (Black / Grey)", cat: "Office", room: "Office", price: 6278, memberPrice: 5650, sku: "SH-10970", tag: "New", ph: "", img: "assets/products/ow011q.webp",
+    imgs: ["assets/products/ow011q.webp", "assets/products/ow011q-2.webp", "assets/products/ow011q-3.webp", "assets/products/ow011q-4.webp"],
+    sizes: [{ label: "Grey", price: 6278 }, { label: "Brown", price: 6278 }, { label: "Black", price: 6278 }],
+    desc: "Leather office chair, built for a full working day. In Black, Grey or Brown.",
+    features: [
+      "Leather construction",
+      "Black, Grey, Brown colourways",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "3", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow012q", name: "Timber Office Desk (140cm to 300cm)", cat: "Office", room: "Office", price: 6291, memberPrice: 5662, sku: "SH-10971", tag: "New", ph: "", img: "assets/products/ow012q.webp",
+    imgs: ["assets/products/ow012q.webp", "assets/products/ow012q-2.webp", "assets/products/ow012q-3.webp", "assets/products/ow012q-4.webp"],
+    sizes: [{ label: "140cm", price: 6291 }, { label: "160cm", price: 6776 }, { label: "180cm", price: 7776 }, { label: "200cm", price: 8180 }, { label: "220cm", price: 11217 }, { label: "240cm", price: 12754 }, { label: "260cm", price: 13517 }, { label: "280cm", price: 14569 }, { label: "300cm", price: 15369 }],
+    desc: "Timber office desk from 140cm to 300cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 140cm to 300cm",
+      "9 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Timber", "Options": "9", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow013q", name: "Leather Office Chair (Tan)", cat: "Office", room: "Office", price: 6463, memberPrice: 5817, sku: "SH-10972", tag: "New", ph: "", img: "assets/products/ow013q.webp",
+    imgs: ["assets/products/ow013q.webp", "assets/products/ow013q-2.webp", "assets/products/ow013q-3.webp", "assets/products/ow013q-4.webp"],
+    sizes: [{ label: "Tan", price: 6463 }],
+    desc: "Leather office chair, built for a full working day. In Tan.",
+    features: [
+      "Leather construction",
+      "Tan colourway"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "1", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow014q", name: "Leather Office Chair 2", cat: "Office", room: "Office", price: 6463, memberPrice: 5817, sku: "SH-10973", tag: "New", ph: "", img: "assets/products/ow014q.webp",
+    imgs: ["assets/products/ow014q.webp", "assets/products/ow014q-2.webp", "assets/products/ow014q-3.webp", "assets/products/ow014q-4.webp"],
+    desc: "Leather office chair, built for a full working day.",
+    features: [
+      "Leather construction"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "1", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow015q", name: "Office Desk (120cm to 160cm)", cat: "Office", room: "Office", price: 6615, memberPrice: 5954, sku: "SH-10974", tag: "New", ph: "", img: "assets/products/ow015q.webp",
+    imgs: ["assets/products/ow015q.webp", "assets/products/ow015q-2.webp", "assets/products/ow015q-3.webp", "assets/products/ow015q-4.webp"],
+    sizes: [{ label: "120cm", price: 6615 }, { label: "140cm", price: 7378 }, { label: "160cm", price: 8144 }],
+    desc: "A office desk from 120cm to 160cm.",
+    features: [
+      "Sizes from 120cm to 160cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Mixed", "Options": "3", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow016q", name: "Leather Office Chair (Ivory)", cat: "Office", room: "Office", price: 6661, memberPrice: 5995, sku: "SH-10975", tag: "New", ph: "", img: "assets/products/ow016q.webp",
+    imgs: ["assets/products/ow016q.webp", "assets/products/ow016q-2.webp", "assets/products/ow016q-3.webp", "assets/products/ow016q-4.webp"],
+    sizes: [{ label: "Mahogany + Ivory", price: 6661 }],
+    desc: "Leather office chair, built for a full working day. In Ivory.",
+    features: [
+      "Leather construction",
+      "Ivory colourway"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "1", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow017q", name: "Leather Office Chair (White / Brown)", cat: "Office", room: "Office", price: 6759, memberPrice: 6083, sku: "SH-10976", tag: "New", ph: "", img: "assets/products/ow017q.webp",
+    imgs: ["assets/products/ow017q.webp", "assets/products/ow017q-2.webp", "assets/products/ow017q-3.webp", "assets/products/ow017q-4.webp"],
+    sizes: [{ label: "Brown", price: 6759 }, { label: "White", price: 6759 }],
+    desc: "Leather office chair, built for a full working day. In White or Brown.",
+    features: [
+      "Leather construction",
+      "White, Brown colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "2", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow018q", name: "Walnut Office Chair", cat: "Office", room: "Office", price: 7222, memberPrice: 6500, sku: "SH-10977", tag: "New", ph: "", img: "assets/products/ow018q.webp",
+    imgs: ["assets/products/ow018q.webp", "assets/products/ow018q-2.webp", "assets/products/ow018q-3.webp", "assets/products/ow018q-4.webp"],
+    sizes: [{ label: "Ivory/Beige", price: 7222 }, { label: "Black", price: 7222 }],
+    desc: "Walnut office chair, built for a full working day. In Black, Ivory or Beige.",
+    features: [
+      "Walnut construction",
+      "Black, Ivory, Beige colourways",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Walnut", "Options": "2", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow019q", name: "Leather Office Chair (Black / White)", cat: "Office", room: "Office", price: 7383, memberPrice: 6645, sku: "SH-10978", tag: "New", ph: "", img: "assets/products/ow019q.webp",
+    imgs: ["assets/products/ow019q.webp", "assets/products/ow019q-2.webp", "assets/products/ow019q-3.webp", "assets/products/ow019q-4.webp"],
+    sizes: [{ label: "Black / -Ottoman", price: 7383 }, { label: "White / -Ottoman", price: 7383 }, { label: "Black / + Ottoman", price: 8804 }, { label: "White / + Ottoman", price: 8804 }],
+    desc: "Leather office chair, built for a full working day. In Black or White. Available with a matching ottoman, which is the difference between a desk chair and a reading chair.",
+    features: [
+      "Leather construction",
+      "Black, White colourways",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "4", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow020q", name: "Walnut Office Desk", cat: "Office", room: "Office", price: 7476, memberPrice: 6728, sku: "SH-10979", tag: "New", ph: "", img: "assets/products/ow020q.webp",
+    imgs: ["assets/products/ow020q.webp", "assets/products/ow020q-2.webp", "assets/products/ow020q-3.webp", "assets/products/ow020q-4.webp"],
+    sizes: [{ label: "100cm", price: 7476 }, { label: "120cm", price: 8461 }, { label: "150cm", price: 9691 }],
+    desc: "Walnut office desk from 100cm to 150cm.",
+    features: [
+      "Walnut construction",
+      "Sizes from 100cm to 150cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Walnut", "Options": "3", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow021q", name: "Walnut Office Desk (120cm to 160cm)", cat: "Office", room: "Office", price: 7569, memberPrice: 6812, sku: "SH-10980", tag: "New", ph: "", img: "assets/products/ow021q.webp",
+    imgs: ["assets/products/ow021q.webp", "assets/products/ow021q-2.webp", "assets/products/ow021q-3.webp", "assets/products/ow021q-4.webp"],
+    sizes: [{ label: "Black / 120cm", price: 7569 }, { label: "Brown / 120cm", price: 7569 }, { label: "Black / 140cm", price: 8072 }, { label: "Brown / 140cm", price: 8072 }, { label: "Black / 160cm", price: 8620 }, { label: "Brown / 160cm", price: 8620 }],
+    desc: "Walnut office desk from 120cm to 160cm. In Black or Brown.",
+    features: [
+      "Walnut construction",
+      "Sizes from 120cm to 160cm",
+      "Black, Brown colourways"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Walnut", "Options": "6", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow022q", name: "Timber Office Desk (120cm to 180cm)", cat: "Office", room: "Office", price: 7722, memberPrice: 6950, sku: "SH-10981", tag: "New", ph: "", img: "assets/products/ow022q.webp",
+    imgs: ["assets/products/ow022q.webp", "assets/products/ow022q-2.webp", "assets/products/ow022q-3.webp", "assets/products/ow022q-4.webp"],
+    sizes: [{ label: "120cm", price: 7722 }, { label: "140cm", price: 8252 }, { label: "160cm", price: 8648 }, { label: "180cm", price: 10111 }],
+    desc: "Timber office desk from 120cm to 180cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 120cm to 180cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Timber", "Options": "4", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow023q", name: "Leather Office Chair (White / Grey)", cat: "Office", room: "Office", price: 7759, memberPrice: 6983, sku: "SH-10982", tag: "New", ph: "", img: "assets/products/ow023q.webp",
+    imgs: ["assets/products/ow023q.webp", "assets/products/ow023q-2.webp", "assets/products/ow023q-3.webp", "assets/products/ow023q-4.webp"],
+    sizes: [{ label: "Grey", price: 7759 }, { label: "Cocoa", price: 7759 }, { label: "Brown", price: 7759 }, { label: "White", price: 7759 }, { label: "Emerald Green", price: 7759 }],
+    desc: "Leather office chair, built for a full working day. In White, Grey, Brown or Green.",
+    features: [
+      "Leather construction",
+      "White, Grey, Brown, Green colourways",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Chair", "Material": "Leather", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow024q", name: "Walnut Office Desk (120cm to 200cm)", cat: "Office", room: "Office", price: 7917, memberPrice: 7125, sku: "SH-10983", tag: "New", ph: "", img: "assets/products/ow024q.webp",
+    imgs: ["assets/products/ow024q.webp", "assets/products/ow024q-2.webp", "assets/products/ow024q-3.webp", "assets/products/ow024q-4.webp"],
+    sizes: [{ label: "120cm", price: 7917 }, { label: "140cm", price: 8235 }, { label: "160cm", price: 8702 }, { label: "180cm", price: 9235 }, { label: "200cm", price: 10065 }],
+    desc: "Walnut office desk from 120cm to 200cm.",
+    features: [
+      "Walnut construction",
+      "Sizes from 120cm to 200cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Walnut", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow025q", name: "Slate Office Desk (140cm to 200cm)", cat: "Office", room: "Office", price: 8196, memberPrice: 7376, sku: "SH-10984", tag: "New", ph: "", img: "assets/products/ow025q.webp",
+    imgs: ["assets/products/ow025q.webp", "assets/products/ow025q-2.webp", "assets/products/ow025q-3.webp", "assets/products/ow025q-4.webp"],
+    sizes: [{ label: "140cm", price: 8196 }, { label: "160cm", price: 9656 }, { label: "180cm", price: 10800 }, { label: "200cm", price: 12281 }],
+    desc: "Slate office desk from 140cm to 200cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 140cm to 200cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "4", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow026q", name: "Office Desk (120cm to 200cm)", cat: "Office", room: "Office", price: 8824, memberPrice: 7942, sku: "SH-10985", tag: "New", ph: "", img: "assets/products/ow026q.webp",
+    imgs: ["assets/products/ow026q.webp", "assets/products/ow026q-2.webp", "assets/products/ow026q-3.webp", "assets/products/ow026q-4.webp"],
+    sizes: [{ label: "120cm", price: 8824 }, { label: "140cm", price: 9235 }, { label: "160cm", price: 10072 }, { label: "180cm", price: 10883 }, { label: "200cm", price: 11550 }],
+    desc: "A office desk from 120cm to 200cm.",
+    features: [
+      "Sizes from 120cm to 200cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Mixed", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow027q", name: "Timber Office Desk (140cm to 200cm)", cat: "Office", room: "Office", price: 8844, memberPrice: 7960, sku: "SH-10986", tag: "New", ph: "", img: "assets/products/ow027q.webp",
+    imgs: ["assets/products/ow027q.webp", "assets/products/ow027q-2.webp", "assets/products/ow027q-3.webp", "assets/products/ow027q-4.webp"],
+    sizes: [{ label: "140cm", price: 8844 }, { label: "160cm", price: 9611 }, { label: "180cm", price: 10567 }, { label: "200cm", price: 11519 }],
+    desc: "Timber office desk from 140cm to 200cm.",
+    features: [
+      "Timber construction",
+      "Sizes from 140cm to 200cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Timber", "Options": "4", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow028q", name: "Slate Office Desk (120cm to 180cm)", cat: "Office", room: "Office", price: 9054, memberPrice: 8149, sku: "SH-10987", tag: "New", ph: "", img: "assets/products/ow028q.webp",
+    imgs: ["assets/products/ow028q.webp", "assets/products/ow028q-2.webp", "assets/products/ow028q-3.webp", "assets/products/ow028q-4.webp"],
+    sizes: [{ label: "120cm", price: 9054 }, { label: "140cm", price: 9702 }, { label: "160cm", price: 10676 }, { label: "180cm", price: 11109 }],
+    desc: "Slate office desk from 120cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 120cm to 180cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "4", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow029q", name: "Slate Office Desk (120cm to 160cm)", cat: "Office", room: "Office", price: 9422, memberPrice: 8480, sku: "SH-10988", tag: "New", ph: "", img: "assets/products/ow029q.webp",
+    imgs: ["assets/products/ow029q.webp", "assets/products/ow029q-2.webp", "assets/products/ow029q-3.webp", "assets/products/ow029q-4.webp"],
+    sizes: [{ label: "120cm", price: 9422 }, { label: "140cm", price: 10656 }, { label: "160cm", price: 11894 }],
+    desc: "Slate office desk from 120cm to 160cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 120cm to 160cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "3", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow030q", name: "Slate Office Desk (145cm to 200cm)", cat: "Office", room: "Office", price: 9839, memberPrice: 8855, sku: "SH-10989", tag: "New", ph: "", img: "assets/products/ow030q.webp",
+    imgs: ["assets/products/ow030q.webp", "assets/products/ow030q-2.webp", "assets/products/ow030q-3.webp", "assets/products/ow030q-4.webp"],
+    sizes: [{ label: "145cm", price: 9839 }, { label: "165cm", price: 9987 }, { label: "185cm", price: 10087 }, { label: "200cm", price: 10180 }],
+    desc: "Slate office desk from 145cm to 200cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 145cm to 200cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "4", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow031q", name: "Slate Office Desk (140cm to 180cm)", cat: "Office", room: "Office", price: 9846, memberPrice: 8861, sku: "SH-10990", tag: "New", ph: "", img: "assets/products/ow031q.webp",
+    imgs: ["assets/products/ow031q.webp", "assets/products/ow031q-2.webp", "assets/products/ow031q-3.webp", "assets/products/ow031q-4.webp"],
+    sizes: [{ label: "140cm", price: 9846 }, { label: "160cm", price: 10487 }, { label: "180cm", price: 10831 }],
+    desc: "Slate office desk from 140cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 140cm to 180cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "3", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow032q", name: "Slate Office Desk (120cm to 240cm)", cat: "Office", room: "Office", price: 10396, memberPrice: 9356, sku: "SH-10991", tag: "New", ph: "", img: "assets/products/ow032q.webp",
+    imgs: ["assets/products/ow032q.webp", "assets/products/ow032q-2.webp", "assets/products/ow032q-3.webp", "assets/products/ow032q-4.webp"],
+    sizes: [{ label: "120cm", price: 10396 }, { label: "140cm", price: 10863 }, { label: "160cm", price: 11315 }, { label: "180cm", price: 11893 }, { label: "200cm", price: 12389 }, { label: "220cm", price: 13130 }, { label: "240cm", price: 13870 }],
+    desc: "Slate office desk from 120cm to 240cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 120cm to 240cm",
+      "7 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "7", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
+  { id: "ow033q", name: "Walnut Office Desk (120cm to 180cm)", cat: "Office", room: "Office", price: 10844, memberPrice: 9760, sku: "SH-10992", tag: "New", ph: "", img: "assets/products/ow033q.webp",
+    imgs: ["assets/products/ow033q.webp", "assets/products/ow033q-2.webp", "assets/products/ow033q-3.webp", "assets/products/ow033q-4.webp"],
+    sizes: [{ label: "120cm", price: 10844 }, { label: "140cm", price: 11635 }, { label: "160cm", price: 12583 }, { label: "180cm", price: 13126 }],
+    desc: "Walnut office desk from 120cm to 180cm.",
+    features: [
+      "Walnut construction",
+      "Sizes from 120cm to 180cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Walnut", "Options": "4", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow034q", name: "Oak Office Desk", cat: "Office", room: "Office", price: 10907, memberPrice: 9816, sku: "SH-10993", tag: "New", ph: "", img: "assets/products/ow034q.webp",
+    imgs: ["assets/products/ow034q.webp", "assets/products/ow034q-2.webp", "assets/products/ow034q-3.webp", "assets/products/ow034q-4.webp"],
+    sizes: [{ label: "Charcoal Grey", price: 10907 }],
+    desc: "Oak office desk. In Grey or Charcoal.",
+    features: [
+      "Oak construction",
+      "Grey, Charcoal colourways"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Oak", "Options": "1", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow035q", name: "Oak Office Desk (160cm to 240cm)", cat: "Office", room: "Office", price: 11194, memberPrice: 10075, sku: "SH-10994", tag: "New", ph: "", img: "assets/products/ow035q.webp",
+    imgs: ["assets/products/ow035q.webp", "assets/products/ow035q-2.webp", "assets/products/ow035q-3.webp", "assets/products/ow035q-4.webp"],
+    sizes: [{ label: "160cm", price: 11194 }, { label: "180cm", price: 12139 }, { label: "200cm", price: 13213 }, { label: "220cm", price: 16469 }, { label: "240cm", price: 17917 }],
+    desc: "Oak office desk from 160cm to 240cm.",
+    features: [
+      "Oak construction",
+      "Sizes from 160cm to 240cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Oak", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow036q", name: "Walnut Office Desk (140cm to 180cm)", cat: "Office", room: "Office", price: 11411, memberPrice: 10270, sku: "SH-10995", tag: "New", ph: "", img: "assets/products/ow036q.webp",
+    imgs: ["assets/products/ow036q.webp", "assets/products/ow036q-2.webp", "assets/products/ow036q-3.webp", "assets/products/ow036q-4.webp"],
+    sizes: [{ label: "140cm", price: 11411 }, { label: "160cm", price: 11748 }, { label: "180cm", price: 12174 }],
+    desc: "Walnut office desk from 140cm to 180cm.",
+    features: [
+      "Walnut construction",
+      "Sizes from 140cm to 180cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Walnut", "Options": "3", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow037q", name: "Leather Office Desk", cat: "Office", room: "Office", price: 11522, memberPrice: 10370, sku: "SH-10996", tag: "New", ph: "", img: "assets/products/ow037q.webp",
+    imgs: ["assets/products/ow037q.webp", "assets/products/ow037q-2.webp", "assets/products/ow037q-3.webp", "assets/products/ow037q-4.webp"],
+    sizes: [{ label: "120cm", price: 11522 }, { label: "140cm", price: 12867 }, { label: "160cm", price: 14207 }, { label: "180cm", price: 15348 }],
+    desc: "Leather office desk from 120cm to 180cm.",
+    features: [
+      "Leather construction",
+      "Sizes from 120cm to 180cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Leather", "Options": "4", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow038q", name: "Walnut Office Desk (140cm to 220cm)", cat: "Office", room: "Office", price: 11956, memberPrice: 10760, sku: "SH-10997", tag: "New", ph: "", img: "assets/products/ow038q.webp",
+    imgs: ["assets/products/ow038q.webp", "assets/products/ow038q-2.webp", "assets/products/ow038q-3.webp", "assets/products/ow038q-4.webp"],
+    sizes: [{ label: "140cm", price: 11956 }, { label: "160cm", price: 13111 }, { label: "180cm", price: 14259 }, { label: "200cm", price: 15144 }, { label: "220cm", price: 15500 }],
+    desc: "Walnut office desk from 140cm to 220cm.",
+    features: [
+      "Walnut construction",
+      "Sizes from 140cm to 220cm",
+      "5 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Walnut", "Options": "5", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow039q", name: "Oak Office Desk (140cm to 200cm)", cat: "Office", room: "Office", price: 12107, memberPrice: 10896, sku: "SH-10998", tag: "New", ph: "", img: "assets/products/ow039q.webp",
+    imgs: ["assets/products/ow039q.webp", "assets/products/ow039q-2.webp", "assets/products/ow039q-3.webp", "assets/products/ow039q-4.webp"],
+    sizes: [{ label: "140cm", price: 12107 }, { label: "160cm", price: 13322 }, { label: "180cm", price: 14296 }, { label: "200cm", price: 16607 }],
+    desc: "Oak office desk from 140cm to 200cm.",
+    features: [
+      "Oak construction",
+      "Sizes from 140cm to 200cm",
+      "4 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Oak", "Options": "4", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow040q", name: "Oak Office Desk (160cm to 180cm)", cat: "Office", room: "Office", price: 13385, memberPrice: 12046, sku: "SH-10999", tag: "New", ph: "", img: "assets/products/ow040q.webp",
+    imgs: ["assets/products/ow040q.webp", "assets/products/ow040q-2.webp", "assets/products/ow040q-3.webp", "assets/products/ow040q-4.webp"],
+    sizes: [{ label: "160cm", price: 13385 }, { label: "180cm", price: 15278 }],
+    desc: "Oak office desk from 160cm to 180cm. The top rotates, so the desk can face the window or the room without moving it.",
+    features: [
+      "Oak construction",
+      "Sizes from 160cm to 180cm",
+      "2 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Oak", "Options": "2", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters under anything hot or wet, and check the fixings occasionally." },
+
+  { id: "ow041q", name: "Leather Office Desk (170cm to 230cm)", cat: "Office", room: "Office", price: 14170, memberPrice: 12753, sku: "SH-11000", tag: "New", ph: "", img: "assets/products/ow041q.webp",
+    imgs: ["assets/products/ow041q.webp", "assets/products/ow041q-2.webp", "assets/products/ow041q-3.webp", "assets/products/ow041q-4.webp"],
+    sizes: [{ label: "170cm / Beige Grey", price: 14170 }, { label: "170cm / Ivory", price: 14170 }, { label: "190cm / Beige Grey", price: 15096 }, { label: "190cm / Ivory", price: 15096 }, { label: "210cm / Beige Grey", price: 16096 }, { label: "210cm / Ivory", price: 16096 }, { label: "230cm / Beige Grey", price: 16665 }, { label: "230cm / Ivory", price: 16665 }],
+    desc: "Leather office desk from 170cm to 230cm. In Grey, Ivory or Beige.",
+    features: [
+      "Leather construction",
+      "Sizes from 170cm to 230cm",
+      "Grey, Ivory, Beige colourways"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Leather", "Options": "8", "Room": "Office" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, and condition once or twice a year." },
+
+  { id: "ow042q", name: "Slate Office Desk (3 options)", cat: "Office", room: "Office", price: 17426, memberPrice: 15683, sku: "SH-11001", tag: "New", ph: "", img: "assets/products/ow042q.webp",
+    imgs: ["assets/products/ow042q.webp", "assets/products/ow042q-2.webp", "assets/products/ow042q-3.webp", "assets/products/ow042q-4.webp"],
+    sizes: [{ label: "140cm", price: 17426 }, { label: "160cm", price: 19111 }, { label: "180cm", price: 20578 }],
+    desc: "Slate office desk from 140cm to 180cm.",
+    features: [
+      "Slate construction",
+      "Sizes from 140cm to 180cm",
+      "3 options to choose from"
+    ],
+    specs: { "Type": "Office Desk", "Material": "Slate", "Options": "3", "Room": "Office" },
+    care: "Wipe with a soft, damp cloth. Use coasters under drinks and avoid acidic or abrasive cleaners, which dull a stone surface." },
+
   // ── Bedroom ──
   { id: "ba01z", name: "Satin Pillow Case", cat: "Bedroom", room: "Bedroom", price: 83, memberPrice: 75, sku: "SH-10676", tag: "New", ph: "", img: "assets/products/ba01z.webp",
     imgs: ["assets/products/ba01z.webp", "assets/products/ba01z-2.webp", "assets/products/ba01z-3.webp", "assets/products/ba01z-4.webp", "assets/products/ba01z-5.webp"],
