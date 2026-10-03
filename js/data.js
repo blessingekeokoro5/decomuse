@@ -11669,6 +11669,365 @@ const PRODUCTS = [
     boxContents: ["PET Water Bottle", "Drip Tray Cover", "Aarke cleaning cloth (Gas / CO2 cylinder is not included)"],
     warranty: "2 year manufacturer's warranty",
     care: "Wipe the body with a soft, damp cloth. Wash the bottle by hand in warm soapy water and air dry it. Never put the carbonating bottle in the dishwasher or fill it with anything but water." },
+
+  // ── Lifestyle ──
+  { id: "lf01", name: "Oakwood & Vanilla Bean Reed Diffuser 150ml", cat: "Lifestyle", room: "Lifestyle", price: 18, memberPrice: 16, sku: "SH-11033", tag: "New", ph: "", img: "assets/products/lf01-1.webp",
+    imgs: ["assets/products/lf01-1.webp", "assets/products/lf01-2.webp", "assets/products/lf01-3.webp", "assets/products/lf01-4.webp", "assets/products/lf01-5.webp"],
+    desc: "Scent that works without being switched on. 150ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
+    features: [
+      "Volume: 150ml",
+      "Size: 11.8cm (H) x 6cm (Dia.)",
+      "Oakwood and vanilla bean fragrance",
+      "Top notes: Lemon and fruit",
+      "Middle notes: Green and vanilla bean",
+      "Base notes: Saffron, leather, tonka bean, moss and patchouli"
+    ],
+    specs: { "Type": "Reed diffuser", "Volume": "150ml", "Size": "11.8cm (H) x 6cm (Dia.)" },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+
+  { id: "lf02", name: "Amber & Tonka Reed Diffuser 350ml", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11034", tag: "New", ph: "", img: "assets/products/lf02-1.webp",
+    imgs: ["assets/products/lf02-1.webp", "assets/products/lf02-2.webp", "assets/products/lf02-3.webp", "assets/products/lf02-4.webp", "assets/products/lf02-5.webp"],
+    desc: "Scent that works without being switched on. No flame, no switch — just scent that sits in the room. Turn the reeds when you want it louder.",
+    features: [
+      "Reeds and oil included",
+      "No flame or power needed",
+      "Lasts several months"
+    ],
+    specs: { "Type": "Reed diffuser" },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+
+  { id: "lf03", name: "Sandalwood & Musk Reed Diffuser 350ml", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11035", tag: "New", ph: "", img: "assets/products/lf03-1.webp",
+    imgs: ["assets/products/lf03-1.webp", "assets/products/lf03-2.webp", "assets/products/lf03-3.webp", "assets/products/lf03-4.webp", "assets/products/lf03-5.webp"],
+    desc: "Scent that works without being switched on. 350ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
+    features: [
+      "Volume: 350ml",
+      "Size: 16.5cm (H) x 9cm (Dia.)",
+      "XL size",
+      "Bergamot and sandalwood fragrance"
+    ],
+    specs: { "Type": "Reed diffuser", "Volume": "350ml", "Size": "16.5cm (H) x 9cm (Dia.)" },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+
+  { id: "lf04", name: "Vanilla & Amber Reed Diffuser 350ml", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11036", tag: "New", ph: "", img: "assets/products/lf04-1.webp",
+    imgs: ["assets/products/lf04-1.webp", "assets/products/lf04-2.webp", "assets/products/lf04-3.webp", "assets/products/lf04-4.webp", "assets/products/lf04-5.webp"],
+    desc: "Scent that works without being switched on. 350ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
+    features: [
+      "Volume: 350ml",
+      "Size: 16.5cm (H) x 9cm (Dia.)",
+      "XL size",
+      "Vanilla and amber fragrance"
+    ],
+    specs: { "Type": "Reed diffuser", "Volume": "350ml", "Size": "16.5cm (H) x 9cm (Dia.)" },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+
+  { id: "lf05", name: "Mahogany Reed Diffuser 150ml", cat: "Lifestyle", room: "Lifestyle", price: 18, memberPrice: 16, sku: "SH-11037", tag: "New", ph: "", img: "assets/products/lf05-1.webp",
+    imgs: ["assets/products/lf05-1.webp", "assets/products/lf05-2.webp", "assets/products/lf05-3.webp", "assets/products/lf05-4.webp", "assets/products/lf05-5.webp"],
+    desc: "Scent that works without being switched on. 150ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder. Bottle: Pressed glass.",
+    features: [
+      "Volume: 150ml",
+      "Bottle: Pressed glass",
+      "Glass bottle: 12cm (H) x 6cm (Dia.)",
+      "Mahogany, teakwood and vanilla fragrance",
+      "Top notes: Tonka and vanilla",
+      "Middle notes: Wood and sandalwood"
+    ],
+    specs: { "Type": "Reed diffuser", "Volume": "150ml", "Material": "Bottle: Pressed glass, Lid: Polypropylene (PP), Fibre: Greige yarns and dyed yarns, Transp" },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+
+  { id: "lf06", name: "Ceramic Aroma Diffuser 100ml — Sage Green", cat: "Lifestyle", room: "Lifestyle", price: 37.5, memberPrice: 33.5, sku: "SH-11038", tag: "New", ph: "", img: "assets/products/lf06-1.webp",
+    imgs: ["assets/products/lf06-1.webp", "assets/products/lf06-2.webp", "assets/products/lf06-3.webp", "assets/products/lf06-4.webp", "assets/products/lf06-5.webp"],
+    desc: "Fragrance you can turn on and off. A 100ml (Tank) tank, a ceramic cover and a quiet mist, so the fragrance is yours to control. Oil is sold separately, which means you pick the scent.",
+    features: [
+      "Capacity: 100ml (Tank)",
+      "Size: 15.3cm (H) x 9.2cm (Dia.)",
+      "Fragrance not included",
+      "Cover: Ceramic",
+      "Splash water cover and water tank: Polypropylene (PP)",
+      "Foot: Silicone"
+    ],
+    specs: { "Type": "Electric aroma diffuser", "Capacity": "100ml (Tank)", "Size": "15.3cm (H) x 9.2cm (Dia.)", "Colour": "Sage green (Light green)" },
+    care: "Clean according to given instructions." },
+
+  { id: "lf07", name: "Bergamot, Blossom & Musk Room Spray 100ml", cat: "Lifestyle", room: "Lifestyle", price: 8.5, memberPrice: 7.5, sku: "SH-11039", tag: "New", ph: "", img: "assets/products/lf07-1.webp",
+    imgs: ["assets/products/lf07-1.webp", "assets/products/lf07-2.webp", "assets/products/lf07-3.webp", "assets/products/lf07-4.webp", "assets/products/lf07-5.webp"],
+    desc: "For the thirty seconds before people arrive. 100ml in a bottle small enough to keep in the drawer by the door. Two pumps and the room reads as cared for.",
+    features: [
+      "Volume: 100ml",
+      "Bergamot and blossom musk fragrance",
+      "Home Retreat collection"
+    ],
+    specs: { "Type": "Room spray", "Volume": "100ml" },
+    care: "Spray into the air rather than onto fabric or polished surfaces. Store upright and away from heat." },
+
+  { id: "lf08", name: "Vetiver & Smoked Cedar Room Spray 100ml", cat: "Lifestyle", room: "Lifestyle", price: 9, memberPrice: 8, sku: "SH-11040", tag: "New", ph: "", img: "assets/products/lf08-1.webp",
+    imgs: ["assets/products/lf08-1.webp", "assets/products/lf08-2.webp", "assets/products/lf08-3.webp", "assets/products/lf08-4.webp", "assets/products/lf08-5.webp"],
+    desc: "For the thirty seconds before people arrive. 100ml in a bottle small enough to keep in the drawer by the door. Two pumps and the room reads as cared for.",
+    features: [
+      "Volume: 100ml",
+      "Vetiver and smoked cedar fragrance",
+      "Home Retreat collection"
+    ],
+    specs: { "Type": "Room spray", "Volume": "100ml" },
+    care: "Spray into the air rather than onto fabric or polished surfaces. Store upright and away from heat." },
+
+  { id: "lf09", name: "Mahogany, Teakwood & Vanilla Room Spray 100ml", cat: "Lifestyle", room: "Lifestyle", price: 9, memberPrice: 8, sku: "SH-11041", tag: "New", ph: "", img: "assets/products/lf09-1.webp",
+    imgs: ["assets/products/lf09-1.webp", "assets/products/lf09-2.webp", "assets/products/lf09-3.webp", "assets/products/lf09-4.webp", "assets/products/lf09-5.webp"],
+    desc: "For the thirty seconds before people arrive. 100ml in a bottle small enough to keep in the drawer by the door. Two pumps and the room reads as cared for.",
+    features: [
+      "Volume: 100ml",
+      "Mahogany teakwood and vanilla fragrance",
+      "Home Retreat collection"
+    ],
+    specs: { "Type": "Room spray", "Volume": "100ml" },
+    care: "Spray into the air rather than onto fabric or polished surfaces. Store upright and away from heat." },
+
+  { id: "lf10", name: "Mahogany Scented Candle — Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11042", tag: "New", ph: "", img: "assets/products/lf10-1.webp",
+    imgs: ["assets/products/lf10-1.webp", "assets/products/lf10-2.webp", "assets/products/lf10-3.webp", "assets/products/lf10-4.webp", "assets/products/lf10-5.webp"],
+    desc: "A candle big enough to be the thing on the table. A soy wax blend with a long burn and a wide melt pool, so the scent carries past the table it is standing on. 15cm (H) x 12cm (W) x 8cm (D).",
+    features: [
+      "Size: 15cm (H) x 12cm (W) x 8cm (D)",
+      "Product weight: 1.394kg",
+      "Mahogany teakwood and vanilla fragrance",
+      "Double wick",
+      "Ribbed design",
+      "Home retreat collection"
+    ],
+    specs: { "Type": "Scented candle", "Size": "15cm (H) x 12cm (W) x 8cm (D)" },
+    care: "Burn for two to three hours the first time, until the melt pool reaches the edge. Trim the wick to 5mm before each burn, and never leave a burning candle unattended." },
+
+  { id: "lf11", name: "Vetiver & Fig Soy Wax Ceramic Candle — Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11043", tag: "New", ph: "", img: "assets/products/lf11-1.webp",
+    imgs: ["assets/products/lf11-1.webp", "assets/products/lf11-2.webp", "assets/products/lf11-3.webp", "assets/products/lf11-4.webp", "assets/products/lf11-5.webp"],
+    desc: "A candle big enough to be the thing on the table. A soy wax blend with a long burn and a wide melt pool, so the scent carries past the table it is standing on. 16.5cm (H) x 13.2cm (Dia.). XL VETIVER FIG CANDLE.",
+    features: [
+      "Size: 16.5cm (H) x 13.2cm (Dia.)",
+      "Product weight: 2.1kg",
+      "XL VETIVER FIG CANDLE",
+      "Vetiver and fig fragrance",
+      "100% soy candle",
+      "Extra large size"
+    ],
+    specs: { "Type": "Scented candle", "Size": "16.5cm (H) x 13.2cm (Dia.)", "Material": "XL VETIVER FIG CANDLE", "Colour": "Green" },
+    care: "Burn for two to three hours the first time, until the melt pool reaches the edge. Trim the wick to 5mm before each burn, and never leave a burning candle unattended." },
+
+  { id: "lf12", name: "Vanilla & Amber Soy Wax Candle — Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11044", tag: "New", ph: "", img: "assets/products/lf12-1.webp",
+    imgs: ["assets/products/lf12-1.webp", "assets/products/lf12-2.webp", "assets/products/lf12-3.webp", "assets/products/lf12-4.webp"],
+    desc: "A candle big enough to be the thing on the table. A soy wax blend with a long burn and a wide melt pool, so the scent carries past the table it is standing on. 16.4cm (H) x 13cm (Dia.) (with lid). Vessel: Glass.",
+    features: [
+      "Size: 16.4cm (H) x 13cm (Dia.) (with lid)",
+      "Product weight: 1.79kg",
+      "Vessel: Glass",
+      "Vanilla and amber fragrance",
+      "Triple wick",
+      "Soy wax blend"
+    ],
+    specs: { "Type": "Scented candle", "Size": "16.4cm (H) x 13cm (Dia.) (with lid)", "Material": "Vessel: Glass, Wax: Soy and paraffin wax, Wick: Cotton" },
+    care: "Burn for two to three hours the first time, until the melt pool reaches the edge. Trim the wick to 5mm before each burn, and never leave a burning candle unattended." },
+
+  { id: "lf13", name: "Pure Lavender Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11045", tag: "New", ph: "", img: "assets/products/lf13-1.webp",
+    imgs: ["assets/products/lf13-1.webp", "assets/products/lf13-2.webp", "assets/products/lf13-3.webp"],
+    desc: "One oil, many uses. 10ml of pure oil for a diffuser, a burner, a bath or a few drops on a cloth in the linen cupboard.",
+    features: [
+      "Volume: 10ml",
+      "10ml pure essential oil",
+      "For diffusers, burners and baths"
+    ],
+    specs: { "Type": "Essential oil", "Volume": "10ml" },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+
+  { id: "lf14", name: "Pure Eucalyptus Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11046", tag: "New", ph: "", img: "assets/products/lf14-1.webp",
+    imgs: ["assets/products/lf14-1.webp", "assets/products/lf14-2.webp", "assets/products/lf14-3.webp", "assets/products/lf14-4.webp"],
+    desc: "One oil, many uses. 10ml of pure oil for a diffuser, a burner, a bath or a few drops on a cloth in the linen cupboard.",
+    features: [
+      "Volume: 10ml",
+      "10ml pure essential oil",
+      "For diffusers, burners and baths"
+    ],
+    specs: { "Type": "Essential oil", "Volume": "10ml" },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+
+  { id: "lf15", name: "Pure Peppermint Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11047", tag: "New", ph: "", img: "assets/products/lf15-1.webp",
+    imgs: ["assets/products/lf15-1.webp", "assets/products/lf15-2.webp", "assets/products/lf15-3.webp"],
+    desc: "One oil, many uses. 10ml of pure oil for a diffuser, a burner, a bath or a few drops on a cloth in the linen cupboard.",
+    features: [
+      "Volume: 10ml",
+      "10ml pure essential oil",
+      "For diffusers, burners and baths"
+    ],
+    specs: { "Type": "Essential oil", "Volume": "10ml" },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+
+  { id: "lf16", name: "Pure Lemon Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11048", tag: "New", ph: "", img: "assets/products/lf16-1.webp",
+    imgs: ["assets/products/lf16-1.webp", "assets/products/lf16-2.webp", "assets/products/lf16-3.webp"],
+    desc: "One oil, many uses. 10ml of pure oil for a diffuser, a burner, a bath or a few drops on a cloth in the linen cupboard.",
+    features: [
+      "Volume: 10ml",
+      "10ml pure essential oil",
+      "For diffusers, burners and baths"
+    ],
+    specs: { "Type": "Essential oil", "Volume": "10ml" },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+
+  { id: "lf17", name: "Ruffle-Trim Cotton Knit Throw", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11049", tag: "New", ph: "", img: "assets/products/lf17-1.webp",
+    imgs: ["assets/products/lf17-1.webp", "assets/products/lf17-2.webp", "assets/products/lf17-3.webp", "assets/products/lf17-4.webp"],
+    desc: "The throw that ends up on whoever sat down first. Cotton and generously sized, for the end of a bed or the arm of a sofa. The kind of thing that quietly decides where everyone sits.",
+    features: [
+      "Cotton",
+      "Generous throw size",
+      "Soft handle"
+    ],
+    specs: { "Type": "Throw", "Material": "Cotton" },
+    care: "Delicate fabric may pull if handled incorrectly. Treat with care. Clean washing machine filter and drum before and after initial washes. Warm hand or machine wash seperately on wool cycle. Do not bleach or tumble dry. Do not tumble dry. Pull to shape while wet. Warm iron if required. Dry cleanabl." },
+
+  { id: "lf18", name: "Chunky Textured Cotton Knit Throw", cat: "Lifestyle", room: "Lifestyle", price: 37.5, memberPrice: 33.5, sku: "SH-11050", tag: "New", ph: "", img: "assets/products/lf18-1.webp",
+    imgs: ["assets/products/lf18-1.webp", "assets/products/lf18-2.webp", "assets/products/lf18-3.webp"],
+    desc: "The throw that ends up on whoever sat down first. 100% cotton and generously sized, for the end of a bed or the arm of a sofa. The kind of thing that quietly decides where everyone sits.",
+    features: [
+      "100% Cotton",
+      "Generous throw size",
+      "Soft handle"
+    ],
+    specs: { "Type": "Throw", "Material": "100% Cotton" },
+    care: "Warm gentle machine wash separately, do not bleach, do not tumble dry. Pull back into shape while damp and dry flat." },
+
+  { id: "lf19", name: "Brushed Check Throw — Peacoat", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11051", tag: "New", ph: "", img: "assets/products/lf19-1.webp",
+    imgs: ["assets/products/lf19-1.webp", "assets/products/lf19-2.webp", "assets/products/lf19-3.webp"],
+    desc: "The throw that ends up on whoever sat down first. 100% polyester and generously sized, for the end of a bed or the arm of a sofa. The kind of thing that quietly decides where everyone sits.",
+    features: [
+      "100% Polyester",
+      "Generous throw size",
+      "Soft handle"
+    ],
+    specs: { "Type": "Throw", "Material": "100% Polyester" },
+    care: "Warm gentle machine wash separately. Do not bleach or tumble dry. Line dry in shade. Do not wring or soak. Dry thoroughly before re-use. Do not iron. Do not dry clean ⊗." },
+
+  { id: "lf20", name: "Coral Fleece Throw", cat: "Lifestyle", room: "Lifestyle", price: 7.5, memberPrice: 6.5, sku: "SH-11052", tag: "New", ph: "", img: "assets/products/lf20-1.webp",
+    imgs: ["assets/products/lf20-1.webp", "assets/products/lf20-2.webp", "assets/products/lf20-3.webp", "assets/products/lf20-4.webp", "assets/products/lf20-5.webp"],
+    desc: "The throw that ends up on whoever sat down first. Polyester and generously sized, for the end of a bed or the arm of a sofa. The kind of thing that quietly decides where everyone sits.",
+    features: [
+      "Size: 100cm (L) x 1.5cm (H) x 75cm (W)",
+      "Polyester",
+      "Fleece fabric"
+    ],
+    specs: { "Type": "Throw", "Size": "100cm (L) x 1.5cm (H) x 75cm (W)", "Material": "Polyester", "Colour": "Blue" },
+    care: "Machine wash according to instructions on the care label." },
+
+  { id: "lf21", name: "Coral Fleece Robe", cat: "Lifestyle", room: "Lifestyle", price: 56, memberPrice: 50, sku: "SH-11053", tag: "New", ph: "", img: "assets/products/lf21-1.webp",
+    imgs: ["assets/products/lf21-1.webp", "assets/products/lf21-2.webp", "assets/products/lf21-3.webp", "assets/products/lf21-4.webp", "assets/products/lf21-5.webp"],
+    desc: "For the hour before you are dressed. Soft fleece, deep pockets and a tie belt — cut long enough to be worth getting out of bed for. 100% Recycled Polyester.",
+    features: [
+      "100% Recycled Polyester",
+      "Soft fleece",
+      "Tie belt and deep pockets"
+    ],
+    specs: { "Type": "Robe", "Material": "100% Recycled Polyester" },
+    care: "WARM DELICATE MACHINE WASH WITH LIKE COLOURS. DO NOT BLEACH. DO NOT TUMBLE DRY. WARM IRON (DO NOT IRON PRINTS OR EMBELLISHMENTS). DO NOT DRY CLEAN." },
+
+  { id: "lf22", name: "Quilted Slippers — Pink", cat: "Lifestyle", room: "Lifestyle", price: 19, memberPrice: 17, sku: "SH-11054", tag: "New", ph: "", img: "assets/products/lf22-1.webp",
+    imgs: ["assets/products/lf22-1.webp", "assets/products/lf22-2.webp", "assets/products/lf22-3.webp"],
+    desc: "Indoor shoes, which every house needs more of. Quilted upper, soft sole, and warm without being hot.",
+    features: [
+      "Quilted upper",
+      "Soft sole",
+      "Indoor wear"
+    ],
+    specs: { "Type": "Slippers" },
+    care: "Spot clean with a damp cloth and air dry away from direct heat. Not for outdoor wear." },
+
+  { id: "lf23", name: "Ribbed Plush Hot Water Bottle 2L", cat: "Lifestyle", room: "Lifestyle", price: 13, memberPrice: 11.5, sku: "SH-11055", tag: "New", ph: "", img: "assets/products/lf23-1.webp",
+    imgs: ["assets/products/lf23-1.webp", "assets/products/lf23-2.webp"],
+    desc: "An old idea that still works better than most new ones. Two litres, in a plush cover that stays comfortable against skin. Good for cold feet, a sore back, or a bed that needs warming before you get in it. Plush and rubber.",
+    features: [
+      "Capacity: 2 litres",
+      "Size: 36cm (H) x 21cm (W)",
+      "Plush and rubber",
+      "Ribbed design",
+      "Plush detail",
+      "High quality rubber"
+    ],
+    specs: { "Type": "Hot water bottle", "Capacity": "2 litres", "Size": "36cm (H) x 21cm (W)", "Material": "Plush and rubber", "Colour": "Stone (Grey)" },
+    care: "Fill to no more than two-thirds with hot — not boiling — water and expel the air before sealing. Replace the bottle every two years, or sooner if the rubber perishes." },
+
+  { id: "lf24", name: "Hot Water Bottle 2L — Ice Blue", cat: "Lifestyle", room: "Lifestyle", price: 8.5, memberPrice: 7.5, sku: "SH-11056", tag: "New", ph: "", img: "assets/products/lf24-1.webp",
+    imgs: ["assets/products/lf24-1.webp", "assets/products/lf24-2.webp"],
+    desc: "An old idea that still works better than most new ones. Two litres, in a plush cover that stays comfortable against skin. Good for cold feet, a sore back, or a bed that needs warming before you get in it. HOT WATER BOTTLE - BLUE.",
+    features: [
+      "HOT WATER BOTTLE - BLUE",
+      "2 litre capacity",
+      "Plush removable cover"
+    ],
+    specs: { "Type": "Hot water bottle", "Material": "HOT WATER BOTTLE - BLUE" },
+    care: "Fill to no more than two-thirds with hot — not boiling — water and expel the air before sealing. Replace the bottle every two years, or sooner if the rubber perishes." },
+
+  { id: "lf25", name: "Padded Sleep Eye Mask — Pink", cat: "Lifestyle", room: "Lifestyle", price: 7, memberPrice: 6, sku: "SH-11057", tag: "New", ph: "", img: "assets/products/lf25-1.webp",
+    imgs: ["assets/products/lf25-1.webp", "assets/products/lf25-2.webp", "assets/products/lf25-3.webp", "assets/products/lf25-4.webp"],
+    desc: "Dark enough to sleep in on a plane. Padded, light on the face, and wide enough to block the gap by your nose. Polyester (Filling and fibre).",
+    features: [
+      "Size: 9.5cm (H) x 19.5cm (W)",
+      "Polyester (Filling and fibre)",
+      "Soft stretchy strap",
+      "Bow print",
+      "One size"
+    ],
+    specs: { "Type": "Sleep eye mask", "Size": "9.5cm (H) x 19.5cm (W)", "Material": "Polyester (Filling and fibre)", "Colour": "Pink" },
+    care: "Hand wash in cool water and air dry flat. Do not wring, bleach or tumble dry." },
+
+  { id: "lf26", name: "Wellness Life Planner Journal (160 Pages)", cat: "Lifestyle", room: "Lifestyle", price: 8, memberPrice: 7, sku: "SH-11058", tag: "New", ph: "", img: "assets/products/lf26-1.webp",
+    imgs: ["assets/products/lf26-1.webp", "assets/products/lf26-2.webp", "assets/products/lf26-3.webp", "assets/products/lf26-4.webp", "assets/products/lf26-5.webp"],
+    desc: "Paper, for the things that do not belong on a phone. Lined pages that take ink without bleeding.",
+    features: [
+      "Lined pages",
+      "Ink-friendly paper",
+      "Flat-opening binding"
+    ],
+    specs: { "Type": "Notebook / planner" },
+    care: "Keep dry. A soft eraser lifts pencil without scuffing the paper." },
+
+  { id: "lf27", name: "A5 Hardcover Notebook — Blue", cat: "Lifestyle", room: "Lifestyle", price: 9, memberPrice: 8, sku: "SH-11059", tag: "New", ph: "", img: "assets/products/lf27-1.webp",
+    imgs: ["assets/products/lf27-1.webp", "assets/products/lf27-2.webp", "assets/products/lf27-3.webp", "assets/products/lf27-4.webp", "assets/products/lf27-5.webp"],
+    desc: "Paper, for the things that do not belong on a phone. Lined pages that take ink without bleeding, 240 pages of them. 80GSM paper.",
+    features: [
+      "Size: 21cm (H) x 14.8cm (W) x 2cm (D)",
+      "Page count: 240 pages",
+      "Paper size: A5",
+      "Side elastic band closure",
+      "Ruled paper",
+      "Acid-free lined paper"
+    ],
+    specs: { "Type": "Notebook / planner", "Size": "21cm (H) x 14.8cm (W) x 2cm (D)", "Colour": "Blue", "Page count": "240 pages", "Paper size": "A5" },
+    care: "Keep dry. A soft eraser lifts pencil without scuffing the paper." },
+
+  { id: "lf28", name: "2027 Monthly Planner", cat: "Lifestyle", room: "Lifestyle", price: 4, memberPrice: 3.5, sku: "SH-11060", tag: "New", ph: "", img: "assets/products/lf28-1.webp",
+    imgs: ["assets/products/lf28-1.webp", "assets/products/lf28-2.webp", "assets/products/lf28-3.webp", "assets/products/lf28-4.webp", "assets/products/lf28-5.webp"],
+    desc: "Paper, for the things that do not belong on a phone. Lined pages that take ink without bleeding.",
+    features: [
+      "Lined pages",
+      "Ink-friendly paper",
+      "Flat-opening binding"
+    ],
+    specs: { "Type": "Notebook / planner" },
+    care: "Keep dry. A soft eraser lifts pencil without scuffing the paper." },
+
+  { id: "lf29", name: "Canvas Shopper Tote", cat: "Lifestyle", room: "Lifestyle", price: 7, memberPrice: 6, sku: "SH-11061", tag: "New", ph: "", img: "assets/products/lf29-1.webp",
+    imgs: ["assets/products/lf29-1.webp", "assets/products/lf29-2.webp"],
+    desc: "The bag that lives by the door. Roomy, flat-bottomed and strong enough for a market run or a laptop and lunch. Cotton.",
+    features: [
+      "Cotton",
+      "Roomy flat-bottomed shape",
+      "Carry handles"
+    ],
+    specs: { "Type": "Tote bag", "Material": "Cotton" },
+    care: "Warm hand wash separately - refer to care label for further details." },
+
+  { id: "lf30", name: "Belted Top-Handle Work Tote", cat: "Lifestyle", room: "Lifestyle", price: 31.5, memberPrice: 28, sku: "SH-11062", tag: "New", ph: "", img: "assets/products/lf30-1.webp",
+    imgs: ["assets/products/lf30-1.webp", "assets/products/lf30-2.webp", "assets/products/lf30-3.webp"],
+    desc: "The bag that lives by the door. Roomy, flat-bottomed and strong enough for a market run or a laptop and lunch.",
+    features: [
+      "Roomy flat-bottomed shape",
+      "Carry handles",
+      "Everyday weight"
+    ],
+    specs: { "Type": "Tote bag" },
+    care: "Spot clean with a damp cloth and mild soap, then air dry out of direct sun." },
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
