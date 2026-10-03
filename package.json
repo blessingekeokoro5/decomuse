@@ -10,6 +10,7 @@
     "build": "node scripts/gen-catalogue.js"
   },
   "dependencies": {
+    "sharp": "^0.35.5",
     "stripe": "^17.5.0"
   },
   "engines": {
