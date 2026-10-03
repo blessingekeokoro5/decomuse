@@ -6893,6 +6893,16 @@ try {
   if (Array.isArray(_extra)) _extra.forEach(p => { if (p && p.id && !PRODUCTS.some(x => x.id === p.id)) PRODUCTS.push(p); });
 } catch (e) {}
 
+/* ---- How a gift is packed, and how soon it leaves ---- */
+const PACKING_SPEEDS = [
+  { id: "ready", name: "Ready to send", days: "3 to 5 business days",
+    note: "Packed in a plain navy gift box with gold ribbon, our foil sticker and a hand-written tag.",
+    kits: false },
+  { id: "signature", name: "Signature packaging", days: "14 working days",
+    note: "Our full printed kit in navy and gold. Choose the style below. Worth the wait for a gift that has to land well.",
+    kits: true }
+];
+
 /* ---- Gift packaging styles (chosen when a hamper is built) ---- */
 const PACKAGING_KITS = [
   { id: "pk-bag",    name: "Rope-handle gift bag",   note: "Navy bag with gold rope handles, tissue included", img: "assets/packaging/gift-bag.webp" },

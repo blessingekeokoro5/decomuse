@@ -61,6 +61,15 @@
     .kit-card figcaption { padding: 13px 15px; }
     .kit-card strong { display: block; font-size: 0.92rem; color: var(--ink); }
     .kit-card small { color: var(--muted); font-size: 0.8rem; line-height: 1.45; display: block; margin-top: 3px; }
+    .speed-pick { display: grid; gap: 8px; }
+    .speed { text-align: left; background: #fff; border: 1.5px solid var(--line); border-radius: 10px; padding: 10px 12px;
+      cursor: pointer; font-family: var(--font-body); transition: border-color var(--tr); }
+    .speed:hover { border-color: var(--rose-soft); }
+    .speed.on { border-color: var(--rose); box-shadow: inset 0 0 0 1px var(--rose); }
+    .speed-top { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; }
+    .speed-top strong { font-size: 0.9rem; color: var(--ink); }
+    .speed-top em { font-style: normal; font-size: 0.78rem; color: var(--rose-deep); font-weight: 600; }
+    .speed small { display: block; margin-top: 4px; font-size: 0.78rem; color: var(--muted); line-height: 1.45; }
   </style>
 </head>
 <body data-page="hamper-maker.html">
@@ -71,7 +80,7 @@
       <div class="breadcrumb"><a href="index.html">Home</a> / <a href="hampers.html">Gifting</a> / Hamper Maker</div>
       <span class="eyebrow">🎁 Build Your Own</span>
       <h1>Gift Hamper Maker</h1>
-      <p>Choose a box, then fill it with treats, drinks, pamper &amp; home touches. Watch it come together, add a gift note, and we'll wrap it beautifully. Hampers are packed by hand, so please allow <strong>14 working days</strong> for dispatch.</p>
+      <p>Choose a box, then fill it with treats, drinks, pamper &amp; home touches. Watch it come together, add a gift note, and we'll wrap it beautifully. Choose <strong>Ready to send</strong> for dispatch in 3 to 5 business days, or our <strong>signature printed packaging</strong> at 14 working days.</p>
     </div>
   </section>
 
@@ -98,6 +107,10 @@
             <small id="hmMinNote" style="color:var(--muted)">Minimum hamper $60</small>
             <div class="hm-total"><span>Total</span><span id="hmTotal">$0</span></div>
             <div class="field" style="margin-bottom:12px">
+              <label>How soon do you need it?</label>
+              <div class="speed-pick" id="hmSpeeds"></div>
+            </div>
+            <div class="field" id="hmKitField" style="margin-bottom:12px;display:none">
               <label>Packaging kit</label>
               <div class="kit-pick" id="hmKits"></div>
             </div>
@@ -105,7 +118,7 @@
               <label>Gift note (optional)</label>
               <textarea id="hmNote" placeholder="Write a message for the card…" style="min-height:70px"></textarea>
             </div>
-            <p class="hm-lead-time">🕒 Hampers are packed by hand — please allow <strong>14 working days</strong> for dispatch.</p>
+            <p class="hm-lead-time" id="hmLead">🕒 Packed and dispatched in <strong>3 to 5 business days</strong>.</p>
             <button class="btn btn--primary btn--block" id="hmAdd" disabled onclick="addHamper()">Add hamper to cart</button>
             <div class="form-success" id="hmSuccess" style="margin-top:10px"></div>
           </div>
@@ -121,10 +134,10 @@
       <div class="section-head reveal">
         <span class="eyebrow">Our packaging</span>
         <h2>Signature navy &amp; gold packaging</h2>
-        <p>Your gift is packed in whichever kit you choose: a lidded box, a rope-handle bag, a ribbon-tied box, a drawstring pouch, or a box with a hand-written tag. Every kit is navy with the gold house mark.</p>
+        <p>Every gift leaves here in navy and gold. Choose <strong>Ready to send</strong> and it's packed in a plain navy box with gold ribbon, our foil sticker and a hand-written tag, dispatched in 3 to 5 business days. Choose <strong>signature packaging</strong> and it arrives in one of our printed kits below, made to order in 14 working days.</p>
       </div>
       <div class="kit-grid reveal" id="kitGrid"></div>
-      <p class="form-note" style="text-align:center;margin-top:18px">Each gift is made and packed to order, so please allow <strong>14 working days</strong> for dispatch. Needed for a particular date? Tell us when you order and we'll confirm before you pay.</p>
+      <p class="form-note" style="text-align:center;margin-top:18px">The printed kits below are made to order, so allow <strong>14 working days</strong>. In a hurry? <strong>Ready to send</strong> dispatches in 3 to 5 business days and still arrives navy, gold and hand-tied. Needed for a particular date? Tell us when you order and we'll confirm before you pay.</p>
 
     </div>
   </section>
@@ -187,7 +200,26 @@
       document.getElementById("hmMinNote").style.color = ok ? "var(--forest)" : "var(--muted)";
     }
 
+    let hmSpeed = PACKING_SPEEDS[0].id;
     let hmKit = PACKAGING_KITS[0].id;
+    function currentSpeed() { return PACKING_SPEEDS.find(x => x.id === hmSpeed) || PACKING_SPEEDS[0]; }
+    function renderSpeeds() {
+      const el = document.getElementById("hmSpeeds");
+      if (!el) return;
+      el.innerHTML = PACKING_SPEEDS.map(sp => `
+        <button type="button" class="speed ${sp.id === hmSpeed ? 'on' : ''}" onclick="pickSpeed('${sp.id}')">
+          <span class="speed-top"><strong>${sp.name}</strong><em>${sp.days}</em></span>
+          <small>${sp.note}</small>
+        </button>`).join("");
+      // the kit choice only applies to the printed kits
+      const kf = document.getElementById("hmKitField");
+      if (kf) kf.style.display = currentSpeed().kits ? "" : "none";
+      const note = document.getElementById("hmLead");
+      if (note) note.innerHTML = currentSpeed().id === "ready"
+        ? '🕒 Packed and dispatched in <strong>3 to 5 business days</strong>.'
+        : '🕒 Our printed kit is made to order — please allow <strong>14 working days</strong> for dispatch.';
+    }
+    function pickSpeed(id) { hmSpeed = id; renderSpeeds(); renderKits(); }
     function renderKits() {
       const el = document.getElementById("hmKits");
       if (!el) return;
@@ -203,8 +235,11 @@
       const lines = hmItemsList();
       if (!lines.length) return;
       const note = document.getElementById("hmNote").value.trim();
+      const speed = currentSpeed();
       const kit = PACKAGING_KITS.find(k => k.id === hmKit) || PACKAGING_KITS[0];
-      const contents = "Packed in: " + kit.name + " · " + lines.map(l => l.qty > 1 ? `${l.item.name} ×${l.qty}` : l.item.name).join(", ");
+      const packedIn = speed.kits ? kit.name : "Plain navy gift box, gold ribbon & tag";
+      const contents = "Packed in: " + packedIn + " · Dispatch: " + speed.days + " · "
+        + lines.map(l => l.qty > 1 ? `${l.item.name} ×${l.qty}` : l.item.name).join(", ");
       const cart = getCart();
       cart.push({
         id: "hamper-" + Date.now(),
@@ -216,7 +251,8 @@
         contents,
         // Components travel with the line so checkout can re-price the hamper
         // server-side instead of trusting the total worked out in the browser.
-        packaging: kit.name,
+        packaging: packedIn,
+        dispatch: speed.name + " — " + speed.days,
         hamper: lines.map(l => ({ id: l.item.id, qty: l.qty }))
       });
       saveCart(cart);
@@ -230,7 +266,7 @@
       renderItems(); renderBox();
     }
 
-    renderPills(); renderItems(); renderKits(); renderBox();
+    renderPills(); renderItems(); renderSpeeds(); renderKits(); renderBox();
   </script>
 
   <script>

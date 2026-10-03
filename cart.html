@@ -131,6 +131,7 @@
           <div class="cl-info">
             <div class="cl-cat">${i.cat}</div>
             <h3 class="cl-name">${i.name}${(i.colour || i.size) ? ` <small>· ${[i.colour, i.size].filter(Boolean).join(" · ")}</small>` : ""}</h3>
+            ${i.packaging ? `<p class="cl-pack">🎁 ${i.packaging}${i.dispatch ? ` · <strong>${i.dispatch}</strong>` : ""}</p>` : ""}
             ${sku ? `<div class="cl-sku">${sku}</div>` : ""}
             ${afterDisc >= 500 ? `<div class="cl-bonus">BONUS: FREE DELIVERY</div>` : ""}
             <ul class="cart-deliv">
