@@ -6,7 +6,7 @@
    could grant themselves credit and check out for nothing.
 
    The ledger lives in Stripe: each card is an inactive Stripe
-   Product with a deterministic id (gc_DMGC-123456), so we can
+   Product with a deterministic id (gc_SYSGC-123456), so we can
    look one up instantly by code — no search index, no delay —
    and its remaining balance is held in metadata.
 
@@ -25,8 +25,10 @@ function stripe() {
 
 const round2 = (n) => Math.round(n * 100) / 100;
 
-// DMGC-123456 — the format issued across the site.
-const CODE_RE = /^DMGC-[A-Z0-9]{4,12}$/i;
+// SYSGC-123456 — the format issued across the site.
+// Also accept the legacy DMGC- prefix so any card issued before the
+// rebrand still redeems.
+const CODE_RE = /^(SYS|DM)GC-[A-Z0-9]{4,12}$/i;
 
 function normaliseCode(code) {
   const c = String(code || "").trim().toUpperCase();

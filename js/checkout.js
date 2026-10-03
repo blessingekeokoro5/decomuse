@@ -202,7 +202,7 @@ function renderCheckout() {
         <div style="margin-top:14px">
           <label style="font-size:0.82rem;color:var(--muted);display:block;margin-bottom:6px">🎁 Gift card / refund credit (log in to use)</label>
           <div style="display:flex;gap:8px">
-            <input id="coGiftInput" placeholder="DMGC-…" style="flex:1;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
+            <input id="coGiftInput" placeholder="SYSGC-…" style="flex:1;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
             <button type="button" class="btn btn--outline btn--sm" onclick="applyGiftCardCheckout()">Apply</button>
           </div>
           <div id="coGiftMsg" style="font-size:0.8rem;margin-top:6px"></div>

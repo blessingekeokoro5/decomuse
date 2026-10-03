@@ -97,7 +97,7 @@
             <div class="gc-foot">
               <div class="gc-barcode-plate">
                 <div class="gc-barcode" id="gcBarcode"></div>
-                <div class="gc-ref" id="gcRef">DMGC-000000</div>
+                <div class="gc-ref" id="gcRef">SYSGC-000000</div>
               </div>
               <div class="gc-terms">Redeemable on décor &amp; services · never expires</div>
             </div>
@@ -135,7 +135,7 @@
     const GC_AMOUNTS = [25, 50, 100, 200, 500];
     let gcAmount = 100;
     // One code per visit, so the on-screen card matches the one emailed.
-    let gcCode = "DMGC-" + Math.floor(100000 + Math.random() * 899999);
+    let gcCode = "SYSGC-" + Math.floor(100000 + Math.random() * 899999);
 
     function makeBars(code) {
       let bars = "";
@@ -186,7 +186,7 @@
       saveCart(cart);
       showToast(`Gift card ${gcCode} added to your cart 🎁`);
       // Fresh code for the next card so each is unique.
-      gcCode = "DMGC-" + Math.floor(100000 + Math.random() * 899999);
+      gcCode = "SYSGC-" + Math.floor(100000 + Math.random() * 899999);
       renderCard();
     }
     renderAmounts();

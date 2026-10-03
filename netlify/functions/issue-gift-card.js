@@ -42,7 +42,7 @@ function secretMatches(given, expected) {
 }
 
 function newCode() {
-  return "DMGC-" + Math.floor(100000 + Math.random() * 899999);
+  return "SYSGC-" + Math.floor(100000 + Math.random() * 899999);
 }
 
 exports.handler = async (event) => {
@@ -70,7 +70,7 @@ exports.handler = async (event) => {
   }
 
   const code = body.code ? normaliseCode(body.code) : newCode();
-  if (!code) return jsonResponse(400, { error: "Invalid code format — expected DMGC-123456." });
+  if (!code) return jsonResponse(400, { error: "Invalid code format — expected SYSGC-123456." });
 
   try {
     const card = await issueGiftCard({
