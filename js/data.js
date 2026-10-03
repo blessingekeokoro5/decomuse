@@ -7100,6 +7100,25 @@ const HAMPER_ITEMS = [
 ];
 const HAMPER_MIN = 60;
 
+/* ---- Ready-made hampers, built from the items above ----
+   Each one lists real item ids, so the price is the sum of its parts
+   and checkout re-prices it server-side like any custom hamper. */
+const CURATED_HAMPERS = [
+  { id: "ch-baby", name: "New Baby Hamper", tagline: "For the first weeks at home",
+    items: ["h-gb041", "h-gb043", "h-gb044", "h-gb047", "h-gb040", "h-gb010"] },
+  { id: "ch-pamper", name: "Pamper & Unwind Hamper", tagline: "An afternoon off, in a box",
+    items: ["h-gb077", "h-gb075", "h-gb081", "h-gb073", "h-gb070", "h-gb012"] },
+  { id: "ch-sweet", name: "Sweet Tooth Hamper", tagline: "Chocolate, fudge and biscuits",
+    items: ["h-gb087", "h-gb086", "h-gb090", "h-gb091", "h-gb095", "h-gb019"] },
+  { id: "ch-gourmet", name: "Gourmet Grazing Hamper", tagline: "Everything but the cheese board",
+    items: ["h-gb152", "h-gb148", "h-gb142", "h-gb150", "h-gb147", "h-gb015"] },
+  { id: "ch-him", name: "For Him Hamper", tagline: "Beard kit, socks and something to read",
+    items: ["h-gb122", "h-gb121", "h-gb114", "h-gb115", "h-gb113", "h-gb016"] },
+  { id: "ch-home", name: "Housewarming Hamper", tagline: "For the first night in a new place",
+    items: ["h-gb001", "h-gb002", "h-gb129", "h-gb130", "h-gb065", "h-gb011"] }
+];
+
+
 /* ---- Rotating announcement bar ---- */
 const ANNOUNCEMENTS = [
   "✦ Free shipping on orders over $500, Australia-wide",

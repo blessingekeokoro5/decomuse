@@ -25,6 +25,10 @@
     .kit-card figcaption { padding: 13px 15px; }
     .kit-card strong { display: block; font-size: 0.92rem; color: var(--ink); }
     .kit-card small { color: var(--muted); font-size: 0.8rem; line-height: 1.45; display: block; margin-top: 3px; }
+    .ch-shots { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--line); aspect-ratio: 4 / 3; }
+    .ch-shots span { background: var(--cream-2); overflow: hidden; display: block; }
+    .ch-shots img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .ch-list { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
   </style>
 </head>
 <body data-page="hampers.html">
@@ -102,22 +106,10 @@
 
   <section class="section" style="padding-top:24px">
     <div class="container">
-      <div class="section-head reveal"><span class="eyebrow">Sample hampers</span><h2>Ready to gift</h2>
-        <p>A selection of our most-loved hampers, each one can be tailored to your budget and occasion.</p></div>
-      <div class="grid grid-3">
-        <article class="card reveal"><div class="card-media"><div class="ph" data-label="Cheese & Wine"></div></div>
-          <div class="card-body"><span class="cat" style="color:var(--rose-deep);font-weight:500">CELEBRATION</span>
-            <h3>Cheese &amp; Wine Hamper</h3><p>A curated pairing of local wine, artisan cheese, crackers and sweet accompaniments in a keepsake basket.</p>
-            <div class="product-foot"><span class="price">$149</span><a class="btn btn--primary btn--sm" href="contact.html">Enquire</a></div></div></article>
-        <article class="card reveal"><div class="card-media"><div class="ph rose" data-label="Pamper Hamper"></div></div>
-          <div class="card-body"><span class="cat" style="color:var(--rose-deep);font-weight:500">PAMPER</span>
-            <h3>Home &amp; Pamper Hamper</h3><p>Soy candle, bath soak, ceramic trinket dish and chocolates, a warm hug of a gift for someone special.</p>
-            <div class="product-foot"><span class="price">$119</span><a class="btn btn--primary btn--sm" href="contact.html">Enquire</a></div></div></article>
-        <article class="card reveal"><div class="card-media"><div class="ph forest" data-label="Corporate"></div></div>
-          <div class="card-body"><span class="cat" style="color:var(--rose-deep);font-weight:500">CORPORATE</span>
-            <h3>Corporate Gifting Hamper</h3><p>Polished, brandable gifting for clients and teams, volume pricing and custom notes available.</p>
-            <div class="product-foot"><span class="price">from $89</span><a class="btn btn--primary btn--sm" href="contact.html">Enquire</a></div></div></article>
-      </div>
+      <div class="section-head reveal"><span class="eyebrow">Ready to gift</span><h2>Hampers we've put together</h2>
+        <p>Each one is built from the same pieces as the Hamper Maker, so you can buy it as it is or open it up and change anything you like.</p></div>
+      <div class="grid grid-3" id="curatedGrid"></div>
+      <p class="form-note" style="text-align:center;margin-top:20px">Prices are the sum of what's inside. Packaging and dispatch are chosen at the next step.</p>
     </div>
   </section>
 
@@ -180,6 +172,56 @@
           '</figure>';
       }).join("");
     })();
+  </script>
+
+  <script>
+    /* Ready-made hampers, drawn from the same item list as the builder */
+    (function () {
+      var grid = document.getElementById("curatedGrid");
+      if (!grid || typeof CURATED_HAMPERS === "undefined") return;
+      function item(id) { return HAMPER_ITEMS.find(function (h) { return h.id === id; }); }
+
+      grid.innerHTML = CURATED_HAMPERS.map(function (c) {
+        var items = c.items.map(item).filter(Boolean);
+        var total = items.reduce(function (n, i) { return n + i.price; }, 0);
+        var shots = items.filter(function (i) { return i.img; }).slice(0, 4);
+        return '<article class="card reveal ch-card">' +
+            '<div class="ch-shots">' + shots.map(function (i) {
+              return '<span><img src="' + i.img + '" alt="' + i.name + '" loading="lazy" onerror="this.remove()"></span>';
+            }).join("") + '</div>' +
+            '<div class="card-body">' +
+              '<span class="cat" style="color:var(--rose-deep);font-weight:500">' + c.tagline + '</span>' +
+              '<h3>' + c.name + '</h3>' +
+              '<p class="ch-list">' + items.map(function (i) { return i.name; }).join(" · ") + '</p>' +
+              '<div class="product-foot"><span class="price">' + money(total) + '</span>' +
+              '<button class="btn btn--primary btn--sm" onclick="addCurated(\'' + c.id + '\')">Add to cart</button></div>' +
+            '</div>' +
+          '</article>';
+      }).join("");
+      if (typeof initReveal === "function") initReveal();
+    })();
+
+    function addCurated(id) {
+      var c = CURATED_HAMPERS.find(function (x) { return x.id === id; });
+      if (!c) return;
+      var items = c.items.map(function (i) { return HAMPER_ITEMS.find(function (h) { return h.id === i; }); }).filter(Boolean);
+      var total = items.reduce(function (n, i) { return n + i.price; }, 0);
+      var cart = getCart();
+      cart.push({
+        id: "hamper-" + Date.now(),
+        name: c.name,
+        price: total,
+        cat: "Gift Hamper",
+        ph: "rose",
+        qty: 1,
+        packaging: "Plain navy gift box, gold ribbon & tag",
+        dispatch: "Ready to send — 3 to 5 business days",
+        contents: "Packed in: plain navy gift box · Dispatch: 3 to 5 business days · " + items.map(function (i) { return i.name; }).join(", "),
+        hamper: items.map(function (i) { return { id: i.id, qty: 1 }; })
+      });
+      saveCart(cart);
+      showToast(c.name + " added to your cart 🎁");
+    }
   </script>
 </body>
 </html>
