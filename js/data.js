@@ -3788,6 +3788,1289 @@ const PRODUCTS = [
     specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
 
+  // ── Bedroom ──
+  { id: "ba01z", name: "Satin Pillow Case", cat: "Bedroom", room: "Bedroom", price: 83, memberPrice: 75, sku: "SH-10676", tag: "New", ph: "", img: "assets/products/ba01z.webp",
+    imgs: ["assets/products/ba01z.webp", "assets/products/ba01z-2.webp", "assets/products/ba01z-3.webp", "assets/products/ba01z-4.webp", "assets/products/ba01z-5.webp"],
+    sizes: [{ label: "White / 51cm x 66cm", price: 83 }, { label: "Pink / 51cm x 66cm", price: 83 }, { label: "Silver Grey / 51cm x 66cm", price: 83 }, { label: "Black / 51cm x 66cm", price: 83 }, { label: "Red / 51cm x 66cm", price: 83 }, { label: "Peacock Blue / 51cm x 66cm", price: 83 }, { label: "Champagne / 51cm x 66cm", price: 83 }, { label: "Navy Blue / 51cm x 66cm", price: 83 }, { label: "Sky Blue / 51cm x 66cm", price: 83 }, { label: "Moonlight Blue / 51cm x 66cm", price: 83 }, { label: "White / 51cm x 76cm", price: 109 }, { label: "Pink / 51cm x 76cm", price: 109 }, { label: "Silver Grey / 51cm x 76cm", price: 109 }, { label: "Black / 51cm x 76cm", price: 109 }, { label: "Red / 51cm x 76cm", price: 109 }, { label: "Peacock Blue / 51cm x 76cm", price: 109 }, { label: "Champagne / 51cm x 76cm", price: 109 }, { label: "Navy Blue / 51cm x 76cm", price: 109 }, { label: "Sky Blue / 51cm x 76cm", price: 109 }, { label: "Moonlight Blue / 51cm x 76cm", price: 109 }],
+    desc: "Satin in white, pink and other tones, standard or king. Easier on hair and skin than cotton, which is why people switch.",
+    features: [
+      "Satin finish",
+      "Standard and King",
+      "Kinder to hair and skin"
+    ],
+    specs: { "Type": "Bedroom accessory", "Material": "Silk / satin", "Options": "20", "Room": "Bedroom" },
+    care: "Hand wash in cool water with a gentle detergent, or use a delicates bag on a cold machine cycle. Dry flat away from sun, and iron on low if needed." },
+
+  { id: "ba02z", name: "25-Momme Mulberry Silk Pillow Case", cat: "Bedroom", room: "Bedroom", price: 124, memberPrice: 112, sku: "SH-10677", tag: "New", ph: "", img: "assets/products/ba02z.webp",
+    imgs: ["assets/products/ba02z.webp", "assets/products/ba02z-2.webp", "assets/products/ba02z-3.webp", "assets/products/ba02z-4.webp", "assets/products/ba02z-5.jpg"],
+    sizes: [{ label: "White / 51cm x 66cm", price: 124 }, { label: "Pink / 51cm x 66cm", price: 124 }, { label: "Dark Grey / 51cm x 66cm", price: 124 }, { label: "Black / 51cm x 66cm", price: 124 }, { label: "Red / 51cm x 66cm", price: 124 }, { label: "Peacock Blue / 51cm x 66cm", price: 124 }, { label: "Champagne / 51cm x 66cm", price: 124 }, { label: "Navy Blue / 51cm x 66cm", price: 124 }, { label: "Sky Blue / 51cm x 66cm", price: 124 }, { label: "Moonlight Blue / 51cm x 66cm", price: 124 }, { label: "White / 51cm x 76cm", price: 143 }, { label: "Pink / 51cm x 76cm", price: 143 }, { label: "Dark Grey / 51cm x 76cm", price: 143 }, { label: "Black / 51cm x 76cm", price: 143 }, { label: "Red / 51cm x 76cm", price: 143 }, { label: "Peacock Blue / 51cm x 76cm", price: 143 }, { label: "Champagne / 51cm x 76cm", price: 143 }, { label: "Navy Blue / 51cm x 76cm", price: 143 }, { label: "Sky Blue / 51cm x 76cm", price: 143 }, { label: "Moonlight Blue / 51cm x 76cm", price: 143 }],
+    desc: "Pure mulberry silk at 25 momme, which is the weight where silk stops being flimsy. Standard or king.",
+    features: [
+      "100% mulberry silk, 25 momme",
+      "Standard and King",
+      "Several colourways"
+    ],
+    specs: { "Type": "Bedroom accessory", "Material": "Silk / satin", "Options": "20", "Room": "Bedroom" },
+    care: "Hand wash in cool water with a gentle detergent, or use a delicates bag on a cold machine cycle. Dry flat away from sun, and iron on low if needed." },
+
+  { id: "ba03z", name: "Marble & Gold Coat Rack", cat: "Bedroom", room: "Bedroom", price: 787, memberPrice: 708, sku: "SH-10678", tag: "New", ph: "", img: "assets/products/ba03z.webp",
+    imgs: ["assets/products/ba03z.webp", "assets/products/ba03z-2.webp", "assets/products/ba03z-3.webp", "assets/products/ba03z-4.webp"],
+    sizes: [{ label: "Gold", price: 787 }],
+    desc: "A freestanding coat rack on a marble base in gold. For a bedroom corner or an entry.",
+    features: [
+      "Marble base, gold frame",
+      "Freestanding",
+      "Bedroom or entry"
+    ],
+    specs: { "Type": "Bedroom accessory", "Material": "Marble & metal", "Options": "1", "Room": "Bedroom" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated finishes." },
+
+  { id: "ba04z", name: "Marble Coat Tree", cat: "Bedroom", room: "Bedroom", price: 1000, memberPrice: 900, sku: "SH-10679", tag: "New", ph: "", img: "assets/products/ba04z.webp",
+    imgs: ["assets/products/ba04z.webp", "assets/products/ba04z-2.webp", "assets/products/ba04z-3.webp", "assets/products/ba04z-4.webp", "assets/products/ba04z-5.webp"],
+    sizes: [{ label: "White & Gold", price: 1000 }, { label: "Black & Gold", price: 1000 }],
+    desc: "A coat tree in white and gold or black and gold, on marble.",
+    features: [
+      "Marble base",
+      "White + Gold or Black + Gold",
+      "Freestanding"
+    ],
+    specs: { "Type": "Bedroom accessory", "Material": "Marble & metal", "Options": "2", "Room": "Bedroom" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated finishes." },
+
+  { id: "bd01z", name: "Timber Bed with Optional Bedside Tables", cat: "Bedroom", room: "Bedroom", price: 9228, memberPrice: 8305, sku: "SH-10680", tag: "New", ph: "", img: "assets/products/bd01z.webp",
+    imgs: ["assets/products/bd01z.webp", "assets/products/bd01z-2.webp", "assets/products/bd01z-3.webp", "assets/products/bd01z-4.webp", "assets/products/bd01z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables (bed only)", price: 9228 }, { label: "King / 0 x Bedside Tables (bed only)", price: 11087 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 16635 }, { label: "King / Bed + 2 x Bedside Tables", price: 18494 }],
+    desc: "A solid timber bed in queen or king, available on its own or with a pair of matching bedside tables, which is the easier way to get the room to look considered.",
+    features: [
+      "Solid timber frame",
+      "Queen and King",
+      "Bed alone, or with two matching bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Solid timber", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bd02z", name: "Velvet Upholstered Bed", cat: "Bedroom", room: "Bedroom", price: 10674, memberPrice: 9607, sku: "SH-10681", tag: "New", ph: "", img: "assets/products/bd02z.webp",
+    imgs: ["assets/products/bd02z.webp", "assets/products/bd02z-2.webp", "assets/products/bd02z-3.webp", "assets/products/bd02z-4.webp", "assets/products/bd02z-5.webp"],
+    sizes: [{ label: "Queen", price: 10674 }, { label: "King", price: 11481 }],
+    desc: "Velvet over a timber frame, in queen or king. Velvet at bedhead scale is what makes a bedroom feel finished rather than furnished.",
+    features: [
+      "Velvet upholstery on timber",
+      "Queen and King",
+      "Full upholstered bedhead"
+    ],
+    specs: { "Type": "Bed", "Material": "Velvet", "Options": "2", "Room": "Bedroom" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "bd03z", name: "Upholstered Bed with Marble Detail", cat: "Bedroom", room: "Bedroom", price: 10726, memberPrice: 9653, sku: "SH-10682", tag: "New", ph: "", img: "assets/products/bd03z.webp",
+    imgs: ["assets/products/bd03z.webp", "assets/products/bd03z-2.webp", "assets/products/bd03z-3.webp", "assets/products/bd03z-4.webp", "assets/products/bd03z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables (bed only)", price: 10726 }, { label: "King / 0 x Bedside Tables (bed only)", price: 11652 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 19615 }, { label: "King / Bed + 2 x Bedside Tables", price: 20541 }],
+    desc: "An upholstered bed with marble detailing on a timber frame, with or without matching bedside tables.",
+    features: [
+      "Upholstered frame with marble detail",
+      "Queen and King",
+      "Optional matching bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "4", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd04z", name: "Ivory Leather Bed", cat: "Bedroom", room: "Bedroom", price: 12657, memberPrice: 11391, sku: "SH-10683", tag: "New", ph: "", img: "assets/products/bd04z.webp",
+    imgs: ["assets/products/bd04z.webp", "assets/products/bd04z-2.webp", "assets/products/bd04z-3.webp", "assets/products/bd04z-4.webp", "assets/products/bd04z-5.webp"],
+    sizes: [{ label: "Ivory / Queen / 0 x Bedside Tables (bed only)", price: 12657 }, { label: "Tan / Queen / 0 x Bedside Tables (bed only)", price: 12657 }, { label: "Mocha / Queen / 0 x Bedside Tables (bed only)", price: 12657 }, { label: "Black / Queen / 0 x Bedside Tables (bed only)", price: 12657 }, { label: "Ivory / King / 0 x Bedside Tables (bed only)", price: 13765 }, { label: "Tan / King / 0 x Bedside Tables (bed only)", price: 13765 }, { label: "Mocha / King / 0 x Bedside Tables (bed only)", price: 13765 }, { label: "Black / King / 0 x Bedside Tables (bed only)", price: 13765 }, { label: "Ivory / Queen / Bed + 2 x Bedside Tables", price: 21546 }, { label: "Tan / Queen / Bed + 2 x Bedside Tables", price: 21546 }, { label: "Mocha / Queen / Bed + 2 x Bedside Tables", price: 21546 }, { label: "Black / Queen / Bed + 2 x Bedside Tables", price: 21546 }, { label: "Ivory / King / Bed + 2 x Bedside Tables", price: 22654 }, { label: "Tan / King / Bed + 2 x Bedside Tables", price: 22654 }, { label: "Mocha / King / Bed + 2 x Bedside Tables", price: 22654 }, { label: "Black / King / Bed + 2 x Bedside Tables", price: 22654 }],
+    desc: "Leather in ivory, queen or king, with the option of bedside tables to match.",
+    features: [
+      "Genuine leather upholstery",
+      "Ivory colourway",
+      "Optional matching bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "16", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd05z", name: "Charcoal Faux Fur Bed (King)", cat: "Bedroom", room: "Bedroom", price: 12944, memberPrice: 11650, sku: "SH-10684", tag: "New", ph: "", img: "assets/products/bd05z.webp",
+    imgs: ["assets/products/bd05z.webp", "assets/products/bd05z-2.webp", "assets/products/bd05z-3.webp", "assets/products/bd05z-4.webp", "assets/products/bd05z-5.webp"],
+    sizes: [{ label: "Charcoal Grey", price: 12944 }],
+    desc: "A king bed wrapped in charcoal faux fur. Unusual, warm to the touch, and not for a minimalist room.",
+    features: [
+      "Faux fur upholstery",
+      "Charcoal Grey",
+      "King size"
+    ],
+    specs: { "Type": "Bed", "Material": "Faux fur", "Options": "1", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bd06z", name: "Charcoal Velvet & Leather Bed", cat: "Bedroom", room: "Bedroom", price: 12952, memberPrice: 11657, sku: "SH-10685", tag: "New", ph: "", img: "assets/products/bd06z.webp",
+    imgs: ["assets/products/bd06z.webp", "assets/products/bd06z-2.webp", "assets/products/bd06z-3.webp", "assets/products/bd06z-4.webp", "assets/products/bd06z-5.webp"],
+    sizes: [{ label: "Charcoal Grey / Queen / 0 x Bedside Tables (bed only)", price: 12952 }, { label: "Grey / Queen / 0 x Bedside Tables (bed only)", price: 12952 }, { label: "Light Grey / Queen / 0 x Bedside Tables (bed only)", price: 12952 }, { label: "Ivory / Queen / 0 x Bedside Tables (bed only)", price: 12952 }, { label: "Charcoal Grey / King / 0 x Bedside Tables (bed only)", price: 14626 }, { label: "Grey / King / 0 x Bedside Tables (bed only)", price: 14626 }, { label: "Light Grey / King / 0 x Bedside Tables (bed only)", price: 14626 }, { label: "Ivory / King / 0 x Bedside Tables (bed only)", price: 14626 }, { label: "Charcoal Grey / Queen / Bed + 2 x Bedside Tables", price: 21841 }, { label: "Grey / Queen / Bed + 2 x Bedside Tables", price: 21841 }, { label: "Light Grey / Queen / Bed + 2 x Bedside Tables", price: 21841 }, { label: "Ivory / Queen / Bed + 2 x Bedside Tables", price: 21841 }, { label: "Charcoal Grey / King / Bed + 2 x Bedside Tables", price: 23515 }, { label: "Grey / King / Bed + 2 x Bedside Tables", price: 23515 }, { label: "Light Grey / King / Bed + 2 x Bedside Tables", price: 23515 }, { label: "Ivory / King / Bed + 2 x Bedside Tables", price: 23515 }],
+    desc: "Velvet with leather detail in charcoal grey, queen or king, on a timber frame.",
+    features: [
+      "Velvet with leather detail",
+      "Charcoal Grey",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Velvet", "Options": "16", "Room": "Bedroom" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "bd07z", name: "Leather Storage Bed", cat: "Bedroom", room: "Bedroom", price: 13248, memberPrice: 11923, sku: "SH-10686", tag: "New", ph: "", img: "assets/products/bd07z.webp",
+    imgs: ["assets/products/bd07z.webp", "assets/products/bd07z-2.webp", "assets/products/bd07z-3.webp", "assets/products/bd07z-4.webp", "assets/products/bd07z-5.webp"],
+    sizes: [{ label: "Ivory/Beige / Queen / 0 x Bedside Tables (bed only)", price: 13248 }, { label: "Light Grey / Queen / 0 x Bedside Tables (bed only)", price: 13248 }, { label: "Dark Grey / Queen / 0 x Bedside Tables (bed only)", price: 13248 }, { label: "Ivory/Beige / King / 0 x Bedside Tables (bed only)", price: 15363 }, { label: "Light Grey / King / 0 x Bedside Tables (bed only)", price: 15363 }, { label: "Dark Grey / King / 0 x Bedside Tables (bed only)", price: 15363 }, { label: "Ivory/Beige / Queen / Bed + 2 x Bedside Tables", price: 22137 }, { label: "Light Grey / Queen / Bed + 2 x Bedside Tables", price: 22137 }, { label: "Dark Grey / Queen / Bed + 2 x Bedside Tables", price: 22137 }, { label: "Ivory/Beige / King / Bed + 2 x Bedside Tables", price: 24252 }, { label: "Light Grey / King / Bed + 2 x Bedside Tables", price: 24252 }, { label: "Dark Grey / King / Bed + 2 x Bedside Tables", price: 24252 }],
+    desc: "Leather in ivory and beige with storage built into the base, queen or king. The storage is the reason to buy it.",
+    features: [
+      "Leather upholstery",
+      "Built-in under-bed storage",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "12", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd08z", name: "Upholstered Bed (Queen or King)", cat: "Bedroom", room: "Bedroom", price: 13333, memberPrice: 12000, sku: "SH-10687", tag: "New", ph: "", img: "assets/products/bd08z.webp",
+    imgs: ["assets/products/bd08z.webp", "assets/products/bd08z-2.webp", "assets/products/bd08z-3.webp", "assets/products/bd08z-4.webp", "assets/products/bd08z-5.webp"],
+    sizes: [{ label: "Queen", price: 13333 }, { label: "King", price: 14793 }],
+    desc: "A plainly upholstered bed in two sizes.",
+    features: [
+      "Upholstered frame",
+      "Queen and King",
+      "Simple, unfussy shape"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "2", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd09z", name: "White Upholstered Storage Bed", cat: "Bedroom", room: "Bedroom", price: 13439, memberPrice: 12095, sku: "SH-10688", tag: "New", ph: "", img: "assets/products/bd09z.webp",
+    imgs: ["assets/products/bd09z.webp", "assets/products/bd09z-2.webp", "assets/products/bd09z-3.webp", "assets/products/bd09z-4.webp", "assets/products/bd09z-5.webp"],
+    sizes: [{ label: "White / Queen / 0 x Bedside Tables (bed only)", price: 13439 }, { label: "Khaki / Queen / 0 x Bedside Tables (bed only)", price: 13439 }, { label: "White / King / 0 x Bedside Tables (bed only)", price: 14443 }, { label: "Khaki / King / 0 x Bedside Tables (bed only)", price: 14443 }, { label: "White / Queen / Bed + 2 x Bedside Tables", price: 20846 }, { label: "Khaki / Queen / Bed + 2 x Bedside Tables", price: 20846 }, { label: "White / King / Bed + 2 x Bedside Tables", price: 21850 }, { label: "Khaki / King / Bed + 2 x Bedside Tables", price: 21850 }],
+    desc: "White upholstery with storage in the base, on a timber frame, with optional bedside tables.",
+    features: [
+      "Upholstered with storage base",
+      "White colourway",
+      "Optional bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "8", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd10z", name: "Black Leather Bed", cat: "Bedroom", room: "Bedroom", price: 13641, memberPrice: 12277, sku: "SH-10689", tag: "New", ph: "", img: "assets/products/bd10z.webp",
+    imgs: ["assets/products/bd10z.webp", "assets/products/bd10z-2.webp", "assets/products/bd10z-3.webp", "assets/products/bd10z-4.webp", "assets/products/bd10z-5.webp"],
+    sizes: [{ label: "Black / Queen", price: 13641 }, { label: "Black / King", price: 15048 }],
+    desc: "Black leather, queen or king. Darker than most and better for it in a light room.",
+    features: [
+      "Genuine leather",
+      "Black colourway",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd11z", name: "Bouclé & Leather Bed", cat: "Bedroom", room: "Bedroom", price: 13772, memberPrice: 12395, sku: "SH-10690", tag: "New", ph: "", img: "assets/products/bd11z.webp",
+    imgs: ["assets/products/bd11z.webp", "assets/products/bd11z-2.webp", "assets/products/bd11z-3.webp", "assets/products/bd11z-4.webp", "assets/products/bd11z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables (bed only)", price: 13772 }, { label: "King / 0 x Bedside Tables (bed only)", price: 15778 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 21180 }, { label: "King / Bed + 2 x Bedside Tables", price: 23185 }],
+    desc: "Bouclé with leather detail on a timber frame, queen or king, with optional bedside tables.",
+    features: [
+      "Bouclé with leather detail",
+      "Timber frame",
+      "Optional bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Bouclé", "Options": "4", "Room": "Bedroom" },
+    care: "Vacuum gently with a brush head and blot spills. Trim a snagged loop rather than pulling it." },
+
+  { id: "bd12z", name: "Black Leather Storage Bed", cat: "Bedroom", room: "Bedroom", price: 14222, memberPrice: 12800, sku: "SH-10691", tag: "New", ph: "", img: "assets/products/bd12z.webp",
+    imgs: ["assets/products/bd12z.webp", "assets/products/bd12z-2.webp", "assets/products/bd12z-3.webp", "assets/products/bd12z-4.webp", "assets/products/bd12z-5.webp"],
+    sizes: [{ label: "Black / Queen", price: 14222 }, { label: "Black / King", price: 15063 }],
+    desc: "Black leather with storage in the base, queen or king.",
+    features: [
+      "Leather upholstery",
+      "Storage base",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd13z", name: "Grey Upholstered Bed", cat: "Bedroom", room: "Bedroom", price: 16028, memberPrice: 14425, sku: "SH-10692", tag: "New", ph: "", img: "assets/products/bd13z.webp",
+    imgs: ["assets/products/bd13z.webp", "assets/products/bd13z-2.webp", "assets/products/bd13z-3.webp", "assets/products/bd13z-4.webp", "assets/products/bd13z-5.webp"],
+    sizes: [{ label: "Grey / Queen", price: 16028 }, { label: "Grey / King", price: 16656 }],
+    desc: "Grey upholstery, queen or king.",
+    features: [
+      "Upholstered frame",
+      "Grey colourway",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "2", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd14z", name: "Cotton Upholstered Bed", cat: "Bedroom", room: "Bedroom", price: 16070, memberPrice: 14463, sku: "SH-10693", tag: "New", ph: "", img: "assets/products/bd14z.webp",
+    imgs: ["assets/products/bd14z.webp", "assets/products/bd14z-2.webp", "assets/products/bd14z-3.webp", "assets/products/bd14z-4.webp", "assets/products/bd14z-5.webp"],
+    sizes: [{ label: "Beige / Queen", price: 16070 }, { label: "Grey / Queen", price: 16070 }, { label: "Beige / King", price: 17778 }, { label: "Grey / King", price: 17778 }],
+    desc: "Cotton upholstery in beige or grey, queen or king. Cotton breathes better than synthetic against a bedhead you lean on.",
+    features: [
+      "Cotton upholstery",
+      "Beige or Grey",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "4", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd15z", name: "Upholstered Storage Bed", cat: "Bedroom", room: "Bedroom", price: 16152, memberPrice: 14537, sku: "SH-10694", tag: "New", ph: "", img: "assets/products/bd15z.webp",
+    imgs: ["assets/products/bd15z.webp", "assets/products/bd15z-2.webp", "assets/products/bd15z-3.webp", "assets/products/bd15z-4.webp", "assets/products/bd15z-5.webp"],
+    sizes: [{ label: "Off White / Queen", price: 16152 }, { label: "Grey / Queen", price: 16152 }, { label: "Off White / King", price: 17635 }, { label: "Grey / King", price: 17635 }],
+    desc: "Off white or grey with storage in the base, queen or king.",
+    features: [
+      "Upholstered with storage",
+      "Off White or Grey",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "4", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd16z", name: "Leather Storage Bed in Off White", cat: "Bedroom", room: "Bedroom", price: 16904, memberPrice: 15214, sku: "SH-10695", tag: "New", ph: "", img: "assets/products/bd16z.webp",
+    imgs: ["assets/products/bd16z.webp", "assets/products/bd16z-2.webp", "assets/products/bd16z-3.webp", "assets/products/bd16z-4.webp", "assets/products/bd16z-5.webp"],
+    sizes: [{ label: "Grey / Queen", price: 16904 }, { label: "Off White / Queen", price: 16904 }, { label: "Tan / Queen", price: 16904 }, { label: "Off White / King", price: 18289 }, { label: "Tan / King", price: 18289 }, { label: "Grey / King", price: 18289 }],
+    desc: "Leather in off white or grey, with storage, queen or king.",
+    features: [
+      "Leather with storage base",
+      "Off White or Grey",
+      "Queen and King"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "6", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd17z", name: "Wide Upholstered Bed", cat: "Bedroom", room: "Bedroom", price: 17093, memberPrice: 15384, sku: "SH-10696", tag: "New", ph: "", img: "assets/products/bd17z.webp",
+    imgs: ["assets/products/bd17z.webp", "assets/products/bd17z-2.webp", "assets/products/bd17z-3.webp", "assets/products/bd17z-4.webp", "assets/products/bd17z-5.webp"],
+    sizes: [{ label: "Queen", price: 17093 }, { label: "King", price: 18148 }],
+    desc: "A generously upholstered bed in queen or king, with a bedhead wide enough to sit bedside tables against.",
+    features: [
+      "Extra-wide upholstered bedhead",
+      "Queen and King",
+      "Tables tuck against either side"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "2", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd18z", name: "Ivory Upholstered Storage Bed", cat: "Bedroom", room: "Bedroom", price: 17185, memberPrice: 15466, sku: "SH-10697", tag: "New", ph: "", img: "assets/products/bd18z.webp",
+    imgs: ["assets/products/bd18z.webp", "assets/products/bd18z-2.webp", "assets/products/bd18z-3.webp", "assets/products/bd18z-4.webp", "assets/products/bd18z-5.webp"],
+    sizes: [{ label: "Ivory / Queen / 0 x Bedside Tables (bed only)", price: 17185 }, { label: "Grey / Queen / 0 x Bedside Tables (bed only)", price: 17185 }, { label: "Green / Queen / 0 x Bedside Tables (bed only)", price: 17185 }, { label: "Ivory / King / 0 x Bedside Tables (bed only)", price: 18637 }, { label: "Grey / King / 0 x Bedside Tables (bed only)", price: 18637 }, { label: "Green / King / 0 x Bedside Tables (bed only)", price: 18637 }, { label: "Ivory / Queen / Bed + 2 x Bedside Tables", price: 24593 }, { label: "Grey / Queen / Bed + 2 x Bedside Tables", price: 24593 }, { label: "Green / Queen / Bed + 2 x Bedside Tables", price: 24593 }, { label: "Ivory / King / Bed + 2 x Bedside Tables", price: 26044 }, { label: "Grey / King / Bed + 2 x Bedside Tables", price: 26044 }, { label: "Green / King / Bed + 2 x Bedside Tables", price: 26044 }],
+    desc: "Ivory upholstery over timber, with storage and optional bedside tables.",
+    features: [
+      "Upholstered over timber",
+      "Storage base",
+      "Optional bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Upholstery fabric", "Options": "12", "Room": "Bedroom" },
+    care: "Vacuum regularly and blot spills immediately. Rotate and plump cushions so they wear evenly." },
+
+  { id: "bd19z", name: "Velvet Bed with Bedside Tables", cat: "Bedroom", room: "Bedroom", price: 17337, memberPrice: 15603, sku: "SH-10698", tag: "New", ph: "", img: "assets/products/bd19z.webp",
+    imgs: ["assets/products/bd19z.webp", "assets/products/bd19z-2.webp", "assets/products/bd19z-3.webp", "assets/products/bd19z-4.webp", "assets/products/bd19z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables", price: 17337 }, { label: "King / 0 x Bedside Tables", price: 18870 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 24374 }, { label: "King / Bed + 2 x Bedside Tables", price: 25907 }],
+    desc: "Velvet on timber in king, sold alone or with two bedside tables.",
+    features: [
+      "Velvet over timber",
+      "King size",
+      "Bed alone or with two tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Velvet", "Options": "4", "Room": "Bedroom" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "bd20z", name: "Leather Bed with Timber Frame", cat: "Bedroom", room: "Bedroom", price: 18630, memberPrice: 16767, sku: "SH-10699", tag: "New", ph: "", img: "assets/products/bd20z.webp",
+    imgs: ["assets/products/bd20z.webp", "assets/products/bd20z-2.webp", "assets/products/bd20z-3.webp", "assets/products/bd20z-4.webp", "assets/products/bd20z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables (bed only)", price: 18630 }, { label: "King / 0 x Bedside Tables (bed only)", price: 20441 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 27519 }, { label: "King / Bed + 2 x Bedside Tables", price: 29330 }],
+    desc: "Leather over timber, queen or king, with optional matching tables.",
+    features: [
+      "Leather over a timber frame",
+      "Queen and King",
+      "Optional matching tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd21z", name: "Tan Leather Bed", cat: "Bedroom", room: "Bedroom", price: 19467, memberPrice: 17520, sku: "SH-10700", tag: "New", ph: "", img: "assets/products/bd21z.webp",
+    imgs: ["assets/products/bd21z.webp", "assets/products/bd21z-2.webp", "assets/products/bd21z-3.webp", "assets/products/bd21z-4.webp", "assets/products/bd21z-5.webp"],
+    sizes: [{ label: "Tan / Queen", price: 19467 }, { label: "Tan / King", price: 20933 }],
+    desc: "Tan leather, queen or king. Tan warms a room in a way black and grey never do.",
+    features: [
+      "Genuine tan leather",
+      "Queen and King",
+      "Warm, light leather tone"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd22z", name: "Solid Timber Bed (King)", cat: "Bedroom", room: "Bedroom", price: 21222, memberPrice: 19100, sku: "SH-10701", tag: "New", ph: "", img: "assets/products/bd22z.webp",
+    imgs: ["assets/products/bd22z.webp", "assets/products/bd22z-2.webp", "assets/products/bd22z-3.webp", "assets/products/bd22z-4.webp", "assets/products/bd22z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables", price: 21222 }, { label: "King / 0 x Bedside Tables", price: 22015 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 30111 }, { label: "King / Bed + 2 x Bedside Tables", price: 30904 }],
+    desc: "Solid timber in king, alone or with two bedside tables.",
+    features: [
+      "Solid timber",
+      "King size",
+      "Bed alone or with two tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Solid timber", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bd23z", name: "Leather & Timber Bed (King)", cat: "Bedroom", room: "Bedroom", price: 21467, memberPrice: 19320, sku: "SH-10702", tag: "New", ph: "", img: "assets/products/bd23z.webp",
+    imgs: ["assets/products/bd23z.webp", "assets/products/bd23z-2.webp", "assets/products/bd23z-3.webp", "assets/products/bd23z-4.webp", "assets/products/bd23z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables (bed only)", price: 21467 }, { label: "King / 0 x Bedside Tables (bed only)", price: 22950 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 31356 }, { label: "King / Bed + 2 x Bedside Tables", price: 31839 }],
+    desc: "Leather with a timber frame in king, with optional bedside tables.",
+    features: [
+      "Leather over timber",
+      "King size",
+      "Optional bedside tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bd24z", name: "Navy Velvet Bed (250 or 280cm)", cat: "Bedroom", room: "Bedroom", price: 21778, memberPrice: 19600, sku: "SH-10703", tag: "New", ph: "", img: "assets/products/bd24z.webp",
+    imgs: ["assets/products/bd24z.webp", "assets/products/bd24z-2.webp", "assets/products/bd24z-3.webp", "assets/products/bd24z-4.webp", "assets/products/bd24z-5.jpg"],
+    sizes: [{ label: "Navy Blue / 280cm", price: 21778 }, { label: "Navy Blue / 250cm", price: 28000 }],
+    desc: "Navy velvet at 250cm or 280cm across, which is wider than a standard king and is meant to be the whole wall.",
+    features: [
+      "Navy velvet upholstery",
+      "250cm and 280cm wide",
+      "Wall-width bedhead"
+    ],
+    specs: { "Type": "Bed", "Material": "Velvet", "Options": "2", "Room": "Bedroom" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "bd25z", name: "Leather Bed with Wide Bedhead", cat: "Bedroom", room: "Bedroom", price: 22185, memberPrice: 19966, sku: "SH-10704", tag: "New", ph: "", img: "assets/products/bd25z.webp",
+    imgs: ["assets/products/bd25z.webp", "assets/products/bd25z-2.webp", "assets/products/bd25z-3.webp", "assets/products/bd25z-4.webp", "assets/products/bd25z-5.webp"],
+    sizes: [{ label: "Queen / 0 x Bedside Tables (bed only)", price: 22185 }, { label: "King / 0 x Bedside Tables (bed only)", price: 23365 }, { label: "Queen / Bed + 2 x Bedside Tables", price: 26630 }, { label: "King / Bed + 2 x Bedside Tables", price: 27809 }],
+    desc: "Leather over timber in king, with the widest bedhead in the range and optional matching tables.",
+    features: [
+      "Leather over timber",
+      "Extra-wide bedhead",
+      "Optional matching tables"
+    ],
+    specs: { "Type": "Bed", "Material": "Leather", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bp01z", name: "Cushion Cover in Three Sizes", cat: "Bedroom", room: "Bedroom", price: 50, memberPrice: 45, sku: "SH-10705", tag: "New", ph: "", img: "assets/products/bp01z.webp",
+    imgs: ["assets/products/bp01z.webp", "assets/products/bp01z-2.webp", "assets/products/bp01z-3.webp", "assets/products/bp01z-4.webp", "assets/products/bp01z-5.webp"],
+    sizes: [{ label: "White / 40cm x 40cm", price: 50 }, { label: "Ivory / 40cm x 40cm", price: 50 }, { label: "Grey / 40cm x 40cm", price: 50 }, { label: "Black / 40cm x 40cm", price: 50 }, { label: "Mustard / 40cm x 40cm", price: 50 }, { label: "White / 45cm x 45cm", price: 67 }, { label: "Ivory / 45cm x 45cm", price: 67 }, { label: "Grey / 45cm x 45cm", price: 67 }, { label: "Black / 45cm x 45cm", price: 67 }, { label: "Mustard / 45cm x 45cm", price: 67 }, { label: "White / 50cm x 50cm", price: 89 }, { label: "Ivory / 50cm x 50cm", price: 89 }, { label: "Grey / 50cm x 50cm", price: 89 }, { label: "Black / 50cm x 50cm", price: 89 }, { label: "Mustard / 50cm x 50cm", price: 89 }],
+    desc: "A plain cushion cover in white and other tones, 40, 45 or 50cm square.",
+    features: [
+      "40, 45 and 50cm",
+      "Several colourways",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "15", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp02z", name: "Cushion Cover in Beige", cat: "Bedroom", room: "Bedroom", price: 67, memberPrice: 60, sku: "SH-10706", tag: "New", ph: "", img: "assets/products/bp02z.webp",
+    imgs: ["assets/products/bp02z.webp", "assets/products/bp02z-2.webp", "assets/products/bp02z-3.webp", "assets/products/bp02z-4.webp", "assets/products/bp02z-5.webp"],
+    sizes: [{ label: "Beige / 30 x 50cm", price: 67 }, { label: "White / 30 x 50cm", price: 67 }, { label: "Coffee / 30 x 50cm", price: 67 }, { label: "Grey / 30 x 50cm", price: 67 }, { label: "Green / 30 x 50cm", price: 67 }, { label: "Navy / 30 x 50cm", price: 67 }, { label: "Pink / 30 x 50cm", price: 67 }, { label: "Baby Blue / 30 x 50cm", price: 67 }, { label: "Beige / 45 x 45cm", price: 72 }, { label: "White / 45 x 45cm", price: 72 }, { label: "Coffee / 45 x 45cm", price: 72 }, { label: "Grey / 45 x 45cm", price: 72 }, { label: "Green / 45 x 45cm", price: 72 }, { label: "Navy / 45 x 45cm", price: 72 }, { label: "Pink / 45 x 45cm", price: 72 }, { label: "Baby Blue / 45 x 45cm", price: 72 }, { label: "Beige / 50 x 50cm", price: 83 }, { label: "White / 50 x 50cm", price: 83 }, { label: "Coffee / 50 x 50cm", price: 83 }, { label: "Grey / 50 x 50cm", price: 83 }, { label: "Green / 50 x 50cm", price: 83 }, { label: "Navy / 50 x 50cm", price: 83 }, { label: "Pink / 50 x 50cm", price: 83 }, { label: "Baby Blue / 50 x 50cm", price: 83 }],
+    desc: "Beige, in a lumbar 30 x 50cm or a square 45cm.",
+    features: [
+      "30 x 50cm or 45cm square",
+      "Beige and other tones",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "24", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp03z", name: "Yellow Cushion Cover", cat: "Bedroom", room: "Bedroom", price: 74, memberPrice: 67, sku: "SH-10707", tag: "New", ph: "", img: "assets/products/bp03z.webp",
+    imgs: ["assets/products/bp03z.webp", "assets/products/bp03z-2.webp", "assets/products/bp03z-3.webp", "assets/products/bp03z-4.webp", "assets/products/bp03z-5.webp"],
+    sizes: [{ label: "Yellow / 30 x 50cm", price: 74 }, { label: "Black / 30 x 50cm", price: 74 }, { label: "Dark Green / 30 x 50cm", price: 74 }, { label: "Green / 30 x 50cm", price: 74 }, { label: "Dark Blue / 30 x 50cm", price: 74 }, { label: "Blue / 30 x 50cm", price: 74 }, { label: "Dark Grey / 30 x 50cm", price: 74 }, { label: "Grey / 30 x 50cm", price: 74 }, { label: "Khaki / 30 x 50cm", price: 74 }, { label: "Brown / 30 x 50cm", price: 74 }, { label: "Beige / 30 x 50cm", price: 74 }, { label: "Orange / 30 x 50cm", price: 74 }, { label: "Pink / 30 x 50cm", price: 74 }, { label: "Red / 30 x 50cm", price: 74 }, { label: "Yellow / 40cm", price: 102 }, { label: "Black / 40cm", price: 102 }, { label: "Dark Green / 40cm", price: 102 }, { label: "Green / 40cm", price: 102 }, { label: "Dark Blue / 40cm", price: 102 }, { label: "Blue / 40cm", price: 102 }, { label: "Dark Grey / 40cm", price: 102 }, { label: "Grey / 40cm", price: 102 }, { label: "Khaki / 40cm", price: 102 }, { label: "Brown / 40cm", price: 102 }, { label: "Beige / 40cm", price: 102 }, { label: "Orange / 40cm", price: 102 }, { label: "Pink / 40cm", price: 102 }, { label: "Red / 40cm", price: 102 }, { label: "Yellow / 50cm", price: 109 }, { label: "Black / 50cm", price: 109 }, { label: "Dark Green / 50cm", price: 109 }, { label: "Green / 50cm", price: 109 }, { label: "Dark Blue / 50cm", price: 109 }, { label: "Blue / 50cm", price: 109 }, { label: "Dark Grey / 50cm", price: 109 }, { label: "Grey / 50cm", price: 109 }, { label: "Khaki / 50cm", price: 109 }, { label: "Brown / 50cm", price: 109 }, { label: "Beige / 50cm", price: 109 }, { label: "Orange / 50cm", price: 109 }, { label: "Pink / 50cm", price: 109 }, { label: "Red / 50cm", price: 109 }],
+    desc: "Yellow, in three shapes. Yellow is the colour most people wish they'd been braver about.",
+    features: [
+      "Three shapes",
+      "Yellow colourway",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "42", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp04z", name: "Plush Cushion Cover", cat: "Bedroom", room: "Bedroom", price: 81, memberPrice: 73, sku: "SH-10708", tag: "New", ph: "", img: "assets/products/bp04z.webp",
+    imgs: ["assets/products/bp04z.webp", "assets/products/bp04z-2.webp", "assets/products/bp04z-3.webp", "assets/products/bp04z-4.webp", "assets/products/bp04z-5.webp"],
+    sizes: [{ label: "Beige / 30cm L x 50cm H", price: 81 }, { label: "Light Coffee / 30cm L x 50cm H", price: 81 }, { label: "Grey / 30cm L x 50cm H", price: 81 }, { label: "Dark Pink / 30cm L x 50cm H", price: 81 }, { label: "Beige / 45cm L x 45cm H", price: 100 }, { label: "Light Coffee / 45cm L x 45cm H", price: 100 }, { label: "Grey / 45cm L x 45cm H", price: 100 }, { label: "Dark Pink / 45cm L x 45cm H", price: 100 }, { label: "Beige / 50cm L  x 50cm H", price: 115 }, { label: "Light Coffee / 50cm L  x 50cm H", price: 115 }, { label: "Grey / 50cm L  x 50cm H", price: 115 }, { label: "Dark Pink / 50cm L  x 50cm H", price: 115 }],
+    desc: "A plush cover in beige and other tones, lumbar or square.",
+    features: [
+      "Plush pile",
+      "Lumbar and square",
+      "Several colourways"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "12", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp05z", name: "Two-Tone Cushion Cover", cat: "Bedroom", room: "Bedroom", price: 83, memberPrice: 75, sku: "SH-10709", tag: "New", ph: "", img: "assets/products/bp05z.webp",
+    imgs: ["assets/products/bp05z.webp", "assets/products/bp05z-2.webp", "assets/products/bp05z-3.webp", "assets/products/bp05z-4.webp", "assets/products/bp05z-5.webp"],
+    sizes: [{ label: "Yellow / 30 x 50cm", price: 83 }, { label: "White / 30 x 50cm", price: 83 }, { label: "Red / 30 x 50cm", price: 83 }, { label: "Purple / 30 x 50cm", price: 83 }, { label: "Navy / 30 x 50cm", price: 83 }, { label: "Light Grey / 30 x 50cm", price: 83 }, { label: "Light Coffee / 30 x 50cm", price: 83 }, { label: "Coffee / 30 x 50cm", price: 83 }, { label: "Pink / 30 x 50cm", price: 83 }, { label: "Khaki / 30 x 50cm", price: 83 }, { label: "Black / 30 x 50cm", price: 83 }, { label: "Yellow / 45 x 45cm", price: 102 }, { label: "White / 45 x 45cm", price: 102 }, { label: "Red / 45 x 45cm", price: 102 }, { label: "Purple / 45 x 45cm", price: 102 }, { label: "Navy / 45 x 45cm", price: 102 }, { label: "Light Grey / 45 x 45cm", price: 102 }, { label: "Light Coffee / 45 x 45cm", price: 102 }, { label: "Coffee / 45 x 45cm", price: 102 }, { label: "Pink / 45 x 45cm", price: 102 }, { label: "Khaki / 45 x 45cm", price: 102 }, { label: "Black / 45 x 45cm", price: 102 }],
+    desc: "Yellow or white, lumbar or square.",
+    features: [
+      "Lumbar and square",
+      "Yellow or White",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "22", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp06z", name: "Cushion Cover (45 or 55cm)", cat: "Bedroom", room: "Bedroom", price: 87, memberPrice: 78, sku: "SH-10710", tag: "New", ph: "", img: "assets/products/bp06z.webp",
+    imgs: ["assets/products/bp06z.webp", "assets/products/bp06z-2.webp", "assets/products/bp06z-3.webp", "assets/products/bp06z-4.webp", "assets/products/bp06z-5.webp"],
+    sizes: [{ label: "Yellow / 45 x 45cm", price: 87 }, { label: "Orange / 45 x 45cm", price: 87 }, { label: "Taupe / 45 x 45cm", price: 87 }, { label: "Coffee / 45 x 45cm", price: 87 }, { label: "Deep Grey / 45 x 45cm", price: 87 }, { label: "Light Grey / 45 x 45cm", price: 87 }, { label: "Beige / 45 x 45cm", price: 87 }, { label: "Green / 45 x 45cm", price: 87 }, { label: "Blue / 45 x 45cm", price: 87 }, { label: "Black / 45 x 45cm", price: 87 }, { label: "Rose / 45 x 45cm", price: 87 }, { label: "Red / 45 x 45cm", price: 87 }, { label: "Purple / 45 x 45cm", price: 87 }, { label: "Yellow / 55 x 55cm", price: 109 }, { label: "Orange / 55 x 55cm", price: 109 }, { label: "Taupe / 55 x 55cm", price: 109 }, { label: "Coffee / 55 x 55cm", price: 109 }, { label: "Deep Grey / 55 x 55cm", price: 109 }, { label: "Light Grey / 55 x 55cm", price: 109 }, { label: "Beige / 55 x 55cm", price: 109 }, { label: "Green / 55 x 55cm", price: 109 }, { label: "Blue / 55 x 55cm", price: 109 }, { label: "Black / 55 x 55cm", price: 109 }, { label: "Rose / 55 x 55cm", price: 109 }, { label: "Red / 55 x 55cm", price: 109 }, { label: "Purple / 55 x 55cm", price: 109 }],
+    desc: "Yellow or orange, 45cm or 55cm square. The 55cm is the size most sofas actually need.",
+    features: [
+      "45cm and 55cm square",
+      "Yellow or Orange",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "26", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp07z", name: "Faux Fur Cushion Cover", cat: "Bedroom", room: "Bedroom", price: 87, memberPrice: 78, sku: "SH-10711", tag: "New", ph: "", img: "assets/products/bp07z.webp",
+    imgs: ["assets/products/bp07z.webp", "assets/products/bp07z-2.webp", "assets/products/bp07z-3.webp", "assets/products/bp07z-4.webp", "assets/products/bp07z-5.webp"],
+    sizes: [{ label: "Grey", price: 87 }, { label: "White", price: 87 }, { label: "Green", price: 87 }, { label: "Pink", price: 87 }, { label: "Orange", price: 87 }, { label: "Beige", price: 87 }, { label: "Brown", price: 87 }, { label: "Black", price: 87 }, { label: "Light Brown", price: 87 }],
+    desc: "Faux fur in grey, white, green, pink, orange, beige or brown.",
+    features: [
+      "Faux fur",
+      "Seven colourways",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "9", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp08z", name: "Pillow Cover in Red or Pink", cat: "Bedroom", room: "Bedroom", price: 87, memberPrice: 78, sku: "SH-10712", tag: "New", ph: "", img: "assets/products/bp08z.webp",
+    imgs: ["assets/products/bp08z.webp", "assets/products/bp08z-2.webp", "assets/products/bp08z-3.webp", "assets/products/bp08z-4.webp", "assets/products/bp08z-5.webp"],
+    sizes: [{ label: "Red / 30cm x 50cm", price: 87 }, { label: "Pink / 30cm x 50cm", price: 87 }, { label: "White / 30cm x 50cm", price: 87 }, { label: "Brown / 30cm x 50cm", price: 87 }, { label: "Blue / 30cm x 50cm", price: 87 }, { label: "Khaki / 30cm x 50cm", price: 87 }, { label: "Green / 30cm x 50cm", price: 87 }, { label: "Red / 40cm x 40cm", price: 111 }, { label: "Pink / 40cm x 40cm", price: 111 }, { label: "White / 40cm x 40cm", price: 111 }, { label: "Brown / 40cm x 40cm", price: 111 }, { label: "Blue / 40cm x 40cm", price: 111 }, { label: "Khaki / 40cm x 40cm", price: 111 }, { label: "Green / 40cm x 40cm", price: 111 }],
+    desc: "Red or pink, lumbar or square.",
+    features: [
+      "Lumbar and square",
+      "Red or Pink",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "14", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp09z", name: "Plush Cushion Cover in Four Tones", cat: "Bedroom", room: "Bedroom", price: 87, memberPrice: 78, sku: "SH-10713", tag: "New", ph: "", img: "assets/products/bp09z.webp",
+    imgs: ["assets/products/bp09z.webp", "assets/products/bp09z-2.webp", "assets/products/bp09z-3.webp", "assets/products/bp09z-4.webp", "assets/products/bp09z-5.webp"],
+    sizes: [{ label: "White", price: 87 }, { label: "Black", price: 87 }, { label: "Grey", price: 87 }, { label: "Pink", price: 87 }],
+    desc: "White, black, grey or pink, plush pile.",
+    features: [
+      "Plush pile",
+      "Four colourways",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "4", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp10z", name: "Cushion Cover (40cm)", cat: "Bedroom", room: "Bedroom", price: 91, memberPrice: 82, sku: "SH-10714", tag: "New", ph: "", img: "assets/products/bp10z.webp",
+    imgs: ["assets/products/bp10z.webp", "assets/products/bp10z-2.webp", "assets/products/bp10z-3.webp", "assets/products/bp10z-4.webp", "assets/products/bp10z-5.webp"],
+    sizes: [{ label: "40cm / Yellow", price: 91 }, { label: "40cm / Beige", price: 91 }, { label: "40cm / Green", price: 91 }, { label: "40cm / Rust", price: 91 }, { label: "40cm / Blue", price: 91 }, { label: "40cm / White", price: 91 }, { label: "40cm / Dark Grey", price: 91 }, { label: "40cm / Black", price: 91 }, { label: "45cm / Yellow", price: 104 }, { label: "45cm / Beige", price: 104 }, { label: "45cm / Green", price: 104 }, { label: "45cm / Rust", price: 104 }, { label: "45cm / Blue", price: 104 }, { label: "45cm / White", price: 104 }, { label: "45cm / Dark Grey", price: 104 }, { label: "45cm / Black", price: 104 }, { label: "50cm / Yellow", price: 124 }, { label: "50cm / Beige", price: 124 }, { label: "50cm / Green", price: 124 }, { label: "50cm / Rust", price: 124 }, { label: "50cm / Blue", price: 124 }, { label: "50cm / White", price: 124 }, { label: "50cm / Dark Grey", price: 124 }, { label: "50cm / Black", price: 124 }],
+    desc: "40cm square in yellow, beige or green.",
+    features: [
+      "40cm square",
+      "Three colourways",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "24", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp11z", name: "Patterned Cushion Cover (45cm)", cat: "Bedroom", room: "Bedroom", price: 91, memberPrice: 82, sku: "SH-10715", tag: "New", ph: "", img: "assets/products/bp11z.webp",
+    imgs: ["assets/products/bp11z.webp", "assets/products/bp11z-2.webp", "assets/products/bp11z-3.webp", "assets/products/bp11z-4.webp", "assets/products/bp11z-5.webp"],
+    sizes: [{ label: "1 / 45cm x 45cm", price: 91 }, { label: "2 / 45cm x 45cm", price: 91 }, { label: "3 / 45cm x 45cm", price: 91 }, { label: "4 / 45cm x 45cm", price: 91 }, { label: "5 / 45cm x 45cm", price: 91 }, { label: "6 / 45cm x 45cm", price: 91 }],
+    desc: "Three patterns at 45cm square, meant to be mixed.",
+    features: [
+      "Three patterns",
+      "45cm square",
+      "Mix across a sofa"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "6", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp12z", name: "Cushion Cover in Yellow", cat: "Bedroom", room: "Bedroom", price: 93, memberPrice: 84, sku: "SH-10716", tag: "New", ph: "", img: "assets/products/bp12z.webp",
+    imgs: ["assets/products/bp12z.webp", "assets/products/bp12z-2.webp", "assets/products/bp12z-3.webp", "assets/products/bp12z-4.webp", "assets/products/bp12z-5.webp"],
+    sizes: [{ label: "Yellow / 30 x 50cm", price: 93 }, { label: "Beige / 30 x 50cm", price: 93 }, { label: "Grey / 30 x 50cm", price: 93 }, { label: "Blue / 30 x 50cm", price: 93 }, { label: "Black / 30 x 50cm", price: 93 }, { label: "Yellow / 45 x 45cm", price: 106 }, { label: "Beige / 45 x 45cm", price: 106 }, { label: "Grey / 45 x 45cm", price: 106 }, { label: "Blue / 45 x 45cm", price: 106 }, { label: "Black / 45 x 45cm", price: 106 }, { label: "Yellow / 50 x 50cm", price: 117 }, { label: "Beige / 50 x 50cm", price: 117 }, { label: "Grey / 50 x 50cm", price: 117 }, { label: "Blue / 50 x 50cm", price: 117 }, { label: "Black / 50 x 50cm", price: 117 }, { label: "Yellow / 60 x 60cm", price: 128 }, { label: "Beige / 60 x 60cm", price: 128 }, { label: "Grey / 60 x 60cm", price: 128 }, { label: "Blue / 60 x 60cm", price: 128 }, { label: "Black / 60 x 60cm", price: 128 }],
+    desc: "Yellow, lumbar or square.",
+    features: [
+      "Lumbar and square",
+      "Yellow colourway",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "20", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp13z", name: "Diamond Quilted Cushion Case", cat: "Bedroom", room: "Bedroom", price: 106, memberPrice: 95, sku: "SH-10717", tag: "New", ph: "", img: "assets/products/bp13z.webp",
+    imgs: ["assets/products/bp13z.webp", "assets/products/bp13z-2.webp", "assets/products/bp13z-3.webp", "assets/products/bp13z-4.webp", "assets/products/bp13z-5.webp"],
+    sizes: [{ label: "Light Blue / 30cm x 50cm", price: 106 }, { label: "Aqua Blue / 30cm x 50cm", price: 106 }, { label: "Green / 30cm x 50cm", price: 106 }, { label: "Dark Pink / 30cm x 50cm", price: 106 }, { label: "Red / 30cm x 50cm", price: 106 }, { label: "Light Pink / 30cm x 50cm", price: 106 }, { label: "Khaki / 30cm x 50cm", price: 106 }, { label: "Grey / 30cm x 50cm", price: 106 }, { label: "Blue / 30cm x 50cm", price: 106 }, { label: "Cream / 30cm x 50cm", price: 106 }, { label: "Light Blue / 45cm X 45cm", price: 115 }, { label: "Aqua Blue / 45cm X 45cm", price: 115 }, { label: "Green / 45cm X 45cm", price: 115 }, { label: "Dark Pink / 45cm X 45cm", price: 115 }, { label: "Red / 45cm X 45cm", price: 115 }, { label: "Light Pink / 45cm X 45cm", price: 115 }, { label: "Khaki / 45cm X 45cm", price: 115 }, { label: "Grey / 45cm X 45cm", price: 115 }, { label: "Blue / 45cm X 45cm", price: 115 }, { label: "Cream / 45cm X 45cm", price: 115 }],
+    desc: "Light blue or aqua, lumbar, with a diamond quilt.",
+    features: [
+      "Diamond quilting",
+      "Light Blue or Aqua",
+      "Lumbar size"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "20", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp14z", name: "Velvet Cushion Cover (45cm)", cat: "Bedroom", room: "Bedroom", price: 106, memberPrice: 95, sku: "SH-10718", tag: "New", ph: "", img: "assets/products/bp14z.webp",
+    imgs: ["assets/products/bp14z.webp", "assets/products/bp14z-2.webp", "assets/products/bp14z-3.webp", "assets/products/bp14z-4.webp", "assets/products/bp14z-5.webp"],
+    sizes: [{ label: "45x45cm", price: 106 }],
+    desc: "Velvet, 45cm square.",
+    features: [
+      "Velvet",
+      "45 x 45cm",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "1", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp15z", name: "Cushion Cover in Six Colours", cat: "Bedroom", room: "Bedroom", price: 106, memberPrice: 95, sku: "SH-10719", tag: "New", ph: "", img: "assets/products/bp15z.webp",
+    imgs: ["assets/products/bp15z.webp", "assets/products/bp15z-2.webp", "assets/products/bp15z-3.webp", "assets/products/bp15z-4.webp", "assets/products/bp15z-5.webp"],
+    sizes: [{ label: "Grey", price: 106 }, { label: "Tangerine", price: 106 }, { label: "Coffee", price: 106 }, { label: "Deep Green", price: 106 }, { label: "Orange", price: 106 }, { label: "Blue", price: 106 }, { label: "Pink", price: 106 }],
+    desc: "Grey, tangerine, coffee, deep green, orange and more.",
+    features: [
+      "Six colourways",
+      "Includes tangerine and deep green",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "7", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp16z", name: "Cushion Cover in White or Grey", cat: "Bedroom", room: "Bedroom", price: 107, memberPrice: 96, sku: "SH-10720", tag: "New", ph: "", img: "assets/products/bp16z.webp",
+    imgs: ["assets/products/bp16z.webp", "assets/products/bp16z-2.webp", "assets/products/bp16z-3.webp", "assets/products/bp16z-4.webp", "assets/products/bp16z-5.webp"],
+    sizes: [{ label: "White / 50 x 30cm", price: 107 }, { label: "White / 45 x 45cm", price: 107 }, { label: "Grey / 50 x 30cm", price: 107 }, { label: "Grey / 45 x 45cm", price: 107 }, { label: "Khaki / 50 x 30cm", price: 107 }, { label: "Khaki / 45 x 45cm", price: 107 }, { label: "Green / 50 x 30cm", price: 107 }, { label: "Green / 45 x 45cm", price: 107 }, { label: "Navy / 50 x 30cm", price: 107 }, { label: "Navy / 45 x 45cm", price: 107 }, { label: "Pink / 50 x 30cm", price: 107 }, { label: "Pink / 45 x 45cm", price: 107 }],
+    desc: "White or grey, lumbar or square.",
+    features: [
+      "Lumbar and square",
+      "White or Grey",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "12", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp17z", name: "Cushion Cover in Off White or Black", cat: "Bedroom", room: "Bedroom", price: 120, memberPrice: 108, sku: "SH-10721", tag: "New", ph: "", img: "assets/products/bp17z.webp",
+    imgs: ["assets/products/bp17z.webp", "assets/products/bp17z-2.webp", "assets/products/bp17z-3.webp", "assets/products/bp17z-4.webp", "assets/products/bp17z-5.webp"],
+    sizes: [{ label: "Off White / 45cm x 45cm", price: 120 }, { label: "Black / 45cm x 45cm", price: 120 }],
+    desc: "Off white or black, 45cm square.",
+    features: [
+      "45cm square",
+      "Off White or Black",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "2", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp18z", name: "Tan Blanket (Three Sizes)", cat: "Bedroom", room: "Bedroom", price: 124, memberPrice: 112, sku: "SH-10722", tag: "New", ph: "", img: "assets/products/bp18z.webp",
+    imgs: ["assets/products/bp18z.webp", "assets/products/bp18z-2.webp", "assets/products/bp18z-3.webp", "assets/products/bp18z-4.webp", "assets/products/bp18z-5.webp"],
+    sizes: [{ label: "Tan / 100cm x 150cm", price: 124 }, { label: "Pink / 100cm x 150cm", price: 124 }, { label: "Red / 100cm x 150cm", price: 124 }, { label: "Grey / 100cm x 150cm", price: 124 }, { label: "Purple / 100cm x 150cm", price: 124 }, { label: "Yellow / 100cm x 150cm", price: 124 }, { label: "Blue / 100cm x 150cm", price: 124 }, { label: "Navy / 100cm x 150cm", price: 124 }, { label: "Tan / 150cm x 200cm", price: 204 }, { label: "Pink / 150cm x 200cm", price: 204 }, { label: "Red / 150cm x 200cm", price: 204 }, { label: "Grey / 150cm x 200cm", price: 204 }, { label: "Purple / 150cm x 200cm", price: 204 }, { label: "Yellow / 150cm x 200cm", price: 204 }, { label: "Blue / 150cm x 200cm", price: 204 }, { label: "Navy / 150cm x 200cm", price: 204 }, { label: "Tan / 180cm x 200cm", price: 230 }, { label: "Pink / 180cm x 200cm", price: 230 }, { label: "Red / 180cm x 200cm", price: 230 }, { label: "Grey / 180cm x 200cm", price: 230 }, { label: "Purple / 180cm x 200cm", price: 230 }, { label: "Yellow / 180cm x 200cm", price: 230 }, { label: "Blue / 180cm x 200cm", price: 230 }, { label: "Navy / 180cm x 200cm", price: 230 }, { label: "Tan / 200cm x 230cm", price: 272 }, { label: "Pink / 200cm x 230cm", price: 272 }, { label: "Red / 200cm x 230cm", price: 272 }, { label: "Grey / 200cm x 230cm", price: 272 }, { label: "Purple / 200cm x 230cm", price: 272 }, { label: "Yellow / 200cm x 230cm", price: 272 }, { label: "Blue / 200cm x 230cm", price: 272 }, { label: "Navy / 200cm x 230cm", price: 272 }],
+    desc: "Tan, from a 100 x 150cm throw to a full bed size.",
+    features: [
+      "100 x 150cm to bed size",
+      "Tan colourway",
+      "Throw or bed blanket"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "32", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp19z", name: "Cushion Cover (S, M or L)", cat: "Bedroom", room: "Bedroom", price: 124, memberPrice: 112, sku: "SH-10723", tag: "New", ph: "", img: "assets/products/bp19z.webp",
+    imgs: ["assets/products/bp19z.webp", "assets/products/bp19z-2.webp", "assets/products/bp19z-3.webp"],
+    sizes: [{ label: "S", price: 124 }, { label: "M", price: 124 }, { label: "L", price: 124 }],
+    desc: "Three sizes of the same cover.",
+    features: [
+      "Small, Medium and Large",
+      "One design",
+      "Cover only"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "3", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp20z", name: "Velvet Plaid Blanket", cat: "Bedroom", room: "Bedroom", price: 165, memberPrice: 148, sku: "SH-10724", tag: "New", ph: "", img: "assets/products/bp20z.webp",
+    imgs: ["assets/products/bp20z.webp", "assets/products/bp20z-2.webp", "assets/products/bp20z-3.webp", "assets/products/bp20z-4.webp", "assets/products/bp20z-5.webp"],
+    sizes: [{ label: "Green / 70cm x 100cm", price: 165 }, { label: "Blue / 70cm x 100cm", price: 165 }, { label: "Yellow / 70cm x 100cm", price: 165 }, { label: "Pink / 70cm x 100cm", price: 165 }, { label: "Purple / 70cm x 100cm", price: 165 }, { label: "Beige / 70cm x 100cm", price: 165 }, { label: "Khaki / 70cm x 100cm", price: 165 }, { label: "Grey / 70cm x 100cm", price: 165 }, { label: "Green / 100cm x 150cm", price: 322 }, { label: "Blue / 100cm x 150cm", price: 322 }, { label: "Yellow / 100cm x 150cm", price: 322 }, { label: "Pink / 100cm x 150cm", price: 322 }, { label: "Purple / 100cm x 150cm", price: 322 }, { label: "Beige / 100cm x 150cm", price: 322 }, { label: "Khaki / 100cm x 150cm", price: 322 }, { label: "Grey / 100cm x 150cm", price: 322 }, { label: "Green / 150cm x 200cm", price: 406 }, { label: "Blue / 150cm x 200cm", price: 406 }, { label: "Yellow / 150cm x 200cm", price: 406 }, { label: "Pink / 150cm x 200cm", price: 406 }, { label: "Purple / 150cm x 200cm", price: 406 }, { label: "Beige / 150cm x 200cm", price: 406 }, { label: "Khaki / 150cm x 200cm", price: 406 }, { label: "Grey / 150cm x 200cm", price: 406 }],
+    desc: "Velvet plaid in green, from a 70 x 100cm lap throw upward.",
+    features: [
+      "Velvet plaid",
+      "From 70 x 100cm",
+      "Green and other tones"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "24", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp21z", name: "Faux Fur Cushion Cover (45cm)", cat: "Bedroom", room: "Bedroom", price: 165, memberPrice: 148, sku: "SH-10725", tag: "New", ph: "", img: "assets/products/bp21z.webp",
+    imgs: ["assets/products/bp21z.webp", "assets/products/bp21z-2.webp", "assets/products/bp21z-3.webp", "assets/products/bp21z-4.webp", "assets/products/bp21z-5.webp"],
+    sizes: [{ label: "1 / 45 x 45cm", price: 165 }, { label: "2 / 45 x 45cm", price: 165 }, { label: "3 / 45 x 45cm", price: 165 }, { label: "4 / 45 x 45cm", price: 165 }, { label: "5 / 45 x 45cm", price: 165 }, { label: "6 / 45 x 45cm", price: 165 }],
+    desc: "Four faux fur designs at 45cm square.",
+    features: [
+      "Faux fur",
+      "Four designs",
+      "45 x 45cm"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "6", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp22z", name: "Faux Fur Blanket", cat: "Bedroom", room: "Bedroom", price: 222, memberPrice: 200, sku: "SH-10726", tag: "New", ph: "", img: "assets/products/bp22z.webp",
+    imgs: ["assets/products/bp22z.webp", "assets/products/bp22z-2.webp", "assets/products/bp22z-3.webp", "assets/products/bp22z-4.webp", "assets/products/bp22z-5.webp"],
+    sizes: [{ label: "60 x 150cm", price: 222 }, { label: "150 x 180cm", price: 593 }, { label: "150 x 200cm", price: 667 }, { label: "150 x 220cm", price: 741 }],
+    desc: "Faux fur from a 60 x 150cm runner to a 150 x 200cm bed throw.",
+    features: [
+      "Faux fur",
+      "60 x 150cm to 150 x 200cm",
+      "Runner or bed throw"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "4", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp23z", name: "Two-Tone Blanket", cat: "Bedroom", room: "Bedroom", price: 230, memberPrice: 207, sku: "SH-10727", tag: "New", ph: "", img: "assets/products/bp23z.webp",
+    imgs: ["assets/products/bp23z.webp", "assets/products/bp23z-2.webp", "assets/products/bp23z-3.webp", "assets/products/bp23z-4.webp", "assets/products/bp23z-5.webp"],
+    sizes: [{ label: "Khaki + White / 100 x 150cm", price: 230 }, { label: "Grey + White / 100 x 150cm", price: 230 }, { label: "Green + White / 100 x 150cm", price: 230 }, { label: "Pink + White / 100 x 150cm", price: 230 }, { label: "Ocean Blue + White / 100 x 150cm", price: 230 }, { label: "Cream + White / 100 x 150cm", price: 230 }, { label: "Blue + White / 100 x 150cm", price: 230 }, { label: "Pink / 100 x 150cm", price: 230 }, { label: "Grey / 100 x 150cm", price: 230 }, { label: "Purple / 100 x 150cm", price: 230 }, { label: "Khaki / 100 x 150cm", price: 230 }, { label: "Blue / 100 x 150cm", price: 230 }, { label: "Green / 100 x 150cm", price: 230 }, { label: "Khaki + White / 150 x 200cm", price: 304 }, { label: "Grey + White / 150 x 200cm", price: 304 }, { label: "Green + White / 150 x 200cm", price: 304 }, { label: "Pink + White / 150 x 200cm", price: 304 }, { label: "Ocean Blue + White / 150 x 200cm", price: 304 }, { label: "Cream + White / 150 x 200cm", price: 304 }, { label: "Blue + White / 150 x 200cm", price: 304 }, { label: "Pink / 150 x 200cm", price: 304 }, { label: "Grey / 150 x 200cm", price: 304 }, { label: "Purple / 150 x 200cm", price: 304 }, { label: "Khaki / 150 x 200cm", price: 304 }, { label: "Blue / 150 x 200cm", price: 304 }, { label: "Green / 150 x 200cm", price: 304 }, { label: "Khaki + White / 180 x 200cm", price: 350 }, { label: "Grey + White / 180 x 200cm", price: 350 }, { label: "Green + White / 180 x 200cm", price: 350 }, { label: "Pink + White / 180 x 200cm", price: 350 }, { label: "Ocean Blue + White / 180 x 200cm", price: 350 }, { label: "Cream + White / 180 x 200cm", price: 350 }, { label: "Blue + White / 180 x 200cm", price: 350 }, { label: "Pink / 180 x 200cm", price: 350 }, { label: "Grey / 180 x 200cm", price: 350 }, { label: "Purple / 180 x 200cm", price: 350 }, { label: "Khaki / 180 x 200cm", price: 350 }, { label: "Blue / 180 x 200cm", price: 350 }, { label: "Green / 180 x 200cm", price: 350 }, { label: "Khaki + White / 200 x 230cm", price: 439 }, { label: "Grey + White / 200 x 230cm", price: 439 }, { label: "Green + White / 200 x 230cm", price: 439 }, { label: "Pink + White / 200 x 230cm", price: 439 }, { label: "Ocean Blue + White / 200 x 230cm", price: 439 }, { label: "Cream + White / 200 x 230cm", price: 439 }, { label: "Blue + White / 200 x 230cm", price: 439 }, { label: "Pink / 200 x 230cm", price: 439 }, { label: "Grey / 200 x 230cm", price: 439 }, { label: "Purple / 200 x 230cm", price: 439 }, { label: "Khaki / 200 x 230cm", price: 439 }, { label: "Blue / 200 x 230cm", price: 439 }, { label: "Green / 200 x 230cm", price: 439 }],
+    desc: "Khaki and white, from 100 x 150cm.",
+    features: [
+      "Khaki and White",
+      "From 100 x 150cm",
+      "Throw or bed blanket"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "52", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp24z", name: "Plush Blanket in Grey", cat: "Bedroom", room: "Bedroom", price: 231, memberPrice: 208, sku: "SH-10728", tag: "New", ph: "", img: "assets/products/bp24z.webp",
+    imgs: ["assets/products/bp24z.webp", "assets/products/bp24z-2.webp", "assets/products/bp24z-3.webp", "assets/products/bp24z-4.webp", "assets/products/bp24z-5.webp"],
+    sizes: [{ label: "Grey / 100cm x 120cm", price: 231 }, { label: "Ocean Green / 100cm x 120cm", price: 231 }, { label: "Pink / 100cm x 120cm", price: 231 }, { label: "Orange / 100cm x 120cm", price: 231 }, { label: "Green / 100cm x 120cm", price: 231 }, { label: "Blue / 100cm x 120cm", price: 231 }, { label: "Khaki / 100cm x 120cm", price: 231 }, { label: "Charcoal Grey / 100cm x 120cm", price: 231 }, { label: "Navy Blue / 100cm x 120cm", price: 231 }, { label: "Light Pink / 100cm x 120cm", price: 231 }, { label: "Grey / 150cm x 200cm", price: 444 }, { label: "Ocean Green / 150cm x 200cm", price: 444 }, { label: "Pink / 150cm x 200cm", price: 444 }, { label: "Orange / 150cm x 200cm", price: 444 }, { label: "Green / 150cm x 200cm", price: 444 }, { label: "Blue / 150cm x 200cm", price: 444 }, { label: "Khaki / 150cm x 200cm", price: 444 }, { label: "Charcoal Grey / 150cm x 200cm", price: 444 }, { label: "Navy Blue / 150cm x 200cm", price: 444 }, { label: "Light Pink / 150cm x 200cm", price: 444 }, { label: "Grey / 180cm x 200cm", price: 537 }, { label: "Ocean Green / 180cm x 200cm", price: 537 }, { label: "Pink / 180cm x 200cm", price: 537 }, { label: "Orange / 180cm x 200cm", price: 537 }, { label: "Green / 180cm x 200cm", price: 537 }, { label: "Blue / 180cm x 200cm", price: 537 }, { label: "Khaki / 180cm x 200cm", price: 537 }, { label: "Charcoal Grey / 180cm x 200cm", price: 537 }, { label: "Navy Blue / 180cm x 200cm", price: 537 }, { label: "Light Pink / 180cm x 200cm", price: 537 }],
+    desc: "Grey plush, from a 100 x 120cm throw to 150 x 200cm.",
+    features: [
+      "Plush pile",
+      "100 x 120cm to 150 x 200cm",
+      "Grey colourway"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "30", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp25z", name: "Lake Green Blanket", cat: "Bedroom", room: "Bedroom", price: 237, memberPrice: 213, sku: "SH-10729", tag: "New", ph: "", img: "assets/products/bp25z.webp",
+    imgs: ["assets/products/bp25z.webp", "assets/products/bp25z-2.webp", "assets/products/bp25z-3.webp", "assets/products/bp25z-4.webp", "assets/products/bp25z-5.webp"],
+    sizes: [{ label: "Lake Green / 120 x 200cm", price: 237 }, { label: "Green / 120 x 200cm", price: 237 }, { label: "Off White / 120 x 200cm", price: 237 }, { label: "Coffee / 120 x 200cm", price: 237 }, { label: "Pink / 120 x 200cm", price: 237 }, { label: "Warm Orange / 120 x 200cm", price: 237 }, { label: "Purple / 120 x 200cm", price: 237 }, { label: "Lake Green / 150 x 200cm", price: 348 }, { label: "Green / 150 x 200cm", price: 348 }, { label: "Off White / 150 x 200cm", price: 348 }, { label: "Coffee / 150 x 200cm", price: 348 }, { label: "Pink / 150 x 200cm", price: 348 }, { label: "Warm Orange / 150 x 200cm", price: 348 }, { label: "Purple / 150 x 200cm", price: 348 }, { label: "Lake Green / 180 x 200cm", price: 389 }, { label: "Green / 180 x 200cm", price: 389 }, { label: "Off White / 180 x 200cm", price: 389 }, { label: "Coffee / 180 x 200cm", price: 389 }, { label: "Pink / 180 x 200cm", price: 389 }, { label: "Warm Orange / 180 x 200cm", price: 389 }, { label: "Purple / 180 x 200cm", price: 389 }, { label: "Lake Green / 200 x 230cm", price: 441 }, { label: "Green / 200 x 230cm", price: 441 }, { label: "Off White / 200 x 230cm", price: 441 }, { label: "Coffee / 200 x 230cm", price: 441 }, { label: "Pink / 200 x 230cm", price: 441 }, { label: "Warm Orange / 200 x 230cm", price: 441 }, { label: "Purple / 200 x 230cm", price: 441 }],
+    desc: "Lake green, 120 x 200cm or 150cm wide.",
+    features: [
+      "Lake Green",
+      "120 x 200cm upward",
+      "Bed or sofa"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "28", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp26z", name: "Velvet Faux Fur Blanket", cat: "Bedroom", room: "Bedroom", price: 256, memberPrice: 230, sku: "SH-10730", tag: "New", ph: "", img: "assets/products/bp26z.webp",
+    imgs: ["assets/products/bp26z.webp", "assets/products/bp26z-2.webp", "assets/products/bp26z-3.webp", "assets/products/bp26z-4.webp", "assets/products/bp26z-5.webp"],
+    sizes: [{ label: "Black / 80cm x 120cm", price: 256 }, { label: "Chocolate / 80cm x 120cm", price: 256 }, { label: "Grey / 80cm x 120cm", price: 256 }, { label: "Khaki / 80cm x 120cm", price: 256 }, { label: "Black / 130cm x 160cm", price: 383 }, { label: "Chocolate / 130cm x 160cm", price: 383 }, { label: "Grey / 130cm x 160cm", price: 383 }, { label: "Khaki / 130cm x 160cm", price: 383 }, { label: "Black / 160cm x 200cm", price: 509 }, { label: "Chocolate / 160cm x 200cm", price: 509 }, { label: "Grey / 160cm x 200cm", price: 509 }, { label: "Khaki / 160cm x 200cm", price: 509 }],
+    desc: "Velvet-backed faux fur in black, from 80 x 120cm.",
+    features: [
+      "Faux fur with velvet backing",
+      "From 80 x 120cm",
+      "Black and other tones"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "12", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp27z", name: "Ivory Blanket (Bed Size)", cat: "Bedroom", room: "Bedroom", price: 267, memberPrice: 240, sku: "SH-10731", tag: "New", ph: "", img: "assets/products/bp27z.webp",
+    imgs: ["assets/products/bp27z.webp", "assets/products/bp27z-2.webp", "assets/products/bp27z-3.webp", "assets/products/bp27z-4.webp", "assets/products/bp27z-5.webp"],
+    sizes: [{ label: "Ivory / 120cm x 200cm", price: 267 }, { label: "Beige / 120cm x 200cm", price: 267 }, { label: "Butterscotch / 120cm x 200cm", price: 267 }, { label: "Blush Pink / 120cm x 200cm", price: 267 }, { label: "Grey / 120cm x 200cm", price: 267 }, { label: "Moss Green / 120cm x 200cm", price: 267 }, { label: "Steel Blue / 120cm x 200cm", price: 267 }, { label: "Rust / 120cm x 200cm", price: 267 }, { label: "Lavender / 120cm x 200cm", price: 267 }, { label: "Charcoal Grey / 120cm x 200cm", price: 267 }, { label: "Ivory / 150cm x 200cm", price: 300 }, { label: "Beige / 150cm x 200cm", price: 300 }, { label: "Butterscotch / 150cm x 200cm", price: 300 }, { label: "Blush Pink / 150cm x 200cm", price: 300 }, { label: "Grey / 150cm x 200cm", price: 300 }, { label: "Moss Green / 150cm x 200cm", price: 300 }, { label: "Steel Blue / 150cm x 200cm", price: 300 }, { label: "Rust / 150cm x 200cm", price: 300 }, { label: "Lavender / 150cm x 200cm", price: 300 }, { label: "Charcoal Grey / 150cm x 200cm", price: 300 }, { label: "Ivory / 180cm x 200cm", price: 348 }, { label: "Beige / 180cm x 200cm", price: 348 }, { label: "Butterscotch / 180cm x 200cm", price: 348 }, { label: "Blush Pink / 180cm x 200cm", price: 348 }, { label: "Grey / 180cm x 200cm", price: 348 }, { label: "Moss Green / 180cm x 200cm", price: 348 }, { label: "Steel Blue / 180cm x 200cm", price: 348 }, { label: "Rust / 180cm x 200cm", price: 348 }, { label: "Lavender / 180cm x 200cm", price: 348 }, { label: "Charcoal Grey / 180cm x 200cm", price: 348 }, { label: "Ivory / 200cm x 230cm", price: 378 }, { label: "Beige / 200cm x 230cm", price: 378 }, { label: "Butterscotch / 200cm x 230cm", price: 378 }, { label: "Blush Pink / 200cm x 230cm", price: 378 }, { label: "Grey / 200cm x 230cm", price: 378 }, { label: "Moss Green / 200cm x 230cm", price: 378 }, { label: "Steel Blue / 200cm x 230cm", price: 378 }, { label: "Rust / 200cm x 230cm", price: 378 }, { label: "Lavender / 200cm x 230cm", price: 378 }, { label: "Charcoal Grey / 200cm x 230cm", price: 378 }],
+    desc: "Ivory at 120 x 200cm or 150 x 200cm.",
+    features: [
+      "Ivory colourway",
+      "120 and 150cm widths",
+      "Bed size"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "40", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp28z", name: "Faux Fur Pillows (Five Designs)", cat: "Bedroom", room: "Bedroom", price: 272, memberPrice: 245, sku: "SH-10732", tag: "New", ph: "", img: "assets/products/bp28z.webp",
+    imgs: ["assets/products/bp28z.webp", "assets/products/bp28z-2.webp", "assets/products/bp28z-3.webp", "assets/products/bp28z-4.webp", "assets/products/bp28z-5.webp"],
+    sizes: [{ label: "1", price: 272 }, { label: "2", price: 272 }, { label: "3", price: 272 }, { label: "4", price: 272 }, { label: "5", price: 272 }],
+    desc: "Five faux fur pillow designs.",
+    features: [
+      "Faux fur",
+      "Five designs",
+      "Mix across a bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "5", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp29z", name: "Faux Fur Cushion (50cm)", cat: "Bedroom", room: "Bedroom", price: 276, memberPrice: 248, sku: "SH-10733", tag: "New", ph: "", img: "assets/products/bp29z.webp",
+    imgs: ["assets/products/bp29z.webp", "assets/products/bp29z-2.webp", "assets/products/bp29z-3.webp", "assets/products/bp29z-4.webp", "assets/products/bp29z-5.webp"],
+    sizes: [{ label: "Tan / 50 x 50cm", price: 276 }, { label: "White / 50 x 50cm", price: 276 }, { label: "Charcoal / 50 x 50cm", price: 276 }, { label: "Pink / 50 x 50cm", price: 276 }, { label: "Baby Blue / 50 x 50cm", price: 276 }],
+    desc: "Tan, white or charcoal, 50cm square.",
+    features: [
+      "Faux fur",
+      "50 x 50cm",
+      "Tan, White or Charcoal"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "5", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp30z", name: "Black & White Blanket", cat: "Bedroom", room: "Bedroom", price: 276, memberPrice: 248, sku: "SH-10734", tag: "New", ph: "", img: "assets/products/bp30z.webp",
+    imgs: ["assets/products/bp30z.webp", "assets/products/bp30z-2.webp", "assets/products/bp30z-3.webp", "assets/products/bp30z-4.webp", "assets/products/bp30z-5.webp"],
+    sizes: [{ label: "Black + White / 150cm x 200cm", price: 276 }, { label: "Black + White / 180cm x 200cm", price: 350 }, { label: "Black + White / 200cm x 230cm", price: 439 }],
+    desc: "Black and white, 150 x 200cm.",
+    features: [
+      "Black and White",
+      "150 x 200cm",
+      "Bed size"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "3", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp31z", name: "Faux Fur Blanket in Coffee", cat: "Bedroom", room: "Bedroom", price: 296, memberPrice: 266, sku: "SH-10735", tag: "New", ph: "", img: "assets/products/bp31z.webp",
+    imgs: ["assets/products/bp31z.webp", "assets/products/bp31z-2.webp", "assets/products/bp31z-3.webp", "assets/products/bp31z-4.webp", "assets/products/bp31z-5.webp"],
+    sizes: [{ label: "Coffee / 60cm x 150cm", price: 296 }, { label: "Camel / 60cm x 150cm", price: 296 }, { label: "Ivory / 60cm x 150cm", price: 296 }, { label: "Coffee / 150cm x 180cm", price: 630 }, { label: "Camel / 150cm x 180cm", price: 630 }, { label: "Ivory / 150cm x 180cm", price: 630 }, { label: "Coffee / 150cm x 200cm", price: 704 }, { label: "Camel / 150cm x 200cm", price: 704 }, { label: "Ivory / 150cm x 200cm", price: 704 }, { label: "Coffee / 200cm x 220cm", price: 759 }, { label: "Camel / 200cm x 220cm", price: 759 }, { label: "Ivory / 200cm x 220cm", price: 759 }],
+    desc: "Coffee faux fur, from a 60 x 150cm runner upward.",
+    features: [
+      "Faux fur",
+      "From 60 x 150cm",
+      "Coffee colourway"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "12", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp32z", name: "Tan Blanket (100 or 160cm)", cat: "Bedroom", room: "Bedroom", price: 311, memberPrice: 280, sku: "SH-10736", tag: "New", ph: "", img: "assets/products/bp32z.webp",
+    imgs: ["assets/products/bp32z.webp", "assets/products/bp32z-2.webp", "assets/products/bp32z-3.webp", "assets/products/bp32z-4.webp", "assets/products/bp32z-5.webp"],
+    sizes: [{ label: "Tan / 100cm x 160cm", price: 311 }, { label: "Ocean Green / 100cm x 160cm", price: 311 }, { label: "Blue / 100cm x 160cm", price: 311 }, { label: "Charcoal Grey / 100cm x 160cm", price: 311 }, { label: "Green / 100cm x 160cm", price: 311 }, { label: "Tan / 160cm x 200cm", price: 496 }, { label: "Ocean Green / 160cm x 200cm", price: 496 }, { label: "Blue / 160cm x 200cm", price: 496 }, { label: "Charcoal Grey / 160cm x 200cm", price: 496 }, { label: "Green / 160cm x 200cm", price: 496 }, { label: "Tan / 180cm x 200cm", price: 606 }, { label: "Ocean Green / 180cm x 200cm", price: 606 }, { label: "Blue / 180cm x 200cm", price: 606 }, { label: "Charcoal Grey / 180cm x 200cm", price: 606 }, { label: "Green / 180cm x 200cm", price: 606 }, { label: "Blue / 200cm x 230cm", price: 794 }, { label: "Green / 200cm x 230cm", price: 794 }, { label: "Ocean Green / 200cm x 230cm", price: 794 }, { label: "Tan / 200cm x 230cm", price: 794 }, { label: "Charcoal Grey / 200cm x 230cm", price: 794 }],
+    desc: "Tan, 100 x 160cm or 160 x 200cm.",
+    features: [
+      "Tan colourway",
+      "Two sizes",
+      "Throw or bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "20", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp33z", name: "Pink Blanket", cat: "Bedroom", room: "Bedroom", price: 331, memberPrice: 298, sku: "SH-10737", tag: "New", ph: "", img: "assets/products/bp33z.webp",
+    imgs: ["assets/products/bp33z.webp", "assets/products/bp33z-2.webp", "assets/products/bp33z-3.webp", "assets/products/bp33z-4.webp", "assets/products/bp33z-5.webp"],
+    sizes: [{ label: "Pink / 100 x 150cm", price: 331 }, { label: "Grey / 100 x 150cm", price: 331 }, { label: "Green / 100 x 150cm", price: 331 }, { label: "Coffee / 100 x 150cm", price: 331 }, { label: "Dark Green / 100 x 150cm", price: 331 }, { label: "Light Pink / 100 x 150cm", price: 331 }, { label: "Off White / 100 x 150cm", price: 331 }, { label: "Cream / 100 x 150cm", price: 331 }, { label: "Pink / 150 x 200cm", price: 389 }, { label: "Green / 150 x 200cm", price: 389 }, { label: "Coffee / 150 x 200cm", price: 389 }, { label: "Grey / 150 x 200cm", price: 389 }, { label: "Dark Green / 150 x 200cm", price: 389 }, { label: "Cream / 150 x 200cm", price: 389 }, { label: "Light Pink / 150 x 200cm", price: 389 }, { label: "Off White / 150 x 200cm", price: 389 }, { label: "Pink / 200 x 230cm", price: 433 }, { label: "Green / 200 x 230cm", price: 433 }, { label: "Dark Green / 200 x 230cm", price: 433 }, { label: "Coffee / 200 x 230cm", price: 433 }, { label: "Grey / 200 x 230cm", price: 433 }, { label: "Cream / 200 x 230cm", price: 433 }, { label: "Off White / 200 x 230cm", price: 433 }, { label: "Light Pink / 200 x 230cm", price: 433 }],
+    desc: "Pink, from 100 x 150cm.",
+    features: [
+      "Pink colourway",
+      "From 100 x 150cm",
+      "Throw or bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "24", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp34z", name: "Blue Blanket", cat: "Bedroom", room: "Bedroom", price: 333, memberPrice: 300, sku: "SH-10738", tag: "New", ph: "", img: "assets/products/bp34z.webp",
+    imgs: ["assets/products/bp34z.webp", "assets/products/bp34z-2.webp", "assets/products/bp34z-3.webp", "assets/products/bp34z-4.webp", "assets/products/bp34z-5.webp"],
+    sizes: [{ label: "Blue / 90cm x 140cm", price: 333 }, { label: "Pink / 90cm x 140cm", price: 333 }, { label: "Charcoal / 90cm x 140cm", price: 333 }, { label: "Light Grey / 90cm x 140cm", price: 333 }, { label: "Blue / 150cm x 190cm", price: 511 }, { label: "Pink / 150cm x 190cm", price: 511 }, { label: "Charcoal / 150cm x 190cm", price: 511 }, { label: "Light Grey / 150cm x 190cm", price: 511 }, { label: "Blue / 200cm x 230cm", price: 685 }, { label: "Pink / 200cm x 230cm", price: 685 }, { label: "Charcoal / 200cm x 230cm", price: 685 }, { label: "Light Grey / 200cm x 230cm", price: 685 }],
+    desc: "Blue, from a 90 x 140cm throw to 150 x 190cm.",
+    features: [
+      "Blue colourway",
+      "90 x 140cm to 150 x 190cm",
+      "Throw or bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "12", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp35z", name: "Faux Fur Blanket Collection", cat: "Bedroom", room: "Bedroom", price: 333, memberPrice: 300, sku: "SH-10739", tag: "New", ph: "", img: "assets/products/bp35z.webp",
+    imgs: ["assets/products/bp35z.webp", "assets/products/bp35z-2.webp", "assets/products/bp35z-3.webp", "assets/products/bp35z-4.webp", "assets/products/bp35z-5.webp"],
+    sizes: [{ label: "A / 120cm  x 150cm", price: 333 }, { label: "B / 120cm  x 150cm", price: 333 }, { label: "C / 120cm  x 150cm", price: 333 }, { label: "D / 120cm  x 150cm", price: 333 }, { label: "E / 120cm  x 150cm", price: 333 }],
+    desc: "Three faux fur designs at 120 x 150cm.",
+    features: [
+      "Faux fur",
+      "Three designs",
+      "120 x 150cm"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "5", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp36z", name: "Leopard Print Blanket", cat: "Bedroom", room: "Bedroom", price: 415, memberPrice: 374, sku: "SH-10740", tag: "New", ph: "", img: "assets/products/bp36z.webp",
+    imgs: ["assets/products/bp36z.webp", "assets/products/bp36z-2.webp", "assets/products/bp36z-3.webp", "assets/products/bp36z-4.webp", "assets/products/bp36z-5.webp"],
+    sizes: [{ label: "127cm x 152cm", price: 415 }, { label: "152cm x 203cm", price: 700 }],
+    desc: "Leopard print at 127 x 152cm or 152 x 203cm. Not subtle, and shouldn't be.",
+    features: [
+      "Leopard print",
+      "Two sizes",
+      "A deliberate statement"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "2", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp37z", name: "Blanket in Tan or White", cat: "Bedroom", room: "Bedroom", price: 433, memberPrice: 390, sku: "SH-10741", tag: "New", ph: "", img: "assets/products/bp37z.webp",
+    imgs: ["assets/products/bp37z.webp", "assets/products/bp37z-2.webp", "assets/products/bp37z-3.webp", "assets/products/bp37z-4.webp", "assets/products/bp37z-5.webp"],
+    sizes: [{ label: "Tan / 100cm x 150cm", price: 433 }, { label: "White / 100cm x 150cm", price: 433 }, { label: "Blue / 100cm x 150cm", price: 433 }, { label: "Grey / 100cm x 150cm", price: 433 }, { label: "Pink / 100cm x 150cm", price: 433 }, { label: "Tan / 150cm x 200cm", price: 644 }, { label: "White / 150cm x 200cm", price: 644 }, { label: "Blue / 150cm x 200cm", price: 644 }, { label: "Grey / 150cm x 200cm", price: 644 }, { label: "Pink / 150cm x 200cm", price: 644 }],
+    desc: "Tan or white, from 100 x 150cm.",
+    features: [
+      "Tan or White",
+      "From 100 x 150cm",
+      "Throw or bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "10", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp38z", name: "Velvet Faux Fur Blanket (Large)", cat: "Bedroom", room: "Bedroom", price: 500, memberPrice: 450, sku: "SH-10742", tag: "New", ph: "", img: "assets/products/bp38z.webp",
+    imgs: ["assets/products/bp38z.webp", "assets/products/bp38z-2.webp", "assets/products/bp38z-3.webp", "assets/products/bp38z-4.webp", "assets/products/bp38z-5.webp"],
+    sizes: [{ label: "Coffee / 160cm x 100cm", price: 500 }, { label: "Off White / 160cm x 100cm", price: 500 }, { label: "Charcoal / 160cm x 100cm", price: 500 }, { label: "Coffee / 200cm x 160cm", price: 704 }, { label: "Off White / 200cm x 160cm", price: 704 }, { label: "Charcoal / 200cm x 160cm", price: 704 }],
+    desc: "Velvet-backed faux fur, from 160 x 100cm.",
+    features: [
+      "Faux fur with velvet backing",
+      "From 160 x 100cm",
+      "Coffee and other tones"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "6", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp39z", name: "Faux Fur Blanket in Tan or Grey", cat: "Bedroom", room: "Bedroom", price: 519, memberPrice: 467, sku: "SH-10743", tag: "New", ph: "", img: "assets/products/bp39z.webp",
+    imgs: ["assets/products/bp39z.webp", "assets/products/bp39z-2.webp", "assets/products/bp39z-3.webp", "assets/products/bp39z-4.webp", "assets/products/bp39z-5.webp"],
+    sizes: [{ label: "Tan / 100 x 160cm", price: 519 }, { label: "Grey / 100 x 160cm", price: 519 }, { label: "White / 100 x 160cm", price: 519 }, { label: "Tan / 160 x 200cm", price: 778 }, { label: "Grey / 160 x 200cm", price: 778 }, { label: "White / 160 x 200cm", price: 778 }],
+    desc: "Tan or grey, 100 x 160cm or 160 x 200cm.",
+    features: [
+      "Faux fur",
+      "Tan or Grey",
+      "Two sizes"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "6", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp40z", name: "Blanket in Two Designs", cat: "Bedroom", room: "Bedroom", price: 544, memberPrice: 490, sku: "SH-10744", tag: "New", ph: "", img: "assets/products/bp40z.webp",
+    imgs: ["assets/products/bp40z.webp", "assets/products/bp40z-2.webp", "assets/products/bp40z-3.webp", "assets/products/bp40z-4.webp", "assets/products/bp40z-5.webp"],
+    sizes: [{ label: "A / 127cm x 150cm", price: 544 }, { label: "B / 127cm x 150cm", price: 544 }, { label: "C / 127cm x 150cm", price: 544 }, { label: "A / 150cm x 200cm", price: 1013 }, { label: "B / 150cm x 200cm", price: 1013 }, { label: "C / 150cm x 200cm", price: 1013 }],
+    desc: "Two designs, 127 x 150cm or 150 x 200cm.",
+    features: [
+      "Two designs",
+      "Two sizes",
+      "Throw or bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "6", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp41z", name: "Luxury Faux Fur Blanket in White", cat: "Bedroom", room: "Bedroom", price: 578, memberPrice: 520, sku: "SH-10745", tag: "New", ph: "", img: "assets/products/bp41z.webp",
+    imgs: ["assets/products/bp41z.webp", "assets/products/bp41z-2.webp", "assets/products/bp41z-3.webp", "assets/products/bp41z-4.webp", "assets/products/bp41z-5.webp"],
+    sizes: [{ label: "White / 127cm x 152cm", price: 578 }, { label: "Brown / 127cm x 152cm", price: 578 }, { label: "Grey / 127cm x 152cm", price: 578 }, { label: "Rustic Brown / 127cm x 152cm", price: 578 }, { label: "White / 130cm x 170cm", price: 602 }, { label: "Brown / 130cm x 170cm", price: 602 }, { label: "Grey / 130cm x 170cm", price: 602 }, { label: "Rustic Brown / 130cm x 170cm", price: 602 }, { label: "White / 150cm x 200cm", price: 730 }, { label: "Brown / 150cm x 200cm", price: 730 }, { label: "Grey / 150cm x 200cm", price: 730 }, { label: "Rustic Brown / 150cm x 200cm", price: 730 }],
+    desc: "White faux fur, 127 x 152cm or 130 x 170cm.",
+    features: [
+      "Faux fur",
+      "White colourway",
+      "Two sizes"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "12", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp42z", name: "Grey Blanket (Large)", cat: "Bedroom", room: "Bedroom", price: 609, memberPrice: 548, sku: "SH-10746", tag: "New", ph: "", img: "assets/products/bp42z.webp",
+    imgs: ["assets/products/bp42z.webp", "assets/products/bp42z-2.webp", "assets/products/bp42z-3.webp", "assets/products/bp42z-4.webp", "assets/products/bp42z-5.webp"],
+    sizes: [{ label: "Grey / 100cm x 160cm", price: 609 }, { label: "Chocolate / 100cm x 160cm", price: 609 }, { label: "Grey / 160cm x 200cm", price: 713 }, { label: "Chocolate / 160cm x 200cm", price: 713 }],
+    desc: "Grey, 100 x 160cm or 160 x 200cm.",
+    features: [
+      "Grey colourway",
+      "Two sizes",
+      "Throw or bed"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "4", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp43z", name: "Faux Fur Blanket in Coffee or Grey", cat: "Bedroom", room: "Bedroom", price: 652, memberPrice: 587, sku: "SH-10747", tag: "New", ph: "", img: "assets/products/bp43z.webp",
+    imgs: ["assets/products/bp43z.webp", "assets/products/bp43z-2.webp", "assets/products/bp43z-3.webp", "assets/products/bp43z-4.webp", "assets/products/bp43z-5.webp"],
+    sizes: [{ label: "Coffee / 100 x 150cm", price: 652 }, { label: "Grey / 100 x 150cm", price: 652 }, { label: "White / 100 x 150cm", price: 652 }, { label: "Grey / 130 x 170cm", price: 791 }, { label: "Coffee / 130 x 170cm", price: 791 }, { label: "White / 130 x 170cm", price: 791 }],
+    desc: "Coffee or grey faux fur at 100 x 150cm.",
+    features: [
+      "Faux fur",
+      "Coffee or Grey",
+      "100 x 150cm"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "6", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp44z", name: "Ultra-Thick Blanket", cat: "Bedroom", room: "Bedroom", price: 665, memberPrice: 598, sku: "SH-10748", tag: "New", ph: "", img: "assets/products/bp44z.webp",
+    imgs: ["assets/products/bp44z.webp", "assets/products/bp44z-2.webp", "assets/products/bp44z-3.webp", "assets/products/bp44z-4.webp", "assets/products/bp44z-5.webp"],
+    sizes: [{ label: "Grey / 150cm  x 200cm", price: 665 }, { label: "Green / 150cm  x 200cm", price: 665 }, { label: "Khaki / 150cm  x 200cm", price: 665 }, { label: "Yellow / 150cm  x 200cm", price: 665 }, { label: "Blue / 150cm  x 200cm", price: 665 }, { label: "Purple / 150cm  x 200cm", price: 665 }, { label: "Grey / 180cm  x 220cm", price: 730 }, { label: "Green / 180cm  x 220cm", price: 730 }, { label: "Khaki / 180cm  x 220cm", price: 730 }, { label: "Yellow / 180cm  x 220cm", price: 730 }, { label: "Blue / 180cm  x 220cm", price: 730 }, { label: "Purple / 180cm  x 220cm", price: 730 }, { label: "Grey / 200cm x 230cm", price: 919 }, { label: "Green / 200cm x 230cm", price: 919 }, { label: "Khaki / 200cm x 230cm", price: 919 }, { label: "Yellow / 200cm x 230cm", price: 919 }, { label: "Blue / 200cm x 230cm", price: 919 }, { label: "Purple / 200cm x 230cm", price: 919 }],
+    desc: "Grey, 150 x 200cm or 180 x 220cm. The heaviest blanket in the range.",
+    features: [
+      "Extra-thick pile",
+      "150 x 200cm and 180 x 220cm",
+      "Grey colourway"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Soft furnishing", "Options": "18", "Room": "Bedroom" },
+    care: "Machine wash cold on a gentle cycle with like colours, or follow the care label where one is attached. Do not tumble dry hot, which flattens the pile." },
+
+  { id: "bp45z", name: "Velvet Faux Fur Blanket in Coffee", cat: "Bedroom", room: "Bedroom", price: 726, memberPrice: 653, sku: "SH-10749", tag: "New", ph: "", img: "assets/products/bp45z.webp",
+    imgs: ["assets/products/bp45z.webp", "assets/products/bp45z-2.webp", "assets/products/bp45z-3.webp", "assets/products/bp45z-4.webp", "assets/products/bp45z-5.webp"],
+    sizes: [{ label: "Coffee / 150 x 127cm", price: 726 }, { label: "Grey / 150 x 127cm", price: 726 }, { label: "Coffee / 180 x 150cm", price: 957 }, { label: "Grey / 180 x 150cm", price: 957 }, { label: "Coffee / 200 x 180cm", price: 1281 }, { label: "Grey / 200 x 180cm", price: 1281 }, { label: "Coffee / 220 x 180cm", price: 1389 }, { label: "Grey / 220 x 180cm", price: 1389 }],
+    desc: "Velvet-backed faux fur, 150 x 127cm or 180 x 150cm.",
+    features: [
+      "Faux fur with velvet backing",
+      "Two sizes",
+      "Coffee colourway"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "8", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp46z", name: "Faux Fur Blanket in Navy or Ocean", cat: "Bedroom", room: "Bedroom", price: 791, memberPrice: 712, sku: "SH-10750", tag: "New", ph: "", img: "assets/products/bp46z.webp",
+    imgs: ["assets/products/bp46z.webp", "assets/products/bp46z-2.webp", "assets/products/bp46z-3.webp", "assets/products/bp46z-4.webp", "assets/products/bp46z-5.webp"],
+    sizes: [{ label: "Navy Blue / 200cm x 230cm", price: 791 }, { label: "Ocean Blue / 200cm x 230cm", price: 791 }, { label: "Chocolate / 200cm x 230cm", price: 791 }, { label: "Deep Red / 200cm x 230cm", price: 791 }, { label: "Charcoal / 200cm x 230cm", price: 791 }],
+    desc: "Navy blue or ocean blue at 200 x 230cm, which covers a king bed properly.",
+    features: [
+      "Faux fur",
+      "Navy or Ocean Blue",
+      "200 x 230cm"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "5", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bp47z", name: "Faux Fur Blanket in Chocolate", cat: "Bedroom", room: "Bedroom", price: 885, memberPrice: 796, sku: "SH-10751", tag: "New", ph: "", img: "assets/products/bp47z.webp",
+    imgs: ["assets/products/bp47z.webp", "assets/products/bp47z-2.webp", "assets/products/bp47z-3.webp", "assets/products/bp47z-4.webp", "assets/products/bp47z-5.webp"],
+    sizes: [{ label: "Chocolate / 150 x 130cm", price: 885 }, { label: "Beige / 150 x 130cm", price: 885 }, { label: "Grey / 150 x 130cm", price: 885 }, { label: "Chocolate / 190 x 150cm", price: 1156 }, { label: "Beige / 190 x 150cm", price: 1156 }, { label: "Grey / 190 x 150cm", price: 1156 }, { label: "Chocolate / 200 x 190cm", price: 1348 }, { label: "Beige / 200 x 190cm", price: 1348 }, { label: "Grey / 200 x 190cm", price: 1348 }, { label: "Chocolate / 230 x 190cm", price: 1517 }, { label: "Beige / 230 x 190cm", price: 1517 }, { label: "Grey / 230 x 190cm", price: 1517 }],
+    desc: "Chocolate faux fur, 150 x 130cm or 190cm wide. The most expensive blanket we carry, and it feels it.",
+    features: [
+      "Faux fur",
+      "Chocolate colourway",
+      "150 x 130cm upward"
+    ],
+    specs: { "Type": "Blanket / cushion", "Material": "Faux fur", "Options": "12", "Room": "Bedroom" },
+    care: "Shake it out rather than washing it. Spot clean with a barely damp cloth and let it air dry away from heat, then brush the pile back up." },
+
+  { id: "bs01z", name: "Timber Bedside Table with Drawer", cat: "Bedroom", room: "Bedroom", price: 1833, memberPrice: 1650, sku: "SH-10752", tag: "New", ph: "", img: "assets/products/bs01z.webp",
+    imgs: ["assets/products/bs01z.webp", "assets/products/bs01z-2.webp", "assets/products/bs01z-3.webp", "assets/products/bs01z-4.webp", "assets/products/bs01z-5.webp"],
+    sizes: [{ label: "Olive / 40cm", price: 1833 }, { label: "Charcoal / 40cm", price: 1833 }, { label: "Cream / 40cm", price: 1833 }, { label: "Ivory / 40cm", price: 1833 }, { label: "Grey / 40cm", price: 1833 }, { label: "Shale Grey / 40cm", price: 1833 }, { label: "White / 40cm", price: 1833 }, { label: "White / 45cm", price: 1944 }, { label: "Olive / 45cm", price: 1944 }, { label: "Charcoal / 45cm", price: 1944 }, { label: "Cream / 45cm", price: 1944 }, { label: "Ivory / 45cm", price: 1944 }, { label: "Grey / 45cm", price: 1944 }, { label: "Shale Grey / 45cm", price: 1944 }, { label: "Olive / 50cm", price: 2346 }, { label: "Charcoal / 50cm", price: 2346 }, { label: "Cream / 50cm", price: 2346 }, { label: "Ivory / 50cm", price: 2346 }, { label: "Grey / 50cm", price: 2346 }, { label: "Shale Grey / 50cm", price: 2346 }, { label: "White / 50cm", price: 2346 }],
+    desc: "Timber in olive or white, 40cm or 45cm, with a drawer for the things that live beside a bed.",
+    features: [
+      "Solid timber with drawer",
+      "Olive or White",
+      "40cm and 45cm"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "21", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs02z", name: "Timber Bedside Table (Small or Large)", cat: "Bedroom", room: "Bedroom", price: 2087, memberPrice: 1878, sku: "SH-10753", tag: "New", ph: "", img: "assets/products/bs02z.webp",
+    imgs: ["assets/products/bs02z.webp", "assets/products/bs02z-2.webp", "assets/products/bs02z-3.webp", "assets/products/bs02z-4.webp", "assets/products/bs02z-5.webp"],
+    sizes: [{ label: "Small", price: 2087 }, { label: "Large", price: 2494 }],
+    desc: "Timber in two sizes, for a tight space or a generous one.",
+    features: [
+      "Solid timber",
+      "Small and Large",
+      "Simple shape"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs03z", name: "Bedside Table with Storage", cat: "Bedroom", room: "Bedroom", price: 2204, memberPrice: 1984, sku: "SH-10754", tag: "New", ph: "", img: "assets/products/bs03z.webp",
+    imgs: ["assets/products/bs03z.webp", "assets/products/bs03z-2.webp", "assets/products/bs03z-3.webp", "assets/products/bs03z-4.webp", "assets/products/bs03z-5.webp"],
+    sizes: [{ label: "White", price: 2204 }, { label: "Black", price: 2204 }],
+    desc: "White or black with closed storage, so the clutter stays out of sight.",
+    features: [
+      "Closed storage",
+      "White or Black",
+      "Bedside height"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs04z", name: "Bedside Table in Natural or Black", cat: "Bedroom", room: "Bedroom", price: 2309, memberPrice: 2078, sku: "SH-10755", tag: "New", ph: "", img: "assets/products/bs04z.webp",
+    imgs: ["assets/products/bs04z.webp", "assets/products/bs04z-2.webp", "assets/products/bs04z-3.webp", "assets/products/bs04z-4.webp", "assets/products/bs04z-5.webp"],
+    sizes: [{ label: "Natural Brown", price: 2309 }, { label: "Black", price: 2309 }],
+    desc: "Natural brown or black, with storage.",
+    features: [
+      "Natural Brown or Black",
+      "Storage drawer",
+      "Bedside height"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs05z", name: "Oak & Leather Bedside Table", cat: "Bedroom", room: "Bedroom", price: 2444, memberPrice: 2200, sku: "SH-10756", tag: "New", ph: "", img: "assets/products/bs05z.webp",
+    imgs: ["assets/products/bs05z.webp", "assets/products/bs05z-2.webp", "assets/products/bs05z-3.webp", "assets/products/bs05z-4.webp", "assets/products/bs05z-5.webp"],
+    sizes: [{ label: "Light Coffee / 40cm", price: 2444 }, { label: "Black / 40cm", price: 2444 }, { label: "White / 40cm", price: 2444 }, { label: "Grey / 40cm", price: 2444 }, { label: "Beige / 40cm", price: 2444 }, { label: "Chocolate / 40cm", price: 2444 }, { label: "Walnut / 40cm", price: 2444 }, { label: "Light Coffee / 50cm", price: 2757 }, { label: "Black / 50cm", price: 2757 }, { label: "White / 50cm", price: 2757 }, { label: "Grey / 50cm", price: 2757 }, { label: "Beige / 50cm", price: 2757 }, { label: "Chocolate / 50cm", price: 2757 }, { label: "Walnut / 50cm", price: 2757 }, { label: "Light Coffee / 60cm", price: 3054 }, { label: "Black / 60cm", price: 3054 }, { label: "White / 60cm", price: 3054 }, { label: "Grey / 60cm", price: 3054 }, { label: "Beige / 60cm", price: 3054 }, { label: "Chocolate / 60cm", price: 3054 }, { label: "Walnut / 60cm", price: 3054 }],
+    desc: "Oak with leather detail in light coffee, 40cm or 50cm.",
+    features: [
+      "Oak with leather detail",
+      "Light Coffee",
+      "40cm and 50cm"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "21", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs06z", name: "Leather Bedside Table", cat: "Bedroom", room: "Bedroom", price: 2574, memberPrice: 2317, sku: "SH-10757", tag: "New", ph: "", img: "assets/products/bs06z.webp",
+    imgs: ["assets/products/bs06z.webp", "assets/products/bs06z-2.webp", "assets/products/bs06z-3.webp", "assets/products/bs06z-4.webp", "assets/products/bs06z-5.webp"],
+    sizes: [{ label: "Ivory", price: 2574 }, { label: "Grey", price: 2574 }],
+    desc: "Leather over timber in ivory or grey.",
+    features: [
+      "Leather over timber",
+      "Ivory or Grey",
+      "Bedside height"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Leather", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bs07z", name: "Left or Right Hand Bedside Table", cat: "Bedroom", room: "Bedroom", price: 2683, memberPrice: 2415, sku: "SH-10758", tag: "New", ph: "", img: "assets/products/bs07z.webp",
+    imgs: ["assets/products/bs07z.webp", "assets/products/bs07z-2.webp", "assets/products/bs07z-3.webp", "assets/products/bs07z-4.webp", "assets/products/bs07z-5.webp"],
+    sizes: [{ label: "Left / Black", price: 2683 }, { label: "Left / White", price: 2683 }, { label: "Right / Black", price: 2683 }, { label: "Right / White", price: 2683 }],
+    desc: "Handed, so a pair mirrors properly either side of the bed. Black or white.",
+    features: [
+      "Left and right hand versions",
+      "Black or White",
+      "Mirrors as a pair"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Leather", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "bs08z", name: "Walnut Bedside Table with Storage", cat: "Bedroom", room: "Bedroom", price: 2776, memberPrice: 2498, sku: "SH-10759", tag: "New", ph: "", img: "assets/products/bs08z.webp",
+    imgs: ["assets/products/bs08z.webp", "assets/products/bs08z-2.webp", "assets/products/bs08z-3.webp", "assets/products/bs08z-4.webp", "assets/products/bs08z-5.webp"],
+    sizes: [{ label: "Chocolate / 40cm", price: 2776 }, { label: "Black / 40cm", price: 2776 }, { label: "Tan / 40cm", price: 2776 }, { label: "Chocolate / 50cm", price: 3109 }, { label: "Black / 50cm", price: 3109 }, { label: "Tan / 50cm", price: 3109 }],
+    desc: "Walnut in chocolate or black, 40cm or 50cm, with storage.",
+    features: [
+      "Walnut with storage",
+      "Chocolate or Black",
+      "40cm and 50cm"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "6", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs09z", name: "Oak Bedside Table in Three Tones", cat: "Bedroom", room: "Bedroom", price: 2878, memberPrice: 2590, sku: "SH-10760", tag: "New", ph: "", img: "assets/products/bs09z.webp",
+    imgs: ["assets/products/bs09z.webp", "assets/products/bs09z-2.webp", "assets/products/bs09z-3.webp", "assets/products/bs09z-4.webp", "assets/products/bs09z-5.webp"],
+    sizes: [{ label: "Beige", price: 2878 }, { label: "Grey", price: 2878 }, { label: "Black", price: 2878 }],
+    desc: "Oak in beige, grey or black.",
+    features: [
+      "Solid oak",
+      "Beige, Grey or Black",
+      "Bedside height"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "3", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs10z", name: "Walnut Bedside Table (45 or 50cm)", cat: "Bedroom", room: "Bedroom", price: 2902, memberPrice: 2612, sku: "SH-10761", tag: "New", ph: "", img: "assets/products/bs10z.webp",
+    imgs: ["assets/products/bs10z.webp", "assets/products/bs10z-2.webp", "assets/products/bs10z-3.webp", "assets/products/bs10z-4.webp", "assets/products/bs10z-5.webp"],
+    sizes: [{ label: "Black / 45cm", price: 2902 }, { label: "Walnut / 45cm", price: 2902 }, { label: "Black / 50cm", price: 3111 }, { label: "Walnut / 50cm", price: 3111 }],
+    desc: "Walnut or black, 45cm or 50cm, with storage.",
+    features: [
+      "Walnut or Black finish",
+      "45cm and 50cm",
+      "Storage drawer"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "bs11z", name: "Timber Bedside Table", cat: "Bedroom", room: "Bedroom", price: 3013, memberPrice: 2712, sku: "SH-10762", tag: "New", ph: "", img: "assets/products/bs11z.webp",
+    imgs: ["assets/products/bs11z.webp", "assets/products/bs11z-2.webp", "assets/products/bs11z-3.webp", "assets/products/bs11z-4.webp", "assets/products/bs11z-5.webp"],
+    desc: "One timber bedside table, one finish, nothing to decide.",
+    features: [
+      "Solid timber",
+      "Single finish",
+      "Bedside height"
+    ],
+    specs: { "Type": "Bedside table", "Material": "Solid timber", "Options": "1", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt01z", name: "Dressing Table with Storage", cat: "Bedroom", room: "Bedroom", price: 5481, memberPrice: 4933, sku: "SH-10763", tag: "New", ph: "", img: "assets/products/dt01z.webp",
+    imgs: ["assets/products/dt01z.webp", "assets/products/dt01z-2.webp", "assets/products/dt01z-3.webp", "assets/products/dt01z-4.webp", "assets/products/dt01z-5.webp"],
+    sizes: [{ label: "80cm A", price: 5481 }, { label: "80cm B", price: 6578 }, { label: "120cm", price: 6781 }],
+    desc: "80cm in two designs, or 120cm, each with storage for what a dressing table actually holds.",
+    features: [
+      "80cm in two designs, or 120cm",
+      "Storage included",
+      "Bedroom or hallway"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "3", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt02z", name: "Dressing Table with Mirror, Left or Right Drawer", cat: "Bedroom", room: "Bedroom", price: 6804, memberPrice: 6124, sku: "SH-10764", tag: "New", ph: "", img: "assets/products/dt02z.webp",
+    imgs: ["assets/products/dt02z.webp", "assets/products/dt02z-2.webp", "assets/products/dt02z-3.webp", "assets/products/dt02z-4.webp", "assets/products/dt02z-5.webp"],
+    sizes: [{ label: "Left Hand Drawer", price: 6804 }, { label: "Right Hand Drawer", price: 6804 }],
+    desc: "Handed drawers, so it suits whichever side of the room it goes in. Mirror included.",
+    features: [
+      "Left or right hand drawer",
+      "Mirror included",
+      "Fits either side of a room"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt03z", name: "Timber Dressing Table (80cm)", cat: "Bedroom", room: "Bedroom", price: 7261, memberPrice: 6535, sku: "SH-10765", tag: "New", ph: "", img: "assets/products/dt03z.webp",
+    imgs: ["assets/products/dt03z.webp", "assets/products/dt03z-2.webp", "assets/products/dt03z-3.webp", "assets/products/dt03z-4.webp", "assets/products/dt03z-5.webp"],
+    sizes: [{ label: "Tan / 80cm", price: 7261 }, { label: "Black / 80cm", price: 7261 }, { label: "White / 80cm", price: 7261 }, { label: "Grey / 80cm", price: 7261 }, { label: "Beige / 80cm", price: 7261 }, { label: "Tan / 100cm", price: 7622 }, { label: "Black / 100cm", price: 7622 }, { label: "White / 100cm", price: 7622 }, { label: "Grey / 100cm", price: 7622 }, { label: "Beige / 100cm", price: 7622 }, { label: "Tan / 120cm", price: 8594 }, { label: "Black / 120cm", price: 8594 }, { label: "White / 120cm", price: 8594 }, { label: "Grey / 120cm", price: 8594 }, { label: "Beige / 120cm", price: 8594 }],
+    desc: "Timber in tan, black or white at 80cm.",
+    features: [
+      "Solid timber",
+      "Tan, Black or White",
+      "80cm"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "15", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt04z", name: "Dressing Table with Drawers", cat: "Bedroom", room: "Bedroom", price: 7593, memberPrice: 6834, sku: "SH-10766", tag: "New", ph: "", img: "assets/products/dt04z.webp",
+    imgs: ["assets/products/dt04z.webp", "assets/products/dt04z-2.webp", "assets/products/dt04z-3.webp", "assets/products/dt04z-4.webp", "assets/products/dt04z-5.webp"],
+    sizes: [{ label: "100cm", price: 7593 }, { label: "120cm", price: 8067 }, { label: "140cm", price: 8515 }],
+    desc: "100, 120 or 140cm, with drawers across the front.",
+    features: [
+      "Drawers across the front",
+      "100, 120 and 140cm",
+      "Three widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "3", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt05z", name: "Dressing Table with Oval Mirror", cat: "Bedroom", room: "Bedroom", price: 7957, memberPrice: 7161, sku: "SH-10767", tag: "New", ph: "", img: "assets/products/dt05z.webp",
+    imgs: ["assets/products/dt05z.webp", "assets/products/dt05z-2.webp", "assets/products/dt05z-3.webp", "assets/products/dt05z-4.webp", "assets/products/dt05z-5.webp"],
+    sizes: [{ label: "80cm (oval mirror)", price: 7957 }, { label: "80cm (semi circle mirror)", price: 7957 }, { label: "95cm (oval mirror)", price: 8509 }, { label: "95cm (semi circle mirror)", price: 8509 }],
+    desc: "80cm or 95cm, with an oval mirror that softens a room of straight lines.",
+    features: [
+      "Oval mirror included",
+      "80cm and 95cm",
+      "Storage below"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt06z", name: "Dressing Table in Dark Grey", cat: "Bedroom", room: "Bedroom", price: 8330, memberPrice: 7497, sku: "SH-10768", tag: "New", ph: "", img: "assets/products/dt06z.webp",
+    imgs: ["assets/products/dt06z.webp", "assets/products/dt06z-2.webp", "assets/products/dt06z-3.webp", "assets/products/dt06z-4.webp", "assets/products/dt06z-5.webp"],
+    sizes: [{ label: "Dark Grey / 80cm", price: 8330 }, { label: "Light Grey / 80cm", price: 8330 }, { label: "Ivory / 80cm", price: 8330 }, { label: "Beige / 80cm", price: 8330 }, { label: "Dark Grey / 100cm", price: 9239 }, { label: "Light Grey / 100cm", price: 9239 }, { label: "Ivory / 100cm", price: 9239 }, { label: "Beige / 100cm", price: 9239 }, { label: "Dark Grey / 120cm", price: 10126 }, { label: "Light Grey / 120cm", price: 10126 }, { label: "Ivory / 120cm", price: 10126 }, { label: "Beige / 120cm", price: 10126 }],
+    desc: "Dark grey timber with drawers, 80cm or 100cm.",
+    features: [
+      "Dark grey timber",
+      "Drawers included",
+      "80cm and 100cm"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "12", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt07z", name: "Marble & Leather Dressing Table", cat: "Bedroom", room: "Bedroom", price: 9720, memberPrice: 8748, sku: "SH-10769", tag: "New", ph: "", img: "assets/products/dt07z.webp",
+    imgs: ["assets/products/dt07z.webp", "assets/products/dt07z-2.webp", "assets/products/dt07z-3.webp", "assets/products/dt07z-4.webp", "assets/products/dt07z-5.webp"],
+    sizes: [{ label: "80cm", price: 9720 }, { label: "100cm", price: 11093 }],
+    desc: "A marble top with leather detail on timber, 80cm or 100cm.",
+    features: [
+      "Marble top, leather detail",
+      "Timber frame",
+      "80cm and 100cm"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt08z", name: "Dressing Table with Drawers (80 or 100cm)", cat: "Bedroom", room: "Bedroom", price: 9906, memberPrice: 8915, sku: "SH-10770", tag: "New", ph: "", img: "assets/products/dt08z.webp",
+    imgs: ["assets/products/dt08z.webp", "assets/products/dt08z-2.webp", "assets/products/dt08z-3.webp", "assets/products/dt08z-4.webp", "assets/products/dt08z-5.webp"],
+    sizes: [{ label: "80cm", price: 9906 }, { label: "100cm", price: 11000 }],
+    desc: "Two widths, drawers included.",
+    features: [
+      "Two widths",
+      "Drawers included",
+      "Bedroom scale"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt09z", name: "Walnut & Marble Dressing Table", cat: "Bedroom", room: "Bedroom", price: 10037, memberPrice: 9033, sku: "SH-10771", tag: "New", ph: "", img: "assets/products/dt09z.webp",
+    imgs: ["assets/products/dt09z.webp", "assets/products/dt09z-2.webp", "assets/products/dt09z-3.webp", "assets/products/dt09z-4.webp", "assets/products/dt09z-5.webp"],
+    sizes: [{ label: "100cm", price: 10037 }, { label: "130cm", price: 11643 }],
+    desc: "Walnut with a marble top, 100cm or 130cm.",
+    features: [
+      "Walnut with marble top",
+      "100cm and 130cm",
+      "Two widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt10z", name: "Long Dressing Table with Mirror (230cm)", cat: "Bedroom", room: "Bedroom", price: 10180, memberPrice: 9162, sku: "SH-10772", tag: "New", ph: "", img: "assets/products/dt10z.webp",
+    imgs: ["assets/products/dt10z.webp", "assets/products/dt10z-2.webp", "assets/products/dt10z-3.webp", "assets/products/dt10z-4.webp", "assets/products/dt10z-5.webp"],
+    sizes: [{ label: "230cm", price: 10180 }],
+    desc: "230cm long with a mirror, which is a wall rather than a piece of furniture.",
+    features: [
+      "230cm long",
+      "Mirror included",
+      "Wall-scale piece"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "1", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt11z", name: "Timber Dressing Table (Three Widths)", cat: "Bedroom", room: "Bedroom", price: 10457, memberPrice: 9411, sku: "SH-10773", tag: "New", ph: "", img: "assets/products/dt11z.webp",
+    imgs: ["assets/products/dt11z.webp", "assets/products/dt11z-2.webp", "assets/products/dt11z-3.webp", "assets/products/dt11z-4.webp", "assets/products/dt11z-5.webp"],
+    sizes: [{ label: "100cm", price: 10457 }, { label: "120cm", price: 11093 }, { label: "140cm", price: 11843 }],
+    desc: "100, 120 or 140cm in timber.",
+    features: [
+      "Solid timber",
+      "100, 120 and 140cm",
+      "Three widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "3", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt12z", name: "Leather & Timber Dressing Table", cat: "Bedroom", room: "Bedroom", price: 10887, memberPrice: 9798, sku: "SH-10774", tag: "New", ph: "", img: "assets/products/dt12z.webp",
+    imgs: ["assets/products/dt12z.webp", "assets/products/dt12z-2.webp", "assets/products/dt12z-3.webp", "assets/products/dt12z-4.webp", "assets/products/dt12z-5.webp"],
+    sizes: [{ label: "90cm", price: 10887 }, { label: "110cm", price: 12944 }, { label: "130cm", price: 14624 }, { label: "150cm", price: 16665 }],
+    desc: "Leather with timber and storage, from 90cm to 150cm.",
+    features: [
+      "Leather with timber",
+      "90cm to 150cm",
+      "Four widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt13z", name: "Walnut & Leather Dressing Table", cat: "Bedroom", room: "Bedroom", price: 10926, memberPrice: 9833, sku: "SH-10775", tag: "New", ph: "", img: "assets/products/dt13z.webp",
+    imgs: ["assets/products/dt13z.webp", "assets/products/dt13z-2.webp", "assets/products/dt13z-3.webp", "assets/products/dt13z-4.webp", "assets/products/dt13z-5.webp"],
+    sizes: [{ label: "80cm", price: 10926 }, { label: "100cm", price: 12517 }, { label: "120cm", price: 13333 }],
+    desc: "Walnut with leather, 80, 100 or 120cm.",
+    features: [
+      "Walnut with leather",
+      "80, 100 and 120cm",
+      "Three widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "3", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt14z", name: "Dresser with Storage", cat: "Bedroom", room: "Bedroom", price: 11000, memberPrice: 9900, sku: "SH-10776", tag: "New", ph: "", img: "assets/products/dt14z.webp",
+    imgs: ["assets/products/dt14z.webp", "assets/products/dt14z-2.webp", "assets/products/dt14z-3.webp", "assets/products/dt14z-4.webp", "assets/products/dt14z-5.webp"],
+    desc: "A dresser rather than a dressing table: drawers, no mirror, one size.",
+    features: [
+      "Drawers throughout",
+      "No mirror",
+      "Single size"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "1", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt15z", name: "Dressing Table Set with Mirror", cat: "Bedroom", room: "Bedroom", price: 11106, memberPrice: 9995, sku: "SH-10777", tag: "New", ph: "", img: "assets/products/dt15z.webp",
+    imgs: ["assets/products/dt15z.webp", "assets/products/dt15z-2.webp", "assets/products/dt15z-3.webp", "assets/products/dt15z-4.webp", "assets/products/dt15z-5.webp"],
+    sizes: [{ label: "80cm", price: 11106 }, { label: "100cm", price: 11961 }],
+    desc: "Table, mirror and storage as a set, 80cm or 100cm.",
+    features: [
+      "Sold as a set",
+      "Mirror included",
+      "80cm and 100cm"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt16z", name: "Leather Dresser in Khaki & Off White", cat: "Bedroom", room: "Bedroom", price: 11770, memberPrice: 10593, sku: "SH-10778", tag: "New", ph: "", img: "assets/products/dt16z.webp",
+    imgs: ["assets/products/dt16z.webp", "assets/products/dt16z-2.webp", "assets/products/dt16z-3.webp", "assets/products/dt16z-4.webp", "assets/products/dt16z-5.webp"],
+    sizes: [{ label: "Khaki + Off White / 120cm", price: 11770 }, { label: "Khaki + Off White / 140cm", price: 11956 }, { label: "Khaki + Off White / 150cm", price: 12326 }, { label: "Khaki + Off White / 160cm", price: 12459 }],
+    desc: "Leather in khaki and off white, 120cm upward, with storage.",
+    features: [
+      "Leather upholstered dresser",
+      "Khaki + Off White",
+      "From 120cm"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Leather", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dt17z", name: "Oak & Leather Dressing Table", cat: "Bedroom", room: "Bedroom", price: 11902, memberPrice: 10712, sku: "SH-10779", tag: "New", ph: "", img: "assets/products/dt17z.webp",
+    imgs: ["assets/products/dt17z.webp", "assets/products/dt17z-2.webp", "assets/products/dt17z-3.webp", "assets/products/dt17z-4.webp", "assets/products/dt17z-5.webp"],
+    sizes: [{ label: "100cm", price: 11902 }, { label: "120cm", price: 12778 }, { label: "140cm", price: 13500 }, { label: "160cm", price: 13772 }],
+    desc: "Oak with leather, from 100cm to 160cm.",
+    features: [
+      "Oak with leather",
+      "100cm to 160cm",
+      "Four widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "4", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt18z", name: "Dressing Table with Mirror (100 or 120cm)", cat: "Bedroom", room: "Bedroom", price: 12111, memberPrice: 10900, sku: "SH-10780", tag: "New", ph: "", img: "assets/products/dt18z.webp",
+    imgs: ["assets/products/dt18z.webp", "assets/products/dt18z-2.webp", "assets/products/dt18z-3.webp", "assets/products/dt18z-4.webp", "assets/products/dt18z-5.webp"],
+    sizes: [{ label: "100cm", price: 12111 }, { label: "120cm", price: 13485 }],
+    desc: "Two widths with a mirror and storage.",
+    features: [
+      "Mirror and storage",
+      "100cm and 120cm",
+      "Two widths"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "2", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
+  { id: "dt19z", name: "Ivory Leather & Oak Dresser", cat: "Bedroom", room: "Bedroom", price: 14561, memberPrice: 13105, sku: "SH-10781", tag: "New", ph: "", img: "assets/products/dt19z.webp",
+    imgs: ["assets/products/dt19z.webp", "assets/products/dt19z-2.webp", "assets/products/dt19z-3.webp", "assets/products/dt19z-4.webp", "assets/products/dt19z-5.webp"],
+    sizes: [{ label: "Ivory", price: 14561 }],
+    desc: "Ivory leather over oak with storage.",
+    features: [
+      "Ivory leather over oak",
+      "Storage throughout",
+      "Single size"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Leather", "Options": "1", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dt20z", name: "Carved Dressing Table with Mirror (100cm)", cat: "Bedroom", room: "Bedroom", price: 18126, memberPrice: 16313, sku: "SH-10782", tag: "New", ph: "", img: "assets/products/dt20z.webp",
+    imgs: ["assets/products/dt20z.webp", "assets/products/dt20z-2.webp", "assets/products/dt20z-3.webp", "assets/products/dt20z-4.webp", "assets/products/dt20z-5.webp"],
+    sizes: [{ label: "100cm", price: 18126 }],
+    desc: "Carved timber with a mirror at 100cm, the most decorative piece in the range.",
+    features: [
+      "Carved timber detail",
+      "Mirror included",
+      "100cm"
+    ],
+    specs: { "Type": "Dressing table", "Material": "Solid timber", "Options": "1", "Room": "Bedroom" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun, use coasters, and check the fixings occasionally." },
+
   // ── Outdoor ──
   { id: "od01", name: "Steel Fire Pit with Built-In Log Store", cat: "Outdoor", room: "Outdoor", price: 7104, memberPrice: 6394, sku: "SH-10116", tag: "New", ph: "", img: "assets/products/od01.jpg",
     imgs: ["assets/products/od01.jpg", "assets/products/od01-2.jpg", "assets/products/od01-3.jpg", "assets/products/od01-4.jpg", "assets/products/od01-5.jpg", "assets/products/od01-6.webp", "assets/products/od01-7.webp", "assets/products/od01-8.webp"],
