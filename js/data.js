@@ -7482,18 +7482,34 @@ const HAMPER_MIN = 60;
    Each one lists real item ids, so the price is the sum of its parts
    and checkout re-prices it server-side like any custom hamper. */
 const CURATED_HAMPERS = [
-  { id: "ch-baby", name: "New Baby Hamper", tagline: "For the first weeks at home",
+  { id: "ch-settle", name: "Settlement Hamper", occasion: "New home", tagline: "For the day the keys change hands",
+    items: ["h-gb175", "h-gb152", "h-gb142", "h-gb150", "h-gb129", "h-gb130", "h-gb016"] },
+  { id: "ch-home", name: "Housewarming Hamper", occasion: "New home", tagline: "For the first night in a new place",
+    items: ["h-gb001", "h-gb002", "h-gb129", "h-gb130", "h-gb065", "h-gb011"] },
+  { id: "ch-thanks", name: "Client Thank You Hamper", occasion: "Corporate", tagline: "A thank you that isn't a branded pen",
+    items: ["h-gb087", "h-gb071", "h-gb148", "h-gb144", "h-gb154", "h-gb015"] },
+  { id: "ch-team", name: "Team & Staff Reward Hamper", occasion: "Corporate", tagline: "For the person who carried the quarter",
+    items: ["h-gb086", "h-gb090", "h-gb070", "h-gb166", "h-gb164", "h-gb015"] },
+  { id: "ch-wfh", name: "Working From Home Hamper", occasion: "Corporate", tagline: "Coffee, a decent mug and something to eat",
+    items: ["h-gb158", "h-gb071", "h-gb166", "h-gb092", "h-gb155", "h-gb018"] },
+  { id: "ch-retire", name: "Retirement Hamper", occasion: "Milestones", tagline: "For the start of the long weekend that doesn't end",
+    items: ["h-gb068", "h-gb162", "h-gb087", "h-gb170", "h-gb168", "h-gb016"] },
+  { id: "ch-baby", name: "New Baby Hamper", occasion: "Milestones", tagline: "For the first weeks at home",
     items: ["h-gb041", "h-gb043", "h-gb044", "h-gb047", "h-gb040", "h-gb010"] },
-  { id: "ch-pamper", name: "Pamper & Unwind Hamper", tagline: "An afternoon off, in a box",
+  { id: "ch-friday", name: "Friday Drinks Hamper", occasion: "Celebrate", tagline: "Mixers, glasses and something salty",
+    items: ["h-gb126", "h-gb129", "h-gb132", "h-gb181", "h-gb182", "h-gb145"] },
+  { id: "ch-pamper", name: "Pamper & Unwind Hamper", occasion: "Just because", tagline: "An afternoon off, in a box",
     items: ["h-gb077", "h-gb075", "h-gb081", "h-gb073", "h-gb070", "h-gb012"] },
-  { id: "ch-sweet", name: "Sweet Tooth Hamper", tagline: "Chocolate, fudge and biscuits",
+  { id: "ch-sweet", name: "Sweet Tooth Hamper", occasion: "Just because", tagline: "Chocolate, fudge and biscuits",
     items: ["h-gb087", "h-gb086", "h-gb090", "h-gb091", "h-gb095", "h-gb019"] },
-  { id: "ch-gourmet", name: "Gourmet Grazing Hamper", tagline: "Everything but the cheese board",
+  { id: "ch-gourmet", name: "Gourmet Grazing Hamper", occasion: "Just because", tagline: "Everything but the cheese board",
     items: ["h-gb152", "h-gb148", "h-gb142", "h-gb150", "h-gb147", "h-gb015"] },
-  { id: "ch-him", name: "For Him Hamper", tagline: "Beard kit, socks and something to read",
+  { id: "ch-him", name: "For Him Hamper", occasion: "Just because", tagline: "Beard kit, socks and something to read",
     items: ["h-gb122", "h-gb121", "h-gb114", "h-gb115", "h-gb113", "h-gb016"] },
-  { id: "ch-home", name: "Housewarming Hamper", tagline: "For the first night in a new place",
-    items: ["h-gb001", "h-gb002", "h-gb129", "h-gb130", "h-gb065", "h-gb011"] }
+  { id: "ch-sympathy", name: "With Sympathy Hamper", occasion: "Thinking of you", tagline: "Quiet, considered, nothing celebratory",
+    items: ["h-gb157", "h-gb168", "h-gb067", "h-gb166", "h-gb093", "h-gb014"] },
+  { id: "ch-getwell", name: "Get Well Hamper", occasion: "Thinking of you", tagline: "Tea, soup-weather comfort and a good book",
+    items: ["h-gb069", "h-gb065", "h-gb066", "h-gb088", "h-gb171", "h-gb013"] }
 ];
 
 

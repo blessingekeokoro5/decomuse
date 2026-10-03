@@ -29,6 +29,11 @@
     .ch-shots span { background: var(--cream-2); overflow: hidden; display: block; }
     .ch-shots img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .ch-list { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+    .occ-pills { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin: 0 0 26px; }
+    .occ { border: 1.5px solid var(--line); background: #fff; color: var(--body); border-radius: 999px;
+      padding: 8px 16px; font-family: var(--font-body); font-size: 0.86rem; cursor: pointer; transition: all var(--tr); }
+    .occ:hover { border-color: var(--rose-soft); }
+    .occ.on { background: var(--rose); border-color: var(--rose); color: #fff; }
   </style>
 </head>
 <body data-page="hampers.html">
@@ -108,6 +113,7 @@
     <div class="container">
       <div class="section-head reveal"><span class="eyebrow">Ready to gift</span><h2>Hampers we've put together</h2>
         <p>Each one is built from the same pieces as the Hamper Maker, so you can buy it as it is or open it up and change anything you like.</p></div>
+      <div class="occ-pills" id="occPills"></div>
       <div class="grid grid-3" id="curatedGrid"></div>
       <p class="form-note" style="text-align:center;margin-top:20px">Prices are the sum of what's inside. Packaging and dispatch are chosen at the next step.</p>
     </div>
@@ -176,12 +182,25 @@
 
   <script>
     /* Ready-made hampers, drawn from the same item list as the builder */
-    (function () {
+    var hampOcc = "All";
+    function setOcc(o) { hampOcc = o; renderCurated(); }
+    function renderOccPills() {
+      var el = document.getElementById("occPills");
+      if (!el) return;
+      var list = ["All"].concat(CURATED_HAMPERS.map(function (c) { return c.occasion; })
+        .filter(function (v, i, a) { return v && a.indexOf(v) === i; }));
+      el.innerHTML = list.map(function (o) {
+        return '<button type="button" class="occ' + (o === hampOcc ? ' on' : '') + '" onclick="setOcc(\'' + o + '\')">' + o + '</button>';
+      }).join("");
+    }
+    function renderCurated() {
+      renderOccPills();
       var grid = document.getElementById("curatedGrid");
       if (!grid || typeof CURATED_HAMPERS === "undefined") return;
       function item(id) { return HAMPER_ITEMS.find(function (h) { return h.id === id; }); }
+      var shown = CURATED_HAMPERS.filter(function (c) { return hampOcc === "All" || c.occasion === hampOcc; });
 
-      grid.innerHTML = CURATED_HAMPERS.map(function (c) {
+      grid.innerHTML = shown.map(function (c) {
         var items = c.items.map(item).filter(Boolean);
         var total = items.reduce(function (n, i) { return n + i.price; }, 0);
         var shots = items.filter(function (i) { return i.img; }).slice(0, 4);
@@ -190,7 +209,7 @@
               return '<span><img src="' + i.img + '" alt="' + i.name + '" loading="lazy" onerror="this.remove()"></span>';
             }).join("") + '</div>' +
             '<div class="card-body">' +
-              '<span class="cat" style="color:var(--rose-deep);font-weight:500">' + c.tagline + '</span>' +
+              '<span class="cat" style="color:var(--rose-deep);font-weight:500">' + c.occasion + ' · ' + c.tagline + '</span>' +
               '<h3>' + c.name + '</h3>' +
               '<p class="ch-list">' + items.map(function (i) { return i.name; }).join(" · ") + '</p>' +
               '<div class="product-foot"><span class="price">' + money(total) + '</span>' +
@@ -199,7 +218,8 @@
           '</article>';
       }).join("");
       if (typeof initReveal === "function") initReveal();
-    })();
+    }
+    renderCurated();
 
     function addCurated(id) {
       var c = CURATED_HAMPERS.find(function (x) { return x.id === id; });

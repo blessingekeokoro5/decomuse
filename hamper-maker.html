@@ -13,14 +13,26 @@
   <link rel="stylesheet" href="css/styles.css?v=35">
   <style>
     .hm-grid { display: grid; grid-template-columns: 1fr 360px; gap: 34px; align-items: start; }
-    .hm-item { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line);
-      border-radius: var(--radius-sm); padding: 14px; transition: all var(--tr); }
+    .hm-items { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 18px; }
+    .hm-item { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line);
+      border-radius: var(--radius-sm); overflow: hidden; transition: all var(--tr); }
+    .hm-item:hover { border-color: var(--rose-soft); box-shadow: var(--shadow-sm); }
     .hm-item.in-box { border-color: var(--rose); box-shadow: 0 0 0 2px rgba(182,114,128,0.12); }
-    .hm-item .emo { width: 56px; height: 56px; border-radius: 10px; background: var(--cream-2); display: grid; place-items: center; font-size: 1.5rem; flex: none; overflow: hidden; }
+    .hm-item .emo { height: 190px; background: var(--cream-2); display: grid; place-items: center; font-size: 2.6rem; overflow: hidden; }
     .hm-item .emo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    .hm-item .info { flex: 1; min-width: 0; }
-    .hm-item .info h4 { font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; margin: 0; color: var(--ink); }
-    .hm-item .info .p { color: var(--rose-deep); font-weight: 600; font-size: 0.9rem; }
+    .hm-item .info { padding: 13px 14px 0; flex: 1; }
+    .hm-item .info h4 { font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; margin: 0 0 4px; color: var(--ink); line-height: 1.35; }
+    .hm-item .info .p { color: var(--rose-deep); font-weight: 600; font-size: 1rem; }
+    .hm-item .act { padding: 10px 14px 14px; }
+    .hm-item .act .btn, .hm-item .act .qty { width: 100%; }
+    .hm-item .qty { display: flex; align-items: center; justify-content: space-between; gap: 10px;
+      border: 1.5px solid var(--rose); border-radius: 999px; padding: 4px 6px; }
+    .hm-item .qty button { width: 30px; height: 30px; border-radius: 50%; border: none; background: var(--cream-2);
+      color: var(--ink); font-size: 1.1rem; cursor: pointer; }
+    .hm-item .qty button:hover { background: var(--rose); color: #fff; }
+    .hm-item .qty span { font-weight: 600; color: var(--ink); white-space: nowrap; }
+    @media (max-width: 520px) { .hm-items { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+      .hm-item .emo { height: 150px; } }
     .hm-box { position: sticky; top: 150px; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow-sm); overflow: hidden; }
     .hm-box-head { background: var(--forest); color: #fff; padding: 18px 20px; }
     .hm-box-head h3 { color: #fff; margin: 0; }
@@ -90,7 +102,7 @@
         <!-- Item picker -->
         <div>
           <div class="pills" id="hmPills"></div>
-          <div class="grid grid-2" id="hmItems"></div>
+          <div class="hm-items" id="hmItems"></div>
         </div>
 
         <!-- Live box -->
@@ -165,9 +177,9 @@
         return `<div class="hm-item ${qty ? 'in-box' : ''}">
           <div class="emo">${i.img ? `<img src="${i.img}" alt="${i.name}" loading="lazy" onerror="this.parentNode.textContent='${i.emoji}'">` : i.emoji}</div>
           <div class="info"><h4>${i.name}</h4><div class="p">${money(i.price)}</div></div>
-          ${qty
-            ? `<div class="qty"><button onclick="chg('${i.id}',-1)">−</button><span>${qty}</span><button onclick="chg('${i.id}',1)">+</button></div>`
-            : `<button class="btn btn--outline btn--sm" onclick="chg('${i.id}',1)">Add</button>`}
+          <div class="act">${qty
+            ? `<div class="qty"><button onclick="chg('${i.id}',-1)" aria-label="One fewer">−</button><span>${qty}</span><button onclick="chg('${i.id}',1)" aria-label="One more">+</button></div>`
+            : `<button class="btn btn--outline btn--sm" onclick="chg('${i.id}',1)">Add to hamper</button>`}</div>
         </div>`;
       }).join("");
     }
