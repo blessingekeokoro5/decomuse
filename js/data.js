@@ -4427,6 +4427,1096 @@ const PRODUCTS = [
     care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
 
   // ── Home Décor ──
+  { id: "lt01", name: "Gold Table Lamp Pair", cat: "Home Décor", room: "Home Décor", price: 204, memberPrice: 184, sku: "SH-10553", tag: "New", ph: "", img: "assets/products/lt01.webp",
+    imgs: ["assets/products/lt01.webp", "assets/products/lt01-2.webp", "assets/products/lt01-3.webp", "assets/products/lt01-4.webp", "assets/products/lt01-5.webp"],
+    sizes: [{ label: "Gold/sitting", price: 204 }, { label: "Gold/standing leg out", price: 204 }, { label: "Gold/sitting off ledge", price: 204 }, { label: "Gold/standing with arm crossed", price: 204 }, { label: "Gold/sitting knees bent", price: 204 }, { label: "Silver/sitting", price: 204 }, { label: "Silver/standing leg out", price: 204 }, { label: "Silver/sitting off ledge", price: 204 }, { label: "Silver/standing with arm crossed", price: 204 }, { label: "Silver/sitting knees bent", price: 204 }],
+    desc: "A pair of small gold lamps, one sitting and one standing, meant to be used together on a console or a shelf.",
+    features: [
+      "Gold finish",
+      "Sitting and standing forms",
+      "Designed to be grouped"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "10", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt02", name: "Pendant Light (28 or 30cm)", cat: "Home Décor", room: "Home Décor", price: 267, memberPrice: 240, sku: "SH-10554", tag: "New", ph: "", img: "assets/products/lt02.webp",
+    imgs: ["assets/products/lt02.webp", "assets/products/lt02-2.webp", "assets/products/lt02-3.webp", "assets/products/lt02-4.webp", "assets/products/lt02-5.webp"],
+    sizes: [{ label: "28cm", price: 267 }, { label: "30cm", price: 309 }],
+    desc: "A compact pendant in two diameters, the right scale above a bedside or a kitchen bench.",
+    features: [
+      "28cm and 30cm",
+      "Suits a bedside or bench",
+      "Compact scale"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt03", name: "Glass Wall Light, Gold or Black", cat: "Home Décor", room: "Home Décor", price: 406, memberPrice: 365, sku: "SH-10555", tag: "New", ph: "", img: "assets/products/lt03.webp",
+    imgs: ["assets/products/lt03.webp", "assets/products/lt03-2.webp", "assets/products/lt03-3.webp", "assets/products/lt03-4.webp", "assets/products/lt03-5.webp"],
+    sizes: [{ label: "Gold / Warm White", price: 406 }, { label: "Gold / Cool White", price: 406 }, { label: "Black / Warm White", price: 406 }, { label: "Black / Cool White", price: 406 }],
+    desc: "An LED wall light in gold or black, with a choice of warm or cool white.",
+    features: [
+      "Gold or Black finish",
+      "Warm or Cool White",
+      "LED, wall mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt04", name: "Tinted Glass Lamp", cat: "Home Décor", room: "Home Décor", price: 550, memberPrice: 495, sku: "SH-10556", tag: "New", ph: "", img: "assets/products/lt04.webp",
+    imgs: ["assets/products/lt04.webp", "assets/products/lt04-2.webp", "assets/products/lt04-3.webp", "assets/products/lt04-4.webp", "assets/products/lt04-5.webp"],
+    sizes: [{ label: "Black Tint / UK Plug", price: 550 }, { label: "Black Tint / EU Plug", price: 550 }, { label: "Black Tint / AU Plug", price: 550 }, { label: "Black Tint / US Plug", price: 550 }, { label: "Brown Tint / UK Plug", price: 550 }, { label: "Brown Tint / EU Plug", price: 550 }, { label: "Brown Tint / AU Plug", price: 550 }, { label: "Brown Tint / US Plug", price: 550 }],
+    desc: "Tinted glass with a plug, available with a UK or EU fitting. Check you need an adaptor before ordering.",
+    features: [
+      "Tinted glass body",
+      "UK or EU plug",
+      "Table lamp scale"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "8", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt05", name: "Travertine Wall Light, Round or Square", cat: "Home Décor", room: "Home Décor", price: 550, memberPrice: 495, sku: "SH-10557", tag: "New", ph: "", img: "assets/products/lt05.webp",
+    imgs: ["assets/products/lt05.webp", "assets/products/lt05-2.webp", "assets/products/lt05-3.webp", "assets/products/lt05-4.webp", "assets/products/lt05-5.webp"],
+    sizes: [{ label: "Round", price: 550 }, { label: "Square", price: 550 }],
+    desc: "Travertine on the wall, round or square. Stone diffuses light softly rather than throwing it.",
+    features: [
+      "Natural travertine",
+      "Round or Square",
+      "Soft, diffused light"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt06", name: "Pendant Light (40cm)", cat: "Home Décor", room: "Home Décor", price: 593, memberPrice: 534, sku: "SH-10558", tag: "New", ph: "", img: "assets/products/lt06.webp",
+    imgs: ["assets/products/lt06.webp", "assets/products/lt06-2.webp", "assets/products/lt06-3.webp", "assets/products/lt06-4.webp", "assets/products/lt06-5.webp"],
+    sizes: [{ label: "40cm / Warm White", price: 593 }, { label: "40cm / Cool White", price: 593 }, { label: "40cm / Neutral White", price: 593 }, { label: "50cm / Warm White", price: 811 }, { label: "50cm / Cool White", price: 811 }, { label: "50cm / Neutral White", price: 811 }, { label: "60cm / Warm White", price: 1022 }, { label: "60cm / Cool White", price: 1022 }, { label: "60cm / Neutral White", price: 1022 }, { label: "80cm / Warm White", price: 1387 }, { label: "80cm / Cool White", price: 1387 }, { label: "80cm / Neutral White", price: 1387 }],
+    desc: "A 40cm pendant with warm, cool or neutral white.",
+    features: [
+      "40cm diameter",
+      "Three colour temperatures",
+      "Pendant fitting"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "12", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt07", name: "Marble Wall Light, Gold or Black", cat: "Home Décor", room: "Home Décor", price: 643, memberPrice: 579, sku: "SH-10559", tag: "New", ph: "", img: "assets/products/lt07.webp",
+    imgs: ["assets/products/lt07.webp", "assets/products/lt07-2.webp", "assets/products/lt07-3.webp", "assets/products/lt07-4.webp", "assets/products/lt07-5.webp"],
+    sizes: [{ label: "Gold / 35cm", price: 643 }, { label: "Black / 35cm", price: 643 }, { label: "Gold / 50cm", price: 972 }, { label: "Black / 50cm", price: 972 }],
+    desc: "Marble with gold or black, at 35cm or 50cm.",
+    features: [
+      "Natural marble",
+      "Gold or Black",
+      "35cm and 50cm"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt08", name: "Travertine Wall Light", cat: "Home Décor", room: "Home Décor", price: 646, memberPrice: 581, sku: "SH-10560", tag: "New", ph: "", img: "assets/products/lt08.webp",
+    imgs: ["assets/products/lt08.webp", "assets/products/lt08-2.webp", "assets/products/lt08-3.webp", "assets/products/lt08-4.webp", "assets/products/lt08-5.webp"],
+    desc: "A single travertine LED wall light.",
+    features: [
+      "Natural travertine",
+      "LED",
+      "Single size"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "1", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt09", name: "Travertine Wall Light (Slim)", cat: "Home Décor", room: "Home Décor", price: 665, memberPrice: 598, sku: "SH-10561", tag: "New", ph: "", img: "assets/products/lt09.webp",
+    imgs: ["assets/products/lt09.webp", "assets/products/lt09-2.webp", "assets/products/lt09-3.webp", "assets/products/lt09-4.webp", "assets/products/lt09-5.webp"],
+    desc: "A slim travertine wall light, one size.",
+    features: [
+      "Natural travertine",
+      "Slim profile",
+      "Wall mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "1", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt10", name: "Travertine Wall Light, Warm or Cool", cat: "Home Décor", room: "Home Décor", price: 717, memberPrice: 645, sku: "SH-10562", tag: "New", ph: "", img: "assets/products/lt10.webp",
+    imgs: ["assets/products/lt10.webp", "assets/products/lt10-2.webp", "assets/products/lt10-3.webp", "assets/products/lt10-4.webp", "assets/products/lt10-5.webp"],
+    sizes: [{ label: "Cool White", price: 717 }, { label: "Warm White", price: 717 }],
+    desc: "Travertine with a choice of warm or cool white.",
+    features: [
+      "Natural travertine",
+      "Warm or Cool White",
+      "Wall mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt11", name: "Gold-Trimmed Table Lamp", cat: "Home Décor", room: "Home Décor", price: 722, memberPrice: 650, sku: "SH-10563", tag: "New", ph: "", img: "assets/products/lt11.webp",
+    imgs: ["assets/products/lt11.webp", "assets/products/lt11-2.webp", "assets/products/lt11-3.webp", "assets/products/lt11-4.webp", "assets/products/lt11-5.webp"],
+    sizes: [{ label: "White + Gold", price: 722 }, { label: "Grey + Gold", price: 722 }],
+    desc: "White and gold, or grey and gold.",
+    features: [
+      "Gold trim",
+      "White + Gold or Grey + Gold",
+      "Table lamp"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt12", name: "Linear Wall Light (60cm)", cat: "Home Décor", room: "Home Décor", price: 739, memberPrice: 665, sku: "SH-10564", tag: "New", ph: "", img: "assets/products/lt12.webp",
+    imgs: ["assets/products/lt12.webp", "assets/products/lt12-2.webp", "assets/products/lt12-3.webp", "assets/products/lt12-4.webp", "assets/products/lt12-5.webp"],
+    sizes: [{ label: "Gold / 60cm / Neutral White", price: 739 }, { label: "Gold / 60cm / Warm White", price: 739 }, { label: "Gold / 60cm / Cool White", price: 739 }, { label: "Black / 60cm / Neutral White", price: 739 }, { label: "Black / 60cm / Warm White", price: 739 }, { label: "Black / 60cm / Cool White", price: 739 }, { label: "Gold / 90cm / Neutral White", price: 906 }, { label: "Gold / 90cm / Warm White", price: 906 }, { label: "Gold / 90cm / Cool White", price: 906 }, { label: "Black / 90cm / Neutral White", price: 906 }, { label: "Black / 90cm / Warm White", price: 906 }, { label: "Black / 90cm / Cool White", price: 906 }, { label: "Gold / 120cm / Neutral White", price: 1070 }, { label: "Gold / 120cm / Warm White", price: 1070 }, { label: "Gold / 120cm / Cool White", price: 1070 }, { label: "Black / 120cm / Neutral White", price: 1070 }, { label: "Black / 120cm / Warm White", price: 1070 }, { label: "Black / 120cm / Cool White", price: 1070 }],
+    desc: "A 60cm linear LED in gold, with three colour temperatures.",
+    features: [
+      "60cm linear LED",
+      "Gold finish",
+      "Neutral, Warm or Cool White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "18", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt13", name: "Travertine Pendant Light", cat: "Home Décor", room: "Home Décor", price: 767, memberPrice: 690, sku: "SH-10565", tag: "New", ph: "", img: "assets/products/lt13.webp",
+    imgs: ["assets/products/lt13.webp", "assets/products/lt13-2.webp", "assets/products/lt13-3.webp", "assets/products/lt13-4.webp", "assets/products/lt13-5.webp"],
+    sizes: [{ label: "A / Warm White", price: 767 }, { label: "A / Cool White", price: 767 }, { label: "A / Neutral White", price: 767 }, { label: "B / Warm White", price: 767 }, { label: "B / Cool White", price: 767 }, { label: "B / Neutral White", price: 767 }],
+    desc: "Travertine pendants in several designs and three colour temperatures.",
+    features: [
+      "Natural travertine",
+      "Several designs",
+      "Three colour temperatures"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "6", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt14", name: "Travertine Wall Light (Three Tones)", cat: "Home Décor", room: "Home Décor", price: 776, memberPrice: 698, sku: "SH-10566", tag: "New", ph: "", img: "assets/products/lt14.webp",
+    imgs: ["assets/products/lt14.webp", "assets/products/lt14-2.webp", "assets/products/lt14-3.webp", "assets/products/lt14-4.webp", "assets/products/lt14-5.webp"],
+    sizes: [{ label: "Warm White", price: 776 }, { label: "Neutral White", price: 776 }, { label: "Cool White", price: 776 }],
+    desc: "Travertine with warm, neutral or cool white.",
+    features: [
+      "Natural travertine",
+      "Three colour temperatures",
+      "Wall mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt15", name: "Beige Travertine Pendant", cat: "Home Décor", room: "Home Décor", price: 828, memberPrice: 745, sku: "SH-10567", tag: "New", ph: "", img: "assets/products/lt15.webp",
+    imgs: ["assets/products/lt15.webp", "assets/products/lt15-2.webp", "assets/products/lt15-3.webp", "assets/products/lt15-4.webp", "assets/products/lt15-5.webp"],
+    sizes: [{ label: "Beige / Warm White 3000k", price: 828 }, { label: "Beige / Neutral White 4000K", price: 828 }, { label: "Beige / Cool White 6000K", price: 828 }, { label: "Black / Warm White 3000k", price: 828 }, { label: "Black / Neutral White 4000K", price: 828 }, { label: "Black / Cool White 6000K", price: 828 }],
+    desc: "Beige travertine, with 3000K warm or 4000K neutral white.",
+    features: [
+      "Beige travertine",
+      "3000K or 4000K",
+      "Pendant fitting"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "6", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt16", name: "Table Lamp in Silver or Black", cat: "Home Décor", room: "Home Décor", price: 865, memberPrice: 778, sku: "SH-10568", tag: "New", ph: "", img: "assets/products/lt16.webp",
+    imgs: ["assets/products/lt16.webp", "assets/products/lt16-2.webp", "assets/products/lt16-3.webp", "assets/products/lt16-4.webp", "assets/products/lt16-5.webp"],
+    sizes: [{ label: "Silver", price: 865 }, { label: "Black", price: 865 }],
+    desc: "Silver or black, a plain lamp done well.",
+    features: [
+      "Silver or Black",
+      "Table lamp scale",
+      "Simple form"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt17", name: "Pendant Light (35 or 45cm)", cat: "Home Décor", room: "Home Décor", price: 887, memberPrice: 798, sku: "SH-10569", tag: "New", ph: "", img: "assets/products/lt17.webp",
+    imgs: ["assets/products/lt17.webp", "assets/products/lt17-2.webp", "assets/products/lt17-3.webp", "assets/products/lt17-4.webp", "assets/products/lt17-5.webp"],
+    sizes: [{ label: "35cm / Cool White", price: 887 }, { label: "35cm / Warm White", price: 887 }, { label: "45cm / Cool White", price: 1087 }, { label: "45cm / Warm White", price: 1087 }, { label: "55cm / Cool White", price: 1402 }, { label: "55cm / Warm White", price: 1402 }, { label: "65cm / Cool White", price: 1991 }, { label: "65cm / Warm White", price: 1991 }],
+    desc: "Two diameters, warm or cool white.",
+    features: [
+      "35cm and 45cm",
+      "Warm or Cool White",
+      "Pendant fitting"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "8", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt18", name: "Travertine Pendant (30 or 40cm)", cat: "Home Décor", room: "Home Décor", price: 898, memberPrice: 808, sku: "SH-10570", tag: "New", ph: "", img: "assets/products/lt18.webp",
+    imgs: ["assets/products/lt18.webp", "assets/products/lt18-2.webp", "assets/products/lt18-3.webp", "assets/products/lt18-4.webp", "assets/products/lt18-5.webp"],
+    sizes: [{ label: "30cm / Warm White", price: 898 }, { label: "30cm / Cool White", price: 898 }, { label: "40cm / Warm White", price: 1176 }, { label: "40cm / Cool White", price: 1176 }],
+    desc: "Travertine at 30cm or 40cm, warm or cool.",
+    features: [
+      "Natural travertine",
+      "30cm and 40cm",
+      "Warm or Cool White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt19", name: "Crystal Ceiling Light", cat: "Home Décor", room: "Home Décor", price: 907, memberPrice: 816, sku: "SH-10571", tag: "New", ph: "", img: "assets/products/lt19.webp",
+    imgs: ["assets/products/lt19.webp", "assets/products/lt19-2.webp", "assets/products/lt19-3.webp", "assets/products/lt19-4.webp", "assets/products/lt19-5.webp"],
+    sizes: [{ label: "Silver 60cm", price: 907 }, { label: "Gold 60cm", price: 907 }, { label: "Silver 80cm", price: 1278 }, { label: "Gold 80cm", price: 1278 }],
+    desc: "Crystal glass at 60cm or 80cm, in silver or gold. A flush ceiling fitting rather than a pendant.",
+    features: [
+      "Crystal glass",
+      "60cm and 80cm",
+      "Silver or Gold"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt20", name: "Marble Wall Sconce", cat: "Home Décor", room: "Home Décor", price: 920, memberPrice: 828, sku: "SH-10572", tag: "New", ph: "", img: "assets/products/lt20.webp",
+    imgs: ["assets/products/lt20.webp", "assets/products/lt20-2.webp", "assets/products/lt20-3.webp", "assets/products/lt20-4.webp", "assets/products/lt20-5.webp"],
+    sizes: [{ label: "S / Warm White", price: 920 }, { label: "S / Nature White", price: 920 }, { label: "S / Cool White", price: 920 }, { label: "L / Warm White", price: 961 }, { label: "L / Nature White", price: 961 }, { label: "L / Cool White", price: 961 }],
+    desc: "A marble LED sconce in three sizes and three colour temperatures.",
+    features: [
+      "Natural marble",
+      "Three sizes",
+      "Three colour temperatures"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "6", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt21", name: "Glass Pendant, 2 or 5 Heads", cat: "Home Décor", room: "Home Décor", price: 994, memberPrice: 895, sku: "SH-10573", tag: "New", ph: "", img: "assets/products/lt21.webp",
+    imgs: ["assets/products/lt21.webp", "assets/products/lt21-2.webp", "assets/products/lt21-3.webp", "assets/products/lt21-4.webp", "assets/products/lt21-5.webp"],
+    sizes: [{ label: "2 Heads / Warm White", price: 994 }, { label: "2 Heads / Cold White", price: 994 }, { label: "5 Heads / Warm White", price: 2583 }, { label: "5 Heads / Cold White", price: 2583 }, { label: "7 Heads / Warm White", price: 2961 }, { label: "7 Heads / Cold White", price: 2961 }],
+    desc: "Glass pendants with two or five heads, warm or cold white.",
+    features: [
+      "Glass shades",
+      "2 or 5 heads",
+      "Warm or Cold White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "6", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt22", name: "Travertine Wall Light (3000K or 4000K)", cat: "Home Décor", room: "Home Décor", price: 1109, memberPrice: 998, sku: "SH-10574", tag: "New", ph: "", img: "assets/products/lt22.webp",
+    imgs: ["assets/products/lt22.webp", "assets/products/lt22-2.webp", "assets/products/lt22-3.webp", "assets/products/lt22-4.webp", "assets/products/lt22-5.webp"],
+    sizes: [{ label: "Travertine / 3000K", price: 1109 }, { label: "Travertine / 4000K", price: 1109 }, { label: "Travertine / 6000K", price: 1109 }],
+    desc: "Travertine with a choice of two colour temperatures.",
+    features: [
+      "Natural travertine",
+      "3000K or 4000K",
+      "Wall mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt23", name: "Multi-Head Pendant (Seven Lengths)", cat: "Home Décor", room: "Home Décor", price: 1157, memberPrice: 1041, sku: "SH-10575", tag: "New", ph: "", img: "assets/products/lt23.webp",
+    imgs: ["assets/products/lt23.webp", "assets/products/lt23-2.webp", "assets/products/lt23-3.webp", "assets/products/lt23-4.webp", "assets/products/lt23-5.webp"],
+    sizes: [{ label: "55cm", price: 1157 }, { label: "65cm", price: 1424 }, { label: "75cm", price: 1717 }, { label: "100cm", price: 2013 }, { label: "120cm", price: 2204 }, { label: "130cm", price: 2480 }, { label: "150cm", price: 3417 }, { label: "3-Heads", price: 3602 }],
+    desc: "A three-head pendant across lengths from 55cm to 150cm, so it suits a bench or a stairwell.",
+    features: [
+      "Three heads",
+      "Seven lengths, 55cm to 150cm",
+      "Bench or stairwell"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "8", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt24", name: "Glass Floor Lamp (Three Heights)", cat: "Home Décor", room: "Home Décor", price: 1167, memberPrice: 1050, sku: "SH-10576", tag: "New", ph: "", img: "assets/products/lt24.webp",
+    imgs: ["assets/products/lt24.webp", "assets/products/lt24-2.webp", "assets/products/lt24-3.webp", "assets/products/lt24-4.webp", "assets/products/lt24-5.webp"],
+    sizes: [{ label: "32cm / Warm White", price: 1167 }, { label: "53cm / Warm White", price: 1667 }, { label: "57cm / Warm White", price: 1667 }, { label: "64cm / Warm White", price: 1833 }, { label: "89cm / Warm White", price: 2259 }, { label: "84cm / Warm White", price: 2389 }, { label: "96cm / Warm White", price: 2583 }, { label: "121cm / Warm White", price: 2867 }, { label: "117cm / Warm White", price: 3106 }, { label: "128cm / Warm White", price: 3583 }, { label: "149cm / Warm White", price: 3822 }, { label: "153cm / Warm White", price: 3867 }],
+    desc: "Glass at 32cm, 53cm or 57cm, warm white.",
+    features: [
+      "Glass body",
+      "Three heights",
+      "Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "12", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt25", name: "Crystal Lamp in Four Colours", cat: "Home Décor", room: "Home Décor", price: 1217, memberPrice: 1095, sku: "SH-10577", tag: "New", ph: "", img: "assets/products/lt25.webp",
+    imgs: ["assets/products/lt25.webp", "assets/products/lt25-2.webp", "assets/products/lt25-3.webp", "assets/products/lt25-4.webp", "assets/products/lt25-5.webp"],
+    sizes: [{ label: "Navy", price: 1217 }, { label: "Light Green", price: 1217 }, { label: "Emerald Green", price: 1217 }, { label: "Pink", price: 1217 }],
+    desc: "Crystal in navy, light green, emerald green or pink. Coloured crystal is unusual and worth it.",
+    features: [
+      "Crystal construction",
+      "Navy, Light Green, Emerald or Pink",
+      "Table lamp"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt26", name: "Ceiling Light (45 or 65cm)", cat: "Home Décor", room: "Home Décor", price: 1220, memberPrice: 1098, sku: "SH-10578", tag: "New", ph: "", img: "assets/products/lt26.webp",
+    imgs: ["assets/products/lt26.webp", "assets/products/lt26-2.webp", "assets/products/lt26-3.webp", "assets/products/lt26-4.webp", "assets/products/lt26-5.webp"],
+    sizes: [{ label: "Ceiling Light / 45cm", price: 1220 }, { label: "Pendant Light / 45cm", price: 1220 }, { label: "Ceiling Light / 65cm", price: 1420 }, { label: "Pendant Light / 65cm", price: 1420 }, { label: "Ceiling Light / 80cm", price: 1831 }, { label: "Pendant Light / 80cm", price: 1831 }, { label: "Ceiling Light / 100cm", price: 2889 }, { label: "Pendant Light / 100cm", price: 2889 }],
+    desc: "An LED ceiling fitting at 45cm or 65cm.",
+    features: [
+      "LED ceiling fitting",
+      "45cm and 65cm",
+      "Flush mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "8", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt27", name: "Travertine Dish Lamp", cat: "Home Décor", room: "Home Décor", price: 1235, memberPrice: 1112, sku: "SH-10579", tag: "New", ph: "", img: "assets/products/lt27.webp",
+    imgs: ["assets/products/lt27.webp", "assets/products/lt27-2.webp", "assets/products/lt27-3.webp", "assets/products/lt27-4.webp"],
+    sizes: [{ label: "White 6000K", price: 1235 }, { label: "Warm White 3000K", price: 1235 }, { label: "Tri-Color Dimming", price: 1272 }],
+    desc: "A travertine dish lamp with tri-colour dimming, so one fitting covers warm through to daylight.",
+    features: [
+      "Natural travertine",
+      "Tri-colour dimming",
+      "6000K or 3000K options"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt28", name: "Marble Pendant Chandelier", cat: "Home Décor", room: "Home Décor", price: 1254, memberPrice: 1129, sku: "SH-10580", tag: "New", ph: "", img: "assets/products/lt28.webp",
+    imgs: ["assets/products/lt28.webp", "assets/products/lt28-2.webp", "assets/products/lt28-3.webp", "assets/products/lt28-4.webp", "assets/products/lt28-5.webp"],
+    sizes: [{ label: "Warm White", price: 1254 }],
+    desc: "Marble with LED, warm white.",
+    features: [
+      "Natural marble",
+      "LED chandelier",
+      "Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "1", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt29", name: "Travertine Wall Light, Light or Dark", cat: "Home Décor", room: "Home Décor", price: 1291, memberPrice: 1162, sku: "SH-10581", tag: "New", ph: "", img: "assets/products/lt29.webp",
+    imgs: ["assets/products/lt29.webp", "assets/products/lt29-2.webp", "assets/products/lt29-3.webp", "assets/products/lt29-4.webp", "assets/products/lt29-5.webp"],
+    sizes: [{ label: "Light", price: 1291 }, { label: "Dark", price: 1291 }],
+    desc: "Travertine in a light or dark stone.",
+    features: [
+      "Natural travertine",
+      "Light or Dark stone",
+      "Wall mounted"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt30", name: "Travertine Wall Light (Statement)", cat: "Home Décor", room: "Home Décor", price: 1322, memberPrice: 1190, sku: "SH-10582", tag: "New", ph: "", img: "assets/products/lt30.webp",
+    imgs: ["assets/products/lt30.webp", "assets/products/lt30-2.webp", "assets/products/lt30-3.webp", "assets/products/lt30-4.webp", "assets/products/lt30-5.webp"],
+    sizes: [{ label: "Travertine", price: 1322 }],
+    desc: "A larger travertine wall light, one finish.",
+    features: [
+      "Natural travertine",
+      "Larger scale",
+      "Single finish"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "1", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt31", name: "K9 Crystal Lamp (50cm)", cat: "Home Décor", room: "Home Décor", price: 1359, memberPrice: 1223, sku: "SH-10583", tag: "New", ph: "", img: "assets/products/lt31.webp",
+    imgs: ["assets/products/lt31.webp", "assets/products/lt31-2.webp", "assets/products/lt31-3.jpg", "assets/products/lt31-4.webp", "assets/products/lt31-5.webp"],
+    sizes: [{ label: "50cm / US Plug + Dimmer Switch", price: 1359 }, { label: "50cm / AU Plug + Dimmer Switch", price: 1359 }],
+    desc: "K9 crystal at 50cm, with a dimmer and your choice of plug. Check the plug type before ordering.",
+    features: [
+      "K9 crystal",
+      "50cm with dimmer",
+      "US or AU plug"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt32", name: "Marble Wall Light, Warm or Cool", cat: "Home Décor", room: "Home Décor", price: 1387, memberPrice: 1248, sku: "SH-10584", tag: "New", ph: "", img: "assets/products/lt32.webp",
+    imgs: ["assets/products/lt32.webp", "assets/products/lt32-2.webp", "assets/products/lt32-3.webp", "assets/products/lt32-4.webp", "assets/products/lt32-5.webp"],
+    sizes: [{ label: "Warm White  - 3500K", price: 1387 }, { label: "Cool White - 6000K", price: 1387 }],
+    desc: "Marble with gold and black detail, 3500K or 6000K.",
+    features: [
+      "Natural marble",
+      "Gold and black detail",
+      "3500K or 6000K"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt33", name: "Wave Ceiling Light (40 or 60cm)", cat: "Home Décor", room: "Home Décor", price: 1476, memberPrice: 1328, sku: "SH-10585", tag: "New", ph: "", img: "assets/products/lt33.webp",
+    imgs: ["assets/products/lt33.webp", "assets/products/lt33-2.webp", "assets/products/lt33-3.webp", "assets/products/lt33-4.webp", "assets/products/lt33-5.webp"],
+    sizes: [{ label: "Wave: 40cm ø x 5cm / Warm White", price: 1476 }, { label: "Wave: 60cm ø x 5cm / Warm White", price: 1711 }, { label: "Round: 85cm ø x 6cm / Warm White", price: 2509 }],
+    desc: "A slim wave-form ceiling light, 5cm deep, at 40cm or 60cm.",
+    features: [
+      "Wave form, 5cm deep",
+      "40cm and 60cm",
+      "Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt34", name: "Glass Pendant Light", cat: "Home Décor", room: "Home Décor", price: 1572, memberPrice: 1415, sku: "SH-10586", tag: "New", ph: "", img: "assets/products/lt34.webp",
+    imgs: ["assets/products/lt34.webp", "assets/products/lt34-2.webp", "assets/products/lt34-3.webp", "assets/products/lt34-4.webp", "assets/products/lt34-5.webp"],
+    sizes: [{ label: "Cool White", price: 1572 }, { label: "Warm White", price: 1572 }],
+    desc: "Glass with LED, warm or cool white.",
+    features: [
+      "Glass shade",
+      "LED",
+      "Warm or Cool White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt35", name: "Travertine Dome Pendant (30 or 40cm)", cat: "Home Décor", room: "Home Décor", price: 1639, memberPrice: 1475, sku: "SH-10587", tag: "New", ph: "", img: "assets/products/lt35.webp",
+    imgs: ["assets/products/lt35.webp", "assets/products/lt35-2.webp", "assets/products/lt35-3.webp", "assets/products/lt35-4.webp", "assets/products/lt35-5.webp"],
+    sizes: [{ label: "30cm", price: 1639 }, { label: "40cm", price: 1824 }],
+    desc: "Travertine at 30cm or 40cm.",
+    features: [
+      "Natural travertine",
+      "30cm and 40cm",
+      "Pendant fitting"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Natural stone", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch off and let it cool before cleaning. Wipe natural stone with a soft, damp cloth and dry it, avoiding acidic cleaners. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt36", name: "Floor Lamp (Three Tones)", cat: "Home Décor", room: "Home Décor", price: 1665, memberPrice: 1498, sku: "SH-10588", tag: "New", ph: "", img: "assets/products/lt36.webp",
+    imgs: ["assets/products/lt36.webp", "assets/products/lt36-2.webp", "assets/products/lt36-3.webp", "assets/products/lt36-4.webp", "assets/products/lt36-5.webp"],
+    sizes: [{ label: "Neutral White", price: 1665 }, { label: "Warm White", price: 1665 }, { label: "Cool White", price: 1665 }],
+    desc: "A floor lamp with warm, neutral or cool white.",
+    features: [
+      "Floor standing",
+      "Three colour temperatures",
+      "Reading height"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt37", name: "LED Crystal Chandelier (80cm)", cat: "Home Décor", room: "Home Décor", price: 1665, memberPrice: 1498, sku: "SH-10589", tag: "New", ph: "", img: "assets/products/lt37.webp",
+    imgs: ["assets/products/lt37.webp", "assets/products/lt37-2.webp", "assets/products/lt37-3.webp", "assets/products/lt37-4.webp", "assets/products/lt37-5.webp"],
+    sizes: [{ label: "80cm / Warm White / Gold", price: 1665 }, { label: "80cm / Warm White / Silver", price: 1665 }, { label: "80cm / White / Gold", price: 1665 }, { label: "80cm / White / Silver", price: 1665 }, { label: "80cm / Neutral White / Gold", price: 1665 }, { label: "80cm / Neutral White / Silver", price: 1665 }, { label: "100cm / Warm White / Gold", price: 1944 }, { label: "100cm / Warm White / Silver", price: 1944 }, { label: "100cm / White / Gold", price: 1944 }, { label: "100cm / White / Silver", price: 1944 }, { label: "100cm / Neutral White / Gold", price: 1944 }, { label: "100cm / Neutral White / Silver", price: 1944 }, { label: "120cm / Warm White / Gold", price: 2200 }, { label: "120cm / Warm White / Silver", price: 2200 }, { label: "120cm / White / Gold", price: 2200 }, { label: "120cm / White / Silver", price: 2200 }, { label: "120cm / Neutral White / Gold", price: 2200 }, { label: "120cm / Neutral White / Silver", price: 2200 }],
+    desc: "An 80cm crystal chandelier in gold or silver.",
+    features: [
+      "Crystal with LED",
+      "80cm",
+      "Gold or Silver"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "18", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt38", name: "Five-Head Glass Pendant", cat: "Home Décor", room: "Home Décor", price: 2037, memberPrice: 1833, sku: "SH-10590", tag: "New", ph: "", img: "assets/products/lt38.webp",
+    imgs: ["assets/products/lt38.webp", "assets/products/lt38-2.webp", "assets/products/lt38-3.webp", "assets/products/lt38-4.webp", "assets/products/lt38-5.webp"],
+    sizes: [{ label: "Gold / 5 heads / Cool White", price: 2037 }, { label: "Gold / 5 heads / Warm White", price: 2037 }, { label: "Silver / 5 heads / Cool White", price: 2037 }, { label: "Silver / 5 heads / Warm White", price: 2037 }, { label: "Gold / 8 heads / Cool White", price: 2961 }, { label: "Gold / 8 heads / Warm White", price: 2961 }, { label: "Silver / 8 heads / Cool White", price: 2961 }, { label: "Silver / 8 heads / Warm White", price: 2961 }, { label: "Gold / 10 heads / Cool White", price: 3628 }, { label: "Gold / 10 heads / Warm White", price: 3628 }, { label: "Silver / 10 heads / Cool White", price: 3628 }, { label: "Silver / 10 heads / Warm White", price: 3628 }],
+    desc: "Five glass heads in gold, warm or cool white.",
+    features: [
+      "Five glass heads",
+      "Gold finish",
+      "Warm or Cool White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "12", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt39", name: "Nine-Head Crystal Chandelier", cat: "Home Décor", room: "Home Décor", price: 2202, memberPrice: 1982, sku: "SH-10591", tag: "New", ph: "", img: "assets/products/lt39.webp",
+    imgs: ["assets/products/lt39.webp", "assets/products/lt39-2.webp", "assets/products/lt39-3.webp", "assets/products/lt39-4.webp", "assets/products/lt39-5.webp"],
+    sizes: [{ label: "Gold / 9 Heads / Cool White", price: 2202 }, { label: "Gold / 9 Heads / Warm White", price: 2202 }, { label: "Black / 9 Heads / Cool White", price: 2202 }, { label: "Black / 9 Heads / Warm White", price: 2202 }, { label: "Gold / 14 Heads / Cool White", price: 3583 }, { label: "Gold / 14 Heads / Warm White", price: 3583 }, { label: "Black / 14 Heads / Cool White", price: 3583 }, { label: "Black / 14 Heads / Warm White", price: 3583 }, { label: "Gold / 21 Heads / Cool White", price: 4346 }, { label: "Gold / 21 Heads / Warm White", price: 4346 }, { label: "Black / 21 Heads / Cool White", price: 4346 }, { label: "Black / 21 Heads / Warm White", price: 4346 }, { label: "Gold / 33 Heads / Cool White", price: 6850 }, { label: "Gold / 33 Heads / Warm White", price: 6850 }, { label: "Black / 33 Heads / Cool White", price: 6850 }, { label: "Black / 33 Heads / Warm White", price: 6850 }],
+    desc: "Nine heads in gold or black crystal. A dining-room piece.",
+    features: [
+      "Nine heads",
+      "Gold or Black",
+      "Crystal detail"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "16", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt40", name: "Handwoven Rattan Pendant", cat: "Home Décor", room: "Home Décor", price: 2461, memberPrice: 2215, sku: "SH-10592", tag: "New", ph: "", img: "assets/products/lt40.webp",
+    imgs: ["assets/products/lt40.webp", "assets/products/lt40-2.webp", "assets/products/lt40-3.webp", "assets/products/lt40-4.webp", "assets/products/lt40-5.webp"],
+    sizes: [{ label: "S", price: 2461 }, { label: "L", price: 3109 }],
+    desc: "Handwoven rattan in small or large, which warms a room full of hard surfaces.",
+    features: [
+      "Handwoven rattan",
+      "Small and Large",
+      "Warm, textured light"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt41", name: "Strapped Glass Pendant", cat: "Home Décor", room: "Home Décor", price: 2472, memberPrice: 2225, sku: "SH-10593", tag: "New", ph: "", img: "assets/products/lt41.webp",
+    imgs: ["assets/products/lt41.webp", "assets/products/lt41-2.webp", "assets/products/lt41-3.webp", "assets/products/lt41-4.webp", "assets/products/lt41-5.webp"],
+    sizes: [{ label: "1 Strap / Cold White", price: 2472 }, { label: "1 Strap / Warm White", price: 2472 }, { label: "2 Strap / Cold White", price: 3550 }, { label: "2 Strap / Warm White", price: 3550 }],
+    desc: "Glass held in leather-look straps, one or two straps.",
+    features: [
+      "Glass with strap detail",
+      "1 or 2 straps",
+      "Cold or Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt42", name: "Chandelier (Three Tones)", cat: "Home Décor", room: "Home Décor", price: 2574, memberPrice: 2317, sku: "SH-10594", tag: "New", ph: "", img: "assets/products/lt42.webp",
+    imgs: ["assets/products/lt42.webp", "assets/products/lt42-2.webp", "assets/products/lt42-3.webp", "assets/products/lt42-4.webp", "assets/products/lt42-5.webp"],
+    sizes: [{ label: "Cool White", price: 2574 }, { label: "Neutral White", price: 2574 }, { label: "Warm White", price: 2574 }],
+    desc: "A chandelier with warm, neutral or cool white.",
+    features: [
+      "Chandelier fitting",
+      "Three colour temperatures",
+      "Dining or entry"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt43", name: "Linear Pendant (90 or 120cm)", cat: "Home Décor", room: "Home Décor", price: 2583, memberPrice: 2325, sku: "SH-10595", tag: "New", ph: "", img: "assets/products/lt43.webp",
+    imgs: ["assets/products/lt43.webp", "assets/products/lt43-2.webp", "assets/products/lt43-3.webp", "assets/products/lt43-4.webp", "assets/products/lt43-5.webp"],
+    sizes: [{ label: "90cm / Neutral White", price: 2583 }, { label: "120cm / Neutral White", price: 3241 }],
+    desc: "A long linear LED at 90cm or 120cm, for above a dining table or island.",
+    features: [
+      "Linear LED",
+      "90cm and 120cm",
+      "Above a table or island"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt44", name: "Long Pendant (120 or 150cm)", cat: "Home Décor", room: "Home Décor", price: 2846, memberPrice: 2561, sku: "SH-10596", tag: "New", ph: "", img: "assets/products/lt44.webp",
+    imgs: ["assets/products/lt44.webp", "assets/products/lt44-2.webp", "assets/products/lt44-3.webp", "assets/products/lt44-4.webp", "assets/products/lt44-5.webp"],
+    sizes: [{ label: "120cm / Warm White", price: 2846 }, { label: "120cm / Cool White", price: 2846 }, { label: "150cm / Warm White", price: 3685 }, { label: "150cm / Cool White", price: 3685 }],
+    desc: "120cm or 150cm, warm or cool white.",
+    features: [
+      "120cm and 150cm",
+      "Warm or Cool White",
+      "Long dining tables"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt45", name: "Stone Chandelier (150cm Drop)", cat: "Home Décor", room: "Home Décor", price: 3109, memberPrice: 2798, sku: "SH-10597", tag: "New", ph: "", img: "assets/products/lt45.webp",
+    imgs: ["assets/products/lt45.webp", "assets/products/lt45-2.webp", "assets/products/lt45-3.webp", "assets/products/lt45-4.webp", "assets/products/lt45-5.webp"],
+    sizes: [{ label: "40cm ø x 150cm L / Clear Stone / Warm White", price: 3109 }, { label: "40cm ø x 150cm L / Clear Stone / Cool White", price: 3109 }, { label: "40cm ø x 150cm L / Black Stone / Warm White", price: 3109 }, { label: "40cm ø x 150cm L / Black Stone / Cool White", price: 3109 }, { label: "60cm ø x 200cm L / Clear Stone / Warm White", price: 5735 }, { label: "60cm ø x 200cm L / Clear Stone / Cool White", price: 5735 }, { label: "60cm ø x 200cm L / Black Stone / Warm White", price: 5735 }, { label: "60cm ø x 200cm L / Black Stone / Cool White", price: 5735 }, { label: "80cm ø x 250cm L / Clear Stone / Warm White", price: 8272 }, { label: "80cm ø x 250cm L / Clear Stone / Cool White", price: 8272 }, { label: "80cm ø x 250cm L / Black Stone / Warm White", price: 8272 }, { label: "80cm ø x 250cm L / Black Stone / Cool White", price: 8272 }, { label: "100cm ø x 300cm L / Clear Stone / Warm White", price: 13006 }, { label: "100cm ø x 300cm L / Clear Stone / Cool White", price: 13006 }, { label: "100cm ø x 300cm L / Black Stone / Warm White", price: 13006 }, { label: "100cm ø x 300cm L / Black Stone / Cool White", price: 13006 }, { label: "120cm ø x 300cm L / Clear Stone / Warm White", price: 16231 }, { label: "120cm ø x 300cm L / Clear Stone / Cool White", price: 16231 }, { label: "120cm ø x 300cm L / Black Stone / Warm White", price: 16231 }, { label: "120cm ø x 300cm L / Black Stone / Cool White", price: 16231 }],
+    desc: "A 40cm stone chandelier on a 150cm drop, for a stairwell or void.",
+    features: [
+      "40cm diameter, 150cm drop",
+      "Clear stone",
+      "Stairwell or void"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "20", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt46", name: "Gold & Black Floor Lamp", cat: "Home Décor", room: "Home Décor", price: 3478, memberPrice: 3130, sku: "SH-10598", tag: "New", ph: "", img: "assets/products/lt46.webp",
+    imgs: ["assets/products/lt46.webp", "assets/products/lt46-2.webp", "assets/products/lt46-3.webp", "assets/products/lt46-4.webp", "assets/products/lt46-5.webp"],
+    sizes: [{ label: "Warm White", price: 3478 }],
+    desc: "An LED floor lamp in gold and black, warm white.",
+    features: [
+      "LED floor lamp",
+      "Gold and black",
+      "Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "1", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt47", name: "Pendant in Brown or Black", cat: "Home Décor", room: "Home Décor", price: 3498, memberPrice: 3148, sku: "SH-10599", tag: "New", ph: "", img: "assets/products/lt47.webp",
+    imgs: ["assets/products/lt47.webp", "assets/products/lt47-2.webp", "assets/products/lt47-3.webp", "assets/products/lt47-4.webp", "assets/products/lt47-5.webp"],
+    sizes: [{ label: "Light Brown", price: 3498 }, { label: "Dark Brown", price: 3498 }, { label: "Black", price: 3498 }],
+    desc: "Light brown, dark brown or black.",
+    features: [
+      "Three colourways",
+      "LED",
+      "Pendant fitting"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "3", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt48", name: "LED Chandelier, Small or Large", cat: "Home Décor", room: "Home Décor", price: 4137, memberPrice: 3723, sku: "SH-10600", tag: "New", ph: "", img: "assets/products/lt48.webp",
+    imgs: ["assets/products/lt48.webp", "assets/products/lt48-2.webp", "assets/products/lt48-3.webp", "assets/products/lt48-4.webp", "assets/products/lt48-5.webp"],
+    sizes: [{ label: "Small / Cold White", price: 4137 }, { label: "Small / Warm White", price: 4137 }, { label: "Large / Cold White", price: 5369 }, { label: "Large / Warm White", price: 5369 }],
+    desc: "Two sizes, cold or warm white.",
+    features: [
+      "LED chandelier",
+      "Small and Large",
+      "Cold or Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "4", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt49", name: "Crystal Chandelier (120 or 150cm)", cat: "Home Décor", room: "Home Décor", price: 4167, memberPrice: 3750, sku: "SH-10601", tag: "New", ph: "", img: "assets/products/lt49.webp",
+    imgs: ["assets/products/lt49.webp", "assets/products/lt49-2.webp", "assets/products/lt49-3.webp", "assets/products/lt49-4.webp", "assets/products/lt49-5.webp"],
+    sizes: [{ label: "120cm / Warm White 3000K", price: 4167 }, { label: "150cm / Warm White 3000K", price: 6481 }],
+    desc: "Crystal at 120cm or 150cm, 3000K warm white. The largest fitting we carry.",
+    features: [
+      "Crystal chandelier",
+      "120cm and 150cm",
+      "3000K Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "2", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "lt50", name: "Midnight Chandelier (60cm)", cat: "Home Décor", room: "Home Décor", price: 4322, memberPrice: 3890, sku: "SH-10602", tag: "New", ph: "", img: "assets/products/lt50.webp",
+    imgs: ["assets/products/lt50.webp", "assets/products/lt50-2.webp", "assets/products/lt50-3.webp", "assets/products/lt50-4.webp", "assets/products/lt50-5.webp"],
+    sizes: [{ label: "60cm ø x 38cm H / Dimmable Warm White", price: 4322 }, { label: "60cm ø x 38cm H / Dimmable Cool White", price: 4322 }, { label: "80cm ø 38cm H / Dimmable Warm White", price: 6393 }, { label: "80cm ø 38cm H / Dimmable Cool White", price: 6393 }, { label: "100cm ø 38cm H / Dimmable Warm White", price: 10463 }, { label: "100cm ø 38cm H / Dimmable Cool White", price: 10463 }, { label: "120cm ø 38cm H / Dimmable Warm White", price: 11915 }, { label: "120cm ø 38cm H / Dimmable Cool White", price: 11915 }],
+    desc: "A black 60cm chandelier with dimmable warm white.",
+    features: [
+      "Black finish",
+      "60cm diameter",
+      "Dimmable Warm White"
+    ],
+    specs: { "Type": "Light fitting", "Material": "Glass / metal", "Options": "8", "Install": "Licensed electrician for hard-wired fittings" },
+    care: "Switch it off and let it cool before cleaning. Dust with a dry, soft cloth; for glass or crystal, a barely damp cloth then dry buffing keeps it clear. Hard-wired fittings should be installed by a licensed electrician." },
+
+  { id: "rg01", name: "Circular Rug (Five Sizes)", cat: "Home Décor", room: "Home Décor", price: 578, memberPrice: 520, sku: "SH-10603", tag: "New", ph: "", img: "assets/products/rg01.webp",
+    imgs: ["assets/products/rg01.webp", "assets/products/rg01-2.webp", "assets/products/rg01-3.webp", "assets/products/rg01-4.webp", "assets/products/rg01-5.webp"],
+    sizes: [{ label: "1 / 120cm", price: 578 }, { label: "2 / 120cm", price: 578 }, { label: "3 / 120cm", price: 578 }, { label: "4 / 120cm", price: 578 }, { label: "5 / 120cm", price: 578 }, { label: "6 / 120cm", price: 578 }, { label: "1 / 140cm", price: 767 }, { label: "2 / 140cm", price: 767 }, { label: "3 / 140cm", price: 767 }, { label: "4 / 140cm", price: 767 }, { label: "5 / 140cm", price: 767 }, { label: "6 / 140cm", price: 767 }, { label: "1 / 160cm", price: 1344 }, { label: "2 / 160cm", price: 1344 }, { label: "3 / 160cm", price: 1344 }, { label: "4 / 160cm", price: 1344 }, { label: "5 / 160cm", price: 1344 }, { label: "6 / 160cm", price: 1344 }, { label: "1 / 180cm", price: 1556 }, { label: "2 / 180cm", price: 1556 }, { label: "3 / 180cm", price: 1556 }, { label: "4 / 180cm", price: 1556 }, { label: "5 / 180cm", price: 1556 }, { label: "6 / 180cm", price: 1556 }, { label: "1 / 200cm", price: 1828 }, { label: "2 / 200cm", price: 1828 }, { label: "3 / 200cm", price: 1828 }, { label: "4 / 200cm", price: 1828 }, { label: "5 / 200cm", price: 1828 }, { label: "6 / 200cm", price: 1828 }, { label: "1 / 250cm", price: 3422 }, { label: "2 / 250cm", price: 3422 }, { label: "3 / 250cm", price: 3422 }, { label: "4 / 250cm", price: 3422 }, { label: "5 / 250cm", price: 3422 }, { label: "6 / 250cm", price: 3422 }, { label: "1 / 300cm", price: 4815 }, { label: "2 / 300cm", price: 4815 }, { label: "3 / 300cm", price: 4815 }, { label: "4 / 300cm", price: 4815 }, { label: "5 / 300cm", price: 4815 }, { label: "6 / 300cm", price: 4815 }],
+    desc: "A round rug from 120cm to 200cm. Round rugs suit a reading corner or under a round table better than a rectangle does.",
+    features: [
+      "Round, 120cm to 200cm",
+      "Several designs",
+      "Suits a corner or round table"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "42" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg02", name: "Rug Collection (Five Sizes)", cat: "Home Décor", room: "Home Décor", price: 593, memberPrice: 534, sku: "SH-10604", tag: "New", ph: "", img: "assets/products/rg02.webp",
+    imgs: ["assets/products/rg02.webp", "assets/products/rg02-2.webp", "assets/products/rg02-3.webp", "assets/products/rg02-4.webp", "assets/products/rg02-5.webp"],
+    sizes: [{ label: "1 / 100cm", price: 593 }, { label: "2 / 100cm", price: 593 }, { label: "3 / 100cm", price: 593 }, { label: "4 / 100cm", price: 593 }, { label: "5 / 100cm", price: 593 }, { label: "6 / 100cm", price: 593 }, { label: "7 / 100cm", price: 593 }, { label: "8 / 100cm", price: 593 }, { label: "9 / 100cm", price: 593 }, { label: "10 / 100cm", price: 593 }, { label: "11 / 100cm", price: 593 }, { label: "1 / 120cm", price: 993 }, { label: "2 / 120cm", price: 993 }, { label: "3 / 120cm", price: 993 }, { label: "4 / 120cm", price: 993 }, { label: "5 / 120cm", price: 993 }, { label: "6 / 120cm", price: 993 }, { label: "7 / 120cm", price: 993 }, { label: "8 / 120cm", price: 993 }, { label: "9 / 120cm", price: 993 }, { label: "10 / 120cm", price: 993 }, { label: "11 / 120cm", price: 993 }, { label: "1 / 140cm", price: 1378 }, { label: "2 / 140cm", price: 1378 }, { label: "3 / 140cm", price: 1378 }, { label: "4 / 140cm", price: 1378 }, { label: "5 / 140cm", price: 1378 }, { label: "6 / 140cm", price: 1378 }, { label: "7 / 140cm", price: 1378 }, { label: "8 / 140cm", price: 1378 }, { label: "9 / 140cm", price: 1378 }, { label: "10 / 140cm", price: 1378 }, { label: "11 / 140cm", price: 1378 }, { label: "1 / 160cm", price: 1826 }, { label: "2 / 160cm", price: 1826 }, { label: "3 / 160cm", price: 1826 }, { label: "4 / 160cm", price: 1826 }, { label: "5 / 160cm", price: 1826 }, { label: "6 / 160cm", price: 1826 }, { label: "7 / 160cm", price: 1826 }, { label: "8 / 160cm", price: 1826 }, { label: "9 / 160cm", price: 1826 }, { label: "10 / 160cm", price: 1826 }, { label: "11 / 160cm", price: 1826 }, { label: "1 / 180cm", price: 2500 }, { label: "2 / 180cm", price: 2500 }, { label: "3 / 180cm", price: 2500 }, { label: "4 / 180cm", price: 2500 }, { label: "5 / 180cm", price: 2500 }, { label: "6 / 180cm", price: 2500 }, { label: "7 / 180cm", price: 2500 }, { label: "8 / 180cm", price: 2500 }, { label: "9 / 180cm", price: 2500 }, { label: "10 / 180cm", price: 2500 }, { label: "11 / 180cm", price: 2500 }, { label: "1 / 200cm", price: 2593 }, { label: "2 / 200cm", price: 2593 }, { label: "3 / 200cm", price: 2593 }, { label: "4 / 200cm", price: 2593 }, { label: "5 / 200cm", price: 2593 }, { label: "6 / 200cm", price: 2593 }, { label: "7 / 200cm", price: 2593 }, { label: "8 / 200cm", price: 2593 }, { label: "9 / 200cm", price: 2593 }, { label: "10 / 200cm", price: 2593 }, { label: "11 / 200cm", price: 2593 }, { label: "1 / 240cm", price: 4019 }, { label: "2 / 240cm", price: 4019 }, { label: "3 / 240cm", price: 4019 }, { label: "4 / 240cm", price: 4019 }, { label: "5 / 240cm", price: 4019 }, { label: "6 / 240cm", price: 4019 }, { label: "7 / 240cm", price: 4019 }, { label: "8 / 240cm", price: 4019 }, { label: "9 / 240cm", price: 4019 }, { label: "10 / 240cm", price: 4019 }, { label: "11 / 240cm", price: 4019 }],
+    desc: "From 100cm to 180cm, in several designs.",
+    features: [
+      "100cm to 180cm",
+      "Several designs",
+      "Living or bedroom"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "77" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg03", name: "Urban Circle Rug", cat: "Home Décor", room: "Home Décor", price: 793, memberPrice: 714, sku: "SH-10605", tag: "New", ph: "", img: "assets/products/rg03.webp",
+    imgs: ["assets/products/rg03.webp", "assets/products/rg03-2.webp", "assets/products/rg03-3.webp", "assets/products/rg03-4.webp"],
+    sizes: [{ label: "120cm", price: 793 }, { label: "140cm", price: 1050 }, { label: "160cm", price: 1461 }, { label: "180cm", price: 1846 }, { label: "200cm", price: 2141 }],
+    desc: "Round, from 120cm to 200cm.",
+    features: [
+      "Round format",
+      "120cm to 200cm",
+      "Five sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "5" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg04", name: "Beige Rug (Five Sizes)", cat: "Home Décor", room: "Home Décor", price: 907, memberPrice: 816, sku: "SH-10606", tag: "New", ph: "", img: "assets/products/rg04.webp",
+    imgs: ["assets/products/rg04.webp", "assets/products/rg04-2.webp", "assets/products/rg04-3.webp", "assets/products/rg04-4.webp", "assets/products/rg04-5.webp"],
+    sizes: [{ label: "1 / 120cm", price: 907 }, { label: "2 / 120cm", price: 907 }, { label: "3 / 120cm", price: 907 }, { label: "4 / 120cm", price: 907 }, { label: "5 / 120cm", price: 907 }, { label: "1 / 140cm", price: 1167 }, { label: "2 / 140cm", price: 1167 }, { label: "3 / 140cm", price: 1167 }, { label: "4 / 140cm", price: 1167 }, { label: "5 / 140cm", price: 1167 }, { label: "1 / 160cm", price: 1417 }, { label: "2 / 160cm", price: 1417 }, { label: "3 / 160cm", price: 1417 }, { label: "4 / 160cm", price: 1417 }, { label: "5 / 160cm", price: 1417 }, { label: "1 / 180cm", price: 1646 }, { label: "2 / 180cm", price: 1646 }, { label: "3 / 180cm", price: 1646 }, { label: "4 / 180cm", price: 1646 }, { label: "5 / 180cm", price: 1646 }, { label: "1 / 200cm", price: 1907 }, { label: "2 / 200cm", price: 1907 }, { label: "3 / 200cm", price: 1907 }, { label: "4 / 200cm", price: 1907 }, { label: "5 / 200cm", price: 1907 }, { label: "1 / 250cm", price: 2593 }, { label: "2 / 250cm", price: 2593 }, { label: "3 / 250cm", price: 2593 }, { label: "4 / 250cm", price: 2593 }, { label: "5 / 250cm", price: 2593 }, { label: "1 / 300cm", price: 3000 }, { label: "2 / 300cm", price: 3000 }, { label: "3 / 300cm", price: 3000 }, { label: "4 / 300cm", price: 3000 }, { label: "5 / 300cm", price: 3000 }],
+    desc: "Beige, 120cm to 200cm.",
+    features: [
+      "Beige colourway",
+      "120cm to 200cm",
+      "Neutral, easy to place"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "35" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg05", name: "Rug in Five Sizes (from 50 x 80cm)", cat: "Home Décor", room: "Home Décor", price: 920, memberPrice: 828, sku: "SH-10607", tag: "New", ph: "", img: "assets/products/rg05.webp",
+    imgs: ["assets/products/rg05.webp", "assets/products/rg05-2.webp", "assets/products/rg05-3.webp", "assets/products/rg05-4.webp", "assets/products/rg05-5.webp"],
+    sizes: [{ label: "50cm x 80cm", price: 920 }, { label: "80cm x 130cm", price: 2109 }, { label: "100cm x 160cm", price: 3157 }, { label: "120cm x 200cm", price: 4439 }, { label: "160cm x 250cm", price: 6257 }, { label: "200cm x 290cm", price: 7220 }],
+    desc: "From a 50 by 80cm mat up to larger sizes, so it works in an entry or a lounge.",
+    features: [
+      "50 x 80cm up to large",
+      "Entry mat or room rug",
+      "Several sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "6" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg06", name: "Rug Collection (100 x 150cm up)", cat: "Home Décor", room: "Home Décor", price: 1339, memberPrice: 1205, sku: "SH-10608", tag: "New", ph: "", img: "assets/products/rg06.webp",
+    imgs: ["assets/products/rg06.webp", "assets/products/rg06-2.webp", "assets/products/rg06-3.webp", "assets/products/rg06-4.webp", "assets/products/rg06-5.webp"],
+    sizes: [{ label: "1 / 100 x 150cm", price: 1339 }, { label: "2 / 100 x 150cm", price: 1339 }, { label: "3 / 100 x 150cm", price: 1339 }, { label: "4 / 100 x 150cm", price: 1339 }, { label: "5 / 100 x 150cm", price: 1339 }, { label: "6 / 100 x 150cm", price: 1339 }, { label: "7 / 100 x 150cm", price: 1339 }, { label: "8 / 100 x 150cm", price: 1339 }, { label: "9 / 100 x 150cm", price: 1339 }, { label: "10 / 100 x 150cm", price: 1339 }, { label: "1 / 120 x 160cm", price: 1522 }, { label: "2 / 120 x 160cm", price: 1522 }, { label: "3 / 120 x 160cm", price: 1522 }, { label: "4 / 120 x 160cm", price: 1522 }, { label: "5 / 120 x 160cm", price: 1522 }, { label: "6 / 120 x 160cm", price: 1522 }, { label: "7 / 120 x 160cm", price: 1522 }, { label: "8 / 120 x 160cm", price: 1522 }, { label: "9 / 120 x 160cm", price: 1522 }, { label: "10 / 120 x 160cm", price: 1522 }, { label: "1 / 100 x 200cm", price: 1561 }, { label: "2 / 100 x 200cm", price: 1561 }, { label: "3 / 100 x 200cm", price: 1561 }, { label: "4 / 100 x 200cm", price: 1561 }, { label: "5 / 100 x 200cm", price: 1561 }, { label: "6 / 100 x 200cm", price: 1561 }, { label: "7 / 100 x 200cm", price: 1561 }, { label: "8 / 100 x 200cm", price: 1561 }, { label: "9 / 100 x 200cm", price: 1561 }, { label: "10 / 100 x 200cm", price: 1561 }, { label: "1 / 140 x 200cm", price: 2072 }, { label: "2 / 140 x 200cm", price: 2072 }, { label: "3 / 140 x 200cm", price: 2072 }, { label: "4 / 140 x 200cm", price: 2072 }, { label: "5 / 140 x 200cm", price: 2072 }, { label: "6 / 140 x 200cm", price: 2072 }, { label: "7 / 140 x 200cm", price: 2072 }, { label: "8 / 140 x 200cm", price: 2072 }, { label: "9 / 140 x 200cm", price: 2072 }, { label: "10 / 140 x 200cm", price: 2072 }, { label: "1 / 160 x 230cm", price: 2628 }, { label: "2 / 160 x 230cm", price: 2628 }, { label: "3 / 160 x 230cm", price: 2628 }, { label: "4 / 160 x 230cm", price: 2628 }, { label: "5 / 160 x 230cm", price: 2628 }, { label: "6 / 160 x 230cm", price: 2628 }, { label: "7 / 160 x 230cm", price: 2628 }, { label: "8 / 160 x 230cm", price: 2628 }, { label: "9 / 160 x 230cm", price: 2628 }, { label: "10 / 160 x 230cm", price: 2628 }, { label: "1 / 180 x 250cm", price: 3361 }, { label: "2 / 180 x 250cm", price: 3361 }, { label: "3 / 180 x 250cm", price: 3361 }, { label: "4 / 180 x 250cm", price: 3361 }, { label: "5 / 180 x 250cm", price: 3361 }, { label: "6 / 180 x 250cm", price: 3361 }, { label: "7 / 180 x 250cm", price: 3361 }, { label: "8 / 180 x 250cm", price: 3361 }, { label: "9 / 180 x 250cm", price: 3361 }, { label: "10 / 180 x 250cm", price: 3361 }, { label: "1 / 180 x 280cm", price: 3681 }, { label: "2 / 180 x 280cm", price: 3681 }, { label: "3 / 180 x 280cm", price: 3681 }, { label: "4 / 180 x 280cm", price: 3681 }, { label: "5 / 180 x 280cm", price: 3681 }, { label: "6 / 180 x 280cm", price: 3681 }, { label: "7 / 180 x 280cm", price: 3681 }, { label: "8 / 180 x 280cm", price: 3681 }, { label: "9 / 180 x 280cm", price: 3681 }, { label: "10 / 180 x 280cm", price: 3681 }, { label: "1 / 200 x 250cm", price: 3889 }, { label: "2 / 200 x 250cm", price: 3889 }, { label: "3 / 200 x 250cm", price: 3889 }, { label: "4 / 200 x 250cm", price: 3889 }, { label: "5 / 200 x 250cm", price: 3889 }, { label: "6 / 200 x 250cm", price: 3889 }, { label: "7 / 200 x 250cm", price: 3889 }, { label: "8 / 200 x 250cm", price: 3889 }, { label: "9 / 200 x 250cm", price: 3889 }, { label: "10 / 200 x 250cm", price: 3889 }, { label: "1 / 200 x 300cm", price: 4135 }, { label: "2 / 200 x 300cm", price: 4135 }, { label: "3 / 200 x 300cm", price: 4135 }, { label: "4 / 200 x 300cm", price: 4135 }, { label: "5 / 200 x 300cm", price: 4135 }, { label: "6 / 200 x 300cm", price: 4135 }, { label: "7 / 200 x 300cm", price: 4135 }, { label: "8 / 200 x 300cm", price: 4135 }, { label: "9 / 200 x 300cm", price: 4135 }, { label: "10 / 200 x 300cm", price: 4135 }],
+    desc: "From 100 by 150cm, in several designs.",
+    features: [
+      "From 100 x 150cm",
+      "Several designs",
+      "Multiple sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "90" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg07", name: "Royale Beige Rug", cat: "Home Décor", room: "Home Décor", price: 1370, memberPrice: 1233, sku: "SH-10609", tag: "New", ph: "", img: "assets/products/rg07.webp",
+    imgs: ["assets/products/rg07.webp", "assets/products/rg07-2.webp", "assets/products/rg07-3.webp", "assets/products/rg07-4.webp", "assets/products/rg07-5.webp"],
+    sizes: [{ label: "120 x 160cm / Beige", price: 1370 }, { label: "140 x 200cm / Beige", price: 1804 }, { label: "160 x 230cm / Beige", price: 2222 }, { label: "180 x 280cm / Beige", price: 3083 }, { label: "200 x 300cm / Beige", price: 3676 }],
+    desc: "Beige, from 120 by 160cm to 160 by 230cm.",
+    features: [
+      "Beige colourway",
+      "120 x 160cm to 160 x 230cm",
+      "Soft underfoot"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "5" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg08", name: "Eveline Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 1567, memberPrice: 1410, sku: "SH-10610", tag: "New", ph: "", img: "assets/products/rg08.webp",
+    imgs: ["assets/products/rg08.webp", "assets/products/rg08-2.webp", "assets/products/rg08-3.webp", "assets/products/rg08-4.webp"],
+    sizes: [{ label: "120 x 160cm", price: 1567 }, { label: "100 x 200cm", price: 1593 }, { label: "140 x 200cm", price: 1817 }, { label: "160 x 230cm", price: 2194 }, { label: "200 x 250cm", price: 2911 }, { label: "180 x 280cm", price: 2939 }, { label: "200 x 300cm", price: 3406 }],
+    desc: "100 by 200cm through to 160 by 230cm.",
+    features: [
+      "Four sizes",
+      "100 x 200cm to 160 x 230cm",
+      "Living or bedroom"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "7" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg09", name: "Black & White Artistic Rug", cat: "Home Décor", room: "Home Décor", price: 1600, memberPrice: 1440, sku: "SH-10611", tag: "New", ph: "", img: "assets/products/rg09.webp",
+    imgs: ["assets/products/rg09.webp", "assets/products/rg09-2.webp", "assets/products/rg09-3.webp", "assets/products/rg09-4.webp", "assets/products/rg09-5.webp"],
+    sizes: [{ label: "Black + White / 140 x 200cm", price: 1600 }, { label: "Black + White / 160 x 230cm", price: 1963 }, { label: "Black + White / 180 x 280cm", price: 2600 }, { label: "Black + White / 200 x 300cm", price: 3052 }],
+    desc: "A bold black and white pattern, from 140 by 200cm.",
+    features: [
+      "Black and white pattern",
+      "From 140 x 200cm",
+      "A graphic statement"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "4" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg10", name: "Wool Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 1717, memberPrice: 1545, sku: "SH-10612", tag: "New", ph: "", img: "assets/products/rg10.webp",
+    imgs: ["assets/products/rg10.webp", "assets/products/rg10-2.webp", "assets/products/rg10-3.webp", "assets/products/rg10-4.webp", "assets/products/rg10-5.webp"],
+    sizes: [{ label: "80cm x 130cm", price: 1717 }, { label: "100cm x 160cm", price: 2574 }, { label: "120cm x 200cm", price: 3406 }, { label: "160cm x 250cm", price: 6000 }, { label: "200cm x 290cm", price: 7759 }, { label: "220cm x 340cm", price: 10720 }],
+    desc: "Wool from 80 by 130cm up to larger sizes. Wool wears better than synthetic and feels it.",
+    features: [
+      "Wool pile",
+      "From 80 x 130cm",
+      "Hard-wearing"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "6" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg11", name: "Florient Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 1754, memberPrice: 1579, sku: "SH-10613", tag: "New", ph: "", img: "assets/products/rg11.webp",
+    imgs: ["assets/products/rg11.webp", "assets/products/rg11-2.webp", "assets/products/rg11-3.webp", "assets/products/rg11-4.webp", "assets/products/rg11-5.webp"],
+    sizes: [{ label: "1 / 80cm x 150cm", price: 1754 }, { label: "2 / 80cm x 150cm", price: 1754 }, { label: "1 / 120cm x 180cm", price: 2939 }, { label: "2 / 120cm x 180cm", price: 2939 }, { label: "1 / 140cm x 200cm", price: 3870 }, { label: "2 / 140cm x 200cm", price: 3870 }, { label: "1 / 160cm x 230cm", price: 4791 }, { label: "2 / 160cm x 230cm", price: 4791 }, { label: "1 / 200cm x 250cm", price: 6417 }, { label: "2 / 200cm x 250cm", price: 6417 }, { label: "1 / 200cm x 300cm", price: 7646 }, { label: "2 / 200cm x 300cm", price: 7646 }, { label: "1 / 240cm x 340cm", price: 10294 }, { label: "2 / 240cm x 340cm", price: 10294 }, { label: "1 / 300cm x 400cm", price: 14796 }, { label: "2 / 300cm x 400cm", price: 14796 }],
+    desc: "From 80 by 150cm.",
+    features: [
+      "From 80 x 150cm",
+      "Several designs",
+      "Multiple sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "16" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg12", name: "Milan Rug Collection", cat: "Home Décor", room: "Home Décor", price: 1815, memberPrice: 1634, sku: "SH-10614", tag: "New", ph: "", img: "assets/products/rg12.webp",
+    imgs: ["assets/products/rg12.webp", "assets/products/rg12-2.webp", "assets/products/rg12-3.webp", "assets/products/rg12-4.webp", "assets/products/rg12-5.webp"],
+    sizes: [{ label: "1 / 140 x 200cm", price: 1815 }, { label: "2 / 140 x 200cm", price: 1815 }, { label: "3 / 140 x 200cm", price: 1815 }, { label: "4 / 140 x 200cm", price: 1815 }, { label: "5 / 140 x 200cm", price: 1815 }, { label: "6 / 140 x 200cm", price: 1815 }, { label: "7 / 140 x 200cm", price: 1815 }, { label: "8 / 140 x 200cm", price: 1815 }, { label: "9 / 140 x 200cm", price: 1815 }, { label: "1 / 160 x 230cm", price: 2200 }, { label: "2 / 160 x 230cm", price: 2200 }, { label: "3 / 160 x 230cm", price: 2200 }, { label: "4 / 160 x 230cm", price: 2200 }, { label: "5 / 160 x 230cm", price: 2200 }, { label: "6 / 160 x 230cm", price: 2200 }, { label: "7 / 160 x 230cm", price: 2200 }, { label: "8 / 160 x 230cm", price: 2200 }, { label: "9 / 160 x 230cm", price: 2200 }, { label: "1 / 180 x 280cm", price: 2833 }, { label: "2 / 180 x 280cm", price: 2833 }, { label: "3 / 180 x 280cm", price: 2833 }, { label: "4 / 180 x 280cm", price: 2833 }, { label: "5 / 180 x 280cm", price: 2833 }, { label: "6 / 180 x 280cm", price: 2833 }, { label: "7 / 180 x 280cm", price: 2833 }, { label: "8 / 180 x 280cm", price: 2833 }, { label: "9 / 180 x 280cm", price: 2833 }, { label: "1 / 200 x 300cm", price: 3278 }, { label: "2 / 200 x 300cm", price: 3278 }, { label: "3 / 200 x 300cm", price: 3278 }, { label: "4 / 200 x 300cm", price: 3278 }, { label: "5 / 200 x 300cm", price: 3278 }, { label: "6 / 200 x 300cm", price: 3278 }, { label: "7 / 200 x 300cm", price: 3278 }, { label: "8 / 200 x 300cm", price: 3278 }, { label: "9 / 200 x 300cm", price: 3278 }, { label: "1 / 240 x 360cm", price: 4019 }, { label: "2 / 240 x 360cm", price: 4019 }, { label: "3 / 240 x 360cm", price: 4019 }, { label: "4 / 240 x 360cm", price: 4019 }, { label: "5 / 240 x 360cm", price: 4019 }, { label: "6 / 240 x 360cm", price: 4019 }, { label: "7 / 240 x 360cm", price: 4019 }, { label: "8 / 240 x 360cm", price: 4019 }, { label: "9 / 240 x 360cm", price: 4019 }],
+    desc: "From 140 by 200cm up to 180 by 280cm.",
+    features: [
+      "140 x 200cm to 180 x 280cm",
+      "Several designs",
+      "Room-sized"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "45" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg13", name: "Large Round Rug (200-300cm)", cat: "Home Décor", room: "Home Décor", price: 2050, memberPrice: 1845, sku: "SH-10615", tag: "New", ph: "", img: "assets/products/rg13.webp",
+    imgs: ["assets/products/rg13.webp", "assets/products/rg13-2.webp", "assets/products/rg13-3.webp", "assets/products/rg13-4.webp"],
+    sizes: [{ label: "200cm ø", price: 2050 }, { label: "250cm ø", price: 3844 }, { label: "300cm ø", price: 5417 }],
+    desc: "Round at 200cm, 250cm or 300cm. A 300cm circle anchors a whole seating group.",
+    features: [
+      "Round, 200cm to 300cm",
+      "Three sizes",
+      "Anchors a seating group"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "3" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg14", name: "Victoire Rug (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 2050, memberPrice: 1845, sku: "SH-10616", tag: "New", ph: "", img: "assets/products/rg14.webp",
+    imgs: ["assets/products/rg14.webp", "assets/products/rg14-2.webp", "assets/products/rg14-3.webp", "assets/products/rg14-4.webp", "assets/products/rg14-5.webp"],
+    sizes: [{ label: "200cm x 200cm", price: 2050 }, { label: "180cm x 280cm", price: 2383 }, { label: "200cm x 300cm", price: 2694 }],
+    desc: "200 by 200cm, 180 by 280cm or 200 by 300cm.",
+    features: [
+      "Three sizes",
+      "Up to 200 x 300cm",
+      "Living room scale"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "3" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg15", name: "Zelie Wool Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 2220, memberPrice: 1998, sku: "SH-10617", tag: "New", ph: "", img: "assets/products/rg15.webp",
+    imgs: ["assets/products/rg15.webp", "assets/products/rg15-2.webp", "assets/products/rg15-3.webp", "assets/products/rg15-4.webp", "assets/products/rg15-5.webp"],
+    sizes: [{ label: "140cm x 195cm", price: 2220 }, { label: "160cm x 220cm", price: 5296 }, { label: "200cm x 280cm", price: 8702 }, { label: "240cm x 330cm", price: 12037 }, { label: "300cm x 400cm", price: 17130 }],
+    desc: "Wool from 140 by 195cm up to 240cm wide.",
+    features: [
+      "Wool pile",
+      "140 x 195cm to 240cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg16", name: "Black Rug (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 2300, memberPrice: 2070, sku: "SH-10618", tag: "New", ph: "", img: "assets/products/rg16.webp",
+    imgs: ["assets/products/rg16.webp", "assets/products/rg16-2.webp", "assets/products/rg16-3.webp"],
+    sizes: [{ label: "Black / 200 x 200cm", price: 2300 }, { label: "Black / 180 x 250cm", price: 2517 }, { label: "Black / 200 x 250cm", price: 2704 }, { label: "Black / 180 x 280cm", price: 2870 }, { label: "Black / 200 x 300cm", price: 3294 }, { label: "Black / 220 x 330cm", price: 3519 }, { label: "Black / 240 x 360cm", price: 3972 }, { label: "Black / 300 x 400cm", price: 4961 }],
+    desc: "Black, from 180 by 250cm.",
+    features: [
+      "Black colourway",
+      "From 180 x 250cm",
+      "Grounds a light room"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "8" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg17", name: "Gaspard Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 2630, memberPrice: 2367, sku: "SH-10619", tag: "New", ph: "", img: "assets/products/rg17.webp",
+    imgs: ["assets/products/rg17.webp", "assets/products/rg17-2.webp", "assets/products/rg17-3.webp", "assets/products/rg17-4.webp", "assets/products/rg17-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 2630 }, { label: "160cm x 240cm", price: 3593 }, { label: "200cm x 300cm", price: 5346 }, { label: "240cm x 340cm", price: 7204 }, { label: "300cm x 400cm", price: 9630 }],
+    desc: "From 140 by 200cm to 240cm wide.",
+    features: [
+      "Four sizes",
+      "140 x 200cm upward",
+      "Living room scale"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "5" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg18", name: "Wool Rug (160 x 240cm up)", cat: "Home Décor", room: "Home Décor", price: 2717, memberPrice: 2445, sku: "SH-10620", tag: "New", ph: "", img: "assets/products/rg18.webp",
+    imgs: ["assets/products/rg18.webp", "assets/products/rg18-2.webp", "assets/products/rg18-3.webp", "assets/products/rg18-4.webp", "assets/products/rg18-5.webp"],
+    sizes: [{ label: "160cm x 240cm", price: 2717 }, { label: "200cm x 300cm", price: 4313 }, { label: "240cm x 340cm", price: 5907 }, { label: "300cm x 400cm", price: 8176 }],
+    desc: "Wool from 160 by 240cm to 300cm.",
+    features: [
+      "Wool pile",
+      "160 x 240cm to 300cm",
+      "Large formats"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg19", name: "Wool & Cotton Rug", cat: "Home Décor", room: "Home Décor", price: 2754, memberPrice: 2479, sku: "SH-10621", tag: "New", ph: "", img: "assets/products/rg19.webp",
+    imgs: ["assets/products/rg19.webp", "assets/products/rg19-2.webp", "assets/products/rg19-3.webp", "assets/products/rg19-4.webp", "assets/products/rg19-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 2754 }, { label: "160cm x 230cm", price: 4028 }, { label: "200cm x 290cm", price: 6009 }],
+    desc: "Wool with cotton, three sizes.",
+    features: [
+      "Wool and cotton",
+      "Three sizes",
+      "Soft underfoot"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "3" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg20", name: "Cream Wool Rug", cat: "Home Décor", room: "Home Décor", price: 2991, memberPrice: 2692, sku: "SH-10622", tag: "New", ph: "", img: "assets/products/rg20.webp",
+    imgs: ["assets/products/rg20.webp", "assets/products/rg20-2.webp", "assets/products/rg20-3.webp", "assets/products/rg20-4.webp", "assets/products/rg20-5.webp"],
+    sizes: [{ label: "Cream / 160cm x 230cm", price: 2991 }, { label: "Grey / 160cm x 230cm", price: 2991 }, { label: "Cream / 200cm x 290cm", price: 4665 }, { label: "Grey / 200cm x 290cm", price: 4665 }, { label: "Cream / 240cm x 330cm", price: 6463 }, { label: "Grey / 240cm x 330cm", price: 6463 }, { label: "Cream / 300cm x 400cm", price: 9444 }, { label: "Grey / 300cm x 400cm", price: 9444 }],
+    desc: "Cream wool from 160 by 230cm.",
+    features: [
+      "Wool pile",
+      "Cream colourway",
+      "From 160 x 230cm"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "8" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg21", name: "Cotton Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 3241, memberPrice: 2917, sku: "SH-10623", tag: "New", ph: "", img: "assets/products/rg21.webp",
+    imgs: ["assets/products/rg21.webp", "assets/products/rg21-2.webp", "assets/products/rg21-3.webp", "assets/products/rg21-4.webp", "assets/products/rg21-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 3241 }, { label: "200cm x 300cm", price: 5143 }, { label: "240cm x 340cm", price: 6961 }, { label: "280cm x 380cm", price: 9628 }],
+    desc: "Cotton from 160 by 230cm to 280cm. Cotton is lighter and easier to clean than wool.",
+    features: [
+      "Cotton construction",
+      "160 x 230cm to 280cm",
+      "Easier to clean than wool"
+    ],
+    specs: { "Type": "Rug", "Material": "Mixed fibre", "Sizes": "4" },
+    care: "Vacuum regularly and blot spills straight away rather than rubbing. Rotate every few months for even wear, and use an underlay on hard floors." },
+
+  { id: "rg22", name: "Thali Wool Rug", cat: "Home Décor", room: "Home Décor", price: 3680, memberPrice: 3312, sku: "SH-10624", tag: "New", ph: "", img: "assets/products/rg22.webp",
+    imgs: ["assets/products/rg22.webp", "assets/products/rg22-2.webp", "assets/products/rg22-3.webp", "assets/products/rg22-4.webp", "assets/products/rg22-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 3680 }, { label: "160cm x 230cm", price: 4528 }, { label: "200cm x 290cm", price: 7130 }, { label: "240cm x 340cm", price: 10231 }, { label: "300cm x 400cm", price: 14035 }],
+    desc: "Wool from 140 by 200cm.",
+    features: [
+      "Wool pile",
+      "From 140 x 200cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg23", name: "Eloi Wool Rug", cat: "Home Décor", room: "Home Décor", price: 3750, memberPrice: 3375, sku: "SH-10625", tag: "New", ph: "", img: "assets/products/rg23.webp",
+    imgs: ["assets/products/rg23.webp", "assets/products/rg23-2.webp", "assets/products/rg23-3.webp", "assets/products/rg23-4.webp", "assets/products/rg23-5.webp"],
+    sizes: [{ label: "160cm x 240cm", price: 3750 }, { label: "200cm x 300cm", price: 7546 }, { label: "240cm x 340cm", price: 10739 }, { label: "300cm x 400cm", price: 14124 }],
+    desc: "Wool from 160 by 240cm up to 300cm.",
+    features: [
+      "Wool pile",
+      "160 x 240cm to 300cm",
+      "Large formats"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg24", name: "Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 3778, memberPrice: 3400, sku: "SH-10626", tag: "New", ph: "", img: "assets/products/rg24.webp",
+    imgs: ["assets/products/rg24.webp", "assets/products/rg24-2.webp", "assets/products/rg24-3.webp", "assets/products/rg24-4.webp", "assets/products/rg24-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 3778 }, { label: "160cm x 240cm", price: 5254 }, { label: "200cm x 300cm", price: 8426 }, { label: "240cm x 340cm", price: 11213 }, { label: "300cm x 400cm", price: 14254 }],
+    desc: "Handwoven wool from 140 by 200cm. Handwoven means slight irregularities, which is the point.",
+    features: [
+      "Handwoven wool",
+      "From 140 x 200cm",
+      "Natural irregularity"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg25", name: "Handwoven Wool Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 4013, memberPrice: 3612, sku: "SH-10627", tag: "New", ph: "", img: "assets/products/rg25.webp",
+    imgs: ["assets/products/rg25.webp", "assets/products/rg25-2.webp", "assets/products/rg25-3.webp", "assets/products/rg25-4.webp", "assets/products/rg25-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 4013 }, { label: "160cm x 230cm", price: 5370 }, { label: "200cm x 290cm", price: 8217 }, { label: "240cm x 340cm", price: 9976 }, { label: "300cm x 400cm", price: 13333 }],
+    desc: "Handwoven wool, 140 by 200cm up to 240cm.",
+    features: [
+      "Handwoven wool",
+      "Four sizes",
+      "From 140 x 200cm"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg26", name: "Margaux Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 4209, memberPrice: 3788, sku: "SH-10628", tag: "New", ph: "", img: "assets/products/rg26.webp",
+    imgs: ["assets/products/rg26.webp", "assets/products/rg26-2.webp", "assets/products/rg26-3.webp", "assets/products/rg26-4.webp", "assets/products/rg26-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 4209 }, { label: "200cm x 300cm", price: 6787 }, { label: "240cm x 340cm", price: 9324 }, { label: "300cm x 400cm", price: 13287 }],
+    desc: "Handwoven wool from 160 by 230cm to 300cm.",
+    features: [
+      "Handwoven wool",
+      "160 x 230cm to 300cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg27", name: "Norbert Handwoven Rug", cat: "Home Décor", room: "Home Décor", price: 4241, memberPrice: 3817, sku: "SH-10629", tag: "New", ph: "", img: "assets/products/rg27.webp",
+    imgs: ["assets/products/rg27.webp", "assets/products/rg27-2.webp", "assets/products/rg27-3.webp", "assets/products/rg27-4.webp", "assets/products/rg27-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 4241 }, { label: "200cm x 290cm", price: 6328 }, { label: "240cm x 340cm", price: 9074 }],
+    desc: "Handwoven wool in three large sizes.",
+    features: [
+      "Handwoven wool",
+      "Three large sizes",
+      "From 160 x 230cm"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "3" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg28", name: "Wool & Cotton Rug (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 4291, memberPrice: 3862, sku: "SH-10630", tag: "New", ph: "", img: "assets/products/rg28.webp",
+    imgs: ["assets/products/rg28.webp", "assets/products/rg28-2.webp", "assets/products/rg28-3.webp", "assets/products/rg28-4.webp", "assets/products/rg28-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 4291 }, { label: "200cm x 290cm", price: 8235 }, { label: "240cm x 340cm", price: 12944 }, { label: "300cm x 400cm", price: 14157 }],
+    desc: "Wool with cotton, 160 by 230cm to 300cm.",
+    features: [
+      "Wool and cotton",
+      "160 x 230cm to 300cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg29", name: "Round Wool & Cotton Rug", cat: "Home Décor", room: "Home Décor", price: 4611, memberPrice: 4150, sku: "SH-10631", tag: "New", ph: "", img: "assets/products/rg29.webp",
+    imgs: ["assets/products/rg29.webp", "assets/products/rg29-2.webp", "assets/products/rg29-3.webp", "assets/products/rg29-4.webp", "assets/products/rg29-5.webp"],
+    sizes: [{ label: "1 / 230cm", price: 4611 }, { label: "2 / 230cm", price: 4611 }, { label: "3 / 230cm", price: 4611 }, { label: "1 / 290cm", price: 6944 }, { label: "2 / 290cm", price: 6944 }, { label: "3 / 290cm", price: 6944 }, { label: "1 / 340cm", price: 9198 }, { label: "2 / 340cm", price: 9198 }, { label: "3 / 340cm", price: 9198 }, { label: "1 / 400cm", price: 11757 }, { label: "2 / 400cm", price: 11757 }, { label: "3 / 400cm", price: 11757 }],
+    desc: "Round, from 230cm to 400cm across, in two designs. A 400cm circle is an unusual thing to find.",
+    features: [
+      "Round, 230cm to 400cm",
+      "Two designs",
+      "Very large formats"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "12" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg30", name: "Claude Wool Rug", cat: "Home Décor", room: "Home Décor", price: 4620, memberPrice: 4158, sku: "SH-10632", tag: "New", ph: "", img: "assets/products/rg30.webp",
+    imgs: ["assets/products/rg30.webp", "assets/products/rg30-2.webp", "assets/products/rg30-3.webp", "assets/products/rg30-4.webp", "assets/products/rg30-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 4620 }, { label: "200cm x 290cm", price: 7176 }, { label: "240cm x 340cm", price: 9920 }, { label: "300cm x 400cm", price: 14704 }],
+    desc: "Wool from 160 by 230cm to 300cm.",
+    features: [
+      "Wool pile",
+      "160 x 230cm to 300cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg31", name: "Yanni Wool Rug", cat: "Home Décor", room: "Home Décor", price: 4700, memberPrice: 4230, sku: "SH-10633", tag: "New", ph: "", img: "assets/products/rg31.webp",
+    imgs: ["assets/products/rg31.webp", "assets/products/rg31-2.webp", "assets/products/rg31-3.webp", "assets/products/rg31-4.webp", "assets/products/rg31-5.webp"],
+    sizes: [{ label: "200cm x 290cm", price: 4700 }, { label: "140cm x 200cm", price: 5833 }, { label: "160cm x 230cm", price: 7213 }, { label: "240cm x 340cm", price: 9402 }, { label: "300cm x 400cm", price: 14628 }],
+    desc: "Wool from 140 by 200cm.",
+    features: [
+      "Wool pile",
+      "From 140 x 200cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg32", name: "Constance Wool & Cotton Rug", cat: "Home Décor", room: "Home Décor", price: 5120, memberPrice: 4608, sku: "SH-10634", tag: "New", ph: "", img: "assets/products/rg32.webp",
+    imgs: ["assets/products/rg32.webp", "assets/products/rg32-2.webp", "assets/products/rg32-3.webp", "assets/products/rg32-4.webp", "assets/products/rg32-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 5120 }, { label: "160cm x 230cm", price: 6639 }, { label: "200cm x 290cm", price: 10407 }, { label: "240cm x 340cm", price: 13889 }, { label: "300cm x 400cm", price: 16111 }],
+    desc: "Wool with cotton, from 140 by 200cm.",
+    features: [
+      "Wool and cotton",
+      "From 140 x 200cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg33", name: "Florent Wool Rug", cat: "Home Décor", room: "Home Décor", price: 5315, memberPrice: 4784, sku: "SH-10635", tag: "New", ph: "", img: "assets/products/rg33.webp",
+    imgs: ["assets/products/rg33.webp", "assets/products/rg33-2.webp", "assets/products/rg33-3.webp", "assets/products/rg33-4.webp", "assets/products/rg33-5.webp"],
+    sizes: [{ label: "01 / 160cm x 230cm", price: 5315 }, { label: "02 / 160cm x 230cm", price: 5315 }, { label: "01 / 200cm x 290cm", price: 7865 }, { label: "02 / 200cm x 290cm", price: 7865 }, { label: "01 / 240cm x 340cm", price: 10646 }, { label: "02 / 240cm x 340cm", price: 10646 }, { label: "01 / 300cm x 400cm", price: 14787 }, { label: "02 / 300cm x 400cm", price: 14787 }],
+    desc: "Wool in several designs, from 160 by 230cm.",
+    features: [
+      "Wool pile",
+      "Several designs",
+      "From 160 x 230cm"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "8" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg34", name: "Aurelien Wool Rug", cat: "Home Décor", room: "Home Décor", price: 5324, memberPrice: 4792, sku: "SH-10636", tag: "New", ph: "", img: "assets/products/rg34.webp",
+    imgs: ["assets/products/rg34.webp", "assets/products/rg34-2.webp", "assets/products/rg34-3.webp", "assets/products/rg34-4.webp", "assets/products/rg34-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 5324 }, { label: "160cm x 230cm", price: 6815 }, { label: "200cm x 290cm", price: 8661 }, { label: "240cm x 340cm", price: 11554 }, { label: "300cm x 400cm", price: 16402 }],
+    desc: "Wool from 140 by 200cm.",
+    features: [
+      "Wool pile",
+      "From 140 x 200cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg35", name: "Timothee Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 5361, memberPrice: 4825, sku: "SH-10637", tag: "New", ph: "", img: "assets/products/rg35.webp",
+    imgs: ["assets/products/rg35.webp", "assets/products/rg35-2.webp", "assets/products/rg35-3.webp", "assets/products/rg35-4.webp", "assets/products/rg35-5.webp"],
+    sizes: [{ label: "140cm x 200cm", price: 5361 }, { label: "160cm x 240cm", price: 7161 }, { label: "200cm x 300cm", price: 12120 }, { label: "240cm x 340cm", price: 15852 }, { label: "300cm x 400cm", price: 17037 }],
+    desc: "Handwoven wool from 140 by 200cm to 240cm.",
+    features: [
+      "Handwoven wool",
+      "From 140 x 200cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "5" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg36", name: "Gaethan Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 5537, memberPrice: 4983, sku: "SH-10638", tag: "New", ph: "", img: "assets/products/rg36.webp",
+    imgs: ["assets/products/rg36.webp", "assets/products/rg36-2.webp", "assets/products/rg36-3.webp", "assets/products/rg36-4.webp", "assets/products/rg36-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 5537 }, { label: "200cm x 290cm", price: 8565 }, { label: "240cm x 340cm", price: 12000 }, { label: "300cm x 400cm", price: 14444 }],
+    desc: "Handwoven wool from 160 by 230cm to 300cm.",
+    features: [
+      "Handwoven wool",
+      "160 x 230cm to 300cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg37", name: "Yori Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 6180, memberPrice: 5562, sku: "SH-10639", tag: "New", ph: "", img: "assets/products/rg37.webp",
+    imgs: ["assets/products/rg37.webp", "assets/products/rg37-2.webp", "assets/products/rg37-3.webp", "assets/products/rg37-4.webp", "assets/products/rg37-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 6180 }, { label: "200cm x 290cm", price: 9056 }, { label: "240cm x 340cm", price: 13754 }, { label: "300cm x 400cm", price: 16220 }],
+    desc: "Handwoven wool, large formats only.",
+    features: [
+      "Handwoven wool",
+      "From 160 x 230cm",
+      "Large formats"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg38", name: "Beige Wool Rug (Large)", cat: "Home Décor", room: "Home Décor", price: 6331, memberPrice: 5698, sku: "SH-10640", tag: "New", ph: "", img: "assets/products/rg38.webp",
+    imgs: ["assets/products/rg38.webp", "assets/products/rg38-2.webp", "assets/products/rg38-3.webp", "assets/products/rg38-4.webp", "assets/products/rg38-5.webp"],
+    sizes: [{ label: "Beige / 200cm x 290cm", price: 6331 }, { label: "Grey / 200cm x 290cm", price: 6331 }, { label: "Black / 200cm x 290cm", price: 6331 }, { label: "Beige / 240cm x 340cm", price: 8870 }, { label: "Grey / 240cm x 340cm", price: 8870 }, { label: "Black / 240cm x 340cm", price: 8870 }, { label: "Beige / 300cm x 400cm", price: 11574 }, { label: "Grey / 300cm x 400cm", price: 11574 }, { label: "Black / 300cm x 400cm", price: 11574 }],
+    desc: "Beige wool from 200 by 290cm.",
+    features: [
+      "Wool pile",
+      "Beige colourway",
+      "From 200 x 290cm"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "9" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg39", name: "Charlie Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 6481, memberPrice: 5833, sku: "SH-10641", tag: "New", ph: "", img: "assets/products/rg39.webp",
+    imgs: ["assets/products/rg39.webp", "assets/products/rg39-2.webp", "assets/products/rg39-3.webp", "assets/products/rg39-4.webp", "assets/products/rg39-5.webp"],
+    sizes: [{ label: "160cm x 230cm", price: 6481 }, { label: "200cm x 290cm", price: 10787 }, { label: "240cm x 340cm", price: 15556 }, { label: "300cm x 400cm", price: 17907 }],
+    desc: "Handwoven wool from 160 by 230cm.",
+    features: [
+      "Handwoven wool",
+      "From 160 x 230cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg40", name: "Lionel Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 6754, memberPrice: 6079, sku: "SH-10642", tag: "New", ph: "", img: "assets/products/rg40.webp",
+    imgs: ["assets/products/rg40.webp", "assets/products/rg40-2.webp", "assets/products/rg40-3.webp", "assets/products/rg40-4.webp", "assets/products/rg40-5.webp"],
+    sizes: [{ label: "150cm x 230cm", price: 6754 }, { label: "195cm x 290cm", price: 6754 }, { label: "240cm x 330cm", price: 6754 }, { label: "300cm x 390cm", price: 6754 }],
+    desc: "Handwoven wool from 150 by 230cm to 300cm.",
+    features: [
+      "Handwoven wool",
+      "150 x 230cm to 300cm",
+      "Four sizes"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
+  { id: "rg41", name: "Louison Handwoven Wool Rug", cat: "Home Décor", room: "Home Décor", price: 7696, memberPrice: 6926, sku: "SH-10643", tag: "New", ph: "", img: "assets/products/rg41.webp",
+    imgs: ["assets/products/rg41.webp", "assets/products/rg41-2.webp", "assets/products/rg41-3.webp", "assets/products/rg41-4.webp", "assets/products/rg41-5.webp"],
+    sizes: [{ label: "160cm x 240cm", price: 7696 }, { label: "200cm x 300cm", price: 12570 }, { label: "240cm x 340cm", price: 15291 }, { label: "300cm x 400cm", price: 19444 }],
+    desc: "The finest rug we carry: handwoven wool from 160 by 240cm up to 300cm.",
+    features: [
+      "Handwoven wool",
+      "160 x 240cm to 300cm",
+      "The finest in the range"
+    ],
+    specs: { "Type": "Rug", "Material": "Wool", "Sizes": "4" },
+    care: "Vacuum regularly without a beater bar, which pulls at the pile. Blot spills immediately, never rub. Rotate the rug every few months so it wears and fades evenly, and use an underlay to stop it creeping." },
+
   { id: "cd01", name: "Glass Candle Holder (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 104, memberPrice: 94, sku: "SH-10457", tag: "New", ph: "", img: "assets/products/cd01.webp",
     imgs: ["assets/products/cd01.webp", "assets/products/cd01-2.webp", "assets/products/cd01-3.webp", "assets/products/cd01-4.webp"],
     sizes: [{ label: "S", price: 104 }, { label: "M", price: 119 }, { label: "L", price: 141 }],

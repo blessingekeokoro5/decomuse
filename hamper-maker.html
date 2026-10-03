@@ -36,6 +36,14 @@
     .hm-progress span { display: block; height: 100%; background: var(--rose); width: 0; transition: width 0.4s ease; }
     .hm-total { display: flex; justify-content: space-between; font-family: var(--font-head); font-size: 1.5rem; color: var(--ink); font-weight: 600; margin: 10px 0 14px; }
     @media (max-width: 860px){ .hm-grid { grid-template-columns: 1fr; } .hm-box { position: static; } }
+    .pack-showcase { display: grid; grid-template-columns: 1.1fr 1fr; gap: 32px; align-items: center; }
+    .pack-shot { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .pack-shot img { width: 100%; display: block; }
+    .pack-shot figcaption { padding: 12px 16px; font-size: 0.84rem; color: var(--muted); }
+    .pack-list ul { list-style: none; padding: 0; margin: 14px 0 18px; }
+    .pack-list li { padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 0.94rem; color: var(--body); }
+    .pack-list li:last-child { border-bottom: none; }
+    @media (max-width: 820px) { .pack-showcase { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body data-page="hamper-maker.html">
@@ -80,6 +88,35 @@
             <div class="form-success" id="hmSuccess" style="margin-top:10px"></div>
           </div>
         </aside>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Signature packaging (in production) -->
+  <section class="section bg-cream2" id="signature-packaging">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Our packaging</span>
+        <h2>Signature navy &amp; gold packaging</h2>
+        <p>Our own gift boxes, bags, pouches, tissue, ribbon and tags, in navy with the gold house mark. In production now, so tell us if your order is a gift and we'll let you know what we can send it in.</p>
+      </div>
+      <div class="pack-showcase reveal">
+        <figure class="pack-shot">
+          <img src="assets/packaging/gift-bag.webp" alt="Navy and gold Style Your Space gift bag" loading="lazy" onerror="this.closest('.pack-shot').remove()">
+          <figcaption>Rope-handled gift bag</figcaption>
+        </figure>
+        <div class="pack-list">
+          <h3>What's coming</h3>
+          <ul>
+            <li><strong>Lidded gift boxes</strong> in three sizes, gold-foiled</li>
+            <li><strong>Rope-handle gift bags</strong> for hand delivery</li>
+            <li><strong>Drawstring pouches</strong> for smaller pieces</li>
+            <li><strong>Navy and gold tissue</strong>, satin ribbon and gift tags</li>
+            <li><strong>Hand-written gift cards</strong>, written as you dictate them</li>
+          </ul>
+          <p class="form-note">Packaging is being produced now. Until it lands, gift orders are wrapped and sent with care, and we'll tell you exactly what to expect before it ships.</p>
+        </div>
       </div>
     </div>
   </section>
