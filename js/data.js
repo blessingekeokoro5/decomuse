@@ -11128,7 +11128,26 @@ const PRODUCTS = [
     boxContents: ["1 \u00d7 bed", "1 \u00d7 set of assembly parts", "1 \u00d7 assembly manual"],
     warranty: "1 Year",
     guide: "assets/guides/bd01-assembly-guide.pdf",
-    care: "Wipe clean with a dry cloth. Use floor protection on hard surfaces, such as a non-slip rug or felt feet protectors, and check periodically that the fixings are tight and the support legs sit firmly on the floor." }
+    care: "Wipe clean with a dry cloth. Use floor protection on hard surfaces, such as a non-slip rug or felt feet protectors, and check periodically that the fixings are tight and the support legs sit firmly on the floor." },
+
+  // ── Kitchenware ──
+  { id: "kw01", name: "KitchenAid Artisan Plus Stand Mixer 4.7L \u2014 Feather Pink", cat: "Kitchenware", room: "Kitchenware", price: 1099, memberPrice: 999, was: 1199, sku: "SH-11002", tag: "New", ph: "", img: "assets/products/kw01-1.webp",
+    imgs: ["assets/products/kw01-1.webp", "assets/products/kw01-2.webp", "assets/products/kw01-3.webp", "assets/products/kw01-4.webp", "assets/products/kw01-5.webp", "assets/products/kw01-6.webp"],
+    desc: "The mixer people photograph as much as they use. Full metal construction, a 4.7 litre stainless bowl and planetary mixing that works the whole bowl rather than one side of it, so a cake batter comes together evenly and a bread dough is actually kneaded. Eleven speeds, including a half-fold speed for folding egg whites or chocolate through without knocking the air out, and a bowl light that comes on by itself when the head is lowered. The tilt head lifts clear to add flour or swap the beater. In Feather Pink, which is the reason most people choose this one over the stainless.",
+    features: [
+      "4.7L stainless steel bowl, enough for medium to large batches",
+      "11 speeds including a half-fold speed for delicate mixing",
+      "Integrated bowl light switches on when the head is lowered",
+      "Full metal build with planetary mixing action",
+      "Tilt-head design for easy access to the bowl",
+      "Comes with flat beater, dough hook, wire whisk and pouring shield",
+      "Stainless steel accessories are dishwasher safe"
+    ],
+    specs: { "Brand": "KitchenAid", "Model": "5KSM50PKVAFT", "Type": "Tilt-head stand mixer", "Bowl capacity": "4.7 L", "Motor": "325W", "Speeds": "11", "Colour": "Feather Pink", "Weight": "9.89 kg" },
+    dims: { w: 22.2, d: 35.6, h: 35.3, unit: "cm", printed: true },
+    boxContents: ["1 \u00d7 stand mixer", "1 \u00d7 4.7L stainless steel bowl", "1 \u00d7 flat beater", "1 \u00d7 dough hook", "1 \u00d7 wire whisk", "1 \u00d7 pouring shield"],
+    warranty: "5 year manufacturer's warranty",
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth \u2014 never submerge it. The bowl, flat beater, dough hook and pouring shield are dishwasher safe; the wire whisk is best washed by hand and dried straight away." }
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------

@@ -18943,5 +18943,26 @@
     <g:color>Oat White</g:color>
     <g:sale_price>1300.00 AUD</g:sale_price>
   </item>
+  <item>
+    <g:id>SH-11002</g:id>
+    <g:title>KitchenAid Artisan Plus Stand Mixer 4.7L — Feather Pink</g:title>
+    <g:description>The mixer people photograph as much as they use. Full metal construction, a 4.7 litre stainless bowl and planetary mixing that works the whole bowl rather than one side of it, so a cake batter comes together evenly and a bread dough is actually kneaded. Eleven speeds, including a half-fold speed for folding egg whites or chocolate through without knocking the air out, and a bowl light that comes on by itself when the head is lowered. The tilt head lifts clear to add flour or swap the beater. In Feather Pink, which is the reason most people choose this one over the stainless.</g:description>
+    <g:link>https://samirahomedecor.com.au/product.html?id=kw01</g:link>
+    <g:image_link>https://samirahomedecor.com.au/assets/products/kw01-1.webp</g:image_link>
+    <g:availability>in_stock</g:availability>
+    <g:condition>new</g:condition>
+    <g:price>1099.00 AUD</g:price>
+    <g:brand>Samira Home Decor</g:brand>
+    <g:mpn>SH-11002</g:mpn>
+    <g:identifier_exists>no</g:identifier_exists>
+    <g:google_product_category>Home &amp; Garden &gt; Decor</g:google_product_category>
+    <g:product_type>Kitchenware</g:product_type>
+    <g:shipping>
+      <g:country>AU</g:country>
+      <g:service>Standard</g:service>
+      <g:price>19.00 AUD</g:price>
+    </g:shipping>
+    <g:sale_price>999.00 AUD</g:sale_price>
+  </item>
 </channel>
 </rss>

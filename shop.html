@@ -86,6 +86,12 @@
   <script src="js/main.js?v=2"></script>
   <script>
     const CATS = ["All", "Home Décor", "Furniture", "Kitchen & Dining", "Bedroom & Bath", "Health & Wellness", "Fragrance", "Lifestyle", "Gifts", "Travel Essentials"];
+    const CAT_GROUPS = {
+      "Kitchen & Dining": ["Kitchenware"],
+      "Bedroom & Bath": ["Bedroom", "Bathroom"],
+      "Furniture": ["Furniture", "Living Room", "Office"],
+      "Gifts": ["Gifts", "Packaging"]
+    };
     let currentCat = "All";
     let searchQuery = "";
     const PAGE_SIZE = 12;
@@ -113,7 +119,10 @@
     function filterShop(cat) {
       currentCat = cat;
       renderPills();
-      let list = cat === "All" ? PRODUCTS.slice() : PRODUCTS.filter(p => p.cat === cat);
+      // A pill can stand for more than one catalogue category.
+      const members = CAT_GROUPS[cat] || [cat];
+      let list = cat === "All" ? PRODUCTS.slice()
+        : PRODUCTS.filter(p => members.includes(p.cat) || members.includes(p.room));
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         list = list.filter(p => (p.name + " " + p.cat + " " + (p.desc || "")).toLowerCase().includes(q));
