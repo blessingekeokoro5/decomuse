@@ -7284,9 +7284,9 @@ const PACKING_SPEEDS = [
 /* ---- Gift packaging styles (chosen when a hamper is built) ---- */
 const PACKAGING_KITS = [
   { id: "pk-bag",    name: "Rope-handle gift bag",   note: "Navy bag with gold rope handles, tissue included", img: "assets/packaging/gift-bag.webp" },
-  { id: "pk-ribbon", name: "Ribbon-tied gift box",   note: "Lidded box, gold ribbon, navy and gold tissue",    img: "assets/packaging/ribbon-box.webp" },
+  { id: "pk-ribbon", name: "Ribbon-tied gift box",   note: "Lidded box, gold ribbon, navy and gold tissue, branded sleeve",    img: "assets/packaging/ribbon-box.webp" },
   { id: "pk-duo",    name: "Gift box & carry bag",   note: "Ribbon-tied box with a matching carry bag",        img: "assets/packaging/bag-and-box.webp" },
-  { id: "pk-tag",    name: "Gift box with tag",      note: "Magnetic box, gold tissue and a hand-written tag", img: "assets/packaging/box-and-tag.webp" },
+  { id: "pk-tag",    name: "Gift box with tag",      note: "Magnetic box, navy and gold tissue, ribbon and a hand-written tag", img: "assets/packaging/box-and-tag.webp" },
   { id: "pk-pouch",  name: "Drawstring pouch & box", note: "For smaller pieces, gold cord and gold tissue",    img: "assets/packaging/pouch-and-box.webp" },
   { id: "pk-trio",   name: "Three-box set",          note: "Small, medium and large, each ribbon-tied",        img: "assets/packaging/box-trio.webp" }
 ];
