@@ -156,9 +156,38 @@ function shippingFor(country, fulfil, lines, afterDiscount) {
   return { amount, label: amount === 0 ? "Free standard shipping" : "Standard shipping", days: zone.days };
 }
 
+
+/* ---- Simple per-IP throttle -----------------------------------------
+   One warm function instance keeps this map, so it is not a hard
+   guarantee across every instance. It is enough to stop one script
+   hammering checkout, which is what we are guarding against. Real
+   shoppers never come close to the limit. */
+const RATE_WINDOW_MS = 60 * 1000;
+const RATE_MAX = 12;
+const recentCalls = new Map();
+
+function overRateLimit(ip) {
+  if (!ip) return false;
+  const now = Date.now();
+  const hits = (recentCalls.get(ip) || []).filter((t) => now - t < RATE_WINDOW_MS);
+  hits.push(now);
+  recentCalls.set(ip, hits);
+  if (recentCalls.size > 500) {            // keep the map from growing forever
+    for (const [k, v] of recentCalls) {
+      if (!v.length || now - v[v.length - 1] > RATE_WINDOW_MS) recentCalls.delete(k);
+    }
+  }
+  return hits.length > RATE_MAX;
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return jsonResponse(200, {});
   if (event.httpMethod !== "POST") return jsonResponse(405, { error: "Method Not Allowed" });
+
+  const ip = (event.headers["x-nf-client-connection-ip"] || event.headers["client-ip"] || "").split(",")[0].trim();
+  if (overRateLimit(ip)) {
+    return jsonResponse(429, { error: "That's a lot of attempts in a row. Please wait a moment and try again." });
+  }
 
   if (!process.env.STRIPE_SECRET_KEY) {
     console.error("STRIPE_SECRET_KEY is not set");

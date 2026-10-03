@@ -196,13 +196,19 @@ const POLICIES = {
       <h3>7. Intellectual property</h3>
       <p>All content on this website, including text, imagery, branding and design, is owned by or licensed to Samira Home Decor and may not be used without our written permission.</p>
 
-      <h3>8. Consumer guarantees &amp; liability</h3>
+      <h3>8. Automated access &amp; data collection</h3>
+      <p>You may not use any automated means to access, copy or collect material from this site. That includes scraping, crawling, harvesting, spidering, data mining and the use of bots, scripts or extraction tools, whether to copy our product listings, photographs, descriptions, prices or any other content.</p>
+      <p>You also may not use our content to train or fine-tune a machine learning or artificial intelligence model, or republish it in a commercial database or catalogue, without our written permission.</p>
+      <p>Search engines and social platforms may index our pages and show link previews in the ordinary way. Everything else requires permission, which you are welcome to ask us for at hello@samirahomedecor.com.au.</p>
+      <p>We may block, rate-limit or take legal action against access that breaches this clause.</p>
+
+      <h3>9. Consumer guarantees &amp; liability</h3>
       <p>Nothing in these terms excludes, restricts or modifies any consumer guarantee, right or remedy you have under the Australian Consumer Law. To the extent permitted by law, our liability for a failure to comply with a consumer guarantee is limited to re-supplying, replacing or repairing the goods or services, or paying the cost of doing so.</p>
 
-      <h3>9. Governing law</h3>
+      <h3>10. Governing law</h3>
       <p>These terms are governed by the laws of South Australia, and you submit to the non-exclusive jurisdiction of its courts.</p>
 
-      <h3>10. Changes</h3>
+      <h3>11. Changes</h3>
       <p>We may update these terms from time to time. The version published on this page applies to your use of the site and orders placed after it is posted.</p>
     `
   }
