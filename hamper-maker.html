@@ -44,6 +44,23 @@
     .pack-list li { padding: 9px 0; border-bottom: 1px dashed var(--line); font-size: 0.94rem; color: var(--body); }
     .pack-list li:last-child { border-bottom: none; }
     @media (max-width: 820px) { .pack-showcase { grid-template-columns: 1fr; } }
+    .hm-lead-time { font-size: 0.82rem; color: var(--body); background: var(--cream-2); border-radius: 10px; padding: 10px 12px; margin: 0 0 12px; line-height: 1.5; }
+    .kit-pick { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .kit { display: flex; align-items: center; gap: 9px; padding: 7px; background: #fff; border: 1.5px solid var(--line);
+      border-radius: 10px; cursor: pointer; font-family: var(--font-body); text-align: left; transition: border-color var(--tr); }
+    .kit:hover { border-color: var(--rose-soft); }
+    .kit.on { border-color: var(--rose); box-shadow: inset 0 0 0 1px var(--rose); }
+    .kit-img { width: 34px; height: 34px; border-radius: 7px; background: var(--cream-2); flex: none; overflow: hidden; display: grid; place-items: center; }
+    .kit-img img { width: 100%; height: 100%; object-fit: cover; }
+    .kit-name { font-size: 0.76rem; line-height: 1.25; color: var(--ink); }
+    .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px; }
+    .kit-card { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); }
+    .kit-shot { aspect-ratio: 4 / 3; background: var(--cream-2); display: grid; place-items: center; }
+    .kit-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .kit-shot.no-img::after { content: "Photo coming"; font-size: 0.76rem; color: var(--muted); letter-spacing: 0.08em; }
+    .kit-card figcaption { padding: 13px 15px; }
+    .kit-card strong { display: block; font-size: 0.92rem; color: var(--ink); }
+    .kit-card small { color: var(--muted); font-size: 0.8rem; line-height: 1.45; display: block; margin-top: 3px; }
   </style>
 </head>
 <body data-page="hamper-maker.html">
@@ -54,7 +71,7 @@
       <div class="breadcrumb"><a href="index.html">Home</a> / <a href="hampers.html">Gifting</a> / Hamper Maker</div>
       <span class="eyebrow">🎁 Build Your Own</span>
       <h1>Gift Hamper Maker</h1>
-      <p>Choose a box, then fill it with treats, drinks, pamper &amp; home touches. Watch it come together, add a gift note, and we'll wrap it beautifully.</p>
+      <p>Choose a box, then fill it with treats, drinks, pamper &amp; home touches. Watch it come together, add a gift note, and we'll wrap it beautifully. Hampers are packed by hand, so please allow <strong>14 working days</strong> for dispatch.</p>
     </div>
   </section>
 
@@ -81,9 +98,14 @@
             <small id="hmMinNote" style="color:var(--muted)">Minimum hamper $60</small>
             <div class="hm-total"><span>Total</span><span id="hmTotal">$0</span></div>
             <div class="field" style="margin-bottom:12px">
+              <label>Packaging kit</label>
+              <div class="kit-pick" id="hmKits"></div>
+            </div>
+            <div class="field" style="margin-bottom:12px">
               <label>Gift note (optional)</label>
               <textarea id="hmNote" placeholder="Write a message for the card…" style="min-height:70px"></textarea>
             </div>
+            <p class="hm-lead-time">🕒 Hampers are packed by hand — please allow <strong>14 working days</strong> for dispatch.</p>
             <button class="btn btn--primary btn--block" id="hmAdd" disabled onclick="addHamper()">Add hamper to cart</button>
             <div class="form-success" id="hmSuccess" style="margin-top:10px"></div>
           </div>
@@ -93,31 +115,17 @@
   </section>
 
 
-  <!-- Signature packaging (in production) -->
+  <!-- Signature packaging -->
   <section class="section bg-cream2" id="signature-packaging">
     <div class="container">
       <div class="section-head reveal">
         <span class="eyebrow">Our packaging</span>
         <h2>Signature navy &amp; gold packaging</h2>
-        <p>Our own gift boxes, bags, pouches, tissue, ribbon and tags, in navy with the gold house mark. In production now, so tell us if your order is a gift and we'll let you know what we can send it in.</p>
+        <p>Your gift is packed in whichever kit you choose: a lidded box, a rope-handle bag, a ribbon-tied box, a drawstring pouch, or a box with a hand-written tag. Every kit is navy with the gold house mark.</p>
       </div>
-      <div class="pack-showcase reveal">
-        <figure class="pack-shot">
-          <img src="assets/packaging/gift-bag.webp" alt="Navy and gold Style Your Space gift bag" loading="lazy" onerror="this.closest('.pack-shot').remove()">
-          <figcaption>Rope-handled gift bag</figcaption>
-        </figure>
-        <div class="pack-list">
-          <h3>What's coming</h3>
-          <ul>
-            <li><strong>Lidded gift boxes</strong> in three sizes, gold-foiled</li>
-            <li><strong>Rope-handle gift bags</strong> for hand delivery</li>
-            <li><strong>Drawstring pouches</strong> for smaller pieces</li>
-            <li><strong>Navy and gold tissue</strong>, satin ribbon and gift tags</li>
-            <li><strong>Hand-written gift cards</strong>, written as you dictate them</li>
-          </ul>
-          <p class="form-note">Packaging is being produced now. Until it lands, gift orders are wrapped and sent with care, and we'll tell you exactly what to expect before it ships.</p>
-        </div>
-      </div>
+      <div class="kit-grid reveal" id="kitGrid"></div>
+      <p class="form-note" style="text-align:center;margin-top:18px">Each gift is made and packed to order, so please allow <strong>14 working days</strong> for dispatch. Needed for a particular date? Tell us when you order and we'll confirm before you pay.</p>
+
     </div>
   </section>
 
@@ -179,11 +187,24 @@
       document.getElementById("hmMinNote").style.color = ok ? "var(--forest)" : "var(--muted)";
     }
 
+    let hmKit = PACKAGING_KITS[0].id;
+    function renderKits() {
+      const el = document.getElementById("hmKits");
+      if (!el) return;
+      el.innerHTML = PACKAGING_KITS.map(k => `
+        <button type="button" class="kit ${k.id === hmKit ? 'on' : ''}" onclick="pickKit('${k.id}')" title="${k.note}">
+          <span class="kit-img">${k.img ? `<img src="${k.img}" alt="${k.name}" loading="lazy" onerror="this.remove()">` : ""}</span>
+          <span class="kit-name">${k.name}</span>
+        </button>`).join("");
+    }
+    function pickKit(id) { hmKit = id; renderKits(); }
+
     function addHamper() {
       const lines = hmItemsList();
       if (!lines.length) return;
       const note = document.getElementById("hmNote").value.trim();
-      const contents = lines.map(l => l.qty > 1 ? `${l.item.name} ×${l.qty}` : l.item.name).join(", ");
+      const kit = PACKAGING_KITS.find(k => k.id === hmKit) || PACKAGING_KITS[0];
+      const contents = "Packed in: " + kit.name + " · " + lines.map(l => l.qty > 1 ? `${l.item.name} ×${l.qty}` : l.item.name).join(", ");
       const cart = getCart();
       cart.push({
         id: "hamper-" + Date.now(),
@@ -195,6 +216,7 @@
         contents,
         // Components travel with the line so checkout can re-price the hamper
         // server-side instead of trusting the total worked out in the browser.
+        packaging: kit.name,
         hamper: lines.map(l => ({ id: l.item.id, qty: l.qty }))
       });
       saveCart(cart);
@@ -208,7 +230,21 @@
       renderItems(); renderBox();
     }
 
-    renderPills(); renderItems(); renderBox();
+    renderPills(); renderItems(); renderKits(); renderBox();
+  </script>
+
+  <script>
+    // the same kits the hamper builder offers
+    (function () {
+      var el = document.getElementById("kitGrid");
+      if (!el || typeof PACKAGING_KITS === "undefined") return;
+      el.innerHTML = PACKAGING_KITS.map(function (k) {
+        return '<figure class="kit-card">' +
+          '<div class="kit-shot">' + (k.img ? '<img src="' + k.img + '" alt="' + k.name + '" loading="lazy" onerror="this.closest(\'.kit-shot\').classList.add(\'no-img\');this.remove()">' : '') + '</div>' +
+          '<figcaption><strong>' + k.name + '</strong><small>' + k.note + '</small></figcaption>' +
+          '</figure>';
+      }).join("");
+    })();
   </script>
 </body>
 </html>
