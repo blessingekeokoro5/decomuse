@@ -2576,6 +2576,1218 @@ const PRODUCTS = [
     specs: { "Type": "Side table", "Material": "Natural marble", "Options": "1", "Room": "Living / Indoor" },
     care: "Wipe with a soft, damp cloth and dry. Marble is porous, so use coasters and clear spills quickly, especially wine, citrus and oil, which etch the surface. Avoid acidic or abrasive cleaners." },
 
+  { id: "dc01", name: "Velvet Stool with Gold Base", cat: "Living Room", room: "Living Room", price: 1013, memberPrice: 912, sku: "SH-10355", tag: "New", ph: "", img: "assets/products/dc01.webp",
+    imgs: ["assets/products/dc01.webp", "assets/products/dc01-2.webp", "assets/products/dc01-3.webp", "assets/products/dc01-4.webp", "assets/products/dc01-5.webp"],
+    sizes: [{ label: "Plaid", price: 1013 }, { label: "Light Grey", price: 1013 }, { label: "Charcoal Grey", price: 1013 }, { label: "Emerald Green", price: 1013 }, { label: "Navy Blue", price: 1013 }],
+    desc: "A velvet stool on a gold stainless base, in plaid, light grey, charcoal, emerald green or navy.",
+    features: [
+      "Velvet on a gold base",
+      "Five colourways",
+      "Use at a bench or a dressing table"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "5", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc02", name: "Armless Leather Dining Chair", cat: "Living Room", room: "Living Room", price: 1087, memberPrice: 978, sku: "SH-10356", tag: "New", ph: "", img: "assets/products/dc02.webp",
+    imgs: ["assets/products/dc02.webp", "assets/products/dc02-2.webp", "assets/products/dc02-3.webp", "assets/products/dc02-4.webp", "assets/products/dc02-5.webp"],
+    sizes: [{ label: "Grey", price: 1087 }, { label: "Blue", price: 1087 }, { label: "Copper", price: 1087 }],
+    desc: "Armless leather in grey, blue or copper, so it tucks right under the table.",
+    features: [
+      "Armless, tucks fully under",
+      "Leather in Grey, Blue or Copper",
+      "Easy to seat an extra guest"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "3", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc03", name: "Leather Dining Chair in Five Colours", cat: "Living Room", room: "Living Room", price: 1119, memberPrice: 1007, sku: "SH-10357", tag: "New", ph: "", img: "assets/products/dc03.webp",
+    imgs: ["assets/products/dc03.webp", "assets/products/dc03-2.webp", "assets/products/dc03-3.webp", "assets/products/dc03-4.webp", "assets/products/dc03-5.webp"],
+    sizes: [{ label: "Tan", price: 1119 }, { label: "Orange", price: 1119 }, { label: "Grey", price: 1119 }, { label: "Cream", price: 1119 }, { label: "Mocha", price: 1119 }],
+    desc: "Leather in tan, orange, grey, cream or mocha.",
+    features: [
+      "Genuine leather",
+      "Five colourways",
+      "Supportive dining height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "5", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc04", name: "Dining Chair in Six Colours", cat: "Living Room", room: "Living Room", price: 1465, memberPrice: 1318, sku: "SH-10358", tag: "New", ph: "", img: "assets/products/dc04.webp",
+    imgs: ["assets/products/dc04.webp", "assets/products/dc04-2.webp", "assets/products/dc04-3.webp", "assets/products/dc04-4.webp", "assets/products/dc04-5.webp"],
+    sizes: [{ label: "Light Grey", price: 1465 }, { label: "Green", price: 1465 }, { label: "Coffee", price: 1465 }, { label: "Dark Grey", price: 1465 }, { label: "Ivory", price: 1465 }, { label: "Ivory  + Brown", price: 1465 }, { label: "Ivory + Grey", price: 1465 }, { label: "Grey + Brown", price: 1465 }, { label: "Ivory + Orange", price: 1465 }],
+    desc: "Light grey, green, coffee, dark grey, ivory, or ivory and brown.",
+    features: [
+      "Six colourways",
+      "Upholstered seat and back",
+      "Everyday dining height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "9", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc05", name: "Dining Chair in Seven Pastels", cat: "Living Room", room: "Living Room", price: 1476, memberPrice: 1328, sku: "SH-10359", tag: "New", ph: "", img: "assets/products/dc05.webp",
+    imgs: ["assets/products/dc05.webp", "assets/products/dc05-2.webp", "assets/products/dc05-3.webp", "assets/products/dc05-4.webp", "assets/products/dc05-5.jpg"],
+    sizes: [{ label: "Tan", price: 1476 }, { label: "Grey", price: 1476 }, { label: "Light Blue", price: 1476 }, { label: "Khaki", price: 1476 }, { label: "Peach", price: 1476 }, { label: "Aqua Blue", price: 1476 }, { label: "Lemon Beige", price: 1476 }],
+    desc: "Tan, grey, light blue, khaki, peach, aqua blue and lemon beige. Mix two or three around one table.",
+    features: [
+      "Seven soft colourways",
+      "Mix colours around a table",
+      "Upholstered seat"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "7", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc06", name: "Grey Dining Chair, With or Without Timber", cat: "Living Room", room: "Living Room", price: 1604, memberPrice: 1444, sku: "SH-10360", tag: "New", ph: "", img: "assets/products/dc06.webp",
+    imgs: ["assets/products/dc06.webp", "assets/products/dc06-2.webp", "assets/products/dc06-3.webp", "assets/products/dc06-4.webp", "assets/products/dc06-5.webp"],
+    sizes: [{ label: "Grey", price: 1604 }, { label: "Grey + Timber", price: 1604 }],
+    desc: "Grey, or grey with timber legs.",
+    features: [
+      "Grey upholstery",
+      "Optional timber legs",
+      "Simple dining shape"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Solid timber", "Options": "2", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "dc07", name: "Bouclé Dining Chair on Ash", cat: "Living Room", room: "Living Room", price: 1630, memberPrice: 1467, sku: "SH-10361", tag: "New", ph: "", img: "assets/products/dc07.webp",
+    imgs: ["assets/products/dc07.webp", "assets/products/dc07-2.webp", "assets/products/dc07-3.webp", "assets/products/dc07-4.webp", "assets/products/dc07-5.webp"],
+    sizes: [{ label: "Black", price: 1630 }, { label: "Brown", price: 1630 }],
+    desc: "Bouclé on ash timber in black or brown.",
+    features: [
+      "Bouclé on ash timber",
+      "Black or Brown",
+      "Rounded back"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Bouclé", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "dc08", name: "Bouclé Dining Chair with Metal Legs", cat: "Living Room", room: "Living Room", price: 1639, memberPrice: 1475, sku: "SH-10362", tag: "New", ph: "", img: "assets/products/dc08.webp",
+    imgs: ["assets/products/dc08.webp", "assets/products/dc08-2.webp", "assets/products/dc08-3.webp", "assets/products/dc08-4.webp", "assets/products/dc08-5.webp"],
+    sizes: [{ label: "Off White", price: 1639 }, { label: "Orange", price: 1639 }, { label: "Grey", price: 1639 }, { label: "Green", price: 1639 }],
+    desc: "Bouclé on metal in off white, orange, grey or green.",
+    features: [
+      "Bouclé upholstery, metal legs",
+      "Four colourways",
+      "Slim profile"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Bouclé", "Options": "4", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "dc09", name: "Leather & Timber Dining Chair", cat: "Living Room", room: "Living Room", price: 1648, memberPrice: 1483, sku: "SH-10363", tag: "New", ph: "", img: "assets/products/dc09.webp",
+    imgs: ["assets/products/dc09.webp", "assets/products/dc09-2.webp", "assets/products/dc09-3.webp", "assets/products/dc09-4.webp", "assets/products/dc09-5.webp"],
+    sizes: [{ label: "Beige", price: 1648 }, { label: "Grey", price: 1648 }, { label: "Emerald Green", price: 1648 }],
+    desc: "Leather on timber in beige, grey or emerald green.",
+    features: [
+      "Leather on timber",
+      "Beige, Grey or Emerald Green",
+      "Solid timber legs"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "3", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc10", name: "Leather Dining Chair in Six Neutrals", cat: "Living Room", room: "Living Room", price: 1685, memberPrice: 1516, sku: "SH-10364", tag: "New", ph: "", img: "assets/products/dc10.webp",
+    imgs: ["assets/products/dc10.webp", "assets/products/dc10-2.webp", "assets/products/dc10-3.webp", "assets/products/dc10-4.webp", "assets/products/dc10-5.webp"],
+    sizes: [{ label: "Charcoal Grey", price: 1685 }, { label: "Chocolate", price: 1685 }, { label: "Dark Tan", price: 1685 }, { label: "Ivory", price: 2204 }, { label: "Shale Grey", price: 2204 }, { label: "Off White", price: 2204 }, { label: "Black", price: 2204 }],
+    desc: "Ivory, shale grey, off white, black, charcoal and chocolate.",
+    features: [
+      "Genuine leather",
+      "Six neutral colourways",
+      "Supportive back"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "7", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc11", name: "Velvet Swivel Bar Stool", cat: "Living Room", room: "Living Room", price: 1785, memberPrice: 1606, sku: "SH-10365", tag: "New", ph: "", img: "assets/products/dc11.webp",
+    imgs: ["assets/products/dc11.webp", "assets/products/dc11-2.webp", "assets/products/dc11-3.webp", "assets/products/dc11-4.webp", "assets/products/dc11-5.webp"],
+    sizes: [{ label: "Black + Gold / 75cm", price: 1785 }, { label: "Black + Black / 75cm", price: 1785 }, { label: "White + Gold / 75cm", price: 1785 }, { label: "White + Black / 75cm", price: 1785 }, { label: "Green + Gold / 75cm", price: 1785 }, { label: "Green + Black / 75cm", price: 1785 }, { label: "Grey + Gold / 75cm", price: 1785 }, { label: "Grey + Black / 75cm", price: 1785 }, { label: "Navy + Gold / 75cm", price: 1785 }, { label: "Navy + Black / 75cm", price: 1785 }, { label: "Black + Gold / 65cm", price: 1952 }, { label: "Black + Black / 65cm", price: 1952 }, { label: "White + Gold / 65cm", price: 1952 }, { label: "White + Black / 65cm", price: 1952 }, { label: "Green + Gold / 65cm", price: 1952 }, { label: "Green + Black / 65cm", price: 1952 }, { label: "Grey + Gold / 65cm", price: 1952 }, { label: "Grey + Black / 65cm", price: 1952 }, { label: "Navy + Gold / 65cm", price: 1952 }, { label: "Navy + Black / 65cm", price: 1952 }],
+    desc: "A velvet swivel stool in black and gold or black on black, at 65cm or 75cm.",
+    features: [
+      "Velvet with swivel action",
+      "65cm and 75cm heights",
+      "Black + Gold or Black + Black"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "20", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc12", name: "Leather Dining Chair on Steel", cat: "Living Room", room: "Living Room", price: 1828, memberPrice: 1645, sku: "SH-10366", tag: "New", ph: "", img: "assets/products/dc12.webp",
+    imgs: ["assets/products/dc12.webp", "assets/products/dc12-2.webp", "assets/products/dc12-3.webp", "assets/products/dc12-4.webp", "assets/products/dc12-5.webp"],
+    sizes: [{ label: "Ivory", price: 1828 }, { label: "Black", price: 1828 }],
+    desc: "Leather on timber and steel, in ivory or black.",
+    features: [
+      "Leather on timber and steel",
+      "Ivory or Black",
+      "Firm, upright seat"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "2", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc13", name: "Swivel Chair in Tan or Grey", cat: "Living Room", room: "Living Room", price: 1830, memberPrice: 1647, sku: "SH-10367", tag: "New", ph: "", img: "assets/products/dc13.webp",
+    imgs: ["assets/products/dc13.webp", "assets/products/dc13-2.webp", "assets/products/dc13-3.webp", "assets/products/dc13-4.webp", "assets/products/dc13-5.webp"],
+    sizes: [{ label: "Tan", price: 1830 }, { label: "Charcoal Grey", price: 1830 }, { label: "Light Grey", price: 1830 }],
+    desc: "A swivel chair in tan, charcoal grey or light grey, which works at a dining table or a desk.",
+    features: [
+      "Swivel base",
+      "Tan, Charcoal Grey or Light Grey",
+      "Dining or desk height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc14", name: "Leather Swivel Bar Stool", cat: "Living Room", room: "Living Room", price: 2111, memberPrice: 1900, sku: "SH-10368", tag: "New", ph: "", img: "assets/products/dc14.webp",
+    imgs: ["assets/products/dc14.webp", "assets/products/dc14-2.webp", "assets/products/dc14-3.webp", "assets/products/dc14-4.webp", "assets/products/dc14-5.webp"],
+    sizes: [{ label: "Tan", price: 2111 }, { label: "Beige", price: 2111 }, { label: "Emerald Green", price: 2111 }],
+    desc: "Leather with a swivel seat, in tan, beige or emerald green.",
+    features: [
+      "Leather with swivel seat",
+      "Tan, Beige or Emerald Green",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "3", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc15", name: "Walnut & Leather Dining Chair", cat: "Living Room", room: "Living Room", price: 2180, memberPrice: 1962, sku: "SH-10369", tag: "New", ph: "", img: "assets/products/dc15.webp",
+    imgs: ["assets/products/dc15.webp", "assets/products/dc15-2.webp", "assets/products/dc15-3.webp", "assets/products/dc15-4.webp", "assets/products/dc15-5.webp"],
+    sizes: [{ label: "Black", price: 2180 }, { label: "Off White", price: 2180 }],
+    desc: "Leather cushions on walnut, in black or off white.",
+    features: [
+      "Walnut frame",
+      "Leather cushioned seat",
+      "Black or Off White"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Solid timber", "Options": "2", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "dc16", name: "Leather Bar Stool on Steel", cat: "Living Room", room: "Living Room", price: 2198, memberPrice: 1978, sku: "SH-10370", tag: "New", ph: "", img: "assets/products/dc16.webp",
+    imgs: ["assets/products/dc16.webp", "assets/products/dc16-2.webp", "assets/products/dc16-3.webp", "assets/products/dc16-4.webp", "assets/products/dc16-5.webp"],
+    sizes: [{ label: "Tan", price: 2198 }, { label: "Beige", price: 2198 }, { label: "Khaki", price: 2198 }, { label: "Grey", price: 2198 }],
+    desc: "Leather on stainless steel in tan, beige, khaki or grey.",
+    features: [
+      "Leather on stainless steel",
+      "Four colourways",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc17", name: "Leather Bar Stool", cat: "Living Room", room: "Living Room", price: 2202, memberPrice: 1982, sku: "SH-10371", tag: "New", ph: "", img: "assets/products/dc17.webp",
+    imgs: ["assets/products/dc17.webp", "assets/products/dc17-2.webp", "assets/products/dc17-3.webp", "assets/products/dc17-4.webp", "assets/products/dc17-5.webp"],
+    sizes: [{ label: "Black", price: 2202 }, { label: "Beige", price: 2202 }],
+    desc: "Leather in black or beige.",
+    features: [
+      "Genuine leather",
+      "Black or Beige",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "2", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc18", name: "Linen Bar Stool, Gold or Silver", cat: "Living Room", room: "Living Room", price: 2204, memberPrice: 1984, sku: "SH-10372", tag: "New", ph: "", img: "assets/products/dc18.webp",
+    imgs: ["assets/products/dc18.webp", "assets/products/dc18-2.webp", "assets/products/dc18-3.webp", "assets/products/dc18-4.webp", "assets/products/dc18-5.webp"],
+    sizes: [{ label: "Gold / 65cm", price: 2204 }, { label: "Gold / 75cm", price: 2204 }, { label: "Silver / 65cm", price: 2204 }, { label: "Silver / 75cm", price: 2204 }],
+    desc: "Linen and cotton on gold or silver metal, at 65cm or 75cm.",
+    features: [
+      "Linen and cotton upholstery",
+      "Gold or Silver metal",
+      "65cm and 75cm heights"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "4", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc19", name: "Velvet Bar Stool in Two Heights", cat: "Living Room", room: "Living Room", price: 2204, memberPrice: 1984, sku: "SH-10373", tag: "New", ph: "", img: "assets/products/dc19.webp",
+    imgs: ["assets/products/dc19.webp", "assets/products/dc19-2.webp", "assets/products/dc19-3.webp", "assets/products/dc19-4.webp", "assets/products/dc19-5.webp"],
+    sizes: [{ label: "Emerald Green / 65cm", price: 2204 }, { label: "Tan / 65cm", price: 2204 }, { label: "Royal Blue / 65cm", price: 2204 }, { label: "Ocean Blue / 65cm", price: 2204 }, { label: "Ivory / 65cm", price: 2204 }, { label: "Emerald Green / 75cm", price: 2389 }, { label: "Tan / 75cm", price: 2389 }, { label: "Royal Blue / 75cm", price: 2389 }, { label: "Ocean Blue / 75cm", price: 2389 }, { label: "Ivory / 75cm", price: 2389 }],
+    desc: "Velvet in emerald green or tan, at 65cm or 75cm.",
+    features: [
+      "Velvet upholstery",
+      "Emerald Green or Tan",
+      "65cm and 75cm heights"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "10", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc20", name: "Tall Velvet Stool (80cm)", cat: "Living Room", room: "Living Room", price: 2207, memberPrice: 1986, sku: "SH-10374", tag: "New", ph: "", img: "assets/products/dc20.webp",
+    imgs: ["assets/products/dc20.webp", "assets/products/dc20-2.webp", "assets/products/dc20-3.webp", "assets/products/dc20-4.webp", "assets/products/dc20-5.webp"],
+    sizes: [{ label: "Grey / 80cm", price: 2207 }, { label: "Emerald Green / 80cm", price: 2207 }, { label: "Navy / 80cm", price: 2207 }, { label: "Ivory / 80cm", price: 2207 }, { label: "Grey / 100cm", price: 2641 }, { label: "Emerald Green / 100cm", price: 2641 }, { label: "Navy / 100cm", price: 2641 }, { label: "Ivory / 100cm", price: 2641 }, { label: "Grey / 120cm", price: 3070 }, { label: "Emerald Green / 120cm", price: 3070 }, { label: "Navy / 120cm", price: 3070 }, { label: "Ivory / 120cm", price: 3070 }],
+    desc: "Velvet on stainless steel at 80cm, in grey, emerald green, navy or ivory. Tall enough for a high bench.",
+    features: [
+      "80cm height",
+      "Velvet on stainless steel",
+      "Four colourways"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "12", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc21", name: "Tan Dining Chair", cat: "Living Room", room: "Living Room", price: 2219, memberPrice: 1997, sku: "SH-10375", tag: "New", ph: "", img: "assets/products/dc21.webp",
+    imgs: ["assets/products/dc21.webp", "assets/products/dc21-2.webp", "assets/products/dc21-3.webp", "assets/products/dc21-4.webp", "assets/products/dc21-5.webp"],
+    sizes: [{ label: "Tan", price: 2219 }],
+    desc: "A tan dining chair, plain and useful.",
+    features: [
+      "Tan upholstery",
+      "Simple dining shape",
+      "Everyday use"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc22", name: "Upholstered Hallway Bench (80 or 100cm)", cat: "Living Room", room: "Living Room", price: 2294, memberPrice: 2065, sku: "SH-10376", tag: "New", ph: "", img: "assets/products/dc22.webp",
+    imgs: ["assets/products/dc22.webp", "assets/products/dc22-2.webp", "assets/products/dc22-3.webp", "assets/products/dc22-4.webp", "assets/products/dc22-5.webp"],
+    sizes: [{ label: "80cm", price: 2294 }, { label: "100cm", price: 2665 }],
+    desc: "A velvet bench at 80cm or 100cm, for pulling shoes on and off by the door.",
+    features: [
+      "80cm and 100cm",
+      "Velvet upholstery",
+      "Made for a hallway or bedroom end"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc23", name: "Velvet Bar Stool with Gold Base", cat: "Living Room", room: "Living Room", price: 2304, memberPrice: 2074, sku: "SH-10377", tag: "New", ph: "", img: "assets/products/dc23.webp",
+    imgs: ["assets/products/dc23.webp", "assets/products/dc23-2.webp", "assets/products/dc23-3.webp", "assets/products/dc23-4.webp", "assets/products/dc23-5.webp"],
+    sizes: [{ label: "Black", price: 2304 }, { label: "Grey", price: 2304 }, { label: "Emerald Green", price: 2304 }],
+    desc: "Velvet on a gold stainless base, in black, grey or emerald green.",
+    features: [
+      "Velvet on a gold base",
+      "Black, Grey or Emerald Green",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc24", name: "Bar Stool in Four Colours", cat: "Living Room", room: "Living Room", price: 2352, memberPrice: 2117, sku: "SH-10378", tag: "New", ph: "", img: "assets/products/dc24.webp",
+    imgs: ["assets/products/dc24.webp", "assets/products/dc24-2.webp", "assets/products/dc24-3.webp", "assets/products/dc24-4.webp", "assets/products/dc24-5.webp"],
+    sizes: [{ label: "Grey", price: 2352 }, { label: "Black", price: 2352 }, { label: "Green", price: 2352 }, { label: "Off White", price: 2352 }],
+    desc: "Grey, black, green or off white.",
+    features: [
+      "Four colourways",
+      "Upholstered seat",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "4", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc25", name: "Dining Chair in Green, Brown or Ivory", cat: "Living Room", room: "Living Room", price: 2352, memberPrice: 2117, sku: "SH-10379", tag: "New", ph: "", img: "assets/products/dc25.webp",
+    imgs: ["assets/products/dc25.webp", "assets/products/dc25-2.webp", "assets/products/dc25-3.webp", "assets/products/dc25-4.webp", "assets/products/dc25-5.webp"],
+    sizes: [{ label: "Green", price: 2352 }, { label: "Brown", price: 2352 }, { label: "Ivory", price: 2352 }],
+    desc: "Three colours, green being the one that makes a plain table interesting.",
+    features: [
+      "Green, Brown or Ivory",
+      "Upholstered seat and back",
+      "Dining height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc26", name: "Leather & Ash Dining Chair", cat: "Living Room", room: "Living Room", price: 2376, memberPrice: 2138, sku: "SH-10380", tag: "New", ph: "", img: "assets/products/dc26.webp",
+    imgs: ["assets/products/dc26.webp", "assets/products/dc26-2.webp", "assets/products/dc26-3.webp", "assets/products/dc26-4.webp", "assets/products/dc26-5.webp"],
+    desc: "Leather on ash timber, one finish.",
+    features: [
+      "Leather on ash timber",
+      "Single finish",
+      "Solid timber legs"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc27", name: "Coffee-Toned Dining Chair", cat: "Living Room", room: "Living Room", price: 2511, memberPrice: 2260, sku: "SH-10381", tag: "New", ph: "", img: "assets/products/dc27.webp",
+    imgs: ["assets/products/dc27.webp", "assets/products/dc27-2.webp", "assets/products/dc27-3.webp", "assets/products/dc27-4.webp", "assets/products/dc27-5.webp"],
+    sizes: [{ label: "Coffee", price: 2511 }],
+    desc: "A single coffee colourway.",
+    features: [
+      "Coffee colourway",
+      "Upholstered seat",
+      "Dining height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc28", name: "Sculptural Dining Chair", cat: "Living Room", room: "Living Room", price: 2574, memberPrice: 2317, sku: "SH-10382", tag: "New", ph: "", img: "assets/products/dc28.webp",
+    imgs: ["assets/products/dc28.webp", "assets/products/dc28-2.webp", "assets/products/dc28-3.webp", "assets/products/dc28-4.webp", "assets/products/dc28-5.webp"],
+    desc: "One shape, one finish, more sculptural than most dining chairs.",
+    features: [
+      "Sculptural silhouette",
+      "Single finish",
+      "Dining height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc29", name: "Shoe Changing Bench (Five Lengths)", cat: "Living Room", room: "Living Room", price: 2589, memberPrice: 2330, sku: "SH-10383", tag: "New", ph: "", img: "assets/products/dc29.webp",
+    imgs: ["assets/products/dc29.webp", "assets/products/dc29-2.webp", "assets/products/dc29-3.webp", "assets/products/dc29-4.webp", "assets/products/dc29-5.webp"],
+    sizes: [{ label: "Tan / 60cm", price: 2589 }, { label: "Black / 60cm", price: 2589 }, { label: "Natural / 60cm", price: 2589 }, { label: "Tan / 80cm", price: 3259 }, { label: "Black / 80cm", price: 3259 }, { label: "Natural / 80cm", price: 3259 }, { label: "Tan / 100cm", price: 4437 }, { label: "Black / 100cm", price: 4437 }, { label: "Natural / 100cm", price: 4437 }, { label: "Tan / 120cm", price: 4696 }, { label: "Black / 120cm", price: 4696 }, { label: "Natural / 120cm", price: 4696 }, { label: "Tan / 140cm", price: 5533 }, { label: "Black / 140cm", price: 5533 }, { label: "Natural / 140cm", price: 5533 }],
+    desc: "Tan, from 60cm up to 140cm, so it fits the entry you actually have.",
+    features: [
+      "Five lengths, 60cm to 140cm",
+      "Tan upholstery",
+      "Made for an entry or hallway"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "15", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc30", name: "Leather Bar Stool in Five Colours", cat: "Living Room", room: "Living Room", price: 2739, memberPrice: 2465, sku: "SH-10384", tag: "New", ph: "", img: "assets/products/dc30.webp",
+    imgs: ["assets/products/dc30.webp", "assets/products/dc30-2.webp", "assets/products/dc30-3.webp", "assets/products/dc30-4.webp", "assets/products/dc30-5.webp"],
+    sizes: [{ label: "Orange", price: 2739 }, { label: "Black", price: 2739 }, { label: "Grey", price: 2739 }, { label: "Brown", price: 2739 }, { label: "White", price: 2739 }],
+    desc: "Leather on stainless steel in orange, black, grey, brown or white.",
+    features: [
+      "Leather on stainless steel",
+      "Five colourways",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "5", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc31", name: "Cushioned Leather Bar Stool", cat: "Living Room", room: "Living Room", price: 3046, memberPrice: 2741, sku: "SH-10385", tag: "New", ph: "", img: "assets/products/dc31.webp",
+    imgs: ["assets/products/dc31.webp", "assets/products/dc31-2.webp", "assets/products/dc31-3.webp", "assets/products/dc31-4.webp", "assets/products/dc31-5.webp"],
+    desc: "Leather with a deeper cushion than most stools, on stainless steel.",
+    features: [
+      "Deep cushioned seat",
+      "Leather on stainless steel",
+      "Bar height"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "dc32", name: "Velvet Bench (120cm)", cat: "Living Room", room: "Living Room", price: 3300, memberPrice: 2970, sku: "SH-10386", tag: "New", ph: "", img: "assets/products/dc32.webp",
+    imgs: ["assets/products/dc32.webp", "assets/products/dc32-2.webp", "assets/products/dc32-3.webp", "assets/products/dc32-4.webp", "assets/products/dc32-5.webp"],
+    sizes: [{ label: "Plaid / 120cm", price: 3300 }, { label: "Dark Grey / 120cm", price: 3300 }, { label: "Grey / 120cm", price: 3300 }, { label: "Off White / 120cm", price: 3300 }, { label: "Black + White / 120cm", price: 3300 }, { label: "Copper / 120cm", price: 3300 }, { label: "Plaid / 160cm", price: 3474 }, { label: "Dark Grey / 160cm", price: 3474 }, { label: "Grey / 160cm", price: 3474 }, { label: "Off White / 160cm", price: 3474 }, { label: "Black + White / 160cm", price: 3474 }, { label: "Copper / 160cm", price: 3474 }, { label: "Plaid / 180cm", price: 4026 }, { label: "Dark Grey / 180cm", price: 4026 }, { label: "Grey / 180cm", price: 4026 }, { label: "Off White / 180cm", price: 4026 }, { label: "Black + White / 180cm", price: 4026 }, { label: "Copper / 180cm", price: 4026 }],
+    desc: "A 120cm velvet bench in plaid, dark grey, grey or off white.",
+    features: [
+      "120cm long",
+      "Velvet upholstery",
+      "Four colourways including plaid"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Velvet", "Options": "18", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "dc33", name: "Linen Dining Chair on Timber", cat: "Living Room", room: "Living Room", price: 3544, memberPrice: 3190, sku: "SH-10387", tag: "New", ph: "", img: "assets/products/dc33.webp",
+    imgs: ["assets/products/dc33.webp", "assets/products/dc33-2.webp", "assets/products/dc33-3.webp", "assets/products/dc33-4.webp", "assets/products/dc33-5.webp"],
+    desc: "Linen and cotton on timber, one finish.",
+    features: [
+      "Linen and cotton upholstery",
+      "Timber frame",
+      "Single finish"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "dc34", name: "Bouclé Bench in Six Lengths", cat: "Living Room", room: "Living Room", price: 4148, memberPrice: 3733, sku: "SH-10388", tag: "New", ph: "", img: "assets/products/dc34.webp",
+    imgs: ["assets/products/dc34.webp", "assets/products/dc34-2.webp", "assets/products/dc34-3.webp", "assets/products/dc34-4.webp", "assets/products/dc34-5.webp"],
+    sizes: [{ label: "60cm", price: 4148 }, { label: "80cm", price: 4185 }, { label: "100cm", price: 4550 }, { label: "120cm", price: 4981 }, { label: "140cm", price: 5369 }, { label: "160cm", price: 5556 }],
+    desc: "Bouclé on walnut, from 60cm to 160cm. Use it at a dining table, at the end of a bed, or along a hallway.",
+    features: [
+      "Six lengths, 60cm to 160cm",
+      "Bouclé on walnut",
+      "Dining, bedroom or hallway"
+    ],
+    specs: { "Type": "Dining chair / stool", "Upholstery": "Bouclé", "Options": "6", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc01", name: "Metal-Frame Chair & Ottoman", cat: "Living Room", room: "Living Room", price: 1444, memberPrice: 1300, sku: "SH-10389", tag: "New", ph: "", img: "assets/products/oc01.webp",
+    imgs: ["assets/products/oc01.webp", "assets/products/oc01-2.webp", "assets/products/oc01-3.webp", "assets/products/oc01-4.webp", "assets/products/oc01-5.webp"],
+    sizes: [{ label: "Ottoman", price: 1444 }, { label: "Chair", price: 4143 }, { label: "Complete Set", price: 5772 }],
+    desc: "A slim metal-framed chair with a matching ottoman, sold separately or as the set. The lightest-looking seat in the range, which suits a small room.",
+    features: [
+      "Slim metal frame",
+      "Chair, ottoman, or the complete set",
+      "Light visual footprint"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Steel / metal", "Options": "3", "Room": "Living / Indoor" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated or brushed finishes, and check the feet for floor protectors." },
+
+  { id: "oc02", name: "Swivel Chair & Footstool", cat: "Living Room", room: "Living Room", price: 1463, memberPrice: 1317, sku: "SH-10390", tag: "New", ph: "", img: "assets/products/oc02.webp",
+    imgs: ["assets/products/oc02.webp", "assets/products/oc02-2.webp", "assets/products/oc02-3.webp", "assets/products/oc02-4.webp", "assets/products/oc02-5.webp"],
+    sizes: [{ label: "Foot Stool", price: 1463 }, { label: "Chair", price: 5526 }],
+    desc: "A swivel chair that turns to the conversation, or the view, with a footstool to match.",
+    features: [
+      "Full swivel base",
+      "Chair and footstool sold separately",
+      "Turns to face the room or the window"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc03", name: "Cushioned Chair in Three Colours", cat: "Living Room", room: "Living Room", price: 2293, memberPrice: 2064, sku: "SH-10391", tag: "New", ph: "", img: "assets/products/oc03.webp",
+    imgs: ["assets/products/oc03.webp", "assets/products/oc03-2.webp", "assets/products/oc03-3.webp", "assets/products/oc03-4.webp", "assets/products/oc03-5.webp"],
+    sizes: [{ label: "White", price: 2293 }, { label: "Green", price: 2293 }, { label: "Tan", price: 2293 }],
+    desc: "A soft cushioned chair in white, green or tan. The green is the one that lifts a neutral room.",
+    features: [
+      "Deep cushioned seat",
+      "White, Green or Tan",
+      "Suits a lounge, bedroom or reading corner"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc04", name: "Bouclé Chair with Gold Base", cat: "Living Room", room: "Living Room", price: 2774, memberPrice: 2497, sku: "SH-10392", tag: "New", ph: "", img: "assets/products/oc04.webp",
+    imgs: ["assets/products/oc04.webp", "assets/products/oc04-2.webp", "assets/products/oc04-3.webp", "assets/products/oc04-4.webp", "assets/products/oc04-5.webp"],
+    sizes: [{ label: "White", price: 2774 }, { label: "Khaki", price: 2774 }, { label: "Light Green", price: 2774 }, { label: "Charcoal Grey", price: 2774 }, { label: "Ocean Blue", price: 2774 }],
+    desc: "Bouclé on a gold base, in five colours from snow white to ocean blue. Texture and metal together, which is why it reads expensive.",
+    features: [
+      "Bouclé upholstery on a gold base",
+      "Five colourways",
+      "Textured fabric against polished metal"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Bouclé", "Options": "5", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc05", name: "Cotton Chair with Steel Frame", cat: "Living Room", room: "Living Room", price: 2831, memberPrice: 2548, sku: "SH-10393", tag: "New", ph: "", img: "assets/products/oc05.webp",
+    imgs: ["assets/products/oc05.webp", "assets/products/oc05-2.webp", "assets/products/oc05-3.webp", "assets/products/oc05-4.webp", "assets/products/oc05-5.webp"],
+    sizes: [{ label: "Tan", price: 2831 }, { label: "Navy", price: 2831 }, { label: "Grey", price: 2831 }, { label: "Beige", price: 2831 }, { label: "Emerald Green", price: 2831 }],
+    desc: "Cotton over a steel frame in five colours, including an emerald green worth being bold about.",
+    features: [
+      "Cotton upholstery, steel frame",
+      "Five colours including emerald green",
+      "Cushioned seat and back"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "5", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc06", name: "Bouclé Chair in White or Pink", cat: "Living Room", room: "Living Room", price: 3130, memberPrice: 2817, sku: "SH-10394", tag: "New", ph: "", img: "assets/products/oc06.webp",
+    imgs: ["assets/products/oc06.webp", "assets/products/oc06-2.webp", "assets/products/oc06-3.webp", "assets/products/oc06-4.webp", "assets/products/oc06-5.webp"],
+    sizes: [{ label: "White", price: 3130 }, { label: "Pink", price: 3130 }],
+    desc: "Bouclé in white or soft pink, rounded and quiet.",
+    features: [
+      "Soft bouclé upholstery",
+      "White or Pink",
+      "Rounded, enveloping shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Bouclé", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc07", name: "Two-Tone Leather Chair", cat: "Living Room", room: "Living Room", price: 3304, memberPrice: 2974, sku: "SH-10395", tag: "New", ph: "", img: "assets/products/oc07.webp",
+    imgs: ["assets/products/oc07.webp", "assets/products/oc07-2.webp", "assets/products/oc07-3.webp", "assets/products/oc07-4.webp", "assets/products/oc07-5.webp"],
+    sizes: [{ label: "Black +  White", price: 3304 }, { label: "Orange", price: 3304 }, { label: "Navy", price: 3304 }, { label: "Orange + Grey", price: 3304 }],
+    desc: "Leather in two-tone combinations: black and white, orange and grey, or solid navy and orange.",
+    features: [
+      "Genuine leather",
+      "Two-tone and solid colourways",
+      "Four combinations to choose from"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc08", name: "Green Cotton Cushion Chair", cat: "Living Room", room: "Living Room", price: 3307, memberPrice: 2976, sku: "SH-10396", tag: "New", ph: "", img: "assets/products/oc08.webp",
+    imgs: ["assets/products/oc08.webp", "assets/products/oc08-2.webp", "assets/products/oc08-3.webp", "assets/products/oc08-4.webp", "assets/products/oc08-5.webp"],
+    sizes: [{ label: "Green", price: 3307 }],
+    desc: "A single green cotton chair with a generous cushion. One colour, done properly.",
+    features: [
+      "Cotton upholstery",
+      "Generous cushioned seat",
+      "Single considered colourway"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc09", name: "Ash Timber Occasional Chair", cat: "Living Room", room: "Living Room", price: 3352, memberPrice: 3017, sku: "SH-10397", tag: "New", ph: "", img: "assets/products/oc09.webp",
+    imgs: ["assets/products/oc09.webp", "assets/products/oc09-2.webp", "assets/products/oc09-3.webp", "assets/products/oc09-4.webp", "assets/products/oc09-5.webp"],
+    desc: "Ash timber with a clean frame, the sort of chair that works at a desk as easily as beside a sofa.",
+    features: [
+      "Solid ash timber",
+      "Clean, simple frame",
+      "Works as a desk or lounge chair"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Solid timber", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "oc10", name: "Metal-Frame Chair in Three Tones", cat: "Living Room", room: "Living Room", price: 3519, memberPrice: 3167, sku: "SH-10398", tag: "New", ph: "", img: "assets/products/oc10.webp",
+    imgs: ["assets/products/oc10.webp", "assets/products/oc10-2.webp", "assets/products/oc10-3.webp", "assets/products/oc10-4.webp", "assets/products/oc10-5.webp"],
+    sizes: [{ label: "Snow White", price: 3519 }, { label: "Charcoal Grey", price: 3519 }, { label: "Black", price: 3519 }],
+    desc: "A cushioned metal-framed chair in snow white, charcoal grey or black.",
+    features: [
+      "Metal frame with cushioned seat",
+      "Snow White, Charcoal Grey or Black",
+      "Slim profile"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Steel / metal", "Options": "3", "Room": "Living / Indoor" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated or brushed finishes, and check the feet for floor protectors." },
+
+  { id: "oc11", name: "Plain or Plaid Cushion Chair", cat: "Living Room", room: "Living Room", price: 3519, memberPrice: 3167, sku: "SH-10399", tag: "New", ph: "", img: "assets/products/oc11.webp",
+    imgs: ["assets/products/oc11.webp", "assets/products/oc11-2.webp", "assets/products/oc11-3.webp", "assets/products/oc11-4.webp", "assets/products/oc11-5.webp"],
+    sizes: [{ label: "White", price: 3519 }, { label: "Plaid", price: 3519 }],
+    desc: "A cushioned chair in plain white or a plaid, which is rare in a range this contemporary.",
+    features: [
+      "Cushioned seat and back",
+      "White or Plaid",
+      "An unusual patterned option"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc12", name: "Transparent Shell Chair", cat: "Living Room", room: "Living Room", price: 3656, memberPrice: 3290, sku: "SH-10400", tag: "New", ph: "", img: "assets/products/oc12.webp",
+    imgs: ["assets/products/oc12.webp", "assets/products/oc12-2.webp", "assets/products/oc12-3.webp", "assets/products/oc12-4.webp", "assets/products/oc12-5.webp"],
+    sizes: [{ label: "Green", price: 3656 }, { label: "Clear", price: 3656 }, { label: "Tan + White", price: 3656 }],
+    desc: "A clear shell in green, clear or tan and white. It takes up visual space without filling the room.",
+    features: [
+      "Transparent shell",
+      "Green, Clear, or Tan + White",
+      "Fills a gap without blocking light"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Steel / metal", "Options": "3", "Room": "Living / Indoor" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated or brushed finishes, and check the feet for floor protectors." },
+
+  { id: "oc13", name: "Cushion Chair in Beige or Orange", cat: "Living Room", room: "Living Room", price: 3674, memberPrice: 3307, sku: "SH-10401", tag: "New", ph: "", img: "assets/products/oc13.webp",
+    imgs: ["assets/products/oc13.webp", "assets/products/oc13-2.webp", "assets/products/oc13-3.webp", "assets/products/oc13-4.webp", "assets/products/oc13-5.webp"],
+    sizes: [{ label: "Beige", price: 3674 }, { label: "Orange", price: 3674 }],
+    desc: "Deeply cushioned, in beige or orange.",
+    features: [
+      "Deep cushioning",
+      "Beige or Orange",
+      "Soft, informal shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc14", name: "Snow White Chair with Optional Ottoman", cat: "Living Room", room: "Living Room", price: 3680, memberPrice: 3312, sku: "SH-10402", tag: "New", ph: "", img: "assets/products/oc14.webp",
+    imgs: ["assets/products/oc14.webp", "assets/products/oc14-2.webp", "assets/products/oc14-3.webp", "assets/products/oc14-4.webp", "assets/products/oc14-5.webp"],
+    sizes: [{ label: "Snow White / - Ottoman", price: 3680 }, { label: "Snow White / + Ottoman", price: 4941 }],
+    desc: "Snow white, with or without the matching ottoman. Buy the ottoman: it changes how long you sit there.",
+    features: [
+      "Snow White upholstery",
+      "With or without ottoman",
+      "Made for long sitting"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc15", name: "Lambswool Chair in White & Black", cat: "Living Room", room: "Living Room", price: 3685, memberPrice: 3316, sku: "SH-10403", tag: "New", ph: "", img: "assets/products/oc15.webp",
+    imgs: ["assets/products/oc15.webp", "assets/products/oc15-2.webp", "assets/products/oc15-3.webp", "assets/products/oc15-4.webp", "assets/products/oc15-5.webp"],
+    sizes: [{ label: "White + Black", price: 3685 }],
+    desc: "Lambswool in white with black detail, warm to the touch in a way flat fabric never is.",
+    features: [
+      "Lambswool upholstery",
+      "White with black detail",
+      "Warm, tactile surface"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Wool / lambswool", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum gently and air it rather than washing. Blot spills straight away, and keep it out of prolonged damp." },
+
+  { id: "oc16", name: "Monochrome Occasional Chair", cat: "Living Room", room: "Living Room", price: 3693, memberPrice: 3324, sku: "SH-10404", tag: "New", ph: "", img: "assets/products/oc16.webp",
+    imgs: ["assets/products/oc16.webp", "assets/products/oc16-2.webp", "assets/products/oc16-3.webp", "assets/products/oc16-4.webp", "assets/products/oc16-5.webp"],
+    sizes: [{ label: "White", price: 3693 }, { label: "Black", price: 3693 }],
+    desc: "White or black, nothing else to decide.",
+    features: [
+      "White or Black",
+      "Simple contemporary shape",
+      "Suits most rooms"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc17", name: "Velvet Chair in Six Colours", cat: "Living Room", room: "Living Room", price: 3920, memberPrice: 3528, sku: "SH-10405", tag: "New", ph: "", img: "assets/products/oc17.webp",
+    imgs: ["assets/products/oc17.webp", "assets/products/oc17-2.webp", "assets/products/oc17-3.webp", "assets/products/oc17-4.webp", "assets/products/oc17-5.webp"],
+    sizes: [{ label: "Ivory", price: 3920 }, { label: "Orange", price: 3920 }, { label: "Blue", price: 3920 }, { label: "Green", price: 3920 }, { label: "Pink", price: 3920 }, { label: "Grey", price: 3920 }],
+    desc: "Velvet in ivory, orange, blue, green, pink or grey, which is the broadest colour choice in the range.",
+    features: [
+      "Velvet upholstery",
+      "Six colourways",
+      "A colour-led accent chair"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "6", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc18", name: "Velvet & Timber Chair", cat: "Living Room", room: "Living Room", price: 3952, memberPrice: 3557, sku: "SH-10406", tag: "New", ph: "", img: "assets/products/oc18.webp",
+    imgs: ["assets/products/oc18.webp", "assets/products/oc18-2.webp", "assets/products/oc18-3.webp", "assets/products/oc18-4.webp", "assets/products/oc18-5.webp"],
+    sizes: [{ label: "White", price: 3952 }, { label: "Green", price: 3952 }, { label: "Orange", price: 3952 }],
+    desc: "Velvet on a timber frame in white, green or orange.",
+    features: [
+      "Velvet on a timber frame",
+      "White, Green or Orange",
+      "Cushioned seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc19", name: "Off White Cushion Chair", cat: "Living Room", room: "Living Room", price: 4130, memberPrice: 3717, sku: "SH-10407", tag: "New", ph: "", img: "assets/products/oc19.webp",
+    imgs: ["assets/products/oc19.webp", "assets/products/oc19-2.webp", "assets/products/oc19-3.webp", "assets/products/oc19-4.webp"],
+    sizes: [{ label: "Off White", price: 4130 }],
+    desc: "A single off white chair, softly cushioned, that disappears politely into a room.",
+    features: [
+      "Off White upholstery",
+      "Soft cushioning",
+      "Quiet, unobtrusive shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc20", name: "Leather Swivel Chair", cat: "Living Room", room: "Living Room", price: 4135, memberPrice: 3722, sku: "SH-10408", tag: "New", ph: "", img: "assets/products/oc20.webp",
+    imgs: ["assets/products/oc20.webp", "assets/products/oc20-2.webp", "assets/products/oc20-3.webp", "assets/products/oc20-4.webp", "assets/products/oc20-5.webp"],
+    sizes: [{ label: "Beige", price: 4135 }],
+    desc: "Beige leather on a swivel base, so it turns between the television and the conversation.",
+    features: [
+      "Genuine leather",
+      "Swivel base",
+      "Beige colourway"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc21", name: "Leather & Steel Chair", cat: "Living Room", room: "Living Room", price: 4137, memberPrice: 3723, sku: "SH-10409", tag: "New", ph: "", img: "assets/products/oc21.webp",
+    imgs: ["assets/products/oc21.webp", "assets/products/oc21-2.webp", "assets/products/oc21-3.webp", "assets/products/oc21-4.webp", "assets/products/oc21-5.webp"],
+    sizes: [{ label: "Off White", price: 4137 }],
+    desc: "Off white leather on steel, structured rather than soft.",
+    features: [
+      "Leather on a steel frame",
+      "Off White",
+      "Structured, upright seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc22", name: "Ivory or Black Occasional Chair", cat: "Living Room", room: "Living Room", price: 4141, memberPrice: 3727, sku: "SH-10410", tag: "New", ph: "", img: "assets/products/oc22.webp",
+    imgs: ["assets/products/oc22.webp", "assets/products/oc22-2.webp", "assets/products/oc22-3.webp", "assets/products/oc22-4.webp", "assets/products/oc22-5.webp"],
+    sizes: [{ label: "Ivory", price: 4141 }, { label: "Black", price: 4141 }],
+    desc: "Ivory or black, in a plain contemporary shape.",
+    features: [
+      "Ivory or Black",
+      "Contemporary silhouette",
+      "Everyday upholstery"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc23", name: "Linen & Metal Chair", cat: "Living Room", room: "Living Room", price: 4259, memberPrice: 3833, sku: "SH-10411", tag: "New", ph: "", img: "assets/products/oc23.webp",
+    imgs: ["assets/products/oc23.webp", "assets/products/oc23-2.webp", "assets/products/oc23-3.webp", "assets/products/oc23-4.webp", "assets/products/oc23-5.webp"],
+    sizes: [{ label: "Khaki", price: 4259 }, { label: "Brown", price: 4259 }],
+    desc: "Linen and cotton over metal, in khaki or brown. Natural fabric against a hard frame.",
+    features: [
+      "Linen and cotton upholstery",
+      "Metal frame",
+      "Khaki or Brown"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc24", name: "Two-Tone Swivel Chair", cat: "Living Room", room: "Living Room", price: 4343, memberPrice: 3909, sku: "SH-10412", tag: "New", ph: "", img: "assets/products/oc24.webp",
+    imgs: ["assets/products/oc24.webp", "assets/products/oc24-2.webp", "assets/products/oc24-3.webp", "assets/products/oc24-4.webp", "assets/products/oc24-5.webp"],
+    sizes: [{ label: "Ivory/grey", price: 4343 }],
+    desc: "Ivory and grey on a swivel base.",
+    features: [
+      "Swivel base",
+      "Ivory and grey",
+      "Turns through a full circle"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc25", name: "Occasional Chair in Five Colours", cat: "Living Room", room: "Living Room", price: 4350, memberPrice: 3915, sku: "SH-10413", tag: "New", ph: "", img: "assets/products/oc25.webp",
+    imgs: ["assets/products/oc25.webp", "assets/products/oc25-2.webp", "assets/products/oc25-3.webp", "assets/products/oc25-4.webp", "assets/products/oc25-5.webp"],
+    sizes: [{ label: "Snow White", price: 4350 }, { label: "Grey", price: 4350 }, { label: "Charcoal Grey", price: 4350 }, { label: "Khaki Green", price: 4350 }, { label: "Midnight Blue", price: 4350 }, { label: "Tan", price: 4350 }],
+    desc: "Snow white, grey, charcoal, khaki green or midnight blue. Midnight blue is the one people don't expect.",
+    features: [
+      "Five colourways",
+      "Including midnight blue and khaki green",
+      "Soft upholstered seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "6", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc26", name: "Bouclé Chair with Timber Frame", cat: "Living Room", room: "Living Room", price: 4365, memberPrice: 3928, sku: "SH-10414", tag: "New", ph: "", img: "assets/products/oc26.webp",
+    imgs: ["assets/products/oc26.webp", "assets/products/oc26-2.webp", "assets/products/oc26-3.webp", "assets/products/oc26-4.webp", "assets/products/oc26-5.webp"],
+    desc: "Bouclé on timber, cushioned, in a single considered finish.",
+    features: [
+      "Bouclé on a timber frame",
+      "Cushioned seat",
+      "One finish"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Bouclé", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc27", name: "Tan Occasional Chair", cat: "Living Room", room: "Living Room", price: 4380, memberPrice: 3942, sku: "SH-10415", tag: "New", ph: "", img: "assets/products/oc27.webp",
+    imgs: ["assets/products/oc27.webp", "assets/products/oc27-2.webp", "assets/products/oc27-3.webp", "assets/products/oc27-4.webp", "assets/products/oc27-5.webp"],
+    sizes: [{ label: "Tan", price: 4380 }],
+    desc: "A tan chair, warm and straightforward.",
+    features: [
+      "Tan upholstery",
+      "Simple shape",
+      "Warms a neutral room"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc28", name: "Metal Swing Chair", cat: "Living Room", room: "Living Room", price: 4406, memberPrice: 3965, sku: "SH-10416", tag: "New", ph: "", img: "assets/products/oc28.webp",
+    imgs: ["assets/products/oc28.webp", "assets/products/oc28-2.webp", "assets/products/oc28-3.webp", "assets/products/oc28-4.webp", "assets/products/oc28-5.webp"],
+    sizes: [{ label: "Black", price: 4406 }, { label: "Gold", price: 4406 }],
+    desc: "A hanging swing chair in black or gold, for indoors or a covered balcony.",
+    features: [
+      "Hanging swing design",
+      "Black or Gold metal",
+      "Indoor or covered outdoor use"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Steel / metal", "Options": "2", "Room": "Living / Indoor" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated or brushed finishes, and check the feet for floor protectors." },
+
+  { id: "oc29", name: "Leather Chair in Eight Colours", cat: "Living Room", room: "Living Room", price: 4426, memberPrice: 3983, sku: "SH-10417", tag: "New", ph: "", img: "assets/products/oc29.webp",
+    imgs: ["assets/products/oc29.webp", "assets/products/oc29-2.webp", "assets/products/oc29-3.webp", "assets/products/oc29-4.webp", "assets/products/oc29-5.webp"],
+    sizes: [{ label: "Orange", price: 4426 }, { label: "Navy", price: 4426 }, { label: "Yellow", price: 4426 }, { label: "Pastel Blue", price: 4426 }, { label: "Tan", price: 4426 }, { label: "Ivory", price: 4426 }, { label: "Off White", price: 4426 }, { label: "Peacock Blue", price: 4426 }, { label: "Black", price: 4426 }, { label: "Orange + Grey", price: 4426 }, { label: "Yellow + Black", price: 4426 }],
+    desc: "Leather in orange, navy, yellow, pastel blue, tan, ivory and more. Rarely do you get this many leather colours.",
+    features: [
+      "Genuine leather",
+      "Eight colourways",
+      "Bright options as well as neutrals"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "11", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc30", name: "Upholstered Corner Seat", cat: "Living Room", room: "Living Room", price: 4507, memberPrice: 4056, sku: "SH-10418", tag: "New", ph: "", img: "assets/products/oc30.webp",
+    imgs: ["assets/products/oc30.webp", "assets/products/oc30-2.jpg", "assets/products/oc30-3.webp", "assets/products/oc30-4.webp", "assets/products/oc30-5.webp"],
+    sizes: [{ label: "Snow White", price: 4507 }, { label: "Light Pink", price: 4507 }],
+    desc: "A corner seat in snow white or light pink, for the corner that never had the right furniture.",
+    features: [
+      "Designed for a corner",
+      "Snow White or Light Pink",
+      "Cushioned seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc31", name: "Deep Orange Statement Chair", cat: "Living Room", room: "Living Room", price: 4565, memberPrice: 4108, sku: "SH-10419", tag: "New", ph: "", img: "assets/products/oc31.webp",
+    imgs: ["assets/products/oc31.webp", "assets/products/oc31-2.webp", "assets/products/oc31-3.webp", "assets/products/oc31-4.webp", "assets/products/oc31-5.webp"],
+    sizes: [{ label: "Deep Orange/Red", price: 4565 }],
+    desc: "One chair, one colour: a deep orange-red that does the decorating for you.",
+    features: [
+      "Deep orange-red",
+      "A single statement colour",
+      "Soft upholstered seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc32", name: "Timber Swing Chair", cat: "Living Room", room: "Living Room", price: 4733, memberPrice: 4260, sku: "SH-10420", tag: "New", ph: "", img: "assets/products/oc32.webp",
+    imgs: ["assets/products/oc32.webp", "assets/products/oc32-2.webp", "assets/products/oc32-3.webp", "assets/products/oc32-4.webp", "assets/products/oc32-5.webp"],
+    sizes: [{ label: "120cm x 50cm", price: 4733 }, { label: "120cm x 60cm", price: 5181 }, { label: "140cm x 50cm", price: 5285 }, { label: "120cm x 70cm", price: 5556 }, { label: "140cm x 60cm", price: 5741 }, { label: "140cm x 70cm", price: 6444 }],
+    desc: "A timber swing seat with cushions, in sizes from 120 x 50cm to 140cm wide. Big enough for two.",
+    features: [
+      "Timber frame with cushions",
+      "Sizes from 120 x 50cm",
+      "Seats one or two"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Solid timber", "Options": "6", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "oc33", name: "Cream Bouclé Chair", cat: "Living Room", room: "Living Room", price: 4781, memberPrice: 4303, sku: "SH-10421", tag: "New", ph: "", img: "assets/products/oc33.webp",
+    imgs: ["assets/products/oc33.webp", "assets/products/oc33-2.webp", "assets/products/oc33-3.webp", "assets/products/oc33-4.webp", "assets/products/oc33-5.webp"],
+    sizes: [{ label: "Cream", price: 4781 }],
+    desc: "Cream bouclé over timber, soft and unfussy.",
+    features: [
+      "Bouclé over timber",
+      "Cream colourway",
+      "Cushioned seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Bouclé", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc34", name: "Occasional Chair in Olive, White or Orange", cat: "Living Room", room: "Living Room", price: 4787, memberPrice: 4308, sku: "SH-10422", tag: "New", ph: "", img: "assets/products/oc34.webp",
+    imgs: ["assets/products/oc34.webp", "assets/products/oc34-2.webp", "assets/products/oc34-3.webp", "assets/products/oc34-4.webp", "assets/products/oc34-5.webp"],
+    sizes: [{ label: "Olive", price: 4787 }, { label: "White", price: 4787 }, { label: "Orange", price: 4787 }],
+    desc: "Three colours, olive being the most interesting of them.",
+    features: [
+      "Olive, White or Orange",
+      "Upholstered seat and back",
+      "Contemporary shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc35", name: "Chair with Optional Foot Stool", cat: "Living Room", room: "Living Room", price: 4889, memberPrice: 4400, sku: "SH-10423", tag: "New", ph: "", img: "assets/products/oc35.webp",
+    imgs: ["assets/products/oc35.webp", "assets/products/oc35-2.webp", "assets/products/oc35-3.webp", "assets/products/oc35-4.webp", "assets/products/oc35-5.webp"],
+    sizes: [{ label: "Tan / - Foot Stool", price: 4889 }, { label: "Green / - Foot Stool", price: 4889 }, { label: "White / - Foot Stool", price: 4889 }, { label: "Tan / + Foot Stool", price: 6556 }, { label: "Green / + Foot Stool", price: 6556 }, { label: "White / + Foot Stool", price: 6556 }],
+    desc: "Tan or green, with or without the foot stool.",
+    features: [
+      "Tan or Green",
+      "With or without foot stool",
+      "Relaxed lounge seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "6", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc36", name: "Off White Steel-Frame Chair", cat: "Living Room", room: "Living Room", price: 4915, memberPrice: 4424, sku: "SH-10424", tag: "New", ph: "", img: "assets/products/oc36.webp",
+    imgs: ["assets/products/oc36.webp", "assets/products/oc36-2.webp", "assets/products/oc36-3.webp", "assets/products/oc36-4.webp", "assets/products/oc36-5.webp"],
+    sizes: [{ label: "Off White", price: 4915 }],
+    desc: "Off white cushions on a steel frame.",
+    features: [
+      "Steel frame",
+      "Off White cushions",
+      "Slim and light"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Steel / metal", "Options": "1", "Room": "Living / Indoor" },
+    care: "Wipe with a soft, damp cloth and dry. Avoid abrasive pads on plated or brushed finishes, and check the feet for floor protectors." },
+
+  { id: "oc37", name: "Velvet Chair on Stainless Steel", cat: "Living Room", room: "Living Room", price: 4924, memberPrice: 4432, sku: "SH-10425", tag: "New", ph: "", img: "assets/products/oc37.webp",
+    imgs: ["assets/products/oc37.webp", "assets/products/oc37-2.webp", "assets/products/oc37-3.webp", "assets/products/oc37-4.webp", "assets/products/oc37-5.webp"],
+    sizes: [{ label: "White", price: 4924 }, { label: "Green", price: 4924 }, { label: "Brown", price: 4924 }, { label: "Light Green", price: 4924 }, { label: "Beige", price: 4924 }],
+    desc: "Velvet on stainless steel in five colours, from white through to a soft light green.",
+    features: [
+      "Velvet on stainless steel",
+      "Five colourways",
+      "Polished metal base"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "5", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc38", name: "Gold & Cream Velvet Chair", cat: "Living Room", room: "Living Room", price: 4939, memberPrice: 4445, sku: "SH-10426", tag: "New", ph: "", img: "assets/products/oc38.webp",
+    imgs: ["assets/products/oc38.webp", "assets/products/oc38-2.webp", "assets/products/oc38-3.webp", "assets/products/oc38-4.webp", "assets/products/oc38-5.webp"],
+    sizes: [{ label: "Gold + Cream", price: 4939 }],
+    desc: "Cream velvet on gold stainless steel. Unashamedly decorative.",
+    features: [
+      "Cream velvet, gold steel",
+      "Decorative accent chair",
+      "Single colourway"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc39", name: "Ivory Occasional Chair", cat: "Living Room", room: "Living Room", price: 4944, memberPrice: 4450, sku: "SH-10427", tag: "New", ph: "", img: "assets/products/oc39.webp",
+    imgs: ["assets/products/oc39.webp", "assets/products/oc39-2.webp", "assets/products/oc39-3.webp", "assets/products/oc39-4.webp", "assets/products/oc39-5.webp"],
+    sizes: [{ label: "Ivory", price: 4944 }],
+    desc: "A plain ivory chair, soft and quiet.",
+    features: [
+      "Ivory upholstery",
+      "Soft seat",
+      "Understated"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc40", name: "Leather Chair in Seven Colours", cat: "Living Room", room: "Living Room", price: 4963, memberPrice: 4467, sku: "SH-10428", tag: "New", ph: "", img: "assets/products/oc40.webp",
+    imgs: ["assets/products/oc40.webp", "assets/products/oc40-2.webp", "assets/products/oc40-3.webp", "assets/products/oc40-4.webp", "assets/products/oc40-5.webp"],
+    sizes: [{ label: "Black", price: 4963 }, { label: "Pink", price: 4963 }, { label: "Khaki", price: 4963 }, { label: "Grey", price: 4963 }, { label: "White", price: 4963 }, { label: "Chocolate", price: 4963 }, { label: "Orange", price: 4963 }],
+    desc: "Leather over timber in seven colours, from black and chocolate through to pink and khaki.",
+    features: [
+      "Leather over timber",
+      "Seven colourways",
+      "Cushioned seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "7", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc41", name: "Ash & Fabric Occasional Chair", cat: "Living Room", room: "Living Room", price: 5093, memberPrice: 4584, sku: "SH-10429", tag: "New", ph: "", img: "assets/products/oc41.webp",
+    imgs: ["assets/products/oc41.webp", "assets/products/oc41-2.webp", "assets/products/oc41-3.webp", "assets/products/oc41-4.webp", "assets/products/oc41-5.webp"],
+    desc: "Fabric on an ash timber frame, cushioned.",
+    features: [
+      "Ash timber frame",
+      "Fabric upholstery",
+      "Cushioned seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Solid timber", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "oc42", name: "Coffee-Toned Cushion Chair", cat: "Living Room", room: "Living Room", price: 5135, memberPrice: 4622, sku: "SH-10430", tag: "New", ph: "", img: "assets/products/oc42.webp",
+    imgs: ["assets/products/oc42.webp", "assets/products/oc42-2.webp", "assets/products/oc42-3.webp", "assets/products/oc42-4.webp", "assets/products/oc42-5.webp"],
+    sizes: [{ label: "Coffee", price: 5135 }],
+    desc: "A deep coffee colour, heavily cushioned.",
+    features: [
+      "Coffee colourway",
+      "Deeply cushioned",
+      "Soft, enveloping seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc43", name: "Army Green Swivel Chair", cat: "Living Room", room: "Living Room", price: 5148, memberPrice: 4633, sku: "SH-10431", tag: "New", ph: "", img: "assets/products/oc43.webp",
+    imgs: ["assets/products/oc43.webp", "assets/products/oc43-2.webp", "assets/products/oc43-3.webp", "assets/products/oc43-4.webp", "assets/products/oc43-5.webp"],
+    sizes: [{ label: "Army Green", price: 5148 }],
+    desc: "A swivel chair in army green, which is far easier to live with than it sounds.",
+    features: [
+      "Swivel base",
+      "Army green",
+      "Turns to face the room"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc44", name: "Occasional Chair in Burnt Orange", cat: "Living Room", room: "Living Room", price: 5178, memberPrice: 4660, sku: "SH-10432", tag: "New", ph: "", img: "assets/products/oc44.webp",
+    imgs: ["assets/products/oc44.webp", "assets/products/oc44-2.webp", "assets/products/oc44-3.webp", "assets/products/oc44-4.webp", "assets/products/oc44-5.webp"],
+    sizes: [{ label: "Burnt Orange", price: 5178 }, { label: "Emerald Green", price: 5178 }, { label: "Grey", price: 5178 }, { label: "Ocean Green", price: 5178 }, { label: "White", price: 5178 }],
+    desc: "Burnt orange, emerald green, grey, ocean green or white.",
+    features: [
+      "Five colourways",
+      "Burnt orange and emerald green options",
+      "Upholstered seat and back"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "5", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc45", name: "Velvet Chair with Oak Legs", cat: "Living Room", room: "Living Room", price: 5202, memberPrice: 4682, sku: "SH-10433", tag: "New", ph: "", img: "assets/products/oc45.webp",
+    imgs: ["assets/products/oc45.webp", "assets/products/oc45-2.webp", "assets/products/oc45-3.webp", "assets/products/oc45-4.webp", "assets/products/oc45-5.webp"],
+    sizes: [{ label: "Army Green", price: 5202 }, { label: "Yellow", price: 5202 }, { label: "Orange", price: 5202 }, { label: "Purple Pink", price: 5202 }, { label: "Off-White", price: 5202 }, { label: "Grey", price: 5202 }, { label: "Black", price: 5202 }, { label: "Dark Green", price: 5202 }],
+    desc: "Velvet on oak, in army green, yellow, orange, purple pink, off white and grey.",
+    features: [
+      "Velvet on oak legs",
+      "Six colourways",
+      "Bold and neutral options"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "8", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc46", name: "Ivory Wool Chair", cat: "Living Room", room: "Living Room", price: 5306, memberPrice: 4775, sku: "SH-10434", tag: "New", ph: "", img: "assets/products/oc46.webp",
+    imgs: ["assets/products/oc46.webp", "assets/products/oc46-2.webp", "assets/products/oc46-3.webp", "assets/products/oc46-4.webp", "assets/products/oc46-5.webp"],
+    sizes: [{ label: "Ivory", price: 5306 }],
+    desc: "Wool in ivory, warm and textural.",
+    features: [
+      "Wool upholstery",
+      "Ivory colourway",
+      "Warm texture"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Wool / lambswool", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum gently and air it rather than washing. Blot spills straight away, and keep it out of prolonged damp." },
+
+  { id: "oc47", name: "Leather Cushion Chair", cat: "Living Room", room: "Living Room", price: 5324, memberPrice: 4792, sku: "SH-10435", tag: "New", ph: "", img: "assets/products/oc47.webp",
+    imgs: ["assets/products/oc47.webp", "assets/products/oc47-2.webp", "assets/products/oc47-3.webp", "assets/products/oc47-4.webp", "assets/products/oc47-5.webp"],
+    desc: "Leather with deep cushions, one finish, no decisions.",
+    features: [
+      "Genuine leather",
+      "Deeply cushioned",
+      "Single finish"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc48", name: "Bouclé Chair with Ash & Metal Frame", cat: "Living Room", room: "Living Room", price: 5519, memberPrice: 4967, sku: "SH-10436", tag: "New", ph: "", img: "assets/products/oc48.webp",
+    imgs: ["assets/products/oc48.webp", "assets/products/oc48-2.webp", "assets/products/oc48-3.webp", "assets/products/oc48-4.webp", "assets/products/oc48-5.webp"],
+    sizes: [{ label: "Black", price: 5519 }, { label: "Beige", price: 5519 }, { label: "Caramel", price: 5519 }],
+    desc: "Bouclé on ash and metal, in black, beige or caramel.",
+    features: [
+      "Bouclé on ash and metal",
+      "Black, Beige or Caramel",
+      "Structured frame"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Bouclé", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc49", name: "Chocolate or Black Cushion Chair", cat: "Living Room", room: "Living Room", price: 5533, memberPrice: 4980, sku: "SH-10437", tag: "New", ph: "", img: "assets/products/oc49.webp",
+    imgs: ["assets/products/oc49.webp", "assets/products/oc49-2.webp", "assets/products/oc49-3.webp", "assets/products/oc49-4.webp", "assets/products/oc49-5.webp"],
+    sizes: [{ label: "Chocolate", price: 5533 }, { label: "Black", price: 5533 }],
+    desc: "Deeply cushioned, in chocolate or black.",
+    features: [
+      "Chocolate or Black",
+      "Deep cushioning",
+      "Dark, grounding colours"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc50", name: "Leather Chair in Four Colours", cat: "Living Room", room: "Living Room", price: 5533, memberPrice: 4980, sku: "SH-10438", tag: "New", ph: "", img: "assets/products/oc50.webp",
+    imgs: ["assets/products/oc50.webp", "assets/products/oc50-2.webp", "assets/products/oc50-3.webp", "assets/products/oc50-4.webp", "assets/products/oc50-5.webp"],
+    sizes: [{ label: "Navy", price: 5533 }, { label: "Orange", price: 5533 }, { label: "Brown", price: 5533 }, { label: "Black", price: 5533 }],
+    desc: "Leather in navy, orange, brown or black.",
+    features: [
+      "Genuine leather",
+      "Four colourways",
+      "Classic accent chair"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc51", name: "Lounge Chair with Optional Stool", cat: "Living Room", room: "Living Room", price: 5741, memberPrice: 5167, sku: "SH-10439", tag: "New", ph: "", img: "assets/products/oc51.webp",
+    imgs: ["assets/products/oc51.webp", "assets/products/oc51-2.webp", "assets/products/oc51-3.webp", "assets/products/oc51-4.webp", "assets/products/oc51-5.webp"],
+    sizes: [{ label: "- Foot Stool", price: 5741 }, { label: "+ Foot Stool", price: 6791 }],
+    desc: "With or without the foot stool. The stool makes it a reading chair rather than a sitting one.",
+    features: [
+      "With or without foot stool",
+      "Relaxed lounge proportions",
+      "Soft upholstery"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc52", name: "Bouclé & Leather Chair on Steel", cat: "Living Room", room: "Living Room", price: 5809, memberPrice: 5228, sku: "SH-10440", tag: "New", ph: "", img: "assets/products/oc52.webp",
+    imgs: ["assets/products/oc52.webp", "assets/products/oc52-2.webp", "assets/products/oc52-3.webp", "assets/products/oc52-4.webp", "assets/products/oc52-5.webp"],
+    sizes: [{ label: "Black", price: 5809 }, { label: "Orange", price: 5809 }],
+    desc: "Bouclé with leather on stainless steel, in black or orange.",
+    features: [
+      "Bouclé with leather detail",
+      "Stainless steel frame",
+      "Black or Orange"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Bouclé", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum gently with a brush head and blot spills. Trim any snagged loop with scissors rather than pulling it." },
+
+  { id: "oc53", name: "Leather Chair on Stainless Steel", cat: "Living Room", room: "Living Room", price: 6109, memberPrice: 5498, sku: "SH-10441", tag: "New", ph: "", img: "assets/products/oc53.webp",
+    imgs: ["assets/products/oc53.webp", "assets/products/oc53-2.webp", "assets/products/oc53-3.webp", "assets/products/oc53-4.webp", "assets/products/oc53-5.webp"],
+    sizes: [{ label: "French Cream", price: 6109 }, { label: "Black", price: 6109 }, { label: "Emerald Green", price: 6109 }],
+    desc: "Leather on stainless steel in French cream, black or emerald green.",
+    features: [
+      "Leather on stainless steel",
+      "French Cream, Black or Emerald Green",
+      "Cushioned seat"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "3", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc54", name: "Leather & Timber Lounge Chair", cat: "Living Room", room: "Living Room", price: 6109, memberPrice: 5498, sku: "SH-10442", tag: "New", ph: "", img: "assets/products/oc54.webp",
+    imgs: ["assets/products/oc54.webp", "assets/products/oc54-2.webp", "assets/products/oc54-3.webp", "assets/products/oc54-4.webp", "assets/products/oc54-5.webp"],
+    desc: "Leather on timber, cushioned, in one finish.",
+    features: [
+      "Leather over timber",
+      "Cushioned seat",
+      "Single finish"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc55", name: "Leather Chair, Four Neutrals", cat: "Living Room", room: "Living Room", price: 6250, memberPrice: 5625, sku: "SH-10443", tag: "New", ph: "", img: "assets/products/oc55.webp",
+    imgs: ["assets/products/oc55.webp", "assets/products/oc55-2.webp", "assets/products/oc55-3.webp", "assets/products/oc55-4.webp", "assets/products/oc55-5.webp"],
+    sizes: [{ label: "Black", price: 6250 }, { label: "Grey", price: 6250 }, { label: "White", price: 6250 }, { label: "Tan", price: 6250 }],
+    desc: "Leather in black, grey, white or tan: the four that go with everything.",
+    features: [
+      "Genuine leather",
+      "Black, Grey, White or Tan",
+      "Neutral palette"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc56", name: "Velvet Chair on Timber", cat: "Living Room", room: "Living Room", price: 6254, memberPrice: 5629, sku: "SH-10444", tag: "New", ph: "", img: "assets/products/oc56.webp",
+    imgs: ["assets/products/oc56.webp", "assets/products/oc56-2.webp", "assets/products/oc56-3.webp", "assets/products/oc56-4.webp", "assets/products/oc56-5.webp"],
+    sizes: [{ label: "Khaki", price: 6254 }, { label: "Creamy White", price: 6254 }, { label: "Grey", price: 6254 }],
+    desc: "Velvet on timber in khaki, creamy white or grey.",
+    features: [
+      "Velvet on a timber frame",
+      "Khaki, Creamy White or Grey",
+      "Soft tailored shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc57", name: "Walnut Frame Occasional Chair", cat: "Living Room", room: "Living Room", price: 6406, memberPrice: 5765, sku: "SH-10445", tag: "New", ph: "", img: "assets/products/oc57.webp",
+    imgs: ["assets/products/oc57.webp", "assets/products/oc57-2.webp", "assets/products/oc57-3.webp", "assets/products/oc57-4.webp", "assets/products/oc57-5.webp"],
+    desc: "A walnut frame with cushions, dark timber doing the structural work.",
+    features: [
+      "Walnut frame",
+      "Cushioned seat",
+      "Single finish"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Solid timber", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "oc58", name: "Velvet Chair in Green, White or Blue", cat: "Living Room", room: "Living Room", price: 6411, memberPrice: 5770, sku: "SH-10446", tag: "New", ph: "", img: "assets/products/oc58.webp",
+    imgs: ["assets/products/oc58.webp", "assets/products/oc58-2.webp", "assets/products/oc58-3.webp", "assets/products/oc58-4.webp", "assets/products/oc58-5.webp"],
+    sizes: [{ label: "Green", price: 6411 }, { label: "Off White", price: 6411 }, { label: "Blue", price: 6411 }],
+    desc: "Velvet in green, off white or blue.",
+    features: [
+      "Velvet upholstery",
+      "Green, Off White or Blue",
+      "Accent chair proportions"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Velvet", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum with a brush head to lift the pile and blot spills rather than rubbing, since rubbing crushes the nap. Keep out of strong direct sun." },
+
+  { id: "oc59", name: "Lambswool Chair on Timber", cat: "Living Room", room: "Living Room", price: 6644, memberPrice: 5980, sku: "SH-10447", tag: "New", ph: "", img: "assets/products/oc59.webp",
+    imgs: ["assets/products/oc59.webp", "assets/products/oc59-2.webp", "assets/products/oc59-3.webp", "assets/products/oc59-4.webp", "assets/products/oc59-5.webp"],
+    sizes: [{ label: "Beige", price: 6644 }],
+    desc: "Lambswool on timber in beige, the warmest seat here.",
+    features: [
+      "Lambswool on timber",
+      "Beige",
+      "Very warm to sit in"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Wool / lambswool", "Options": "1", "Room": "Living / Indoor" },
+    care: "Vacuum gently and air it rather than washing. Blot spills straight away, and keep it out of prolonged damp." },
+
+  { id: "oc60", name: "Leather Rocking Chair", cat: "Living Room", room: "Living Room", price: 6806, memberPrice: 6125, sku: "SH-10448", tag: "New", ph: "", img: "assets/products/oc60.webp",
+    imgs: ["assets/products/oc60.webp", "assets/products/oc60-2.webp", "assets/products/oc60-3.webp", "assets/products/oc60-4.webp", "assets/products/oc60-5.webp"],
+    sizes: [{ label: "Cream", price: 6806 }],
+    desc: "A cream leather rocking chair on a timber frame. Rare, and worth it beside a window.",
+    features: [
+      "Leather on a timber rocker",
+      "Cream colourway",
+      "Genuine rocking action"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc61", name: "Sculptural Chair in Three Colours", cat: "Living Room", room: "Living Room", price: 6809, memberPrice: 6128, sku: "SH-10449", tag: "New", ph: "", img: "assets/products/oc61.webp",
+    imgs: ["assets/products/oc61.webp", "assets/products/oc61-2.webp", "assets/products/oc61-3.webp", "assets/products/oc61-4.webp", "assets/products/oc61-5.webp"],
+    sizes: [{ label: "Black", price: 6809 }, { label: "Mustard", price: 6809 }, { label: "Snow White", price: 6809 }],
+    desc: "A sculptural shape in black, mustard or snow white. Mustard is the brave one.",
+    features: [
+      "Sculptural silhouette",
+      "Black, Mustard or Snow White",
+      "A design-led accent chair"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc62", name: "Swivel Chair in Khaki, Navy or Orange", cat: "Living Room", room: "Living Room", price: 6887, memberPrice: 6198, sku: "SH-10450", tag: "New", ph: "", img: "assets/products/oc62.webp",
+    imgs: ["assets/products/oc62.webp", "assets/products/oc62-2.webp", "assets/products/oc62-3.webp", "assets/products/oc62-4.webp", "assets/products/oc62-5.webp"],
+    sizes: [{ label: "Khaki Green", price: 6887 }, { label: "Navy", price: 6887 }, { label: "Orange", price: 6887 }],
+    desc: "A swivel chair in khaki green, navy or orange.",
+    features: [
+      "Swivel base",
+      "Khaki Green, Navy or Orange",
+      "Turns to face the room"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc63", name: "Two-Tone Leather Chair in Brown", cat: "Living Room", room: "Living Room", price: 6959, memberPrice: 6263, sku: "SH-10451", tag: "New", ph: "", img: "assets/products/oc63.webp",
+    imgs: ["assets/products/oc63.webp", "assets/products/oc63-2.webp", "assets/products/oc63-3.webp", "assets/products/oc63-4.webp", "assets/products/oc63-5.webp"],
+    sizes: [{ label: "White + Brown", price: 6959 }, { label: "Black + Brown", price: 6959 }],
+    desc: "Leather in white and brown or black and brown.",
+    features: [
+      "Two-tone leather",
+      "White + Brown or Black + Brown",
+      "Structured shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "2", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc64", name: "Walnut & Cushion Lounge Chair", cat: "Living Room", room: "Living Room", price: 7204, memberPrice: 6484, sku: "SH-10452", tag: "New", ph: "", img: "assets/products/oc64.webp",
+    imgs: ["assets/products/oc64.webp", "assets/products/oc64-2.webp", "assets/products/oc64-3.webp", "assets/products/oc64-4.webp", "assets/products/oc64-5.webp"],
+    desc: "A walnut frame with deep cushions.",
+    features: [
+      "Walnut frame",
+      "Deep cushions",
+      "Single finish"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Solid timber", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "oc65", name: "Ash Chair in Purple, Yellow or Beige", cat: "Living Room", room: "Living Room", price: 7204, memberPrice: 6484, sku: "SH-10453", tag: "New", ph: "", img: "assets/products/oc65.webp",
+    imgs: ["assets/products/oc65.webp", "assets/products/oc65-2.webp", "assets/products/oc65-3.webp", "assets/products/oc65-4.webp", "assets/products/oc65-5.webp"],
+    sizes: [{ label: "Royal Purple", price: 7204 }, { label: "Lemon Yellow", price: 7204 }, { label: "Cream Beige", price: 7204 }],
+    desc: "Ash timber in royal purple, lemon yellow or cream beige. The colours are unusual and the better for it.",
+    features: [
+      "Ash timber",
+      "Royal Purple, Lemon Yellow or Cream Beige",
+      "Unusual colour range"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Solid timber", "Options": "3", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills promptly. Keep out of direct sun and check the joints occasionally, tightening any fixings." },
+
+  { id: "oc66", name: "Leather & Walnut Chair", cat: "Living Room", room: "Living Room", price: 7370, memberPrice: 6633, sku: "SH-10454", tag: "New", ph: "", img: "assets/products/oc66.webp",
+    imgs: ["assets/products/oc66.webp", "assets/products/oc66-2.webp", "assets/products/oc66-3.webp", "assets/products/oc66-4.webp", "assets/products/oc66-5.webp"],
+    desc: "Leather on walnut, one finish, properly made.",
+    features: [
+      "Leather on walnut",
+      "Single finish",
+      "Solid timber frame"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "1", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
+  { id: "oc67", name: "Occasional Chair in Snow White or Charcoal", cat: "Living Room", room: "Living Room", price: 7659, memberPrice: 6893, sku: "SH-10455", tag: "New", ph: "", img: "assets/products/oc67.webp",
+    imgs: ["assets/products/oc67.webp", "assets/products/oc67-2.webp", "assets/products/oc67-3.webp", "assets/products/oc67-4.webp", "assets/products/oc67-5.webp"],
+    sizes: [{ label: "Snow White", price: 7659 }, { label: "Charcoal Grey", price: 7659 }],
+    desc: "Snow white or charcoal grey.",
+    features: [
+      "Snow White or Charcoal Grey",
+      "Upholstered seat and back",
+      "Contemporary shape"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Upholstery fabric", "Options": "2", "Room": "Living / Indoor" },
+    care: "Vacuum regularly and blot spills immediately. Plump and rotate cushions so they wear evenly." },
+
+  { id: "oc68", name: "Leather Chair with Optional Foot Stool", cat: "Living Room", room: "Living Room", price: 7759, memberPrice: 6983, sku: "SH-10456", tag: "New", ph: "", img: "assets/products/oc68.webp",
+    imgs: ["assets/products/oc68.webp", "assets/products/oc68-2.webp", "assets/products/oc68-3.webp", "assets/products/oc68-4.webp", "assets/products/oc68-5.webp"],
+    sizes: [{ label: "Brown / - Foot Stool", price: 7759 }, { label: "Black / - Foot Stool", price: 7759 }, { label: "Brown / + Foot Stool", price: 9611 }, { label: "Black / + Foot Stool", price: 9611 }],
+    desc: "Brown or black leather, with or without the foot stool.",
+    features: [
+      "Genuine leather",
+      "Brown or Black",
+      "With or without foot stool"
+    ],
+    specs: { "Type": "Occasional chair", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
+    care: "Dust with a dry cloth and wipe spills at once with a barely damp one. Keep out of direct sun and away from heaters, which dry and crack hide. Condition once or twice a year." },
+
   // ── Outdoor ──
   { id: "od01", name: "Steel Fire Pit with Built-In Log Store", cat: "Outdoor", room: "Outdoor", price: 7104, memberPrice: 6394, sku: "SH-10116", tag: "New", ph: "", img: "assets/products/od01.jpg",
     imgs: ["assets/products/od01.jpg", "assets/products/od01-2.jpg", "assets/products/od01-3.jpg", "assets/products/od01-4.jpg", "assets/products/od01-5.jpg", "assets/products/od01-6.webp", "assets/products/od01-7.webp", "assets/products/od01-8.webp"],
