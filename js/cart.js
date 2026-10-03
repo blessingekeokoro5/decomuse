@@ -107,6 +107,14 @@ function toggleWishlist(id, el) {
   if (i >= 0) { w.splice(i, 1); added = false; } else { w.push(id); added = true; }
   saveWishlist(w);
   if (el) el.classList.toggle("on", added);
+  // A product can show more than one heart (the photo overlay and the Save
+  // button under the card), so keep every one of them in step.
+  document.querySelectorAll(`[data-wish="${id}"]`).forEach(b => {
+    b.classList.toggle("on", added);
+    const lab = b.querySelector("span");
+    if (lab) lab.textContent = added ? "Saved" : "Save";
+    b.setAttribute("aria-pressed", added ? "true" : "false");
+  });
   const p = findProduct(id);
   showToast(added ? `Saved “${p ? p.name : "item"}” to your wishlist ♡` : "Removed from your wishlist");
   if (typeof renderWishlistPage === "function") renderWishlistPage();
@@ -253,7 +261,7 @@ function productCard(p) {
     <article class="card product" data-cat="${p.cat}">
       <div class="card-media">
         <div class="card-badges">${hot}${tag}</div>
-        <button class="wish ${isWishlisted(p.id) ? "on" : ""}" aria-label="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}</button>
+        <button class="wish ${isWishlisted(p.id) ? "on" : ""}" data-wish="${p.id}" aria-pressed="${isWishlisted(p.id)}" aria-label="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}</button>
         <button class="find-sim" type="button" aria-label="Find similar products on Samira Home Decor" title="Find similar on Samira Home Decor" onclick="findSimilar('${p.id}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="11" cy="11" r="3"/><path d="m15 15 2.2 2.2"/></svg></button>
         <a href="product.html?id=${p.id}" aria-label="${p.name}"><div class="ph ${p.ph}" data-label="${p.name}">${prodImgTag(p)}</div></a>
         <span class="dm-verified" title="Samira Home Decor Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SYS Verified</span></span>
@@ -267,6 +275,13 @@ function productCard(p) {
         ${p.dontPay ? `<div class="dont-pay"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
         ${p.memberPrice ? `<div class="member-price">✦ Members ${money(p.memberPrice)}</div>` : ""}
         ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}`}
+        <div class="card-actions">
+          <button class="card-act ${isWishlisted(p.id) ? "on" : ""}" type="button" data-wish="${p.id}" aria-pressed="${isWishlisted(p.id)}" aria-label="Save ${p.name} to your wishlist"
+                  title="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}<span>${isWishlisted(p.id) ? "Saved" : "Save"}</span></button>
+          <button class="card-act" type="button" aria-label="Download a photo of ${p.name}"
+                  title="Download the photo" onclick="downloadProductImage('${p.id}', this)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/></svg><span>Download</span></button>
+        </div>
         <div class="product-foot">
           <span class="stars">★★★★★</span>
           ${p.cat === "Packaging"
@@ -275,6 +290,36 @@ function productCard(p) {
         </div>
       </div>
     </article>`;
+}
+
+
+/* Download a product photo — for mood boards, client presentations and
+   the styling clients who ask for "that one, but send it to me". */
+async function downloadProductImage(id, btn) {
+  const p = findProduct(id);
+  if (!p) return;
+  const src = (p.imgs && p.imgs[0]) || p.img;
+  if (!src) { showToast("No photo to download for this one"); return; }
+  const label = btn && btn.querySelector("span");
+  const was = label ? label.textContent : "";
+  if (label) label.textContent = "Saving…";
+  try {
+    const res = await fetch(src.split("?")[0]);
+    if (!res.ok) throw new Error("fetch failed");
+    const blob = await res.blob();
+    const ext = (src.split("?")[0].match(/\.(\w+)$/) || [, "jpg"])[1];
+    const name = (p.name || "product").replace(/[^\w\s-]/g, "").trim().replace(/\s+/g, "-").toLowerCase();
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url; a.download = `${name}-${p.sku || p.id}.${ext}`;
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(url), 4000);
+    showToast(`Saved the photo of “${p.name}”`);
+  } catch (e) {
+    // Some browsers block a programmatic download; opening it lets the shopper save it themselves.
+    window.open(src, "_blank", "noopener");
+  }
+  if (label) label.textContent = was || "Download";
 }
 
 function renderProducts(targetId, list) {

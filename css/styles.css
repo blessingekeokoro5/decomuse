@@ -1907,3 +1907,87 @@ em { font-style: italic; color: var(--rose-deep); }
 .help-band--slim .hb-head p { display: none; }
 @media (max-width: 900px){ .hb-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px){ .hb-grid { grid-template-columns: 1fr; } }
+
+/* ============================================================
+   Phones
+   ------------------------------------------------------------
+   On a 390px screen the floating helpers were covering roughly
+   the bottom 120px across the full width, which is exactly where
+   a page's buttons sit, plus a tab down the right edge. This
+   block gives the content back its screen, and brings tap
+   targets and the smallest text up to a usable size.
+   ============================================================ */
+@media (max-width: 640px) {
+
+  /* --- Floating helpers: one of each, out of the way --- */
+  .float-left { left: 12px; bottom: 12px; gap: 8px; }
+  .float-left .float-btn:first-child { display: none; }   /* phones have a back button */
+  .float-btn { width: 40px; height: 40px; font-size: 1rem; opacity: 0.92; }
+
+  .dm-launch { right: 12px; bottom: 12px; gap: 8px; }
+  .launch-btn { padding: 11px 16px; font-size: 0.82rem; box-shadow: var(--shadow-sm); }
+  .launch-help { padding: 9px 14px 9px 9px; }
+  .launch-help span:first-child { width: 22px; height: 22px; font-size: 0.78rem; }
+
+  .enquire-tab { display: none; }                          /* the enquiry form is in the menu and on every service page */
+
+  /* Nothing should end up hidden underneath them */
+  body { padding-bottom: 72px; }
+  .promo-banner { bottom: 76px; left: 12px; right: 12px; width: auto; max-width: none; transform: none; }
+  .promo-banner.show { transform: none; }
+
+  /* --- Touch targets --- */
+  .btn { min-height: 44px; padding-top: 12px; padding-bottom: 12px; }
+  .btn--sm { min-height: 40px; }
+  .qty button, .hm-item .qty button { min-width: 36px; min-height: 36px; }
+  .card-body .btn, .product-foot .btn { width: 100%; }
+  .hs-icon, .hs-btn { min-width: 40px; min-height: 40px; }
+
+  /* --- Readable type --- */
+  .form-note, .cat, small, .card-body p, .ch-list, .corp-items,
+  .kit-card small, .hm-item .info .p { font-size: 0.84rem; line-height: 1.5; }
+  .eyebrow { font-size: 0.72rem; letter-spacing: 0.16em; }
+  .price, .cl-name { font-size: 1rem; }
+
+  /* --- Grids that were too tight at this width --- */
+  .grid-3, .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .corp-grid, .kit-grid { grid-template-columns: 1fr; }
+  .vol-table th, .vol-table td { padding: 10px 11px; font-size: 0.84rem; }
+}
+
+@media (max-width: 420px) {
+  /* The smallest phones still in use: one product per row reads better than two squeezed */
+  .grid-3, .grid-4 { grid-template-columns: 1fr; }
+  .hm-items { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Phone sizing, with enough specificity to beat the desktop rules above */
+@media (max-width: 640px) {
+  .product .dm-verified { font-size: 0.78rem; bottom: 8px; left: 8px; padding: 4px 8px; }
+  .product .dm-verified svg { width: 13px; height: 13px; }
+  .product .badge-hot, .card-body .cat, .product .cat { font-size: 0.8rem; letter-spacing: 0.08em; }
+  .announce, .announce-inner, .announce-track { font-size: 0.78rem; }
+  .zoom-btn { width: 40px; height: 40px; opacity: 1; }          /* no hover on a phone, so always visible */
+  .card-media.has-img .zoom-btn { display: grid; }
+  .fcol a, .f-links a, footer a { padding: 7px 0; display: inline-block; min-height: 34px; }
+  .pay-badge { font-size: 0.78rem; }
+}
+
+/* Save & download, under every product card */
+.card-actions { display: flex; gap: 8px; margin: 10px 0 2px; }
+.card-act { flex: 1; display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  background: #fff; border: 1.5px solid var(--line); border-radius: 999px; padding: 8px 10px;
+  font-family: var(--font-body); font-size: 0.78rem; color: var(--body); cursor: pointer; min-height: 38px;
+  transition: border-color var(--tr), color var(--tr); }
+.card-act svg { width: 16px; height: 16px; flex: none; }
+.card-act:hover { border-color: var(--rose-soft); color: var(--ink); }
+.card-act.on { border-color: var(--rose); color: var(--rose-deep); }
+.card-act.on svg { fill: var(--rose); }
+@media (max-width: 640px) {
+  .card-act { min-height: 42px; font-size: 0.8rem; }
+  .card-act span { display: inline; }
+}
+@media (max-width: 340px) {
+  .card-act span { display: none; }          /* icons only on the very narrowest phones */
+  .card-act { padding: 10px; }
+}
