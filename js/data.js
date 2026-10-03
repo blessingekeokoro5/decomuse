@@ -4427,6 +4427,384 @@ const PRODUCTS = [
     care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
 
   // ── Home Décor ──
+  { id: "dc01x", name: "Layered Display Plates", cat: "Home Décor", room: "Home Décor", price: 170, memberPrice: 153, sku: "SH-10644", tag: "New", ph: "", img: "assets/products/dc01x.webp",
+    imgs: ["assets/products/dc01x.webp", "assets/products/dc01x-2.webp", "assets/products/dc01x-3.webp", "assets/products/dc01x-4.webp"],
+    sizes: [{ label: "Small / Silver", price: 170 }, { label: "Large / Silver", price: 289 }],
+    desc: "Stacked metal plates in silver, small or large, for a console or a shelf where something sculptural is needed.",
+    features: [
+      "Layered metal form",
+      "Small or Large",
+      "Silver finish"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "dc02x", name: "Marble-Look Tissue Box Cover", cat: "Home Décor", room: "Home Décor", price: 222, memberPrice: 200, sku: "SH-10645", tag: "New", ph: "", img: "assets/products/dc02x.webp",
+    imgs: ["assets/products/dc02x.webp", "assets/products/dc02x-2.webp", "assets/products/dc02x-3.webp", "assets/products/dc02x-4.webp", "assets/products/dc02x-5.webp"],
+    sizes: [{ label: "Black + White", price: 222 }, { label: "White + Grey", price: 222 }, { label: "White + Tan", price: 222 }],
+    desc: "A tissue box cover in black and white, white and grey, or white and tan, because the cardboard box it hides is not doing your bathroom any favours.",
+    features: [
+      "Covers a standard tissue box",
+      "Three colourways",
+      "Marble-look finish"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Resin / composite", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents." },
+
+  { id: "dc03x", name: "Crystal Camera Ornament", cat: "Home Décor", room: "Home Décor", price: 222, memberPrice: 200, sku: "SH-10646", tag: "New", ph: "", img: "assets/products/dc03x.webp",
+    imgs: ["assets/products/dc03x.webp", "assets/products/dc03x-2.webp", "assets/products/dc03x-3.webp", "assets/products/dc03x-4.webp", "assets/products/dc03x-5.webp"],
+    sizes: [{ label: "Stand Excluded", price: 222 }, { label: "Stand Included", price: 278 }],
+    desc: "A crystal camera, with or without its stand. An object rather than a thing with a use, which is rather the point.",
+    features: [
+      "Crystal construction",
+      "Stand included or excluded",
+      "Decorative object"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Glass", "Options": "2" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes." },
+
+  { id: "dc04x", name: "Travertine Holder", cat: "Home Décor", room: "Home Décor", price: 254, memberPrice: 229, sku: "SH-10647", tag: "New", ph: "", img: "assets/products/dc04x.webp",
+    imgs: ["assets/products/dc04x.webp", "assets/products/dc04x-2.webp", "assets/products/dc04x-3.webp", "assets/products/dc04x-4.webp", "assets/products/dc04x-5.webp"],
+    desc: "Solid travertine, one size, for whatever you want to stand in it.",
+    features: [
+      "Solid travertine",
+      "Single size",
+      "Natural pitted texture"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc05x", name: "Travertine Ornaments", cat: "Home Décor", room: "Home Décor", price: 285, memberPrice: 256, sku: "SH-10648", tag: "New", ph: "", img: "assets/products/dc05x.webp",
+    imgs: ["assets/products/dc05x.webp", "assets/products/dc05x-2.webp", "assets/products/dc05x-3.webp", "assets/products/dc05x-4.webp", "assets/products/dc05x-5.webp"],
+    desc: "Travertine shapes for a shelf or coffee table, cut from the same stone as our trays.",
+    features: [
+      "Solid travertine",
+      "Shelf or table scale",
+      "Natural variation"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc06x", name: "Travertine Sphere (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 313, memberPrice: 282, sku: "SH-10649", tag: "New", ph: "", img: "assets/products/dc06x.webp",
+    imgs: ["assets/products/dc06x.webp", "assets/products/dc06x-2.webp", "assets/products/dc06x-3.webp", "assets/products/dc06x-4.webp", "assets/products/dc06x-5.webp"],
+    sizes: [{ label: "S", price: 313 }, { label: "M", price: 402 }, { label: "L", price: 591 }],
+    desc: "A travertine ball in small, medium or large. Group all three in a bowl, which is the usual way.",
+    features: [
+      "Solid travertine sphere",
+      "Small, Medium and Large",
+      "Group in a bowl or tray"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc07x", name: "Swan Wine Decanter (1700ml)", cat: "Home Décor", room: "Home Décor", price: 315, memberPrice: 284, sku: "SH-10650", tag: "New", ph: "", img: "assets/products/dc07x.webp",
+    imgs: ["assets/products/dc07x.webp", "assets/products/dc07x-2.webp", "assets/products/dc07x-3.webp"],
+    sizes: [{ label: "1700ml", price: 315 }],
+    desc: "A 1.7 litre decanter in the shape of a swan, in red glass. Useful, and more decorative than most decanters manage.",
+    features: [
+      "1700ml capacity",
+      "Red glass",
+      "Sculptural swan form"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Glass", "Options": "1" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes." },
+
+  { id: "dc08x", name: "Travertine Vanity Tray", cat: "Home Décor", room: "Home Décor", price: 331, memberPrice: 298, sku: "SH-10651", tag: "New", ph: "", img: "assets/products/dc08x.webp",
+    imgs: ["assets/products/dc08x.webp", "assets/products/dc08x-2.webp", "assets/products/dc08x-3.webp", "assets/products/dc08x-4.webp", "assets/products/dc08x-5.webp"],
+    sizes: [{ label: "S", price: 331 }, { label: "L", price: 494 }],
+    desc: "Travertine in two sizes, for a vanity or a side table.",
+    features: [
+      "Solid travertine",
+      "Small and Large",
+      "Vanity or side table"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc09x", name: "Marble Cake Stand", cat: "Home Décor", room: "Home Décor", price: 333, memberPrice: 300, sku: "SH-10652", tag: "New", ph: "", img: "assets/products/dc09x.webp",
+    imgs: ["assets/products/dc09x.webp", "assets/products/dc09x-2.webp", "assets/products/dc09x-3.webp", "assets/products/dc09x-4.webp", "assets/products/dc09x-5.webp"],
+    sizes: [{ label: "Small / White Marble", price: 333 }, { label: "Small / Grey Marble", price: 333 }, { label: "Large / White Marble", price: 444 }, { label: "Large / Grey Marble", price: 444 }],
+    desc: "White marble in small or large. Equally good holding a cake or standing empty with a candle on it.",
+    features: [
+      "White marble",
+      "Small and Large",
+      "Cake stand or display riser"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural marble", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it away from vinegar, citrus and bleach, and stand it on felt to protect the surface underneath." },
+
+  { id: "dc10x", name: "Travertine Tray (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 339, memberPrice: 305, sku: "SH-10653", tag: "New", ph: "", img: "assets/products/dc10x.webp",
+    imgs: ["assets/products/dc10x.webp", "assets/products/dc10x-2.webp", "assets/products/dc10x-3.webp", "assets/products/dc10x-4.webp", "assets/products/dc10x-5.webp"],
+    sizes: [{ label: "S", price: 339 }, { label: "M", price: 420 }, { label: "L", price: 491 }],
+    desc: "Travertine in three sizes, so a set can be built up.",
+    features: [
+      "Solid travertine",
+      "Three sizes",
+      "Builds into a set"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc11x", name: "Travertine Lidded Jar", cat: "Home Décor", room: "Home Décor", price: 346, memberPrice: 311, sku: "SH-10654", tag: "New", ph: "", img: "assets/products/dc11x.webp",
+    imgs: ["assets/products/dc11x.webp", "assets/products/dc11x-2.webp", "assets/products/dc11x-3.webp"],
+    desc: "A lidded travertine jar, for cotton buds, jewellery or anything that shouldn't be on show.",
+    features: [
+      "Solid travertine with lid",
+      "Single size",
+      "Hides small clutter"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc12x", name: "Sandstone Tissue Box", cat: "Home Décor", room: "Home Décor", price: 350, memberPrice: 315, sku: "SH-10655", tag: "New", ph: "", img: "assets/products/dc12x.webp",
+    imgs: ["assets/products/dc12x.webp", "assets/products/dc12x-2.webp", "assets/products/dc12x-3.webp", "assets/products/dc12x-4.webp"],
+    sizes: [{ label: "Sandstone", price: 350 }],
+    desc: "Sandstone, matte and warm, in a single finish.",
+    features: [
+      "Natural sandstone",
+      "Matte finish",
+      "Covers a standard box"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural stone", "Options": "1" },
+    care: "Wipe with a soft, damp cloth. Avoid acidic and abrasive cleaners, which dull natural stone." },
+
+  { id: "dc13x", name: "Rotating Hour Glass", cat: "Home Décor", room: "Home Décor", price: 352, memberPrice: 317, sku: "SH-10656", tag: "New", ph: "", img: "assets/products/dc13x.webp",
+    imgs: ["assets/products/dc13x.webp", "assets/products/dc13x-2.webp", "assets/products/dc13x-3.webp", "assets/products/dc13x-4.webp", "assets/products/dc13x-5.webp"],
+    sizes: [{ label: "Brushed Gold", price: 352 }],
+    desc: "A brushed gold hour glass that turns in its frame, for a desk or a shelf.",
+    features: [
+      "Brushed gold frame",
+      "Rotates in its stand",
+      "Desk or shelf piece"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Metal", "Options": "1" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "dc14x", name: "Sculpted Figure Set", cat: "Home Décor", room: "Home Décor", price: 378, memberPrice: 340, sku: "SH-10657", tag: "New", ph: "", img: "assets/products/dc14x.webp",
+    imgs: ["assets/products/dc14x.webp", "assets/products/dc14x-2.webp", "assets/products/dc14x-3.webp", "assets/products/dc14x-4.webp", "assets/products/dc14x-5.webp"],
+    sizes: [{ label: "Black Set", price: 378 }, { label: "Grey Set", price: 378 }, { label: "Off White Set", price: 378 }],
+    desc: "A pair of sculpted figures in black, grey or off white. Bought as a set, because one alone looks lost.",
+    features: [
+      "Sold as a set",
+      "Black, Grey or Off White",
+      "Shelf or console scale"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Resin / composite", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents." },
+
+  { id: "dc15x", name: "Marble Essential Oil Burner", cat: "Home Décor", room: "Home Décor", price: 420, memberPrice: 378, sku: "SH-10658", tag: "New", ph: "", img: "assets/products/dc15x.webp",
+    imgs: ["assets/products/dc15x.webp", "assets/products/dc15x-2.webp", "assets/products/dc15x-3.webp", "assets/products/dc15x-4.webp", "assets/products/dc15x-5.webp"],
+    sizes: [{ label: "A", price: 420 }, { label: "B", price: 420 }, { label: "C", price: 420 }, { label: "D", price: 420 }, { label: "E", price: 420 }, { label: "F", price: 420 }],
+    desc: "Marble in six designs, A through F, so a pair need not match exactly.",
+    features: [
+      "Natural marble",
+      "Six designs",
+      "For essential oils"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural marble", "Options": "6" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it away from vinegar, citrus and bleach, and stand it on felt to protect the surface underneath." },
+
+  { id: "dc16x", name: "Stone Tissue Box", cat: "Home Décor", room: "Home Décor", price: 457, memberPrice: 411, sku: "SH-10659", tag: "New", ph: "", img: "assets/products/dc16x.webp",
+    imgs: ["assets/products/dc16x.webp", "assets/products/dc16x-2.webp", "assets/products/dc16x-3.webp", "assets/products/dc16x-4.webp", "assets/products/dc16x-5.webp"],
+    desc: "A stone tissue box in a single finish.",
+    features: [
+      "Natural stone",
+      "Single finish",
+      "Covers a standard box"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural stone", "Options": "1" },
+    care: "Wipe with a soft, damp cloth. Avoid acidic and abrasive cleaners, which dull natural stone." },
+
+  { id: "dc17x", name: "Marble Tissue Box", cat: "Home Décor", room: "Home Décor", price: 457, memberPrice: 411, sku: "SH-10660", tag: "New", ph: "", img: "assets/products/dc17x.webp",
+    imgs: ["assets/products/dc17x.webp", "assets/products/dc17x-2.webp", "assets/products/dc17x-3.webp", "assets/products/dc17x-4.webp"],
+    desc: "Solid marble, one finish. Heavy enough that pulling a tissue doesn't move it.",
+    features: [
+      "Solid marble",
+      "Weighted, stays put",
+      "Single finish"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural marble", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it away from vinegar, citrus and bleach, and stand it on felt to protect the surface underneath." },
+
+  { id: "dc18x", name: "Travertine Object Collection", cat: "Home Décor", room: "Home Décor", price: 461, memberPrice: 415, sku: "SH-10661", tag: "New", ph: "", img: "assets/products/dc18x.webp",
+    imgs: ["assets/products/dc18x.webp", "assets/products/dc18x-2.webp", "assets/products/dc18x-3.webp", "assets/products/dc18x-4.webp", "assets/products/dc18x-5.webp"],
+    sizes: [{ label: "1", price: 461 }, { label: "3", price: 476 }, { label: "2", price: 517 }, { label: "4", price: 572 }, { label: "5", price: 620 }],
+    desc: "Five travertine pieces, numbered 1 to 5, bought singly. Pick two or three of different heights.",
+    features: [
+      "Solid travertine",
+      "Five designs",
+      "Vary heights in a group"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "5" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc19x", name: "Travertine Storage Box", cat: "Home Décor", room: "Home Décor", price: 461, memberPrice: 415, sku: "SH-10662", tag: "New", ph: "", img: "assets/products/dc19x.webp",
+    imgs: ["assets/products/dc19x.webp", "assets/products/dc19x-2.webp", "assets/products/dc19x-3.webp", "assets/products/dc19x-4.webp", "assets/products/dc19x-5.webp"],
+    sizes: [{ label: "Travertine", price: 461 }],
+    desc: "A lidded travertine box, larger than the jar, for a dresser or a coffee table.",
+    features: [
+      "Solid travertine with lid",
+      "Dresser or table scale",
+      "Natural texture"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc20x", name: "Travertine Tissue Box", cat: "Home Décor", room: "Home Décor", price: 535, memberPrice: 482, sku: "SH-10663", tag: "New", ph: "", img: "assets/products/dc20x.webp",
+    imgs: ["assets/products/dc20x.webp", "assets/products/dc20x-2.webp", "assets/products/dc20x-3.webp", "assets/products/dc20x-4.webp", "assets/products/dc20x-5.webp"],
+    sizes: [{ label: "Beige", price: 535 }, { label: "Light Beige", price: 535 }],
+    desc: "Travertine in beige or light beige.",
+    features: [
+      "Solid travertine",
+      "Beige or Light Beige",
+      "Covers a standard box"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc21x", name: "Crystal Glass Decanter", cat: "Home Décor", room: "Home Décor", price: 550, memberPrice: 495, sku: "SH-10664", tag: "New", ph: "", img: "assets/products/dc21x.webp",
+    imgs: ["assets/products/dc21x.webp", "assets/products/dc21x-2.webp", "assets/products/dc21x-3.webp", "assets/products/dc21x-4.webp", "assets/products/dc21x-5.webp"],
+    desc: "A crystal decanter, plainly done, for spirits or water on a tray.",
+    features: [
+      "Crystal glass",
+      "Single size",
+      "Spirits or water"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Glass", "Options": "1" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes." },
+
+  { id: "dc22x", name: "Walnut Tissue Box", cat: "Home Décor", room: "Home Décor", price: 554, memberPrice: 499, sku: "SH-10665", tag: "New", ph: "", img: "assets/products/dc22x.webp",
+    imgs: ["assets/products/dc22x.webp", "assets/products/dc22x-2.webp", "assets/products/dc22x-3.webp", "assets/products/dc22x-4.webp", "assets/products/dc22x-5.webp"],
+    sizes: [{ label: "Walnut", price: 554 }],
+    desc: "Solid walnut, warm against stone and metal.",
+    features: [
+      "Solid walnut",
+      "Warm timber tone",
+      "Covers a standard box"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Solid timber", "Options": "1" },
+    care: "Dust with a dry cloth and keep out of direct sun. Wipe spills promptly rather than letting them sit." },
+
+  { id: "dc23x", name: "Travertine Bookends", cat: "Home Décor", room: "Home Décor", price: 620, memberPrice: 558, sku: "SH-10666", tag: "New", ph: "", img: "assets/products/dc23x.webp",
+    imgs: ["assets/products/dc23x.webp", "assets/products/dc23x-2.webp", "assets/products/dc23x-3.webp", "assets/products/dc23x-4.webp", "assets/products/dc23x-5.webp"],
+    sizes: [{ label: "Complete Set", price: 620 }],
+    desc: "A pair of travertine bookends, heavy enough to hold a real shelf of books.",
+    features: [
+      "Solid travertine pair",
+      "Holds a full shelf",
+      "Sold as a set"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc24x", name: "Curved Wine Holder", cat: "Home Décor", room: "Home Décor", price: 646, memberPrice: 581, sku: "SH-10667", tag: "New", ph: "", img: "assets/products/dc24x.webp",
+    imgs: ["assets/products/dc24x.webp", "assets/products/dc24x-2.webp", "assets/products/dc24x-3.webp", "assets/products/dc24x-4.webp", "assets/products/dc24x-5.webp"],
+    sizes: [{ label: "Gold", price: 646 }, { label: "Black", price: 646 }],
+    desc: "A curved holder that balances a bottle on its own, in gold or black. It looks like a trick, and it is.",
+    features: [
+      "Balances a bottle unaided",
+      "Gold or Black",
+      "Counter or table piece"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "dc25x", name: "Book Holder", cat: "Home Décor", room: "Home Décor", price: 719, memberPrice: 647, sku: "SH-10668", tag: "New", ph: "", img: "assets/products/dc25x.webp",
+    imgs: ["assets/products/dc25x.webp", "assets/products/dc25x-2.webp", "assets/products/dc25x-3.webp"],
+    sizes: [{ label: "Brown", price: 719 }],
+    desc: "A brown book holder for an open book, so a cookbook or an art book can be left on display.",
+    features: [
+      "Holds a book open",
+      "Brown finish",
+      "Kitchen or shelf"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Solid timber", "Options": "1" },
+    care: "Dust with a dry cloth and keep out of direct sun. Wipe spills promptly rather than letting them sit." },
+
+  { id: "dc26x", name: "Natural Travertine Bookends", cat: "Home Décor", room: "Home Décor", price: 720, memberPrice: 648, sku: "SH-10669", tag: "New", ph: "", img: "assets/products/dc26x.webp",
+    imgs: ["assets/products/dc26x.webp", "assets/products/dc26x-2.webp", "assets/products/dc26x-3.webp", "assets/products/dc26x-4.webp"],
+    sizes: [{ label: "Complete Set", price: 720 }],
+    desc: "A second pair of travertine bookends, in a more natural, unfinished cut.",
+    features: [
+      "Solid travertine pair",
+      "Natural unfinished cut",
+      "Sold as a set"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "dc27x", name: "Marble Book Holder", cat: "Home Décor", room: "Home Décor", price: 791, memberPrice: 712, sku: "SH-10670", tag: "New", ph: "", img: "assets/products/dc27x.webp",
+    imgs: ["assets/products/dc27x.webp", "assets/products/dc27x-2.webp", "assets/products/dc27x-3.webp", "assets/products/dc27x-4.webp", "assets/products/dc27x-5.webp"],
+    sizes: [{ label: "Green", price: 791 }, { label: "White", price: 791 }],
+    desc: "Marble in green or white. Green marble is the rarer and the better of the two.",
+    features: [
+      "Natural marble",
+      "Green or White",
+      "Holds a book open"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Natural marble", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it away from vinegar, citrus and bleach, and stand it on felt to protect the surface underneath." },
+
+  { id: "dc28x", name: "Page Keeper (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 1089, memberPrice: 980, sku: "SH-10671", tag: "New", ph: "", img: "assets/products/dc28x.webp",
+    imgs: ["assets/products/dc28x.webp", "assets/products/dc28x-2.webp", "assets/products/dc28x-3.webp", "assets/products/dc28x-4.webp", "assets/products/dc28x-5.webp"],
+    sizes: [{ label: "S", price: 1089 }, { label: "L", price: 1274 }],
+    desc: "A weighted page keeper in two sizes, for holding a book flat while you read or cook.",
+    features: [
+      "Weighted to hold pages",
+      "Small and Large",
+      "Reading or cooking"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "dc29x", name: "Silver Sculpture", cat: "Home Décor", room: "Home Décor", price: 1778, memberPrice: 1600, sku: "SH-10672", tag: "New", ph: "", img: "assets/products/dc29x.webp",
+    imgs: ["assets/products/dc29x.webp", "assets/products/dc29x-2.webp", "assets/products/dc29x-3.webp", "assets/products/dc29x-4.webp", "assets/products/dc29x-5.webp"],
+    sizes: [{ label: "Silver", price: 1778 }],
+    desc: "A silver sculpture for a console or a shelf. A statement object rather than a small accent.",
+    features: [
+      "Silver finish",
+      "Console or shelf scale",
+      "Statement object"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Resin / composite", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents." },
+
+  { id: "dc30x", name: "Leopard Statue", cat: "Home Décor", room: "Home Décor", price: 2019, memberPrice: 1817, sku: "SH-10673", tag: "New", ph: "", img: "assets/products/dc30x.webp",
+    imgs: ["assets/products/dc30x.webp", "assets/products/dc30x-2.webp", "assets/products/dc30x-3.webp", "assets/products/dc30x-4.webp", "assets/products/dc30x-5.webp"],
+    sizes: [{ label: "Black + Gold", price: 2019 }],
+    desc: "A leopard in black and gold. Not a subtle piece, and shouldn't be.",
+    features: [
+      "Black and gold finish",
+      "Large decorative statue",
+      "A deliberate focal point"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Resin / composite", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents." },
+
+  { id: "dc31x", name: "Bar Cart", cat: "Home Décor", room: "Home Décor", price: 3257, memberPrice: 2931, sku: "SH-10674", tag: "New", ph: "", img: "assets/products/dc31x.webp",
+    imgs: ["assets/products/dc31x.webp", "assets/products/dc31x-2.webp", "assets/products/dc31x-3.webp", "assets/products/dc31x-4.webp", "assets/products/dc31x-5.webp"],
+    sizes: [{ label: "White + Gold", price: 3257 }, { label: "Black + Gold", price: 3257 }],
+    desc: "A bar cart in white and gold or black and gold, for bottles, glasses and the ice bucket.",
+    features: [
+      "White + Gold or Black + Gold",
+      "Rolls where it's needed",
+      "Bottles, glasses and barware"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "dc32x", name: "Concave Wall Mirror (Five Sizes)", cat: "Home Décor", room: "Home Décor", price: 8759, memberPrice: 7883, sku: "SH-10675", tag: "New", ph: "", img: "assets/products/dc32x.webp",
+    imgs: ["assets/products/dc32x.webp", "assets/products/dc32x-2.webp", "assets/products/dc32x-3.webp", "assets/products/dc32x-4.webp", "assets/products/dc32x-5.webp"],
+    sizes: [{ label: "100cm ø", price: 8759 }, { label: "110cm ø", price: 9444 }, { label: "120cm ø", price: 10407 }, { label: "130cm ø", price: 10907 }, { label: "140cm ø", price: 11944 }, { label: "150cm ø", price: 12759 }],
+    desc: "A concave round mirror from 100cm to 140cm across. The curve bends the reflection, so it reads as an object rather than a mirror.",
+    features: [
+      "Concave curved glass",
+      "100cm to 140cm diameter",
+      "Reads as sculpture"
+    ],
+    specs: { "Type": "Decorative object", "Material": "Glass", "Options": "6" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes." },
+
   { id: "lt01", name: "Gold Table Lamp Pair", cat: "Home Décor", room: "Home Décor", price: 204, memberPrice: 184, sku: "SH-10553", tag: "New", ph: "", img: "assets/products/lt01.webp",
     imgs: ["assets/products/lt01.webp", "assets/products/lt01-2.webp", "assets/products/lt01-3.webp", "assets/products/lt01-4.webp", "assets/products/lt01-5.webp"],
     sizes: [{ label: "Gold/sitting", price: 204 }, { label: "Gold/standing leg out", price: 204 }, { label: "Gold/sitting off ledge", price: 204 }, { label: "Gold/standing with arm crossed", price: 204 }, { label: "Gold/sitting knees bent", price: 204 }, { label: "Silver/sitting", price: 204 }, { label: "Silver/standing leg out", price: 204 }, { label: "Silver/sitting off ledge", price: 204 }, { label: "Silver/standing with arm crossed", price: 204 }, { label: "Silver/sitting knees bent", price: 204 }],
