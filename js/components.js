@@ -155,7 +155,17 @@ function buildHeader() {
   const catDest = (cat) => CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
   // Category pages that support ?sub= sub-category filtering
   const SUB_ENABLED = new Set(["living", "home", "bedroom", "bathroom", "office", "outdoor", "kitchen", "lifestyle"]);
+  // A few menu entries are their own page rather than a filter on a category page
+  const LINK_PAGES = {
+    "corporate gifting": "corporate-gifting.html",
+    "create my own hamper": "hamper-maker.html",
+    "shop all hampers": "hampers.html",
+    "gift cards": "gift-cards.html",
+    "request a bulk quote": "packaging.html#bulk"
+  };
   const linkHref = (cat, col, l) => {
+    const direct = LINK_PAGES[String(l).toLowerCase()];
+    if (direct) return direct;
     const dest = col.page || catDest(cat);
     if (col.page || !SUB_ENABLED.has(cat.key) || /^shop all/i.test(l)) return dest;
     return dest + (dest.indexOf("?") > -1 ? "&" : "?") + "sub=" + encodeURIComponent(l);
@@ -415,6 +425,7 @@ function buildFooter() {
   const occasionLinks = [
     { t: "On Sale", h: "sale.html" },
     { t: "Gift Hampers", h: "hampers.html" },
+    { t: "Corporate Gifting", h: "corporate-gifting.html" },
     { t: "Gift Cards", h: "gift-cards.html" },
     { t: "Christmas", h: "hampers.html" },
     { t: "Valentine's Day", h: "hampers.html" },

@@ -65,10 +65,10 @@
     .kit-img { width: 34px; height: 34px; border-radius: 7px; background: var(--cream-2); flex: none; overflow: hidden; display: grid; place-items: center; }
     .kit-img img { width: 100%; height: 100%; object-fit: cover; }
     .kit-name { font-size: 0.76rem; line-height: 1.25; color: var(--ink); }
-    .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px; align-items: stretch; }
+    .kit-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; align-items: stretch; }
     .kit-card { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; }
-    .kit-shot { height: 200px; background: var(--cream-2); display: grid; place-items: center; overflow: hidden; }
-    .kit-shot img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .kit-shot { height: 260px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; overflow: hidden; border-bottom: 1px solid var(--line); }
+    .kit-shot img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
     .kit-shot.no-img::after { content: "Photo coming"; font-size: 0.76rem; color: var(--muted); letter-spacing: 0.08em; }
     .kit-card figcaption { padding: 13px 15px; }
     .kit-card strong { display: block; font-size: 0.92rem; color: var(--ink); }

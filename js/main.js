@@ -65,6 +65,7 @@ function collectForm(form) {
 
 // Build a readable subject line from the form / page context
 function formSubject(form) {
+  if (form.dataset.subject) return form.dataset.subject;
   if (form.dataset.formName) return "Samira Home Decor, " + form.dataset.formName;
   const sec = form.closest("section");
   const h = sec && sec.querySelector(".section-head h2, .page-banner h1, h2, h3");
