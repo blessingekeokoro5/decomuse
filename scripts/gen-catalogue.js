@@ -97,3 +97,25 @@ console.log(
   `✓ catalogue written: ${Object.keys(products).length} products (${priced} priced), ` +
   `${Object.keys(hamperItems).length} hamper items -> netlify/functions/_catalogue.json`
 );
+
+/* ---- Share index ----------------------------------------------------
+   Social apps don't run JavaScript, so a shared product link can only
+   show whatever is in the page's head. The edge function at
+   netlify/edge-functions/product-og.js reads this file and rewrites
+   those tags per product, so a link shows that product's own photo. */
+const shareIndex = {};
+(PRODUCTS || []).forEach((p) => {
+  if (!p || !p.id || p.demo || p.comingSoon) return;
+  const img = (p.imgs && p.imgs[0]) || p.img || "";
+  shareIndex[p.id] = {
+    n: String(p.name || ""),
+    i: String(img).split("?")[0],
+    p: p.price != null ? Number(p.price) : null,
+    d: String(p.desc || "").replace(/\s+/g, " ").slice(0, 180)
+  };
+});
+fs.writeFileSync(
+  path.join(__dirname, "..", "share-index.json"),
+  JSON.stringify(shareIndex) + "\n"
+);
+console.log(`✓ share index written: ${Object.keys(shareIndex).length} products -> share-index.json`);
