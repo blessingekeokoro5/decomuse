@@ -16,7 +16,8 @@
     .hm-item { display: flex; align-items: center; gap: 14px; background: #fff; border: 1px solid var(--line);
       border-radius: var(--radius-sm); padding: 14px; transition: all var(--tr); }
     .hm-item.in-box { border-color: var(--rose); box-shadow: 0 0 0 2px rgba(182,114,128,0.12); }
-    .hm-item .emo { width: 48px; height: 48px; border-radius: 10px; background: var(--cream-2); display: grid; place-items: center; font-size: 1.5rem; flex: none; }
+    .hm-item .emo { width: 56px; height: 56px; border-radius: 10px; background: var(--cream-2); display: grid; place-items: center; font-size: 1.5rem; flex: none; overflow: hidden; }
+    .hm-item .emo img { width: 100%; height: 100%; object-fit: cover; display: block; }
     .hm-item .info { flex: 1; min-width: 0; }
     .hm-item .info h4 { font-family: var(--font-body); font-weight: 600; font-size: 0.95rem; margin: 0; color: var(--ink); }
     .hm-item .info .p { color: var(--rose-deep); font-weight: 600; font-size: 0.9rem; }
@@ -89,7 +90,7 @@
   <script src="js/cart.js?v=15"></script>
   <script src="js/main.js?v=2"></script>
   <script>
-    const HM_CATS = ["The Box", "Sweet", "Savoury", "Drinks", "Pamper", "Home Touch", "Finishing"];
+    const HM_CATS = ["The Box", "Sweet", "Savoury", "Drinks", "Pamper", "Home Touch", "Baby", "For Him", "Finishing"];
     let hmCat = "The Box";
     const box = {}; // id -> qty
 
@@ -104,7 +105,7 @@
       document.getElementById("hmItems").innerHTML = list.map(i => {
         const qty = box[i.id] || 0;
         return `<div class="hm-item ${qty ? 'in-box' : ''}">
-          <div class="emo">${i.emoji}</div>
+          <div class="emo">${i.img ? `<img src="${i.img}" alt="${i.name}" loading="lazy" onerror="this.parentNode.textContent='${i.emoji}'">` : i.emoji}</div>
           <div class="info"><h4>${i.name}</h4><div class="p">${money(i.price)}</div></div>
           ${qty
             ? `<div class="qty"><button onclick="chg('${i.id}',-1)">−</button><span>${qty}</span><button onclick="chg('${i.id}',1)">+</button></div>`
