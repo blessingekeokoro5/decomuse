@@ -4427,6 +4427,1153 @@ const PRODUCTS = [
     care: "Rinse the weave with fresh water and let it dry in the air, particularly near the sea. Wipe spills before they dry into the fibre. Bring cushions inside when it rains, and cover or shelter the pieces through long wet spells." },
 
   // ── Home Décor ──
+  { id: "cd01", name: "Glass Candle Holder (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 104, memberPrice: 94, sku: "SH-10457", tag: "New", ph: "", img: "assets/products/cd01.webp",
+    imgs: ["assets/products/cd01.webp", "assets/products/cd01-2.webp", "assets/products/cd01-3.webp", "assets/products/cd01-4.webp"],
+    sizes: [{ label: "S", price: 104 }, { label: "M", price: 119 }, { label: "L", price: 141 }],
+    desc: "Glass in small, medium and large. Group all three at different heights.",
+    features: [
+      "Glass construction",
+      "Three sizes",
+      "Group at varying heights"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Glass", "Options": "3" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass." },
+
+  { id: "cd02", name: "Candle Holder (Large or Small)", cat: "Home Décor", room: "Home Décor", price: 119, memberPrice: 107, sku: "SH-10458", tag: "New", ph: "", img: "assets/products/cd02.webp",
+    imgs: ["assets/products/cd02.webp", "assets/products/cd02-2.webp", "assets/products/cd02-3.webp", "assets/products/cd02-4.webp", "assets/products/cd02-5.webp"],
+    sizes: [{ label: "Large", price: 119 }, { label: "Small", price: 137 }],
+    desc: "Two sizes, meant to be used as a pair.",
+    features: [
+      "Two sizes",
+      "Designed as a pair",
+      "Simple silhouette"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cd03", name: "Three-Piece Candle Holder Set", cat: "Home Décor", room: "Home Décor", price: 183, memberPrice: 165, sku: "SH-10459", tag: "New", ph: "", img: "assets/products/cd03.webp",
+    imgs: ["assets/products/cd03.webp", "assets/products/cd03-2.webp", "assets/products/cd03-3.webp", "assets/products/cd03-4.webp", "assets/products/cd03-5.webp"],
+    sizes: [{ label: "Silver / 3 Pcs", price: 183 }, { label: "Gold / 3 Pcs", price: 183 }, { label: "Black / 3 Pcs", price: 183 }, { label: "Rose Gold / 3 Pcs", price: 183 }],
+    desc: "A set of three in silver, gold, black or rose gold. The easiest way to get a grouping right.",
+    features: [
+      "Set of three",
+      "Silver, Gold, Black or Rose Gold",
+      "Graduated heights"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Metal", "Options": "4" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cd04", name: "Marble & Gold Candle Holder", cat: "Home Décor", room: "Home Décor", price: 309, memberPrice: 278, sku: "SH-10460", tag: "New", ph: "", img: "assets/products/cd04.webp",
+    imgs: ["assets/products/cd04.webp", "assets/products/cd04-2.webp", "assets/products/cd04-3.webp", "assets/products/cd04-4.webp", "assets/products/cd04-5.webp"],
+    sizes: [{ label: "M", price: 309 }, { label: "L", price: 365 }],
+    desc: "Marble with gold, medium or large.",
+    features: [
+      "Marble with gold detail",
+      "Medium and Large",
+      "Weighted base"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural marble", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "cd05", name: "Acrane Candle Holder", cat: "Home Décor", room: "Home Décor", price: 311, memberPrice: 280, sku: "SH-10461", tag: "New", ph: "", img: "assets/products/cd05.webp",
+    imgs: ["assets/products/cd05.webp", "assets/products/cd05-2.webp", "assets/products/cd05-3.webp", "assets/products/cd05-4.webp", "assets/products/cd05-5.webp"],
+    sizes: [{ label: "S", price: 311 }, { label: "M", price: 415 }, { label: "L", price: 530 }],
+    desc: "Three sizes in a slim, architectural shape.",
+    features: [
+      "Three sizes",
+      "Slim architectural form",
+      "Group or use alone"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Metal", "Options": "3" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cd06", name: "Marble Candle Holder (Five Designs)", cat: "Home Décor", room: "Home Décor", price: 311, memberPrice: 280, sku: "SH-10462", tag: "New", ph: "", img: "assets/products/cd06.webp",
+    imgs: ["assets/products/cd06.webp", "assets/products/cd06-2.webp", "assets/products/cd06-3.webp", "assets/products/cd06-4.webp", "assets/products/cd06-5.webp"],
+    sizes: [{ label: "A", price: 311 }, { label: "B", price: 311 }, { label: "C", price: 311 }, { label: "D", price: 311 }, { label: "E", price: 311 }],
+    desc: "Five marble designs, A through E, so a group can vary in shape as well as height.",
+    features: [
+      "Solid marble",
+      "Five designs",
+      "Vary shape and height in a group"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural marble", "Options": "5" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "cd07", name: "Travertine & Brass Oil Burner", cat: "Home Décor", room: "Home Décor", price: 350, memberPrice: 315, sku: "SH-10463", tag: "New", ph: "", img: "assets/products/cd07.webp",
+    imgs: ["assets/products/cd07.webp", "assets/products/cd07-2.webp", "assets/products/cd07-3.webp", "assets/products/cd07-4.webp", "assets/products/cd07-5.webp"],
+    desc: "Travertine with brass, for oil rather than candles.",
+    features: [
+      "Travertine with brass",
+      "For essential oils",
+      "Single size"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "cd08", name: "Marble Candle Holder in Three Stones", cat: "Home Décor", room: "Home Décor", price: 430, memberPrice: 387, sku: "SH-10464", tag: "New", ph: "", img: "assets/products/cd08.webp",
+    imgs: ["assets/products/cd08.webp", "assets/products/cd08-2.webp", "assets/products/cd08-3.webp", "assets/products/cd08-4.webp", "assets/products/cd08-5.webp"],
+    sizes: [{ label: "Black", price: 430 }, { label: "White", price: 430 }, { label: "Travertine", price: 430 }],
+    desc: "Black marble, white marble or travertine.",
+    features: [
+      "Black, White or Travertine",
+      "Natural stone",
+      "Each piece unique"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural marble", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "cd09", name: "Travertine Candle Holder Pair", cat: "Home Décor", room: "Home Décor", price: 457, memberPrice: 411, sku: "SH-10465", tag: "New", ph: "", img: "assets/products/cd09.webp",
+    imgs: ["assets/products/cd09.webp", "assets/products/cd09-2.webp", "assets/products/cd09-3.webp", "assets/products/cd09-4.webp"],
+    sizes: [{ label: "2x Piece Set", price: 457 }],
+    desc: "A pair of travertine holders, bought together.",
+    features: [
+      "Two-piece set",
+      "Solid travertine",
+      "Designed as a pair"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "cd10", name: "Candle Holder in Silver or Titanium", cat: "Home Décor", room: "Home Décor", price: 474, memberPrice: 427, sku: "SH-10466", tag: "New", ph: "", img: "assets/products/cd10.webp",
+    imgs: ["assets/products/cd10.webp", "assets/products/cd10-2.webp", "assets/products/cd10-3.webp", "assets/products/cd10-4.webp", "assets/products/cd10-5.webp"],
+    sizes: [{ label: "Silver", price: 474 }, { label: "Titanium Grey", price: 474 }],
+    desc: "Silver or titanium grey, with a modern, hard-edged look.",
+    features: [
+      "Silver or Titanium Grey",
+      "Contemporary form",
+      "Metal construction"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cd11", name: "Twin Travertine Candle Holder", cat: "Home Décor", room: "Home Décor", price: 507, memberPrice: 456, sku: "SH-10467", tag: "New", ph: "", img: "assets/products/cd11.webp",
+    imgs: ["assets/products/cd11.webp", "assets/products/cd11-2.webp", "assets/products/cd11-3.webp", "assets/products/cd11-4.webp", "assets/products/cd11-5.webp"],
+    sizes: [{ label: "Smooth", price: 507 }, { label: "Rough", price: 507 }],
+    desc: "Travertine in a smooth or rough finish. The rough one shows the stone honestly.",
+    features: [
+      "Smooth or Rough finish",
+      "Solid travertine",
+      "Twin form"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "cd12", name: "Serenity Stone Candle Holder", cat: "Home Décor", room: "Home Décor", price: 550, memberPrice: 495, sku: "SH-10468", tag: "New", ph: "", img: "assets/products/cd12.webp",
+    imgs: ["assets/products/cd12.webp", "assets/products/cd12-2.webp", "assets/products/cd12-3.webp", "assets/products/cd12-4.webp", "assets/products/cd12-5.webp"],
+    sizes: [{ label: "Travertine", price: 550 }],
+    desc: "A single travertine holder, plainly done.",
+    features: [
+      "Solid travertine",
+      "Single design",
+      "Natural surface"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "cd13", name: "Travertine & Gold Candle Holder", cat: "Home Décor", room: "Home Décor", price: 583, memberPrice: 525, sku: "SH-10469", tag: "New", ph: "", img: "assets/products/cd13.webp",
+    imgs: ["assets/products/cd13.webp", "assets/products/cd13-2.webp", "assets/products/cd13-3.webp", "assets/products/cd13-4.webp", "assets/products/cd13-5.webp"],
+    sizes: [{ label: "S: Beige", price: 583 }, { label: "S: Black", price: 583 }, { label: "L: Beige", price: 713 }, { label: "L: Black", price: 713 }],
+    desc: "Travertine with gold in beige or black, small or large.",
+    features: [
+      "Travertine with gold",
+      "Beige or Black",
+      "Small and Large"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural travertine", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "cd14", name: "Isaie Travertine Candle Holder", cat: "Home Décor", room: "Home Décor", price: 624, memberPrice: 562, sku: "SH-10470", tag: "New", ph: "", img: "assets/products/cd14.webp",
+    imgs: ["assets/products/cd14.webp", "assets/products/cd14-2.webp", "assets/products/cd14-3.webp", "assets/products/cd14-4.webp"],
+    desc: "One travertine holder, one size.",
+    features: [
+      "Solid travertine",
+      "Single size",
+      "Weighted base"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "cd15", name: "Volakos Marble Candle Holder", cat: "Home Décor", room: "Home Décor", price: 698, memberPrice: 628, sku: "SH-10471", tag: "New", ph: "", img: "assets/products/cd15.webp",
+    imgs: ["assets/products/cd15.webp", "assets/products/cd15-2.webp", "assets/products/cd15-3.webp", "assets/products/cd15-4.webp", "assets/products/cd15-5.webp"],
+    sizes: [{ label: "A", price: 698 }, { label: "D", price: 715 }, { label: "C", price: 759 }, { label: "B", price: 796 }],
+    desc: "Volakos marble in four designs, A through D.",
+    features: [
+      "Volakos marble",
+      "Four designs",
+      "Pale veined stone"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Natural marble", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "cd16", name: "Floor Candelabra (67cm)", cat: "Home Décor", room: "Home Décor", price: 1661, memberPrice: 1495, sku: "SH-10472", tag: "New", ph: "", img: "assets/products/cd16.webp",
+    imgs: ["assets/products/cd16.webp", "assets/products/cd16-2.webp", "assets/products/cd16-3.webp", "assets/products/cd16-4.webp"],
+    sizes: [{ label: "67cm x 47cm", price: 1661 }],
+    desc: "A 67 by 47cm candelabra, which is a floor piece rather than a table one.",
+    features: [
+      "67cm x 47cm",
+      "Floor-standing scale",
+      "Holds multiple candles"
+    ],
+    specs: { "Type": "Candle holder", "Material": "Metal", "Options": "1" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cl01", name: "Wall Clock in Black or Gold", cat: "Home Décor", room: "Home Décor", price: 343, memberPrice: 309, sku: "SH-10473", tag: "New", ph: "", img: "assets/products/cl01.webp",
+    imgs: ["assets/products/cl01.webp", "assets/products/cl01-2.webp", "assets/products/cl01-3.webp", "assets/products/cl01-4.webp", "assets/products/cl01-5.webp"],
+    sizes: [{ label: "Black / 50cm", price: 343 }, { label: "Gold / 50cm", price: 343 }, { label: "Black / 70cm", price: 420 }, { label: "Gold / 70cm", price: 420 }],
+    desc: "A metal wall clock at 50cm or 70cm, in black or gold. The 70cm is a statement across a hallway.",
+    features: [
+      "Metal construction",
+      "50cm and 70cm",
+      "Black or Gold"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Metal", "Options": "4" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cl02", name: "Timber & Metal Wall Clock", cat: "Home Décor", room: "Home Décor", price: 378, memberPrice: 340, sku: "SH-10474", tag: "New", ph: "", img: "assets/products/cl02.webp",
+    imgs: ["assets/products/cl02.webp", "assets/products/cl02-2.webp", "assets/products/cl02-3.webp"],
+    sizes: [{ label: "Black", price: 378 }],
+    desc: "Timber with metal, in black.",
+    features: [
+      "Timber with metal",
+      "Black finish",
+      "Single size"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Timber", "Options": "1" },
+    care: "Dust with a dry cloth. Keep out of direct sun and away from damp, and wipe spills promptly." },
+
+  { id: "cl03", name: "Leather-Look Wall Clock", cat: "Home Décor", room: "Home Décor", price: 420, memberPrice: 378, sku: "SH-10475", tag: "New", ph: "", img: "assets/products/cl03.webp",
+    imgs: ["assets/products/cl03.webp", "assets/products/cl03-2.webp", "assets/products/cl03-3.webp", "assets/products/cl03-4.webp", "assets/products/cl03-5.webp"],
+    sizes: [{ label: "Grey", price: 420 }, { label: "Red", price: 420 }, { label: "Tan", price: 420 }, { label: "Light Tan", price: 420 }],
+    desc: "A leather-look face in grey, red, tan or light tan.",
+    features: [
+      "Leather-look face",
+      "Four colourways",
+      "Warm alternative to metal"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Leather", "Options": "4" },
+    care: "Wipe with a barely damp cloth. Keep out of direct sun, and condition occasionally so the leather doesn't dry out." },
+
+  { id: "cl04", name: "Arianna Wall Clock", cat: "Home Décor", room: "Home Décor", price: 493, memberPrice: 444, sku: "SH-10476", tag: "New", ph: "", img: "assets/products/cl04.webp",
+    imgs: ["assets/products/cl04.webp", "assets/products/cl04-2.webp", "assets/products/cl04-3.webp"],
+    sizes: [{ label: "Black", price: 493 }],
+    desc: "Timber and metal in black.",
+    features: [
+      "Timber and metal",
+      "Black finish",
+      "Understated face"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Timber", "Options": "1" },
+    care: "Dust with a dry cloth. Keep out of direct sun and away from damp, and wipe spills promptly." },
+
+  { id: "cl05", name: "Gold Iron Wall Clock (60cm)", cat: "Home Décor", room: "Home Décor", price: 1254, memberPrice: 1129, sku: "SH-10477", tag: "New", ph: "", img: "assets/products/cl05.webp",
+    imgs: ["assets/products/cl05.webp", "assets/products/cl05-2.webp", "assets/products/cl05-3.webp", "assets/products/cl05-4.webp"],
+    sizes: [{ label: "60cm", price: 1254 }],
+    desc: "Gold iron at 60cm, decorative as much as functional.",
+    features: [
+      "Gold iron construction",
+      "60cm",
+      "Decorative statement"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Metal", "Options": "1" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cl06", name: "White Wall Clock (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 1474, memberPrice: 1327, sku: "SH-10478", tag: "New", ph: "", img: "assets/products/cl06.webp",
+    imgs: ["assets/products/cl06.webp", "assets/products/cl06-2.webp", "assets/products/cl06-3.webp", "assets/products/cl06-4.webp"],
+    sizes: [{ label: "White / 30cm", price: 1474 }, { label: "White / 40cm", price: 1619 }, { label: "White / 50cm", price: 1659 }, { label: "White / 60cm", price: 1769 }],
+    desc: "White, from 30cm to 60cm, so it suits a kitchen or a stairwell.",
+    features: [
+      "White finish",
+      "30, 40, 50 and 60cm",
+      "Kitchen through to stairwell"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Metal", "Options": "4" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "cl07", name: "Glass Wall Clock in Gold or Silver", cat: "Home Décor", room: "Home Décor", price: 2326, memberPrice: 2093, sku: "SH-10479", tag: "New", ph: "", img: "assets/products/cl07.webp",
+    imgs: ["assets/products/cl07.webp", "assets/products/cl07-2.webp", "assets/products/cl07-3.webp", "assets/products/cl07-4.webp", "assets/products/cl07-5.webp"],
+    sizes: [{ label: "Gold / 60cm", price: 2326 }, { label: "Silver / 60cm", price: 2326 }, { label: "Gold / 80cm", price: 2741 }, { label: "Silver / 80cm", price: 2741 }],
+    desc: "Glass with gold or silver, at 60cm or 80cm. The largest clock we carry.",
+    features: [
+      "Glass with metal detail",
+      "60cm and 80cm",
+      "Gold or Silver"
+    ],
+    specs: { "Type": "Wall clock", "Material": "Glass", "Options": "4" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass." },
+
+  { id: "tb01", name: "Folded Tray in Black or Yellow", cat: "Home Décor", room: "Home Décor", price: 96, memberPrice: 86, sku: "SH-10480", tag: "New", ph: "", img: "assets/products/tb01.webp",
+    imgs: ["assets/products/tb01.webp", "assets/products/tb01-2.webp", "assets/products/tb01-3.webp", "assets/products/tb01-4.webp", "assets/products/tb01-5.webp"],
+    sizes: [{ label: "Black / 20cm x 20cm", price: 96 }, { label: "Yellow / 20cm x 20cm", price: 96 }, { label: "Red / 20cm x 20cm", price: 96 }, { label: "Light Grey / 20cm x 20cm", price: 96 }, { label: "Light Pink / 20cm x 20cm", price: 96 }, { label: "Green / 20cm x 20cm", price: 96 }, { label: "Beige / 20cm x 20cm", price: 96 }, { label: "Black / 25cm x 25cm", price: 106 }, { label: "Yellow / 25cm x 25cm", price: 106 }, { label: "Red / 25cm x 25cm", price: 106 }, { label: "Light Grey / 25cm x 25cm", price: 106 }, { label: "Light Pink / 25cm x 25cm", price: 106 }, { label: "Green / 25cm x 25cm", price: 106 }, { label: "Beige / 25cm x 25cm", price: 106 }],
+    desc: "A folded-edge tray at 20 or 25cm square, in black or yellow. Yellow is the braver choice and the better one.",
+    features: [
+      "Folded edge detail",
+      "20cm and 25cm square",
+      "Black or Yellow"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "14" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "tb02", name: "Gold Round Organiser Tray", cat: "Home Décor", room: "Home Décor", price: 128, memberPrice: 115, sku: "SH-10481", tag: "New", ph: "", img: "assets/products/tb02.webp",
+    imgs: ["assets/products/tb02.webp", "assets/products/tb02-2.webp", "assets/products/tb02-3.webp", "assets/products/tb02-4.webp", "assets/products/tb02-5.webp"],
+    sizes: [{ label: "12.5cm / Gold", price: 128 }, { label: "20cm / Gold", price: 183 }, { label: "30cm / Gold", price: 239 }],
+    desc: "Gold stainless steel in three diameters, from 12.5cm for rings to 30cm for a coffee table.",
+    features: [
+      "Gold stainless steel",
+      "12.5cm, 20cm and 30cm",
+      "Jewellery through to coffee table"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "3" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "tb03", name: "Marble-Look Serving Tray", cat: "Home Décor", room: "Home Décor", price: 148, memberPrice: 133, sku: "SH-10482", tag: "New", ph: "", img: "assets/products/tb03.webp",
+    imgs: ["assets/products/tb03.webp", "assets/products/tb03-2.webp", "assets/products/tb03-3.webp"],
+    sizes: [{ label: "Black + Gold / 20cm (8\")", price: 148 }, { label: "White + Gold / 20cm (8\")", price: 148 }, { label: "Black + Gold / 25cm (10\")", price: 157 }, { label: "White + Gold / 25cm (10\")", price: 157 }],
+    desc: "A marble-look tray with gold handles, at 20cm or 25cm.",
+    features: [
+      "Marble-look finish with gold",
+      "20cm and 25cm",
+      "Serving or display"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
+
+  { id: "tb04", name: "Timber Storage Tray", cat: "Home Décor", room: "Home Décor", price: 163, memberPrice: 147, sku: "SH-10483", tag: "New", ph: "", img: "assets/products/tb04.webp",
+    imgs: ["assets/products/tb04.webp", "assets/products/tb04-2.webp", "assets/products/tb04-3.webp", "assets/products/tb04-4.webp"],
+    sizes: [{ label: "White + Brown", price: 163 }],
+    desc: "White and brown timber, for keys, glasses and the things that collect by a door.",
+    features: [
+      "Timber construction",
+      "White and brown finish",
+      "Entryway or dresser storage"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Timber", "Options": "1" },
+    care: "Dust with a dry cloth. Keep out of direct sun and away from damp, and wipe spills promptly." },
+
+  { id: "tb05", name: "Storage Tray in Grey or Coffee", cat: "Home Décor", room: "Home Décor", price: 180, memberPrice: 162, sku: "SH-10484", tag: "New", ph: "", img: "assets/products/tb05.webp",
+    imgs: ["assets/products/tb05.webp", "assets/products/tb05-2.webp", "assets/products/tb05-3.webp", "assets/products/tb05-4.webp", "assets/products/tb05-5.webp"],
+    sizes: [{ label: "Grey / S", price: 180 }, { label: "Coffee / S", price: 180 }, { label: "Grey / M", price: 254 }, { label: "Coffee / M", price: 254 }, { label: "Grey / L", price: 341 }, { label: "Coffee / L", price: 341 }],
+    desc: "Three sizes in grey or coffee.",
+    features: [
+      "Grey or Coffee",
+      "Small, Medium and Large",
+      "Stackable storage"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "6" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
+
+  { id: "tb06", name: "Leather Organiser Tray (Four Colours)", cat: "Home Décor", room: "Home Décor", price: 204, memberPrice: 184, sku: "SH-10485", tag: "New", ph: "", img: "assets/products/tb06.webp",
+    imgs: ["assets/products/tb06.webp", "assets/products/tb06-2.webp", "assets/products/tb06-3.webp", "assets/products/tb06-4.webp", "assets/products/tb06-5.webp"],
+    sizes: [{ label: "Orange", price: 204 }, { label: "Blue", price: 204 }, { label: "Red", price: 204 }, { label: "Brown", price: 204 }],
+    desc: "Leather in orange, blue, red or brown. The coloured ones lift a plain dresser.",
+    features: [
+      "Leather construction",
+      "Orange, Blue, Red or Brown",
+      "Dresser or desk organiser"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Leather", "Options": "4" },
+    care: "Wipe with a barely damp cloth. Keep out of direct sun, and condition occasionally so the leather doesn't dry out." },
+
+  { id: "tb07", name: "Leather Tray in Neutral Tones", cat: "Home Décor", room: "Home Décor", price: 222, memberPrice: 200, sku: "SH-10486", tag: "New", ph: "", img: "assets/products/tb07.webp",
+    imgs: ["assets/products/tb07.webp", "assets/products/tb07-2.webp", "assets/products/tb07-3.webp", "assets/products/tb07-4.webp", "assets/products/tb07-5.webp"],
+    sizes: [{ label: "White", price: 222 }, { label: "Beige", price: 222 }, { label: "Orange", price: 222 }],
+    desc: "Leather in white, beige or orange.",
+    features: [
+      "Leather construction",
+      "White, Beige or Orange",
+      "Catch-all tray"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Leather", "Options": "3" },
+    care: "Wipe with a barely damp cloth. Keep out of direct sun, and condition occasionally so the leather doesn't dry out." },
+
+  { id: "tb08", name: "Storage Tray (Four Colours)", cat: "Home Décor", room: "Home Décor", price: 222, memberPrice: 200, sku: "SH-10487", tag: "New", ph: "", img: "assets/products/tb08.webp",
+    imgs: ["assets/products/tb08.webp", "assets/products/tb08-2.webp", "assets/products/tb08-3.webp", "assets/products/tb08-4.webp", "assets/products/tb08-5.webp"],
+    sizes: [{ label: "Dark Grey", price: 222 }, { label: "Orange", price: 222 }, { label: "Green", price: 222 }, { label: "Off White", price: 222 }],
+    desc: "Dark grey, orange, green or off white.",
+    features: [
+      "Four colourways",
+      "Everyday storage",
+      "Wipe-clean surface"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
+
+  { id: "tb09", name: "Fruit Bowl in Gold or Silver", cat: "Home Décor", room: "Home Décor", price: 239, memberPrice: 215, sku: "SH-10488", tag: "New", ph: "", img: "assets/products/tb09.webp",
+    imgs: ["assets/products/tb09.webp", "assets/products/tb09-2.webp", "assets/products/tb09-3.webp", "assets/products/tb09-4.webp"],
+    sizes: [{ label: "Gold / Small", price: 239 }, { label: "Silver / Small", price: 239 }, { label: "Gold / Large", price: 276 }, { label: "Silver / Large", price: 276 }],
+    desc: "A metal fruit bowl in gold or silver, small or large.",
+    features: [
+      "Gold or Silver",
+      "Small and Large",
+      "Fruit or display"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "4" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "tb10", name: "Round Travertine Tray", cat: "Home Décor", room: "Home Décor", price: 250, memberPrice: 225, sku: "SH-10489", tag: "New", ph: "", img: "assets/products/tb10.webp",
+    imgs: ["assets/products/tb10.webp", "assets/products/tb10-2.webp", "assets/products/tb10-3.webp"],
+    sizes: [{ label: "Travertine / S", price: 250 }, { label: "Travertine / M", price: 326 }, { label: "Travertine / L", price: 437 }],
+    desc: "Solid travertine in three sizes, which also works as a base for candles.",
+    features: [
+      "Solid travertine",
+      "Three sizes",
+      "Doubles as a candle base"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb11", name: "Travertine Tray (Two Designs)", cat: "Home Décor", room: "Home Décor", price: 256, memberPrice: 230, sku: "SH-10490", tag: "New", ph: "", img: "assets/products/tb11.webp",
+    imgs: ["assets/products/tb11.webp", "assets/products/tb11-2.webp", "assets/products/tb11-3.webp", "assets/products/tb11-4.webp", "assets/products/tb11-5.webp"],
+    sizes: [{ label: "A", price: 256 }, { label: "B", price: 393 }],
+    desc: "Two travertine designs, A and B.",
+    features: [
+      "Solid travertine",
+      "Two designs",
+      "Natural texture"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb12", name: "Round Marble Tray", cat: "Home Décor", room: "Home Décor", price: 267, memberPrice: 240, sku: "SH-10491", tag: "New", ph: "", img: "assets/products/tb12.webp",
+    imgs: ["assets/products/tb12.webp", "assets/products/tb12-2.webp", "assets/products/tb12-3.webp"],
+    sizes: [{ label: "Black / S", price: 267 }, { label: "Black / M", price: 339 }, { label: "Black / L", price: 552 }],
+    desc: "Black marble in three sizes, equally at home under candles or perfume bottles.",
+    features: [
+      "Black marble",
+      "Three sizes",
+      "Candles, perfume or jewellery"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural marble", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "tb13", name: "Mirrored Glass Tray", cat: "Home Décor", room: "Home Décor", price: 272, memberPrice: 245, sku: "SH-10492", tag: "New", ph: "", img: "assets/products/tb13.webp",
+    imgs: ["assets/products/tb13.webp", "assets/products/tb13-2.webp", "assets/products/tb13-3.webp", "assets/products/tb13-4.webp"],
+    sizes: [{ label: "Gold", price: 272 }],
+    desc: "Mirror glass with brass detail in gold. A tray that makes whatever sits on it look better.",
+    features: [
+      "Mirrored glass with brass",
+      "Gold finish",
+      "Reflects and lifts what sits on it"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Glass", "Options": "1" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass." },
+
+  { id: "tb14", name: "Display Tray in Grey, Beige or Green", cat: "Home Décor", room: "Home Décor", price: 274, memberPrice: 247, sku: "SH-10493", tag: "New", ph: "", img: "assets/products/tb14.webp",
+    imgs: ["assets/products/tb14.webp", "assets/products/tb14-2.webp", "assets/products/tb14-3.webp", "assets/products/tb14-4.webp", "assets/products/tb14-5.webp"],
+    sizes: [{ label: "Grey", price: 274 }, { label: "Beige", price: 274 }, { label: "Green", price: 274 }],
+    desc: "Three quiet colours for a tray that's meant to organise rather than announce itself.",
+    features: [
+      "Grey, Beige or Green",
+      "Storage and display",
+      "Understated finish"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
+
+  { id: "tb15", name: "Leather Tray in Green or Khaki", cat: "Home Décor", room: "Home Décor", price: 276, memberPrice: 248, sku: "SH-10494", tag: "New", ph: "", img: "assets/products/tb15.webp",
+    imgs: ["assets/products/tb15.webp", "assets/products/tb15-2.webp", "assets/products/tb15-3.webp", "assets/products/tb15-4.webp", "assets/products/tb15-5.webp"],
+    sizes: [{ label: "Green", price: 276 }, { label: "Black", price: 276 }, { label: "Khaki", price: 276 }],
+    desc: "Leather in green, black or khaki.",
+    features: [
+      "Leather construction",
+      "Green, Black or Khaki",
+      "Desk or dresser"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Leather", "Options": "3" },
+    care: "Wipe with a barely damp cloth. Keep out of direct sun, and condition occasionally so the leather doesn't dry out." },
+
+  { id: "tb16", name: "Metallic Rectangular Serving Tray", cat: "Home Décor", room: "Home Décor", price: 291, memberPrice: 262, sku: "SH-10495", tag: "New", ph: "", img: "assets/products/tb16.webp",
+    imgs: ["assets/products/tb16.webp", "assets/products/tb16-2.webp", "assets/products/tb16-3.webp", "assets/products/tb16-4.webp", "assets/products/tb16-5.webp"],
+    sizes: [{ label: "Gold - Rectangular Tray", price: 291 }, { label: "Silver - Rectangular Tray", price: 291 }, { label: "Gold - Round Tray", price: 291 }, { label: "Silver - Round Tray", price: 291 }],
+    desc: "Rectangular, in gold or silver.",
+    features: [
+      "Gold or Silver",
+      "Rectangular format",
+      "Serving or display"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "4" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "tb17", name: "Decorative Bowl, Off White or Silver", cat: "Home Décor", room: "Home Décor", price: 294, memberPrice: 265, sku: "SH-10496", tag: "New", ph: "", img: "assets/products/tb17.webp",
+    imgs: ["assets/products/tb17.webp", "assets/products/tb17-2.webp", "assets/products/tb17-3.webp", "assets/products/tb17-4.webp"],
+    sizes: [{ label: "Off White", price: 294 }, { label: "Silver", price: 294 }],
+    desc: "A decorative ceramic bowl in off white or silver.",
+    features: [
+      "Ceramic construction",
+      "Off White or Silver",
+      "Decorative rather than functional"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
+
+  { id: "tb18", name: "Mirror Tray in Black & Gold", cat: "Home Décor", room: "Home Décor", price: 296, memberPrice: 266, sku: "SH-10497", tag: "New", ph: "", img: "assets/products/tb18.webp",
+    imgs: ["assets/products/tb18.webp", "assets/products/tb18-2.webp", "assets/products/tb18-3.webp", "assets/products/tb18-4.webp"],
+    sizes: [{ label: "Black + Gold", price: 296 }],
+    desc: "Mirror with black and gold trim, good under a cluster of candles.",
+    features: [
+      "Mirrored surface",
+      "Black and gold trim",
+      "Suits a candle grouping"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Glass", "Options": "1" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass." },
+
+  { id: "tb19", name: "Silver Display Plate", cat: "Home Décor", room: "Home Décor", price: 304, memberPrice: 274, sku: "SH-10498", tag: "New", ph: "", img: "assets/products/tb19.webp",
+    imgs: ["assets/products/tb19.webp", "assets/products/tb19-2.webp", "assets/products/tb19-3.webp"],
+    sizes: [{ label: "Silver", price: 304 }],
+    desc: "Stainless steel in silver, a plate for display rather than dinner.",
+    features: [
+      "Stainless steel",
+      "Silver finish",
+      "Display piece"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "1" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
+
+  { id: "tb20", name: "Travertine Keepsake Box", cat: "Home Décor", room: "Home Décor", price: 307, memberPrice: 276, sku: "SH-10499", tag: "New", ph: "", img: "assets/products/tb20.webp",
+    imgs: ["assets/products/tb20.webp", "assets/products/tb20-2.webp", "assets/products/tb20-3.webp", "assets/products/tb20-4.webp", "assets/products/tb20-5.webp"],
+    sizes: [{ label: "Small", price: 307 }, { label: "Large", price: 417 }],
+    desc: "A lidded travertine box in two sizes, for the things that shouldn't be on show.",
+    features: [
+      "Solid travertine with lid",
+      "Small and Large",
+      "Hides small clutter"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb21", name: "Travertine Tray Collection", cat: "Home Décor", room: "Home Décor", price: 383, memberPrice: 345, sku: "SH-10500", tag: "New", ph: "", img: "assets/products/tb21.webp",
+    imgs: ["assets/products/tb21.webp", "assets/products/tb21-2.webp", "assets/products/tb21-3.webp", "assets/products/tb21-4.webp", "assets/products/tb21-5.webp"],
+    sizes: [{ label: "Travertine / S: Round", price: 383 }, { label: "Travertine / L: Oval", price: 517 }, { label: "Travertine / S: Square", price: 537 }, { label: "Travertine / L: Round", price: 546 }, { label: "Travertine / L: Square", price: 556 }],
+    desc: "Oval, square and other shapes in travertine, bought singly.",
+    features: [
+      "Solid travertine",
+      "Oval and square shapes",
+      "Several sizes"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "5" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb22", name: "Marble & Gold Tray", cat: "Home Décor", room: "Home Décor", price: 394, memberPrice: 355, sku: "SH-10501", tag: "New", ph: "", img: "assets/products/tb22.webp",
+    imgs: ["assets/products/tb22.webp", "assets/products/tb22-2.webp", "assets/products/tb22-3.webp", "assets/products/tb22-4.webp", "assets/products/tb22-5.webp"],
+    sizes: [{ label: "Small", price: 394 }, { label: "Large", price: 517 }],
+    desc: "Marble with gold stainless handles, small or large.",
+    features: [
+      "Marble with gold handles",
+      "Small and Large",
+      "Serving or display"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural marble", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "tb23", name: "Travertine Tray (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 398, memberPrice: 358, sku: "SH-10502", tag: "New", ph: "", img: "assets/products/tb23.webp",
+    imgs: ["assets/products/tb23.webp", "assets/products/tb23-2.webp", "assets/products/tb23-3.webp", "assets/products/tb23-4.webp", "assets/products/tb23-5.webp"],
+    sizes: [{ label: "S", price: 398 }, { label: "L", price: 498 }],
+    desc: "Travertine in two sizes, good under candles.",
+    features: [
+      "Solid travertine",
+      "Small and Large",
+      "Candle base or tray"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb24", name: "Decorative Bowl, Low or High", cat: "Home Décor", room: "Home Décor", price: 417, memberPrice: 375, sku: "SH-10503", tag: "New", ph: "", img: "assets/products/tb24.webp",
+    imgs: ["assets/products/tb24.webp", "assets/products/tb24-2.webp", "assets/products/tb24-3.webp", "assets/products/tb24-4.webp", "assets/products/tb24-5.webp"],
+    sizes: [{ label: "Low Bowl", price: 417 }, { label: "High Bowl", price: 417 }],
+    desc: "The same bowl in a low or a high profile.",
+    features: [
+      "Low or high profile",
+      "Decorative bowl",
+      "Choose the proportion"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
+
+  { id: "tb25", name: "Charlot Travertine Tray", cat: "Home Décor", room: "Home Décor", price: 461, memberPrice: 415, sku: "SH-10504", tag: "New", ph: "", img: "assets/products/tb25.webp",
+    imgs: ["assets/products/tb25.webp", "assets/products/tb25-2.webp", "assets/products/tb25-3.webp", "assets/products/tb25-4.webp", "assets/products/tb25-5.webp"],
+    desc: "One travertine tray, one size, cut from solid stone.",
+    features: [
+      "Solid travertine",
+      "Single size",
+      "Natural variation"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb26", name: "Marble & Brass Tray", cat: "Home Décor", room: "Home Décor", price: 591, memberPrice: 532, sku: "SH-10505", tag: "New", ph: "", img: "assets/products/tb26.webp",
+    imgs: ["assets/products/tb26.webp", "assets/products/tb26-2.webp", "assets/products/tb26-3.webp", "assets/products/tb26-4.webp", "assets/products/tb26-5.webp"],
+    sizes: [{ label: "Beige / Small", price: 591 }, { label: "Black / Small", price: 591 }, { label: "Beige / Large", price: 813 }, { label: "Black / Large", price: 813 }],
+    desc: "Marble with brass in beige or black, small or large.",
+    features: [
+      "Marble with brass detail",
+      "Beige or Black",
+      "Small and Large"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural marble", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath." },
+
+  { id: "tb27", name: "Travertine Pot (19 or 26cm)", cat: "Home Décor", room: "Home Décor", price: 822, memberPrice: 740, sku: "SH-10506", tag: "New", ph: "", img: "assets/products/tb27.webp",
+    imgs: ["assets/products/tb27.webp", "assets/products/tb27-2.webp", "assets/products/tb27-3.webp", "assets/products/tb27-4.webp", "assets/products/tb27-5.webp"],
+    sizes: [{ label: "19cm", price: 822 }, { label: "26cm", price: 859 }],
+    desc: "A travertine pot at 19cm or 26cm, for a plant or simply as an object.",
+    features: [
+      "Solid travertine",
+      "19cm and 26cm",
+      "Planter or sculptural object"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb28", name: "Travertine Tray Collection (Three Designs)", cat: "Home Décor", room: "Home Décor", price: 1285, memberPrice: 1156, sku: "SH-10507", tag: "New", ph: "", img: "assets/products/tb28.webp",
+    imgs: ["assets/products/tb28.webp", "assets/products/tb28-2.webp", "assets/products/tb28-3.webp", "assets/products/tb28-4.webp", "assets/products/tb28-5.webp"],
+    sizes: [{ label: "B", price: 1285 }, { label: "C", price: 1522 }, { label: "A", price: 1637 }],
+    desc: "Three travertine designs, A, B and C.",
+    features: [
+      "Solid travertine",
+      "Three designs",
+      "Substantial pieces"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "tb29", name: "Travertine Bowl", cat: "Home Décor", room: "Home Décor", price: 1433, memberPrice: 1290, sku: "SH-10508", tag: "New", ph: "", img: "assets/products/tb29.webp",
+    imgs: ["assets/products/tb29.webp", "assets/products/tb29-2.webp", "assets/products/tb29-3.webp", "assets/products/tb29-4.webp", "assets/products/tb29-5.webp"],
+    sizes: [{ label: "Travertine", price: 1433 }],
+    desc: "A large travertine bowl, carved from solid stone. The heaviest décor piece we stock.",
+    features: [
+      "Carved from solid travertine",
+      "Large format",
+      "Very substantial weight"
+    ],
+    specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
+
+  { id: "vs01", name: "Golden Ball Vase (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 63, memberPrice: 57, sku: "SH-10509", tag: "New", ph: "", img: "assets/products/vs01.webp",
+    imgs: ["assets/products/vs01.webp", "assets/products/vs01-2.webp", "assets/products/vs01-3.webp", "assets/products/vs01-4.webp"],
+    sizes: [{ label: "Small", price: 63 }, { label: "Medium", price: 89 }, { label: "Large", price: 133 }],
+    desc: "A spherical vase with a gold finish, in three sizes. Group all three for a proper display, or use the large one alone with a single stem.",
+    features: [
+      "Gold finish",
+      "Small, Medium and Large",
+      "Group the sizes or use one alone"
+    ],
+    specs: { "Type": "Vase", "Material": "Metal", "Options": "3" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs02", name: "Abstract Vase in Black or White", cat: "Home Décor", room: "Home Décor", price: 83, memberPrice: 75, sku: "SH-10510", tag: "New", ph: "", img: "assets/products/vs02.webp",
+    imgs: ["assets/products/vs02.webp", "assets/products/vs02-2.webp", "assets/products/vs02-3.webp", "assets/products/vs02-4.webp", "assets/products/vs02-5.webp"],
+    sizes: [{ label: "Black / Small", price: 83 }, { label: "White / Small", price: 83 }, { label: "Black / Large", price: 120 }, { label: "White / Large", price: 120 }],
+    desc: "A sculptural, asymmetric shape that holds its own empty. Black or white, small or large.",
+    features: [
+      "Sculptural asymmetric form",
+      "Black or White",
+      "Small and Large"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs03", name: "Regal Bouquet Vase (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 106, memberPrice: 95, sku: "SH-10511", tag: "New", ph: "", img: "assets/products/vs03.webp",
+    imgs: ["assets/products/vs03.webp", "assets/products/vs03-2.webp", "assets/products/vs03-3.webp", "assets/products/vs03-4.webp", "assets/products/vs03-5.webp"],
+    sizes: [{ label: "Extra Large", price: 106 }, { label: "Large", price: 119 }, { label: "Medium", price: 124 }, { label: "Small", price: 137 }],
+    desc: "A wide-mouthed vase built for a full bouquet rather than a few stems, in four sizes to extra large.",
+    features: [
+      "Wide mouth for full bouquets",
+      "Four sizes to Extra Large",
+      "Classic silhouette"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs04", name: "Glass & Gold Vase (Four Designs)", cat: "Home Décor", room: "Home Décor", price: 109, memberPrice: 98, sku: "SH-10512", tag: "New", ph: "", img: "assets/products/vs04.webp",
+    imgs: ["assets/products/vs04.webp", "assets/products/vs04-2.webp", "assets/products/vs04-3.webp", "assets/products/vs04-4.webp", "assets/products/vs04-5.webp"],
+    sizes: [{ label: "A", price: 109 }, { label: "C", price: 178 }, { label: "B", price: 211 }, { label: "D", price: 217 }],
+    desc: "Glass with gold detail in four designs, A through D, so a group can vary without clashing.",
+    features: [
+      "Glass with gold detail",
+      "Four designs",
+      "Mix designs in a group"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "4" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs05", name: "Monochrome Vase, Black or White", cat: "Home Décor", room: "Home Décor", price: 109, memberPrice: 98, sku: "SH-10513", tag: "New", ph: "", img: "assets/products/vs05.webp",
+    imgs: ["assets/products/vs05.webp", "assets/products/vs05-2.webp", "assets/products/vs05-3.webp", "assets/products/vs05-4.webp", "assets/products/vs05-5.webp"],
+    sizes: [{ label: "Black", price: 109 }, { label: "White", price: 128 }],
+    desc: "One clean shape in black or white.",
+    features: [
+      "Black or White",
+      "Simple contemporary shape",
+      "Suits most interiors"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs06", name: "Marble-Look Ceramic Vase", cat: "Home Décor", room: "Home Décor", price: 133, memberPrice: 120, sku: "SH-10514", tag: "New", ph: "", img: "assets/products/vs06.webp",
+    imgs: ["assets/products/vs06.webp", "assets/products/vs06-2.webp", "assets/products/vs06-3.webp", "assets/products/vs06-4.webp", "assets/products/vs06-5.webp"],
+    sizes: [{ label: "M", price: 133 }, { label: "L", price: 206 }],
+    desc: "Ceramic finished to look like marble, in medium or large. The look of stone at a fraction of the weight.",
+    features: [
+      "Marble-look ceramic",
+      "Medium and Large",
+      "Lighter than real stone"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs07", name: "White Vase (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 137, memberPrice: 123, sku: "SH-10515", tag: "New", ph: "", img: "assets/products/vs07.webp",
+    imgs: ["assets/products/vs07.webp", "assets/products/vs07-2.webp", "assets/products/vs07-3.webp", "assets/products/vs07-4.webp"],
+    sizes: [{ label: "White / Small", price: 137 }, { label: "White / Large", price: 204 }],
+    desc: "A plain white vase in two sizes, the sort that disappears and lets the flowers talk.",
+    features: [
+      "White glaze",
+      "Small and Large",
+      "Understated shape"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs08", name: "Nova Vase in Black or White", cat: "Home Décor", room: "Home Décor", price: 161, memberPrice: 145, sku: "SH-10516", tag: "New", ph: "", img: "assets/products/vs08.webp",
+    imgs: ["assets/products/vs08.webp", "assets/products/vs08-2.webp", "assets/products/vs08-3.webp", "assets/products/vs08-4.webp", "assets/products/vs08-5.webp"],
+    sizes: [{ label: "Black / Small", price: 161 }, { label: "White / Small", price: 161 }, { label: "Black / Medium", price: 217 }, { label: "White / Medium", price: 217 }, { label: "Black / Large", price: 293 }, { label: "White / Large", price: 293 }],
+    desc: "Three sizes in black or white, meant to be grouped.",
+    features: [
+      "Black or White",
+      "Small, Medium and Large",
+      "Designed to be grouped"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "6" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs09", name: "Black Vase (Seven Designs)", cat: "Home Décor", room: "Home Décor", price: 161, memberPrice: 145, sku: "SH-10517", tag: "New", ph: "", img: "assets/products/vs09.webp",
+    imgs: ["assets/products/vs09.webp", "assets/products/vs09-2.webp", "assets/products/vs09-3.webp", "assets/products/vs09-4.webp", "assets/products/vs09-5.webp"],
+    sizes: [{ label: "1", price: 161 }, { label: "2", price: 161 }, { label: "3", price: 161 }, { label: "5", price: 161 }, { label: "6", price: 233 }, { label: "4", price: 256 }, { label: "7", price: 256 }],
+    desc: "Seven different black vases, numbered 1 to 7. Pick two or three that differ in height.",
+    features: [
+      "Seven designs to choose from",
+      "Matte black finish",
+      "Vary the heights in a group"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "7" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs10", name: "Sculptural Vase (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 167, memberPrice: 150, sku: "SH-10518", tag: "New", ph: "", img: "assets/products/vs10.webp",
+    imgs: ["assets/products/vs10.webp", "assets/products/vs10-2.webp", "assets/products/vs10-3.webp", "assets/products/vs10-4.webp", "assets/products/vs10-5.webp"],
+    sizes: [{ label: "Small", price: 167 }, { label: "Large", price: 220 }],
+    desc: "A sculptural form in two sizes.",
+    features: [
+      "Sculptural silhouette",
+      "Small and Large",
+      "Works with or without flowers"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs11", name: "Ceramic Vase in Black or Cream", cat: "Home Décor", room: "Home Décor", price: 178, memberPrice: 160, sku: "SH-10519", tag: "New", ph: "", img: "assets/products/vs11.webp",
+    imgs: ["assets/products/vs11.webp", "assets/products/vs11-2.webp", "assets/products/vs11-3.webp", "assets/products/vs11-4.webp", "assets/products/vs11-5.webp"],
+    sizes: [{ label: "Black", price: 178 }, { label: "Cream", price: 178 }],
+    desc: "Ceramic in black or cream, simple and well proportioned.",
+    features: [
+      "Ceramic construction",
+      "Black or Cream",
+      "Well-balanced proportions"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs12", name: "Liquid Silver Vase", cat: "Home Décor", room: "Home Décor", price: 180, memberPrice: 162, sku: "SH-10520", tag: "New", ph: "", img: "assets/products/vs12.webp",
+    imgs: ["assets/products/vs12.webp", "assets/products/vs12-2.webp", "assets/products/vs12-3.webp", "assets/products/vs12-4.webp"],
+    sizes: [{ label: "Small", price: 180 }, { label: "Large", price: 231 }],
+    desc: "A silver finish with a poured, molten look to it. Small or large.",
+    features: [
+      "Liquid silver finish",
+      "Small and Large",
+      "Catches light from every angle"
+    ],
+    specs: { "Type": "Vase", "Material": "Metal", "Options": "2" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs13", name: "Vase in Black, White or Khaki", cat: "Home Décor", room: "Home Décor", price: 180, memberPrice: 162, sku: "SH-10521", tag: "New", ph: "", img: "assets/products/vs13.webp",
+    imgs: ["assets/products/vs13.webp", "assets/products/vs13-2.webp", "assets/products/vs13-3.webp", "assets/products/vs13-4.webp", "assets/products/vs13-5.webp"],
+    sizes: [{ label: "Black", price: 180 }, { label: "White", price: 180 }, { label: "Khaki", price: 180 }],
+    desc: "Three colours, khaki being the one that suits a room with timber and greenery.",
+    features: [
+      "Black, White or Khaki",
+      "Matte finish",
+      "Khaki suits natural interiors"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs14", name: "Cube Cascade Crystal Vase", cat: "Home Décor", room: "Home Décor", price: 185, memberPrice: 166, sku: "SH-10522", tag: "New", ph: "", img: "assets/products/vs14.webp",
+    imgs: ["assets/products/vs14.webp", "assets/products/vs14-2.webp", "assets/products/vs14-3.webp", "assets/products/vs14-4.webp"],
+    sizes: [{ label: "Small", price: 185 }, { label: "Medium", price: 204 }, { label: "Large", price: 222 }, { label: "Extra Large", price: 241 }],
+    desc: "Clear crystal in a stepped, cubic form, in four sizes up to extra large.",
+    features: [
+      "Clear crystal glass",
+      "Stepped cubic form",
+      "Four sizes"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "4" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs15", name: "Glass Vase (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 200, memberPrice: 180, sku: "SH-10523", tag: "New", ph: "", img: "assets/products/vs15.webp",
+    imgs: ["assets/products/vs15.webp", "assets/products/vs15-2.webp", "assets/products/vs15-3.webp", "assets/products/vs15-4.webp", "assets/products/vs15-5.webp"],
+    sizes: [{ label: "Small", price: 200 }, { label: "Large", price: 289 }],
+    desc: "Plain glass in two sizes, the practical choice for cut flowers.",
+    features: [
+      "Clear glass",
+      "Small and Large",
+      "Easy to clean"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "2" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs16", name: "Textured Ceramic Vase", cat: "Home Décor", room: "Home Décor", price: 213, memberPrice: 192, sku: "SH-10524", tag: "New", ph: "", img: "assets/products/vs16.webp",
+    imgs: ["assets/products/vs16.webp", "assets/products/vs16-2.webp", "assets/products/vs16-3.webp", "assets/products/vs16-4.webp", "assets/products/vs16-5.webp"],
+    sizes: [{ label: "Dark Grey / Small", price: 213 }, { label: "Beige / Small", price: 213 }, { label: "Dark Grey / Large", price: 259 }, { label: "Beige / Large", price: 259 }],
+    desc: "A textured ceramic surface in dark grey or beige, small or large. Texture reads better than pattern in a neutral room.",
+    features: [
+      "Textured ceramic surface",
+      "Dark Grey or Beige",
+      "Small and Large"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs17", name: "Spectra Vase in Silver", cat: "Home Décor", room: "Home Décor", price: 220, memberPrice: 198, sku: "SH-10525", tag: "New", ph: "", img: "assets/products/vs17.webp",
+    imgs: ["assets/products/vs17.webp", "assets/products/vs17-2.webp", "assets/products/vs17-3.webp", "assets/products/vs17-4.webp", "assets/products/vs17-5.webp"],
+    sizes: [{ label: "S", price: 220 }, { label: "M", price: 274 }, { label: "L", price: 330 }],
+    desc: "A silver vase in three sizes.",
+    features: [
+      "Silver finish",
+      "Small, Medium and Large",
+      "Reflective surface"
+    ],
+    specs: { "Type": "Vase", "Material": "Metal", "Options": "3" },
+    care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs18", name: "Opal Glass Vase (Four Sizes)", cat: "Home Décor", room: "Home Décor", price: 222, memberPrice: 200, sku: "SH-10526", tag: "New", ph: "", img: "assets/products/vs18.webp",
+    imgs: ["assets/products/vs18.webp", "assets/products/vs18-2.webp", "assets/products/vs18-3.webp", "assets/products/vs18-4.webp", "assets/products/vs18-5.webp"],
+    sizes: [{ label: "Black / Extra Small", price: 222 }, { label: "Orange / Extra Small", price: 222 }, { label: "Black / Small", price: 278 }, { label: "Orange / Small", price: 278 }, { label: "Black / Medium", price: 324 }, { label: "Orange / Medium", price: 324 }, { label: "Black / Large", price: 389 }, { label: "Orange / Large", price: 389 }],
+    desc: "Opal-finish crystal glass in black or other tones, from extra small to medium.",
+    features: [
+      "Opal crystal glass",
+      "Four sizes from Extra Small",
+      "Several colourways"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "8" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs19", name: "Textured Flower Vase (Five Designs)", cat: "Home Décor", room: "Home Décor", price: 222, memberPrice: 200, sku: "SH-10527", tag: "New", ph: "", img: "assets/products/vs19.webp",
+    imgs: ["assets/products/vs19.webp", "assets/products/vs19-2.webp", "assets/products/vs19-3.webp", "assets/products/vs19-4.webp", "assets/products/vs19-5.webp"],
+    sizes: [{ label: "1", price: 222 }, { label: "2", price: 222 }, { label: "3", price: 222 }, { label: "4", price: 222 }, { label: "5", price: 222 }],
+    desc: "Five textured ceramic designs, numbered 1 to 5.",
+    features: [
+      "Five textured designs",
+      "Ceramic construction",
+      "Mix in a group"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "5" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs20", name: "Resin Sculptural Vase", cat: "Home Décor", room: "Home Décor", price: 239, memberPrice: 215, sku: "SH-10528", tag: "New", ph: "", img: "assets/products/vs20.webp",
+    imgs: ["assets/products/vs20.webp", "assets/products/vs20-2.webp", "assets/products/vs20-3.webp", "assets/products/vs20-4.webp", "assets/products/vs20-5.webp"],
+    desc: "A single resin vase with a sculptural shape, light enough for a shelf.",
+    features: [
+      "Resin construction",
+      "Sculptural form",
+      "Light enough for shelving"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs21", name: "Ceramic Vase (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 254, memberPrice: 229, sku: "SH-10529", tag: "New", ph: "", img: "assets/products/vs21.webp",
+    imgs: ["assets/products/vs21.webp", "assets/products/vs21-2.webp", "assets/products/vs21-3.webp", "assets/products/vs21-4.webp", "assets/products/vs21-5.webp"],
+    sizes: [{ label: "S", price: 254 }, { label: "L", price: 306 }],
+    desc: "Ceramic in two sizes, plain and useful.",
+    features: [
+      "Ceramic construction",
+      "Small and Large",
+      "Simple form"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs22", name: "Glass Vase: Clear, Frosted or Coloured", cat: "Home Décor", room: "Home Décor", price: 254, memberPrice: 229, sku: "SH-10530", tag: "New", ph: "", img: "assets/products/vs22.webp",
+    imgs: ["assets/products/vs22.webp", "assets/products/vs22-2.webp", "assets/products/vs22-3.webp", "assets/products/vs22-4.webp", "assets/products/vs22-5.webp"],
+    sizes: [{ label: "Transparent", price: 254 }, { label: "Frosted", price: 254 }, { label: "Multi Colour", price: 254 }],
+    desc: "The same shape in transparent, frosted or multi-colour glass.",
+    features: [
+      "Transparent, Frosted or Multi Colour",
+      "Glass construction",
+      "One shape, three moods"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "3" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs23", name: "Two-Piece Vase Set", cat: "Home Décor", room: "Home Décor", price: 269, memberPrice: 242, sku: "SH-10531", tag: "New", ph: "", img: "assets/products/vs23.webp",
+    imgs: ["assets/products/vs23.webp", "assets/products/vs23-2.webp", "assets/products/vs23-3.webp"],
+    sizes: [{ label: "2 Piece Set", price: 269 }],
+    desc: "A pair designed together, so the heights and shapes work as a group from the start.",
+    features: [
+      "Two pieces, designed as a pair",
+      "Complementary heights",
+      "Ready-made grouping"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs24", name: "Crystal Vase, Smoke or Clear", cat: "Home Décor", room: "Home Décor", price: 272, memberPrice: 245, sku: "SH-10532", tag: "New", ph: "", img: "assets/products/vs24.webp",
+    imgs: ["assets/products/vs24.webp", "assets/products/vs24-2.webp", "assets/products/vs24-3.webp", "assets/products/vs24-4.webp"],
+    sizes: [{ label: "Smoke Grey", price: 272 }, { label: "Transparent", price: 272 }],
+    desc: "Crystal in smoke grey or transparent. Smoke grey is the more interesting of the two.",
+    features: [
+      "Crystal glass",
+      "Smoke Grey or Transparent",
+      "Weighty, clear finish"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "2" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs25", name: "Porcelain Vase in Black or White", cat: "Home Décor", room: "Home Décor", price: 276, memberPrice: 248, sku: "SH-10533", tag: "New", ph: "", img: "assets/products/vs25.webp",
+    imgs: ["assets/products/vs25.webp", "assets/products/vs25-2.webp", "assets/products/vs25-3.webp", "assets/products/vs25-4.webp", "assets/products/vs25-5.webp"],
+    sizes: [{ label: "Black / S", price: 276 }, { label: "White / S", price: 276 }, { label: "Black / L", price: 443 }, { label: "White / L", price: 443 }],
+    desc: "Porcelain in black or white, small or large.",
+    features: [
+      "Porcelain construction",
+      "Black or White",
+      "Small and Large"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "4" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs26", name: "Sculptural Floral Vase", cat: "Home Décor", room: "Home Décor", price: 287, memberPrice: 258, sku: "SH-10534", tag: "New", ph: "", img: "assets/products/vs26.webp",
+    imgs: ["assets/products/vs26.webp", "assets/products/vs26-2.webp", "assets/products/vs26-3.webp", "assets/products/vs26-4.webp", "assets/products/vs26-5.webp"],
+    sizes: [{ label: "S / Black", price: 287 }, { label: "S / Orange", price: 287 }, { label: "M / Black", price: 324 }, { label: "M / Orange", price: 324 }, { label: "L / Black", price: 367 }, { label: "L / Orange", price: 367 }],
+    desc: "Glass in black or orange, across three sizes. Orange glass is rare and worth it.",
+    features: [
+      "Glass construction",
+      "Black or Orange",
+      "Three sizes"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "6" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs27", name: "Grey Vase (Three Sizes)", cat: "Home Décor", room: "Home Décor", price: 289, memberPrice: 260, sku: "SH-10535", tag: "New", ph: "", img: "assets/products/vs27.webp",
+    imgs: ["assets/products/vs27.webp", "assets/products/vs27-2.webp", "assets/products/vs27-3.webp", "assets/products/vs27-4.webp"],
+    sizes: [{ label: "Grey / Small", price: 289 }, { label: "Grey / Large", price: 457 }, { label: "Grey / X Large", price: 554 }],
+    desc: "Grey, from small to extra large.",
+    features: [
+      "Grey finish",
+      "Small, Large and X Large",
+      "Group the sizes"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs28", name: "Ribbed Vase, Black or Clear", cat: "Home Décor", room: "Home Décor", price: 306, memberPrice: 275, sku: "SH-10536", tag: "New", ph: "", img: "assets/products/vs28.webp",
+    imgs: ["assets/products/vs28.webp", "assets/products/vs28-2.webp", "assets/products/vs28-3.webp", "assets/products/vs28-4.webp", "assets/products/vs28-5.webp"],
+    sizes: [{ label: "S / Black", price: 306 }, { label: "S / Transparent", price: 306 }, { label: "M / Black", price: 350 }, { label: "M / Transparent", price: 350 }, { label: "L / Black", price: 478 }, { label: "L / Transparent", price: 478 }],
+    desc: "A ribbed surface that catches light down the sides, in black or transparent, small or medium.",
+    features: [
+      "Ribbed surface",
+      "Black or Transparent",
+      "Small and Medium"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "6" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs29", name: "Resin & Timber Vase", cat: "Home Décor", room: "Home Décor", price: 330, memberPrice: 297, sku: "SH-10537", tag: "New", ph: "", img: "assets/products/vs29.webp",
+    imgs: ["assets/products/vs29.webp", "assets/products/vs29-2.webp", "assets/products/vs29-3.webp", "assets/products/vs29-4.webp", "assets/products/vs29-5.webp"],
+    sizes: [{ label: "Tan / Small", price: 330 }, { label: "Chocolate / Small", price: 330 }, { label: "Tan / Large", price: 478 }, { label: "Chocolate / Large", price: 478 }],
+    desc: "Resin with timber in tan or chocolate, small or large.",
+    features: [
+      "Resin with timber",
+      "Tan or Chocolate",
+      "Small and Large"
+    ],
+    specs: { "Type": "Vase", "Material": "Timber", "Options": "4" },
+    care: "Dust with a dry cloth. Keep out of direct sun and away from damp, and wipe spills promptly. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs30", name: "Ceramic Vase Set", cat: "Home Décor", room: "Home Décor", price: 331, memberPrice: 298, sku: "SH-10538", tag: "New", ph: "", img: "assets/products/vs30.webp",
+    imgs: ["assets/products/vs30.webp", "assets/products/vs30-2.webp", "assets/products/vs30-3.webp", "assets/products/vs30-4.webp", "assets/products/vs30-5.webp"],
+    sizes: [{ label: "Complete Set", price: 331 }],
+    desc: "A complete ceramic set, bought together.",
+    features: [
+      "Complete set",
+      "Ceramic construction",
+      "Pieces designed together"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs31", name: "Handmade Ceramic Vase Set", cat: "Home Décor", room: "Home Décor", price: 346, memberPrice: 311, sku: "SH-10539", tag: "New", ph: "", img: "assets/products/vs31.webp",
+    imgs: ["assets/products/vs31.webp", "assets/products/vs31-2.webp", "assets/products/vs31-3.webp", "assets/products/vs31-4.webp", "assets/products/vs31-5.webp"],
+    sizes: [{ label: "White Set", price: 346 }, { label: "Black Set", price: 346 }, { label: "Black + White Set", price: 346 }],
+    desc: "Handmade ceramic in white, black, or black and white together. Handmade means each one varies slightly.",
+    features: [
+      "Handmade ceramic",
+      "White, Black, or Black + White",
+      "Slight variation in every piece"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs32", name: "Marble & Glass Vase", cat: "Home Décor", room: "Home Décor", price: 387, memberPrice: 348, sku: "SH-10540", tag: "New", ph: "", img: "assets/products/vs32.webp",
+    imgs: ["assets/products/vs32.webp", "assets/products/vs32-2.webp", "assets/products/vs32-3.webp", "assets/products/vs32-4.webp", "assets/products/vs32-5.webp"],
+    desc: "Marble with glass, one size, quietly expensive.",
+    features: [
+      "Marble with glass",
+      "Single size",
+      "Substantial weight"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural marble", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs33", name: "Serene Vase Set", cat: "Home Décor", room: "Home Décor", price: 389, memberPrice: 350, sku: "SH-10541", tag: "New", ph: "", img: "assets/products/vs33.webp",
+    imgs: ["assets/products/vs33.webp", "assets/products/vs33-2.jpg", "assets/products/vs33-3.webp", "assets/products/vs33-4.webp", "assets/products/vs33-5.webp"],
+    sizes: [{ label: "1 x Set", price: 389 }],
+    desc: "A set designed as a group.",
+    features: [
+      "Complete set",
+      "Coordinated shapes",
+      "Ready-made display"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "1" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs34", name: "Mirko Vase (Three Designs)", cat: "Home Décor", room: "Home Décor", price: 444, memberPrice: 400, sku: "SH-10542", tag: "New", ph: "", img: "assets/products/vs34.webp",
+    imgs: ["assets/products/vs34.webp", "assets/products/vs34-2.webp", "assets/products/vs34-3.webp", "assets/products/vs34-4.webp", "assets/products/vs34-5.webp"],
+    sizes: [{ label: "A", price: 444 }, { label: "B", price: 444 }, { label: "C", price: 444 }],
+    desc: "Three designs, A, B and C.",
+    features: [
+      "Three designs",
+      "Ceramic construction",
+      "Mix for a layered look"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "3" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs35", name: "White Onyx Marble Vase", cat: "Home Décor", room: "Home Décor", price: 452, memberPrice: 407, sku: "SH-10543", tag: "New", ph: "", img: "assets/products/vs35.webp",
+    imgs: ["assets/products/vs35.webp", "assets/products/vs35-2.webp", "assets/products/vs35-3.webp", "assets/products/vs35-4.webp", "assets/products/vs35-5.webp"],
+    sizes: [{ label: "1", price: 452 }, { label: "2", price: 569 }, { label: "3", price: 628 }],
+    desc: "White onyx marble in three designs. Onyx has a translucence that ordinary marble doesn't.",
+    features: [
+      "White onyx marble",
+      "Three designs",
+      "Translucent stone"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural marble", "Options": "3" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs36", name: "Vase Set in Black or Off White", cat: "Home Décor", room: "Home Décor", price: 452, memberPrice: 407, sku: "SH-10544", tag: "New", ph: "", img: "assets/products/vs36.webp",
+    imgs: ["assets/products/vs36.webp", "assets/products/vs36-2.webp", "assets/products/vs36-3.webp", "assets/products/vs36-4.webp", "assets/products/vs36-5.webp"],
+    sizes: [{ label: "Black Set", price: 452 }, { label: "Off White Set", price: 452 }],
+    desc: "A set in black or off white.",
+    features: [
+      "Complete set",
+      "Black or Off White",
+      "Coordinated heights"
+    ],
+    specs: { "Type": "Vase", "Material": "Ceramic", "Options": "2" },
+    care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs37", name: "Stone Vase: Travertine, Calacatta or Red", cat: "Home Décor", room: "Home Décor", price: 476, memberPrice: 428, sku: "SH-10545", tag: "New", ph: "", img: "assets/products/vs37.webp",
+    imgs: ["assets/products/vs37.webp", "assets/products/vs37-2.webp", "assets/products/vs37-3.webp", "assets/products/vs37-4.webp", "assets/products/vs37-5.webp"],
+    sizes: [{ label: "Travertine", price: 476 }, { label: "Calcatta", price: 476 }, { label: "Red", price: 476 }],
+    desc: "Three stones: travertine, calacatta white and a red marble that is genuinely unusual.",
+    features: [
+      "Travertine, Calacatta or Red stone",
+      "Natural stone, each piece unique",
+      "Red is a rare option"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural stone", "Options": "3" },
+    care: "Wipe with a soft, damp cloth. Avoid acidic and abrasive cleaners, which dull natural stone. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs38", name: "Midnight Glass Vase Set", cat: "Home Décor", room: "Home Décor", price: 489, memberPrice: 440, sku: "SH-10546", tag: "New", ph: "", img: "assets/products/vs38.webp",
+    imgs: ["assets/products/vs38.webp", "assets/products/vs38-2.webp", "assets/products/vs38-3.webp"],
+    sizes: [{ label: "Complete Set", price: 489 }],
+    desc: "A dark glass set, bought complete.",
+    features: [
+      "Dark glass set",
+      "Pieces designed together",
+      "One purchase"
+    ],
+    specs: { "Type": "Vase", "Material": "Glass", "Options": "1" },
+    care: "Wash by hand in warm soapy water and dry with a soft cloth to keep it clear. Avoid sudden temperature changes, which can crack glass. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs39", name: "Travertine Vase (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 700, memberPrice: 630, sku: "SH-10547", tag: "New", ph: "", img: "assets/products/vs39.webp",
+    imgs: ["assets/products/vs39.webp", "assets/products/vs39-2.webp", "assets/products/vs39-3.webp", "assets/products/vs39-4.webp", "assets/products/vs39-5.webp"],
+    sizes: [{ label: "Small", price: 700 }, { label: "Large", price: 885 }],
+    desc: "Solid travertine in two sizes, with the open texture the stone is known for.",
+    features: [
+      "Solid travertine",
+      "Small and Large",
+      "Open natural texture"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural travertine", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs40", name: "Marble Vase (Small or Large)", cat: "Home Décor", room: "Home Décor", price: 924, memberPrice: 832, sku: "SH-10548", tag: "New", ph: "", img: "assets/products/vs40.webp",
+    imgs: ["assets/products/vs40.webp", "assets/products/vs40-2.webp", "assets/products/vs40-3.webp", "assets/products/vs40-4.webp", "assets/products/vs40-5.webp"],
+    sizes: [{ label: "S", price: 924 }, { label: "L", price: 996 }],
+    desc: "Solid marble in two sizes.",
+    features: [
+      "Solid marble",
+      "Small and Large",
+      "Veining unique to each piece"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural marble", "Options": "2" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs41", name: "Black or White Marble Vase", cat: "Home Décor", room: "Home Décor", price: 1111, memberPrice: 1000, sku: "SH-10549", tag: "New", ph: "", img: "assets/products/vs41.webp",
+    imgs: ["assets/products/vs41.webp", "assets/products/vs41-2.webp", "assets/products/vs41-3.webp", "assets/products/vs41-4.webp", "assets/products/vs41-5.webp"],
+    sizes: [{ label: "Black Marble / Small", price: 1111 }, { label: "White Marble / Small", price: 1111 }, { label: "Travertine / Small", price: 1111 }, { label: "Black Marble / Large", price: 1194 }, { label: "White Marble / Large", price: 1194 }, { label: "Travertine / Large", price: 1194 }],
+    desc: "Marble and travertine in black or white, small or large. The most substantial vases we carry.",
+    features: [
+      "Black or White marble",
+      "Small and Large",
+      "Considerable weight"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural marble", "Options": "6" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs42", name: "Natural White Marble Vase", cat: "Home Décor", room: "Home Décor", price: 1176, memberPrice: 1058, sku: "SH-10550", tag: "New", ph: "", img: "assets/products/vs42.webp",
+    imgs: ["assets/products/vs42.webp", "assets/products/vs42-2.webp", "assets/products/vs42-3.webp"],
+    sizes: [{ label: "Natural White", price: 1176 }],
+    desc: "One vase, cut from natural white marble.",
+    features: [
+      "Natural white marble",
+      "Single size",
+      "Cut from solid stone"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural marble", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs43", name: "Marble Vase in Black or White", cat: "Home Décor", room: "Home Décor", price: 1193, memberPrice: 1074, sku: "SH-10551", tag: "New", ph: "", img: "assets/products/vs43.webp",
+    imgs: ["assets/products/vs43.webp", "assets/products/vs43-2.webp", "assets/products/vs43-3.webp", "assets/products/vs43-4.webp", "assets/products/vs43-5.webp"],
+    sizes: [{ label: "Small / Black", price: 1193 }, { label: "Small / White", price: 1193 }, { label: "Large / Black", price: 1248 }, { label: "Large / White", price: 1248 }],
+    desc: "Marble in black or white, small or large.",
+    features: [
+      "Solid marble",
+      "Black or White",
+      "Small and Large"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural marble", "Options": "4" },
+    care: "Wipe with a soft, damp cloth and dry. Marble is porous, so keep it from vinegar, citrus and bleach, and stand it on felt or a coaster to protect the surface underneath. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
+  { id: "vs44", name: "Natural Travertine Vase", cat: "Home Décor", room: "Home Décor", price: 1200, memberPrice: 1080, sku: "SH-10552", tag: "New", ph: "", img: "assets/products/vs44.webp",
+    imgs: ["assets/products/vs44.webp", "assets/products/vs44-2.webp", "assets/products/vs44-3.webp"],
+    sizes: [{ label: "Travertine", price: 1200 }],
+    desc: "A single travertine vase, heavy and honest.",
+    features: [
+      "Solid travertine",
+      "Single size",
+      "Natural pitted surface"
+    ],
+    specs: { "Type": "Vase", "Material": "Natural travertine", "Options": "1" },
+    care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners. If you're using fresh flowers, a glass liner or a smaller jar inside will protect the inside of the piece and make it far easier to clean." },
+
   { id: "hd01", name: "Aura Mist Ultrasonic Diffuser 160ml", cat: "Home Décor", price: 184, memberPrice: 154, sku: "SH-10101", tag: "New", ph: "", img: "assets/products/hd01.webp",
     imgs: ["assets/products/hd01.webp", "assets/products/hd01-2.webp"],
     desc: "A sculptural teardrop diffuser that turns fragrance into a moment. Whisper-quiet ultrasonic mist, soft ambient light and a 160ml reservoir bring calm, scent and a designer silhouette to any room." },
