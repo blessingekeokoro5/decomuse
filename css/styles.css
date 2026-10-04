@@ -1991,3 +1991,18 @@ em { font-style: italic; color: var(--rose-deep); }
   .card-act span { display: none; }          /* icons only on the very narrowest phones */
   .card-act { padding: 10px; }
 }
+
+/* A sub-category reads as its own collection */
+.collection-head { margin: 28px 0 6px; padding-bottom: 18px; border-bottom: 1px solid var(--line); }
+.collection-eyebrow { font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--gold); margin: 0 0 6px; }
+.collection-title { font-family: var(--font-display); font-size: clamp(1.7rem, 4vw, 2.6rem);
+  color: var(--ink); margin: 0 0 6px; line-height: 1.1; }
+.collection-count { font-family: var(--font-body); font-size: 0.9rem; color: var(--body); margin: 0 0 10px; }
+.collection-clear { font-family: var(--font-body); font-size: 0.85rem; color: var(--gold);
+  text-decoration: none; border-bottom: 1px solid transparent; }
+.collection-clear:hover { border-bottom-color: var(--gold); }
+@media (max-width: 640px) {
+  .collection-head { margin-top: 18px; }
+  .collection-clear { display: inline-block; padding: 8px 0; }
+}

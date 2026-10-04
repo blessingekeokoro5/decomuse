@@ -161,7 +161,8 @@ function buildHeader() {
     "create my own hamper": "hamper-maker.html",
     "shop all hampers": "hampers.html",
     "gift cards": "gift-cards.html",
-    "request a bulk quote": "packaging.html#bulk"
+    "request a bulk quote": "packaging.html#bulk",
+    "on sale": "sale.html"
   };
   const linkHref = (cat, col, l) => {
     const direct = LINK_PAGES[String(l).toLowerCase()];
@@ -1610,7 +1611,31 @@ function wireNav() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", injectComponents);
+
+/* Never point a shopper at an empty collection. After the header is in the
+   DOM, drop any sub-category link that nothing in the catalogue matches. */
+function pruneEmptyMenuLinks() {
+  if (typeof PRODUCTS === "undefined" || typeof productMatchesSub !== "function") return;
+  const live = PRODUCTS.filter(p => !p.comingSoon);
+  const cache = {};
+  const has = (sub) => {
+    if (!(sub in cache)) cache[sub] = live.some(p => productMatchesSub(p, sub));
+    return cache[sub];
+  };
+  document.querySelectorAll('.mega-col a[href*="sub="]').forEach(a => {
+    let sub = "";
+    try { sub = new URLSearchParams(a.getAttribute("href").split("?")[1] || "").get("sub") || ""; } catch (e) {}
+    if (sub && !has(sub)) { const li = a.closest("li"); if (li) li.remove(); }
+  });
+  document.querySelectorAll(".mega-col").forEach(col => {
+    if (!col.querySelector("li")) col.remove();
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  injectComponents();
+  try { pruneEmptyMenuLinks(); } catch (e) { console.warn("menu prune:", e && e.message); }
+});
 
 /* ============================================================
    Live chat (Tawk.to) — paste your embed src to switch it on.

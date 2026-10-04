@@ -274,6 +274,21 @@ function showDontPayInfo(e) {
    sub-category. Matching is keyword-based against product name/specs. */
 function subKeywords(sub) {
   const overrides = {
+    "serveware": ["tray", "bowl", "platter", "cake stand", "decanter", "plate", "fruit"],
+    "stationery": ["notebook", "journal", "planner", "diary", "pen", "paper"],
+    "bookshelves": ["bookshelf", "bookcase", "shelving", "shelf", "bookend"],
+    "shelving": ["shelving", "shelf", "bookcase", "bookshelf"],
+    "lamps": ["lamp", "table lamp", "floor lamp"],
+    "candles": ["candle", "candle holder", "lantern"],
+    "baskets": ["basket", "woven", "storage"],
+    "throws": ["throw", "blanket", "quilt"],
+    "faux plants": ["faux", "topiary", "olive", "fern", "plant", "greenery", "stem"],
+    "outdoor rugs": ["rug", "mat"],
+    "kitchen linen": ["tea towel", "apron", "napkin", "placemat", "linen"],
+    "chopping boards": ["board", "chopping", "serving board", "platter"],
+    "caddies": ["caddy", "caddie", "organiser", "organizer", "holder"],
+    "tumblers": ["tumbler", "cup", "glass"],
+    "robes": ["robe", "bathrobe", "gown"],
     "sculptures & objects": ["sculpture", "object", "ornament", "figurine", "statue", "bust"],
     "faux greenery": ["faux", "greenery", "olive", "topiary", "foliage", "fern", "stem", "plant", "flower"],
     "faux plants": ["faux", "topiary", "olive", "fern", "plant"],
@@ -331,20 +346,37 @@ function productMatchesSub(p, sub) {
 function applySubFilter(list) {
   const sub = new URLSearchParams(location.search).get("sub");
   if (!sub) return list;
-  const filtered = list.filter(p => productMatchesSub(p, sub));
-  renderSubChip(sub);
+  let filtered = list.filter(p => productMatchesSub(p, sub));
+  let widened = false;
+  // Lamps live in Living Room but the Office menu offers them too. Rather
+  // than hand back an empty page, look across the whole catalogue.
+  if (!filtered.length && typeof PRODUCTS !== "undefined") {
+    filtered = PRODUCTS.filter(p => !p.comingSoon && productMatchesSub(p, sub));
+    widened = filtered.length > 0;
+  }
+  renderCollectionHead(sub, filtered.length, widened);
   try { document.title = sub + " · Samira Home Decor"; } catch (e) {}
   return filtered;
 }
-function renderSubChip(sub) {
+/* A sub-category behaves like its own collection: own heading, own count,
+   one click back out to the full category. */
+function renderCollectionHead(sub, count, widened) {
   if (document.getElementById("subChip")) return;
   const bar = document.querySelector(".shop-bar");
-  const chip = document.createElement("div");
-  chip.id = "subChip";
-  chip.className = "sub-chip";
-  chip.innerHTML = `<span>Showing <strong>${sub}</strong></span><a href="${location.pathname}">Clear ✕</a>`;
-  if (bar && bar.parentNode) bar.parentNode.insertBefore(chip, bar);
-  else { const c = document.querySelector(".container"); if (c) c.insertBefore(chip, c.firstChild); }
+  const head = document.createElement("div");
+  head.id = "subChip";
+  head.className = "collection-head";
+  head.innerHTML =
+    `<p class="collection-eyebrow">Collection</p>
+     <h2 class="collection-title">${sub}</h2>
+     <p class="collection-count">${count} ${count === 1 ? "piece" : "pieces"}${
+       widened ? " from across the store" : ""}</p>
+     <a class="collection-clear" href="${location.pathname}">← Back to everything</a>`;
+  if (bar && bar.parentNode) bar.parentNode.insertBefore(head, bar);
+  else { const c = document.querySelector(".container"); if (c) c.insertBefore(head, c.firstChild); }
+  // The heading already carries the count; the bar's copy would just repeat it.
+  const dupe = bar && bar.querySelector(".count, #roomCount, #shopCount");
+  if (dupe) dupe.style.display = "none";
 }
 
 /* Find similar products on Samira Home Decor (card search icon) — searches our own shop. */
