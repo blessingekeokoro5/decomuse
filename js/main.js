@@ -274,6 +274,18 @@ function showDontPayInfo(e) {
    sub-category. Matching is keyword-based against product name/specs. */
 function subKeywords(sub) {
   const overrides = {
+    "dining chairs": ["dining chair", "chair"],
+    "bar & counter stools": ["stool", "bar stool", "counter stool"],
+    "dining tables": ["dining table"],
+    "console tables": ["console"],
+    "lighting": ["light", "lamp", "pendant", "chandelier", "sconce", "wall light"],
+    "rugs": ["rug", "runner"],
+    "mirrors": ["mirror"],
+    "vases": ["vase", "vessel", "urn"],
+    "travel essentials": ["travel", "tote", "wash bag", "pouch", "packing"],
+    "glassware": ["glass", "tumbler", "decanter", "carafe", "goblet"],
+    "bath mats": ["bath mat", "mat", "bathmat"],
+    "dinnerware": ["plate", "bowl", "dinner set", "platter", "serving"],
     "serveware": ["tray", "bowl", "platter", "cake stand", "decanter", "plate", "fruit"],
     "stationery": ["notebook", "journal", "planner", "diary", "pen", "paper"],
     "bookshelves": ["bookshelf", "bookcase", "shelving", "shelf", "bookend"],
@@ -333,15 +345,32 @@ function subKeywords(sub) {
     .filter(w => w && !stop.has(w))
     .map(w => (w.length > 4 && w.endsWith("s")) ? w.slice(0, -1) : w);
 }
+function subWordMatch(hay, needle) {
+  const n = String(needle).toLowerCase();
+  // "Rugs" has to find a "Wool Rug", and "Rug" a "Rugs" set.
+  const forms = new Set([n]);
+  if (n.endsWith("es")) forms.add(n.slice(0, -2));
+  if (n.endsWith("s")) forms.add(n.slice(0, -1));
+  for (const f of [...forms]) { forms.add(f + "s"); forms.add(f + "es"); }
+  for (const f of forms) {
+    if (!f) continue;
+    const safe = f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+    if (new RegExp("(^|[^a-z0-9])" + safe + "([^a-z0-9]|$)", "i").test(hay)) return true;
+  }
+  return false;
+}
 function productMatchesSub(p, sub) {
   const s = (sub || "").toLowerCase().trim();
   if (s === "new arrivals") return /new/i.test(p.tag || "");
   if (s === "bestsellers") return (typeof sellingFast === "function" && sellingFast(p)) || /best/i.test(p.tag || "");
   if (s === "on sale") return !!p.was || /sale/i.test(p.tag || "");
   if (s === "gifts under $100" || s === "gifts under 100") return (p.memberPrice || p.price) < 100;
-  const hay = [p.name, p.specs && Object.values(p.specs).join(" "), (p.features || []).join(" "), p.tag]
-    .filter(Boolean).join(" ").toLowerCase();
-  return subKeywords(sub).some(k => k && hay.includes(k));
+  // Match on the name and the product type only. Descriptions and feature
+  // bullets mention all sorts of things a piece is not: "board" inside
+  // "sideboard" was putting console tables under Chopping Boards.
+  const hay = [p.name, p.specs && (p.specs.Type || p.specs.type), p.cat]
+    .filter(Boolean).join(" | ").toLowerCase();
+  return subKeywords(sub).some(k => k && subWordMatch(hay, k));
 }
 /* ============================================================
    Shop controls: price range, availability, sort and how many
@@ -431,10 +460,11 @@ function updateDeliveryNote(list) {
   const leads = [...new Set(items.map(p => p.lead).filter(Boolean))];
   if (!items.length || !leads.length) { el.textContent = el.dataset.base; return; }
   const slowest = leads.sort((a, b) => b.length - a.length)[0];
+  const pretty = slowest.replace(/\bweeks\b/, "Week").replace(/^(\w)/, c => c.toUpperCase());
   // Everything here is made to order, or only some of it is. Say which.
   el.textContent = leads.length === 1 && items.every(p => p.lead)
-    ? slowest.replace(/^(\w)/, c => c.toUpperCase()) + " Delivery"
-    : el.dataset.base + ", " + slowest + " made to order";
+    ? pretty + " Delivery"
+    : el.dataset.base + ", " + slowest + " for made to order";
 }
 
 function applyShopFilters(list) {

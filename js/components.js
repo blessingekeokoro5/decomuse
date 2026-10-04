@@ -142,6 +142,7 @@ function buildHeader() {
   // Each category tab / dropdown routes to its own collection page
   const CAT_PAGES = {
     living: "living-room.html",
+    dining: "dining.html",
     home: "home-decor.html",
     bedroom: "bedroom.html",
     bathroom: "bathroom.html",
@@ -154,7 +155,8 @@ function buildHeader() {
   };
   const catDest = (cat) => CAT_PAGES[cat.key] || ("shop.html?cat=" + encodeURIComponent(cat.label));
   // Category pages that support ?sub= sub-category filtering
-  const SUB_ENABLED = new Set(["living", "home", "bedroom", "bathroom", "office", "outdoor", "kitchen", "lifestyle"]);
+  const SUB_PAGES = new Set(["dining.html"]);
+  const SUB_ENABLED = new Set(["living", "dining", "home", "bedroom", "bathroom", "office", "outdoor", "kitchen", "lifestyle"]);
   // A few menu entries are their own page rather than a filter on a category page
   const LINK_PAGES = {
     "corporate gifting": "corporate-gifting.html",
@@ -162,13 +164,19 @@ function buildHeader() {
     "shop all hampers": "hampers.html",
     "gift cards": "gift-cards.html",
     "request a bulk quote": "packaging.html#bulk",
-    "on sale": "sale.html"
+    "on sale": "sale.html",
+    "shop all dining": "dining.html"
   };
   const linkHref = (cat, col, l) => {
     const direct = LINK_PAGES[String(l).toLowerCase()];
     if (direct) return direct;
     const dest = col.page || catDest(cat);
-    if (col.page || !SUB_ENABLED.has(cat.key) || /^shop all/i.test(l)) return dest;
+    if (/^shop all/i.test(l)) return dest;
+    // A column can point at its own page and still filter it.
+    if (col.page) return SUB_PAGES.has(col.page)
+      ? dest + (dest.indexOf("?") > -1 ? "&" : "?") + "sub=" + encodeURIComponent(l)
+      : dest;
+    if (!SUB_ENABLED.has(cat.key)) return dest;
     return dest + (dest.indexOf("?") > -1 ? "&" : "?") + "sub=" + encodeURIComponent(l);
   };
 

@@ -28,7 +28,7 @@ const POSTS = load("js/blog.js", "POSTS") || [];
 
 // Real, indexable static pages (NOT cart/checkout/account/admin/order-confirmed).
 const STATIC = [
-  ["", 1.0], ["shop.html", 0.9], ["gift-cards.html", 0.7], ["hamper-maker.html", 0.6],
+  ["", 1.0], ["shop.html", 0.9], ["dining.html", 0.85], ["gift-cards.html", 0.7], ["hamper-maker.html", 0.6],
   ["hampers.html", 0.7], ["corporate-gifting.html", 0.7], ["staging.html", 0.8], ["portfolio.html", 0.7], ["trade.html", 0.6],
   ["styled-spaces.html", 0.8], ["property-styling-staging.html", 0.7], ["interior-design.html", 0.7], ["vacation-rentals.html", 0.7],
   ["personal-shopping.html", 0.7], ["store-locator.html", 0.5], ["become-a-supplier.html", 0.6],
