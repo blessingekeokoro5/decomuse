@@ -45,7 +45,7 @@
       updateCartCount();
     })();
 
-    // Save this order to the member's portal (receipts) — keyed by email + on the account
+    // Save this order to the member's portal (receipts), keyed by email + on the account
     (function saveOrderReceipt() {
       try {
         const o = JSON.parse(localStorage.getItem("dm_last_order") || "null");
@@ -166,7 +166,7 @@
       }
       localStorage.setItem("dm_giftcards_sent", JSON.stringify(sent));
 
-      // Gift cards are delivered — clear the cart now that the order is complete.
+      // Gift cards are delivered, clear the cart now that the order is complete.
       if (sent.length) { try { localStorage.removeItem(CART_KEY); updateCartCount(); } catch (e) {} }
     })();
   </script>

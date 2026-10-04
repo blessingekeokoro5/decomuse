@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Edit | Samira Home Decor</title>
-  <meta name="description" content="A Samira Home Decor styling journal article — tips for living beautifully.">
+  <meta name="description" content="A Samira Home Decor styling journal article, tips for living beautifully.">
   <meta property="og:type" content="article">
   <meta property="og:site_name" content="Samira Home Decor">
   <meta property="og:image" content="https://samirahomedecor.com.au/assets/hero.jpg">
@@ -70,7 +70,7 @@
       const url = "https://samirahomedecor.com.au/article.html?post=" + p.slug;
 
       // Update meta + title for SEO / sharing
-      document.title = p.title + " | The Edit — Samira Home Decor";
+      document.title = p.title + " | The Edit, Samira Home Decor";
       const setMeta = (sel, val) => { const el = document.querySelector(sel); if (el) el.setAttribute("content", val); };
       setMeta('meta[name="description"]', p.excerpt);
       setMeta('meta[property="og:title"]', p.title);

@@ -3,7 +3,7 @@
    - Captures client-form submissions into a browser-side store (dm_admin_db)
    - Every submission is ALSO emailed to the business (authoritative record)
    NOTE: localStorage is per-device. For a true shared cross-device database,
-   a backend is required — the email delivery covers you in the meantime.
+   a backend is required, the email delivery covers you in the meantime.
    ============================================================ */
 (function () {
   var DB_KEY = "dm_admin_db";
@@ -16,7 +16,7 @@
     window.dmSetDB(db);
   };
 
-  // Lightweight (non-cryptographic) hash for the admin gate — keeps casual users out.
+  // Lightweight (non-cryptographic) hash for the admin gate, keeps casual users out.
   window.dmHash = function (s) {
     var h = 5381;
     for (var i = 0; i < s.length; i++) { h = ((h << 5) + h) + s.charCodeAt(i); h = h & 0xffffffff; }
@@ -58,7 +58,7 @@
     doc.save((title || "Samira Home Decor-form").replace(/[^a-z0-9]+/gi, "-").replace(/^-|-$/g, "") + ".pdf");
   };
 
-  // Branded, filled INVOICE pdf — logo + "Samira Home Decor Official" + Bill To + amounts + status
+  // Branded, filled INVOICE pdf, logo + "Samira Home Decor Official" + Bill To + amounts + status
   window.dmInvoicePDF = function (form) {
     if (!form) return;
     if (!(window.jspdf && window.jspdf.jsPDF)) { window.print(); return; }
@@ -138,16 +138,16 @@
     if (out) {
       out.classList.add("show");
       out.innerHTML = sent
-        ? "✓ Emailed to " + email + " — a copy is saved in your Customer base and inbox."
+        ? "✓ Emailed to " + email + ", a copy is saved in your Customer base and inbox."
         : "Saved to your Customer base. Opening your email app to send it…";
     }
     if (!sent) {
       var body = "Please find your Samira Home Decor " + title.toLowerCase() + " details below:\n\n" + clean.map(function (p) { return p[0] + ": " + p[1]; }).join("\n") + "\n\nThank you,\nSamira Home Decor";
-      location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent(title + " — Samira Home Decor") + "&body=" + encodeURIComponent(body);
+      location.href = "mailto:" + encodeURIComponent(email) + "?subject=" + encodeURIComponent(title + ", Samira Home Decor") + "&body=" + encodeURIComponent(body);
     }
   };
 
-  // Signature pads — draw with mouse/finger; value stored as a PNG data URL in .sig-input
+  // Signature pads, draw with mouse/finger; value stored as a PNG data URL in .sig-input
   function initSigPads() {
     document.querySelectorAll(".sig-block .sig-pad").forEach(function (pad) {
       if (pad.dataset.wired) return; pad.dataset.wired = "1";
@@ -203,7 +203,7 @@
         }
         // 2) Email (signature sent as a note; the full image is in the saved record)
         var emailData = base.slice(); if (sigData) emailData.push(["Signature", "Provided (drawn signature captured)"]);
-        try { if (typeof deliverForm === "function") await deliverForm(emailData, "Samira Home Decor — " + type); } catch (err) {}
+        try { if (typeof deliverForm === "function") await deliverForm(emailData, "Samira Home Decor" + type); } catch (err) {}
         var ok = form.querySelector(".form-success");
         if (ok) { ok.classList.add("show"); ok.innerHTML = form.getAttribute("data-success") || "Thank you! Your details have been submitted to Samira Home Decor."; }
         form.reset();

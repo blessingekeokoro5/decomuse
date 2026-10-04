@@ -1,5 +1,5 @@
 /* ============================================================
-   Samira Home Decor — Live order tracker (picking + shipping history)
+   Samira Home Decor, Live order tracker (picking + shipping history)
    ------------------------------------------------------------
    renderOrderStatus(order, el) draws:
      • an Estimated-arrival banner
@@ -9,7 +9,7 @@
        placed → picked → packed → left warehouse → in transit →
        arrived at facility → customs clearance → out for delivery
        → delivered.
-   Progression is timed from when the order was placed — no
+   Progression is timed from when the order was placed, no
    backend needed. Only shown to logged-in customers (the account
    page gates it).
    ============================================================ */
@@ -74,7 +74,7 @@
       var states = items.map(function (it, i) { return { it: it, found: now >= (placedAt(order) + (i + 1) * PER_ITEM) }; });
       var found = states.filter(function (s) { return s.found; }).length;
       if (items.length) {
-        pickingHtml = '<div class="ostat-picking"><div class="ostat-picking-h">🛒 Picking your order — ' + found + ' of ' + items.length + ' found</div><ul class="ostat-items">' +
+        pickingHtml = '<div class="ostat-picking"><div class="ostat-picking-h">🛒 Picking your order' + found + ' of ' + items.length + ' found</div><ul class="ostat-items">' +
           states.map(function (s) {
             var qty = (s.it.qty && s.it.qty > 1) ? ' <span class="oi-qty">× ' + s.it.qty + '</span>' : "";
             var icon = s.found ? '<span class="ostat-ic ostat-tick">' + TICK + '</span>' : '<span class="ostat-ic ostat-cart">' + CART + '</span>';

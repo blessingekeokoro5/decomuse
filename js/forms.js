@@ -99,7 +99,7 @@
         { name: "Service", label: "Service", type: "select", options: SERVICES, required: true, half: true },
         { name: "Rooms / areas", label: "Rooms / areas", half: true },
         { name: "Project goals", label: "What do you want to achieve?", type: "textarea" },
-        { name: "Style direction", label: "Style direction", half: true }, { name: "Budget", label: "Budget range", type: "select", options: ["Under $1,000", "$1,000–$3,000", "$3,000–$5,000", "$5,000–$10,000", "$10,000+"], half: true },
+        { name: "Style direction", label: "Style direction", half: true }, { name: "Budget", label: "Budget range", type: "select", options: ["Under $1,000", "$1,000, $3,000", "$3,000, $5,000", "$5,000, $10,000", "$10,000+"], half: true },
         { name: "Must haves", label: "Must-haves", type: "textarea" },
         { name: "Deadline", label: "Deadline", type: "date", half: true }
       ]
@@ -172,7 +172,7 @@
         NAME, EMAIL,
         { sec: "Budget" },
         { name: "Total budget", label: "Total budget (AUD)", type: "number", required: true, half: true },
-        { name: "Timeline", label: "Timeline", type: "select", options: ["ASAP", "This week", "This month", "1–3 months", "Flexible"], half: true },
+        { name: "Timeline", label: "Timeline", type: "select", options: ["ASAP", "This week", "This month", "1 to 3 months", "Flexible"], half: true },
         { name: "Rooms to shop", label: "Rooms / areas to shop for", type: "textarea" },
         { name: "Priority items", label: "Priority items", type: "textarea" },
         { name: "Preferred stores", label: "Preferred stores / brands", half: true }, { name: "Items to avoid", label: "Items / materials to avoid", half: true },

@@ -480,7 +480,7 @@ function renderCollectionHead(sub, count, widened) {
   if (dupe) dupe.style.display = "none";
 }
 
-/* Find similar products on Samira Home Decor (card search icon) — searches our own shop. */
+/* Find similar products on Samira Home Decor (card search icon), searches our own shop. */
 function findSimilar(id) {
   const p = (typeof PRODUCTS !== "undefined") && PRODUCTS.find(x => x.id === id);
   const term = p ? (p.cat || (p.name || "").split(" ").slice(-1)[0]) : "";

@@ -90,7 +90,7 @@
   </section>
 
   <div class="container" style="text-align:center">
-    <img src="assets/services/interior-design-feature.jpg" alt="Samira Stylera — AI styling" style="width:100%;max-width:720px;height:auto;margin:6px auto 0;border-radius:var(--radius)">
+    <img src="assets/services/interior-design-feature.jpg" alt="Samira Stylera, AI styling" style="width:100%;max-width:720px;height:auto;margin:6px auto 0;border-radius:var(--radius)">
   </div>
 
   <section class="section" style="padding-bottom:24px">
@@ -169,7 +169,7 @@
   <script src="js/main.js?v=3"></script>
   <script src="js/stylist.js"></script>
   <script>
-    /* ===== Samira Stylera chat — conversational décor & gift advisor ===== */
+    /* ===== Samira Stylera chat, conversational décor & gift advisor ===== */
     const MUSE_CHIPS = ["Gift for her under $200", "Gift for him under $200", "Under $100",
       "Home décor", "Candles & fragrance", "Wellness & self-care", "Treat myself", "Help with an order"];
     let museWelcome = true;
@@ -179,7 +179,7 @@
         <div class="gi">🎁</div>
         <h3>Find the perfect piece</h3>
         <p>Tell me who you're shopping for, or the room you're styling, and I'll suggest something they'll love.</p>
-        <p>I can help you find the perfect Samira Home Decor piece — and if you need help with an order, just ask. You can also <a href="contact.html">contact us</a> directly.</p>
+        <p>I can help you find the perfect Samira Home Decor piece, and if you need help with an order, just ask. You can also <a href="contact.html">contact us</a> directly.</p>
       </div>`;
     }
     function museInit() {
@@ -259,9 +259,9 @@
       const s = text.toLowerCase();
       // Service / help intents (no products)
       if (/\b(order|track|tracking|delivery|shipping|arrive|dispatch)\b/.test(s))
-        return { text: "Happy to help with your order. You can track it any time using your order number — standard delivery is 3–8 business days, and shipping is free on orders over $500.", link: ["Track my order", "track.html"] };
+        return { text: "Happy to help with your order. You can track it any time using your order number, standard delivery is 3 to 8 business days, and shipping is free on orders over $500.", link: ["Track my order", "track.html"] };
       if (/\b(return|refund|exchange|replace|replacement)\b/.test(s))
-        return { text: "Of course. You can start a return within 30 days and choose a refund to your original payment, a gift card with a 5% bonus, an exchange or a replacement — all from our returns page.", link: ["Start a return", "returns.html"] };
+        return { text: "Of course. You can start a return within 30 days and choose a refund to your original payment, a gift card with a 5% bonus, an exchange or a replacement, all from our returns page.", link: ["Start a return", "returns.html"] };
       if (/\b(contact|human|agent|speak|talk|email|phone|call|support)\b/.test(s))
         return { text: "Our team would love to help. Reach out any time and we'll get back to you quickly.", link: ["Contact us", "contact.html"] };
       if (/\b(member|membership|discount|coupon|promo|code|join|sign ?up|loyalty)\b/.test(s))
@@ -280,10 +280,10 @@
 
       const list = musePick(cat, budget, 4);
       if (!list.length)
-        return { text: "I can help you find décor, gifts, fragrance and wellness pieces — or with orders and returns. Try one of the suggestions below, or upload a room photo above and I'll style it for you." };
+        return { text: "I can help you find décor, gifts, fragrance and wellness pieces, or with orders and returns. Try one of the suggestions below, or upload a room photo above and I'll style it for you." };
 
       const bud = budget ? `, all under $${budget}` : "";
-      const text2 = `Absolutely — here are ${list.length} ${label} picks that feel special and gift-worthy${bud}. I've focused on versatile pieces with a polished, considered feel. Tap <strong>Add to Bag</strong> on any you love, or ask me to narrow it down further — for example more calming, more of a statement, or a different budget.`;
+      const text2 = `Absolutely, here are ${list.length} ${label} picks that feel special and gift-worthy${bud}. I've focused on versatile pieces with a polished, considered feel. Tap <strong>Add to Bag</strong> on any you love, or ask me to narrow it down further, for example more calming, more of a statement, or a different budget.`;
       return { text: text2, cards: list };
     }
 

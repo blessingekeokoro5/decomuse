@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Careers — Join the Samira Home Decor Team</title>
-  <meta name="description" content="Join Samira Home Decor. Explore careers in styling, interior design, personal shopping, retail and content — or send us a general application to be part of our Australian home décor studio.">
+  <title>Careers, Join the Samira Home Decor Team</title>
+  <meta name="description" content="Join Samira Home Decor. Explore careers in styling, interior design, personal shopping, retail and content, or send us a general application to be part of our Australian home décor studio.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -105,7 +105,7 @@
   <script src="js/cart.js?v=16"></script>
   <script src="js/main.js?v=3"></script>
   <script>
-    // Careers application — multipart submit so the CV file is attached (Web3Forms)
+    // Careers application, multipart submit so the CV file is attached (Web3Forms)
     document.addEventListener("DOMContentLoaded", function () {
       var form = document.getElementById("careerForm");
       if (!form) return;
@@ -123,7 +123,7 @@
         var key = (typeof SAMIRA !== "undefined" && SAMIRA.formAccessKey) || "";
         var fd = new FormData(form);
         fd.append("access_key", key);
-        fd.append("subject", "Samira Home Decor — Careers application");
+        fd.append("subject", "Samira Home Decor, Careers application");
         fd.append("from_name", "Samira Home Decor Website");
         var replyto = (form.querySelector('input[name="Email"]') || {}).value || "";
         if (replyto) fd.append("replyto", replyto);

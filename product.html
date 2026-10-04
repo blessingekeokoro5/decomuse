@@ -8,7 +8,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Samira Home Decor">
   <meta property="og:title" content="Samira Home Decor">
-  <meta property="og:description" content="Home décor for every house — furniture, lighting, rugs and gifting, delivered Australia-wide.">
+  <meta property="og:description" content="Home décor for every house, furniture, lighting, rugs and gifting, delivered Australia-wide.">
   <meta property="og:url" content="https://samirahomedecor.com.au/product.html">
   <meta property="og:image" content="https://samirahomedecor.com.au/assets/og/sofa.jpg">
   <meta property="og:image:width" content="1200">
@@ -26,7 +26,7 @@
     .pdp-gallery .main { position: relative; aspect-ratio: 1/1; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
     .pdp-verified { position: absolute; bottom: 14px; left: 14px; z-index: 3; display: inline-flex; align-items: center; gap: 6px; padding: 6px 12px 6px 7px; border-radius: 999px; background: rgba(255,255,255,0.96); border: 1px solid rgba(45,74,58,0.18); box-shadow: var(--shadow-sm); font-family: var(--font-body); font-weight: 700; font-size: 0.68rem; letter-spacing: 0.03em; text-transform: uppercase; color: var(--forest); line-height: 1; }
     .pdp-verified svg { width: 18px; height: 18px; color: var(--forest); flex: none; }
-    /* Furniture viewer tools — row of icons BELOW the product image */
+    /* Furniture viewer tools, row of icons BELOW the product image */
     .pdp-tools { display: flex; gap: 14px; justify-content: center; margin: 14px 0 2px; }
     .pdp-tool { width: 46px; height: 46px; border-radius: 50%; background: #808a80; border: none;
       cursor: pointer; display: grid; place-items: center; color: #fff; transition: all var(--tr); box-shadow: 0 2px 8px rgba(0,0,0,0.12); }
@@ -54,7 +54,7 @@
     .spin-controls button { border: 1px solid var(--line); background: var(--cream-2); border-radius: 999px; padding: 8px 16px;
       font-family: var(--font-body); font-size: 0.85rem; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
     .spin-controls button:hover { background: #fff; border-color: var(--forest); }
-    /* Dimensions diagram — real product photo with measurement guides */
+    /* Dimensions diagram, real product photo with measurement guides */
     .dim-box { display: grid; place-items: center; padding: 6px 0 2px; }
     .dim-photo { position: relative; width: 100%; max-width: 420px; padding: 8px 8px 42px 44px; }
     .dim-frame { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: #fff; }
@@ -202,7 +202,7 @@
       return out.join(" / ");
     }
 
-    // Stable "in carts right now" count per product (8–24)
+    // Stable "in carts right now" count per product (8 to 24)
     function cartWant(p) {
       let h = 0; for (let i = 0; i < p.id.length; i++) h = (h * 31 + p.id.charCodeAt(i)) >>> 0;
       return 8 + (h % 17);
@@ -294,7 +294,7 @@
       </section>`;
     }
 
-    // "Review this product" — per-product review submission (email required for verification)
+    // "Review this product", per-product review submission (email required for verification)
     let prfRating = 0;
     function productReviewForm(p) {
       return `
@@ -340,7 +340,7 @@
         ["Review", document.getElementById("prfBody").value]
       ].filter(d => d[1]);
       if (btn) { btn.disabled = true; btn.textContent = "Submitting…"; }
-      try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — New product review (pending email verification)"); } catch (err) {}
+      try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor, New product review (pending email verification)"); } catch (err) {}
       const ok = document.getElementById("prfSuccess");
       if (ok) { ok.classList.add("show"); ok.innerHTML = "Thank you! Your review has been submitted. We'll email you to verify it, then publish it to this product. ✦"; }
       e.target.reset(); prfRating = 0;
@@ -384,11 +384,11 @@
       const shipping = `
         <h3>Shipping</h3>
         <ul class="pdp-highlights">
-          <li>Dispatched from our warehouse in 1–2 business days</li>
-          <li>Delivery in 3–8 business days, depending on your location</li>
+          <li>Dispatched from our warehouse in 1 to 2 business days</li>
+          <li>Delivery in 3 to 8 business days, depending on your location</li>
           <li>Ships Australia-wide &amp; to NZ, UK, USA, Canada &amp; Nigeria</li>
           <li>Free standard shipping on Australian orders over $500</li>
-          <li>Tracking provided — follow your order online</li>
+          <li>Tracking provided, follow your order online</li>
         </ul>
         <h3>Returns</h3>
         <ul class="pdp-highlights">
@@ -472,7 +472,7 @@
           .concat(p.sizeImg ? Object.values(p.sizeImg) : [])
       )];
       const saveBadge = p.was ? `<span class="pdp-save">SAVE ${Math.round((1 - p.price / p.was) * 100)}%</span>` : "";
-      const verifiedBadge = `<span class="dm-verified pdp-verified" title="Samira Home Decor Verified — quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SYS Verified</span></span>`;
+      const verifiedBadge = `<span class="dm-verified pdp-verified" title="Samira Home Decor Verified, quality checked by our team"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.6l2.5 1.9 3.1-.3 1 3 2.7 1.6-1.2 2.9 1.2 2.9-2.7 1.6-1 3-3.1-.3L12 22.4l-2.5-1.9-3.1.3-1-3-2.7-1.6 1.2-2.9-1.2-2.9 2.7-1.6 1-3 3.1.3z" fill="currentColor"/><path d="M8 12l2.6 2.6L16 9.2" fill="none" stroke="#fff" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/></svg><span>SYS Verified</span></span>`;
       // Furniture viewer tools (below the image): dimensions · 3D in-room · 360°
       // Set SHOW_AR to true once real 3D models (assets/models/<id>.glb/.usdz) exist to bring back the "In your room" icon.
       const SHOW_AR = false;
@@ -552,7 +552,7 @@
               </div>
               <button class="btn btn--primary" onclick="addToCart('${p.id}', pdpQty, pdpColour, pdpSize, pdpSizePrice)">Add to cart</button>
             </div>`}
-            <div style="display:flex;align-items:center;gap:8px;margin:2px 0 16px;font-size:0.92rem;color:var(--body)"><span style="font-size:1.05rem">🚚</span> Leaves our warehouse in <strong style="color:var(--ink)">1–2 business days</strong></div>
+            <div style="display:flex;align-items:center;gap:8px;margin:2px 0 16px;font-size:0.92rem;color:var(--body)"><span style="font-size:1.05rem">🚚</span> Leaves our warehouse in <strong style="color:var(--ink)">1 to 2 business days</strong></div>
             <div class="pdp-share">
               <button type="button" class="wa" onclick="shareWhatsApp('${(p.name || '').replace(/'/g, "\\'")}')">
                 <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M17.5 14.4c-.3-.15-1.8-.9-2-1s-.5-.15-.7.15-.8 1-1 1.2-.4.2-.7.05a8 8 0 0 1-2.4-1.5 9 9 0 0 1-1.6-2c-.2-.3 0-.5.1-.65s.3-.35.45-.5a2 2 0 0 0 .3-.5.55.55 0 0 0 0-.5c0-.15-.7-1.65-.9-2.25s-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4A3.4 3.4 0 0 0 5.6 9c0 1.5 1.1 2.95 1.25 3.15s2.15 3.3 5.2 4.6a17 17 0 0 0 1.75.65 4.2 4.2 0 0 0 1.9.12c.6-.1 1.8-.75 2-1.45s.2-1.35.15-1.45-.25-.2-.55-.35zM12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.3A10 10 0 1 0 12 2z"/></svg>
@@ -759,9 +759,9 @@
       openTool(`<div class="ar-body">
         <div class="ar-phone">🔗</div>
         <h3>Scan to view this product</h3>
-        <p class="th-sub">Point a phone camera at the code to open <strong>${p.name}</strong> — full details, photos and dimensions. Handy for showing family or friends.</p>
+        <p class="th-sub">Point a phone camera at the code to open <strong>${p.name}</strong>full details, photos and dimensions. Handy for showing family or friends.</p>
         <img class="ar-qr" src="${qr}" alt="Scan to view ${p.name}" onerror="this.style.display='none'">
-        <p class="ar-fine">Opens the product page — no app needed.</p>
+        <p class="ar-fine">Opens the product page, no app needed.</p>
       </div>`);
     }
 

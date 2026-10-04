@@ -11075,7 +11075,7 @@ const PRODUCTS = [
     care: "Machine wash cold on a gentle cycle with like colours; do not tumble dry; cool iron if needed." },
 
   // ── Lifestyle ──
-  { id: "l07", name: "Soft Cotton Face Washer Towels — 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, sku: "SH-10105", tag: "New", ph: "", img: "assets/products/l07.webp",
+  { id: "l07", name: "Soft Cotton Face Washer Towels, 10 Pack (450GSM)", cat: "Lifestyle", price: 28.99, memberPrice: 25.99, sku: "SH-10105", tag: "New", ph: "", img: "assets/products/l07.webp",
     imgs: ["assets/products/l07.webp", "assets/products/l07-2.webp", "assets/products/l07-3.webp", "assets/products/l07-4.webp", "assets/products/l07-5.webp", "assets/products/l07-6.webp"],
     colours: [{ name: "Teal", hex: "#2a8d8d" }, { name: "Navy", hex: "#1f2a44" }, { name: "Blue Suede", hex: "#6a7fa0" }, { name: "Pea Pod", hex: "#a3b18a" }, { name: "Coral", hex: "#e0897a" }, { name: "Burgundy", hex: "#7b2d3a" }, { name: "Chocolate Brown", hex: "#4a3428" }, { name: "Charcoal", hex: "#4a4a4f" }, { name: "Linen", hex: "#d9cbb2" }, { name: "Silver", hex: "#c7c7c7" }, { name: "White", hex: "#f2f0ea" }],
     desc: "Wrap your everyday routine in softness with this set of 10 premium 450GSM cotton face washers. Beautifully plush yet quick-drying, with a satin-finish border and double-stitched hems that hold their shape wash after wash. Gentle on skin and endlessly useful for face, hands and travel, in a rich palette of eleven colours to suit any bathroom.",
@@ -11104,7 +11104,7 @@ const PRODUCTS = [
     spin360: ["assets/products/hd05.webp"],
     care: "Wipe clean with a soft, dry or slightly damp cloth. Avoid harsh chemicals and abrasive cleaners. Use coasters to protect the surface from heat and moisture." },
 
-  { id: "hd06", name: "Marble-Look Glass Table Set — 2 Piece (80cm)", cat: "Furniture", room: "Living Room", price: 198.37, memberPrice: 168.55, sku: "SH-10107", tag: "New", ph: "", img: "assets/products/hd06.webp",
+  { id: "hd06", name: "Marble-Look Glass Table Set, 2 Piece (80cm)", cat: "Furniture", room: "Living Room", price: 198.37, memberPrice: 168.55, sku: "SH-10107", tag: "New", ph: "", img: "assets/products/hd06.webp",
     imgs: ["assets/products/hd06.webp", "assets/products/hd06-3.webp", "assets/products/hd06-4.webp", "assets/products/hd06-5.webp", "assets/products/hd06-6.webp", "assets/products/hd06-7.webp", "assets/products/hd06-8.webp", "assets/products/hd06-9.webp", "assets/products/hd06-10.webp"],
     desc: "A refined two-piece table set that brings a soft, luxe finish to any living space. Each table is topped with marble-look tempered glass, tough enough for everyday use yet elegant enough to feel like a designer piece. Nest them together for a compact footprint, or set them apart as a coffee table and matching side table. With clean lines and neutral marble tones, they layer effortlessly with sofas, rugs and accent chairs, an easy way to elevate a lounge, bedroom or reading corner.",
     features: [
@@ -11151,10 +11151,10 @@ const PRODUCTS = [
     specs: { "Type": "Ergonomic office chair", "Back": "Breathable mesh", "Armrests": "3D adjustable", "Recline": "Up to 140°", "Footrest": "Retractable", "Base": "Chrome with castor wheels", "Colour": "Grey" },
     care: "Wipe the mesh and frame with a soft, dry or lightly damp cloth. Avoid harsh chemicals. Periodically check and tighten fittings, and keep the castors clear of debris for smooth rolling." },
 
-  { id: "pk01", name: "Food-Vendor Stand-Up Pouches — Resealable Zipper (10-Pack)", cat: "Packaging", room: "Packaging", price: 12.95, memberPrice: 11.65, sku: "SH-10113", tag: "New", ph: "", img: "assets/products/foodpouch-1.webp",
+  { id: "pk01", name: "Food-Vendor Stand-Up Pouches, Resealable Zipper (10-Pack)", cat: "Packaging", room: "Packaging", price: 12.95, memberPrice: 11.65, sku: "SH-10113", tag: "New", ph: "", img: "assets/products/foodpouch-1.webp",
     imgs: ["assets/products/foodpouch-1.webp", "assets/products/foodpouch-2.webp", "assets/products/foodpouch-3.webp"],
     sizes: [{ label: "100 × 150 + 35 mm · 10-pack", price: 12.95 }, { label: "120 × 170 + 35 mm · 10-pack", price: 15.95 }],
-    desc: "Food-safe, resealable stand-up pouches that keep your product fresh and looking retail-ready — ideal for coffee, granola, nuts, dried fruit, spices, lollies, protein and pet treats. The multi-layer PET + PA + PE structure blocks moisture and odour, while the zipper top opens and reseals again and again. Made with recycled materials and finished with vibrant flexo printing. Buy retail packs here, or order wholesale in bulk with your own logo and artwork — message us on WhatsApp for the rate card, samples or custom branding.",
+    desc: "Food-safe, resealable stand-up pouches that keep your product fresh and looking retail-ready, ideal for coffee, granola, nuts, dried fruit, spices, lollies, protein and pet treats. The multi-layer PET + PA + PE structure blocks moisture and odour, while the zipper top opens and reseals again and again. Made with recycled materials and finished with vibrant flexo printing. Buy retail packs here, or order wholesale in bulk with your own logo and artwork, message us on WhatsApp for the rate card, samples or custom branding.",
     features: [
       "Resealable zipper top keeps food fresh between uses",
       "Food-grade multi-layer PET + PA + PE barrier",
@@ -11162,13 +11162,13 @@ const PRODUCTS = [
       "Two sizes: 100×150+35mm and 120×170+35mm",
       "Two thicknesses available: 0.1 mm and 0.3 mm",
       "Made with recycled materials",
-      "Custom logo, artwork & packaging available (min. order 2 pcs) — wholesale/bulk pricing on request"
+      "Custom logo, artwork & packaging available (min. order 2 pcs), wholesale/bulk pricing on request"
     ],
     specs: { "Material structure": "PET + PA + PE", "Sealing & handle": "Resealable zipper top", "Bag type": "Stand-up pouch", "Feature": "Recycled materials", "Industrial use": "Food-grade", "Surface handling": "Flexo printing", "Thickness": "0.1 mm / 0.3 mm" },
     care: "Store in a cool, dry place out of direct sunlight. For food use, fill with dry or sealed goods and press the zipper fully closed to keep contents fresh." },
-  { id: "bd01", name: "Amara Upholstered Bed Frame with 3 Drawers \u2014 Oat White", cat: "Bedroom", room: "Bedroom", price: 1350, memberPrice: 1300, sku: "SH-10114", tag: "New", ph: "", img: "assets/products/bd01.webp",
+  { id: "bd01", name: "Amara Upholstered Bed Frame with 3 Drawers, Oat White", cat: "Bedroom", room: "Bedroom", price: 1350, memberPrice: 1300, sku: "SH-10114", tag: "New", ph: "", img: "assets/products/bd01.webp",
     imgs: ["assets/products/bd01.webp", "assets/products/bd01-2.webp", "assets/products/bd01-3.webp", "assets/products/bd01-4.webp", "assets/products/bd01-5.webp", "assets/products/bd01-6.webp"],
-    dims: { w: 286.6, d: 219, h: 141.2, unit: "cm", img: "assets/products/bd01-3.webp", note: "King shown. Queen is the same height and depth with a narrower bedhead \u2014 see the size guide images." },
+    dims: { w: 286.6, d: 219, h: 141.2, unit: "cm", img: "assets/products/bd01-3.webp", note: "King shown. Queen is the same height and depth with a narrower bedhead, see the size guide images." },
     colours: [{ name: "Oat White", hex: "#e6ded0" }],
     sizes: [{ label: "Queen", price: 1350 }, { label: "King", price: 1460 }],
     desc: "A bed that anchors the whole room. The Amara's bedhead runs extra wide and stands tall, softly padded and panelled with angled stitching that catches the light differently through the day, so the wall behind your bed stops being an afterthought. It is upholstered in a warm oat white that reads cream rather than grey, and sits on a sturdy slatted platform base, so your mattress needs no box spring underneath. Three deep drawers roll out on castors for spare linen, winter blankets and everything a bedroom quietly accumulates. Wide enough that bedside tables tuck neatly against either side, which is exactly how it is meant to be styled.",
@@ -11179,7 +11179,7 @@ const PRODUCTS = [
       "Rubberwood legs with a powder-coated iron centre rail and support feet",
       "Holds up to 200 kg",
       "Available in Queen and King",
-      "Flat-packed for home assembly \u2014 two people recommended",
+      "Flat-packed for home assembly, two people recommended",
       "Mattress and bedside tables are not included"
     ],
     specs: { "Type": "Platform bed with storage", "Upholstery": "100% polyester over foam padding", "Frame": "MDF & particleboard", "Legs": "Rubberwood", "Slats": "LVL timber", "Centre rail": "Powder-coated iron", "Drawers": "3, on castors", "Side drawer (internal)": "19cm H x 80cm W x 50cm D", "Footboard drawer (King)": "19.8cm H x 166.1cm W x 53cm D", "Maximum weight capacity": "200 kg", "Product weight": "88 kg (Queen) / 100 kg (King)", "Mattress": "Not included", "Colour": "Oat White", "Style": "Traditional / Luxe" },
@@ -11191,7 +11191,7 @@ const PRODUCTS = [
     care: "Wipe clean with a dry cloth. Use floor protection on hard surfaces, such as a non-slip rug or felt feet protectors, and check periodically that the fixings are tight and the support legs sit firmly on the floor." },
 
   // ── Kitchenware ──
-  { id: "kw01", name: "KitchenAid Artisan Plus Stand Mixer 4.7L \u2014 Feather Pink", cat: "Kitchenware", room: "Kitchenware", price: 1099, memberPrice: 999, sku: "SH-11002", tag: "New", ph: "", img: "assets/products/kw01-1.webp",
+  { id: "kw01", name: "KitchenAid Artisan Plus Stand Mixer 4.7L, Feather Pink", cat: "Kitchenware", room: "Kitchenware", price: 1099, memberPrice: 999, sku: "SH-11002", tag: "New", ph: "", img: "assets/products/kw01-1.webp",
     imgs: ["assets/products/kw01-1.webp", "assets/products/kw01-2.webp", "assets/products/kw01-3.webp", "assets/products/kw01-4.webp", "assets/products/kw01-5.webp"],
     desc: "The mixer people photograph as much as they use. Full metal construction, a 4.7 litre stainless bowl and planetary mixing that works the whole bowl rather than one side of it, so a cake batter comes together evenly and a bread dough is actually kneaded. Eleven speeds, including a half-fold speed for folding egg whites or chocolate through without knocking the air out, and a bowl light that comes on by itself when the head is lowered. The tilt head lifts clear to add flour or swap the beater. In Feather Pink, which is the reason most people choose this one over the stainless.",
     features: [
@@ -11207,11 +11207,11 @@ const PRODUCTS = [
     dims: { w: 22.2, d: 35.6, h: 35.3, unit: "cm", printed: true },
     boxContents: ["1 \u00d7 stand mixer", "1 \u00d7 4.7L stainless steel bowl", "1 \u00d7 flat beater", "1 \u00d7 dough hook", "1 \u00d7 wire whisk", "1 \u00d7 pouring shield"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth \u2014 never submerge it. The bowl, flat beater, dough hook and pouring shield are dishwasher safe; the wire whisk is best washed by hand and dried straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. The bowl, flat beater, dough hook and pouring shield are dishwasher safe; the wire whisk is best washed by hand and dried straight away." },
 
-  { id: "kw02", name: "Smeg 50s Style Electric Kettle 1.7L — Pastel Pink", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11003", tag: "New", ph: "", img: "assets/products/kw02-1.webp",
+  { id: "kw02", name: "Smeg 50s Style Electric Kettle 1.7L, Pastel Pink", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11003", tag: "New", ph: "", img: "assets/products/kw02-1.webp",
     imgs: ["assets/products/kw02-1.webp", "assets/products/kw02-2.webp", "assets/products/kw02-3.webp", "assets/products/kw02-4.webp", "assets/products/kw02-5.webp"],
-    desc: "A kettle you leave out rather than hide away. Boils 1.7L — enough for a full pot of tea or a round of coffees, with 2400W behind it. Enamel-coated stainless steel body. Small things that matter: soft opening lid, anti slip feet and limescale filter. Finished in Pastel Pink.",
+    desc: "A kettle you leave out rather than hide away. Boils 1.7L, enough for a full pot of tea or a round of coffees, with 2400W behind it. Enamel-coated stainless steel body. Small things that matter: soft opening lid, anti slip feet and limescale filter. Finished in Pastel Pink.",
     features: [
       "1.7L capacity",
       "2400W element",
@@ -11224,11 +11224,11 @@ const PRODUCTS = [
     specs: { "Brand": "Smeg", "Model": "KLF03PKAU", "Type": "Electric Kettle", "Capacity": "1.7L", "Power": "2400W", "Materials": "Enamel-coated stainless steel body", "Colour": "Pastel Pink", "Weight": "1.6 kg" },
     dims: { w: 17.1, d: 22.6, h: 24.8, unit: "cm", printed: true },
     warranty: "2 year manufacturer's warranty",
-    care: "Wipe the body with a soft, damp cloth and dry it — never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
+    care: "Wipe the body with a soft, damp cloth and dry it, never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
 
-  { id: "kw03", name: "Smeg 50s Style Electric Kettle 1.7L — Pastel Green", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11004", tag: "New", ph: "", img: "assets/products/kw03-1.webp",
+  { id: "kw03", name: "Smeg 50s Style Electric Kettle 1.7L, Pastel Green", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11004", tag: "New", ph: "", img: "assets/products/kw03-1.webp",
     imgs: ["assets/products/kw03-1.webp", "assets/products/kw03-2.webp", "assets/products/kw03-3.webp", "assets/products/kw03-4.webp"],
-    desc: "A kettle you leave out rather than hide away. Boils 1.7L — enough for a full pot of tea or a round of coffees, with 2400W behind it. Enamel coated stainless steel body. Small things that matter: soft opening lid, anti slip feet and limescale filter. Pastel Green, and worth leaving on the bench.",
+    desc: "A kettle you leave out rather than hide away. Boils 1.7L, enough for a full pot of tea or a round of coffees, with 2400W behind it. Enamel coated stainless steel body. Small things that matter: soft opening lid, anti slip feet and limescale filter. Pastel Green, and worth leaving on the bench.",
     features: [
       "1.7L capacity",
       "2400W element",
@@ -11241,11 +11241,11 @@ const PRODUCTS = [
     specs: { "Brand": "Smeg", "Model": "KLF03PGAU", "Type": "Electric Kettle", "Capacity": "1.7L", "Power": "2400W", "Materials": "Enamel coated stainless steel body, Stainless steel lid / spout / lever, Chrome handle and base", "Colour": "Pastel Green", "Weight": "1.6 kg" },
     dims: { w: 17.1, d: 22.6, h: 24.8, unit: "cm", printed: true },
     warranty: "2 year manufacturer's warranty",
-    care: "Wipe the body with a soft, damp cloth and dry it — never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
+    care: "Wipe the body with a soft, damp cloth and dry it, never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
 
-  { id: "kw04", name: "Smeg 50s Style Electric Kettle 1.7L — Cream", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11005", tag: "New", ph: "", img: "assets/products/kw04-1.webp",
+  { id: "kw04", name: "Smeg 50s Style Electric Kettle 1.7L, Cream", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11005", tag: "New", ph: "", img: "assets/products/kw04-1.webp",
     imgs: ["assets/products/kw04-1.webp", "assets/products/kw04-2.webp", "assets/products/kw04-3.webp", "assets/products/kw04-4.webp", "assets/products/kw04-5.webp"],
-    desc: "A kettle you leave out rather than hide away. Boils 1.7L — enough for a full pot of tea or a round of coffees, with 2400W behind it. Enamel coated stainless steel body. Small things that matter: soft opening lid, anti slip feet and limescale filter. In Cream, which is half the reason to buy it.",
+    desc: "A kettle you leave out rather than hide away. Boils 1.7L, enough for a full pot of tea or a round of coffees, with 2400W behind it. Enamel coated stainless steel body. Small things that matter: soft opening lid, anti slip feet and limescale filter. In Cream, which is half the reason to buy it.",
     features: [
       "1.7L capacity",
       "2400W element",
@@ -11258,9 +11258,9 @@ const PRODUCTS = [
     specs: { "Brand": "Smeg", "Model": "KLF03CRAU", "Type": "Electric Kettle", "Capacity": "1.7L", "Power": "2400W", "Materials": "Enamel coated stainless steel body, Stainless steel lid / spout / lever, Chrome handle and base", "Colour": "Cream", "Weight": "1.6 kg" },
     dims: { w: 17.1, d: 22.6, h: 24.8, unit: "cm", printed: true },
     warranty: "2 year manufacturer's warranty",
-    care: "Wipe the body with a soft, damp cloth and dry it — never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
+    care: "Wipe the body with a soft, damp cloth and dry it, never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
 
-  { id: "kw05", name: "Smeg 50s Style Two-Slice Toaster — Pastel Blue", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11006", tag: "New", ph: "", img: "assets/products/kw05-1.webp",
+  { id: "kw05", name: "Smeg 50s Style Two-Slice Toaster, Pastel Blue", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11006", tag: "New", ph: "", img: "assets/products/kw05-1.webp",
     imgs: ["assets/products/kw05-1.webp", "assets/products/kw05-2.webp", "assets/products/kw05-3.webp", "assets/products/kw05-4.webp", "assets/products/kw05-5.webp"],
     desc: "A toaster that earns its place on the bench. Takes two slices, with browning you set rather than guess at. Enamel coated stainless steel body. It also has automatic centring racks, automatic pop up and anti-slip feet. Finished in Pastel Blue.",
     features: [
@@ -11277,7 +11277,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Slide out the crumb tray and empty it regularly, and wipe the body with a soft, damp cloth. Never put a knife or fork into the slots." },
 
-  { id: "kw06", name: "Smeg 50s Style Two-Slice Toaster — Cream", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11007", tag: "New", ph: "", img: "assets/products/kw06-1.webp",
+  { id: "kw06", name: "Smeg 50s Style Two-Slice Toaster, Cream", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11007", tag: "New", ph: "", img: "assets/products/kw06-1.webp",
     imgs: ["assets/products/kw06-1.webp", "assets/products/kw06-2.webp", "assets/products/kw06-3.webp", "assets/products/kw06-4.webp", "assets/products/kw06-5.webp"],
     desc: "A toaster that earns its place on the bench. Takes two slices, with browning you set rather than guess at. Enamel coated stainless steel body. It also has automatic centring racks, automatic pop up and anti-slip feet. In Cream, which is half the reason to buy it.",
     features: [
@@ -11294,9 +11294,9 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Slide out the crumb tray and empty it regularly, and wipe the body with a soft, damp cloth. Never put a knife or fork into the slots." },
 
-  { id: "kw07", name: "Smeg 50s Style Two-Slice Toaster — Pink", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11008", tag: "New", ph: "", img: "assets/products/kw07-1.webp",
+  { id: "kw07", name: "Smeg 50s Style Two-Slice Toaster, Pink", cat: "Kitchenware", room: "Kitchenware", price: 287, memberPrice: 258, sku: "SH-11008", tag: "New", ph: "", img: "assets/products/kw07-1.webp",
     imgs: ["assets/products/kw07-1.webp", "assets/products/kw07-2.webp", "assets/products/kw07-3.webp", "assets/products/kw07-4.webp", "assets/products/kw07-5.webp"],
-    desc: "A toaster that earns its place on the bench. Takes two slices, with browning you set rather than guess at. Enamel coated stainless steel body. Details worth having: automatic centring racks, automatic pop up and anti-slip feet. In Pink — chosen to be seen, not stored.",
+    desc: "A toaster that earns its place on the bench. Takes two slices, with browning you set rather than guess at. Enamel coated stainless steel body. Details worth having: automatic centring racks, automatic pop up and anti-slip feet. In Pink, chosen to be seen, not stored.",
     features: [
       "2 Slices capacity",
       "950W motor",
@@ -11311,9 +11311,9 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Slide out the crumb tray and empty it regularly, and wipe the body with a soft, damp cloth. Never put a knife or fork into the slots." },
 
-  { id: "kw08", name: "Smeg 50s Style Stand Mixer 4.8L — Pink", cat: "Kitchenware", room: "Kitchenware", price: 839, memberPrice: 755, sku: "SH-11009", tag: "New", ph: "", img: "assets/products/kw08-1.webp",
+  { id: "kw08", name: "Smeg 50s Style Stand Mixer 4.8L, Pink", cat: "Kitchenware", room: "Kitchenware", price: 839, memberPrice: 755, sku: "SH-11009", tag: "New", ph: "", img: "assets/products/kw08-1.webp",
     imgs: ["assets/products/kw08-1.webp", "assets/products/kw08-2.webp", "assets/products/kw08-3.webp", "assets/products/kw08-4.webp", "assets/products/kw08-5.webp"],
-    desc: "The mixer people photograph as much as they use. A 4.8L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Die-cast aluminium body. It also has planetary mixing action, direct drive motor and 10 year motor warranty. In Pink — chosen to be seen, not stored.",
+    desc: "The mixer people photograph as much as they use. A 4.8L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Die-cast aluminium body. It also has planetary mixing action, direct drive motor and 10 year motor warranty. In Pink, chosen to be seen, not stored.",
     features: [
       "4.8L capacity",
       "1000W motor",
@@ -11327,9 +11327,9 @@ const PRODUCTS = [
     dims: { w: 40.5, d: 22.1, h: 37.8, unit: "cm", printed: true },
     boxContents: ["50's Style Stand Mixer Pink", "1 x 4.8L polished stainless steel bowl", "1 x Stainless steel wire whisk", "1 x Aluminium flat beater", "1 x Flex-edge beater", "1 x Aluminium dough hook", "1 x Pouring shield"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth — never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
 
-  { id: "kw09", name: "Smeg 50s Style Stand Mixer 4.8L — Black", cat: "Kitchenware", room: "Kitchenware", price: 839, memberPrice: 755, sku: "SH-11010", tag: "New", ph: "", img: "assets/products/kw09-1.webp",
+  { id: "kw09", name: "Smeg 50s Style Stand Mixer 4.8L, Black", cat: "Kitchenware", room: "Kitchenware", price: 839, memberPrice: 755, sku: "SH-11010", tag: "New", ph: "", img: "assets/products/kw09-1.webp",
     imgs: ["assets/products/kw09-1.webp", "assets/products/kw09-2.webp", "assets/products/kw09-3.webp", "assets/products/kw09-4.webp", "assets/products/kw09-5.webp"],
     desc: "The mixer people photograph as much as they use. A 4.8L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Die-cast aluminium body. It also has planetary mixing action, direct drive motor and 10 year motor warranty. In Black, which is half the reason to buy it.",
     features: [
@@ -11345,9 +11345,9 @@ const PRODUCTS = [
     dims: { w: 40.5, d: 22.1, h: 37.8, unit: "cm", printed: true },
     boxContents: ["50's Style Stand Mixer Black", "1 x 4.8L polished stainless steel bowl", "1 x Stainless steel wire whisk", "1 x Aluminium flat beater", "1 x Flex-edge beater", "1 x Aluminium dough hook", "1 x Pouring shield"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth — never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
 
-  { id: "kw10", name: "Smeg 50s Style Bench Blender 1.5L — Cream", cat: "Kitchenware", room: "Kitchenware", price: 419, memberPrice: 377, sku: "SH-11011", tag: "New", ph: "", img: "assets/products/kw10-1.webp",
+  { id: "kw10", name: "Smeg 50s Style Bench Blender 1.5L, Cream", cat: "Kitchenware", room: "Kitchenware", price: 419, memberPrice: 377, sku: "SH-11011", tag: "New", ph: "", img: "assets/products/kw10-1.webp",
     imgs: ["assets/products/kw10-1.webp", "assets/products/kw10-2.webp", "assets/products/kw10-3.webp", "assets/products/kw10-4.webp", "assets/products/kw10-5.webp"],
     desc: "A blender good enough to leave on the bench. A 1.5L jug, enough for smoothies for the household or a soup straight from the pot. Die cast aluminium body. It also has smooth start begins slowly to reduce sudden bursts and non drip spout. In Cream, which is half the reason to buy it.",
     features: [
@@ -11365,9 +11365,9 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug before cleaning. Rinse the jug straight after use, or blend warm soapy water for a few seconds, then rinse. Wipe the base with a damp cloth and never submerge it." },
 
-  { id: "kw11", name: "Smeg Soda Maker — Matte Emerald Green", cat: "Kitchenware", room: "Kitchenware", price: 263, memberPrice: 237, sku: "SH-11012", tag: "New", ph: "", img: "assets/products/kw11-1.webp",
+  { id: "kw11", name: "Smeg Soda Maker, Matte Emerald Green", cat: "Kitchenware", room: "Kitchenware", price: 263, memberPrice: 237, sku: "SH-11012", tag: "New", ph: "", img: "assets/products/kw11-1.webp",
     imgs: ["assets/products/kw11-1.webp", "assets/products/kw11-2.webp", "assets/products/kw11-3.webp", "assets/products/kw11-4.webp", "assets/products/kw11-5.webp"],
-    desc: "Sparkling water without the crate of bottles. Carbonates a bottle of tap water in seconds, so the sparkling water habit stops arriving by the carton. Brushed aluminium. It also has integrated QR code for my smeg assistant app and drip tray with magnetic closure. In Matte Emerald Green — chosen to be seen, not stored.",
+    desc: "Sparkling water without the crate of bottles. Carbonates a bottle of tap water in seconds, so the sparkling water habit stops arriving by the carton. Brushed aluminium. It also has integrated QR code for my smeg assistant app and drip tray with magnetic closure. In Matte Emerald Green, chosen to be seen, not stored.",
     features: [
       "1L capacity",
       "Manual customisable adjustment of carbonation level",
@@ -11381,7 +11381,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Wipe the body with a soft, damp cloth. Wash the bottle by hand in warm soapy water and air dry it. Never put the carbonating bottle in the dishwasher or fill it with anything but water." },
 
-  { id: "kw12", name: "KitchenAid Artisan Stand Mixer 4.7L with Ceramic Bowl — Wildflower", cat: "Kitchenware", room: "Kitchenware", price: 839, memberPrice: 755, sku: "SH-11013", tag: "New", ph: "", img: "assets/products/kw12-1.webp",
+  { id: "kw12", name: "KitchenAid Artisan Stand Mixer 4.7L with Ceramic Bowl, Wildflower", cat: "Kitchenware", room: "Kitchenware", price: 839, memberPrice: 755, sku: "SH-11013", tag: "New", ph: "", img: "assets/products/kw12-1.webp",
     imgs: ["assets/products/kw12-1.webp", "assets/products/kw12-2.webp", "assets/products/kw12-3.webp", "assets/products/kw12-4.webp", "assets/products/kw12-5.webp"],
     desc: "The mixer people photograph as much as they use. A 4.7L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Full metal construction. In Wildflower, which is half the reason to buy it.",
     features: [
@@ -11396,11 +11396,11 @@ const PRODUCTS = [
     specs: { "Brand": "KitchenAid", "Model": "5KSM156CXAWF", "Type": "Stand Mixer", "Capacity": "4.7", "Power": "300", "Materials": "Full metal construction, Stainless steel accessories", "Controls": "Lever", "Colour": "Wildflower with Floral Ceramic Bowl" },
     boxContents: ["1x Stand Mixer", "1x Ceramic Bowl", "1 x Silver coated wire whisk", "1 x Silver coated dough hook", "1 x Silver coated flat edge beater"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth — never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
 
-  { id: "kw13", name: "KitchenAid Design Series Stand Mixer 4.7L — Evergreen", cat: "Kitchenware", room: "Kitchenware", price: 1319, memberPrice: 1187, sku: "SH-11014", tag: "New", ph: "", img: "assets/products/kw13-1.webp",
+  { id: "kw13", name: "KitchenAid Design Series Stand Mixer 4.7L, Evergreen", cat: "Kitchenware", room: "Kitchenware", price: 1319, memberPrice: 1187, sku: "SH-11014", tag: "New", ph: "", img: "assets/products/kw13-1.webp",
     imgs: ["assets/products/kw13-1.webp", "assets/products/kw13-2.webp", "assets/products/kw13-3.webp", "assets/products/kw13-4.webp", "assets/products/kw13-5.webp"],
-    desc: "The mixer people photograph as much as they use. A 4.7L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Full metal construction. Details worth having: planetary mixing and tilt head. In Evergreen — chosen to be seen, not stored.",
+    desc: "The mixer people photograph as much as they use. A 4.7L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Full metal construction. Details worth having: planetary mixing and tilt head. In Evergreen, chosen to be seen, not stored.",
     features: [
       "4.7L capacity",
       "300W motor",
@@ -11414,9 +11414,9 @@ const PRODUCTS = [
     dims: { w: 29.2, d: 35.6, h: 34.3, unit: "cm", printed: true },
     boxContents: ["4.7 Litre Walnut Wood bowl", "Wire whip", "Flat beater", "Dough hook"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth — never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
 
-  { id: "kw14", name: "KitchenAid Artisan Bowl-Lift Stand Mixer 6.6L — Dried Rose", cat: "Kitchenware", room: "Kitchenware", price: 1139, memberPrice: 1025, sku: "SH-11015", tag: "New", ph: "", img: "assets/products/kw14-1.webp",
+  { id: "kw14", name: "KitchenAid Artisan Bowl-Lift Stand Mixer 6.6L, Dried Rose", cat: "Kitchenware", room: "Kitchenware", price: 1139, memberPrice: 1025, sku: "SH-11015", tag: "New", ph: "", img: "assets/products/kw14-1.webp",
     imgs: ["assets/products/kw14-1.webp", "assets/products/kw14-2.webp", "assets/products/kw14-3.webp", "assets/products/kw14-4.webp", "assets/products/kw14-5.webp"],
     desc: "The mixer people photograph as much as they use. A 6.6L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Die cast zinc construction. Small things that matter: soft start for gradual acceleration and planetary mixing. In Dried Rose, which is half the reason to buy it.",
     features: [
@@ -11432,9 +11432,9 @@ const PRODUCTS = [
     dims: { w: 28.7, d: 37.2, h: 41.9, unit: "cm", printed: true },
     boxContents: ["Whisk", "Flex edge beater", "Flat beater", "Dough hook", "6.6L stainless steel bowl", "Pouring shield"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth — never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
 
-  { id: "kw15", name: "KitchenAid Artisan Plus Stand Mixer 4.7L — Cardamom", cat: "Kitchenware", room: "Kitchenware", price: 1199, memberPrice: 1079, sku: "SH-11016", tag: "New", ph: "", img: "assets/products/kw15-1.webp",
+  { id: "kw15", name: "KitchenAid Artisan Plus Stand Mixer 4.7L, Cardamom", cat: "Kitchenware", room: "Kitchenware", price: 1199, memberPrice: 1079, sku: "SH-11016", tag: "New", ph: "", img: "assets/products/kw15-1.webp",
     imgs: ["assets/products/kw15-1.webp", "assets/products/kw15-2.webp", "assets/products/kw15-3.webp", "assets/products/kw15-4.webp", "assets/products/kw15-5.webp"],
     desc: "The mixer people photograph as much as they use. A 4.7L bowl handles a double batch of biscuits or a full loaf of bread dough without climbing the sides. Full metal. It also has integrated bowl light and planetary mixing action. Comes in Cardamom.",
     features: [
@@ -11450,11 +11450,11 @@ const PRODUCTS = [
     dims: { w: 22.2, d: 35.6, h: 35.3, unit: "cm", printed: true },
     boxContents: ["Artisan Plus Tilt-Head Stand Mixer", "Stainless steel bowl", "Pouring shield", "Stainless steel double flex edge beater", "Stainless steel flat beater", "Stainless steel dough hook", "Stainless steel wire whisk"],
     warranty: "5 year manufacturer's warranty",
-    care: "Unplug before cleaning and wipe the body with a warm, damp cloth — never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
+    care: "Unplug before cleaning and wipe the body with a warm, damp cloth, never submerge it. Wash the bowl and attachments after each use and dry them straight away." },
 
-  { id: "kw16", name: "KitchenAid Variable Temperature Kettle 1.7L — Juniper", cat: "Kitchenware", room: "Kitchenware", price: 215, memberPrice: 194, sku: "SH-11017", tag: "New", ph: "", img: "assets/products/kw16-1.webp",
+  { id: "kw16", name: "KitchenAid Variable Temperature Kettle 1.7L, Juniper", cat: "Kitchenware", room: "Kitchenware", price: 215, memberPrice: 194, sku: "SH-11017", tag: "New", ph: "", img: "assets/products/kw16-1.webp",
     imgs: ["assets/products/kw16-1.webp", "assets/products/kw16-2.webp", "assets/products/kw16-3.webp", "assets/products/kw16-4.webp", "assets/products/kw16-5.webp"],
-    desc: "A kettle you leave out rather than hide away. Boils 1.7L — enough for a full pot of tea or a round of coffees, with 2400W behind it. Full metal. Details worth having: water window, slow release lid and quick and controlled pour. Juniper, and worth leaving on the bench.",
+    desc: "A kettle you leave out rather than hide away. Boils 1.7L, enough for a full pot of tea or a round of coffees, with 2400W behind it. Full metal. Details worth having: water window, slow release lid and quick and controlled pour. Juniper, and worth leaving on the bench.",
     features: [
       "1.7L capacity",
       "2400W element",
@@ -11467,9 +11467,9 @@ const PRODUCTS = [
     specs: { "Brand": "KitchenAid", "Model": "5KEK1701AJP", "Type": "Electric Kettle", "Capacity": "1.7L", "Power": "2400W", "Materials": "Full metal, brushed stainless steel inside", "Controls": "Adjustable Temperature 50 - 100 Degrees Celsius", "Colour": "Juniper", "Weight": "1.3 kg" },
     dims: { w: 21.8, d: 16.3, h: 25.6, unit: "cm", printed: true },
     warranty: "2 year manufacturer's warranty",
-    care: "Wipe the body with a soft, damp cloth and dry it — never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
+    care: "Wipe the body with a soft, damp cloth and dry it, never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
 
-  { id: "kw17", name: "KitchenAid Four-Slice Toaster — Porcelain White", cat: "Kitchenware", room: "Kitchenware", price: 251, memberPrice: 226, sku: "SH-11018", tag: "New", ph: "", img: "assets/products/kw17-1.webp",
+  { id: "kw17", name: "KitchenAid Four-Slice Toaster, Porcelain White", cat: "Kitchenware", room: "Kitchenware", price: 251, memberPrice: 226, sku: "SH-11018", tag: "New", ph: "", img: "assets/products/kw17-1.webp",
     imgs: ["assets/products/kw17-1.webp", "assets/products/kw17-2.webp", "assets/products/kw17-3.webp", "assets/products/kw17-4.webp", "assets/products/kw17-5.webp"],
     desc: "A toaster that earns its place on the bench. Takes four slices, with browning you set rather than guess at. All metal. You also get high lift lever. In Porcelain White, which is half the reason to buy it.",
     features: [
@@ -11486,7 +11486,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Slide out the crumb tray and empty it regularly, and wipe the body with a soft, damp cloth. Never put a knife or fork into the slots." },
 
-  { id: "kw18", name: "KitchenAid Food Processor 3.1L (13-Cup) — Almond Cream", cat: "Kitchenware", room: "Kitchenware", price: 419, memberPrice: 377, sku: "SH-11019", tag: "New", ph: "", img: "assets/products/kw18-1.webp",
+  { id: "kw18", name: "KitchenAid Food Processor 3.1L (13-Cup), Almond Cream", cat: "Kitchenware", room: "Kitchenware", price: 419, memberPrice: 377, sku: "SH-11019", tag: "New", ph: "", img: "assets/products/kw18-1.webp",
     imgs: ["assets/products/kw18-1.webp", "assets/products/kw18-2.webp", "assets/products/kw18-3.webp", "assets/products/kw18-4.webp", "assets/products/kw18-5.webp"],
     desc: "The appliance that turns an hour of prep into ten minutes. Chops, slices and blends up to 3.25L on 400W. Tritan work bowl. Small things that matter: snap and go and easy clean work bowl. Almond Cream, and worth leaving on the bench.",
     features: [
@@ -11504,9 +11504,9 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug before cleaning. Wash the bowl, lid and blades by hand or on the dishwasher's top rack, handling the blades by the hub. Wipe the motor base with a damp cloth." },
 
-  { id: "kw19", name: "KitchenAid Mini Food Chopper 830ml — Pistachio", cat: "Kitchenware", room: "Kitchenware", price: 131, memberPrice: 118, sku: "SH-11020", tag: "New", ph: "", img: "assets/products/kw19-1.webp",
+  { id: "kw19", name: "KitchenAid Mini Food Chopper 830ml, Pistachio", cat: "Kitchenware", room: "Kitchenware", price: 131, memberPrice: 118, sku: "SH-11020", tag: "New", ph: "", img: "assets/products/kw19-1.webp",
     imgs: ["assets/products/kw19-1.webp", "assets/products/kw19-2.webp", "assets/products/kw19-3.webp", "assets/products/kw19-4.webp", "assets/products/kw19-5.webp"],
-    desc: "Small, quick and endlessly useful. Chops, slices and blends up to 0.83L on 240W. Small things that matter: one-touch operation and drizzle basin for emulsifying. In Pistachio — chosen to be seen, not stored.",
+    desc: "Small, quick and endlessly useful. Chops, slices and blends up to 0.83L on 240W. Small things that matter: one-touch operation and drizzle basin for emulsifying. In Pistachio, chosen to be seen, not stored.",
     features: [
       "0.83L capacity",
       "240W motor",
@@ -11522,7 +11522,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug before cleaning. Wash the bowl, lid and blade by hand or on the dishwasher's top rack, handling the blade by the hub. Wipe the base with a damp cloth." },
 
-  { id: "kw20", name: "KitchenAid Pure Power Blender 2L — Porcelain White", cat: "Kitchenware", room: "Kitchenware", price: 239, memberPrice: 215, sku: "SH-11021", tag: "New", ph: "", img: "assets/products/kw20-1.webp",
+  { id: "kw20", name: "KitchenAid Pure Power Blender 2L, Porcelain White", cat: "Kitchenware", room: "Kitchenware", price: 239, memberPrice: 215, sku: "SH-11021", tag: "New", ph: "", img: "assets/products/kw20-1.webp",
     imgs: ["assets/products/kw20-1.webp", "assets/products/kw20-2.webp", "assets/products/kw20-3.webp", "assets/products/kw20-4.webp", "assets/products/kw20-5.webp"],
     desc: "A blender good enough to leave on the bench. A 2L jug, enough for smoothies for the household or a soup straight from the pot. ABS plastics. In Porcelain White, which is half the reason to buy it.",
     features: [
@@ -11540,7 +11540,7 @@ const PRODUCTS = [
     warranty: "1 year manufacturer's warranty",
     care: "Unplug before cleaning. Rinse the jug straight after use, or blend warm soapy water for a few seconds, then rinse. Wipe the base with a damp cloth and never submerge it." },
 
-  { id: "kw21", name: "Nespresso Creatista Plus Coffee Machine — Sea Salt", cat: "Kitchenware", room: "Kitchenware", price: 932, memberPrice: 839, sku: "SH-11022", tag: "New", ph: "", img: "assets/products/kw21-1.webp",
+  { id: "kw21", name: "Nespresso Creatista Plus Coffee Machine, Sea Salt", cat: "Kitchenware", room: "Kitchenware", price: 932, memberPrice: 839, sku: "SH-11022", tag: "New", ph: "", img: "assets/products/kw21-1.webp",
     imgs: ["assets/products/kw21-1.webp", "assets/products/kw21-2.webp", "assets/products/kw21-3.webp", "assets/products/kw21-4.webp", "assets/products/kw21-5.webp"],
     desc: "The morning coffee, settled. Espresso and milk coffees from a capsule, ready in about the time it takes to find a cup. 1.5L tank. Stainless steel construction. You also get intuitive digital display, espresso and lungo. Comes in Sea Salt.",
     features: [
@@ -11554,9 +11554,9 @@ const PRODUCTS = [
     dims: { w: 17.1, d: 39.3, h: 30.8, unit: "cm", printed: true },
     boxContents: ["Creatista Plus Coffee Machine", "Stainless Steel Milk Jug and Tasting Box of Nespresso Capsules"],
     warranty: "2 year manufacturer's warranty",
-    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it — it is what keeps the crema right." },
+    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it, it is what keeps the crema right." },
 
-  { id: "kw22", name: "Nespresso Vertuo Pop Coffee Machine Bundle — Lilac", cat: "Kitchenware", room: "Kitchenware", price: 233, memberPrice: 210, sku: "SH-11023", tag: "New", ph: "", img: "assets/products/kw22-1.webp",
+  { id: "kw22", name: "Nespresso Vertuo Pop Coffee Machine Bundle, Lilac", cat: "Kitchenware", room: "Kitchenware", price: 233, memberPrice: 210, sku: "SH-11023", tag: "New", ph: "", img: "assets/products/kw22-1.webp",
     imgs: ["assets/products/kw22-1.webp", "assets/products/kw22-2.webp", "assets/products/kw22-3.webp", "assets/products/kw22-4.webp", "assets/products/kw22-5.webp"],
     desc: "The morning coffee, settled. Espresso and milk coffees from a capsule, ready in about the time it takes to find a cup. 0.56L tank. You also get 1 button operation, automatic capsule ejection and connectivity via bluetooth and WiFi. In Lilac, which is half the reason to buy it.",
     features: [
@@ -11572,9 +11572,9 @@ const PRODUCTS = [
     dims: { w: 13.6, d: 42.6, h: 25.0, unit: "cm", printed: true },
     boxContents: ["Vertuo Pop Bundle Starter Pack Lilac", "Aeroccino 3 Milk Frother", "1 x Nespresso Travel Mug Lilac", "1 x Nespresso Tote Bag", "1 x Capsule Sample Set"],
     warranty: "2 year manufacturer's warranty",
-    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it — it is what keeps the crema right." },
+    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it, it is what keeps the crema right." },
 
-  { id: "kw23", name: "Nespresso Lattissima One Coffee Machine — Green", cat: "Kitchenware", room: "Kitchenware", price: 479, memberPrice: 431, sku: "SH-11024", tag: "New", ph: "", img: "assets/products/kw23-1.webp",
+  { id: "kw23", name: "Nespresso Lattissima One Coffee Machine, Green", cat: "Kitchenware", room: "Kitchenware", price: 479, memberPrice: 431, sku: "SH-11024", tag: "New", ph: "", img: "assets/products/kw23-1.webp",
     imgs: ["assets/products/kw23-1.webp", "assets/products/kw23-2.webp", "assets/products/kw23-3.webp", "assets/products/kw23-4.webp", "assets/products/kw23-5.webp"],
     desc: "The morning coffee, settled. Espresso and milk coffees from a capsule, ready in about the time it takes to find a cup. 1L tank. You also get milk jug has a detachable lid and is dishwasher safe. In Green, which is half the reason to buy it.",
     features: [
@@ -11588,11 +11588,11 @@ const PRODUCTS = [
     dims: { w: 32.4, d: 15.4, h: 25.6, unit: "cm", printed: true },
     boxContents: ["Lattissima One Capsule Coffee Machine Green"],
     warranty: "2 year manufacturer's warranty",
-    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it — it is what keeps the crema right." },
+    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it, it is what keeps the crema right." },
 
-  { id: "kw24", name: "Nespresso Citiz & Milk Coffee Machine — Polished Stainless Steel", cat: "Kitchenware", room: "Kitchenware", price: 443, memberPrice: 399, sku: "SH-11025", tag: "New", ph: "", img: "assets/products/kw24-1.webp",
+  { id: "kw24", name: "Nespresso Citiz & Milk Coffee Machine, Polished Stainless Steel", cat: "Kitchenware", room: "Kitchenware", price: 443, memberPrice: 399, sku: "SH-11025", tag: "New", ph: "", img: "assets/products/kw24-1.webp",
     imgs: ["assets/products/kw24-1.webp", "assets/products/kw24-2.webp", "assets/products/kw24-3.webp", "assets/products/kw24-4.webp", "assets/products/kw24-5.webp"],
-    desc: "The morning coffee, settled. Espresso and milk coffees from a capsule, ready in about the time it takes to find a cup. 1L tank. Metal & plastic. It also has descaling alert. In Polished Stainless Steel — chosen to be seen, not stored.",
+    desc: "The morning coffee, settled. Espresso and milk coffees from a capsule, ready in about the time it takes to find a cup. 1L tank. Metal & plastic. It also has descaling alert. In Polished Stainless Steel, chosen to be seen, not stored.",
     features: [
       "1260W motor",
       "Buttons",
@@ -11604,9 +11604,9 @@ const PRODUCTS = [
     dims: { w: 22.1, d: 38.9, h: 27.7, unit: "cm", printed: true },
     boxContents: ["CitiZ and Milk Capsule Coffee Machine Polished Stainless Steel", "Model number BEC550PSS4JAN1"],
     warranty: "2 year manufacturer's warranty",
-    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it — it is what keeps the crema right." },
+    care: "Empty and rinse the drip tray and capsule container daily, and wash the milk jug after every use. Run the descaling cycle when the machine asks for it, it is what keeps the crema right." },
 
-  { id: "kw25", name: "Ninja Crispi Pro 6-in-1 Glass Air Fryer — Sage Green", cat: "Kitchenware", room: "Kitchenware", price: 416, memberPrice: 374, sku: "SH-11026", tag: "New", ph: "", img: "assets/products/kw25-1.webp",
+  { id: "kw25", name: "Ninja Crispi Pro 6-in-1 Glass Air Fryer, Sage Green", cat: "Kitchenware", room: "Kitchenware", price: 416, memberPrice: 374, sku: "SH-11026", tag: "New", ph: "", img: "assets/products/kw25-1.webp",
     imgs: ["assets/products/kw25-1.webp", "assets/products/kw25-2.webp", "assets/products/kw25-3.webp", "assets/products/kw25-4.webp", "assets/products/kw25-5.webp"],
     desc: "Dinner, faster, and without the oven heating the whole house. 2.3L of cooking space across six functions, from air fry and roast through to bake and reheat. Small things that matter: modular base adjusts to fit 2.3L, 3.8L and and 5.7L CleanCrisp glassware. In Sage Green, which is half the reason to buy it.",
     features: [
@@ -11624,9 +11624,9 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Wash the baskets, trays and lids in warm soapy water or the dishwasher where the manual allows, and wipe the unit with a damp cloth." },
 
-  { id: "kw26", name: "Ninja Crispi Pro 6-in-1 Glass Air Fryer — Pink", cat: "Kitchenware", room: "Kitchenware", price: 416, memberPrice: 374, sku: "SH-11027", tag: "New", ph: "", img: "assets/products/kw26-1.webp",
+  { id: "kw26", name: "Ninja Crispi Pro 6-in-1 Glass Air Fryer, Pink", cat: "Kitchenware", room: "Kitchenware", price: 416, memberPrice: 374, sku: "SH-11027", tag: "New", ph: "", img: "assets/products/kw26-1.webp",
     imgs: ["assets/products/kw26-1.webp", "assets/products/kw26-2.webp", "assets/products/kw26-3.webp", "assets/products/kw26-4.webp", "assets/products/kw26-5.webp"],
-    desc: "Dinner, faster, and without the oven heating the whole house. 2.3L of cooking space across six functions, from air fry and roast through to bake and reheat. It also has modular base adjusts to fit 2.3L, 3.8L and and 5.7L CleanCrisp glassware. In Pink — chosen to be seen, not stored.",
+    desc: "Dinner, faster, and without the oven heating the whole house. 2.3L of cooking space across six functions, from air fry and roast through to bake and reheat. It also has modular base adjusts to fit 2.3L, 3.8L and and 5.7L CleanCrisp glassware. In Pink, chosen to be seen, not stored.",
     features: [
       "2.3L capacity",
       "2050W motor",
@@ -11642,7 +11642,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Wash the baskets, trays and lids in warm soapy water or the dishwasher where the manual allows, and wipe the unit with a damp cloth." },
 
-  { id: "kw27", name: "Ninja Creami Deluxe Ice Cream Maker — Cloud Silver", cat: "Kitchenware", room: "Kitchenware", price: 359, memberPrice: 323, sku: "SH-11028", tag: "New", ph: "", img: "assets/products/kw27-1.webp",
+  { id: "kw27", name: "Ninja Creami Deluxe Ice Cream Maker, Cloud Silver", cat: "Kitchenware", room: "Kitchenware", price: 359, memberPrice: 323, sku: "SH-11028", tag: "New", ph: "", img: "assets/products/kw27-1.webp",
     imgs: ["assets/products/kw27-1.webp", "assets/products/kw27-2.webp", "assets/products/kw27-3.webp", "assets/products/kw27-4.webp", "assets/products/kw27-5.webp"],
     desc: "Dessert made at home, properly. Churns up to 0.7L of ice cream, gelato, sorbet or frozen yoghurt at a time. BPA free tubs. You also get re-Spin function for an even softer creamier result and dual drive motors power through layers. Cloud Silver, and worth leaving on the bench.",
     features: [
@@ -11660,7 +11660,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Wash the bowl, paddle and lid by hand in warm soapy water and dry thoroughly. Wipe the body with a damp cloth and never submerge it." },
 
-  { id: "kw28", name: "Russell Hobbs Brooklyn Four-Slice Toaster — Copper", cat: "Kitchenware", room: "Kitchenware", price: 90, memberPrice: 81, sku: "SH-11029", tag: "New", ph: "", img: "assets/products/kw28-1.webp",
+  { id: "kw28", name: "Russell Hobbs Brooklyn Four-Slice Toaster, Copper", cat: "Kitchenware", room: "Kitchenware", price: 90, memberPrice: 81, sku: "SH-11029", tag: "New", ph: "", img: "assets/products/kw28-1.webp",
     imgs: ["assets/products/kw28-1.webp", "assets/products/kw28-2.webp", "assets/products/kw28-3.webp", "assets/products/kw28-4.webp", "assets/products/kw28-5.webp"],
     desc: "A toaster that earns its place on the bench. Takes four slices, with browning you set rather than guess at. Details worth having: extra wide and deep self-centering slots, illumination around buttons and high lift lever. Finished in Copper.",
     features: [
@@ -11677,9 +11677,9 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Unplug and cool before cleaning. Slide out the crumb tray and empty it regularly, and wipe the body with a soft, damp cloth. Never put a knife or fork into the slots." },
 
-  { id: "kw29", name: "Russell Hobbs Brooklyn Glass Kettle 1.7L — Copper", cat: "Kitchenware", room: "Kitchenware", price: 79, memberPrice: 71, sku: "SH-11030", tag: "New", ph: "", img: "assets/products/kw29-1.webp",
+  { id: "kw29", name: "Russell Hobbs Brooklyn Glass Kettle 1.7L, Copper", cat: "Kitchenware", room: "Kitchenware", price: 79, memberPrice: 71, sku: "SH-11030", tag: "New", ph: "", img: "assets/products/kw29-1.webp",
     imgs: ["assets/products/kw29-1.webp", "assets/products/kw29-2.webp", "assets/products/kw29-3.webp", "assets/products/kw29-4.webp"],
-    desc: "A kettle you leave out rather than hide away. Boils 1.7L — enough for a full pot of tea or a round of coffees, with 2200W behind it. Glass body. Small things that matter: bPA free, push open lid and removable filter. Finished in Copper.",
+    desc: "A kettle you leave out rather than hide away. Boils 1.7L, enough for a full pot of tea or a round of coffees, with 2200W behind it. Glass body. Small things that matter: bPA free, push open lid and removable filter. Finished in Copper.",
     features: [
       "1.7L capacity",
       "2200W element",
@@ -11692,9 +11692,9 @@ const PRODUCTS = [
     specs: { "Brand": "Russell Hobbs", "Model": "RHK172", "Type": "Electric Kettle", "Capacity": "1.7L", "Power": "2200W", "Materials": "Glass Body", "Colour": "Copper", "Weight": "1.2 kg" },
     dims: { w: 12.0, d: 20.0, h: 24.0, unit: "cm", printed: true },
     warranty: "2 year manufacturer's warranty",
-    care: "Wipe the body with a soft, damp cloth and dry it — never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
+    care: "Wipe the body with a soft, damp cloth and dry it, never submerge the kettle or its base. Rinse the limescale filter under the tap now and then, and descale with a kettle descaler if your water is hard." },
 
-  { id: "kw30", name: "SodaStream Art Sparkling Water Maker — White", cat: "Kitchenware", room: "Kitchenware", price: 203, memberPrice: 183, sku: "SH-11031", tag: "New", ph: "", img: "assets/products/kw30-1.webp",
+  { id: "kw30", name: "SodaStream Art Sparkling Water Maker, White", cat: "Kitchenware", room: "Kitchenware", price: 203, memberPrice: 183, sku: "SH-11031", tag: "New", ph: "", img: "assets/products/kw30-1.webp",
     imgs: ["assets/products/kw30-1.webp", "assets/products/kw30-2.webp", "assets/products/kw30-3.webp"],
     desc: "Sparkling water without the crate of bottles. Carbonates a bottle of tap water in seconds, so the sparkling water habit stops arriving by the carton. Stainless steel trim. Details worth having: quick connect CO2 cylinder connection, bespoke carbonation lever and cordless and no electricity operation. In White, which is half the reason to buy it.",
     features: [
@@ -11712,7 +11712,7 @@ const PRODUCTS = [
     warranty: "2 year manufacturer's warranty",
     care: "Wipe the body with a soft, damp cloth. Wash the bottle by hand in warm soapy water and air dry it. Never put the carbonating bottle in the dishwasher or fill it with anything but water." },
 
-  { id: "kw31", name: "Aarke Carbonator 3 Sparkling Water Maker — Matte White", cat: "Kitchenware", room: "Kitchenware", price: 359, memberPrice: 323, sku: "SH-11032", tag: "New", ph: "", img: "assets/products/kw31-1.webp",
+  { id: "kw31", name: "Aarke Carbonator 3 Sparkling Water Maker, Matte White", cat: "Kitchenware", room: "Kitchenware", price: 359, memberPrice: 323, sku: "SH-11032", tag: "New", ph: "", img: "assets/products/kw31-1.webp",
     imgs: ["assets/products/kw31-1.webp", "assets/products/kw31-2.webp", "assets/products/kw31-3.webp", "assets/products/kw31-4.webp", "assets/products/kw31-5.webp"],
     desc: "Sparkling water without the crate of bottles. Carbonates a bottle of tap water in seconds, so the sparkling water habit stops arriving by the carton. Stainless steel construction with premium finish. Small things that matter: internal safety valve system, controlled spray beam and cordless and electricity-free. Finished in Matte White.",
     features: [
@@ -11733,7 +11733,7 @@ const PRODUCTS = [
   // ── Lifestyle ──
   { id: "lf01", name: "Oakwood & Vanilla Bean Reed Diffuser 150ml", cat: "Lifestyle", room: "Lifestyle", price: 18, memberPrice: 16, sku: "SH-11033", tag: "New", ph: "", img: "assets/products/lf01-1.webp",
     imgs: ["assets/products/lf01-1.webp", "assets/products/lf01-2.webp", "assets/products/lf01-3.webp", "assets/products/lf01-4.webp", "assets/products/lf01-5.webp"],
-    desc: "Scent that works without being switched on. 150ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
+    desc: "Scent that works without being switched on. 150ml of oil and a bundle of reeds, no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
     features: [
       "Volume: 150ml",
       "Size: 11.8cm (H) x 6cm (Dia.)",
@@ -11743,22 +11743,22 @@ const PRODUCTS = [
       "Base notes: Saffron, leather, tonka bean, moss and patchouli"
     ],
     specs: { "Type": "Reed diffuser", "Volume": "150ml", "Size": "11.8cm (H) x 6cm (Dia.)" },
-    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster, the oil marks timber and stone, and keep it out of direct sun." },
 
   { id: "lf02", name: "Amber & Tonka Reed Diffuser 350ml", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11034", tag: "New", ph: "", img: "assets/products/lf02-1.webp",
     imgs: ["assets/products/lf02-1.webp", "assets/products/lf02-2.webp", "assets/products/lf02-3.webp", "assets/products/lf02-4.webp", "assets/products/lf02-5.webp"],
-    desc: "Scent that works without being switched on. No flame, no switch — just scent that sits in the room. Turn the reeds when you want it louder.",
+    desc: "Scent that works without being switched on. No flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
     features: [
       "Reeds and oil included",
       "No flame or power needed",
       "Lasts several months"
     ],
     specs: { "Type": "Reed diffuser" },
-    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster, the oil marks timber and stone, and keep it out of direct sun." },
 
   { id: "lf03", name: "Sandalwood & Musk Reed Diffuser 350ml", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11035", tag: "New", ph: "", img: "assets/products/lf03-1.webp",
     imgs: ["assets/products/lf03-1.webp", "assets/products/lf03-2.webp", "assets/products/lf03-3.webp", "assets/products/lf03-4.webp", "assets/products/lf03-5.webp"],
-    desc: "Scent that works without being switched on. 350ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
+    desc: "Scent that works without being switched on. 350ml of oil and a bundle of reeds, no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
     features: [
       "Volume: 350ml",
       "Size: 16.5cm (H) x 9cm (Dia.)",
@@ -11766,11 +11766,11 @@ const PRODUCTS = [
       "Bergamot and sandalwood fragrance"
     ],
     specs: { "Type": "Reed diffuser", "Volume": "350ml", "Size": "16.5cm (H) x 9cm (Dia.)" },
-    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster, the oil marks timber and stone, and keep it out of direct sun." },
 
   { id: "lf04", name: "Vanilla & Amber Reed Diffuser 350ml", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11036", tag: "New", ph: "", img: "assets/products/lf04-1.webp",
     imgs: ["assets/products/lf04-1.webp", "assets/products/lf04-2.webp", "assets/products/lf04-3.webp", "assets/products/lf04-4.webp", "assets/products/lf04-5.webp"],
-    desc: "Scent that works without being switched on. 350ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
+    desc: "Scent that works without being switched on. 350ml of oil and a bundle of reeds, no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder.",
     features: [
       "Volume: 350ml",
       "Size: 16.5cm (H) x 9cm (Dia.)",
@@ -11778,11 +11778,11 @@ const PRODUCTS = [
       "Vanilla and amber fragrance"
     ],
     specs: { "Type": "Reed diffuser", "Volume": "350ml", "Size": "16.5cm (H) x 9cm (Dia.)" },
-    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster, the oil marks timber and stone, and keep it out of direct sun." },
 
   { id: "lf05", name: "Mahogany Reed Diffuser 150ml", cat: "Lifestyle", room: "Lifestyle", price: 18, memberPrice: 16, sku: "SH-11037", tag: "New", ph: "", img: "assets/products/lf05-1.webp",
     imgs: ["assets/products/lf05-1.webp", "assets/products/lf05-2.webp", "assets/products/lf05-3.webp", "assets/products/lf05-4.webp", "assets/products/lf05-5.webp"],
-    desc: "Scent that works without being switched on. 150ml of oil and a bundle of reeds — no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder. Bottle: Pressed glass.",
+    desc: "Scent that works without being switched on. 150ml of oil and a bundle of reeds, no flame, no switch, just scent that sits in the room. Turn the reeds when you want it louder. Bottle: Pressed glass.",
     features: [
       "Volume: 150ml",
       "Bottle: Pressed glass",
@@ -11792,9 +11792,9 @@ const PRODUCTS = [
       "Middle notes: Wood and sandalwood"
     ],
     specs: { "Type": "Reed diffuser", "Volume": "150ml", "Material": "Bottle: Pressed glass, Lid: Polypropylene (PP), Fibre: Greige yarns and dyed yarns, Transp" },
-    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster — the oil marks timber and stone — and keep it out of direct sun." },
+    care: "Turn the reeds every week or so to refresh the scent. Stand the bottle on a coaster, the oil marks timber and stone, and keep it out of direct sun." },
 
-  { id: "lf06", name: "Ceramic Aroma Diffuser 100ml — Sage Green", cat: "Lifestyle", room: "Lifestyle", price: 37.5, memberPrice: 33.5, sku: "SH-11038", tag: "New", ph: "", img: "assets/products/lf06-1.webp",
+  { id: "lf06", name: "Ceramic Aroma Diffuser 100ml, Sage Green", cat: "Lifestyle", room: "Lifestyle", price: 37.5, memberPrice: 33.5, sku: "SH-11038", tag: "New", ph: "", img: "assets/products/lf06-1.webp",
     imgs: ["assets/products/lf06-1.webp", "assets/products/lf06-2.webp", "assets/products/lf06-3.webp", "assets/products/lf06-4.webp", "assets/products/lf06-5.webp"],
     desc: "Fragrance you can turn on and off. A 100ml (Tank) tank, a ceramic cover and a quiet mist, so the fragrance is yours to control. Oil is sold separately, which means you pick the scent.",
     features: [
@@ -11841,7 +11841,7 @@ const PRODUCTS = [
     specs: { "Type": "Room spray", "Volume": "100ml" },
     care: "Spray into the air rather than onto fabric or polished surfaces. Store upright and away from heat." },
 
-  { id: "lf10", name: "Mahogany Scented Candle — Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11042", tag: "New", ph: "", img: "assets/products/lf10-1.webp",
+  { id: "lf10", name: "Mahogany Scented Candle, Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11042", tag: "New", ph: "", img: "assets/products/lf10-1.webp",
     imgs: ["assets/products/lf10-1.webp", "assets/products/lf10-2.webp", "assets/products/lf10-3.webp", "assets/products/lf10-4.webp", "assets/products/lf10-5.webp"],
     desc: "A candle big enough to be the thing on the table. A soy wax blend with a long burn and a wide melt pool, so the scent carries past the table it is standing on. 15cm (H) x 12cm (W) x 8cm (D).",
     features: [
@@ -11855,7 +11855,7 @@ const PRODUCTS = [
     specs: { "Type": "Scented candle", "Size": "15cm (H) x 12cm (W) x 8cm (D)" },
     care: "Burn for two to three hours the first time, until the melt pool reaches the edge. Trim the wick to 5mm before each burn, and never leave a burning candle unattended." },
 
-  { id: "lf11", name: "Vetiver & Fig Soy Wax Ceramic Candle — Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11043", tag: "New", ph: "", img: "assets/products/lf11-1.webp",
+  { id: "lf11", name: "Vetiver & Fig Soy Wax Ceramic Candle, Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11043", tag: "New", ph: "", img: "assets/products/lf11-1.webp",
     imgs: ["assets/products/lf11-1.webp", "assets/products/lf11-2.webp", "assets/products/lf11-3.webp", "assets/products/lf11-4.webp", "assets/products/lf11-5.webp"],
     desc: "A candle big enough to be the thing on the table. A soy wax blend with a long burn and a wide melt pool, so the scent carries past the table it is standing on. 16.5cm (H) x 13.2cm (Dia.). XL VETIVER FIG CANDLE.",
     features: [
@@ -11869,7 +11869,7 @@ const PRODUCTS = [
     specs: { "Type": "Scented candle", "Size": "16.5cm (H) x 13.2cm (Dia.)", "Material": "XL VETIVER FIG CANDLE", "Colour": "Green" },
     care: "Burn for two to three hours the first time, until the melt pool reaches the edge. Trim the wick to 5mm before each burn, and never leave a burning candle unattended." },
 
-  { id: "lf12", name: "Vanilla & Amber Soy Wax Candle — Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11044", tag: "New", ph: "", img: "assets/products/lf12-1.webp",
+  { id: "lf12", name: "Vanilla & Amber Soy Wax Candle, Extra Large", cat: "Lifestyle", room: "Lifestyle", price: 20, memberPrice: 18, sku: "SH-11044", tag: "New", ph: "", img: "assets/products/lf12-1.webp",
     imgs: ["assets/products/lf12-1.webp", "assets/products/lf12-2.webp", "assets/products/lf12-3.webp", "assets/products/lf12-4.webp"],
     desc: "A candle big enough to be the thing on the table. A soy wax blend with a long burn and a wide melt pool, so the scent carries past the table it is standing on. 16.4cm (H) x 13cm (Dia.) (with lid). Vessel: Glass.",
     features: [
@@ -11892,7 +11892,7 @@ const PRODUCTS = [
       "For diffusers, burners and baths"
     ],
     specs: { "Type": "Essential oil", "Volume": "10ml" },
-    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets, some oils are not safe around animals." },
 
   { id: "lf14", name: "Pure Eucalyptus Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11046", tag: "New", ph: "", img: "assets/products/lf14-1.webp",
     imgs: ["assets/products/lf14-1.webp", "assets/products/lf14-2.webp", "assets/products/lf14-3.webp", "assets/products/lf14-4.webp"],
@@ -11903,7 +11903,7 @@ const PRODUCTS = [
       "For diffusers, burners and baths"
     ],
     specs: { "Type": "Essential oil", "Volume": "10ml" },
-    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets, some oils are not safe around animals." },
 
   { id: "lf15", name: "Pure Peppermint Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11047", tag: "New", ph: "", img: "assets/products/lf15-1.webp",
     imgs: ["assets/products/lf15-1.webp", "assets/products/lf15-2.webp", "assets/products/lf15-3.webp"],
@@ -11914,7 +11914,7 @@ const PRODUCTS = [
       "For diffusers, burners and baths"
     ],
     specs: { "Type": "Essential oil", "Volume": "10ml" },
-    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets, some oils are not safe around animals." },
 
   { id: "lf16", name: "Pure Lemon Essential Oil 10ml", cat: "Lifestyle", room: "Lifestyle", price: 6, memberPrice: 5, sku: "SH-11048", tag: "New", ph: "", img: "assets/products/lf16-1.webp",
     imgs: ["assets/products/lf16-1.webp", "assets/products/lf16-2.webp", "assets/products/lf16-3.webp"],
@@ -11925,7 +11925,7 @@ const PRODUCTS = [
       "For diffusers, burners and baths"
     ],
     specs: { "Type": "Essential oil", "Volume": "10ml" },
-    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets — some oils are not safe around animals." },
+    care: "Dilute before applying to skin. Keep the bottle closed, out of sunlight and away from children and pets, some oils are not safe around animals." },
 
   { id: "lf17", name: "Ruffle-Trim Cotton Knit Throw", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11049", tag: "New", ph: "", img: "assets/products/lf17-1.webp",
     imgs: ["assets/products/lf17-1.webp", "assets/products/lf17-2.webp", "assets/products/lf17-3.webp", "assets/products/lf17-4.webp"],
@@ -11949,7 +11949,7 @@ const PRODUCTS = [
     specs: { "Type": "Throw", "Material": "100% Cotton" },
     care: "Warm gentle machine wash separately, do not bleach, do not tumble dry. Pull back into shape while damp and dry flat." },
 
-  { id: "lf19", name: "Brushed Check Throw — Peacoat", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11051", tag: "New", ph: "", img: "assets/products/lf19-1.webp",
+  { id: "lf19", name: "Brushed Check Throw, Peacoat", cat: "Lifestyle", room: "Lifestyle", price: 25, memberPrice: 22.5, sku: "SH-11051", tag: "New", ph: "", img: "assets/products/lf19-1.webp",
     imgs: ["assets/products/lf19-1.webp", "assets/products/lf19-2.webp", "assets/products/lf19-3.webp"],
     desc: "The throw that ends up on whoever sat down first. 100% polyester and generously sized, for the end of a bed or the arm of a sofa. The kind of thing that quietly decides where everyone sits.",
     features: [
@@ -11973,7 +11973,7 @@ const PRODUCTS = [
 
   { id: "lf21", name: "Coral Fleece Robe", cat: "Lifestyle", room: "Lifestyle", price: 56, memberPrice: 50, sku: "SH-11053", tag: "New", ph: "", img: "assets/products/lf21-1.webp",
     imgs: ["assets/products/lf21-1.webp", "assets/products/lf21-2.webp", "assets/products/lf21-3.webp", "assets/products/lf21-4.webp", "assets/products/lf21-5.webp"],
-    desc: "For the hour before you are dressed. Soft fleece, deep pockets and a tie belt — cut long enough to be worth getting out of bed for. 100% Recycled Polyester.",
+    desc: "For the hour before you are dressed. Soft fleece, deep pockets and a tie belt, cut long enough to be worth getting out of bed for. 100% Recycled Polyester.",
     features: [
       "100% Recycled Polyester",
       "Soft fleece",
@@ -11982,7 +11982,7 @@ const PRODUCTS = [
     specs: { "Type": "Robe", "Material": "100% Recycled Polyester" },
     care: "WARM DELICATE MACHINE WASH WITH LIKE COLOURS. DO NOT BLEACH. DO NOT TUMBLE DRY. WARM IRON (DO NOT IRON PRINTS OR EMBELLISHMENTS). DO NOT DRY CLEAN." },
 
-  { id: "lf22", name: "Quilted Slippers — Pink", cat: "Lifestyle", room: "Lifestyle", price: 19, memberPrice: 17, sku: "SH-11054", tag: "New", ph: "", img: "assets/products/lf22-1.webp",
+  { id: "lf22", name: "Quilted Slippers, Pink", cat: "Lifestyle", room: "Lifestyle", price: 19, memberPrice: 17, sku: "SH-11054", tag: "New", ph: "", img: "assets/products/lf22-1.webp",
     imgs: ["assets/products/lf22-1.webp", "assets/products/lf22-2.webp", "assets/products/lf22-3.webp"],
     desc: "Indoor shoes, which every house needs more of. Quilted upper, soft sole, and warm without being hot.",
     features: [
@@ -12005,9 +12005,9 @@ const PRODUCTS = [
       "High quality rubber"
     ],
     specs: { "Type": "Hot water bottle", "Capacity": "2 litres", "Size": "36cm (H) x 21cm (W)", "Material": "Plush and rubber", "Colour": "Stone (Grey)" },
-    care: "Fill to no more than two-thirds with hot — not boiling — water and expel the air before sealing. Replace the bottle every two years, or sooner if the rubber perishes." },
+    care: "Fill to no more than two-thirds with hot, not boiling, water and expel the air before sealing. Replace the bottle every two years, or sooner if the rubber perishes." },
 
-  { id: "lf24", name: "Hot Water Bottle 2L — Ice Blue", cat: "Lifestyle", room: "Lifestyle", price: 8.5, memberPrice: 7.5, sku: "SH-11056", tag: "New", ph: "", img: "assets/products/lf24-1.webp",
+  { id: "lf24", name: "Hot Water Bottle 2L, Ice Blue", cat: "Lifestyle", room: "Lifestyle", price: 8.5, memberPrice: 7.5, sku: "SH-11056", tag: "New", ph: "", img: "assets/products/lf24-1.webp",
     imgs: ["assets/products/lf24-1.webp", "assets/products/lf24-2.webp"],
     desc: "An old idea that still works better than most new ones. Two litres, in a plush cover that stays comfortable against skin. Good for cold feet, a sore back, or a bed that needs warming before you get in it. HOT WATER BOTTLE - BLUE.",
     features: [
@@ -12016,9 +12016,9 @@ const PRODUCTS = [
       "Plush removable cover"
     ],
     specs: { "Type": "Hot water bottle", "Material": "HOT WATER BOTTLE - BLUE" },
-    care: "Fill to no more than two-thirds with hot — not boiling — water and expel the air before sealing. Replace the bottle every two years, or sooner if the rubber perishes." },
+    care: "Fill to no more than two-thirds with hot, not boiling, water and expel the air before sealing. Replace the bottle every two years, or sooner if the rubber perishes." },
 
-  { id: "lf25", name: "Padded Sleep Eye Mask — Pink", cat: "Lifestyle", room: "Lifestyle", price: 7, memberPrice: 6, sku: "SH-11057", tag: "New", ph: "", img: "assets/products/lf25-1.webp",
+  { id: "lf25", name: "Padded Sleep Eye Mask, Pink", cat: "Lifestyle", room: "Lifestyle", price: 7, memberPrice: 6, sku: "SH-11057", tag: "New", ph: "", img: "assets/products/lf25-1.webp",
     imgs: ["assets/products/lf25-1.webp", "assets/products/lf25-2.webp", "assets/products/lf25-3.webp", "assets/products/lf25-4.webp"],
     desc: "Dark enough to sleep in on a plane. Padded, light on the face, and wide enough to block the gap by your nose. Polyester (Filling and fibre).",
     features: [
@@ -12042,7 +12042,7 @@ const PRODUCTS = [
     specs: { "Type": "Notebook / planner" },
     care: "Keep dry. A soft eraser lifts pencil without scuffing the paper." },
 
-  { id: "lf27", name: "A5 Hardcover Notebook — Blue", cat: "Lifestyle", room: "Lifestyle", price: 9, memberPrice: 8, sku: "SH-11059", tag: "New", ph: "", img: "assets/products/lf27-1.webp",
+  { id: "lf27", name: "A5 Hardcover Notebook, Blue", cat: "Lifestyle", room: "Lifestyle", price: 9, memberPrice: 8, sku: "SH-11059", tag: "New", ph: "", img: "assets/products/lf27-1.webp",
     imgs: ["assets/products/lf27-1.webp", "assets/products/lf27-2.webp", "assets/products/lf27-3.webp", "assets/products/lf27-4.webp", "assets/products/lf27-5.webp"],
     desc: "Paper, for the things that do not belong on a phone. Lined pages that take ink without bleeding, 240 pages of them. 80GSM paper.",
     features: [
@@ -12090,7 +12090,7 @@ const PRODUCTS = [
     care: "Spot clean with a damp cloth and mild soap, then air dry out of direct sun." },
 
   // ── Tables: coffee, side & console ──
-  { id: "cc001", name: "Travertine-Look Round Coffee Table 70cm — Beige", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11063", tag: "New", ph: "", img: "assets/products/cc001-1.webp",
+  { id: "cc001", name: "Travertine-Look Round Coffee Table 70cm, Beige", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11063", tag: "New", ph: "", img: "assets/products/cc001-1.webp",
     imgs: ["assets/products/cc001-1.webp", "assets/products/cc001-2.webp", "assets/products/cc001-3.webp", "assets/products/cc001-4.webp", "assets/products/cc001-5.webp"],
     desc: "The piece the whole room arranges itself around. 70cm wide, 70cm deep and 36.5cm high. MgO with a travertine effect in hydrographic transfer printing. Circular design with a travertine-effect finish for a natural stone look. The kind of piece that quietly holds a room together.",
     features: [
@@ -12104,7 +12104,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc002", name: "Bamboo Coffee Tables — Set of 2 · Natural", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11064", tag: "New", ph: "", img: "assets/products/cc002-1.webp",
+  { id: "cc002", name: "Bamboo Coffee Tables, Set of 2 · Natural", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11064", tag: "New", ph: "", img: "assets/products/cc002-1.webp",
     imgs: ["assets/products/cc002-1.webp", "assets/products/cc002-2.webp", "assets/products/cc002-3.webp", "assets/products/cc002-4.webp", "assets/products/cc002-5.webp"],
     desc: "The piece the whole room arranges itself around. 47cm wide, 47cm deep and 33cm high. Bamboo. Handcrafted and fully assembled. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12119,7 +12119,7 @@ const PRODUCTS = [
     boxContents: ["2x Assorted Coffee Tables"],
     care: "Please note that Bamboo is a natural material, and this is a handmade product, therefore, small variations or imperfections in colour, texture, shape, size and finish may occur from piece to piece. Avoid direct sunlight and rainwater to prevent the aging of the natural materials. Avoid leaving it in a damp place for a long time to avoid mould and insects. If there is mould, you can brush it and ri" },
 
-  { id: "cc003", name: "Travertine-Look Rectangular Coffee Table 90cm — Beige", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11065", tag: "New", ph: "", img: "assets/products/cc003-1.webp",
+  { id: "cc003", name: "Travertine-Look Rectangular Coffee Table 90cm, Beige", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11065", tag: "New", ph: "", img: "assets/products/cc003-1.webp",
     imgs: ["assets/products/cc003-1.webp", "assets/products/cc003-2.webp", "assets/products/cc003-3.webp", "assets/products/cc003-4.webp", "assets/products/cc003-5.webp"],
     desc: "The piece the whole room arranges itself around. 60cm across. MgO with a travertine effect in hydrographic transfer printing. Rectangular design with a travertine-effect finish for a natural stone look. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12132,7 +12132,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc004", name: "Glass Round Coffee Table 90cm — Oak", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11066", tag: "New", ph: "", img: "assets/products/cc004-1.webp",
+  { id: "cc004", name: "Glass Round Coffee Table 90cm, Oak", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11066", tag: "New", ph: "", img: "assets/products/cc004-1.webp",
     imgs: ["assets/products/cc004-1.webp", "assets/products/cc004-2.webp", "assets/products/cc004-3.webp", "assets/products/cc004-4.webp", "assets/products/cc004-5.webp"],
     desc: "The piece the whole room arranges itself around. 90cm wide, 90cm deep and 27cm high. Honeycomb board with melamine finish; fibreglass legs with decorative foil look. Rounded tabletop with soft, curved edges. The kind of piece that quietly holds a room together.",
     features: [
@@ -12144,7 +12144,7 @@ const PRODUCTS = [
     dims: { w: 90, d: 90, h: 27, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc005", name: "Drum Round Coffee Table 100cm — Walnut", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11067", tag: "New", ph: "", img: "assets/products/cc005-1.webp",
+  { id: "cc005", name: "Drum Round Coffee Table 100cm, Walnut", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11067", tag: "New", ph: "", img: "assets/products/cc005-1.webp",
     imgs: ["assets/products/cc005-1.webp", "assets/products/cc005-2.webp", "assets/products/cc005-3.webp", "assets/products/cc005-4.webp", "assets/products/cc005-5.webp"],
     desc: "The piece the whole room arranges itself around. 100cm wide, 70cm deep and 33cm high. MDF with laminated finish. Rounded corner tabletop offers a softer profile than traditional shapes. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12157,7 +12157,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 70, h: 33, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc006", name: "Coffee Table 110cm — Walnut", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11068", tag: "New", ph: "", img: "assets/products/cc006-1.webp",
+  { id: "cc006", name: "Coffee Table 110cm, Walnut", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11068", tag: "New", ph: "", img: "assets/products/cc006-1.webp",
     imgs: ["assets/products/cc006-1.webp", "assets/products/cc006-2.webp", "assets/products/cc006-3.webp", "assets/products/cc006-4.webp", "assets/products/cc006-5.webp"],
     desc: "The piece the whole room arranges itself around. 55cm wide, 110cm deep and 40cm high. Sustainably sourced MDF with a melamine finish. Plenty of surface space for all your living room essentials. The kind of piece that quietly holds a room together.",
     features: [
@@ -12170,7 +12170,7 @@ const PRODUCTS = [
     dims: { w: 55, d: 110, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc007", name: "Metal Round Coffee Table 76cm — Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11069", tag: "New", ph: "", img: "assets/products/cc007-1.webp",
+  { id: "cc007", name: "Metal Round Coffee Table 76cm, Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11069", tag: "New", ph: "", img: "assets/products/cc007-1.webp",
     imgs: ["assets/products/cc007-1.webp", "assets/products/cc007-2.webp", "assets/products/cc007-3.webp", "assets/products/cc007-4.webp", "assets/products/cc007-5.webp"],
     desc: "The piece the whole room arranges itself around. 76cm wide, 76cm deep and 41cm high. MDF with a melamine finish. 76cm round tabletop provides plenty of surface space. The kind of piece that quietly holds a room together.",
     features: [
@@ -12184,7 +12184,7 @@ const PRODUCTS = [
     dims: { w: 76, d: 76, h: 41, unit: "cm", printed: true },
     care: "Wipe clean with a dry cloth. Avoid strong chemical cleaners." },
 
-  { id: "cc008", name: "Oak Coffee Table 110cm — Light Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11070", tag: "New", ph: "", img: "assets/products/cc008-1.webp",
+  { id: "cc008", name: "Oak Coffee Table 110cm, Light Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11070", tag: "New", ph: "", img: "assets/products/cc008-1.webp",
     imgs: ["assets/products/cc008-1.webp", "assets/products/cc008-2.webp", "assets/products/cc008-3.webp", "assets/products/cc008-4.webp", "assets/products/cc008-5.webp"],
     desc: "The piece the whole room arranges itself around. 55cm wide, 110cm deep and 40cm high. Sustainably sourced MDF with laminate finish. Plenty of surface space for all your living room essentials. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12197,7 +12197,7 @@ const PRODUCTS = [
     dims: { w: 55, d: 110, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc009", name: "Sliding-Door Coffee Table 120cm — Natural", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11071", tag: "New", ph: "", img: "assets/products/cc009-1.webp",
+  { id: "cc009", name: "Sliding-Door Coffee Table 120cm, Natural", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11071", tag: "New", ph: "", img: "assets/products/cc009-1.webp",
     imgs: ["assets/products/cc009-1.webp", "assets/products/cc009-2.webp", "assets/products/cc009-3.webp", "assets/products/cc009-4.webp", "assets/products/cc009-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 60cm deep and 41cm high. MDF with a laminated paper finish. 120cm wide tabletop provides plenty of space for decor, books, or drinks. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12209,7 +12209,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 60, h: 41, unit: "cm", printed: true },
     care: "Wipe down with a damp cloth. Avoid cleaning with strong chemicals." },
 
-  { id: "cc010", name: "Glass Round Coffee Table 90cm — Walnut", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11072", tag: "New", ph: "", img: "assets/products/cc010-1.webp",
+  { id: "cc010", name: "Glass Round Coffee Table 90cm, Walnut", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11072", tag: "New", ph: "", img: "assets/products/cc010-1.webp",
     imgs: ["assets/products/cc010-1.webp", "assets/products/cc010-2.webp", "assets/products/cc010-3.webp", "assets/products/cc010-4.webp", "assets/products/cc010-5.webp"],
     desc: "The piece the whole room arranges itself around. 90cm wide, 90cm deep and 27cm high. Honeycomb board with melamine finish. Rounded tabletop with soft, curved edges. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12221,7 +12221,7 @@ const PRODUCTS = [
     dims: { w: 90, d: 90, h: 27, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc011", name: "Round Coffee Table 80cm — Black", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11073", tag: "New", ph: "", img: "assets/products/cc011-1.webp",
+  { id: "cc011", name: "Round Coffee Table 80cm, Black", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11073", tag: "New", ph: "", img: "assets/products/cc011-1.webp",
     imgs: ["assets/products/cc011-1.webp", "assets/products/cc011-2.webp", "assets/products/cc011-3.webp", "assets/products/cc011-4.webp", "assets/products/cc011-5.webp"],
     desc: "The piece the whole room arranges itself around. 80cm wide, 80cm deep and 40cm high. MDF. Ribbed detailing for added texture and design appeal. The kind of piece that quietly holds a room together.",
     features: [
@@ -12234,7 +12234,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 40, unit: "cm", printed: true },
     care: "Wipe down with a damp cloth. Avoid cleaning with strong chemicals." },
 
-  { id: "cc012", name: "Nesting Travertine-Look Round Coffee Tables — Set of 2", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11074", tag: "New", ph: "", img: "assets/products/cc012-1.webp",
+  { id: "cc012", name: "Nesting Travertine-Look Round Coffee Tables, Set of 2", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11074", tag: "New", ph: "", img: "assets/products/cc012-1.webp",
     imgs: ["assets/products/cc012-1.webp", "assets/products/cc012-2.webp", "assets/products/cc012-3.webp", "assets/products/cc012-4.webp", "assets/products/cc012-5.webp"],
     desc: "The piece the whole room arranges itself around. MDF with melamine finish. Nesting design offers versatility and space-saving convenience. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12245,7 +12245,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table", "Colour": "Travertine-look", "Material": "MDF with melamine finish, metal frame" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc013", name: "Metal Round Coffee Table 120cm — Mocha", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11075", tag: "New", ph: "", img: "assets/products/cc013-1.webp",
+  { id: "cc013", name: "Metal Round Coffee Table 120cm, Mocha", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11075", tag: "New", ph: "", img: "assets/products/cc013-1.webp",
     imgs: ["assets/products/cc013-1.webp", "assets/products/cc013-2.webp", "assets/products/cc013-3.webp", "assets/products/cc013-4.webp", "assets/products/cc013-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 50cm deep and 35cm high. Powder-coated iron top and legs. Rectangular top with softly rounded corners. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12257,7 +12257,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 50, h: 35, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc014", name: "Round Coffee Table 80cm — Natural", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11076", tag: "New", ph: "", img: "assets/products/cc014-1.webp",
+  { id: "cc014", name: "Round Coffee Table 80cm, Natural", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11076", tag: "New", ph: "", img: "assets/products/cc014-1.webp",
     imgs: ["assets/products/cc014-1.webp", "assets/products/cc014-2.webp", "assets/products/cc014-3.webp", "assets/products/cc014-4.webp", "assets/products/cc014-5.webp"],
     desc: "The piece the whole room arranges itself around. 80cm wide, 80cm deep and 40cm high. MDF. Ribbed detailing for added texture and design appeal. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12270,7 +12270,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 40, unit: "cm", printed: true },
     care: "Wipe down with a damp cloth. Avoid cleaning with strong chemicals." },
 
-  { id: "cc015", name: "Glass Round Coffee Table 90cm — Black", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11077", tag: "New", ph: "", img: "assets/products/cc015-1.webp",
+  { id: "cc015", name: "Glass Round Coffee Table 90cm, Black", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11077", tag: "New", ph: "", img: "assets/products/cc015-1.webp",
     imgs: ["assets/products/cc015-1.webp", "assets/products/cc015-2.webp", "assets/products/cc015-3.webp", "assets/products/cc015-4.webp", "assets/products/cc015-5.webp"],
     desc: "The piece the whole room arranges itself around. 90cm wide, 90cm deep and 27cm high. Honeycomb board with melamine finish; fibreglass legs with decorative foil look. Rounded tabletop with soft, curved edges. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12282,7 +12282,7 @@ const PRODUCTS = [
     dims: { w: 90, d: 90, h: 27, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc016", name: "Nesting Metal Round Coffee Tables — Set of 2 · Black", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11078", tag: "New", ph: "", img: "assets/products/cc016-1.webp",
+  { id: "cc016", name: "Nesting Metal Round Coffee Tables, Set of 2 · Black", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11078", tag: "New", ph: "", img: "assets/products/cc016-1.webp",
     imgs: ["assets/products/cc016-1.webp", "assets/products/cc016-2.webp", "assets/products/cc016-3.webp", "assets/products/cc016-4.webp", "assets/products/cc016-5.webp"],
     desc: "The piece the whole room arranges itself around. MDF with a wood veneer finish. Tabletops made from melamine oak. Style it with a stack of books and something with height.",
     features: [
@@ -12293,7 +12293,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee table set", "1x Assembly Instructions"],
     care: "Wipe clean with a damp cloth. Large table max load: 40kg; small table max load: 20kg." },
 
-  { id: "cc017", name: "Marble-Look Rectangular Coffee Table — Green", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11079", tag: "New", ph: "", img: "assets/products/cc017-1.webp",
+  { id: "cc017", name: "Marble-Look Rectangular Coffee Table, Green", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11079", tag: "New", ph: "", img: "assets/products/cc017-1.webp",
     imgs: ["assets/products/cc017-1.webp", "assets/products/cc017-2.webp", "assets/products/cc017-3.webp", "assets/products/cc017-4.webp", "assets/products/cc017-5.webp"],
     desc: "The piece the whole room arranges itself around. Rectangular shape with a green marble-effect surface for a natural stone appearance. Style it with a stack of books and something with height.",
     features: [
@@ -12318,7 +12318,7 @@ const PRODUCTS = [
     dims: { w: 106, d: 106, h: 35, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc019", name: "Birch Round Coffee Table 120cm — White", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11081", tag: "New", ph: "", img: "assets/products/cc019-1.webp",
+  { id: "cc019", name: "Birch Round Coffee Table 120cm, White", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11081", tag: "New", ph: "", img: "assets/products/cc019-1.webp",
     imgs: ["assets/products/cc019-1.webp", "assets/products/cc019-2.webp", "assets/products/cc019-3.webp", "assets/products/cc019-4.webp", "assets/products/cc019-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 50cm deep and 35cm high. Powder-coated iron top and legs. Rectangular top with softly rounded corners. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12330,7 +12330,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 50, h: 35, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc020", name: "Metal Rectangular Coffee Table 110cm — Black", cat: "Living Room", room: "Living Room", price: 272, memberPrice: 244, sku: "SH-11082", tag: "New", ph: "", img: "assets/products/cc020-1.webp",
+  { id: "cc020", name: "Metal Rectangular Coffee Table 110cm, Black", cat: "Living Room", room: "Living Room", price: 272, memberPrice: 244, sku: "SH-11082", tag: "New", ph: "", img: "assets/products/cc020-1.webp",
     imgs: ["assets/products/cc020-1.webp", "assets/products/cc020-2.webp", "assets/products/cc020-3.webp", "assets/products/cc020-4.webp", "assets/products/cc020-5.webp"],
     desc: "The piece the whole room arranges itself around. 110cm wide, 60cm deep and 41cm high. MDF with a Melamine finish. 4mm paper rope accents for a unique, coastal touch. Style it with a stack of books and something with height.",
     features: [
@@ -12344,7 +12344,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee Table", "1x Assembly Instructions"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc021", name: "Round Coffee Table 80cm — Oak", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11083", tag: "New", ph: "", img: "assets/products/cc021-1.webp",
+  { id: "cc021", name: "Round Coffee Table 80cm, Oak", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11083", tag: "New", ph: "", img: "assets/products/cc021-1.webp",
     imgs: ["assets/products/cc021-1.webp", "assets/products/cc021-2.webp", "assets/products/cc021-3.webp", "assets/products/cc021-4.webp", "assets/products/cc021-5.webp"],
     desc: "The piece the whole room arranges itself around. 80cm wide, 80cm deep and 45cm high. Particle board. Unique scalloped base adds sculptural charm. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12357,7 +12357,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc022", name: "Sliding-Door Coffee Table 120cm — Black", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11084", tag: "New", ph: "", img: "assets/products/cc022-1.webp",
+  { id: "cc022", name: "Sliding-Door Coffee Table 120cm, Black", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11084", tag: "New", ph: "", img: "assets/products/cc022-1.webp",
     imgs: ["assets/products/cc022-1.webp", "assets/products/cc022-2.webp", "assets/products/cc022-3.webp", "assets/products/cc022-4.webp", "assets/products/cc022-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 60cm deep and 41cm high. MDF with a laminated paper finish. 120cm wide tabletop provides plenty of space for decor, books, or drinks. The kind of piece that quietly holds a room together.",
     features: [
@@ -12369,7 +12369,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 60, h: 41, unit: "cm", printed: true },
     care: "Wipe down with a damp cloth. Avoid cleaning with strong chemicals." },
 
-  { id: "cc023", name: "Marble-Look Round Coffee Table — Green", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11085", tag: "New", ph: "", img: "assets/products/cc023-1.webp",
+  { id: "cc023", name: "Marble-Look Round Coffee Table, Green", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11085", tag: "New", ph: "", img: "assets/products/cc023-1.webp",
     imgs: ["assets/products/cc023-1.webp", "assets/products/cc023-2.webp", "assets/products/cc023-3.webp", "assets/products/cc023-4.webp", "assets/products/cc023-5.webp"],
     desc: "The piece the whole room arranges itself around. Circular shape with a green marble-effect finish for a natural stone look. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12379,7 +12379,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc024", name: "Nesting Oval Coffee Tables — Set of 2 · Oak", cat: "Living Room", room: "Living Room", price: 803, memberPrice: 722, sku: "SH-11086", tag: "New", ph: "", img: "assets/products/cc024-1.webp",
+  { id: "cc024", name: "Nesting Oval Coffee Tables, Set of 2 · Oak", cat: "Living Room", room: "Living Room", price: 803, memberPrice: 722, sku: "SH-11086", tag: "New", ph: "", img: "assets/products/cc024-1.webp",
     imgs: ["assets/products/cc024-1.webp", "assets/products/cc024-2.webp", "assets/products/cc024-3.webp", "assets/products/cc024-4.webp", "assets/products/cc024-5.webp"],
     desc: "The piece the whole room arranges itself around. MDF with oak veneer. Set of two nesting tables for flexible arrangement and storage. The kind of piece that quietly holds a room together.",
     features: [
@@ -12389,7 +12389,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table", "Colour": "Oak", "Material": "MDF with oak veneer" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc025", name: "Metal Rectangular Coffee Table 110cm — Natural", cat: "Living Room", room: "Living Room", price: 272, memberPrice: 244, sku: "SH-11087", tag: "New", ph: "", img: "assets/products/cc025-1.webp",
+  { id: "cc025", name: "Metal Rectangular Coffee Table 110cm, Natural", cat: "Living Room", room: "Living Room", price: 272, memberPrice: 244, sku: "SH-11087", tag: "New", ph: "", img: "assets/products/cc025-1.webp",
     imgs: ["assets/products/cc025-1.webp", "assets/products/cc025-2.webp", "assets/products/cc025-3.webp", "assets/products/cc025-4.webp", "assets/products/cc025-5.webp"],
     desc: "The piece the whole room arranges itself around. 110cm wide, 60cm deep and 41cm high. MDF with a Melamine finish. 4mm paper rope accents for a unique, coastal touch. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12403,7 +12403,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee Table", "1x Assembly Instructions"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc026", name: "Metal Round Coffee Table 76cm — Black", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11088", tag: "New", ph: "", img: "assets/products/cc026-1.webp",
+  { id: "cc026", name: "Metal Round Coffee Table 76cm, Black", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11088", tag: "New", ph: "", img: "assets/products/cc026-1.webp",
     imgs: ["assets/products/cc026-1.webp", "assets/products/cc026-2.webp", "assets/products/cc026-3.webp", "assets/products/cc026-4.webp", "assets/products/cc026-5.webp"],
     desc: "The piece the whole room arranges itself around. 76cm wide, 76cm deep and 41cm high. MDF with a melamine finish. 76cm round tabletop provides plenty of surface space. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12417,7 +12417,7 @@ const PRODUCTS = [
     dims: { w: 76, d: 76, h: 41, unit: "cm", printed: true },
     care: "Wipe clean with a dry cloth. Avoid strong chemical cleaners." },
 
-  { id: "cc027", name: "Round Coffee Table 80cm — Cream", cat: "Living Room", room: "Living Room", price: 333, memberPrice: 299, sku: "SH-11089", tag: "New", ph: "", img: "assets/products/cc027-1.webp",
+  { id: "cc027", name: "Round Coffee Table 80cm, Cream", cat: "Living Room", room: "Living Room", price: 333, memberPrice: 299, sku: "SH-11089", tag: "New", ph: "", img: "assets/products/cc027-1.webp",
     imgs: ["assets/products/cc027-1.webp", "assets/products/cc027-2.webp", "assets/products/cc027-3.webp", "assets/products/cc027-4.webp", "assets/products/cc027-5.webp"],
     desc: "The piece the whole room arranges itself around. 80cm wide, 80cm deep and 40cm high. MDF with lacquer finish. Round top surface for drinks, books, or display items. The kind of piece that quietly holds a room together.",
     features: [
@@ -12430,7 +12430,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc028", name: "Metal Square Coffee Table 70cm — Black", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11090", tag: "New", ph: "", img: "assets/products/cc028-1.webp",
+  { id: "cc028", name: "Metal Square Coffee Table 70cm, Black", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11090", tag: "New", ph: "", img: "assets/products/cc028-1.webp",
     imgs: ["assets/products/cc028-1.webp", "assets/products/cc028-2.webp", "assets/products/cc028-3.webp", "assets/products/cc028-4.webp", "assets/products/cc028-5.webp"],
     desc: "The piece the whole room arranges itself around. 70cm wide, 70cm deep and 40.5cm high. MDF with a Melamine finish. 4mm paper rope accents for a unique, rustic touch. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12446,7 +12446,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee Table", "1x Assembly Instructions"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc029", name: "Coffee Table 60cm — Off-White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11091", tag: "New", ph: "", img: "assets/products/cc029-1.webp",
+  { id: "cc029", name: "Coffee Table 60cm, Off-White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11091", tag: "New", ph: "", img: "assets/products/cc029-1.webp",
     imgs: ["assets/products/cc029-1.webp", "assets/products/cc029-2.webp", "assets/products/cc029-3.webp", "assets/products/cc029-4.webp", "assets/products/cc029-5.webp"],
     desc: "The piece the whole room arranges itself around. 60cm wide, 60cm deep and 40cm high. MDF with lacquer finish. Cylindrical base offers balance and visual weight. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12470,7 +12470,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc031", name: "Coffee Table 110cm — Natural", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11093", tag: "New", ph: "", img: "assets/products/cc031-1.webp",
+  { id: "cc031", name: "Coffee Table 110cm, Natural", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11093", tag: "New", ph: "", img: "assets/products/cc031-1.webp",
     imgs: ["assets/products/cc031-1.webp", "assets/products/cc031-2.webp", "assets/products/cc031-3.webp", "assets/products/cc031-4.webp", "assets/products/cc031-5.webp"],
     desc: "The piece the whole room arranges itself around. 110cm wide, 55cm deep and 40cm high. Sustainably sourced rubberwood with a melamine finish. Sliding ribbed door for concealed storage. Style it with a stack of books and something with height.",
     features: [
@@ -12482,7 +12482,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 55, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc032", name: "Marble-Look Coffee Table 100cm — Red", cat: "Living Room", room: "Living Room", price: 864, memberPrice: 777, sku: "SH-11094", tag: "New", ph: "", img: "assets/products/cc032-1.webp",
+  { id: "cc032", name: "Marble-Look Coffee Table 100cm, Red", cat: "Living Room", room: "Living Room", price: 864, memberPrice: 777, sku: "SH-11094", tag: "New", ph: "", img: "assets/products/cc032-1.webp",
     imgs: ["assets/products/cc032-1.webp", "assets/products/cc032-2.webp", "assets/products/cc032-3.webp", "assets/products/cc032-4.webp", "assets/products/cc032-5.webp"],
     desc: "The piece the whole room arranges itself around. 100cm wide, 74cm deep and 38cm high. MGO with red marble-effect hydrographic transfer finish. Wide, low-profile block form with fluted surface detailing. Style it with a stack of books and something with height.",
     features: [
@@ -12496,7 +12496,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 74, h: 38, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc033", name: "Curved Coffee Tables — Set of 2 · White", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11095", tag: "New", ph: "", img: "assets/products/cc033-1.webp",
+  { id: "cc033", name: "Curved Coffee Tables, Set of 2 · White", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11095", tag: "New", ph: "", img: "assets/products/cc033-1.webp",
     imgs: ["assets/products/cc033-1.webp", "assets/products/cc033-2.webp", "assets/products/cc033-3.webp", "assets/products/cc033-4.webp", "assets/products/cc033-5.webp"],
     desc: "The piece the whole room arranges itself around. 60cm wide, 60cm deep and 34cm high. MDF with Wood Veneer. Set of two coffee tables for flexible arrangement. The kind of piece that quietly holds a room together.",
     features: [
@@ -12509,7 +12509,7 @@ const PRODUCTS = [
     dims: { w: 60, d: 60, h: 34, unit: "cm", printed: true },
     care: "Wipe with a damp cloth for easy cleaning and maintenance." },
 
-  { id: "cc034", name: "Coffee Table 120cm — Birch", cat: "Living Room", room: "Living Room", price: 432, memberPrice: 388, sku: "SH-11096", tag: "New", ph: "", img: "assets/products/cc034-1.webp",
+  { id: "cc034", name: "Coffee Table 120cm, Birch", cat: "Living Room", room: "Living Room", price: 432, memberPrice: 388, sku: "SH-11096", tag: "New", ph: "", img: "assets/products/cc034-1.webp",
     imgs: ["assets/products/cc034-1.webp", "assets/products/cc034-2.webp", "assets/products/cc034-3.webp", "assets/products/cc034-4.webp", "assets/products/cc034-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 60cm deep and 41cm high. MDF with lacquer finish. Organic tabletop shape adds a natural, sculptural touch. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12521,7 +12521,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 60, h: 41, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc035", name: "Nesting Metal Round Coffee Tables — Set of 2 · White", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11097", tag: "New", ph: "", img: "assets/products/cc035-1.webp",
+  { id: "cc035", name: "Nesting Metal Round Coffee Tables, Set of 2 · White", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11097", tag: "New", ph: "", img: "assets/products/cc035-1.webp",
     imgs: ["assets/products/cc035-1.webp", "assets/products/cc035-2.webp", "assets/products/cc035-3.webp", "assets/products/cc035-4.webp", "assets/products/cc035-5.webp"],
     desc: "The piece the whole room arranges itself around. MDF with a wood veneer finish. Tabletops made from melamine oak. Style it with a stack of books and something with height.",
     features: [
@@ -12532,7 +12532,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee table set", "1x Assembly Instructions"],
     care: "Wipe clean with a damp cloth. Large table max load: 40kg; small table max load: 20kg." },
 
-  { id: "cc036", name: "Coffee Table 100cm — Natural", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11098", tag: "New", ph: "", img: "assets/products/cc036-1.webp",
+  { id: "cc036", name: "Coffee Table 100cm, Natural", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11098", tag: "New", ph: "", img: "assets/products/cc036-1.webp",
     imgs: ["assets/products/cc036-1.webp", "assets/products/cc036-2.webp", "assets/products/cc036-3.webp", "assets/products/cc036-4.webp", "assets/products/cc036-5.webp"],
     desc: "The piece the whole room arranges itself around. Natural wood finish for a warm, inviting look. Style it with a stack of books and something with height.",
     features: [
@@ -12545,7 +12545,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table", "Colour": "Natural" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc037", name: "Coffee Table 102cm — Black", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11099", tag: "New", ph: "", img: "assets/products/cc037-1.webp",
+  { id: "cc037", name: "Coffee Table 102cm, Black", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11099", tag: "New", ph: "", img: "assets/products/cc037-1.webp",
     imgs: ["assets/products/cc037-1.webp", "assets/products/cc037-2.webp", "assets/products/cc037-3.webp", "assets/products/cc037-4.webp", "assets/products/cc037-5.webp"],
     desc: "The piece the whole room arranges itself around. 102cm wide, 60cm deep and 46cm high. Spacious surface for decor and beverages. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12559,7 +12559,7 @@ const PRODUCTS = [
     dims: { w: 102, d: 60, h: 46, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc038", name: "Rattan Storage Coffee Table 97cm — Natural", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11100", tag: "New", ph: "", img: "assets/products/cc038-1.webp",
+  { id: "cc038", name: "Rattan Storage Coffee Table 97cm, Natural", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11100", tag: "New", ph: "", img: "assets/products/cc038-1.webp",
     imgs: ["assets/products/cc038-1.webp", "assets/products/cc038-2.webp", "assets/products/cc038-3.webp", "assets/products/cc038-4.webp", "assets/products/cc038-5.webp"],
     desc: "The piece the whole room arranges itself around. 97cm wide, 71cm deep and 41cm high. Plywood and Rattan. Unique wave-inspired design for a standout, organic look. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12585,7 +12585,7 @@ const PRODUCTS = [
     dims: { w: 70, d: 70, h: 36.5, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc040", name: "Round Coffee Table 77cm — Black", cat: "Living Room", room: "Living Room", price: 296, memberPrice: 266, sku: "SH-11102", tag: "New", ph: "", img: "assets/products/cc040-1.webp",
+  { id: "cc040", name: "Round Coffee Table 77cm, Black", cat: "Living Room", room: "Living Room", price: 296, memberPrice: 266, sku: "SH-11102", tag: "New", ph: "", img: "assets/products/cc040-1.webp",
     imgs: ["assets/products/cc040-1.webp", "assets/products/cc040-2.webp", "assets/products/cc040-3.webp", "assets/products/cc040-4.webp", "assets/products/cc040-5.webp"],
     desc: "The piece the whole room arranges itself around. 77cm wide, 77cm deep and 43.5cm high. Solid black metal legs. The kind of piece that quietly holds a room together.",
     features: [
@@ -12599,7 +12599,7 @@ const PRODUCTS = [
     boxContents: ["1x Coffee table"],
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc041", name: "Marble-Look Rectangular Coffee Table — Red", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11103", tag: "New", ph: "", img: "assets/products/cc041-1.webp",
+  { id: "cc041", name: "Marble-Look Rectangular Coffee Table, Red", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11103", tag: "New", ph: "", img: "assets/products/cc041-1.webp",
     imgs: ["assets/products/cc041-1.webp", "assets/products/cc041-2.webp", "assets/products/cc041-3.webp", "assets/products/cc041-4.webp", "assets/products/cc041-5.webp"],
     desc: "The piece the whole room arranges itself around. Rectangular shape with a red marble-effect surface for a natural stone appearance. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12610,7 +12610,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc042", name: "Arched Coffee Table 70cm — Grey", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11104", tag: "New", ph: "", img: "assets/products/cc042-1.webp",
+  { id: "cc042", name: "Arched Coffee Table 70cm, Grey", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11104", tag: "New", ph: "", img: "assets/products/cc042-1.webp",
     imgs: ["assets/products/cc042-1.webp", "assets/products/cc042-2.webp", "assets/products/cc042-3.webp", "assets/products/cc042-4.webp", "assets/products/cc042-5.webp"],
     desc: "The piece the whole room arranges itself around. 70cm wide, 70cm deep and 36cm high. MDF with rolling veneer. Hexagonal shape delivers a standout architectural look. The kind of piece that quietly holds a room together.",
     features: [
@@ -12624,7 +12624,7 @@ const PRODUCTS = [
     dims: { w: 70, d: 70, h: 36, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc043", name: "Ash Round Coffee Table 90cm — Natural", cat: "Living Room", room: "Living Room", price: 678, memberPrice: 610, sku: "SH-11105", tag: "New", ph: "", img: "assets/products/cc043-1.webp",
+  { id: "cc043", name: "Ash Round Coffee Table 90cm, Natural", cat: "Living Room", room: "Living Room", price: 678, memberPrice: 610, sku: "SH-11105", tag: "New", ph: "", img: "assets/products/cc043-1.webp",
     imgs: ["assets/products/cc043-1.webp", "assets/products/cc043-2.webp", "assets/products/cc043-3.webp", "assets/products/cc043-4.webp", "assets/products/cc043-5.webp"],
     desc: "The piece the whole room arranges itself around. 90cm wide, 90cm deep and 35cm high. MDF with Ash veneer. Round tabletop with softly rounded edges. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12648,7 +12648,7 @@ const PRODUCTS = [
     dims: { w: 90.5, d: 60, h: 31, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc045", name: "Coffee Tables 90cm — Set of 2 · White", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11107", tag: "New", ph: "", img: "assets/products/cc045-1.webp",
+  { id: "cc045", name: "Coffee Tables 90cm, Set of 2 · White", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11107", tag: "New", ph: "", img: "assets/products/cc045-1.webp",
     imgs: ["assets/products/cc045-1.webp", "assets/products/cc045-2.webp", "assets/products/cc045-3.webp", "assets/products/cc045-4.webp", "assets/products/cc045-5.webp"],
     desc: "The piece the whole room arranges itself around. 60cm wide, 60cm deep and 34cm high. MDF with Wood Veneer. Stylish and contemporary design. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12662,7 +12662,7 @@ const PRODUCTS = [
     dims: { w: 60, d: 60, h: 34, unit: "cm", printed: true },
     care: "Wipe with a damp cloth for easy cleaning and maintenance." },
 
-  { id: "cc046", name: "Coffee Table 110cm — Black", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11108", tag: "New", ph: "", img: "assets/products/cc046-1.webp",
+  { id: "cc046", name: "Coffee Table 110cm, Black", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11108", tag: "New", ph: "", img: "assets/products/cc046-1.webp",
     imgs: ["assets/products/cc046-1.webp", "assets/products/cc046-2.webp", "assets/products/cc046-3.webp", "assets/products/cc046-4.webp", "assets/products/cc046-5.webp"],
     desc: "The piece the whole room arranges itself around. 110cm wide, 55cm deep and 40cm high. Sustainably sourced rubberwood with a melamine finish. Sliding ribbed door for concealed storage. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12674,7 +12674,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 55, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc047", name: "Rectangular Coffee Table 120cm — Natural", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11109", tag: "New", ph: "", img: "assets/products/cc047-1.webp",
+  { id: "cc047", name: "Rectangular Coffee Table 120cm, Natural", cat: "Living Room", room: "Living Room", price: 555, memberPrice: 499, sku: "SH-11109", tag: "New", ph: "", img: "assets/products/cc047-1.webp",
     imgs: ["assets/products/cc047-1.webp", "assets/products/cc047-2.webp", "assets/products/cc047-3.webp", "assets/products/cc047-4.webp", "assets/products/cc047-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 60cm deep and 60.5cm high. MDF. Stylish and functional coffee table with four drawers for convenient storage. Style it with a stack of books and something with height.",
     features: [
@@ -12688,7 +12688,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 60, h: 60.5, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth once assembled." },
 
-  { id: "cc048", name: "Marble & Metal Round Coffee Table 80cm — Green", cat: "Living Room", room: "Living Room", price: 740, memberPrice: 666, sku: "SH-11110", tag: "New", ph: "", img: "assets/products/cc048-1.webp",
+  { id: "cc048", name: "Marble & Metal Round Coffee Table 80cm, Green", cat: "Living Room", room: "Living Room", price: 740, memberPrice: 666, sku: "SH-11110", tag: "New", ph: "", img: "assets/products/cc048-1.webp",
     imgs: ["assets/products/cc048-1.webp", "assets/products/cc048-2.webp", "assets/products/cc048-3.webp", "assets/products/cc048-4.webp", "assets/products/cc048-5.webp"],
     desc: "The piece the whole room arranges itself around. 80cm wide, 80cm deep and 42cm high. Marble top. Round coffee table with a low-profile form. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12701,7 +12701,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 42, unit: "cm", printed: true },
     care: "Natural marble veining and colour variation will occur between pieces." },
 
-  { id: "cc049", name: "Round Coffee Table 110cm — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11111", tag: "New", ph: "", img: "assets/products/cc049-1.webp",
+  { id: "cc049", name: "Round Coffee Table 110cm, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11111", tag: "New", ph: "", img: "assets/products/cc049-1.webp",
     imgs: ["assets/products/cc049-1.webp", "assets/products/cc049-2.webp", "assets/products/cc049-3.webp", "assets/products/cc049-4.webp", "assets/products/cc049-5.webp"],
     desc: "The piece the whole room arranges itself around. 110cm wide, 61cm deep and 40cm high. MDF with oak veneer. Asymmetrical tabletop. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12714,7 +12714,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 61, h: 40, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc050", name: "Round Coffee Table 100cm — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11112", tag: "New", ph: "", img: "assets/products/cc050-1.webp",
+  { id: "cc050", name: "Round Coffee Table 100cm, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11112", tag: "New", ph: "", img: "assets/products/cc050-1.webp",
     imgs: ["assets/products/cc050-1.webp", "assets/products/cc050-2.webp", "assets/products/cc050-3.webp", "assets/products/cc050-4.webp", "assets/products/cc050-5.webp"],
     desc: "The piece the whole room arranges itself around. 100cm wide, 100cm deep and 41cm high. MDF with oak veneer finish. Lower shelf adds extra surface space for styling or storage. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12727,7 +12727,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 100, h: 41, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc051", name: "Marble-Look Round Coffee Table — Red", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11113", tag: "New", ph: "", img: "assets/products/cc051-1.webp",
+  { id: "cc051", name: "Marble-Look Round Coffee Table, Red", cat: "Living Room", room: "Living Room", price: 617, memberPrice: 555, sku: "SH-11113", tag: "New", ph: "", img: "assets/products/cc051-1.webp",
     imgs: ["assets/products/cc051-1.webp", "assets/products/cc051-2.webp", "assets/products/cc051-3.webp", "assets/products/cc051-4.webp", "assets/products/cc051-5.webp"],
     desc: "The piece the whole room arranges itself around. Circular shape with a red marble-effect finish for a natural stone look. Style it with a stack of books and something with height.",
     features: [
@@ -12737,7 +12737,7 @@ const PRODUCTS = [
     specs: { "Type": "Coffee Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc052", name: "Coffee Table 120cm — Green", cat: "Living Room", room: "Living Room", price: 432, memberPrice: 388, sku: "SH-11114", tag: "New", ph: "", img: "assets/products/cc052-1.webp",
+  { id: "cc052", name: "Coffee Table 120cm, Green", cat: "Living Room", room: "Living Room", price: 432, memberPrice: 388, sku: "SH-11114", tag: "New", ph: "", img: "assets/products/cc052-1.webp",
     imgs: ["assets/products/cc052-1.webp", "assets/products/cc052-2.webp", "assets/products/cc052-3.webp", "assets/products/cc052-4.webp", "assets/products/cc052-5.webp"],
     desc: "The piece the whole room arranges itself around. 120cm wide, 60cm deep and 41cm high. MDF with lacquer finish. Organic tabletop shape introduces a natural, sculptural element. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12749,7 +12749,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 60, h: 41, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc053", name: "Bamboo Coffee Table 100cm — Black", cat: "Living Room", room: "Living Room", price: 273, memberPrice: 245, sku: "SH-11115", tag: "New", ph: "", img: "assets/products/cc053-1.webp",
+  { id: "cc053", name: "Bamboo Coffee Table 100cm, Black", cat: "Living Room", room: "Living Room", price: 273, memberPrice: 245, sku: "SH-11115", tag: "New", ph: "", img: "assets/products/cc053-1.webp",
     imgs: ["assets/products/cc053-1.webp", "assets/products/cc053-2.webp", "assets/products/cc053-3.webp", "assets/products/cc053-4.webp", "assets/products/cc053-5.webp"],
     desc: "The piece the whole room arranges itself around. 100cm wide, 50cm deep and 40.5cm high. Bamboo. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12761,7 +12761,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 50, h: 40.5, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc054", name: "Curved Round Coffee Table 100cm — Walnut", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11116", tag: "New", ph: "", img: "assets/products/cc054-1.webp",
+  { id: "cc054", name: "Curved Round Coffee Table 100cm, Walnut", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11116", tag: "New", ph: "", img: "assets/products/cc054-1.webp",
     imgs: ["assets/products/cc054-1.webp", "assets/products/cc054-2.webp", "assets/products/cc054-3.webp", "assets/products/cc054-4.webp", "assets/products/cc054-5.webp"],
     desc: "The piece the whole room arranges itself around. 100cm wide, 100cm deep and 41cm high. MDF with walnut veneer finish. Lower shelf adds extra surface space for styling or storage. Style it with a stack of books and something with height.",
     features: [
@@ -12774,7 +12774,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 100, h: 41, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc055", name: "Bamboo Coffee Table 100cm — Natural", cat: "Living Room", room: "Living Room", price: 248, memberPrice: 223, sku: "SH-11117", tag: "New", ph: "", img: "assets/products/cc055-1.webp",
+  { id: "cc055", name: "Bamboo Coffee Table 100cm, Natural", cat: "Living Room", room: "Living Room", price: 248, memberPrice: 223, sku: "SH-11117", tag: "New", ph: "", img: "assets/products/cc055-1.webp",
     imgs: ["assets/products/cc055-1.webp", "assets/products/cc055-2.webp", "assets/products/cc055-3.webp", "assets/products/cc055-4.webp", "assets/products/cc055-5.webp"],
     desc: "The piece the whole room arranges itself around. 100cm wide, 50cm deep and 40.5cm high. Bamboo. The kind of piece that quietly holds a room together.",
     features: [
@@ -12799,7 +12799,7 @@ const PRODUCTS = [
     dims: { w: 60, d: 60, h: 40, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc057", name: "Round Coffee Table 50cm — Natural", cat: "Living Room", room: "Living Room", price: 377, memberPrice: 339, sku: "SH-11119", tag: "New", ph: "", img: "assets/products/cc057-1.webp",
+  { id: "cc057", name: "Round Coffee Table 50cm, Natural", cat: "Living Room", room: "Living Room", price: 377, memberPrice: 339, sku: "SH-11119", tag: "New", ph: "", img: "assets/products/cc057-1.webp",
     imgs: ["assets/products/cc057-1.webp", "assets/products/cc057-2.webp", "assets/products/cc057-3.webp", "assets/products/cc057-4.webp", "assets/products/cc057-5.webp"],
     desc: "The piece the whole room arranges itself around. 50cm wide, 50cm deep and 36cm high. Particleboard with melamine finish. Matching scalloped base design provides visual consistency across the set. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12827,7 +12827,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc059", name: "Travertine-Look Plinth Round Side Table 70cm — Beige", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11121", tag: "New", ph: "", img: "assets/products/cc059-1.webp",
+  { id: "cc059", name: "Travertine-Look Plinth Round Side Table 70cm, Beige", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11121", tag: "New", ph: "", img: "assets/products/cc059-1.webp",
     imgs: ["assets/products/cc059-1.webp", "assets/products/cc059-2.webp", "assets/products/cc059-3.webp", "assets/products/cc059-4.webp", "assets/products/cc059-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 36cm wide, 36cm deep and 70.5cm high. MgO with a travertine effect in hydrographic transfer printing. Circular shape with travertine-effect finish. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -12841,7 +12841,7 @@ const PRODUCTS = [
     boxContents: ["1x Plinth"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight. WARNING:." },
 
-  { id: "cc060", name: "Ash Round Side Table 40cm — Walnut", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11122", tag: "New", ph: "", img: "assets/products/cc060-1.webp",
+  { id: "cc060", name: "Ash Round Side Table 40cm, Walnut", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11122", tag: "New", ph: "", img: "assets/products/cc060-1.webp",
     imgs: ["assets/products/cc060-1.webp", "assets/products/cc060-2.webp", "assets/products/cc060-3.webp", "assets/products/cc060-4.webp", "assets/products/cc060-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 48cm high. MDF with ash-coloured laminate; metal frame. Fluted cylindrical base adds visual texture and shape. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12854,7 +12854,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 48, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc061", name: "Oak Round Side Table 48cm — Light Oak", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11123", tag: "New", ph: "", img: "assets/products/cc061-1.webp",
+  { id: "cc061", name: "Oak Round Side Table 48cm, Light Oak", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11123", tag: "New", ph: "", img: "assets/products/cc061-1.webp",
     imgs: ["assets/products/cc061-1.webp", "assets/products/cc061-2.webp", "assets/products/cc061-3.webp", "assets/products/cc061-4.webp", "assets/products/cc061-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 24cm wide, 48cm deep and 48.5cm high. Sustainably sourced MDF with laminate finish. Semi-circular shape that fits neatly against walls or furniture. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12866,7 +12866,7 @@ const PRODUCTS = [
     dims: { w: 24, d: 48, h: 48.5, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc062", name: "Side Table 40cm — Natural", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11124", tag: "New", ph: "", img: "assets/products/cc062-1.webp",
+  { id: "cc062", name: "Side Table 40cm, Natural", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11124", tag: "New", ph: "", img: "assets/products/cc062-1.webp",
     imgs: ["assets/products/cc062-1.webp", "assets/products/cc062-2.webp", "assets/products/cc062-3.webp", "assets/products/cc062-4.webp", "assets/products/cc062-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 48cm high. MDF with a laminated paper finish. Constructed from MDF with a laminated paper finish. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12877,7 +12877,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 48, unit: "cm", printed: true },
     care: "Wipe with a damp cloth. Avoid harsh chemicals." },
 
-  { id: "cc063", name: "Travertine-Look Round Side Table 45cm — Beige", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11125", tag: "New", ph: "", img: "assets/products/cc063-1.webp",
+  { id: "cc063", name: "Travertine-Look Round Side Table 45cm, Beige", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11125", tag: "New", ph: "", img: "assets/products/cc063-1.webp",
     imgs: ["assets/products/cc063-1.webp", "assets/products/cc063-2.webp", "assets/products/cc063-3.webp", "assets/products/cc063-4.webp", "assets/products/cc063-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 50.5cm high. MgO with a travertine effect in hydrographic transfer printing. Sturdy, easy to move around. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12892,7 +12892,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc064", name: "Round Side Table 48cm — Walnut", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11126", tag: "New", ph: "", img: "assets/products/cc064-1.webp",
+  { id: "cc064", name: "Round Side Table 48cm, Walnut", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11126", tag: "New", ph: "", img: "assets/products/cc064-1.webp",
     imgs: ["assets/products/cc064-1.webp", "assets/products/cc064-2.webp", "assets/products/cc064-3.webp", "assets/products/cc064-4.webp", "assets/products/cc064-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 24cm wide, 48cm deep and 48.5cm high. Sustainably sourced MDF with a melamine finish. Semi-circular shape that fits neatly against walls or furniture. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12934,7 +12934,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc067", name: "Timber Side Table 33cm — Birch", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11129", tag: "New", ph: "", img: "assets/products/cc067-1.webp",
+  { id: "cc067", name: "Timber Side Table 33cm, Birch", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11129", tag: "New", ph: "", img: "assets/products/cc067-1.webp",
     imgs: ["assets/products/cc067-1.webp", "assets/products/cc067-2.webp", "assets/products/cc067-3.webp", "assets/products/cc067-4.webp", "assets/products/cc067-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 33cm wide, 33cm deep and 45cm high. MDF with lacquer finish. Two-ball stem design creates a sculptural and playful silhouette. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12946,7 +12946,7 @@ const PRODUCTS = [
     dims: { w: 33, d: 33, h: 45, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc068", name: "Marble-Look Round Side Table 46cm — Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11130", tag: "New", ph: "", img: "assets/products/cc068-1.webp",
+  { id: "cc068", name: "Marble-Look Round Side Table 46cm, Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11130", tag: "New", ph: "", img: "assets/products/cc068-1.webp",
     imgs: ["assets/products/cc068-1.webp", "assets/products/cc068-2.webp", "assets/products/cc068-3.webp", "assets/products/cc068-4.webp", "assets/products/cc068-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 36cm wide, 36cm deep and 46cm high. Magnesium Oxide (MGO). Marble look finish that emulates real stone. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -12959,7 +12959,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc069", name: "Timber Round Side Table 33cm — Blue", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11131", tag: "New", ph: "", img: "assets/products/cc069-1.webp",
+  { id: "cc069", name: "Timber Round Side Table 33cm, Blue", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11131", tag: "New", ph: "", img: "assets/products/cc069-1.webp",
     imgs: ["assets/products/cc069-1.webp", "assets/products/cc069-2.webp", "assets/products/cc069-3.webp", "assets/products/cc069-4.webp", "assets/products/cc069-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 33cm wide, 33cm deep and 45cm high. MDF with lacquer finish. Two-ball stem base adds a sculptural and eye-catching element. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -12971,7 +12971,7 @@ const PRODUCTS = [
     dims: { w: 33, d: 33, h: 45, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc070", name: "Round Side Table 55cm — Walnut", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11132", tag: "New", ph: "", img: "assets/products/cc070-1.webp",
+  { id: "cc070", name: "Round Side Table 55cm, Walnut", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11132", tag: "New", ph: "", img: "assets/products/cc070-1.webp",
     imgs: ["assets/products/cc070-1.webp", "assets/products/cc070-2.webp", "assets/products/cc070-3.webp", "assets/products/cc070-4.webp", "assets/products/cc070-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 55cm wide, 55cm deep and 50cm high. MDF with laminated finish. Rounded square tabletop for a softer, modern profile. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -12983,12 +12983,12 @@ const PRODUCTS = [
     dims: { w: 55, d: 55, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc071", name: "Metal Side Tables — Set of 2 · Black", cat: "Living Room", room: "Living Room", price: 223, memberPrice: 200, sku: "SH-11133", tag: "New", ph: "", img: "assets/products/cc071-1.webp",
+  { id: "cc071", name: "Metal Side Tables, Set of 2 · Black", cat: "Living Room", room: "Living Room", price: 223, memberPrice: 200, sku: "SH-11133", tag: "New", ph: "", img: "assets/products/cc071-1.webp",
     imgs: ["assets/products/cc071-1.webp", "assets/products/cc071-2.webp", "assets/products/cc071-3.webp", "assets/products/cc071-4.webp", "assets/products/cc071-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35cm wide, 35cm deep and 35cm high. MDF with a melamine finish. Set of two nesting tables for flexible arrangement. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
       "Set of two nesting tables for flexible arrangement",
-      "Space-saving design – smaller table tucks neatly under the larger one",
+      "Space-saving design, smaller table tucks neatly under the larger one",
       "Suitable for living rooms, bedrooms, or lounge areas"
     ],
     specs: { "Type": "Side Table", "Colour": "Black & Natural", "Material": "MDF with a melamine finish, Metal" },
@@ -12996,7 +12996,7 @@ const PRODUCTS = [
     boxContents: ["1x Side table set", "1x Assembly Instructions"],
     care: "Wipe clean with a damp cloth. Large table max load: 40kg; small table max load: 20kg." },
 
-  { id: "cc072", name: "Terrazzo Stool Round Side Table 42cm — White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11134", tag: "New", ph: "", img: "assets/products/cc072-1.webp",
+  { id: "cc072", name: "Terrazzo Stool Round Side Table 42cm, White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11134", tag: "New", ph: "", img: "assets/products/cc072-1.webp",
     imgs: ["assets/products/cc072-1.webp", "assets/products/cc072-2.webp", "assets/products/cc072-3.webp", "assets/products/cc072-4.webp", "assets/products/cc072-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 39cm wide, 39cm deep and 42cm high. Terrazzo. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13009,7 +13009,7 @@ const PRODUCTS = [
     boxContents: ["1x Terrazzo side table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc073", name: "Travertine-Look Plinth Side Table 70cm — Beige", cat: "Living Room", room: "Living Room", price: 432, memberPrice: 388, sku: "SH-11135", tag: "New", ph: "", img: "assets/products/cc073-1.webp",
+  { id: "cc073", name: "Travertine-Look Plinth Side Table 70cm, Beige", cat: "Living Room", room: "Living Room", price: 432, memberPrice: 388, sku: "SH-11135", tag: "New", ph: "", img: "assets/products/cc073-1.webp",
     imgs: ["assets/products/cc073-1.webp", "assets/products/cc073-2.webp", "assets/products/cc073-3.webp", "assets/products/cc073-4.webp", "assets/products/cc073-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 70.5cm high. MgO with a travertine effect in hydrographic transfer printing. Travertine-effect finish for a natural stone look. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13023,7 +13023,7 @@ const PRODUCTS = [
     boxContents: ["1x Plinth"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight. WARNING:." },
 
-  { id: "cc074", name: "Round Side Table 40cm — Coffee", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11136", tag: "New", ph: "", img: "assets/products/cc074-1.webp",
+  { id: "cc074", name: "Round Side Table 40cm, Coffee", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11136", tag: "New", ph: "", img: "assets/products/cc074-1.webp",
     imgs: ["assets/products/cc074-1.webp", "assets/products/cc074-2.webp", "assets/products/cc074-3.webp", "assets/products/cc074-4.webp", "assets/products/cc074-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 48cm high. MDF with lacquer finish. Round top with a clean, simple silhouette. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13035,7 +13035,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 48, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc075", name: "Rattan Side Table 42cm — Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11137", tag: "New", ph: "", img: "assets/products/cc075-1.webp",
+  { id: "cc075", name: "Rattan Side Table 42cm, Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11137", tag: "New", ph: "", img: "assets/products/cc075-1.webp",
     imgs: ["assets/products/cc075-1.webp", "assets/products/cc075-2.webp", "assets/products/cc075-3.webp", "assets/products/cc075-4.webp", "assets/products/cc075-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 41.5cm wide, 41.5cm deep and 53cm high. Rattan. Structurally solid but also aesthetically pleasing. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13047,7 +13047,7 @@ const PRODUCTS = [
     dims: { w: 41.5, d: 41.5, h: 53, unit: "cm", printed: true },
     care: "1 x Wipe with damp cloth." },
 
-  { id: "cc076", name: "Terrazzo Round Side Table 48cm — Natural", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11138", tag: "New", ph: "", img: "assets/products/cc076-1.webp",
+  { id: "cc076", name: "Terrazzo Round Side Table 48cm, Natural", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11138", tag: "New", ph: "", img: "assets/products/cc076-1.webp",
     imgs: ["assets/products/cc076-1.webp", "assets/products/cc076-2.webp", "assets/products/cc076-3.webp", "assets/products/cc076-4.webp", "assets/products/cc076-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 49cm wide, 49cm deep and 47cm high. Terrazzo; Oak. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13073,7 +13073,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc078", name: "Metal Round Side Table 45 × 45 × 45 × 45 × 45cm 45cm high — Birch", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11140", tag: "New", ph: "", img: "assets/products/cc078-1.webp",
+  { id: "cc078", name: "Metal Round Side Table 45 × 45 × 45 × 45 × 45cm 45cm high, Birch", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11140", tag: "New", ph: "", img: "assets/products/cc078-1.webp",
     imgs: ["assets/products/cc078-1.webp", "assets/products/cc078-2.webp", "assets/products/cc078-3.webp", "assets/products/cc078-4.webp", "assets/products/cc078-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 45cm high. Powder-coated iron top and base. Neutral finish adds warmth and contrast to your space. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13085,7 +13085,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc079", name: "Marble-Look Round Side Table 40cm — Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11141", tag: "New", ph: "", img: "assets/products/cc079-1.webp",
+  { id: "cc079", name: "Marble-Look Round Side Table 40cm, Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11141", tag: "New", ph: "", img: "assets/products/cc079-1.webp",
     imgs: ["assets/products/cc079-1.webp", "assets/products/cc079-2.webp", "assets/products/cc079-3.webp", "assets/products/cc079-4.webp", "assets/products/cc079-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 45cm high. Magnesium Oxide (MgO). Sturdy, easy to move around. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13099,7 +13099,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull." },
 
-  { id: "cc080", name: "Round Side Table 40cm — Cream", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11142", tag: "New", ph: "", img: "assets/products/cc080-1.webp",
+  { id: "cc080", name: "Round Side Table 40cm, Cream", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11142", tag: "New", ph: "", img: "assets/products/cc080-1.webp",
     imgs: ["assets/products/cc080-1.webp", "assets/products/cc080-2.webp", "assets/products/cc080-3.webp", "assets/products/cc080-4.webp", "assets/products/cc080-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 48cm high. MDF with lacquer finish. Round top with a clean, minimal profile. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13141,7 +13141,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull." },
 
-  { id: "cc083", name: "Marble & Metal Side Table 45cm — Grey", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11145", tag: "New", ph: "", img: "assets/products/cc083-1.webp",
+  { id: "cc083", name: "Marble & Metal Side Table 45cm, Grey", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11145", tag: "New", ph: "", img: "assets/products/cc083-1.webp",
     imgs: ["assets/products/cc083-1.webp", "assets/products/cc083-2.webp", "assets/products/cc083-3.webp", "assets/products/cc083-4.webp", "assets/products/cc083-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 43.4cm wide, 42.7cm deep and 51cm high. Natural marble top. Natural marble top with unique veining. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13153,7 +13153,7 @@ const PRODUCTS = [
     dims: { w: 43.4, d: 42.7, h: 51, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc084", name: "Round Side Table 45cm — Cream", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11146", tag: "New", ph: "", img: "assets/products/cc084-1.webp",
+  { id: "cc084", name: "Round Side Table 45cm, Cream", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11146", tag: "New", ph: "", img: "assets/products/cc084-1.webp",
     imgs: ["assets/products/cc084-1.webp", "assets/products/cc084-2.webp", "assets/products/cc084-3.webp", "assets/products/cc084-4.webp", "assets/products/cc084-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 38cm deep and 50cm high. MDF with lacquer finish. Round top with generous surface space for everyday use. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13165,7 +13165,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 38, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc085", name: "Round Side Table — Blue", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11147", tag: "New", ph: "", img: "assets/products/cc085-1.webp",
+  { id: "cc085", name: "Round Side Table, Blue", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11147", tag: "New", ph: "", img: "assets/products/cc085-1.webp",
     imgs: ["assets/products/cc085-1.webp", "assets/products/cc085-2.webp", "assets/products/cc085-3.webp", "assets/products/cc085-4.webp", "assets/products/cc085-5.webp"],
     desc: "For the lamp, the book and the cup of tea. Contemporary round side table design. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13189,7 +13189,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc087", name: "Metal Side Table 50cm — Black", cat: "Living Room", room: "Living Room", price: 98, memberPrice: 88, sku: "SH-11149", tag: "New", ph: "", img: "assets/products/cc087-1.webp",
+  { id: "cc087", name: "Metal Side Table 50cm, Black", cat: "Living Room", room: "Living Room", price: 98, memberPrice: 88, sku: "SH-11149", tag: "New", ph: "", img: "assets/products/cc087-1.webp",
     imgs: ["assets/products/cc087-1.webp", "assets/products/cc087-2.webp", "assets/products/cc087-3.webp", "assets/products/cc087-4.webp", "assets/products/cc087-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm wide, 35cm deep and 70cm high. MDF. Natural wood finish for a rustic and warm appearance. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13202,7 +13202,7 @@ const PRODUCTS = [
     dims: { w: 50, d: 35, h: 70, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc088", name: "Round Side Table — Cream", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11150", tag: "New", ph: "", img: "assets/products/cc088-1.webp",
+  { id: "cc088", name: "Round Side Table, Cream", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11150", tag: "New", ph: "", img: "assets/products/cc088-1.webp",
     imgs: ["assets/products/cc088-1.webp", "assets/products/cc088-2.webp", "assets/products/cc088-3.webp", "assets/products/cc088-4.webp", "assets/products/cc088-5.webp"],
     desc: "For the lamp, the book and the cup of tea. Contemporary round side table design. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13214,7 +13214,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc089", name: "Metal Arched Side Table 86cm — Black", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11151", tag: "New", ph: "", img: "assets/products/cc089-1.webp",
+  { id: "cc089", name: "Metal Arched Side Table 86cm, Black", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11151", tag: "New", ph: "", img: "assets/products/cc089-1.webp",
     imgs: ["assets/products/cc089-1.webp", "assets/products/cc089-2.webp", "assets/products/cc089-3.webp", "assets/products/cc089-4.webp", "assets/products/cc089-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm across. Metal. Black metal frame with ribbed glass doors for a contemporary, sophisticated look. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13225,7 +13225,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table", "Colour": "Black", "Material": "Metal" },
     care: "Wipe with damp cloth once assembled. WARNING:. Children have died from furniture tipover. ALWAYS secure this furniture with an anchor device." },
 
-  { id: "cc090", name: "Travertine-Look Round Side Tables — Set of 2 · White", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11152", tag: "New", ph: "", img: "assets/products/cc090-1.webp",
+  { id: "cc090", name: "Travertine-Look Round Side Tables, Set of 2 · White", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11152", tag: "New", ph: "", img: "assets/products/cc090-1.webp",
     imgs: ["assets/products/cc090-1.webp", "assets/products/cc090-2.webp", "assets/products/cc090-3.webp", "assets/products/cc090-4.webp", "assets/products/cc090-5.webp"],
     desc: "For the lamp, the book and the cup of tea. MDF with melamine finish. Nesting design makes it easy to store or separate as needed. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13236,7 +13236,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table", "Colour": "Travertine-look tops with white base", "Material": "MDF with melamine finish, metal frame" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc091", name: "Stone-Look Side Table 45cm — White", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11153", tag: "New", ph: "", img: "assets/products/cc091-1.webp",
+  { id: "cc091", name: "Stone-Look Side Table 45cm, White", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11153", tag: "New", ph: "", img: "assets/products/cc091-1.webp",
     imgs: ["assets/products/cc091-1.webp", "assets/products/cc091-2.webp", "assets/products/cc091-3.webp", "assets/products/cc091-4.webp", "assets/products/cc091-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 57.5cm high. MgO (Magnesium Oxide). This stylish versatile piece features a cylindrical appearance with a unique internal storage space. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13250,7 +13250,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 57.5, unit: "cm", printed: true },
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight. Max recommended weight 100kg." },
 
-  { id: "cc092", name: "Stone-Look Arched Side Table 40cm — White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11154", tag: "New", ph: "", img: "assets/products/cc092-1.webp",
+  { id: "cc092", name: "Stone-Look Arched Side Table 40cm, White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11154", tag: "New", ph: "", img: "assets/products/cc092-1.webp",
     imgs: ["assets/products/cc092-1.webp", "assets/products/cc092-2.webp", "assets/products/cc092-3.webp", "assets/products/cc092-4.webp", "assets/products/cc092-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 47cm high. MgO (Magnesium Oxide). This stylish versatile piece features an arch cut through the middle offering a unique and modern aesthetic. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13263,7 +13263,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 47, unit: "cm", printed: true },
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight. Max recommended weight 100kg." },
 
-  { id: "cc093", name: "Stone-Look Side Table 37cm — White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11155", tag: "New", ph: "", img: "assets/products/cc093-1.webp",
+  { id: "cc093", name: "Stone-Look Side Table 37cm, White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11155", tag: "New", ph: "", img: "assets/products/cc093-1.webp",
     imgs: ["assets/products/cc093-1.webp", "assets/products/cc093-2.webp", "assets/products/cc093-3.webp", "assets/products/cc093-4.webp", "assets/products/cc093-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 37cm wide, 37cm deep and 43cm high. MgO (Magnesium Oxide). Crafted from high-quality MgO, the Castello Side Table offers both aesthetic beauty and long-lasting durability. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13275,7 +13275,7 @@ const PRODUCTS = [
     dims: { w: 37, d: 37, h: 43, unit: "cm", printed: true },
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight. Max recommended weight 100kg." },
 
-  { id: "cc094", name: "Side Table 40cm — Off-White", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11156", tag: "New", ph: "", img: "assets/products/cc094-1.webp",
+  { id: "cc094", name: "Side Table 40cm, Off-White", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11156", tag: "New", ph: "", img: "assets/products/cc094-1.webp",
     imgs: ["assets/products/cc094-1.webp", "assets/products/cc094-2.webp", "assets/products/cc094-3.webp", "assets/products/cc094-4.webp", "assets/products/cc094-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 50cm high. MDF with lacquer finish. Cylindrical base adds a clean, structural shape. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13287,7 +13287,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc095", name: "Metal Round Side Table 45cm — Mocha", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11157", tag: "New", ph: "", img: "assets/products/cc095-1.webp",
+  { id: "cc095", name: "Metal Round Side Table 45cm, Mocha", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11157", tag: "New", ph: "", img: "assets/products/cc095-1.webp",
     imgs: ["assets/products/cc095-1.webp", "assets/products/cc095-2.webp", "assets/products/cc095-3.webp", "assets/products/cc095-4.webp", "assets/products/cc095-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 45cm high. Powder-coated iron top and base. Mocha finish adds warmth and contrast to your space. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13299,7 +13299,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc096", name: "Marble-Look Side Table 30cm — White", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11158", tag: "New", ph: "", img: "assets/products/cc096-1.webp",
+  { id: "cc096", name: "Marble-Look Side Table 30cm, White", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11158", tag: "New", ph: "", img: "assets/products/cc096-1.webp",
     imgs: ["assets/products/cc096-1.webp", "assets/products/cc096-2.webp", "assets/products/cc096-3.webp", "assets/products/cc096-4.webp", "assets/products/cc096-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 30cm wide, 30cm deep and 61cm high. MGO with marble-effect hydrographic transfer finish. Tall cylindrical shape with fluted surface detailing. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13312,7 +13312,7 @@ const PRODUCTS = [
     dims: { w: 30, d: 30, h: 61, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc097", name: "Round Side Table — Green", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11159", tag: "New", ph: "", img: "assets/products/cc097-1.webp",
+  { id: "cc097", name: "Round Side Table, Green", cat: "Living Room", room: "Living Room", price: 123, memberPrice: 110, sku: "SH-11159", tag: "New", ph: "", img: "assets/products/cc097-1.webp",
     imgs: ["assets/products/cc097-1.webp", "assets/products/cc097-2.webp", "assets/products/cc097-3.webp", "assets/products/cc097-4.webp", "assets/products/cc097-5.webp"],
     desc: "For the lamp, the book and the cup of tea. Round side table design. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13323,7 +13323,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc098", name: "Round Side Table 40cm — Green", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11160", tag: "New", ph: "", img: "assets/products/cc098-1.webp",
+  { id: "cc098", name: "Round Side Table 40cm, Green", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11160", tag: "New", ph: "", img: "assets/products/cc098-1.webp",
     imgs: ["assets/products/cc098-1.webp", "assets/products/cc098-2.webp", "assets/products/cc098-3.webp", "assets/products/cc098-4.webp", "assets/products/cc098-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 48cm high. MDF with lacquer finish. Round top with a soft, minimalist silhouette. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13336,7 +13336,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 48, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc099", name: "Metal Side Table 50cm — White", cat: "Living Room", room: "Living Room", price: 98, memberPrice: 88, sku: "SH-11161", tag: "New", ph: "", img: "assets/products/cc099-1.webp",
+  { id: "cc099", name: "Metal Side Table 50cm, White", cat: "Living Room", room: "Living Room", price: 98, memberPrice: 88, sku: "SH-11161", tag: "New", ph: "", img: "assets/products/cc099-1.webp",
     imgs: ["assets/products/cc099-1.webp", "assets/products/cc099-2.webp", "assets/products/cc099-3.webp", "assets/products/cc099-4.webp", "assets/products/cc099-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm wide, 35cm deep and 70cm high. MDF. Natural wood finish for a rustic and warm appearance. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13349,14 +13349,14 @@ const PRODUCTS = [
     dims: { w: 50, d: 35, h: 70, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc100", name: "Square Side Table 40cm — Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11162", tag: "New", ph: "", img: "assets/products/cc100-1.webp",
+  { id: "cc100", name: "Square Side Table 40cm, Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11162", tag: "New", ph: "", img: "assets/products/cc100-1.webp",
     imgs: ["assets/products/cc100-1.webp", "assets/products/cc100-2.webp", "assets/products/cc100-3.webp", "assets/products/cc100-4.webp", "assets/products/cc100-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 50cm high. MDF with a wood veneer finish. 40cm square tabletop provides space for books, drinks, or décor. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
       "40cm square tabletop provides space for books, drinks, or décor",
       "Vertical panel design adds subtle texture and depth",
       "Compact size fits well in different spaces",
-      "Versatile use – suitable as a side table or bedside table"
+      "Versatile use, suitable as a side table or bedside table"
     ],
     specs: { "Type": "Side Table", "Colour": "Natural", "Material": "MDF with a wood veneer finish" },
     dims: { w: 40, d: 40, h: 50, unit: "cm", printed: true },
@@ -13375,7 +13375,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 38, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc102", name: "Metal Side Table 65cm — Black", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11164", tag: "New", ph: "", img: "assets/products/cc102-1.webp",
+  { id: "cc102", name: "Metal Side Table 65cm, Black", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11164", tag: "New", ph: "", img: "assets/products/cc102-1.webp",
     imgs: ["assets/products/cc102-1.webp", "assets/products/cc102-2.webp", "assets/products/cc102-3.webp", "assets/products/cc102-4.webp", "assets/products/cc102-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40.5cm wide, 40.5cm deep and 65cm high. Metal and MDF. The table top is made of veneer wrapped MDF. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13388,7 +13388,7 @@ const PRODUCTS = [
     dims: { w: 40.5, d: 40.5, h: 65, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc103", name: "Travertine-Look Round Side Table 50cm — Oak", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11165", tag: "New", ph: "", img: "assets/products/cc103-1.webp",
+  { id: "cc103", name: "Travertine-Look Round Side Table 50cm, Oak", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11165", tag: "New", ph: "", img: "assets/products/cc103-1.webp",
     imgs: ["assets/products/cc103-1.webp", "assets/products/cc103-2.webp", "assets/products/cc103-3.webp", "assets/products/cc103-4.webp", "assets/products/cc103-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm wide, 50cm deep and 47cm high. MDF with oak melamine veneer. Round travertine-look top adds visual texture and contrast. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13399,7 +13399,7 @@ const PRODUCTS = [
     dims: { w: 50, d: 50, h: 47, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc104", name: "Marble-Look Side Table 37cm — Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11166", tag: "New", ph: "", img: "assets/products/cc104-1.webp",
+  { id: "cc104", name: "Marble-Look Side Table 37cm, Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11166", tag: "New", ph: "", img: "assets/products/cc104-1.webp",
     imgs: ["assets/products/cc104-1.webp", "assets/products/cc104-2.webp", "assets/products/cc104-3.webp", "assets/products/cc104-4.webp", "assets/products/cc104-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 37cm wide, 37cm deep and 46cm high. Magnesium Oxide (MgO). Sturdy design. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13430,7 +13430,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc106", name: "Terrazzo Stool Round Side Table 46cm — White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11168", tag: "New", ph: "", img: "assets/products/cc106-1.webp",
+  { id: "cc106", name: "Terrazzo Stool Round Side Table 46cm, White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11168", tag: "New", ph: "", img: "assets/products/cc106-1.webp",
     imgs: ["assets/products/cc106-1.webp", "assets/products/cc106-2.webp", "assets/products/cc106-3.webp", "assets/products/cc106-4.webp", "assets/products/cc106-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 31cm wide, 31cm deep and 45cm high. Terrazzo. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13443,7 +13443,7 @@ const PRODUCTS = [
     boxContents: ["1x Terrazzo side table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc107", name: "Marble-Look Plinth Round Side Table 30cm — Red", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11169", tag: "New", ph: "", img: "assets/products/cc107-1.webp",
+  { id: "cc107", name: "Marble-Look Plinth Round Side Table 30cm, Red", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11169", tag: "New", ph: "", img: "assets/products/cc107-1.webp",
     imgs: ["assets/products/cc107-1.webp", "assets/products/cc107-2.webp", "assets/products/cc107-3.webp", "assets/products/cc107-4.webp", "assets/products/cc107-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 30cm wide, 30cm deep and 46cm high. MgO with water transfer marble-look print finish. Stacked, rounded design creates a sculptural focal point. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13454,7 +13454,7 @@ const PRODUCTS = [
     dims: { w: 30, d: 30, h: 46, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc108", name: "Marble & Metal Side Table 45cm — White", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11170", tag: "New", ph: "", img: "assets/products/cc108-1.webp",
+  { id: "cc108", name: "Marble & Metal Side Table 45cm, White", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11170", tag: "New", ph: "", img: "assets/products/cc108-1.webp",
     imgs: ["assets/products/cc108-1.webp", "assets/products/cc108-2.webp", "assets/products/cc108-3.webp", "assets/products/cc108-4.webp", "assets/products/cc108-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 43.4cm wide, 42.7cm deep and 51cm high. Natural marble top. Natural marble top with unique veining. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13466,7 +13466,7 @@ const PRODUCTS = [
     dims: { w: 43.4, d: 42.7, h: 51, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc109", name: "Timber Side Table 40cm — Clay", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11171", tag: "New", ph: "", img: "assets/products/cc109-1.webp",
+  { id: "cc109", name: "Timber Side Table 40cm, Clay", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11171", tag: "New", ph: "", img: "assets/products/cc109-1.webp",
     imgs: ["assets/products/cc109-1.webp", "assets/products/cc109-2.webp", "assets/products/cc109-3.webp", "assets/products/cc109-4.webp", "assets/products/cc109-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 45cm high. MDF with gloss finish. Curved, sculptural silhouette with wide-profile legs. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13478,7 +13478,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc110", name: "Travertine-Look Side Table 38cm — Grey", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11172", tag: "New", ph: "", img: "assets/products/cc110-1.webp",
+  { id: "cc110", name: "Travertine-Look Side Table 38cm, Grey", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11172", tag: "New", ph: "", img: "assets/products/cc110-1.webp",
     imgs: ["assets/products/cc110-1.webp", "assets/products/cc110-2.webp", "assets/products/cc110-3.webp", "assets/products/cc110-4.webp", "assets/products/cc110-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 38cm wide, 38cm deep and 50cm high. MGO with travertine-effect hydrographic transfer finish. Sculptural fluted column form with a wider top surface. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13503,7 +13503,7 @@ const PRODUCTS = [
     dims: { w: 36, d: 36, h: 70.5, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc112", name: "Metal Arched Side Table 52cm — Black", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11174", tag: "New", ph: "", img: "assets/products/cc112-1.webp",
+  { id: "cc112", name: "Metal Arched Side Table 52cm, Black", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11174", tag: "New", ph: "", img: "assets/products/cc112-1.webp",
     imgs: ["assets/products/cc112-1.webp", "assets/products/cc112-2.webp", "assets/products/cc112-3.webp", "assets/products/cc112-4.webp", "assets/products/cc112-5.webp"],
     desc: "For the lamp, the book and the cup of tea. Open-front design with subtle arch detailing. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13515,7 +13515,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc113", name: "Marble-Look Side Table 46cm — Red", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11175", tag: "New", ph: "", img: "assets/products/cc113-1.webp",
+  { id: "cc113", name: "Marble-Look Side Table 46cm, Red", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11175", tag: "New", ph: "", img: "assets/products/cc113-1.webp",
     imgs: ["assets/products/cc113-1.webp", "assets/products/cc113-2.webp", "assets/products/cc113-3.webp", "assets/products/cc113-4.webp", "assets/products/cc113-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 46cm wide, 46cm deep and 48cm high. MGO with marble-effect hydrographic transfer finish. Wide block form with fluted surface detailing and a flat top. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13529,7 +13529,7 @@ const PRODUCTS = [
     dims: { w: 46, d: 46, h: 48, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc114", name: "Timber Side Table 40cm — Cream", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11176", tag: "New", ph: "", img: "assets/products/cc114-1.webp",
+  { id: "cc114", name: "Timber Side Table 40cm, Cream", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11176", tag: "New", ph: "", img: "assets/products/cc114-1.webp",
     imgs: ["assets/products/cc114-1.webp", "assets/products/cc114-2.webp", "assets/products/cc114-3.webp", "assets/products/cc114-4.webp", "assets/products/cc114-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 45cm high. MDF with gloss finish. Curved, sculptural silhouette with wide-profile legs. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13541,12 +13541,12 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc115", name: "Metal Side Tables — Set of 2 · White", cat: "Living Room", room: "Living Room", price: 223, memberPrice: 200, sku: "SH-11177", tag: "New", ph: "", img: "assets/products/cc115-1.webp",
+  { id: "cc115", name: "Metal Side Tables, Set of 2 · White", cat: "Living Room", room: "Living Room", price: 223, memberPrice: 200, sku: "SH-11177", tag: "New", ph: "", img: "assets/products/cc115-1.webp",
     imgs: ["assets/products/cc115-1.webp", "assets/products/cc115-2.webp", "assets/products/cc115-3.webp", "assets/products/cc115-4.webp", "assets/products/cc115-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35cm wide, 35cm deep and 35cm high. MDF with a melamine finish. Set of two nesting tables for flexible arrangement. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
       "Set of two nesting tables for flexible arrangement",
-      "Space-saving design – smaller table tucks neatly under the larger one",
+      "Space-saving design, smaller table tucks neatly under the larger one",
       "Suitable for living rooms, bedrooms, or lounge areas"
     ],
     specs: { "Type": "Side Table", "Colour": "White & Natural", "Material": "MDF with a melamine finish, Metal" },
@@ -13554,7 +13554,7 @@ const PRODUCTS = [
     boxContents: ["1x Side table set", "1x Assembly Instructions"],
     care: "Wipe clean with a damp cloth. Large table max load: 40kg; small table max load: 20kg." },
 
-  { id: "cc116", name: "Marble-Look Side Table 35cm — Brown", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11178", tag: "New", ph: "", img: "assets/products/cc116-1.webp",
+  { id: "cc116", name: "Marble-Look Side Table 35cm, Brown", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11178", tag: "New", ph: "", img: "assets/products/cc116-1.webp",
     imgs: ["assets/products/cc116-1.webp", "assets/products/cc116-2.webp", "assets/products/cc116-3.webp", "assets/products/cc116-4.webp", "assets/products/cc116-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35cm wide, 35cm deep and 40cm high. MgO with water transfer marble-look print finish. Cylindrical shape introduces a sculptural accent to any room. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13566,7 +13566,7 @@ const PRODUCTS = [
     dims: { w: 35, d: 35, h: 40, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc117", name: "Metal Side Table 57cm — Black", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11179", tag: "New", ph: "", img: "assets/products/cc117-1.webp",
+  { id: "cc117", name: "Metal Side Table 57cm, Black", cat: "Living Room", room: "Living Room", price: 110, memberPrice: 99, sku: "SH-11179", tag: "New", ph: "", img: "assets/products/cc117-1.webp",
     imgs: ["assets/products/cc117-1.webp", "assets/products/cc117-2.webp", "assets/products/cc117-3.webp", "assets/products/cc117-4.webp", "assets/products/cc117-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 39.5cm wide, 28.5cm deep and 57cm high. Metal and MDF. The table top is made of veneer wrapped MDF. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13579,7 +13579,7 @@ const PRODUCTS = [
     dims: { w: 39.5, d: 28.5, h: 57, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc118", name: "Marble-Look Stool Round Side Table 38cm — Green", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11180", tag: "New", ph: "", img: "assets/products/cc118-1.webp",
+  { id: "cc118", name: "Marble-Look Stool Round Side Table 38cm, Green", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11180", tag: "New", ph: "", img: "assets/products/cc118-1.webp",
     imgs: ["assets/products/cc118-1.webp", "assets/products/cc118-2.webp", "assets/products/cc118-3.webp", "assets/products/cc118-4.webp", "assets/products/cc118-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 38cm wide, 38cm deep and 45cm high. MgO with hydrographics transfer printing. Rounded cylindrical shape with a softly curved top for a sculptural look. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13608,7 +13608,7 @@ const PRODUCTS = [
     dims: { w: 35, d: 35, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc120", name: "Metal Round Side Table 40cm — Black", cat: "Living Room", room: "Living Room", price: 148, memberPrice: 133, sku: "SH-11182", tag: "New", ph: "", img: "assets/products/cc120-1.webp",
+  { id: "cc120", name: "Metal Round Side Table 40cm, Black", cat: "Living Room", room: "Living Room", price: 148, memberPrice: 133, sku: "SH-11182", tag: "New", ph: "", img: "assets/products/cc120-1.webp",
     imgs: ["assets/products/cc120-1.webp", "assets/products/cc120-2.webp", "assets/products/cc120-3.webp", "assets/products/cc120-4.webp", "assets/products/cc120-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 65cm high. MDF with a melamine finish. 40cm round tabletop provides space for essentials. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13622,7 +13622,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 65, unit: "cm", printed: true },
     care: "Wipe clean with a dry cloth. Avoid strong chemical cleaners." },
 
-  { id: "cc121", name: "Bamboo Round Side Table 45cm — Black", cat: "Living Room", room: "Living Room", price: 149, memberPrice: 134, sku: "SH-11183", tag: "New", ph: "", img: "assets/products/cc121-1.webp",
+  { id: "cc121", name: "Bamboo Round Side Table 45cm, Black", cat: "Living Room", room: "Living Room", price: 149, memberPrice: 134, sku: "SH-11183", tag: "New", ph: "", img: "assets/products/cc121-1.webp",
     imgs: ["assets/products/cc121-1.webp", "assets/products/cc121-2.webp", "assets/products/cc121-3.webp", "assets/products/cc121-4.webp", "assets/products/cc121-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 50cm high. Bamboo. Surrounding the table are bamboo panels with unique gaps in them, adding a touch of elegance to the design. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13633,7 +13633,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc122", name: "Timber Side Table 40cm — Green", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11184", tag: "New", ph: "", img: "assets/products/cc122-1.webp",
+  { id: "cc122", name: "Timber Side Table 40cm, Green", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11184", tag: "New", ph: "", img: "assets/products/cc122-1.webp",
     imgs: ["assets/products/cc122-1.webp", "assets/products/cc122-2.webp", "assets/products/cc122-3.webp", "assets/products/cc122-4.webp", "assets/products/cc122-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 45cm high. MDF with gloss finish. Curved, sculptural silhouette with wide-profile legs. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13645,7 +13645,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc123", name: "Rattan Storage Side Table 60cm — Natural", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11185", tag: "New", ph: "", img: "assets/products/cc123-1.webp",
+  { id: "cc123", name: "Rattan Storage Side Table 60cm, Natural", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11185", tag: "New", ph: "", img: "assets/products/cc123-1.webp",
     imgs: ["assets/products/cc123-1.webp", "assets/products/cc123-2.webp", "assets/products/cc123-3.webp", "assets/products/cc123-4.webp", "assets/products/cc123-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 60cm wide, 37cm deep and 45cm high. Plywood and Rattan. Wave-inspired shape for a modern and organic look. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13659,7 +13659,7 @@ const PRODUCTS = [
     dims: { w: 60, d: 37, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc124", name: "Marble-Look Side Table 38cm — Red", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11186", tag: "New", ph: "", img: "assets/products/cc124-1.webp",
+  { id: "cc124", name: "Marble-Look Side Table 38cm, Red", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11186", tag: "New", ph: "", img: "assets/products/cc124-1.webp",
     imgs: ["assets/products/cc124-1.webp", "assets/products/cc124-2.webp", "assets/products/cc124-3.webp", "assets/products/cc124-4.webp", "assets/products/cc124-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 38cm wide, 38cm deep and 50cm high. MGO. Sculptural fluted column form with a wider top surface. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13671,7 +13671,7 @@ const PRODUCTS = [
     dims: { w: 38, d: 38, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc125", name: "Round Side Table 57cm — White", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11187", tag: "New", ph: "", img: "assets/products/cc125-1.webp",
+  { id: "cc125", name: "Round Side Table 57cm, White", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11187", tag: "New", ph: "", img: "assets/products/cc125-1.webp",
     imgs: ["assets/products/cc125-1.webp", "assets/products/cc125-2.webp", "assets/products/cc125-3.webp", "assets/products/cc125-4.webp", "assets/products/cc125-5.webp"],
     desc: "For the lamp, the book and the cup of tea. Scalloped apron adds a soft, playful detail to the design. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13685,7 +13685,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc126", name: "Metal Arched Side Table 75cm — White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11188", tag: "New", ph: "", img: "assets/products/cc126-1.webp",
+  { id: "cc126", name: "Metal Arched Side Table 75cm, White", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11188", tag: "New", ph: "", img: "assets/products/cc126-1.webp",
     imgs: ["assets/products/cc126-1.webp", "assets/products/cc126-2.webp", "assets/products/cc126-3.webp", "assets/products/cc126-4.webp", "assets/products/cc126-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 80.5cm across. Metal. White metal frame with ribbed glass doors for a contemporary, sophisticated look. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13696,7 +13696,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table", "Colour": "White", "Material": "Metal" },
     care: "Wipe with damp cloth once assembled. WARNING:. Children have died from furniture tipover. ALWAYS secure this furniture with an anchor device." },
 
-  { id: "cc127", name: "Metal Round Side Table 45cm — Black", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11189", tag: "New", ph: "", img: "assets/products/cc127-1.webp",
+  { id: "cc127", name: "Metal Round Side Table 45cm, Black", cat: "Living Room", room: "Living Room", price: 197, memberPrice: 177, sku: "SH-11189", tag: "New", ph: "", img: "assets/products/cc127-1.webp",
     imgs: ["assets/products/cc127-1.webp", "assets/products/cc127-2.webp", "assets/products/cc127-3.webp", "assets/products/cc127-4.webp", "assets/products/cc127-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 42cm wide, 42cm deep and 51cm high. Metal Frame. 45cm round tabletop provides space for essentials like books, drinks, or decor. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13708,7 +13708,7 @@ const PRODUCTS = [
     dims: { w: 42, d: 42, h: 51, unit: "cm", printed: true },
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull." },
 
-  { id: "cc128", name: "Stone-Look Round Side Table 35cm — Grey", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11190", tag: "New", ph: "", img: "assets/products/cc128-1.webp",
+  { id: "cc128", name: "Stone-Look Round Side Table 35cm, Grey", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11190", tag: "New", ph: "", img: "assets/products/cc128-1.webp",
     imgs: ["assets/products/cc128-1.webp", "assets/products/cc128-2.webp", "assets/products/cc128-3.webp", "assets/products/cc128-4.webp", "assets/products/cc128-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35cm wide, 35cm deep and 45cm high. Magnesium Oxide (MgO). Circular shape with intricate line detailing for a sophisticated look. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13722,7 +13722,7 @@ const PRODUCTS = [
     boxContents: ["1x Stool"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc129", name: "Metal Round Side Table 45 × 45 × 45 × 45 × 45cm 48cm high — Birch", cat: "Living Room", room: "Living Room", price: 209, memberPrice: 188, sku: "SH-11191", tag: "New", ph: "", img: "assets/products/cc129-1.webp",
+  { id: "cc129", name: "Metal Round Side Table 45 × 45 × 45 × 45 × 45cm 48cm high, Birch", cat: "Living Room", room: "Living Room", price: 209, memberPrice: 188, sku: "SH-11191", tag: "New", ph: "", img: "assets/products/cc129-1.webp",
     imgs: ["assets/products/cc129-1.webp", "assets/products/cc129-2.webp", "assets/products/cc129-3.webp", "assets/products/cc129-4.webp", "assets/products/cc129-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 48cm high. Powder-coated iron top and legs. Square tabletop with rounded corners for a softer look. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13733,7 +13733,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 48, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc130", name: "Ash Round Side Table 40cm — Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11192", tag: "New", ph: "", img: "assets/products/cc130-1.webp",
+  { id: "cc130", name: "Ash Round Side Table 40cm, Natural", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11192", tag: "New", ph: "", img: "assets/products/cc130-1.webp",
     imgs: ["assets/products/cc130-1.webp", "assets/products/cc130-2.webp", "assets/products/cc130-3.webp", "assets/products/cc130-4.webp", "assets/products/cc130-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 45cm high. MDF with Ash veneer. Round tabletop with soft, rounded edges. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13745,7 +13745,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 45, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc131", name: "Nesting Side Tables — Set of 3 · Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11193", tag: "New", ph: "", img: "assets/products/cc131-1.webp",
+  { id: "cc131", name: "Nesting Side Tables, Set of 3 · Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11193", tag: "New", ph: "", img: "assets/products/cc131-1.webp",
     imgs: ["assets/products/cc131-1.webp", "assets/products/cc131-2.webp", "assets/products/cc131-3.webp", "assets/products/cc131-4.webp", "assets/products/cc131-5.webp"],
     desc: "For the lamp, the book and the cup of tea. MDF with oak laminated paper finish. Set of three tables designed to nest together when not in use. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13758,7 +13758,7 @@ const PRODUCTS = [
     specs: { "Type": "Side Table", "Colour": "Oak", "Material": "MDF with oak laminated paper finish" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc132", name: "Round Side Table 42cm — Black", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11194", tag: "New", ph: "", img: "assets/products/cc132-1.webp",
+  { id: "cc132", name: "Round Side Table 42cm, Black", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11194", tag: "New", ph: "", img: "assets/products/cc132-1.webp",
     imgs: ["assets/products/cc132-1.webp", "assets/products/cc132-2.webp", "assets/products/cc132-3.webp", "assets/products/cc132-4.webp", "assets/products/cc132-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 42cm wide, 42cm deep and 50cm high. MDF with black laminated paper finish. Round tabletop suitable for decor, books, or everyday items. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13771,7 +13771,7 @@ const PRODUCTS = [
     dims: { w: 42, d: 42, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc133", name: "Stone-Look Stool Side Table 38cm — White", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11195", tag: "New", ph: "", img: "assets/products/cc133-1.webp",
+  { id: "cc133", name: "Stone-Look Stool Side Table 38cm, White", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11195", tag: "New", ph: "", img: "assets/products/cc133-1.webp",
     imgs: ["assets/products/cc133-1.webp", "assets/products/cc133-2.webp", "assets/products/cc133-3.webp", "assets/products/cc133-4.webp", "assets/products/cc133-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 38cm wide, 38cm deep and 45cm high. MgO with a white textured finish. Cylindrical shape with a softly curved top for a sculptural, modern aesthetic. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13786,7 +13786,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc134", name: "Terrazzo Stool Round Side Table 56cm — White", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11196", tag: "New", ph: "", img: "assets/products/cc134-1.webp",
+  { id: "cc134", name: "Terrazzo Stool Round Side Table 56cm, White", cat: "Living Room", room: "Living Room", price: 345, memberPrice: 310, sku: "SH-11196", tag: "New", ph: "", img: "assets/products/cc134-1.webp",
     imgs: ["assets/products/cc134-1.webp", "assets/products/cc134-2.webp", "assets/products/cc134-3.webp", "assets/products/cc134-4.webp", "assets/products/cc134-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 42cm wide, 42cm deep and 56cm high. Terrazzo. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13811,7 +13811,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 40, h: 51, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc136", name: "Marble-Look Side Table 35cm — Green", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11198", tag: "New", ph: "", img: "assets/products/cc136-1.webp",
+  { id: "cc136", name: "Marble-Look Side Table 35cm, Green", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11198", tag: "New", ph: "", img: "assets/products/cc136-1.webp",
     imgs: ["assets/products/cc136-1.webp", "assets/products/cc136-2.webp", "assets/products/cc136-3.webp", "assets/products/cc136-4.webp", "assets/products/cc136-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35cm wide, 35cm deep and 50cm high. Natural marble. Cylindrical side table design with a solid, block form. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13823,7 +13823,7 @@ const PRODUCTS = [
     dims: { w: 35, d: 35, h: 50, unit: "cm", printed: true },
     care: "Natural marble veining and colour variation will occur between pieces." },
 
-  { id: "cc137", name: "Arched Side Table 35cm — Grey", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11199", tag: "New", ph: "", img: "assets/products/cc137-1.webp",
+  { id: "cc137", name: "Arched Side Table 35cm, Grey", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11199", tag: "New", ph: "", img: "assets/products/cc137-1.webp",
     imgs: ["assets/products/cc137-1.webp", "assets/products/cc137-2.webp", "assets/products/cc137-3.webp", "assets/products/cc137-4.webp", "assets/products/cc137-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35cm wide, 35cm deep and 50cm high. MDF with rolling veneer. Hexagonal shape adds a unique, architectural feel. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13837,7 +13837,7 @@ const PRODUCTS = [
     dims: { w: 35, d: 35, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc138", name: "Terrazzo Side Table 48cm — Black", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11200", tag: "New", ph: "", img: "assets/products/cc138-1.webp",
+  { id: "cc138", name: "Terrazzo Side Table 48cm, Black", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11200", tag: "New", ph: "", img: "assets/products/cc138-1.webp",
     imgs: ["assets/products/cc138-1.webp", "assets/products/cc138-2.webp", "assets/products/cc138-3.webp", "assets/products/cc138-4.webp", "assets/products/cc138-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 49cm wide, 49cm deep and 47cm high. Terrazzo. A versatile and stylish piece that functions as a side table, plant stand, or decorative accent. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13859,7 +13859,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 48, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc140", name: "Side Table 50cm — Birch", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11202", tag: "New", ph: "", img: "assets/products/cc140-1.webp",
+  { id: "cc140", name: "Side Table 50cm, Birch", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11202", tag: "New", ph: "", img: "assets/products/cc140-1.webp",
     imgs: ["assets/products/cc140-1.webp", "assets/products/cc140-2.webp", "assets/products/cc140-3.webp", "assets/products/cc140-4.webp", "assets/products/cc140-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm wide, 50cm deep and 46cm high. MDF with painted finish. Softly shaped tabletop adds a subtle, organic form. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13871,7 +13871,7 @@ const PRODUCTS = [
     dims: { w: 50, d: 50, h: 46, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc141", name: "Metal Arched Side Table 52cm — White", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11203", tag: "New", ph: "", img: "assets/products/cc141-1.webp",
+  { id: "cc141", name: "Metal Arched Side Table 52cm, White", cat: "Living Room", room: "Living Room", price: 160, memberPrice: 144, sku: "SH-11203", tag: "New", ph: "", img: "assets/products/cc141-1.webp",
     imgs: ["assets/products/cc141-1.webp", "assets/products/cc141-2.webp", "assets/products/cc141-3.webp", "assets/products/cc141-4.webp", "assets/products/cc141-5.webp"],
     desc: "For the lamp, the book and the cup of tea. Open-front design with subtle arch detailing. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13883,20 +13883,20 @@ const PRODUCTS = [
     specs: { "Type": "Side Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc142", name: "Square Side Table 40cm — White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11204", tag: "New", ph: "", img: "assets/products/cc142-1.webp",
+  { id: "cc142", name: "Square Side Table 40cm, White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11204", tag: "New", ph: "", img: "assets/products/cc142-1.webp",
     imgs: ["assets/products/cc142-1.webp", "assets/products/cc142-2.webp", "assets/products/cc142-3.webp", "assets/products/cc142-4.webp", "assets/products/cc142-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 40cm wide, 40cm deep and 50cm high. MDF with a wood veneer finish. 40cm square tabletop provides space for books, drinks, or décor. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
       "40cm square tabletop provides space for books, drinks, or décor",
       "Vertical panel design adds subtle texture and depth",
       "Compact size fits well in different spaces",
-      "Versatile use – suitable as a side table or bedside table"
+      "Versatile use, suitable as a side table or bedside table"
     ],
     specs: { "Type": "Side Table", "Colour": "White", "Material": "MDF with a wood veneer finish" },
     dims: { w: 40, d: 40, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc143", name: "Bamboo Round Side Table 45cm — Natural", cat: "Living Room", room: "Living Room", price: 125, memberPrice: 112, sku: "SH-11205", tag: "New", ph: "", img: "assets/products/cc143-1.webp",
+  { id: "cc143", name: "Bamboo Round Side Table 45cm, Natural", cat: "Living Room", room: "Living Room", price: 125, memberPrice: 112, sku: "SH-11205", tag: "New", ph: "", img: "assets/products/cc143-1.webp",
     imgs: ["assets/products/cc143-1.webp", "assets/products/cc143-2.webp", "assets/products/cc143-3.webp", "assets/products/cc143-4.webp", "assets/products/cc143-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 45cm wide, 45cm deep and 50cm high. Bamboo. Surrounding the table are bamboo panels with unique gaps in them, adding a touch of natural elegance to the design. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -13907,7 +13907,7 @@ const PRODUCTS = [
     dims: { w: 45, d: 45, h: 50, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc144", name: "Stone-Look Arched Side Table 36cm — White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11206", tag: "New", ph: "", img: "assets/products/cc144-1.webp",
+  { id: "cc144", name: "Stone-Look Arched Side Table 36cm, White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11206", tag: "New", ph: "", img: "assets/products/cc144-1.webp",
     imgs: ["assets/products/cc144-1.webp", "assets/products/cc144-2.webp", "assets/products/cc144-3.webp", "assets/products/cc144-4.webp", "assets/products/cc144-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 35.5cm wide, 37.5cm deep and 46cm high. MgO (Magnesium Oxide). This stylish versatile piece features two opposite-facing arches cut through the middle offering a unique style and potential storage space. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13920,7 +13920,7 @@ const PRODUCTS = [
     dims: { w: 35.5, d: 37.5, h: 46, unit: "cm", printed: true },
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight. Max recommended weight 100kg." },
 
-  { id: "cc145", name: "Round Side Table 48cm — Oak", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11207", tag: "New", ph: "", img: "assets/products/cc145-1.webp",
+  { id: "cc145", name: "Round Side Table 48cm, Oak", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11207", tag: "New", ph: "", img: "assets/products/cc145-1.webp",
     imgs: ["assets/products/cc145-1.webp", "assets/products/cc145-2.webp", "assets/products/cc145-3.webp", "assets/products/cc145-4.webp", "assets/products/cc145-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 48cm wide, 48cm deep and 55cm high. MDF with laminated paper finish. Round tabletop with integrated drawer for concealed storage. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13933,7 +13933,7 @@ const PRODUCTS = [
     dims: { w: 48, d: 48, h: 55, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc146", name: "Rattan Storage Side Table 50cm — Natural", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11208", tag: "New", ph: "", img: "assets/products/cc146-1.webp",
+  { id: "cc146", name: "Rattan Storage Side Table 50cm, Natural", cat: "Living Room", room: "Living Room", price: 185, memberPrice: 166, sku: "SH-11208", tag: "New", ph: "", img: "assets/products/cc146-1.webp",
     imgs: ["assets/products/cc146-1.webp", "assets/products/cc146-2.webp", "assets/products/cc146-3.webp", "assets/products/cc146-4.webp", "assets/products/cc146-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm wide, 34cm deep and 39cm high. Plywood and rattan. Wave-inspired shape for a unique, organic aesthetic. Low enough to sit beside a sofa or a bed without crowding it. Style it with a stack of books and something with height.",
     features: [
@@ -13947,7 +13947,7 @@ const PRODUCTS = [
     dims: { w: 50, d: 34, h: 39, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc147", name: "Round Side Table 48cm — White", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11209", tag: "New", ph: "", img: "assets/products/cc147-1.webp",
+  { id: "cc147", name: "Round Side Table 48cm, White", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11209", tag: "New", ph: "", img: "assets/products/cc147-1.webp",
     imgs: ["assets/products/cc147-1.webp", "assets/products/cc147-2.webp", "assets/products/cc147-3.webp", "assets/products/cc147-4.webp", "assets/products/cc147-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 48cm wide, 48cm deep and 55cm high. MDF with laminated paper finish. Round tabletop with integrated drawer for concealed storage. Low enough to sit beside a sofa or a bed without crowding it. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -13960,7 +13960,7 @@ const PRODUCTS = [
     dims: { w: 48, d: 48, h: 55, unit: "cm", printed: true },
     care: "Indoor use only." },
 
-  { id: "cc148", name: "Side Table 50cm — Green", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11210", tag: "New", ph: "", img: "assets/products/cc148-1.webp",
+  { id: "cc148", name: "Side Table 50cm, Green", cat: "Living Room", room: "Living Room", price: 222, memberPrice: 199, sku: "SH-11210", tag: "New", ph: "", img: "assets/products/cc148-1.webp",
     imgs: ["assets/products/cc148-1.webp", "assets/products/cc148-2.webp", "assets/products/cc148-3.webp", "assets/products/cc148-4.webp", "assets/products/cc148-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 50cm wide, 50cm deep and 46cm high. MDF with painted finish. Organic tabletop shape adds a soft, balanced profile. Low enough to sit beside a sofa or a bed without crowding it. The kind of piece that quietly holds a room together.",
     features: [
@@ -13998,7 +13998,7 @@ const PRODUCTS = [
     boxContents: ["1x Side Table"],
     care: "Clean gently with a soft cloth. Lift when moving it, do not pull. Do not overexpose to direct sunlight." },
 
-  { id: "cc151", name: "Walnut Storage Side Table 80cm — White", cat: "Living Room", room: "Living Room", price: 309, memberPrice: 278, sku: "SH-11213", tag: "New", ph: "", img: "assets/products/cc151-1.webp",
+  { id: "cc151", name: "Walnut Storage Side Table 80cm, White", cat: "Living Room", room: "Living Room", price: 309, memberPrice: 278, sku: "SH-11213", tag: "New", ph: "", img: "assets/products/cc151-1.webp",
     imgs: ["assets/products/cc151-1.webp", "assets/products/cc151-2.webp", "assets/products/cc151-3.webp", "assets/products/cc151-4.webp", "assets/products/cc151-5.webp"],
     desc: "For the lamp, the book and the cup of tea. 80cm wide, 80cm deep and 60cm high. Rubber wood. Four-separate storage shelves. Low enough to sit beside a sofa or a bed without crowding it. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14011,7 +14011,7 @@ const PRODUCTS = [
     dims: { w: 80, d: 80, h: 60, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc152", name: "Console Table 140cm — Walnut", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11214", tag: "New", ph: "", img: "assets/products/cc152-1.webp",
+  { id: "cc152", name: "Console Table 140cm, Walnut", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11214", tag: "New", ph: "", img: "assets/products/cc152-1.webp",
     imgs: ["assets/products/cc152-1.webp", "assets/products/cc152-2.webp", "assets/products/cc152-3.webp", "assets/products/cc152-4.webp", "assets/products/cc152-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 40cm wide, 140cm deep and 75cm high. FSC sustainably sourced MDF with a melamine finish. Adds a layer of elegance and richness to your space. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14021,7 +14021,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 140, h: 75, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc153", name: "Oak Console Table 140cm — Light Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11215", tag: "New", ph: "", img: "assets/products/cc153-1.webp",
+  { id: "cc153", name: "Oak Console Table 140cm, Light Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11215", tag: "New", ph: "", img: "assets/products/cc153-1.webp",
     imgs: ["assets/products/cc153-1.webp", "assets/products/cc153-2.webp", "assets/products/cc153-3.webp", "assets/products/cc153-4.webp", "assets/products/cc153-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 40cm wide, 140cm deep and 75cm high. FSC sustainably sourced MDF with a melamine finish. Adds a layer of elegance and richness to your space. Narrow enough for a hallway, long enough to be useful in one. The kind of piece that quietly holds a room together.",
     features: [
@@ -14031,7 +14031,7 @@ const PRODUCTS = [
     dims: { w: 40, d: 140, h: 75, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc154", name: "Console Table 120cm 35cm — Natural", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11216", tag: "New", ph: "", img: "assets/products/cc154-1.webp",
+  { id: "cc154", name: "Console Table 120cm 35cm, Natural", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11216", tag: "New", ph: "", img: "assets/products/cc154-1.webp",
     imgs: ["assets/products/cc154-1.webp", "assets/products/cc154-2.webp", "assets/products/cc154-3.webp", "assets/products/cc154-4.webp", "assets/products/cc154-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 35cm across. MDF with a wood veneer finish. Elegant Natural wood finish that enhances the look of your space. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14044,7 +14044,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table", "Colour": "Natural", "Material": "MDF with a wood veneer finish" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc155", name: "Timber Round Console Table 110cm — Cream", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11217", tag: "New", ph: "", img: "assets/products/cc155-1.webp",
+  { id: "cc155", name: "Timber Round Console Table 110cm, Cream", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11217", tag: "New", ph: "", img: "assets/products/cc155-1.webp",
     imgs: ["assets/products/cc155-1.webp", "assets/products/cc155-2.webp", "assets/products/cc155-3.webp", "assets/products/cc155-4.webp", "assets/products/cc155-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 110cm wide, 35cm deep and 75cm high. MDF with gloss finish. Curved-edge rectangular top. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14056,7 +14056,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 35, h: 75, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc156", name: "Console Table 120 × 50cm — Natural", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11218", tag: "New", ph: "", img: "assets/products/cc156-1.webp",
+  { id: "cc156", name: "Console Table 120 × 50cm, Natural", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11218", tag: "New", ph: "", img: "assets/products/cc156-1.webp",
     imgs: ["assets/products/cc156-1.webp", "assets/products/cc156-2.webp", "assets/products/cc156-3.webp", "assets/products/cc156-4.webp", "assets/products/cc156-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 50cm deep and 78cm high. FSC Sustainably sourced rubber-wood with a melamine finish. Two drawers with a unique vertical panel pattern offer practical storage space while contributing to the table’s elegant design. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14067,7 +14067,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 50, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc157", name: "Oval Console Table 120 × 40cm — Black", cat: "Living Room", room: "Living Room", price: 464, memberPrice: 417, sku: "SH-11219", tag: "New", ph: "", img: "assets/products/cc157-1.webp",
+  { id: "cc157", name: "Oval Console Table 120 × 40cm, Black", cat: "Living Room", room: "Living Room", price: 464, memberPrice: 417, sku: "SH-11219", tag: "New", ph: "", img: "assets/products/cc157-1.webp",
     imgs: ["assets/products/cc157-1.webp", "assets/products/cc157-2.webp", "assets/products/cc157-3.webp", "assets/products/cc157-4.webp", "assets/products/cc157-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 40cm deep and 75cm high. MDF. Ribbed detailing for added texture and design appeal. Narrow enough for a hallway, long enough to be useful in one. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -14080,7 +14080,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 40, h: 75, unit: "cm", printed: true },
     care: "Wipe down with a damp cloth. Avoid cleaning with strong chemicals. WARNING:. Children have died from furniture tipover." },
 
-  { id: "cc158", name: "Metal Console Table 110cm — White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11220", tag: "New", ph: "", img: "assets/products/cc158-1.webp",
+  { id: "cc158", name: "Metal Console Table 110cm, White", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11220", tag: "New", ph: "", img: "assets/products/cc158-1.webp",
     imgs: ["assets/products/cc158-1.webp", "assets/products/cc158-2.webp", "assets/products/cc158-3.webp", "assets/products/cc158-4.webp", "assets/products/cc158-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 110cm wide, 30cm deep and 80cm high. MDF with a Melamine finish. Natural wood colour for a rustic charm. Narrow enough for a hallway, long enough to be useful in one. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -14092,7 +14092,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 30, h: 80, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc159", name: "Sliding-Door Console Table 100cm — Natural", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11221", tag: "New", ph: "", img: "assets/products/cc159-1.webp",
+  { id: "cc159", name: "Sliding-Door Console Table 100cm, Natural", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11221", tag: "New", ph: "", img: "assets/products/cc159-1.webp",
     imgs: ["assets/products/cc159-1.webp", "assets/products/cc159-2.webp", "assets/products/cc159-3.webp", "assets/products/cc159-4.webp", "assets/products/cc159-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 100cm wide, 35cm deep and 80.5cm high. MDF. MDF with a laminated paper finish. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14103,7 +14103,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 35, h: 80.5, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth. Avoid using strong chemical cleaners. WARNING:. Children have died from furniture tipover." },
 
-  { id: "cc160", name: "Travertine-Look Console Table 120 × 120 × 120 × 120 × 35cm 78cm high — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11222", tag: "New", ph: "", img: "assets/products/cc160-1.webp",
+  { id: "cc160", name: "Travertine-Look Console Table 120 × 120 × 120 × 120 × 35cm 78cm high, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11222", tag: "New", ph: "", img: "assets/products/cc160-1.webp",
     imgs: ["assets/products/cc160-1.webp", "assets/products/cc160-2.webp", "assets/products/cc160-3.webp", "assets/products/cc160-4.webp", "assets/products/cc160-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 78cm high. Particleboard with travertine melamine finish. Travertine-look top adds texture and visual interest. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14116,7 +14116,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 35, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc161", name: "Timber Console Table 113cm — Off-White", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11223", tag: "New", ph: "", img: "assets/products/cc161-1.webp",
+  { id: "cc161", name: "Timber Console Table 113cm, Off-White", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11223", tag: "New", ph: "", img: "assets/products/cc161-1.webp",
     imgs: ["assets/products/cc161-1.webp", "assets/products/cc161-2.webp", "assets/products/cc161-3.webp", "assets/products/cc161-4.webp", "assets/products/cc161-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 113cm wide, 36cm deep and 75cm high. MDF with lacquer finish. Large fluted design with chamfered edges. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14128,7 +14128,7 @@ const PRODUCTS = [
     dims: { w: 113, d: 36, h: 75, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc162", name: "Oval Console Table 120cm — Natural", cat: "Living Room", room: "Living Room", price: 464, memberPrice: 417, sku: "SH-11224", tag: "New", ph: "", img: "assets/products/cc162-1.webp",
+  { id: "cc162", name: "Oval Console Table 120cm, Natural", cat: "Living Room", room: "Living Room", price: 464, memberPrice: 417, sku: "SH-11224", tag: "New", ph: "", img: "assets/products/cc162-1.webp",
     imgs: ["assets/products/cc162-1.webp", "assets/products/cc162-2.webp", "assets/products/cc162-3.webp", "assets/products/cc162-4.webp", "assets/products/cc162-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 40cm deep and 75cm high. MDF. Ribbed detailing for added texture and design appeal. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14141,7 +14141,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 40, h: 75, unit: "cm", printed: true },
     care: "Wipe down with a damp cloth. Avoid cleaning with strong chemicals. WARNING:. Children have died from furniture tipover." },
 
-  { id: "cc163", name: "Console Table 120 × 50cm — Black", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11225", tag: "New", ph: "", img: "assets/products/cc163-1.webp",
+  { id: "cc163", name: "Console Table 120 × 50cm, Black", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11225", tag: "New", ph: "", img: "assets/products/cc163-1.webp",
     imgs: ["assets/products/cc163-1.webp", "assets/products/cc163-2.webp", "assets/products/cc163-3.webp", "assets/products/cc163-4.webp", "assets/products/cc163-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 50cm deep and 78cm high. FSC Sustainably sourced rubber-wood with a melamine finish. Two drawers with a unique vertical panel pattern offer practical storage space while contributing to the table’s elegant design. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14152,7 +14152,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 50, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc164", name: "Sliding-Door Console Table 100cm — Black", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11226", tag: "New", ph: "", img: "assets/products/cc164-1.webp",
+  { id: "cc164", name: "Sliding-Door Console Table 100cm, Black", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11226", tag: "New", ph: "", img: "assets/products/cc164-1.webp",
     imgs: ["assets/products/cc164-1.webp", "assets/products/cc164-2.webp", "assets/products/cc164-3.webp", "assets/products/cc164-4.webp", "assets/products/cc164-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 100cm wide, 35cm deep and 80.5cm high. MDF. MDF with a laminated paper finish. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14162,7 +14162,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 35, h: 80.5, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth. Avoid using strong chemical cleaners. WARNING:. Children have died from furniture tipover." },
 
-  { id: "cc165", name: "Round Console Table 110cm — Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11227", tag: "New", ph: "", img: "assets/products/cc165-1.webp",
+  { id: "cc165", name: "Round Console Table 110cm, Green", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11227", tag: "New", ph: "", img: "assets/products/cc165-1.webp",
     imgs: ["assets/products/cc165-1.webp", "assets/products/cc165-2.webp", "assets/products/cc165-3.webp", "assets/products/cc165-4.webp", "assets/products/cc165-5.webp"],
     desc: "The narrow table that makes a hallway look finished. Modern console table design with three open shelves. Narrow enough for a hallway, long enough to be useful in one. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -14174,7 +14174,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc166", name: "Timber Console Table 100cm — Black", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11228", tag: "New", ph: "", img: "assets/products/cc166-1.webp",
+  { id: "cc166", name: "Timber Console Table 100cm, Black", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11228", tag: "New", ph: "", img: "assets/products/cc166-1.webp",
     imgs: ["assets/products/cc166-1.webp", "assets/products/cc166-2.webp", "assets/products/cc166-3.webp", "assets/products/cc166-4.webp", "assets/products/cc166-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 100cm across. MDF. Features an eye-catching design. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14186,7 +14186,7 @@ const PRODUCTS = [
     boxContents: ["1x Console table", "1x Assembly Instructions"],
     care: "Clean with a damp cloth. Lift when moving it, do not pull. WARNING:. Children have died from furniture tipover." },
 
-  { id: "cc167", name: "Console Table 120cm 35cm — Black", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11229", tag: "New", ph: "", img: "assets/products/cc167-1.webp",
+  { id: "cc167", name: "Console Table 120cm 35cm, Black", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11229", tag: "New", ph: "", img: "assets/products/cc167-1.webp",
     imgs: ["assets/products/cc167-1.webp", "assets/products/cc167-2.webp", "assets/products/cc167-3.webp", "assets/products/cc167-4.webp", "assets/products/cc167-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 35cm across. MDF with a wood veneer finish. Elegant Black wood finish that enhances the look of your space. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14199,7 +14199,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table", "Colour": "Black", "Material": "MDF with a wood veneer finish" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc168", name: "Console Table 120cm — White", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11230", tag: "New", ph: "", img: "assets/products/cc168-1.webp",
+  { id: "cc168", name: "Console Table 120cm, White", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11230", tag: "New", ph: "", img: "assets/products/cc168-1.webp",
     imgs: ["assets/products/cc168-1.webp", "assets/products/cc168-2.webp", "assets/products/cc168-3.webp", "assets/products/cc168-4.webp", "assets/products/cc168-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 35cm across. MDF with a wood veneer finish. Elegant White wood finish that enhances the look of your space. Narrow enough for a hallway, long enough to be useful in one. The kind of piece that quietly holds a room together.",
     features: [
@@ -14212,7 +14212,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table", "Colour": "White", "Material": "MDF with a wood veneer finish" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc169", name: "Round Console Table 110cm — Cream", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11231", tag: "New", ph: "", img: "assets/products/cc169-1.webp",
+  { id: "cc169", name: "Round Console Table 110cm, Cream", cat: "Living Room", room: "Living Room", price: 284, memberPrice: 255, sku: "SH-11231", tag: "New", ph: "", img: "assets/products/cc169-1.webp",
     imgs: ["assets/products/cc169-1.webp", "assets/products/cc169-2.webp", "assets/products/cc169-3.webp", "assets/products/cc169-4.webp", "assets/products/cc169-5.webp"],
     desc: "The narrow table that makes a hallway look finished. Modern console table design with three open shelves. Narrow enough for a hallway, long enough to be useful in one. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -14224,7 +14224,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc170", name: "Ash Sliding-Door Console Table 100cm — Walnut", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11232", tag: "New", ph: "", img: "assets/products/cc170-1.webp",
+  { id: "cc170", name: "Ash Sliding-Door Console Table 100cm, Walnut", cat: "Living Room", room: "Living Room", price: 308, memberPrice: 277, sku: "SH-11232", tag: "New", ph: "", img: "assets/products/cc170-1.webp",
     imgs: ["assets/products/cc170-1.webp", "assets/products/cc170-2.webp", "assets/products/cc170-3.webp", "assets/products/cc170-4.webp", "assets/products/cc170-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 100cm wide, 35cm deep and 80.5cm high. MDF with ash-coloured laminate; metal frame. Sliding ribbed doors for hidden storage. Narrow enough for a hallway, long enough to be useful in one. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -14237,7 +14237,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 35, h: 80.5, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc171", name: "Sculptural Oval Console Table 120cm — Black", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11233", tag: "New", ph: "", img: "assets/products/cc171-1.webp",
+  { id: "cc171", name: "Sculptural Oval Console Table 120cm, Black", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11233", tag: "New", ph: "", img: "assets/products/cc171-1.webp",
     imgs: ["assets/products/cc171-1.webp", "assets/products/cc171-2.webp", "assets/products/cc171-3.webp", "assets/products/cc171-4.webp", "assets/products/cc171-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 76cm high. MDF with black laminated paper finish. Oval tabletop provides space for decor or everyday items. Narrow enough for a hallway, long enough to be useful in one. The kind of piece that quietly holds a room together.",
     features: [
@@ -14250,7 +14250,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 35, h: 76, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc172", name: "Travertine-Look Console Table 120 × 120 × 120 × 120 × 35cm 77cm high — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11234", tag: "New", ph: "", img: "assets/products/cc172-1.webp",
+  { id: "cc172", name: "Travertine-Look Console Table 120 × 120 × 120 × 120 × 35cm 77cm high, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11234", tag: "New", ph: "", img: "assets/products/cc172-1.webp",
     imgs: ["assets/products/cc172-1.webp", "assets/products/cc172-2.webp", "assets/products/cc172-3.webp", "assets/products/cc172-4.webp", "assets/products/cc172-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 77cm high. MDF with oak melamine veneer. Travertine-look top adds visual contrast and a refined surface finish. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14262,7 +14262,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 35, h: 77, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc173", name: "Console Table 120cm — Walnut", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11235", tag: "New", ph: "", img: "assets/products/cc173-1.webp",
+  { id: "cc173", name: "Console Table 120cm, Walnut", cat: "Living Room", room: "Living Room", price: 495, memberPrice: 445, sku: "SH-11235", tag: "New", ph: "", img: "assets/products/cc173-1.webp",
     imgs: ["assets/products/cc173-1.webp", "assets/products/cc173-2.webp", "assets/products/cc173-3.webp", "assets/products/cc173-4.webp", "assets/products/cc173-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 35cm across. MDF with a wood veneer finish. Warm Walnut wood finish that enhances the look of your space. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14275,7 +14275,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table", "Colour": "Walnut", "Material": "MDF with a wood veneer finish" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc174", name: "Bamboo Console Table 110cm — Natural", cat: "Living Room", room: "Living Room", price: 248, memberPrice: 223, sku: "SH-11236", tag: "New", ph: "", img: "assets/products/cc174-1.webp",
+  { id: "cc174", name: "Bamboo Console Table 110cm, Natural", cat: "Living Room", room: "Living Room", price: 248, memberPrice: 223, sku: "SH-11236", tag: "New", ph: "", img: "assets/products/cc174-1.webp",
     imgs: ["assets/products/cc174-1.webp", "assets/products/cc174-2.webp", "assets/products/cc174-3.webp", "assets/products/cc174-4.webp", "assets/products/cc174-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 110cm wide, 35cm deep and 80cm high. Bamboo. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14287,7 +14287,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 35, h: 80, unit: "cm", printed: true },
     care: "Wipe clean with a damp cloth." },
 
-  { id: "cc175", name: "Console Table 120 × 120 × 120 × 120 × 35cm 74cm high — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11237", tag: "New", ph: "", img: "assets/products/cc175-1.webp",
+  { id: "cc175", name: "Console Table 120 × 120 × 120 × 120 × 35cm 74cm high, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11237", tag: "New", ph: "", img: "assets/products/cc175-1.webp",
     imgs: ["assets/products/cc175-1.webp", "assets/products/cc175-2.webp", "assets/products/cc175-3.webp", "assets/products/cc175-4.webp", "assets/products/cc175-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 74cm high. MDF with laminated paper finish. Two drawers with rail sliders for smooth operation. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14300,7 +14300,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 35, h: 74, unit: "cm", printed: true },
     care: "Indoor use only. WARNING:. Children have died from furniture tip-over. Always secure this furniture to the wall using the provided anchor device." },
 
-  { id: "cc176", name: "Console Table 120 × 35cm — Black", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11238", tag: "New", ph: "", img: "assets/products/cc176-1.webp",
+  { id: "cc176", name: "Console Table 120 × 35cm, Black", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11238", tag: "New", ph: "", img: "assets/products/cc176-1.webp",
     imgs: ["assets/products/cc176-1.webp", "assets/products/cc176-2.webp", "assets/products/cc176-3.webp", "assets/products/cc176-4.webp", "assets/products/cc176-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 74cm high. MDF with laminated paper finish. Two drawers with rail sliders for smooth operation. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14313,7 +14313,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 35, h: 74, unit: "cm", printed: true },
     care: "Indoor use only. WARNING:. Children have died from furniture tip-over. Always secure this furniture to the wall using the provided anchor device." },
 
-  { id: "cc177", name: "Console Table 120 × 120 × 120 × 120 × 35cm 76cm high — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11239", tag: "New", ph: "", img: "assets/products/cc177-1.webp",
+  { id: "cc177", name: "Console Table 120 × 120 × 120 × 120 × 35cm 76cm high, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11239", tag: "New", ph: "", img: "assets/products/cc177-1.webp",
     imgs: ["assets/products/cc177-1.webp", "assets/products/cc177-2.webp", "assets/products/cc177-3.webp", "assets/products/cc177-4.webp", "assets/products/cc177-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 76cm high. Particleboard with laminated paper finish. Solid oak finish runs across the top and base for a cohesive look. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14325,7 +14325,7 @@ const PRODUCTS = [
     dims: { w: 120, d: 35, h: 76, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc178", name: "Console Table 100cm — White", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11240", tag: "New", ph: "", img: "assets/products/cc178-1.webp",
+  { id: "cc178", name: "Console Table 100cm, White", cat: "Living Room", room: "Living Room", price: 234, memberPrice: 210, sku: "SH-11240", tag: "New", ph: "", img: "assets/products/cc178-1.webp",
     imgs: ["assets/products/cc178-1.webp", "assets/products/cc178-2.webp", "assets/products/cc178-3.webp", "assets/products/cc178-4.webp", "assets/products/cc178-5.webp"],
     desc: "The narrow table that makes a hallway look finished. Elegant scalloped detailing for a decorative finish. Narrow enough for a hallway, long enough to be useful in one. The kind of piece that quietly holds a room together.",
     features: [
@@ -14335,7 +14335,7 @@ const PRODUCTS = [
     specs: { "Type": "Console Table" },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc179", name: "Bamboo Console Table 110cm — Black", cat: "Living Room", room: "Living Room", price: 273, memberPrice: 245, sku: "SH-11241", tag: "New", ph: "", img: "assets/products/cc179-1.webp",
+  { id: "cc179", name: "Bamboo Console Table 110cm, Black", cat: "Living Room", room: "Living Room", price: 273, memberPrice: 245, sku: "SH-11241", tag: "New", ph: "", img: "assets/products/cc179-1.webp",
     imgs: ["assets/products/cc179-1.webp", "assets/products/cc179-2.webp", "assets/products/cc179-3.webp", "assets/products/cc179-4.webp", "assets/products/cc179-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 110cm wide, 35cm deep and 80cm high. Bamboo. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14360,7 +14360,7 @@ const PRODUCTS = [
     dims: { w: 100, d: 30, h: 77, unit: "cm", printed: true },
     care: "Indoor use only. WARNING. Children have died from furniture tipover. ALWAYS secure this furniture with an anchor device." },
 
-  { id: "cc181", name: "Console Table 95cm — Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11243", tag: "New", ph: "", img: "assets/products/cc181-1.webp",
+  { id: "cc181", name: "Console Table 95cm, Oak", cat: "Living Room", room: "Living Room", price: 247, memberPrice: 222, sku: "SH-11243", tag: "New", ph: "", img: "assets/products/cc181-1.webp",
     imgs: ["assets/products/cc181-1.webp", "assets/products/cc181-2.webp", "assets/products/cc181-3.webp", "assets/products/cc181-4.webp", "assets/products/cc181-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 105cm wide, 38cm deep and 14cm high. MDF with a laminated paper finish. Wall-mounted console table with a slim, floating installation. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14374,7 +14374,7 @@ const PRODUCTS = [
     dims: { w: 105, d: 38, h: 14, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc182", name: "Round Console Table 110cm — Oak", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11244", tag: "New", ph: "", img: "assets/products/cc182-1.webp",
+  { id: "cc182", name: "Round Console Table 110cm, Oak", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11244", tag: "New", ph: "", img: "assets/products/cc182-1.webp",
     imgs: ["assets/products/cc182-1.webp", "assets/products/cc182-2.webp", "assets/products/cc182-3.webp", "assets/products/cc182-4.webp", "assets/products/cc182-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 110cm wide, 40cm deep and 78cm high. MDF with oak veneer finish. Rounded tabletop with soft curved edges for a contemporary look. Narrow enough for a hallway, long enough to be useful in one. The kind of piece that quietly holds a room together.",
     features: [
@@ -14388,7 +14388,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 40, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc183", name: "Console Table 160cm — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11245", tag: "New", ph: "", img: "assets/products/cc183-1.webp",
+  { id: "cc183", name: "Console Table 160cm, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11245", tag: "New", ph: "", img: "assets/products/cc183-1.webp",
     imgs: ["assets/products/cc183-1.webp", "assets/products/cc183-2.webp", "assets/products/cc183-3.webp", "assets/products/cc183-4.webp", "assets/products/cc183-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 160cm wide, 40cm deep and 78cm high. MDF with oak veneer finish. Soft curved edges soften the look and suit a range of entryway and living spaces. Narrow enough for a hallway, long enough to be useful in one. Leave it bare, or give it one good object and nothing else.",
     features: [
@@ -14401,7 +14401,7 @@ const PRODUCTS = [
     dims: { w: 160, d: 40, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc184", name: "Round Console Table 110cm — Walnut", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11246", tag: "New", ph: "", img: "assets/products/cc184-1.webp",
+  { id: "cc184", name: "Round Console Table 110cm, Walnut", cat: "Living Room", room: "Living Room", price: 370, memberPrice: 333, sku: "SH-11246", tag: "New", ph: "", img: "assets/products/cc184-1.webp",
     imgs: ["assets/products/cc184-1.webp", "assets/products/cc184-2.webp", "assets/products/cc184-3.webp", "assets/products/cc184-4.webp", "assets/products/cc184-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 110cm wide, 40cm deep and 78cm high. MDF with walnut veneer finish. Rounded tabletop with soft curved edges for a contemporary look. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14415,7 +14415,7 @@ const PRODUCTS = [
     dims: { w: 110, d: 40, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc185", name: "Console Table 160cm — Walnut", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11247", tag: "New", ph: "", img: "assets/products/cc185-1.webp",
+  { id: "cc185", name: "Console Table 160cm, Walnut", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11247", tag: "New", ph: "", img: "assets/products/cc185-1.webp",
     imgs: ["assets/products/cc185-1.webp", "assets/products/cc185-2.webp", "assets/products/cc185-3.webp", "assets/products/cc185-4.webp", "assets/products/cc185-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 160cm wide, 40cm deep and 78cm high. MDF with walnut veneer finish. Soft curved edges soften the look and suit a range of entryway and living spaces. Narrow enough for a hallway, long enough to be useful in one. Style it with a stack of books and something with height.",
     features: [
@@ -14428,7 +14428,7 @@ const PRODUCTS = [
     dims: { w: 160, d: 40, h: 78, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
 
-  { id: "cc186", name: "Timber Round Console Table 120cm — Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11248", tag: "New", ph: "", img: "assets/products/cc186-1.webp",
+  { id: "cc186", name: "Timber Round Console Table 120cm, Oak", cat: "Living Room", room: "Living Room", price: 494, memberPrice: 444, sku: "SH-11248", tag: "New", ph: "", img: "assets/products/cc186-1.webp",
     imgs: ["assets/products/cc186-1.webp", "assets/products/cc186-2.webp", "assets/products/cc186-3.webp", "assets/products/cc186-4.webp", "assets/products/cc186-5.webp"],
     desc: "The narrow table that makes a hallway look finished. 120cm wide, 35cm deep and 80cm high. MDF with oak laminated paper finish. Two drawers provide concealed storage for small items and essentials. Narrow enough for a hallway, long enough to be useful in one. Works as well against a wall as it does floating in a room.",
     features: [
@@ -14508,8 +14508,8 @@ const HAMPER_ITEMS = [
   { id: "h-gb005", name: "Wine X Cocktail Strainer", price: 8.09, cat: "Home Touch", emoji: "🍽️", img: "assets/hamper/h005.webp" },
   { id: "h-gb006", name: "Riedel Ouverture Set of 2 Red Wine Glasses", price: 76.0, cat: "Home Touch", emoji: "🍽️", img: "assets/hamper/h006.webp" },
   { id: "h-gb007", name: "Huggables Toys Bud the Elf", price: 15.99, cat: "Sweet", emoji: "🍫", img: "assets/hamper/h007.webp" },
-  { id: "h-gb008", name: "Plain Gift Card — Black", price: 0.0, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h008.webp" },
-  { id: "h-gb009", name: "Plain Gift Card — Cream", price: 0.0, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h009.webp" },
+  { id: "h-gb008", name: "Plain Gift Card, Black", price: 0.0, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h008.webp" },
+  { id: "h-gb009", name: "Plain Gift Card, Cream", price: 0.0, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h009.webp" },
   { id: "h-gb010", name: "Premium Baby", price: 3.64, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h010.webp" },
   { id: "h-gb011", name: "Good Mood Food", price: 3.64, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h011.webp" },
   { id: "h-gb012", name: "Love You", price: 3.64, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h012.webp" },
@@ -14526,10 +14526,10 @@ const HAMPER_ITEMS = [
   { id: "h-gb023", name: "Video Message", price: 6.11, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h023.webp" },
   { id: "h-gb024", name: "Full Colour Printed Box Branding", price: 4.94, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h024.webp" },
   { id: "h-gb025", name: "Confetti Canon", price: 7.4, cat: "Finishing", emoji: "🎀", img: "assets/hamper/h025.webp" },
-  { id: "h-gb026", name: "Gift Packaging — Medium", price: 41.91, cat: "The Box", emoji: "🎁" },
-  { id: "h-gb027", name: "Gift Packaging — Small", price: 41.91, cat: "The Box", emoji: "🎁" },
-  { id: "h-gb028", name: "Gift Packaging — Large", price: 48.09, cat: "The Box", emoji: "🎁" },
-  { id: "h-gb029", name: "Gift Packaging — Extra", price: 60.43, cat: "The Box", emoji: "🎁" },
+  { id: "h-gb026", name: "Gift Packaging, Medium", price: 41.91, cat: "The Box", emoji: "🎁" },
+  { id: "h-gb027", name: "Gift Packaging, Small", price: 41.91, cat: "The Box", emoji: "🎁" },
+  { id: "h-gb028", name: "Gift Packaging, Large", price: 48.09, cat: "The Box", emoji: "🎁" },
+  { id: "h-gb029", name: "Gift Packaging, Extra", price: 60.43, cat: "The Box", emoji: "🎁" },
   { id: "h-gb030", name: "Signature Gift Box", price: 0.0, cat: "The Box", emoji: "🎁", img: "assets/hamper/h030.webp" },
   { id: "h-gb031", name: "Alfresco Picnic Basket", price: 179.01, cat: "The Box", emoji: "🎁", img: "assets/hamper/h031.webp" },
   { id: "h-gb032", name: "Heritage Picnic Basket", price: 183.95, cat: "The Box", emoji: "🎁", img: "assets/hamper/h032.webp" },

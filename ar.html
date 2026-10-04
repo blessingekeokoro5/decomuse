@@ -98,9 +98,9 @@
         });
       } else if (hasUsdz) {
         // iPhone-only: a direct rel="ar" USDZ link fires the native "View in AR?" prompt.
-        // (The anchor handles it natively — no JS needed.)
+        // (The anchor handles it natively, no JS needed.)
       } else {
-        // No model yet — honest, helpful fallback.
+        // No model yet, honest, helpful fallback.
         const cta = document.getElementById("arCta");
         cta.addEventListener("click", function () {
           msg.hidden = false;

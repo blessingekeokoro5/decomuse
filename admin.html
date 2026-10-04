@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Admin — Samira Home Decor</title>
+  <title>Admin, Samira Home Decor</title>
   <meta name="robots" content="noindex, nofollow">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -104,7 +104,7 @@
 
       <!-- Send forms to a recipient -->
       <div id="tabSend" hidden>
-        <div class="admin-note">Email a client or new employee their required forms — they'll get links to complete &amp; sign online. A copy comes to your inbox too.</div>
+        <div class="admin-note">Email a client or new employee their required forms, they'll get links to complete &amp; sign online. A copy comes to your inbox too.</div>
         <div class="admin-formcard" style="max-width:680px">
           <h3>Send forms to a recipient</h3>
           <div class="field-row">
@@ -113,7 +113,7 @@
           </div>
           <div class="field"><label>Quick bundle</label>
             <select id="recBundle" onchange="applyBundle()">
-              <option value="">— Choose a bundle, or tick forms below —</option>
+              <option value="">Choose a bundle, or tick forms below</option>
               <option value="client-onboarding">Client onboarding documents</option>
               <option value="employee-onboarding">Employee onboarding documents</option>
             </select></div>
@@ -147,7 +147,7 @@
   <script src="js/admin.js"></script>
   <script>
     /* ===== Admin gate ===== */
-    // Default password — CHANGE THIS, then redeploy, to lock the admin area permanently.
+    // Default password, CHANGE THIS, then redeploy, to lock the admin area permanently.
     const ADMIN_DEFAULT = "ZaraHosini@30";
     function adminStoredHash() { return localStorage.getItem("dm_admin_pin") || dmHash(ADMIN_DEFAULT); }
     function isAuthed() { try { return sessionStorage.getItem("dm_admin_ok") === "1"; } catch (e) { return false; } }
@@ -211,7 +211,7 @@
       else {
         var body = "Hi " + (name || "") + ",%0D%0A%0D%0A" + (msg ? encodeURIComponent(msg) + "%0D%0A%0D%0A" : "") + "Please complete your Samira Home Decor form(s):%0D%0A%0D%0A" + list.map(function (f) { return f.title + ": " + f.url; }).join("%0D%0A") + "%0D%0A%0D%0AWarm regards,%0D%0ASamira Home Decor";
         out.style.color = "var(--muted)";
-        out.innerHTML = "Email service isn't enabled yet — opening your email app to send manually…";
+        out.innerHTML = "Email service isn't enabled yet, opening your email app to send manually…";
         location.href = "mailto:" + email + "?subject=" + encodeURIComponent("Your Samira Home Decor forms") + "&body=" + body;
       }
     }
@@ -263,8 +263,8 @@
           return `<tr>
             <td>${d.toLocaleDateString()}<br><small style="color:var(--muted)">${d.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })}</small></td>
             <td><span class="${cls}">${r.type}</span></td>
-            <td>${name || "—"}</td>
-            <td>${email ? `<a href="mailto:${email}">${email}</a>` : "—"}</td>
+            <td>${name || ""}</td>
+            <td>${email ? `<a href="mailto:${email}">${email}</a>` : ""}</td>
             <td><button class="db-view" onclick="this.closest('tr').nextElementSibling.hidden=!this.closest('tr').nextElementSibling.hidden">View</button></td>
           </tr>
           <tr hidden><td colspan="5"><div class="db-details">${rows}</div></td></tr>`;

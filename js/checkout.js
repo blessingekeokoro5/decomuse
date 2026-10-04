@@ -36,7 +36,7 @@ function cartWeight() {
     let w = DEFAULT_ITEM_KG;
     const p = (typeof findProduct === "function") ? findProduct(i.id) : null;
     const raw = (p && p.weight) != null ? p.weight : i.weight;
-    // First number only — "88 kg / 100 kg" must read as 88, not 88100.
+    // First number only"88 kg / 100 kg" must read as 88, not 88100.
     if (raw != null) { const m = String(raw).match(/[0-9]+(\.[0-9]+)?/); const n = m ? parseFloat(m[0]) : NaN; if (!isNaN(n) && n > 0) w = n; }
     kg += w * (i.qty || 1);
   });
@@ -107,7 +107,7 @@ function applyGiftCardCheckout() {
     updateTotalsUI(); return;
   }
   msg.style.color = "var(--forest)";
-  msg.textContent = `✓ Gift card applied — ${money(gc.balance)} available.`;
+  msg.textContent = `✓ Gift card applied, ${money(gc.balance)} available.`;
   updateTotalsUI();
 }
 
@@ -246,19 +246,19 @@ function setFulfil(mode) {
     if (title) title.textContent = "Contact for pickup";
     if (delivery) delivery.style.display = "none";
     if (radio) radio.style.display = "none";
-    if (note) note.innerHTML = "🛍️ <strong>Pick up</strong> — collect from our Klemzig, Adelaide studio. We'll email you when your order is ready (usually 1–2 business days). No delivery fee.";
+    if (note) note.innerHTML = "🛍️ <strong>Pick up</strong>collect from our Klemzig, Adelaide studio. We'll email you when your order is ready (usually 1 to 2 business days). No delivery fee.";
   } else if (mode === "sameday") {
     showAddr(true);
     if (title) title.textContent = "Delivery address";
     if (delivery) delivery.style.display = "";
     if (radio) radio.style.display = "";
-    if (note) note.innerHTML = "🛵 <strong>Same-day local delivery</strong> — for metro-area addresses, delivered today by <strong>Uber</strong> or <strong>DoorDash</strong> on orders placed before 2pm (Mon–Sat). Flat $15 local fee. We'll text you tracking once your courier is on the way. Not in a metro area? Choose Delivery instead.";
+    if (note) note.innerHTML = "🛵 <strong>Same-day local delivery</strong>for metro-area addresses, delivered today by <strong>Uber</strong> or <strong>DoorDash</strong> on orders placed before 2pm (Mon, Sat). Flat $15 local fee. We'll text you tracking once your courier is on the way. Not in a metro area? Choose Delivery instead.";
   } else if (mode === "layby") {
     showAddr(true);
     if (title) title.textContent = "Delivery address";
     if (delivery) delivery.style.display = "";
     if (radio) radio.style.display = "";
-    if (note) note.innerHTML = "🗓️ <strong>Lay-by</strong> — reserve your pieces with a 20% deposit today and pay the balance over 8 weeks. Your items are held for you and dispatched once paid in full. Submit below and our team will email you to set it up.";
+    if (note) note.innerHTML = "🗓️ <strong>Lay-by</strong>reserve your pieces with a 20% deposit today and pay the balance over 8 weeks. Your items are held for you and dispatched once paid in full. Submit below and our team will email you to set it up.";
   } else {
     showAddr(true);
     if (title) title.textContent = "Delivery address";
@@ -271,7 +271,7 @@ function setFulfil(mode) {
 
 async function startPayment(e) {
   e.preventDefault();
-  // Must be logged in to place an order — so it saves to the account and can be tracked.
+  // Must be logged in to place an order, so it saves to the account and can be tracked.
   const _acct = (typeof getAccount === "function") ? getAccount() : null;
   if (!_acct || !_acct.email) {
     let gate = document.getElementById("coLoginGate");
@@ -283,7 +283,7 @@ async function startPayment(e) {
       const pb = document.getElementById("payBtn");
       if (pb && pb.parentNode) pb.parentNode.insertBefore(gate, pb);
     }
-    gate.innerHTML = '🔒 Please <a href="account.html">log in or create a free account</a> to place your order — it lets you track it every step of the way, from picking to your door.';
+    gate.innerHTML = '🔒 Please <a href="account.html">log in or create a free account</a> to place your order, it lets you track it every step of the way, from picking to your door.';
     gate.scrollIntoView({ behavior: "smooth", block: "center" });
     return;
   }
@@ -314,7 +314,7 @@ async function startPayment(e) {
       ["Items", cart.map((i) => `${i.qty}× ${i.name}`).join("; ")]
     ];
     btn.disabled = true; btn.textContent = "Sending request…";
-    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Lay-by request"); } catch (err) {}
+    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor, Lay-by request"); } catch (err) {}
     showToast("Lay-by request sent ✦");
     document.getElementById("checkoutWrap").innerHTML =
       `<div class="empty-state" style="max-width:560px;margin:0 auto"><div class="em">🗓️</div><h2>Lay-by request received</h2>
@@ -344,7 +344,7 @@ async function startPayment(e) {
   // --- Real Stripe Checkout (active as soon as an endpoint is set) ---
   if (cfg.checkoutEndpoint) {
     try {
-      // We send only WHAT is being bought — ids, quantities, variants. Every dollar
+      // We send only WHAT is being bought, ids, quantities, variants. Every dollar
       // figure (unit price, discount, shipping) is recomputed server-side from the
       // trusted catalogue, so an edited cart can't change what Stripe charges.
       const od = orderDiscount(t.sub);
@@ -366,7 +366,7 @@ async function startPayment(e) {
       });
       const data = await res.json();
 
-      // Paid in full with a verified gift card — the shop has recorded the order.
+      // Paid in full with a verified gift card, the shop has recorded the order.
       if (data.paidByGiftCard) {
         const acc = getAccount();
         if (acc) {

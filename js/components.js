@@ -82,13 +82,13 @@ const IC = {
   camera: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h3l1.5-2h7L17 8h3a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"/><circle cx="12" cy="13" r="3.2"/></svg>'
 };
 
-/* Australian flag as inline SVG — renders everywhere (Windows can't draw the 🇦🇺 emoji). */
+/* Australian flag as inline SVG, renders everywhere (Windows can't draw the 🇦🇺 emoji). */
 const AU_FLAG_SVG = '<svg class="au-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><clipPath id="auJack"><rect width="30" height="20"/></clipPath><g clip-path="url(#auJack)"><path d="M0,0 30,20 M30,0 0,20" stroke="#fff" stroke-width="4"/><path d="M0,0 30,20 M30,0 0,20" stroke="#E4002B" stroke-width="2"/><rect x="13" width="4" height="20" fill="#fff"/><rect y="8" width="30" height="4" fill="#fff"/><rect x="13.75" width="2.5" height="20" fill="#E4002B"/><rect y="8.75" width="30" height="2.5" fill="#E4002B"/></g><circle cx="15" cy="30" r="2.6" fill="#fff"/><circle cx="46" cy="9" r="1.7" fill="#fff"/><circle cx="53" cy="19" r="1.7" fill="#fff"/><circle cx="46" cy="30" r="1.7" fill="#fff"/><circle cx="39" cy="19" r="1.7" fill="#fff"/><circle cx="46" cy="19.5" r="1" fill="#fff"/></svg>';
 
 /* Australia map silhouette (trust badge) */
 const AU_MAP_SVG = '<svg viewBox="0 0 100 88" fill="currentColor" aria-hidden="true" focusable="false"><path d="M12 30c-2-8 4-14 12-15 6-1 9-6 15-6l5 5c6-1 11 1 16 0 6-1 10-6 14-4 3 4 0 9 4 12 5 2 12 2 14 8 1 5-5 8-4 13 1 6 7 9 4 15-4 6-12 4-17 8-4 3-5 9-11 9-5 0-7-5-12-4-6 1-9 7-15 5-6-2-6-9-11-12-6-4-14-4-15-11-1-6 4-10 2-16-1-3-1-5-1-7z"/><circle cx="62" cy="83" r="3.4"/></svg>';
 
-/* UK (Union Jack) flag for the English language label — inline SVG (Windows can't draw 🇬🇧). */
+/* UK (Union Jack) flag for the English language label, inline SVG (Windows can't draw 🇬🇧). */
 const UK_FLAG_SVG = '<svg class="uk-flag" viewBox="0 0 60 40" width="19" height="13" aria-hidden="true" focusable="false" style="border-radius:2px;vertical-align:middle;flex:0 0 auto"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40 M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40 M60,0 0,40" stroke="#C8102E" stroke-width="4"/><rect x="25" width="10" height="40" fill="#fff"/><rect y="15" width="60" height="10" fill="#fff"/><rect x="26.5" width="7" height="40" fill="#C8102E"/><rect y="16.5" width="60" height="7" fill="#C8102E"/></svg>';
 
 /* TikTok icon (no IC entry) */
@@ -201,7 +201,7 @@ function buildHeader() {
       </div>`;
   }).join("");
 
-  // Services mega panel — same look as the category mega-menus
+  // Services mega panel, same look as the category mega-menus
   const servicesMega = `
       <div class="mega" data-mega="services">
         <div class="container mega-inner">
@@ -313,7 +313,7 @@ function buildHeader() {
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
       <a class="brand" href="index.html" aria-label="Samira Home Decor home">
-        <img class="brand-logo-full" src="assets/logo.svg" data-i="0" alt="Samira Home Decor — Style Your Space by Samira" onerror="nextLogo(this)">
+        <img class="brand-logo-full" src="assets/logo.svg" data-i="0" alt="Samira Home Decor, Style Your Space by Samira" onerror="nextLogo(this)">
         <span class="brand-mark">
           <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <!-- outer arch -->
@@ -400,7 +400,7 @@ function buildFooter() {
     { t: "About Us", h: "about.html" },
     { t: "Property Styling & Design", h: "staging.html" },
     { t: "Portfolio", h: "portfolio.html" },
-    { t: "The Edit — Journal", h: "blog.html" },
+    { t: "The Edit, Journal", h: "blog.html" },
     { t: "Assistance & Contact", h: "support.html" },
     { t: "Contact us", h: "contact.html" },
     { t: "Store locator", h: "store-locator.html" },
@@ -485,7 +485,7 @@ function buildFooter() {
           <h4>The Samira Home Decor app is on its way</h4>
           <p>Shop, style and get inspired on the go. Got an idea or a feature you'd love? Tell us, we're building it for you.</p>
         </div>
-        <form class="app-soon-form" data-demo-form data-subject="Samira Home Decor App — suggestion" data-success-msg="Thank you! Your app suggestion has been sent, we really appreciate it. 💛">
+        <form class="app-soon-form" data-demo-form data-subject="Samira Home Decor App, suggestion" data-success-msg="Thank you! Your app suggestion has been sent, we really appreciate it. 💛">
           <input type="email" placeholder="Your email (optional)" aria-label="Email">
           <textarea placeholder="Your suggestion for the Samira Home Decor app…" aria-label="App suggestion" required></textarea>
           <button type="submit" class="btn btn--primary">Send suggestion</button>
@@ -535,11 +535,11 @@ function buildFloating() {
     </div>
 
     <div class="dm-launch" id="dmLaunch">
-      <button class="launch-btn launch-gift" id="giftFab" aria-label="Ask Samira Stylera — gifts, décor, styling & support">
+      <button class="launch-btn launch-gift" id="giftFab" aria-label="Ask Samira Stylera, gifts, décor, styling & support">
         <span class="lb-star">✦</span>
         <span>Ask Samira Stylera</span>
       </button>
-      <button class="launch-btn launch-help" id="supportFab" aria-label="Help desk — track an order, returns, FAQs &amp; contact">
+      <button class="launch-btn launch-help" id="supportFab" aria-label="Help desk, track an order, returns, FAQs &amp; contact">
         <span>?</span><span>Help</span>
       </button>
     </div>
@@ -723,9 +723,9 @@ function initEnquire() {
     const btn = form.querySelector('button[type="submit"]');
     const data = (typeof collectForm === "function") ? collectForm(form) : [];
     if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
-    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Services enquiry"); } catch (err) {}
+    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor, Services enquiry"); } catch (err) {}
     const s = document.getElementById("enquireSuccess");
-    if (s) { s.classList.add("show"); s.textContent = "Thank you! Your enquiry has been sent — we'll be in touch shortly."; }
+    if (s) { s.classList.add("show"); s.textContent = "Thank you! Your enquiry has been sent, we'll be in touch shortly."; }
     form.reset();
     if (btn) { btn.disabled = false; btn.textContent = "Send enquiry"; }
   });
@@ -851,7 +851,7 @@ function buildCountryModal() {
     <div class="country-card" role="dialog" aria-label="Confirm your country">
       <button class="country-close" id="countryClose" aria-label="Close">✕</button>
       <h3>Confirm your country</h3>
-      <p>You're shopping the <strong>Samira Home Decor Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to selected regions — Australia, New Zealand, Nigeria, the UK, USA &amp; Canada — confirm your region for delivery &amp; pricing info.</p>
+      <p>You're shopping the <strong>Samira Home Decor Australia</strong> store <span id="homeFlag">🇦🇺</span>. We ship to selected regions, Australia, New Zealand, Nigeria, the UK, USA &amp; Canada, confirm your region for delivery &amp; pricing info.</p>
       <div class="country-detected" id="countryDetected"></div>
       <label class="country-select-label">Shopping from another country?
         <select id="countrySelect">${options}</select>
@@ -870,7 +870,7 @@ function updateCountryNote() {
   const r = REGIONS[sel.value];
   const note = document.getElementById("countryNote");
   if (r.cur === "AUD") note.innerHTML = `✓ Prices shown in <strong>AUD $</strong> · free shipping over $500.`;
-  else note.innerHTML = `Prices will display in <strong>${r.cur}</strong> at today's exchange rate. Orders are processed in <strong>AUD</strong> at checkout — your bank applies the final conversion. International delivery times &amp; any duties may apply.`;
+  else note.innerHTML = `Prices will display in <strong>${r.cur}</strong> at today's exchange rate. Orders are processed in <strong>AUD</strong> at checkout, your bank applies the final conversion. International delivery times &amp; any duties may apply.`;
 }
 
 function updateRegionFlag() {
@@ -954,14 +954,14 @@ function initSearch() {
   if (hsForm) hsForm.addEventListener("submit", (e) => { e.preventDefault(); input.value = hsInput.value; open(); });
   if (hsInput) hsInput.addEventListener("input", () => { if (hsInput.value.trim()) { input.value = hsInput.value; if (!overlay.classList.contains("open")) open(); else renderResults(input.value); } });
 
-  // Voice search — always visible; uses the Web Speech API where supported
+  // Voice search, always visible; uses the Web Speech API where supported
   const voiceBtn = document.getElementById("hsVoice");
   if (voiceBtn) {
     voiceBtn.addEventListener("click", () => {
       const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
-      if (!SR) { showToast("Voice search works in Chrome, Edge or Safari — please type your search here 🙂"); return; }
+      if (!SR) { showToast("Voice search works in Chrome, Edge or Safari, please type your search here 🙂"); return; }
       let rec;
-      try { rec = new SR(); } catch (e) { showToast("Voice search isn't available right now — please type instead"); return; }
+      try { rec = new SR(); } catch (e) { showToast("Voice search isn't available right now, please type instead"); return; }
       rec.lang = "en-AU"; rec.interimResults = false; rec.maxAlternatives = 1;
       voiceBtn.classList.add("listening");
       showToast("Listening… say what you're looking for 🎙️");
@@ -975,15 +975,15 @@ function initSearch() {
       rec.onerror = (ev) => {
         voiceBtn.classList.remove("listening");
         showToast(ev && ev.error === "not-allowed"
-          ? "Microphone access was blocked — allow it in your browser settings"
-          : "Couldn't hear that — please try again");
+          ? "Microphone access was blocked, allow it in your browser settings"
+          : "Couldn't hear that, please try again");
       };
       rec.onend = () => voiceBtn.classList.remove("listening");
       try { rec.start(); } catch (e) { voiceBtn.classList.remove("listening"); }
     });
   }
 
-  // Photo search — snap/upload a photo, hand it to Samira Stylera for visual matching
+  // Photo search, snap/upload a photo, hand it to Samira Stylera for visual matching
   const camBtn = document.getElementById("hsCamera");
   const camInput = document.getElementById("hsCameraInput");
   if (camBtn && camInput) {
@@ -1297,9 +1297,9 @@ function dmSelectIssue(issue) {
       ["Message", document.getElementById("supMsg").value]
     ].filter(d => d[1]);
     btn.disabled = true; btn.textContent = "Sending…";
-    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Support: " + issue); } catch (err) {}
+    try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor, Support: " + issue); } catch (err) {}
     const ok = document.getElementById("supSuccess");
-    if (ok) { ok.classList.add("show"); ok.innerHTML = "Thank you! Your message has been sent — our team will get back to you shortly. 💬"; }
+    if (ok) { ok.classList.add("show"); ok.innerHTML = "Thank you! Your message has been sent, our team will get back to you shortly. 💬"; }
     f.reset(); btn.disabled = false; btn.textContent = "Send message";
   });
 }
@@ -1340,7 +1340,7 @@ function chatReply(text) {
     html = `We've got you! 📦 Our ${link("packaging.html", "Packaging")} range has food-vendor pouches, gift boxes, hamper boxes and ready-to-go kits, buy fixed-price packs or ${link("packaging.html#bulk", "request a bulk quote")} for your business.`;
 
   else if (has(/\b(ship|shipping|deliver|delivery|post|postage|freight|worldwide|international|country|countries|how long|when.*(arrive|get|receive)|dispatch)\b/) && !has(/\buber\b/))
-    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>selected regions — Australia, New Zealand, Nigeria, the UK, USA &amp; Canada</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
+    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>selected regions, Australia, New Zealand, Nigeria, the UK, USA &amp; Canada</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
 
   else if (has(/\b(lifestyle|candle|throw|cushion|linen|homeware|kitchen|dining|stationery|everyday|essential)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Lifestyle")} edit is full of everyday beautiful things, candles, textiles, kitchen & dining and little essentials ✦.`;
@@ -1638,7 +1638,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* ============================================================
-   Live chat (Tawk.to) — paste your embed src to switch it on.
+   Live chat (Tawk.to), paste your embed src to switch it on.
    Sign up free at tawk.to → Administration → Chat Widget → copy
    the src URL from the embed code (looks like
    https://embed.tawk.to/XXXXXXXX/1abcd) and set it below.

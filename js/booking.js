@@ -1,5 +1,5 @@
 /* ============================================================
-   SAMIRA HOME DECOR — Booking calendar (Property Styling, Staging & Interior Design)
+   SAMIRA HOME DECOR, Booking calendar (Property Styling, Staging & Interior Design)
    Embeds a scheduling page if configured (SAMIRA.bookingsUrl),
    else a built-in calendar that emails the business on submit.
    ============================================================ */
@@ -88,8 +88,8 @@ function renderBooking(host) {
         <div class="bk-av">${bkAvailabilityNote()}</div>
         <div class="bk-summary" id="bkSummary">
           <div class="bk-sum-line"><span>Service</span><strong id="sumType">Property Styling / Staging</strong></div>
-          <div class="bk-sum-line"><span>Date</span><strong id="sumDate">—</strong></div>
-          <div class="bk-sum-line"><span>Time</span><strong id="sumTime">—</strong></div>
+          <div class="bk-sum-line"><span>Date</span><strong id="sumDate"></strong></div>
+          <div class="bk-sum-line"><span>Time</span><strong id="sumTime"></strong></div>
         </div>
         <p class="form-note">📧 Your request is emailed to our team for confirmation. We'll be in touch to lock in the details.</p>
       </aside>
@@ -138,8 +138,8 @@ function renderSlots() {
 function updateSummary() {
   const m = MEETING_TYPES.find(x => x.key === bk.type);
   document.getElementById("sumType").textContent = m.label;
-  document.getElementById("sumDate").textContent = bk.date ? new Date(bk.date + "T00:00:00").toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short" }) : "—";
-  document.getElementById("sumTime").textContent = bk.slot ? bkHour(parseInt(bk.slot)) : "—";
+  document.getElementById("sumDate").textContent = bk.date ? new Date(bk.date + "T00:00:00").toLocaleDateString("en-AU", { weekday: "short", day: "numeric", month: "short" }) : "";
+  document.getElementById("sumTime").textContent = bk.slot ? bkHour(parseInt(bk.slot)) : "";
 }
 
 async function submitBooking(e) {
@@ -164,7 +164,7 @@ async function submitBooking(e) {
   ].filter(d => d[1]);
 
   btn.disabled = true; btn.textContent = "Sending…";
-  try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor — Styling / Interior Design booking"); } catch (err) {}
+  try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor, Styling / Interior Design booking"); } catch (err) {}
 
   success.classList.add("show");
   success.innerHTML = `Thank you${name ? ", " + name.split(" ")[0] : ""}! Your <strong>${m.label}</strong> booking request for <strong>${document.getElementById("sumDate").textContent} at ${bkHour(parseInt(bk.slot))}</strong> has been sent. We'll confirm the details by email.`;

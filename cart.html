@@ -74,7 +74,7 @@
           </div>
           <div class="conf-sec">
             <h4>Returns &amp; Exchanges</h4>
-            <p class="conf-muted">Shop with confidence — <strong>30-day returns</strong> and our satisfaction guarantee.</p>
+            <p class="conf-muted">Shop with confidence<strong>30-day returns</strong> and our satisfaction guarantee.</p>
           </div>
           <div class="conf-sec">
             <h4>We're Here to Help</h4>
@@ -135,9 +135,9 @@
             ${sku ? `<div class="cl-sku">${sku}</div>` : ""}
             ${afterDisc >= 500 ? `<div class="cl-bonus">BONUS: FREE DELIVERY</div>` : ""}
             <ul class="cart-deliv">
-              <li>Delivered by a trusted supplier — track online</li>
-              <li>Allow 3–8 business days for delivery — depending on your location</li>
-              <li>Leaves our warehouse in 1–2 business days</li>
+              <li>Delivered by a trusted supplier, track online</li>
+              <li>Allow 3 to 8 business days for delivery, depending on your location</li>
+              <li>Leaves our warehouse in 1 to 2 business days</li>
             </ul>
           </div>
           <div class="cl-price"><span class="cl-plabel">Price</span>${money(i.price)}</div>
@@ -154,7 +154,7 @@
         </div>`;
       }).join("");
 
-      // ---- Delivery (delivery only — no click & collect) + gift card + promo + totals + actions ----
+      // ---- Delivery (delivery only, no click & collect) + gift card + promo + totals + actions ----
       lower.innerHTML = `
         <div class="cart-panel cart-delivery">
           <h3>Delivery</h3>
@@ -163,12 +163,12 @@
             <span class="deliv-txt"><strong>Standard delivery</strong><small>Ships to Australia, NZ, UK, USA, Canada &amp; Nigeria · rate calculated at checkout by weight &amp; region · free over $500 (AU)</small></span>
             <span class="deliv-check">✓</span>
           </label>
-          <p class="deliv-note">Same-day local delivery, pick up and lay-by are available on gift hamper orders — choose at checkout.</p>
+          <p class="deliv-note">Same-day local delivery, pick up and lay-by are available on gift hamper orders, choose at checkout.</p>
         </div>
 
         <details class="cart-panel cart-fold">
           <summary>🎁 Use a gift card</summary>
-          <div class="fold-body">Have a Samira Home Decor gift card? You can redeem it securely at checkout — your balance will apply to this order.</div>
+          <div class="fold-body">Have a Samira Home Decor gift card? You can redeem it securely at checkout, your balance will apply to this order.</div>
         </details>
 
         <details class="cart-panel cart-fold" ${window._coupon ? "open" : ""}>
@@ -179,7 +179,7 @@
                      style="flex:1;padding:11px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body)">
               <button class="btn btn--outline btn--sm" onclick="applyCoupon()">Apply</button>
             </div>
-            ${window._coupon === "WELCOME10" ? `<div style="font-size:0.82rem;color:var(--forest);margin-top:8px">✓ Member code applied — 10% off</div>` : ""}
+            ${window._coupon === "WELCOME10" ? `<div style="font-size:0.82rem;color:var(--forest);margin-top:8px">✓ Member code applied, 10% off</div>` : ""}
           </div>
         </details>
 

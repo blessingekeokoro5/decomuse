@@ -35,7 +35,7 @@
     .auth-legal { font-size: 0.78rem; color: var(--muted); line-height: 1.6; margin-top: 16px; text-align: center; }
     .auth-legal a { color: var(--rose-deep); text-decoration: underline; }
     .forgot-link { display: block; text-align: right; font-size: 0.85rem; color: var(--rose-deep); margin: -6px 0 14px; }
-    /* Membership card — matches the gift-card shape/style, in Samira Home Decor green */
+    /* Membership card, matches the gift-card shape/style, in Samira Home Decor green */
     .mcard { position: relative; overflow: hidden; color: #fff; border-radius: 22px; aspect-ratio: 1.62/1;
       padding: 26px 30px; display: flex; flex-direction: column; justify-content: space-between;
       background:
@@ -214,7 +214,7 @@
       saveAccount({ name: "", email, provider: label, member: true, memberSince: todayAU(), coupon: "WELCOME10",
         memberNo: genMemberNo(), orders: [], points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
       try { localStorage.setItem("dm_member", "1"); } catch (err) {}
-      showToast(`Signed in with ${label} — welcome to Samira Home Decor! 🎉`);
+      showToast(`Signed in with ${label}, welcome to Samira Home Decor! 🎉`);
       render();
     }
     function onGoogleCredential(resp) {
