@@ -421,6 +421,22 @@ function renderShopControls(repaint) {
   }));
 }
 
+/* The feature strip quotes a delivery time. When every piece on screen is
+   made to order, quote that instead of the stock-on-hand figure. */
+function updateDeliveryNote(list) {
+  const el = document.getElementById("deliveryNote");
+  if (!el) return;
+  if (!el.dataset.base) el.dataset.base = el.textContent;
+  const items = list || [];
+  const leads = [...new Set(items.map(p => p.lead).filter(Boolean))];
+  if (!items.length || !leads.length) { el.textContent = el.dataset.base; return; }
+  const slowest = leads.sort((a, b) => b.length - a.length)[0];
+  // Everything here is made to order, or only some of it is. Say which.
+  el.textContent = leads.length === 1 && items.every(p => p.lead)
+    ? slowest.replace(/^(\w)/, c => c.toUpperCase()) + " Delivery"
+    : el.dataset.base + ", " + slowest + " made to order";
+}
+
 function applyShopFilters(list) {
   const v = shopView();
   const min = parseFloat(v.min), max = parseFloat(v.max);
@@ -429,6 +445,7 @@ function applyShopFilters(list) {
   if (isFinite(min)) out = out.filter(p => (p.price || p.memberPrice || 0) >= min);
   if (isFinite(max)) out = out.filter(p => (p.price || p.memberPrice || 0) <= max);
   if (v.stock === "in") out = out.filter(p => !p.comingSoon);
+  updateDeliveryNote(out);
   if (v.sort === "price-asc") out.sort((a, b) => (a.price || 0) - (b.price || 0));
   else if (v.sort === "price-desc") out.sort((a, b) => (b.price || 0) - (a.price || 0));
   else if (v.sort === "name") out.sort((a, b) => a.name.localeCompare(b.name));
