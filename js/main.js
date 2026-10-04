@@ -343,6 +343,107 @@ function productMatchesSub(p, sub) {
     .filter(Boolean).join(" ").toLowerCase();
   return subKeywords(sub).some(k => k && hay.includes(k));
 }
+/* ============================================================
+   Shop controls: price range, availability, sort and how many
+   products sit across the row. Shared by every listing page.
+   ============================================================ */
+const SHOP_VIEW_KEY = "dm_shop_view";
+function shopView() {
+  let v = {};
+  try { v = JSON.parse(localStorage.getItem(SHOP_VIEW_KEY)) || {}; } catch (e) {}
+  return { min: v.min || "", max: v.max || "", stock: v.stock || "all",
+           sort: v.sort || "featured", cols: v.cols || "4" };
+}
+function saveShopView(v) {
+  try { localStorage.setItem(SHOP_VIEW_KEY, JSON.stringify(v)); } catch (e) {}
+}
+
+function renderShopControls(repaint) {
+  const bar = document.querySelector(".shop-bar");
+  if (!bar || bar.dataset.enhanced) return;
+  bar.dataset.enhanced = "1";
+  const v = shopView();
+  const oldSort = bar.querySelector(".shop-sort");
+  if (oldSort) oldSort.remove();
+
+  const wrap = document.createElement("div");
+  wrap.className = "shop-tools";
+  wrap.innerHTML = `
+    <label class="shop-tool">Price
+      <span class="price-range">
+        <input type="number" id="shopMin" inputmode="numeric" min="0" placeholder="Min" value="${v.min}" aria-label="Lowest price">
+        <em>to</em>
+        <input type="number" id="shopMax" inputmode="numeric" min="0" placeholder="Max" value="${v.max}" aria-label="Highest price">
+      </span>
+    </label>
+    <label class="shop-tool">Availability
+      <select id="shopStock">
+        <option value="all">All items</option>
+        <option value="in">In stock</option>
+      </select>
+    </label>
+    <label class="shop-tool">Sort
+      <select id="shopSort">
+        <option value="featured">Featured</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="name">Name: A to Z</option>
+        <option value="name-desc">Name: Z to A</option>
+      </select>
+    </label>
+    <div class="shop-cols" role="group" aria-label="Products per row">
+      ${["list", "2", "3", "4", "5"].map(c => `
+        <button type="button" class="col-btn ${v.cols === c ? "active" : ""}" data-cols="${c}"
+                aria-pressed="${v.cols === c}" title="${c === "list" ? "List view" : c + " per row"}">
+          ${c === "list" ? "&#9776;" : c}
+        </button>`).join("")}
+    </div>`;
+  bar.appendChild(wrap);
+  bar.querySelector("#shopStock").value = v.stock;
+  bar.querySelector("#shopSort").value = v.sort;
+
+  const push = () => {
+    saveShopView({
+      min: bar.querySelector("#shopMin").value,
+      max: bar.querySelector("#shopMax").value,
+      stock: bar.querySelector("#shopStock").value,
+      sort: bar.querySelector("#shopSort").value,
+      cols: (bar.querySelector(".col-btn.active") || {}).dataset ? bar.querySelector(".col-btn.active").dataset.cols : "4"
+    });
+    repaint();
+  };
+  bar.querySelectorAll("#shopMin, #shopMax").forEach(i => i.addEventListener("change", push));
+  bar.querySelectorAll("#shopStock, #shopSort").forEach(i => i.addEventListener("change", push));
+  bar.querySelectorAll(".col-btn").forEach(b => b.addEventListener("click", () => {
+    bar.querySelectorAll(".col-btn").forEach(x => { x.classList.remove("active"); x.setAttribute("aria-pressed", "false"); });
+    b.classList.add("active"); b.setAttribute("aria-pressed", "true");
+    push();
+  }));
+}
+
+function applyShopFilters(list) {
+  const v = shopView();
+  const min = parseFloat(v.min), max = parseFloat(v.max);
+  let out = list.slice();
+  // Match the price the card actually shows, not the member price.
+  if (isFinite(min)) out = out.filter(p => (p.price || p.memberPrice || 0) >= min);
+  if (isFinite(max)) out = out.filter(p => (p.price || p.memberPrice || 0) <= max);
+  if (v.stock === "in") out = out.filter(p => !p.comingSoon);
+  if (v.sort === "price-asc") out.sort((a, b) => (a.price || 0) - (b.price || 0));
+  else if (v.sort === "price-desc") out.sort((a, b) => (b.price || 0) - (a.price || 0));
+  else if (v.sort === "name") out.sort((a, b) => a.name.localeCompare(b.name));
+  else if (v.sort === "name-desc") out.sort((a, b) => b.name.localeCompare(a.name));
+  return out;
+}
+
+function applyGridCols(gridId) {
+  const g = document.getElementById(gridId);
+  if (!g) return;
+  const c = shopView().cols;
+  g.classList.remove("grid-2", "grid-3", "grid-4", "grid-5", "grid-list");
+  g.classList.add(c === "list" ? "grid-list" : "grid-" + c);
+}
+
 function applySubFilter(list) {
   const sub = new URLSearchParams(location.search).get("sub");
   if (!sub) return list;

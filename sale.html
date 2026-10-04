@@ -101,12 +101,15 @@
       else if (sort === "price-desc") list.sort((a, b) => b.price - a.price);
       else if (sort === "name") list.sort((a, b) => a.name.localeCompare(b.name));
       else list.sort((a, b) => pct(b) - pct(a)); // biggest discount first
+      list = applyShopFilters(list);
+      applyGridCols("saleGrid");
       renderProducts("saleGrid", list);
       const c = document.getElementById("saleCount");
       if (c) c.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"} on sale`;
       document.getElementById("saleEmpty").style.display = list.length ? "none" : "block";
       document.getElementById("saleGrid").style.display = list.length ? "grid" : "none";
     }
+    renderShopControls(paintSale);
     paintSale();
     initReveal();
   </script>
