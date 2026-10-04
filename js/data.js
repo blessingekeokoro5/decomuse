@@ -44,7 +44,7 @@ const MEGA_MENU = [
     columns: [
       { title: "Shop", links: ["Shop All Living Room", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Furniture", links: ["Sofas & Seating", "Coffee & Side Tables", "TV Units", "Bookshelves"] },
-      { title: "Soft Furnishings", links: ["Rugs", "Cushions & Throws", "Curtains"] },
+      { title: "Soft Furnishings", links: ["Rugs", "Cushions", "Throws", "Curtains"] },
       { title: "Accents", links: ["Lighting", "Mirrors", "Wall Art", "Vases"] },
       { title: "Dining", page: "dining.html", links: ["Shop All Dining", "Dining Chairs", "Bar & Counter Stools", "Dining Tables", "Console Tables"] }
     ]

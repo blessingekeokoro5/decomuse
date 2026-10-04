@@ -274,6 +274,8 @@ function showDontPayInfo(e) {
    sub-category. Matching is keyword-based against product name/specs. */
 function subKeywords(sub) {
   const overrides = {
+    "cushions": ["cushion cover", "cushion case", "cushion", "pillow case", "pillow cover", "pillow", "bolster"],
+    "throws": ["throw", "blanket", "rug throw"],
     "dining chairs": ["dining chair", "chair"],
     "bar & counter stools": ["stool", "bar stool", "counter stool"],
     "dining tables": ["dining table"],
@@ -316,7 +318,7 @@ function subKeywords(sub) {
     "planters & pots": ["planter", "pot"],
     "trays & bowls": ["tray", "bowl", "dish"],
     "cushions & throws": ["cushion", "throw", "pillow"],
-    "wall art": ["wall art", "art", "print", "canvas"],
+    "wall art": ["wall art", "artwork", "framed print", "canvas print", "wall print"],
     "bed linen": ["linen", "sheet", "bedding", "pillowcase", "quilt"],
     "quilt covers": ["quilt", "duvet", "cover"],
     "wellness kits & essentials": ["wellness", "kit", "spa", "soak", "mist"],
@@ -345,6 +347,21 @@ function subKeywords(sub) {
     .filter(w => w && !stop.has(w))
     .map(w => (w.length > 4 && w.endsWith("s")) ? w.slice(0, -1) : w);
 }
+/* The supplier types both blankets and cushion covers as "Blanket /
+   cushion", so for these the product name is the only reliable signal. */
+const SUB_NAME_ONLY = new Set(["cushions", "throws", "rugs", "curtains", "vases", "mirrors", "wall art"]);
+
+/* Some words sit inside the name of a different kind of product. A
+   "Wide-Cushion Velvet Sofa" is a sofa, not a cushion. */
+const SUB_EXCLUDE = {
+  "cushions": /\b(sofa|settee|couch|armchair|chair|stool|bench|lounge|daybed|ottoman|bed frame|headboard)\b/i,
+  "cushions & throws": /\b(sofa|settee|couch|armchair|chair|stool|bench|lounge|daybed|ottoman)\b/i,
+  "throws": /\b(sofa|settee|couch|armchair|chair|stool|bench|lounge|rug)\b/i,
+  "rugs": /\b(sofa|chair|throw)\b/i,
+  "vases": /\b(table|cabinet|shelf)\b/i,
+  "mirrors": /\b(dressing table|table|dresser|cabinet|desk|vanity unit)\b/i
+};
+
 function subWordMatch(hay, needle) {
   const n = String(needle).toLowerCase();
   // "Rugs" has to find a "Wool Rug", and "Rug" a "Rugs" set.
@@ -368,8 +385,12 @@ function productMatchesSub(p, sub) {
   // Match on the name and the product type only. Descriptions and feature
   // bullets mention all sorts of things a piece is not: "board" inside
   // "sideboard" was putting console tables under Chopping Boards.
-  const hay = [p.name, p.specs && (p.specs.Type || p.specs.type), p.cat]
-    .filter(Boolean).join(" | ").toLowerCase();
+  const hay = (SUB_NAME_ONLY.has(s)
+    ? [p.name]
+    : [p.name, p.specs && (p.specs.Type || p.specs.type), p.cat]
+  ).filter(Boolean).join(" | ").toLowerCase();
+  const veto = SUB_EXCLUDE[s];
+  if (veto && veto.test(p.name || "")) return false;
   return subKeywords(sub).some(k => k && subWordMatch(hay, k));
 }
 /* ============================================================
@@ -491,11 +512,18 @@ function applyGridCols(gridId) {
   g.classList.add(c === "list" ? "grid-list" : "grid-" + c);
 }
 
+/* Accessories are not room-bound. A cushion is a cushion whether it was
+   filed under Bedroom or Living Room, so these always search the lot. */
+const SUB_SITEWIDE = new Set(["cushions", "throws", "rugs", "lamps", "lighting", "candles",
+  "mirrors", "vases", "baskets", "faux plants", "planters & pots", "wall art", "photo frames"]);
+
 function applySubFilter(list) {
   const sub = new URLSearchParams(location.search).get("sub");
   if (!sub) return list;
-  let filtered = list.filter(p => productMatchesSub(p, sub));
-  let widened = false;
+  const everywhere = SUB_SITEWIDE.has(sub.toLowerCase().trim()) && typeof PRODUCTS !== "undefined";
+  const pool = everywhere ? PRODUCTS.filter(p => !p.comingSoon) : list;
+  let filtered = pool.filter(p => productMatchesSub(p, sub));
+  let widened = everywhere && filtered.length > 0;
   // Lamps live in Living Room but the Office menu offers them too. Rather
   // than hand back an empty page, look across the whole catalogue.
   if (!filtered.length && typeof PRODUCTS !== "undefined") {
