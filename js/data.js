@@ -8394,7 +8394,7 @@ const PRODUCTS = [
     specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "3" },
     care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
 
-  { id: "dc07x", name: "Swan Wine Decanter (1700ml)", cat: "Home Décor", room: "Home Décor", price: 315, memberPrice: 284, sku: "SH-10650", tag: "New", ph: "", img: "assets/products/dc07x.webp",
+  { id: "dc07x", name: "Swan Wine Decanter (1700ml)", cat: "Kitchenware", room: "Home Décor", price: 315, memberPrice: 284, sku: "SH-10650", tag: "New", ph: "", img: "assets/products/dc07x.webp",
     imgs: ["assets/products/dc07x.webp", "assets/products/dc07x-2.webp", "assets/products/dc07x-3.webp"],
     sizes: [{ label: "1700ml", price: 315 }],
     desc: "A 1.7 litre decanter in the shape of a swan, in red glass. Useful, and more decorative than most decanters manage.",
@@ -8418,7 +8418,7 @@ const PRODUCTS = [
     specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "2" },
     care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
 
-  { id: "dc09x", name: "Marble Cake Stand", cat: "Home Décor", room: "Home Décor", price: 333, memberPrice: 300, sku: "SH-10652", tag: "New", ph: "", img: "assets/products/dc09x.webp",
+  { id: "dc09x", name: "Marble Cake Stand", cat: "Kitchenware", room: "Home Décor", price: 333, memberPrice: 300, sku: "SH-10652", tag: "New", ph: "", img: "assets/products/dc09x.webp",
     imgs: ["assets/products/dc09x.webp", "assets/products/dc09x-2.webp", "assets/products/dc09x-3.webp", "assets/products/dc09x-4.webp", "assets/products/dc09x-5.webp"],
     sizes: [{ label: "Small / White Marble", price: 333 }, { label: "Small / Grey Marble", price: 333 }, { label: "Large / White Marble", price: 444 }, { label: "Large / Grey Marble", price: 444 }],
     desc: "White marble in small or large. Equally good holding a cake or standing empty with a candle on it.",
@@ -8559,7 +8559,7 @@ const PRODUCTS = [
     specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "2" },
     care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
 
-  { id: "dc21x", name: "Crystal Glass Decanter", cat: "Home Décor", room: "Home Décor", price: 550, memberPrice: 495, sku: "SH-10664", tag: "New", ph: "", img: "assets/products/dc21x.webp",
+  { id: "dc21x", name: "Crystal Glass Decanter", cat: "Kitchenware", room: "Home Décor", price: 550, memberPrice: 495, sku: "SH-10664", tag: "New", ph: "", img: "assets/products/dc21x.webp",
     imgs: ["assets/products/dc21x.webp", "assets/products/dc21x-2.webp", "assets/products/dc21x-3.webp", "assets/products/dc21x-4.webp", "assets/products/dc21x-5.webp"],
     desc: "A crystal decanter, plainly done, for spirits or water on a tray.",
     features: [
@@ -8594,7 +8594,7 @@ const PRODUCTS = [
     specs: { "Type": "Decorative object", "Material": "Natural travertine", "Options": "1" },
     care: "Wipe with a soft, damp cloth and dry straight away. Travertine's open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
 
-  { id: "dc24x", name: "Curved Wine Holder", cat: "Home Décor", room: "Home Décor", price: 646, memberPrice: 581, sku: "SH-10667", tag: "New", ph: "", img: "assets/products/dc24x.webp",
+  { id: "dc24x", name: "Curved Wine Holder", cat: "Kitchenware", room: "Home Décor", price: 646, memberPrice: 581, sku: "SH-10667", tag: "New", ph: "", img: "assets/products/dc24x.webp",
     imgs: ["assets/products/dc24x.webp", "assets/products/dc24x-2.webp", "assets/products/dc24x-3.webp", "assets/products/dc24x-4.webp", "assets/products/dc24x-5.webp"],
     sizes: [{ label: "Gold", price: 646 }, { label: "Black", price: 646 }],
     desc: "A curved holder that balances a bottle on its own, in gold or black. It looks like a trick, and it is.",
@@ -8678,7 +8678,7 @@ const PRODUCTS = [
     specs: { "Type": "Decorative object", "Material": "Resin / composite", "Options": "1" },
     care: "Wipe clean with a soft, damp cloth. Avoid abrasive cleaners and harsh solvents." },
 
-  { id: "dc31x", name: "Bar Cart", cat: "Home Décor", room: "Home Décor", price: 3257, memberPrice: 2931, sku: "SH-10674", tag: "New", ph: "", img: "assets/products/dc31x.webp",
+  { id: "dc31x", name: "Bar Cart", cat: "Kitchenware", room: "Home Décor", price: 3257, memberPrice: 2931, sku: "SH-10674", tag: "New", ph: "", img: "assets/products/dc31x.webp",
     imgs: ["assets/products/dc31x.webp", "assets/products/dc31x-2.webp", "assets/products/dc31x-3.webp", "assets/products/dc31x-4.webp", "assets/products/dc31x-5.webp"],
     sizes: [{ label: "White + Gold", price: 3257 }, { label: "Black + Gold", price: 3257 }],
     desc: "A bar cart in white and gold or black and gold, for bottles, glasses and the ice bucket.",
@@ -10078,7 +10078,7 @@ const PRODUCTS = [
     specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "14" },
     care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
 
-  { id: "tb02", name: "Gold Round Organiser Tray", cat: "Home Décor", room: "Home Décor", price: 128, memberPrice: 115, sku: "SH-10481", tag: "New", ph: "", img: "assets/products/tb02.webp",
+  { id: "tb02", name: "Gold Round Organiser Tray", cat: "Kitchenware", room: "Home Décor", price: 128, memberPrice: 115, sku: "SH-10481", tag: "New", ph: "", img: "assets/products/tb02.webp",
     imgs: ["assets/products/tb02.webp", "assets/products/tb02-2.webp", "assets/products/tb02-3.webp", "assets/products/tb02-4.webp", "assets/products/tb02-5.webp"],
     sizes: [{ label: "12.5cm / Gold", price: 128 }, { label: "20cm / Gold", price: 183 }, { label: "30cm / Gold", price: 239 }],
     desc: "Gold stainless steel in three diameters, from 12.5cm for rings to 30cm for a coffee table.",
@@ -10090,7 +10090,7 @@ const PRODUCTS = [
     specs: { "Type": "Tray / bowl", "Material": "Metal", "Options": "3" },
     care: "Dust with a dry cloth and buff gently. Avoid abrasive cleaners on plated finishes, and keep away from prolonged damp." },
 
-  { id: "tb03", name: "Marble-Look Serving Tray", cat: "Home Décor", room: "Home Décor", price: 148, memberPrice: 133, sku: "SH-10482", tag: "New", ph: "", img: "assets/products/tb03.webp",
+  { id: "tb03", name: "Marble-Look Serving Tray", cat: "Kitchenware", room: "Home Décor", price: 148, memberPrice: 133, sku: "SH-10482", tag: "New", ph: "", img: "assets/products/tb03.webp",
     imgs: ["assets/products/tb03.webp", "assets/products/tb03-2.webp", "assets/products/tb03-3.webp"],
     sizes: [{ label: "Black + Gold / 20cm (8\")", price: 148 }, { label: "White + Gold / 20cm (8\")", price: 148 }, { label: "Black + Gold / 25cm (10\")", price: 157 }, { label: "White + Gold / 25cm (10\")", price: 157 }],
     desc: "A marble-look tray with gold handles, at 20cm or 25cm.",
@@ -10162,7 +10162,7 @@ const PRODUCTS = [
     specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "4" },
     care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
 
-  { id: "tb09", name: "Fruit Bowl in Gold or Silver", cat: "Home Décor", room: "Home Décor", price: 239, memberPrice: 215, sku: "SH-10488", tag: "New", ph: "", img: "assets/products/tb09.webp",
+  { id: "tb09", name: "Fruit Bowl in Gold or Silver", cat: "Kitchenware", room: "Home Décor", price: 239, memberPrice: 215, sku: "SH-10488", tag: "New", ph: "", img: "assets/products/tb09.webp",
     imgs: ["assets/products/tb09.webp", "assets/products/tb09-2.webp", "assets/products/tb09-3.webp", "assets/products/tb09-4.webp"],
     sizes: [{ label: "Gold / Small", price: 239 }, { label: "Silver / Small", price: 239 }, { label: "Gold / Large", price: 276 }, { label: "Silver / Large", price: 276 }],
     desc: "A metal fruit bowl in gold or silver, small or large.",
@@ -10246,7 +10246,7 @@ const PRODUCTS = [
     specs: { "Type": "Tray / bowl", "Material": "Leather", "Options": "3" },
     care: "Wipe with a barely damp cloth. Keep out of direct sun, and condition occasionally so the leather doesn't dry out." },
 
-  { id: "tb16", name: "Metallic Rectangular Serving Tray", cat: "Home Décor", room: "Home Décor", price: 291, memberPrice: 262, sku: "SH-10495", tag: "New", ph: "", img: "assets/products/tb16.webp",
+  { id: "tb16", name: "Metallic Rectangular Serving Tray", cat: "Kitchenware", room: "Home Décor", price: 291, memberPrice: 262, sku: "SH-10495", tag: "New", ph: "", img: "assets/products/tb16.webp",
     imgs: ["assets/products/tb16.webp", "assets/products/tb16-2.webp", "assets/products/tb16-3.webp", "assets/products/tb16-4.webp", "assets/products/tb16-5.webp"],
     sizes: [{ label: "Gold - Rectangular Tray", price: 291 }, { label: "Silver - Rectangular Tray", price: 291 }, { label: "Gold - Round Tray", price: 291 }, { label: "Silver - Round Tray", price: 291 }],
     desc: "Rectangular, in gold or silver.",
@@ -10354,7 +10354,7 @@ const PRODUCTS = [
     specs: { "Type": "Tray / bowl", "Material": "Ceramic", "Options": "2" },
     care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads, which scratch the glaze and dull any metallic detail." },
 
-  { id: "tb25", name: "Charlot Travertine Tray", cat: "Home Décor", room: "Home Décor", price: 461, memberPrice: 415, sku: "SH-10504", tag: "New", ph: "", img: "assets/products/tb25.webp",
+  { id: "tb25", name: "Round Travertine Fruit Plate", cat: "Kitchenware", room: "Home Décor", price: 461, memberPrice: 415, sku: "SH-10504", tag: "New", ph: "", img: "assets/products/tb25.webp",
     imgs: ["assets/products/tb25.webp", "assets/products/tb25-2.webp", "assets/products/tb25-3.webp", "assets/products/tb25-4.webp", "assets/products/tb25-5.webp"],
     desc: "One travertine tray, one size, cut from solid stone.",
     features: [
@@ -10401,7 +10401,7 @@ const PRODUCTS = [
     specs: { "Type": "Tray / bowl", "Material": "Natural travertine", "Options": "3" },
     care: "Wipe with a soft, damp cloth and dry straight away. The open pores hold liquid, so clear spills quickly and never use acidic cleaners." },
 
-  { id: "tb29", name: "Travertine Bowl", cat: "Home Décor", room: "Home Décor", price: 1433, memberPrice: 1290, sku: "SH-10508", tag: "New", ph: "", img: "assets/products/tb29.webp",
+  { id: "tb29", name: "Travertine Bowl", cat: "Kitchenware", room: "Home Décor", price: 1433, memberPrice: 1290, sku: "SH-10508", tag: "New", ph: "", img: "assets/products/tb29.webp",
     imgs: ["assets/products/tb29.webp", "assets/products/tb29-2.webp", "assets/products/tb29-3.webp", "assets/products/tb29-4.webp", "assets/products/tb29-5.webp"],
     sizes: [{ label: "Travertine", price: 1433 }],
     desc: "A large travertine bowl, carved from solid stone. The heaviest décor piece we stock.",
