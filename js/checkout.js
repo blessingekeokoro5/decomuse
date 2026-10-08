@@ -21,6 +21,61 @@ const SHIP_ZONES = {
   "Nigeria":         { base: 25.20, perKg: 37.30, days: "12 to 30 business days" }
 };
 const DEFAULT_ITEM_KG = 0.75; // used when a product has no weight set
+const INTL_MAX_KG = 20;       // Australia Post International Standard parcel limit
+
+/* Browser copy of scripts/estimate-weight.js — keep in sync. Estimates a
+   product's shipping weight (kg) from a real weight, else type/material/size. */
+function parseKg(s) { const m = String(s == null ? "" : s).match(/([\d.]+)\s*kg/i); return m ? parseFloat(m[1]) : null; }
+function estimateWeight(p) {
+  if (!p) return 1.5;
+  const real = parseKg(p.weight); if (real) return real;
+  const n = (p.name || "").toLowerCase();
+  const TYPE = [
+    [/\bsofa|lounge suite|modular lounge\b/, 45],
+    [/console|sideboard|buffet|cabinet|tv unit|tv cabinet|bookcase|bookshelf|shelv|wardrobe|dresser|tallboy|chest of/, 30],
+    [/coffee table|dining table|\bdesk\b|table set|dining set/, 25],
+    [/bed frame|bed base|headboard|\bbed\b/, 40],
+    [/armchair|accent chair|occasional chair|swivel chair|tub chair|lounge chair|recliner/, 18],
+    [/dining chair|\bchair\b|stool|bench|ottoman|pouf/, 8],
+    [/side table|end table|bedside|nightstand/, 9],
+    [/mirror/, 6],
+    [/\brug\b|runner|floor mat/, 8],
+    [/floor lamp|standing lamp/, 6],
+    [/chandelier|pendant|ceiling light|wall light|\blight\b|\blamp\b/, 3],
+    [/cushion|throw|pillow|\bcover\b|quilt|blanket|duvet|linen|sheet|towel/, 0.6],
+    [/vase|planter|\bpot\b|bowl|\bjug\b|urn|canister/, 1.5],
+    [/candle|diffuser|fragrance|perfume|incense/, 0.5],
+    [/tray|clock|photo frame|\bframe\b|ornament|sculpture|figurine|bookend|\bhook\b/, 1.2],
+    [/basket|storage box|hamper/, 1.5],
+  ];
+  let base = null;
+  for (let k = 0; k < TYPE.length; k++) { if (TYPE[k][0].test(n)) { base = TYPE[k][1]; break; } }
+  if (base == null) {
+    const CAT = { "Furniture": 18, "Home Décor": 1.5, "Lifestyle": 0.8, "Kitchen & Dining": 1.5, "Kitchenware": 1.8, "Bedroom & Bath": 0.9, "Fragrance": 0.5, "Health & Wellness": 0.4, "Gifts": 1.0, "Travel Essentials": 0.8, "Outdoor": 12, "Office": 10, "Bathroom": 5 };
+    base = CAT[p.cat] != null ? CAT[p.cat] : 1.5;
+  }
+  let f = 1;
+  if (/marble|stone|slate|granite|concrete|terrazzo|travertine|cast iron|ceramic|stoneware/.test(n)) f = 1.6;
+  else if (/bamboo|rattan|wicker|cane|paper|seagrass|jute|linen|cotton|foam/.test(n)) f = 0.65;
+  else if (/glass/.test(n)) f = 1.15;
+  else if (/metal|steel|\biron\b|aluminium|aluminum|brass/.test(n)) f = 1.25;
+  else if (/timber|\boak\b|walnut|\bwood\b|solid wood|mango|acacia/.test(n)) f = 1.1;
+  let w = base * f;
+  const d = p.dims || {};
+  const maxd = Math.max(Number(d.w) || 0, Number(d.h) || 0, Number(d.d) || 0);
+  if (maxd) { const typ = base >= 15 ? 120 : base >= 5 ? 60 : 30; w *= Math.min(1.8, Math.max(0.6, maxd / typ)); }
+  w = Math.max(0.2, Math.min(80, w));
+  return Math.round(w * 10) / 10;
+}
+// The first cart item too heavy to ship internationally (>20kg), or null.
+function bulkyIntlItem() {
+  const found = getCart().find(function (i) {
+    if (i.giftCard || i.hamper) return false;
+    const p = (typeof findProduct === "function") ? findProduct(i.id) : null;
+    return estimateWeight(p || i) > INTL_MAX_KG;
+  });
+  return found || null;
+}
 
 function shipCountry() {
   const el = document.getElementById("coCountry");
@@ -37,11 +92,12 @@ function cartWeight() {
       kg += DEFAULT_ITEM_KG * i.hamper.reduce(function (n, l) { return n + (l.qty || 1); }, 0) * (i.qty || 1);
       return;
     }
-    let w = DEFAULT_ITEM_KG;
     const p = (typeof findProduct === "function") ? findProduct(i.id) : null;
     const raw = (p && p.weight) != null ? p.weight : i.weight;
+    let w = null;
     // First number only"88 kg / 100 kg" must read as 88, not 88100.
     if (raw != null) { const m = String(raw).match(/[0-9]+(\.[0-9]+)?/); const n = m ? parseFloat(m[0]) : NaN; if (!isNaN(n) && n > 0) w = n; }
+    if (w == null) w = estimateWeight(p || i);   // estimate when no real weight is set
     kg += w * (i.qty || 1);
   });
   return Math.round(Math.max(kg, 0.1) * 100) / 100;
@@ -81,7 +137,12 @@ function updateTotalsUI() {
   const t = checkoutTotals();
   const shipTxt = t.shipping === 0 ? "Free" : money(t.shipping);
   const line = document.getElementById("coShipLine");
-  if (line) line.innerHTML = window._fulfil === "sameday"
+  // Block international checkout when the cart has an item too bulky to ship abroad.
+  const bulky = (t.country !== "Australia" && window._fulfil !== "pickup" && window._fulfil !== "sameday") ? bulkyIntlItem() : null;
+  window._intlBlocked = !!bulky;
+  if (line && bulky) {
+    line.innerHTML = `<span style="color:var(--rose-deep)">⚠️ <strong>${bulky.name}</strong> is too large to ship to ${t.country} (over ${INTL_MAX_KG}kg). It can only be delivered within Australia — please remove it for an international order, or <a href="contact.html">contact us</a> for a freight quote.</span>`;
+  } else if (line) line.innerHTML = window._fulfil === "sameday"
     ? `<strong>Same-day local</strong> · ${shipTxt} · via Uber / DoorDash, metro area`
     : `<strong>Standard</strong> · ${shipTxt} · to ${t.country} · calculated for ~${t.weight}kg · ${t.shipDays || "3 to 8 business days"}${(t.shipping === 0 && t.freeOver) ? ` · <span style="color:var(--forest)">free over ${money(t.freeOver)}</span>` : ""}`;
   const s = document.getElementById("sumShip"); if (s) s.textContent = window._fulfil === "pickup" ? "Free (pickup)" : shipTxt;
@@ -90,9 +151,15 @@ function updateTotalsUI() {
   const tot = document.getElementById("sumTotal"); if (tot) tot.textContent = money(t.total);
   const g = document.getElementById("sumGst"); if (g) g.textContent = money(t.gst);
   const btn = document.getElementById("payBtn");
-  if (btn) btn.textContent = window._fulfil === "layby"
-    ? "Submit lay-by request →"
-    : (t.total <= 0 ? "Complete order (gift card) →" : `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`);
+  if (btn) {
+    btn.textContent = window._intlBlocked
+      ? "Remove oversized item for international →"
+      : (window._fulfil === "layby"
+        ? "Submit lay-by request →"
+        : (t.total <= 0 ? "Complete order (gift card) →" : `Pay ${(typeof DM_CUR!=="undefined"&&DM_CUR!=="AUD")?moneyAud(t.total)+" (AUD)":money(t.total)} securely →`));
+    btn.disabled = !!window._intlBlocked;
+    btn.style.opacity = window._intlBlocked ? "0.6" : "";
+  }
 }
 
 function applyGiftCardCheckout() {
@@ -275,6 +342,13 @@ function setFulfil(mode) {
 
 async function startPayment(e) {
   e.preventDefault();
+  // Block checkout if an oversized item can't ship to the chosen country.
+  if (window._intlBlocked) {
+    const b = bulkyIntlItem();
+    showToast(`${b ? b.name : "An item"} can't ship outside Australia — remove it or choose Australia.`);
+    const el = document.getElementById("coShipLine"); if (el) el.scrollIntoView({ behavior: "smooth", block: "center" });
+    return;
+  }
   // Must be logged in to place an order, so it saves to the account and can be tracked.
   const _acct = (typeof getAccount === "function") ? getAccount() : null;
   if (!_acct || !_acct.email) {

@@ -18,6 +18,7 @@
 const fs = require("fs");
 const path = require("path");
 const vm = require("vm");
+const { estimateWeight } = require("./estimate-weight");
 
 const ROOT = path.join(__dirname, "..");
 const SRC = path.join(ROOT, "js", "data.js");
@@ -68,7 +69,7 @@ PRODUCTS.forEach((p) => {
     cat: String(p.cat || ""),
     price: base,                                  // null = enquiry-only (e.g. packaging)
     memberPrice: num(p.memberPrice),
-    weight: num(p.weight),
+    weight: num(p.weight) != null ? num(p.weight) : estimateWeight(p),
     sizes,
   };
 });

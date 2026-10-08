@@ -216,6 +216,17 @@ exports.handler = async (event) => {
     // 1. Trusted prices, from the catalogue only.
     const lines = items.map(resolveLine);
 
+    // Australia Post International Standard tops out at 20 kg per parcel, so
+    // bulky furniture can only ship within Australia.
+    const INTL_MAX_KG = 20;
+    const shipCountry = String(customer.country || "Australia");
+    if (shipCountry !== "Australia" && fulfil !== "pickup" && fulfil !== "sameday") {
+      const tooHeavy = lines.find((l) => l.weight > INTL_MAX_KG);
+      if (tooHeavy) {
+        return jsonResponse(400, { error: `"${tooHeavy.name}" is too large to ship outside Australia (over ${INTL_MAX_KG}kg). Please remove it for international orders, or contact us for a freight quote.` });
+      }
+    }
+
     // Gift cards being BOUGHT in this order. They're only issued into the
     // ledger once Stripe confirms payment (see stripe-webhook.js), so an
     // abandoned checkout never mints a spendable card.
