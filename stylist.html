@@ -163,8 +163,8 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=17"></script>
-  <script src="js/components.js?v=36"></script>
+  <script src="js/data.js?v=18"></script>
+  <script src="js/components.js?v=37"></script>
   <script src="js/cart.js?v=16"></script>
   <script src="js/main.js?v=3"></script>
   <script src="js/stylist.js"></script>
@@ -259,7 +259,7 @@
       const s = text.toLowerCase();
       // Service / help intents (no products)
       if (/\b(order|track|tracking|delivery|shipping|arrive|dispatch)\b/.test(s))
-        return { text: "Happy to help with your order. You can track it any time using your order number, standard delivery is 3 to 8 business days, and shipping is free on orders over $500.", link: ["Track my order", "track.html"] };
+        return { text: "Happy to help with your order. You can track it any time using your order number, standard delivery is 3 to 8 business days, and shipping is free on orders over $3,500.", link: ["Track my order", "track.html"] };
       if (/\b(return|refund|exchange|replace|replacement)\b/.test(s))
         return { text: "Of course. You can start a return within 30 days and choose a refund to your original payment, a gift card with a 5% bonus, an exchange or a replacement, all from our returns page.", link: ["Start a return", "returns.html"] };
       if (/\b(contact|human|agent|speak|talk|email|phone|call|support)\b/.test(s))

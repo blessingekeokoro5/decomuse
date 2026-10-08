@@ -304,7 +304,7 @@ function buildHeader() {
   return `
   <div class="top-utility">
     <div class="container top-utility-inner">
-      <div class="tu-left"><a href="policy.html?doc=returns">✓ 30-Day Returns · Free shipping over $500</a></div>
+      <div class="tu-left"><a href="policy.html?doc=returns">✓ 30-Day Returns · Free shipping over $3,500</a></div>
       <div class="tu-right">
         <a href="staging.html#book">Book Consult</a>
         <a href="support.html">Help Centre</a>
@@ -877,7 +877,7 @@ function updateCountryNote() {
   const sel = document.getElementById("countrySelect");
   const r = REGIONS[sel.value];
   const note = document.getElementById("countryNote");
-  if (r.cur === "AUD") note.innerHTML = `✓ Prices shown in <strong>AUD $</strong> · free shipping over $500.`;
+  if (r.cur === "AUD") note.innerHTML = `✓ Prices shown in <strong>AUD $</strong> · free shipping over $3,500.`;
   else note.innerHTML = `Prices will display in <strong>${r.cur}</strong> at today's exchange rate. Orders are processed in <strong>AUD</strong> at checkout, your bank applies the final conversion. International delivery times &amp; any duties may apply.`;
 }
 
@@ -1348,7 +1348,7 @@ function chatReply(text) {
     html = `We've got you! 📦 Our ${link("packaging.html", "Packaging")} range has food-vendor pouches, gift boxes, hamper boxes and ready-to-go kits, buy fixed-price packs or ${link("packaging.html#bulk", "request a bulk quote")} for your business.`;
 
   else if (has(/\b(ship|shipping|deliver|delivery|post|postage|freight|worldwide|international|country|countries|how long|when.*(arrive|get|receive)|dispatch)\b/) && !has(/\buber\b/))
-    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>selected regions, Australia, New Zealand, Nigeria, the UK, USA &amp; Canada</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
+    html = `Great question! 📦 We offer <strong>free standard shipping on orders over $3,500</strong> Australia-wide, with most orders arriving in <strong>3 to 8 business days</strong>. We ship to <strong>selected regions, Australia, New Zealand, Nigeria, the UK, USA &amp; Canada</strong>. All home-décor is dispatched from our Melbourne warehouse. Full details in our ${link("policy.html?doc=delivery", "Delivery Policy")}.`;
 
   else if (has(/\b(lifestyle|candle|throw|cushion|linen|homeware|kitchen|dining|stationery|everyday|essential)\b/))
     html = `Our ${link("shop.html?cat=Lifestyle", "Lifestyle")} edit is full of everyday beautiful things, candles, textiles, kitchen & dining and little essentials ✦.`;
@@ -1381,7 +1381,7 @@ function chatReply(text) {
     html = `No worries! ↩️ Your rights under the Australian Consumer Law always apply, and we also offer <strong>30-day change-of-mind returns</strong> on eligible items. If something arrived faulty or damaged, tell me and we'll make it right. Full details in our ${link("policy.html?doc=returns", "Returns & Refund Policy")}.`;
 
   else if (has(/\b(cart|checkout|pay|buy|purchase|place.*order)\b/))
-    html = `Easy, add pieces to your ${link("cart.html", "cart")} and checkout whenever you're ready 🛒. We accept Visa, Mastercard, Amex, PayPal, Apple/Google Pay, Afterpay, Klarna & Zip, and orders over $500 ship free.`;
+    html = `Easy, add pieces to your ${link("cart.html", "cart")} and checkout whenever you're ready 🛒. We accept Visa, Mastercard, Amex, PayPal, Apple/Google Pay, Afterpay, Klarna & Zip, and orders over $3,500 ship free.`;
 
   else if (has(/\b(size|dimension|measure|measurement|assembly|assemble|weight|fit)\b/))
     html = `Good thinking, measure your space first! 📐 Each product page lists dimensions and assembly notes. If you tell me the item, I'll help you check it fits, or our team can confirm on ${link("contact.html", "Contact")}.`;

@@ -97,7 +97,7 @@ exports.handler = async (event) => {
       <div style="text-align:center;margin:26px 0">
         <a href="${SITE_URL}/shop.html" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 26px;border-radius:30px;font-weight:600">Return to your list</a>
       </div>
-      <p style="color:#8a7f77;font-size:12px;text-align:center">Prices and availability may change. Free shipping on orders over $500, Australia-wide.</p>
+      <p style="color:#8a7f77;font-size:12px;text-align:center">Prices and availability may change. Free shipping on orders over $3,500, Australia-wide.</p>
     </div>`;
 
     const payload = {

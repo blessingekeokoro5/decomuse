@@ -9,7 +9,7 @@
    worked out automatically from the total weight of the cart and the region
    the shopper selects at checkout. Adjust these numbers to match your courier. */
 const SHIP_ZONES = {
-  "Australia":       { base: 9.95,  perKg: 2.5,  freeOver: 500, days: "3 to 8 business days" },
+  "Australia":       { base: 9.95,  perKg: 2.5,  freeOver: 3500, days: "3 to 8 business days" },
   "New Zealand":     { base: 19.95, perKg: 7,    freeOver: 750, days: "5 to 12 business days" },
   "United Kingdom":  { base: 34.95, perKg: 16,   days: "7 to 15 business days" },
   "United States":   { base: 34.95, perKg: 16,   days: "7 to 15 business days" },

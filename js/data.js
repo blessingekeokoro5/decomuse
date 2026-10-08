@@ -15408,7 +15408,7 @@ const CURATED_HAMPERS = [
 
 /* ---- Rotating announcement bar ---- */
 const ANNOUNCEMENTS = [
-  "✦ Free shipping on orders over $500, Australia-wide",
+  "✦ Free shipping on orders over $3,500, Australia-wide",
   "🌏 We ship to Australia, NZ, UK, USA, Canada &amp; Nigeria",
   "🌸 New décor finds added weekly",
   "💝 Members save 10% on their first order, join free",

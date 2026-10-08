@@ -68,7 +68,7 @@ const POLICIES = {
       <h3>3. Delivery times &amp; costs (Australia)</h3>
       <ul>
         <li>Standard delivery: typically <strong>3 to 8 business days</strong> depending on your state and postcode.</li>
-        <li><strong>Free standard shipping on orders over $500</strong> (Australia-wide).</li>
+        <li><strong>Free standard shipping on orders over $3,500</strong> (Australia-wide).</li>
         <li>Bulky and furniture items may incur additional freight, shown at checkout, and can require longer transit times.</li>
         <li>Remote and regional areas may experience extended delivery times.</li>
       </ul>

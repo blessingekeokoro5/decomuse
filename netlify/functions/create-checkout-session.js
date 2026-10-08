@@ -45,7 +45,7 @@ const SHIP_COUNTRIES = ["AU", "NZ", "GB", "US", "CA", "NG"];
 
 /* ---- Shipping: mirrors SHIP_ZONES in js/checkout.js ---------- */
 const SHIP_ZONES = {
-  "Australia":      { base: 9.95,  perKg: 2.5, freeOver: 500, days: [3, 8] },
+  "Australia":      { base: 9.95,  perKg: 2.5, freeOver: 3500, days: [3, 8] },
   "New Zealand":    { base: 19.95, perKg: 7,   freeOver: 750, days: [5, 12] },
   "United Kingdom": { base: 34.95, perKg: 16,  days: [7, 15] },
   "United States":  { base: 34.95, perKg: 16,  days: [7, 15] },

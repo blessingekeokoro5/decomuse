@@ -46,8 +46,8 @@
   </div>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=17"></script>
-  <script src="js/components.js?v=36"></script>
+  <script src="js/data.js?v=18"></script>
+  <script src="js/components.js?v=37"></script>
   <script src="js/cart.js?v=16"></script>
   <script src="js/main.js?v=3"></script>
   <script>
@@ -133,7 +133,7 @@
             <h3 class="cl-name">${i.name}${(i.colour || i.size) ? ` <small>· ${[i.colour, i.size].filter(Boolean).join(" · ")}</small>` : ""}</h3>
             ${i.packaging ? `<p class="cl-pack">🎁 ${i.packaging}${i.dispatch ? ` · <strong>${i.dispatch}</strong>` : ""}</p>` : ""}
             ${sku ? `<div class="cl-sku">${sku}</div>` : ""}
-            ${afterDisc >= 500 ? `<div class="cl-bonus">BONUS: FREE DELIVERY</div>` : ""}
+            ${afterDisc >= 3500 ? `<div class="cl-bonus">BONUS: FREE DELIVERY</div>` : ""}
             <ul class="cart-deliv">
               <li>Delivered by a trusted supplier, track online</li>
               <li>Allow 3 to 8 business days for delivery, depending on your location</li>
@@ -160,7 +160,7 @@
           <h3>Delivery</h3>
           <label class="deliv-opt selected">
             <span class="deliv-ic">🚚</span>
-            <span class="deliv-txt"><strong>Standard delivery</strong><small>Ships to Australia, NZ, UK, USA, Canada &amp; Nigeria · rate calculated at checkout by weight &amp; region · free over $500 (AU)</small></span>
+            <span class="deliv-txt"><strong>Standard delivery</strong><small>Ships to Australia, NZ, UK, USA, Canada &amp; Nigeria · rate calculated at checkout by weight &amp; region · free over $3,500 (AU)</small></span>
             <span class="deliv-check">✓</span>
           </label>
           <p class="deliv-note">Same-day local delivery, pick up and lay-by are available on gift hamper orders, choose at checkout.</p>
