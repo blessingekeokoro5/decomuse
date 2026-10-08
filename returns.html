@@ -91,6 +91,14 @@
                   <option value="replacement">🔁 Replacement of the same item</option>
                 </select>
               </div>
+              <div class="field" id="exchangePanel" style="display:none;background:var(--cream);border:1px solid var(--line);border-radius:12px;padding:14px 16px">
+                <label>🔀 Exchange for a close substitute</label>
+                <p style="font-size:0.84rem;color:var(--muted);margin:2px 0 10px">Tell us which piece you bought and we'll suggest close substitutes of similar type and value you can swap to. Our team confirms availability and any price difference.</p>
+                <input id="exFrom" list="exFromList" placeholder="Start typing the item you bought…" autocomplete="off">
+                <datalist id="exFromList"></datalist>
+                <div id="exSuggest"></div>
+                <input type="hidden" id="exChosen">
+              </div>
               <div class="field"><label>Tell us more</label><textarea id="rComments" placeholder="Describe the issue so we can help quickly…" style="min-height:80px"></textarea></div>
               <div class="field"><label>Upload photos of the product</label>
                 <input id="rPhotos" type="file" accept="image/*" multiple>
@@ -179,6 +187,69 @@
       }).join("")}</div>`;
     }
 
+    // ---- Exchange: suggest close substitutes from the catalogue ----
+    const escAttr = (s) => String(s == null ? "" : s).replace(/"/g, "&quot;").replace(/</g, "&lt;");
+    function exImg(p) { return (p.imgs && p.imgs[0]) || p.img || ("assets/products/" + p.id + ".jpg"); }
+    function findSubstitutes(prod) {
+      const price = prod.price || 0;
+      const skip = (p) => p.custom || p.cat === "Packaging";
+      let same = (typeof PRODUCTS !== "undefined" ? PRODUCTS : [])
+        .filter((p) => p.id !== prod.id && p.cat === prod.cat && !skip(p))
+        .sort((a, b) => Math.abs((a.price || 0) - price) - Math.abs((b.price || 0) - price));
+      let subs = same.slice(0, 6);
+      if (subs.length < 6) {
+        const seen = new Set(subs.map((s) => s.id).concat(prod.id));
+        const extra = PRODUCTS
+          .filter((p) => !seen.has(p.id) && !skip(p) && Math.abs((p.price || 0) - price) <= Math.max(40, price * 0.35))
+          .sort((a, b) => Math.abs((a.price || 0) - price) - Math.abs((b.price || 0) - price));
+        subs = subs.concat(extra).slice(0, 6);
+      }
+      return subs;
+    }
+    function renderSubs(prod) {
+      const box = document.getElementById("exSuggest");
+      const subs = findSubstitutes(prod);
+      if (!subs.length) { box.innerHTML = `<p style="color:var(--muted);font-size:0.86rem;margin:12px 0 0">No close substitutes found right now — our team will email you options.</p>`; return; }
+      box.innerHTML = `<div style="font-size:0.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:14px 0 8px">Close substitutes you could swap to</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:12px">`
+        + subs.map((p) => `<div class="ex-card" data-id="${p.id}" onclick="chooseSub('${p.id}', this)" style="border:1.5px solid var(--line);border-radius:12px;padding:10px;text-align:center;cursor:pointer;transition:border-color .15s">
+            <img src="${escAttr(exImg(p))}" alt="${escAttr(p.name)}" style="width:100%;aspect-ratio:1/1;object-fit:contain;border-radius:8px;background:#fff" onerror="this.style.display='none'">
+            <div style="font-size:0.82rem;margin-top:8px;line-height:1.3">${escAttr(p.name)}</div>
+            <div style="font-weight:700;color:var(--rose-deep);margin-top:4px">${money(p.price)}</div>
+            <div class="ex-pick" style="font-size:0.76rem;color:var(--muted);margin-top:6px">Tap to choose</div>
+          </div>`).join("") + `</div>`;
+    }
+    function chooseSub(id, el) {
+      const p = PRODUCTS.find((x) => x.id === id); if (!p) return;
+      document.getElementById("exChosen").value = p.name + " (" + (p.sku || p.id) + ")";
+      document.querySelectorAll("#exSuggest .ex-card").forEach((c) => {
+        c.style.borderColor = "var(--line)";
+        const t = c.querySelector(".ex-pick"); if (t) { t.textContent = "Tap to choose"; t.style.color = "var(--muted)"; }
+      });
+      el.style.borderColor = "var(--rose)";
+      const tag = el.querySelector(".ex-pick"); if (tag) { tag.textContent = "✓ Selected"; tag.style.color = "var(--rose-deep)"; }
+      if (typeof showToast === "function") showToast("Exchange choice noted ✦");
+    }
+    (function initExchange() {
+      const sel = document.getElementById("rResolution");
+      const panel = document.getElementById("exchangePanel");
+      const from = document.getElementById("exFrom");
+      const dl = document.getElementById("exFromList");
+      if (!sel || !panel) return;
+      if (dl && typeof PRODUCTS !== "undefined") {
+        dl.innerHTML = PRODUCTS.filter((p) => p.cat !== "Packaging").map((p) => `<option value="${escAttr(p.name)}">`).join("");
+      }
+      const toggle = () => { panel.style.display = (sel.value === "exchange") ? "block" : "none"; };
+      sel.addEventListener("change", toggle); toggle();
+      const match = () => (typeof PRODUCTS !== "undefined") && PRODUCTS.find((x) => x.name.toLowerCase() === from.value.trim().toLowerCase());
+      from.addEventListener("change", () => {
+        const p = match();
+        if (p) { const rp = document.getElementById("rProduct"); if (rp && !rp.value) rp.value = p.name; document.getElementById("exChosen").value = ""; renderSubs(p); }
+        else { document.getElementById("exSuggest").innerHTML = ""; }
+      });
+      from.addEventListener("input", () => { const p = match(); if (p) renderSubs(p); });
+    })();
+
     // Lodge a return
     document.getElementById("returnForm").addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -193,6 +264,7 @@
         amount: parseFloat(document.getElementById("rAmount").value) || 0,
         preferred: document.getElementById("rResolution").value,
         comments: document.getElementById("rComments").value,
+        exchangeFor: (document.getElementById("exChosen") || {}).value || "",
         photos: photoCount,
         status: "received",
         resolution: null,
@@ -206,13 +278,15 @@
         ["Product", ticket.product], ["Reason", ticket.reason],
         ["Amount", ticket.amount ? money(ticket.amount) : ""],
         ["Preferred resolution", RES_LABELS[ticket.preferred] || ticket.preferred],
+        ["Exchange substitute requested", ticket.exchangeFor],
         ["Photos attached", photoCount + ""],
         ["Comments", ticket.comments]
       ].filter(d => d[1]);
       try { if (typeof deliverForm === "function") await deliverForm(data, "Samira Home Decor, Return request " + ref); } catch (err) {}
 
       document.getElementById("rSuccess").classList.add("show");
-      document.getElementById("rSuccess").innerHTML = "Return lodged! Your reference is below, please print it and attach it to your parcel.";
+      document.getElementById("rSuccess").innerHTML = "Return lodged! Your reference is below, please print it and attach it to your parcel."
+        + (ticket.exchangeFor ? ` We've noted your exchange choice: <strong>${ticket.exchangeFor}</strong> — we'll confirm availability and any price difference by email.` : "");
       document.getElementById("rResult").innerHTML = `
         <div class="rt-ref" id="printArea">
           <h3>Return reference</h3>
