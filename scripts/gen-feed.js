@@ -82,11 +82,6 @@ const items = PRODUCTS.filter((p) => p && p.id && p.sku).map((p) => {
     <g:identifier_exists>no</g:identifier_exists>
     <g:google_product_category>${esc(googleCat(p.cat))}</g:google_product_category>
     <g:product_type>${esc(p.cat)}</g:product_type>
-    <g:shipping>
-      <g:country>AU</g:country>
-      <g:service>Standard</g:service>
-      <g:price>19.00 AUD</g:price>
-    </g:shipping>
 ${extras.join("\n")}
   </item>`;
 });
