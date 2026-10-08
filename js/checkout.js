@@ -17,7 +17,7 @@ const SHIP_ZONES = {
   "United Kingdom":  { base: 167.60, perKg: 24,   days: "7 to 15 business days" },
   "United States":   { base: 137.70, perKg: 28,   days: "7 to 15 business days" },
   "Canada":          { base: 137.70, perKg: 28,   days: "7 to 16 business days" },
-  "Nigeria":         { base: 188.00, perKg: 33.20, days: "8 to 18 business days" }
+  "Nigeria":         { base: 148.00, perKg: 33.20, days: "8 to 18 business days" }
 };
 const DEFAULT_ITEM_KG = 0.75; // used when a product has no weight set
 

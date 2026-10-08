@@ -50,7 +50,7 @@ const SHIP_ZONES = {
   "United Kingdom": { base: 167.60, perKg: 24,   days: [7, 15] },
   "United States":  { base: 137.70, perKg: 28,   days: [7, 15] },
   "Canada":         { base: 137.70, perKg: 28,   days: [7, 16] },
-  "Nigeria":        { base: 188.00, perKg: 33.20, days: [8, 18] },
+  "Nigeria":        { base: 148.00, perKg: 33.20, days: [8, 18] },
 };
 const DEFAULT_ITEM_KG = 0.75;
 const SAMEDAY_FEE = 15;
