@@ -8,13 +8,16 @@
    Each zone = a base handling fee + a per-kilogram rate (AUD). The rate is
    worked out automatically from the total weight of the cart and the region
    the shopper selects at checkout. Adjust these numbers to match your courier. */
+/* International rates calibrated to FedEx zones: base + perKg is set so the fee
+   at 10 kg equals the FedEx 10 kg-box price, and perKg is FedEx's "over 10 kg"
+   rate. e.g. USA 10 kg = 137.70 + 28*10 = $417.70. AU stays domestic. */
 const SHIP_ZONES = {
-  "Australia":       { base: 9.95,  perKg: 2.5,  freeOver: 3500, days: "3 to 8 business days" },
-  "New Zealand":     { base: 19.95, perKg: 7,    freeOver: 750, days: "5 to 12 business days" },
-  "United Kingdom":  { base: 34.95, perKg: 16,   days: "7 to 15 business days" },
-  "United States":   { base: 34.95, perKg: 16,   days: "7 to 15 business days" },
-  "Canada":          { base: 36.95, perKg: 17,   days: "7 to 16 business days" },
-  "Nigeria":         { base: 44.95, perKg: 22,   days: "8 to 18 business days" }
+  "Australia":       { base: 9.95,   perKg: 2.5,  freeOver: 3500, days: "3 to 8 business days" },
+  "New Zealand":     { base: 147.90, perKg: 9.90, days: "5 to 12 business days" },
+  "United Kingdom":  { base: 167.60, perKg: 24,   days: "7 to 15 business days" },
+  "United States":   { base: 137.70, perKg: 28,   days: "7 to 15 business days" },
+  "Canada":          { base: 137.70, perKg: 28,   days: "7 to 16 business days" },
+  "Nigeria":         { base: 148.00, perKg: 33.20, days: "8 to 18 business days" }
 };
 const DEFAULT_ITEM_KG = 0.75; // used when a product has no weight set
 
