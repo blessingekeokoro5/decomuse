@@ -13,6 +13,21 @@
 [functions]
   node_bundler = "esbuild"
 
+# Consolidate the alternate .com domain onto the primary .com.au, so there is
+# one canonical site for SEO (the bare samirahomedecor.com otherwise serves a
+# duplicate). www variants already 301 automatically; this covers the apex.
+[[redirects]]
+  from = "https://samirahomedecor.com/*"
+  to = "https://samirahomedecor.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://samirahomedecor.com/*"
+  to = "https://samirahomedecor.com.au/:splat"
+  status = 301
+  force = true
+
 # Friendly alias: POST /api/create-checkout-session
 # -> /.netlify/functions/create-checkout-session
 [[redirects]]
