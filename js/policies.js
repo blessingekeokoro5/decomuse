@@ -101,10 +101,12 @@ const POLICIES = {
       <p>We gladly accept change-of-mind returns on eligible items within <strong>30 days</strong> of delivery, provided the item is:</p>
       <ul>
         <li>unused, in its original condition and original packaging;</li>
-        <li>not a excluded item (see section 4); and</li>
+        <li>not an excluded item (see section 4); and</li>
         <li>accompanied by proof of purchase.</li>
       </ul>
       <p>Change-of-mind return shipping is at the customer's expense, and the original shipping charge is non-refundable. A store credit or refund of the item price is issued once the item is received and inspected.</p>
+      <p><strong>Extended holiday returns:</strong> orders placed between <strong>25 December and 5 January</strong> may be returned within <strong>60 days</strong> of delivery, giving you extra time over the festive season.</p>
+      <p><strong>Exchanges:</strong> instead of a refund, you may exchange an eligible change-of-mind item for a <strong>close substitute</strong> — a product of similar type and value. When you request a return, choose <em>Exchange</em> and tell us which substitute you'd like (our team can suggest comparable pieces). Any difference in price is paid or refunded accordingly.</p>
 
       <h3>3. Faulty, damaged or incorrect items</h3>
       <p>If your item is faulty, damaged on arrival, or not what you ordered, please contact us within 7 days with your order number and photos. We will arrange a repair, replacement or refund in line with the ACL, and we'll cover reasonable return postage for verified faults.</p>
