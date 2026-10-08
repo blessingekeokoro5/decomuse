@@ -45,12 +45,12 @@ const SHIP_COUNTRIES = ["AU", "NZ", "GB", "US", "CA", "NG"];
 
 /* ---- Shipping: mirrors SHIP_ZONES in js/checkout.js ---------- */
 const SHIP_ZONES = {
-  "Australia":      { base: 9.95,   perKg: 2.5,  freeOver: 3500, days: [3, 8] },
-  "New Zealand":    { base: 147.90, perKg: 9.90, days: [5, 12] },
-  "United Kingdom": { base: 167.60, perKg: 24,   days: [7, 15] },
-  "United States":  { base: 137.70, perKg: 28,   days: [7, 15] },
-  "Canada":         { base: 137.70, perKg: 28,   days: [7, 16] },
-  "Nigeria":        { base: 148.00, perKg: 33.20, days: [8, 18] },
+  "Australia":      { base: 9.95,  perKg: 2.5,  freeOver: 3500, days: [3, 8] },
+  "New Zealand":    { base: 14.20, perKg: 14.80, days: [6, 12] },
+  "United Kingdom": { base: 21.30, perKg: 28.60, days: [10, 24] },
+  "United States":  { base: 16.10, perKg: 27.50, days: [10, 24] },
+  "Canada":         { base: 16.10, perKg: 27.50, days: [10, 24] },
+  "Nigeria":        { base: 25.20, perKg: 37.30, days: [12, 30] },
 };
 const DEFAULT_ITEM_KG = 0.75;
 const SAMEDAY_FEE = 15;
