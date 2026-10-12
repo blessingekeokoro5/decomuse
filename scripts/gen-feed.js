@@ -35,13 +35,9 @@ const esc = (s) => String(s == null ? "" : s)
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
   .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
-// Lowest price for products sold in per-size variants; else base price.
-function basePrice(p) {
-  if (Array.isArray(p.sizes) && p.sizes.length) {
-    return Math.min.apply(null, p.sizes.map((s) => s.price));
-  }
-  return p.price;
-}
+// The product's headline price (p.price is the intended "from" price — for sofas
+// this is the real sofa, not the cheapest footstool/chair variant).
+function basePrice(p) { return p.price; }
 function imgUrl(p) {
   const src = p.img || (Array.isArray(p.imgs) && p.imgs[0]) || ("assets/products/" + p.id + ".png");
   return SITE + "/" + src.replace(/^\//, "");

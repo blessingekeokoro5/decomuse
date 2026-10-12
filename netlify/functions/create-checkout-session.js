@@ -93,6 +93,16 @@ function jsonResponse(statusCode, obj) {
 
 const round2 = (n) => Math.round(n * 100) / 100;
 
+// Recurring sale: 10% off every sofa (id sfNN) on Tue/Thu/Sat, Australian time.
+// Mirrors the browser logic in js/data.js so the charged price always matches.
+function sofaSaleToday() {
+  try {
+    return ["Tue", "Thu", "Sat"].indexOf(
+      new Date().toLocaleDateString("en-US", { timeZone: "Australia/Adelaide", weekday: "short" })) !== -1;
+  } catch (e) { return false; }
+}
+const SOFA_SALE_PCT = 10;
+
 /* Resolve one cart line to a trusted { name, unitPrice, qty, weight }.
    Throws if the line can't be justified from the catalogue. */
 function resolveLine(raw) {
@@ -134,6 +144,9 @@ function resolveLine(raw) {
   const size = raw.size != null ? String(raw.size) : "";
   let unitPrice = p.price;
   if (size && Object.prototype.hasOwnProperty.call(p.sizes, size)) unitPrice = p.sizes[size];
+
+  // Recurring sofa sale (Tue/Thu/Sat AU time) — apply to the trusted price.
+  if (/^sf\d+$/.test(id) && sofaSaleToday()) unitPrice = round2(unitPrice * (1 - SOFA_SALE_PCT / 100));
 
   const variant = [raw.colour, size].filter(Boolean).map(String).join(", ");
   return {

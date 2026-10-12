@@ -729,9 +729,9 @@ const PRODUCTS = [
     care: "Wipe clean with a soft, damp cloth. Avoid abrasive pads and scouring powders, which scratch the glaze and dull any metallic detail." },
 
   // ── Living Room ──
-  { id: "sf01", name: "Deep-Seat Family Sofa", cat: "Living Room", room: "Living Room", price: 2364, was: 2627, memberPrice: 2128, sku: "SH-10205", tag: "Sale", ph: "", img: "assets/products/sf01.webp",
+  { id: "sf01", name: "Deep-Seat Family Sofa", cat: "Living Room", room: "Living Room", price: 4272, memberPrice: 3845, sku: "SH-10205", tag: "New", ph: "", img: "assets/products/sf01.webp",
     imgs: ["assets/products/sf01.webp", "assets/products/sf01-2.webp", "assets/products/sf01-3.webp", "assets/products/sf01-4.webp", "assets/products/sf01-5.webp"],
-    sizes: [{ label: "Beige / Foot Petal", price: 2364 }, { label: "Beige / 120cm", price: 3845 }, { label: "Beige / 180cm", price: 8539 }, { label: "Beige / 200cm", price: 8703 }, { label: "Beige / 220cm", price: 9456 }, { label: "Beige / 240cm", price: 9986 }, { label: "Beige / 260cm", price: 10465 }, { label: "Beige / 280cm", price: 11987 }, { label: "Beige / 300cm", price: 12344 }],
+    sizes: [{ label: "Beige / 120cm", price: 4272 }, { label: "Beige / 180cm", price: 9488 }, { label: "Beige / 200cm", price: 9670 }, { label: "Beige / 220cm", price: 10507 }, { label: "Beige / 240cm", price: 11096 }, { label: "Beige / 260cm", price: 11628 }, { label: "Beige / 280cm", price: 13319 }, { label: "Beige / 300cm", price: 13716 }, { label: "Beige / Foot Petal", price: 2627 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Beige / Foot Petal": "assets/products/sf01-v1.webp", "Beige / 120cm": "assets/products/sf01-v2.webp", "Beige / 180cm": "assets/products/sf01-v3.webp", "Beige / 200cm": "assets/products/sf01-v3.webp", "Beige / 220cm": "assets/products/sf01-v3.webp", "Beige / 240cm": "assets/products/sf01-v3.webp", "Beige / 260cm": "assets/products/sf01-v3.webp", "Beige / 280cm": "assets/products/sf01-v3.webp", "Beige / 300cm": "assets/products/sf01-v3.webp" },
     desc: "Built for the household where everyone piles on at once: a deep seat, a soft back and widths right up to 260cm. Beige, which is the colour that forgives a family.",
@@ -744,9 +744,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "9", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf02", name: "Modular Sofa with Chaise Options", cat: "Living Room", room: "Living Room", price: 2384, was: 2649, memberPrice: 2146, sku: "SH-10206", tag: "Sale", ph: "", img: "assets/products/sf02.webp",
+  { id: "sf02", name: "Modular Sofa with Chaise Options", cat: "Living Room", room: "Living Room", price: 4282, memberPrice: 3854, sku: "SH-10206", tag: "New", ph: "", img: "assets/products/sf02.webp",
     imgs: ["assets/products/sf02.webp", "assets/products/sf02-2.webp", "assets/products/sf02-3.webp", "assets/products/sf02-4.webp", "assets/products/sf02-5.webp"],
-    sizes: [{ label: "Beige / Foot Pedal", price: 2384 }, { label: "Emerald Green / Foot Pedal", price: 2384 }, { label: "Charcoal Grey / Foot Pedal", price: 2384 }, { label: "Tan / Foot Pedal", price: 2384 }, { label: "Beige / 110cm", price: 3854 }, { label: "Emerald Green / 110cm", price: 3854 }, { label: "Charcoal Grey / 110cm", price: 3854 }, { label: "Tan / 110cm", price: 3854 }, { label: "Beige / 180cm", price: 5307 }, { label: "Emerald Green / 180cm", price: 5307 }, { label: "Charcoal Grey / 180cm", price: 5307 }, { label: "Tan / 180cm", price: 5307 }, { label: "Beige / 220cm", price: 6170 }, { label: "Emerald Green / 220cm", price: 6170 }, { label: "Charcoal Grey / 220cm", price: 6170 }, { label: "Tan / 220cm", price: 6170 }, { label: "Beige / 250cm", price: 6453 }, { label: "Emerald Green / 250cm", price: 6453 }, { label: "Charcoal Grey / 250cm", price: 6453 }, { label: "Tan / 250cm", price: 6453 }, { label: "Beige / 280cm", price: 6689 }, { label: "Emerald Green / 280cm", price: 6689 }, { label: "Charcoal Grey / 280cm", price: 6689 }, { label: "Tan / 280cm", price: 6689 }, { label: "Beige / 320cm", price: 7291 }, { label: "Emerald Green / 320cm", price: 7291 }, { label: "Charcoal Grey / 320cm", price: 7291 }, { label: "Tan / 320cm", price: 7291 }, { label: "Beige / 280cm + 180cm Chaise", price: 7380 }, { label: "Emerald Green / 280cm + 180cm Chaise", price: 7380 }, { label: "Charcoal Grey / 280cm + 180cm Chaise", price: 7380 }, { label: "Tan / 280cm + 180cm Chaise", price: 7380 }, { label: "Beige / 360cm", price: 7401 }, { label: "Emerald Green / 360cm", price: 7401 }, { label: "Charcoal Grey / 360cm", price: 7401 }, { label: "Tan / 360cm", price: 7401 }, { label: "Beige / 310cm + 180cm Chaise", price: 7754 }, { label: "Emerald Green / 310cm + 180cm Chaise", price: 7754 }, { label: "Charcoal Grey / 310cm + 180cm Chaise", price: 7754 }, { label: "Tan / 310cm + 180cm Chaise", price: 7754 }, { label: "Beige / 320cm + 180cm Chaise", price: 8218 }, { label: "Emerald Green / 320cm + 180cm Chaise", price: 8218 }, { label: "Charcoal Grey / 320cm + 180cm Chaise", price: 8218 }, { label: "Tan / 320cm + 180cm Chaise", price: 8218 }, { label: "Beige / 360cm + 180cm Chaise", price: 8674 }, { label: "Emerald Green / 360cm + 180cm Chaise", price: 8674 }, { label: "Charcoal Grey / 360cm + 180cm Chaise", price: 8674 }, { label: "Tan / 360cm + 180cm Chaise", price: 8674 }, { label: "Beige / 400cm + 180cm Chaise", price: 9280 }, { label: "Emerald Green / 400cm + 180cm Chaise", price: 9280 }, { label: "Charcoal Grey / 400cm + 180cm Chaise", price: 9280 }, { label: "Tan / 400cm + 180cm Chaise", price: 9280 }],
+    sizes: [{ label: "Beige / 110cm", price: 4282 }, { label: "Emerald Green / 110cm", price: 4282 }, { label: "Charcoal Grey / 110cm", price: 4282 }, { label: "Tan / 110cm", price: 4282 }, { label: "Beige / 180cm", price: 5897 }, { label: "Emerald Green / 180cm", price: 5897 }, { label: "Charcoal Grey / 180cm", price: 5897 }, { label: "Tan / 180cm", price: 5897 }, { label: "Beige / 220cm", price: 6856 }, { label: "Emerald Green / 220cm", price: 6856 }, { label: "Charcoal Grey / 220cm", price: 6856 }, { label: "Tan / 220cm", price: 6856 }, { label: "Beige / 250cm", price: 7170 }, { label: "Emerald Green / 250cm", price: 7170 }, { label: "Charcoal Grey / 250cm", price: 7170 }, { label: "Tan / 250cm", price: 7170 }, { label: "Beige / 280cm", price: 7432 }, { label: "Emerald Green / 280cm", price: 7432 }, { label: "Charcoal Grey / 280cm", price: 7432 }, { label: "Tan / 280cm", price: 7432 }, { label: "Beige / 320cm", price: 8101 }, { label: "Emerald Green / 320cm", price: 8101 }, { label: "Charcoal Grey / 320cm", price: 8101 }, { label: "Tan / 320cm", price: 8101 }, { label: "Beige / 280cm + 180cm Chaise", price: 8200 }, { label: "Emerald Green / 280cm + 180cm Chaise", price: 8200 }, { label: "Charcoal Grey / 280cm + 180cm Chaise", price: 8200 }, { label: "Tan / 280cm + 180cm Chaise", price: 8200 }, { label: "Beige / 360cm", price: 8223 }, { label: "Emerald Green / 360cm", price: 8223 }, { label: "Charcoal Grey / 360cm", price: 8223 }, { label: "Tan / 360cm", price: 8223 }, { label: "Beige / 310cm + 180cm Chaise", price: 8616 }, { label: "Emerald Green / 310cm + 180cm Chaise", price: 8616 }, { label: "Charcoal Grey / 310cm + 180cm Chaise", price: 8616 }, { label: "Tan / 310cm + 180cm Chaise", price: 8616 }, { label: "Beige / 320cm + 180cm Chaise", price: 9131 }, { label: "Emerald Green / 320cm + 180cm Chaise", price: 9131 }, { label: "Charcoal Grey / 320cm + 180cm Chaise", price: 9131 }, { label: "Tan / 320cm + 180cm Chaise", price: 9131 }, { label: "Beige / 360cm + 180cm Chaise", price: 9638 }, { label: "Emerald Green / 360cm + 180cm Chaise", price: 9638 }, { label: "Charcoal Grey / 360cm + 180cm Chaise", price: 9638 }, { label: "Tan / 360cm + 180cm Chaise", price: 9638 }, { label: "Beige / 400cm + 180cm Chaise", price: 10311 }, { label: "Emerald Green / 400cm + 180cm Chaise", price: 10311 }, { label: "Charcoal Grey / 400cm + 180cm Chaise", price: 10311 }, { label: "Tan / 400cm + 180cm Chaise", price: 10311 }, { label: "Beige / Foot Pedal", price: 2649 }, { label: "Emerald Green / Foot Pedal", price: 2649 }, { label: "Charcoal Grey / Foot Pedal", price: 2649 }, { label: "Tan / Foot Pedal", price: 2649 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Beige / Foot Pedal": "assets/products/sf02-v1.webp", "Emerald Green / Foot Pedal": "assets/products/sf02-v1.webp", "Charcoal Grey / Foot Pedal": "assets/products/sf02-v1.webp", "Tan / Foot Pedal": "assets/products/sf02-v1.webp", "Beige / 110cm": "assets/products/sf02-v2.webp", "Emerald Green / 110cm": "assets/products/sf02-v2.webp", "Charcoal Grey / 110cm": "assets/products/sf02-v2.webp", "Tan / 110cm": "assets/products/sf02-v2.webp", "Beige / 180cm": "assets/products/sf02-v3.webp", "Emerald Green / 180cm": "assets/products/sf02-v3.webp", "Charcoal Grey / 180cm": "assets/products/sf02-v3.webp", "Tan / 180cm": "assets/products/sf02-v3.webp", "Beige / 220cm": "assets/products/sf02-v4.webp", "Emerald Green / 220cm": "assets/products/sf02-v4.webp", "Charcoal Grey / 220cm": "assets/products/sf02-v4.webp", "Tan / 220cm": "assets/products/sf02-v4.webp", "Beige / 250cm": "assets/products/sf02-v4.webp", "Emerald Green / 250cm": "assets/products/sf02-v4.webp", "Charcoal Grey / 250cm": "assets/products/sf02-v4.webp", "Tan / 250cm": "assets/products/sf02-v4.webp", "Beige / 280cm": "assets/products/sf02-v4.webp", "Emerald Green / 280cm": "assets/products/sf02-v4.webp", "Charcoal Grey / 280cm": "assets/products/sf02-v4.webp", "Tan / 280cm": "assets/products/sf02-v5.webp", "Beige / 320cm": "assets/products/sf02-v5.webp", "Emerald Green / 320cm": "assets/products/sf02-v5.webp", "Charcoal Grey / 320cm": "assets/products/sf02-v5.webp", "Tan / 320cm": "assets/products/sf02-v5.webp", "Beige / 280cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Emerald Green / 280cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Charcoal Grey / 280cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Tan / 280cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Beige / 360cm": "assets/products/sf02-v5.webp", "Emerald Green / 360cm": "assets/products/sf02-v5.webp", "Charcoal Grey / 360cm": "assets/products/sf02-v5.webp", "Tan / 360cm": "assets/products/sf02-v5.webp", "Beige / 310cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Emerald Green / 310cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Charcoal Grey / 310cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Tan / 310cm + 180cm Chaise": "assets/products/sf02-v6.webp", "Beige / 320cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Emerald Green / 320cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Charcoal Grey / 320cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Tan / 320cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Beige / 360cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Emerald Green / 360cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Charcoal Grey / 360cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Tan / 360cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Beige / 400cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Emerald Green / 400cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Charcoal Grey / 400cm + 180cm Chaise": "assets/products/sf02-v7.webp", "Tan / 400cm + 180cm Chaise": "assets/products/sf02-v7.webp" },
     desc: "A modular sofa that scales from a 110cm two-seater to a 320cm run with a chaise, so it fits the room you have now and the one you move to later. Several colourways.",
@@ -759,9 +759,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "52", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf03", name: "Low-Line Linen Lounge Sofa", cat: "Living Room", room: "Living Room", price: 2438, was: 2709, memberPrice: 2194, sku: "SH-10207", tag: "Sale", ph: "", img: "assets/products/sf03.webp",
+  { id: "sf03", name: "Low-Line Linen Lounge Sofa", cat: "Living Room", room: "Living Room", price: 2709, memberPrice: 2438, sku: "SH-10207", tag: "New", ph: "", img: "assets/products/sf03.webp",
     imgs: ["assets/products/sf03.webp", "assets/products/sf03-2.webp", "assets/products/sf03-3.webp", "assets/products/sf03-4.webp", "assets/products/sf03-5.webp"],
-    sizes: [{ label: "45cm", price: 2438 }, { label: "50cm", price: 2450 }, { label: "55cm", price: 2528 }, { label: "60cm", price: 2550 }, { label: "120cm", price: 2952 }, { label: "Single Seater", price: 3262 }, { label: "Double Seater", price: 4188 }],
+    sizes: [{ label: "45cm", price: 2709 }, { label: "50cm", price: 2722 }, { label: "55cm", price: 2809 }, { label: "60cm", price: 2833 }, { label: "120cm", price: 3280 }, { label: "Double Seater", price: 4653 }, { label: "Single Seater", price: 3624 }],
     lead: "8 to 10 weeks",
     sizeImg: { "45cm": "assets/products/sf03-v1.webp", "50cm": "assets/products/sf03-v2.webp", "55cm": "assets/products/sf03-v1.webp", "60cm": "assets/products/sf03-v1.webp", "120cm": "assets/products/sf03-v1.webp", "Single Seater": "assets/products/sf03-v3.webp", "Double Seater": "assets/products/sf03-v4.webp" },
     desc: "A low, lounging sofa in linen with feather-filled cushions, the sort you sink into rather than perch on. Single and double modules plus small widths for a reading corner.",
@@ -774,9 +774,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Linen", "Options": "7", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head and blot spills at once. Linen softens and creases with use, which is part of its character. Keep out of harsh direct sun." },
 
-  { id: "sf04", name: "Square-Stitched L-Shape Sofa", cat: "Living Room", room: "Living Room", price: 2950, was: 3278, memberPrice: 2655, sku: "SH-10208", tag: "Sale", ph: "", img: "assets/products/sf04.webp",
+  { id: "sf04", name: "Square-Stitched L-Shape Sofa", cat: "Living Room", room: "Living Room", price: 11989, memberPrice: 10790, sku: "SH-10208", tag: "New", ph: "", img: "assets/products/sf04.webp",
     imgs: ["assets/products/sf04.webp", "assets/products/sf04-2.webp", "assets/products/sf04-3.webp", "assets/products/sf04-4.webp", "assets/products/sf04-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 2950 }, { label: "Single Armchair", price: 4269 }, { label: "3 Seater", price: 10790 }, { label: "L-Shape", price: 11390 }],
+    sizes: [{ label: "3 Seater", price: 11989 }, { label: "L-Shape", price: 12656 }, { label: "Foot Pedal", price: 3278 }, { label: "Single Armchair", price: 4743 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf04-v1.webp", "Single Armchair": "assets/products/sf04-v1.webp", "3 Seater": "assets/products/sf04-v2.webp", "L-Shape": "assets/products/sf04-v1.webp" },
     desc: "Clean square stitching across generous cushions, in a three seater or an L-shape that turns a corner properly. Armchair and footstool to match.",
@@ -789,9 +789,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "4", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf05", name: "Velvet Sofa Collection", cat: "Living Room", room: "Living Room", price: 3490, was: 3878, memberPrice: 3141, sku: "SH-10209", tag: "Sale", ph: "", img: "assets/products/sf05.webp",
+  { id: "sf05", name: "Velvet Sofa Collection", cat: "Living Room", room: "Living Room", price: 5111, memberPrice: 4600, sku: "SH-10209", tag: "New", ph: "", img: "assets/products/sf05.webp",
     imgs: ["assets/products/sf05.webp", "assets/products/sf05-2.webp", "assets/products/sf05-3.webp", "assets/products/sf05-4.webp", "assets/products/sf05-5.webp"],
-    sizes: [{ label: "Chair / Green", price: 3490 }, { label: "Chair / Red", price: 3490 }, { label: "Chair / Ivory", price: 3490 }, { label: "Ottoman / Green", price: 3830 }, { label: "Ottoman / Red", price: 3830 }, { label: "Ottoman / Ivory", price: 3830 }, { label: "110cm / Green", price: 4600 }, { label: "110cm / Red", price: 4600 }, { label: "110cm / Ivory", price: 4600 }, { label: "170cm / Green", price: 7120 }, { label: "170cm / Red", price: 7120 }, { label: "170cm / Ivory", price: 7120 }, { label: "215cm / Green", price: 8120 }, { label: "215cm / Red", price: 8120 }, { label: "215cm / Ivory", price: 8120 }, { label: "280cm / Green", price: 9940 }, { label: "280cm / Red", price: 9940 }, { label: "280cm / Ivory", price: 9940 }],
+    sizes: [{ label: "110cm / Green", price: 5111 }, { label: "110cm / Red", price: 5111 }, { label: "110cm / Ivory", price: 5111 }, { label: "170cm / Green", price: 7911 }, { label: "170cm / Red", price: 7911 }, { label: "170cm / Ivory", price: 7911 }, { label: "215cm / Green", price: 9022 }, { label: "215cm / Red", price: 9022 }, { label: "215cm / Ivory", price: 9022 }, { label: "280cm / Green", price: 11044 }, { label: "280cm / Red", price: 11044 }, { label: "280cm / Ivory", price: 11044 }, { label: "Chair / Green", price: 3878 }, { label: "Chair / Red", price: 3878 }, { label: "Chair / Ivory", price: 3878 }, { label: "Ottoman / Green", price: 4256 }, { label: "Ottoman / Red", price: 4256 }, { label: "Ottoman / Ivory", price: 4256 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Chair / Green": "assets/products/sf05-v1.webp", "Chair / Red": "assets/products/sf05-v2.webp", "Chair / Ivory": "assets/products/sf05-v3.webp", "Ottoman / Green": "assets/products/sf05-v4.webp", "Ottoman / Red": "assets/products/sf05-v5.webp", "Ottoman / Ivory": "assets/products/sf05-v6.webp", "110cm / Green": "assets/products/sf05-v7.webp", "110cm / Red": "assets/products/sf05-v8.webp", "110cm / Ivory": "assets/products/sf05-v9.webp", "170cm / Green": "assets/products/sf05-v10.webp", "170cm / Red": "assets/products/sf05-v11.webp", "170cm / Ivory": "assets/products/sf05-v12.webp", "215cm / Green": "assets/products/sf05-v13.webp", "215cm / Red": "assets/products/sf05-v14.webp", "215cm / Ivory": "assets/products/sf05-v15.webp", "280cm / Green": "assets/products/sf05-v16.webp", "280cm / Red": "assets/products/sf05-v17.webp", "280cm / Ivory": "assets/products/sf05-v18.webp" },
     desc: "Velvet over high-density foam, in green, red or ivory, at widths from 110cm to 280cm. The colours are the point here: a velvet sofa is the piece a room gets built around.",
@@ -804,9 +804,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "18", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf06", name: "Modular Leather Sectional Sofa", cat: "Living Room", room: "Living Room", price: 2990, was: 3322, memberPrice: 2691, sku: "SH-10210", tag: "Sale", ph: "", img: "assets/products/sf06.webp",
+  { id: "sf06", name: "Modular Leather Sectional Sofa", cat: "Living Room", room: "Living Room", price: 10241, memberPrice: 9217, sku: "SH-10210", tag: "New", ph: "", img: "assets/products/sf06.webp",
     imgs: ["assets/products/sf06.webp", "assets/products/sf06-2.webp", "assets/products/sf06-3.webp", "assets/products/sf06-4.webp", "assets/products/sf06-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 2990 }, { label: "Single Seater", price: 5600 }, { label: "210cm", price: 9217 }, { label: "280cm", price: 12250 }, { label: "330cm", price: 13990 }],
+    sizes: [{ label: "210cm", price: 10241 }, { label: "280cm", price: 13611 }, { label: "330cm", price: 15544 }, { label: "Foot Pedal", price: 3322 }, { label: "Single Seater", price: 6222 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf06-v1.webp", "Single Seater": "assets/products/sf06-v2.webp", "210cm": "assets/products/sf06-v3.webp", "280cm": "assets/products/sf06-v4.webp", "330cm": "assets/products/sf06-v4.webp" },
     desc: "Leather on a timber frame in a modular sectional layout, from a single seater to 330cm. Minimalist enough to disappear into a room, substantial enough to last in it.",
@@ -819,9 +819,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "5", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf07", name: "Velvet Sofa with Chaise", cat: "Living Room", room: "Living Room", price: 3044, was: 3382, memberPrice: 2740, sku: "SH-10211", tag: "Sale", ph: "", img: "assets/products/sf07.webp",
+  { id: "sf07", name: "Velvet Sofa with Chaise", cat: "Living Room", room: "Living Room", price: 10156, memberPrice: 9140, sku: "SH-10211", tag: "New", ph: "", img: "assets/products/sf07.webp",
     imgs: ["assets/products/sf07.webp", "assets/products/sf07-2.webp", "assets/products/sf07-3.webp", "assets/products/sf07-4.webp", "assets/products/sf07-5.webp"],
-    sizes: [{ label: "Foot Petal", price: 3044 }, { label: "Single Armchair", price: 4995 }, { label: "180cm", price: 9140 }, { label: "200cm", price: 9499 }, { label: "220cm", price: 10490 }, { label: "240cm", price: 11870 }, { label: "260cm", price: 12559 }, { label: "280cm", price: 13117 }, { label: "300cm", price: 13415 }, { label: "280cm + Chaise", price: 14117 }, { label: "300cm + Chaise", price: 14415 }, { label: "350cm + Chaise", price: 16417 }, { label: "380cm + Chaise", price: 17360 }],
+    sizes: [{ label: "180cm", price: 10156 }, { label: "200cm", price: 10554 }, { label: "220cm", price: 11656 }, { label: "240cm", price: 13189 }, { label: "260cm", price: 13954 }, { label: "280cm", price: 14574 }, { label: "300cm", price: 14906 }, { label: "280cm + Chaise", price: 15686 }, { label: "300cm + Chaise", price: 16017 }, { label: "350cm + Chaise", price: 18241 }, { label: "380cm + Chaise", price: 19289 }, { label: "Foot Petal", price: 3382 }, { label: "Single Armchair", price: 5550 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Petal": "assets/products/sf07-v1.webp", "Single Armchair": "assets/products/sf07-v2.webp", "180cm": "assets/products/sf07-v3.webp", "200cm": "assets/products/sf07-v3.webp", "220cm": "assets/products/sf07-v3.webp", "240cm": "assets/products/sf07-v3.webp", "260cm": "assets/products/sf07-v3.webp", "280cm": "assets/products/sf07-v3.webp", "300cm": "assets/products/sf07-v3.webp", "280cm + Chaise": "assets/products/sf07-v4.webp", "300cm + Chaise": "assets/products/sf07-v4.webp", "350cm + Chaise": "assets/products/sf07-v4.webp", "380cm + Chaise": "assets/products/sf07-v4.webp" },
     desc: "Velvet across a timber frame, in widths to 300cm with chaise versions for the end of a long room. The armchair matches if you want a pair.",
@@ -834,9 +834,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "13", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf08", name: "Curved Sofa in Black", cat: "Living Room", room: "Living Room", price: 3054, was: 3393, memberPrice: 2749, sku: "SH-10212", tag: "Sale", ph: "", img: "assets/products/sf08.webp",
+  { id: "sf08", name: "Curved Sofa in Black", cat: "Living Room", room: "Living Room", price: 5266, memberPrice: 4739, sku: "SH-10212", tag: "New", ph: "", img: "assets/products/sf08.webp",
     imgs: ["assets/products/sf08.webp", "assets/products/sf08-2.webp", "assets/products/sf08-3.webp", "assets/products/sf08-4.webp", "assets/products/sf08-5.webp"],
-    sizes: [{ label: "Black / Foot Petal", price: 3054 }, { label: "Black / 120cm", price: 4739 }, { label: "Black / 190cm", price: 6152 }, { label: "Black / 220cm", price: 7378 }, { label: "Black / 250cm", price: 8062 }, { label: "Black / 280cm", price: 8479 }, { label: "Black / 310cm", price: 9516 }, { label: "Black / 340cm", price: 10062 }],
+    sizes: [{ label: "Black / 120cm", price: 5266 }, { label: "Black / 190cm", price: 6836 }, { label: "Black / 220cm", price: 8198 }, { label: "Black / 250cm", price: 8958 }, { label: "Black / 280cm", price: 9421 }, { label: "Black / 310cm", price: 10573 }, { label: "Black / 340cm", price: 11180 }, { label: "Black / Foot Petal", price: 3393 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Black / Foot Petal": "assets/products/sf08-v1.webp", "Black / 120cm": "assets/products/sf08-v1.webp", "Black / 190cm": "assets/products/sf08-v1.webp", "Black / 220cm": "assets/products/sf08-v1.webp", "Black / 250cm": "assets/products/sf08-v1.webp", "Black / 280cm": "assets/products/sf08-v1.webp", "Black / 310cm": "assets/products/sf08-v1.webp", "Black / 340cm": "assets/products/sf08-v1.webp" },
     desc: "A curved back that softens a square room, in black, at widths from 120cm right up to 310cm. The curve is what makes it feel designed rather than bought.",
@@ -849,9 +849,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf09", name: "Wide Chaise Sofa Collection", cat: "Living Room", room: "Living Room", price: 3054, was: 3393, memberPrice: 2749, sku: "SH-10213", tag: "Sale", ph: "", img: "assets/products/sf09.webp",
+  { id: "sf09", name: "Wide Chaise Sofa Collection", cat: "Living Room", room: "Living Room", price: 4519, memberPrice: 4067, sku: "SH-10213", tag: "New", ph: "", img: "assets/products/sf09.webp",
     imgs: ["assets/products/sf09.webp", "assets/products/sf09-2.webp", "assets/products/sf09-3.webp", "assets/products/sf09-4.webp", "assets/products/sf09-5.webp"],
-    sizes: [{ label: "Foot Petal", price: 3054 }, { label: "120cm", price: 4067 }, { label: "220cm", price: 7482 }, { label: "240cm", price: 7987 }, { label: "260cm", price: 8628 }, { label: "280cm", price: 8987 }, { label: "300cm", price: 9347 }, { label: "300cm + 160cm Chaise", price: 11747 }, { label: "320cm + 160cm Chaise", price: 12800 }, { label: "340cm + 160cm Chaise", price: 13326 }, { label: "360cm + 160cm Chaise", price: 13784 }, { label: "380cm + 160cm Chaise", price: 14346 }, { label: "400cm + 160cm Chaise", price: 14984 }, { label: "420cm + 160cm Chaise", price: 15356 }],
+    sizes: [{ label: "120cm", price: 4519 }, { label: "220cm", price: 8313 }, { label: "240cm", price: 8874 }, { label: "260cm", price: 9587 }, { label: "280cm", price: 9986 }, { label: "300cm", price: 10386 }, { label: "300cm + 160cm Chaise", price: 13052 }, { label: "320cm + 160cm Chaise", price: 14222 }, { label: "340cm + 160cm Chaise", price: 14807 }, { label: "360cm + 160cm Chaise", price: 15316 }, { label: "380cm + 160cm Chaise", price: 15940 }, { label: "400cm + 160cm Chaise", price: 16649 }, { label: "420cm + 160cm Chaise", price: 17062 }, { label: "Foot Petal", price: 3393 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Petal": "assets/products/sf09-v1.webp", "120cm": "assets/products/sf09-v2.webp", "220cm": "assets/products/sf09-v2.webp", "240cm": "assets/products/sf09-v2.webp", "260cm": "assets/products/sf09-v2.webp", "280cm": "assets/products/sf09-v2.webp", "300cm": "assets/products/sf09-v2.webp", "300cm + 160cm Chaise": "assets/products/sf09-v3.webp", "320cm + 160cm Chaise": "assets/products/sf09-v3.webp", "340cm + 160cm Chaise": "assets/products/sf09-v3.webp", "360cm + 160cm Chaise": "assets/products/sf09-v3.webp", "380cm + 160cm Chaise": "assets/products/sf09-v3.webp", "400cm + 160cm Chaise": "assets/products/sf09-v3.webp", "420cm + 160cm Chaise": "assets/products/sf09-v3.webp" },
     desc: "Very wide seating with chaise options up to 340cm plus a 160cm chaise, for the living room that doubles as the place everyone falls asleep.",
@@ -864,9 +864,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "14", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf10", name: "Modular Sofa with Footstool", cat: "Living Room", room: "Living Room", price: 3099, was: 3443, memberPrice: 2789, sku: "SH-10214", tag: "Sale", ph: "", img: "assets/products/sf10.webp",
+  { id: "sf10", name: "Modular Sofa with Footstool", cat: "Living Room", room: "Living Room", price: 5833, memberPrice: 5250, sku: "SH-10214", tag: "New", ph: "", img: "assets/products/sf10.webp",
     imgs: ["assets/products/sf10.webp", "assets/products/sf10-2.webp", "assets/products/sf10-3.webp", "assets/products/sf10-4.webp", "assets/products/sf10-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 3099 }, { label: "120cm", price: 5250 }, { label: "180cm", price: 10250 }, { label: "200cm", price: 11190 }, { label: "220cm", price: 12670 }, { label: "240cm", price: 13680 }, { label: "260cm", price: 14629 }, { label: "280cm", price: 15750 }],
+    sizes: [{ label: "120cm", price: 5833 }, { label: "180cm", price: 11389 }, { label: "200cm", price: 12433 }, { label: "220cm", price: 14078 }, { label: "240cm", price: 15200 }, { label: "260cm", price: 16254 }, { label: "280cm", price: 17500 }, { label: "Foot Pedal", price: 3443 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf10-v1.webp", "120cm": "assets/products/sf10-v2.webp", "180cm": "assets/products/sf10-v3.webp", "200cm": "assets/products/sf10-v3.webp", "220cm": "assets/products/sf10-v4.webp", "240cm": "assets/products/sf10-v4.webp", "260cm": "assets/products/sf10-v4.webp", "280cm": "assets/products/sf10-v4.webp" },
     desc: "Modular seating on a timber frame with high-density foam, from 120cm to 280cm, with a footstool that doubles as extra seating when people arrive.",
@@ -879,9 +879,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf11", name: "Velvet Modular Sofa", cat: "Living Room", room: "Living Room", price: 3150, was: 3500, memberPrice: 2835, sku: "SH-10215", tag: "Sale", ph: "", img: "assets/products/sf11.webp",
+  { id: "sf11", name: "Velvet Modular Sofa", cat: "Living Room", room: "Living Room", price: 11194, memberPrice: 10075, sku: "SH-10215", tag: "New", ph: "", img: "assets/products/sf11.webp",
     imgs: ["assets/products/sf11.webp", "assets/products/sf11-2.webp", "assets/products/sf11-3.webp", "assets/products/sf11-4.webp", "assets/products/sf11-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 3150 }, { label: "Single Armchair", price: 5038 }, { label: "180cm", price: 10075 }, { label: "200cm", price: 11187 }, { label: "220cm", price: 12490 }, { label: "240cm", price: 13349 }, { label: "260cm", price: 14289 }, { label: "280cm", price: 15300 }, { label: "300cm", price: 16287 }, { label: "320cm", price: 17190 }],
+    sizes: [{ label: "180cm", price: 11194 }, { label: "200cm", price: 12430 }, { label: "220cm", price: 13878 }, { label: "240cm", price: 14832 }, { label: "260cm", price: 15877 }, { label: "280cm", price: 17000 }, { label: "300cm", price: 18097 }, { label: "320cm", price: 19100 }, { label: "Foot Pedal", price: 3500 }, { label: "Single Armchair", price: 5598 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf11-v1.webp", "Single Armchair": "assets/products/sf11-v2.webp", "180cm": "assets/products/sf11-v3.webp", "200cm": "assets/products/sf11-v3.webp", "220cm": "assets/products/sf11-v3.webp", "240cm": "assets/products/sf11-v3.webp", "260cm": "assets/products/sf11-v3.webp", "280cm": "assets/products/sf11-v3.webp", "300cm": "assets/products/sf11-v3.webp", "320cm": "assets/products/sf11-v3.webp" },
     desc: "Velvet, modular, and available up to 320cm, so a big room gets filled without three separate purchases. Armchair and footstool complete it.",
@@ -894,9 +894,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "10", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf12", name: "Bouclé Fabric Sofa", cat: "Living Room", room: "Living Room", price: 3478, was: 3864, memberPrice: 3130, sku: "SH-10216", tag: "Sale", ph: "", img: "assets/products/sf12.webp",
+  { id: "sf12", name: "Bouclé Fabric Sofa", cat: "Living Room", room: "Living Room", price: 3864, memberPrice: 3478, sku: "SH-10216", tag: "New", ph: "", img: "assets/products/sf12.webp",
     imgs: ["assets/products/sf12.webp", "assets/products/sf12-2.webp", "assets/products/sf12-3.webp", "assets/products/sf12-4.webp", "assets/products/sf12-5.webp"],
-    sizes: [{ label: "White / 105cm", price: 3478 }, { label: "Grey / 105cm", price: 3478 }, { label: "Brown / 105cm", price: 3478 }, { label: "Green / 105cm", price: 3478 }, { label: "White / 155cm", price: 6422 }, { label: "Grey / 155cm", price: 6422 }, { label: "Brown / 155cm", price: 6422 }, { label: "Green / 155cm", price: 6422 }, { label: "White / 200cm", price: 8610 }, { label: "Grey / 200cm", price: 8610 }, { label: "Brown / 200cm", price: 8610 }, { label: "Green / 200cm", price: 8610 }, { label: "White / 240cm", price: 10289 }, { label: "Grey / 240cm", price: 10289 }, { label: "Brown / 240cm", price: 10289 }, { label: "Green / 240cm", price: 10289 }],
+    sizes: [{ label: "White / 105cm", price: 3864 }, { label: "Grey / 105cm", price: 3864 }, { label: "Brown / 105cm", price: 3864 }, { label: "Green / 105cm", price: 3864 }, { label: "White / 155cm", price: 7136 }, { label: "Grey / 155cm", price: 7136 }, { label: "Brown / 155cm", price: 7136 }, { label: "Green / 155cm", price: 7136 }, { label: "White / 200cm", price: 9567 }, { label: "Grey / 200cm", price: 9567 }, { label: "Brown / 200cm", price: 9567 }, { label: "Green / 200cm", price: 9567 }, { label: "White / 240cm", price: 11432 }, { label: "Grey / 240cm", price: 11432 }, { label: "Brown / 240cm", price: 11432 }, { label: "Green / 240cm", price: 11432 }],
     lead: "8 to 10 weeks",
     sizeImg: { "White / 105cm": "assets/products/sf12-v1.webp", "Grey / 105cm": "assets/products/sf12-v2.webp", "Brown / 105cm": "assets/products/sf12-v3.webp", "Green / 105cm": "assets/products/sf12-v4.webp", "White / 155cm": "assets/products/sf12-v1.webp", "Grey / 155cm": "assets/products/sf12-v2.webp", "Brown / 155cm": "assets/products/sf12-v3.webp", "Green / 155cm": "assets/products/sf12-v4.webp", "White / 200cm": "assets/products/sf12-v1.webp", "Grey / 200cm": "assets/products/sf12-v2.webp", "Brown / 200cm": "assets/products/sf12-v3.webp", "Green / 200cm": "assets/products/sf12-v4.webp", "White / 240cm": "assets/products/sf12-v1.webp", "Grey / 240cm": "assets/products/sf12-v2.webp", "Brown / 240cm": "assets/products/sf12-v3.webp", "Green / 240cm": "assets/products/sf12-v4.webp" },
     desc: "Soft bouclé in white or grey, at 105cm through to 240cm. The texture does the work: no pattern, no trim, just a quiet, tactile surface.",
@@ -909,9 +909,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Bouclé", "Options": "16", "Room": "Living / Indoor" },
     care: "Vacuum gently with a brush head and blot spills rather than rubbing, so the loops aren't pulled. Snagged loops should be trimmed, never tugged." },
 
-  { id: "sf13", name: "Compact Three-Size Sofa", cat: "Living Room", room: "Living Room", price: 3487, was: 3874, memberPrice: 3138, sku: "SH-10217", tag: "Sale", ph: "", img: "assets/products/sf13.webp",
+  { id: "sf13", name: "Compact Three-Size Sofa", cat: "Living Room", room: "Living Room", price: 3874, memberPrice: 3487, sku: "SH-10217", tag: "New", ph: "", img: "assets/products/sf13.webp",
     imgs: ["assets/products/sf13.webp", "assets/products/sf13-2.webp", "assets/products/sf13-3.webp", "assets/products/sf13-4.webp", "assets/products/sf13-5.webp"],
-    sizes: [{ label: "110cm", price: 3487 }, { label: "160cm", price: 4745 }, { label: "190cm", price: 5867 }],
+    sizes: [{ label: "110cm", price: 3874 }, { label: "160cm", price: 5272 }, { label: "190cm", price: 6519 }],
     lead: "8 to 10 weeks",
     sizeImg: { "110cm": "assets/products/sf13-v1.webp", "160cm": "assets/products/sf13-v2.webp", "190cm": "assets/products/sf13-v3.webp" },
     desc: "A straightforward sofa in three sensible sizes, on a timber frame with high-density foam. For the room that needs a good sofa, not a statement.",
@@ -924,9 +924,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf14", name: "Low Lounger Modular Sofa", cat: "Living Room", room: "Living Room", price: 3487, was: 3874, memberPrice: 3138, sku: "SH-10218", tag: "Sale", ph: "", img: "assets/products/sf14.webp",
+  { id: "sf14", name: "Low Lounger Modular Sofa", cat: "Living Room", room: "Living Room", price: 5427, memberPrice: 4884, sku: "SH-10218", tag: "New", ph: "", img: "assets/products/sf14.webp",
     imgs: ["assets/products/sf14.webp", "assets/products/sf14-2.webp", "assets/products/sf14-3.webp", "assets/products/sf14-4.webp", "assets/products/sf14-5.webp"],
-    sizes: [{ label: "Off White / Single Seater Module", price: 3487 }, { label: "Off White / Double Seater Module", price: 4884 }, { label: "Off White / Corner Module", price: 5374 }],
+    sizes: [{ label: "Off White / Double Seater Module", price: 5427 }, { label: "Off White / Corner Module", price: 5971 }, { label: "Off White / Single Seater Module", price: 3874 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Off White / Single Seater Module": "assets/products/sf14-v1.webp", "Off White / Double Seater Module": "assets/products/sf14-v2.webp", "Off White / Corner Module": "assets/products/sf14-v3.webp" },
     desc: "Low modules in off white that you arrange yourself: single, double and corner pieces, for a lounge that sits closer to the floor.",
@@ -939,9 +939,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf15", name: "Real Leather Sofa with Footstool", cat: "Living Room", room: "Living Room", price: 3487, was: 3874, memberPrice: 3138, sku: "SH-10219", tag: "Sale", ph: "", img: "assets/products/sf15.webp",
+  { id: "sf15", name: "Real Leather Sofa with Footstool", cat: "Living Room", room: "Living Room", price: 11991, memberPrice: 10792, sku: "SH-10219", tag: "New", ph: "", img: "assets/products/sf15.webp",
     imgs: ["assets/products/sf15.webp", "assets/products/sf15-2.webp", "assets/products/sf15-3.webp", "assets/products/sf15-4.webp", "assets/products/sf15-5.webp"],
-    sizes: [{ label: "100cm (foot petal) / Black", price: 3487 }, { label: "100cm (foot petal) / Olive", price: 3487 }, { label: "100cm (foot petal) / Ocean Green", price: 3487 }, { label: "100cm (foot petal) / Beige", price: 3487 }, { label: "100cm (foot petal) / Burgundy", price: 3487 }, { label: "260cm / Black", price: 10792 }, { label: "260cm / Olive", price: 10792 }, { label: "260cm / Ocean Green", price: 10792 }, { label: "260cm / Beige", price: 10792 }, { label: "260cm / Burgundy", price: 10792 }, { label: "300cm / Black", price: 12298 }, { label: "300cm / Olive", price: 12298 }, { label: "300cm / Ocean Green", price: 12298 }, { label: "300cm / Beige", price: 12298 }, { label: "300cm / Burgundy", price: 12298 }, { label: "335cm / Black", price: 13800 }, { label: "335cm / Olive", price: 13800 }, { label: "335cm / Ocean Green", price: 13800 }, { label: "335cm / Beige", price: 13800 }, { label: "335cm / Burgundy", price: 13800 }, { label: "365cm / Black", price: 15314 }, { label: "365cm / Olive", price: 15314 }, { label: "365cm / Ocean Green", price: 15314 }, { label: "365cm / Beige", price: 15314 }, { label: "365cm / Burgundy", price: 15314 }],
+    sizes: [{ label: "260cm / Black", price: 11991 }, { label: "260cm / Olive", price: 11991 }, { label: "260cm / Ocean Green", price: 11991 }, { label: "260cm / Beige", price: 11991 }, { label: "260cm / Burgundy", price: 11991 }, { label: "300cm / Black", price: 13664 }, { label: "300cm / Olive", price: 13664 }, { label: "300cm / Ocean Green", price: 13664 }, { label: "300cm / Beige", price: 13664 }, { label: "300cm / Burgundy", price: 13664 }, { label: "335cm / Black", price: 15333 }, { label: "335cm / Olive", price: 15333 }, { label: "335cm / Ocean Green", price: 15333 }, { label: "335cm / Beige", price: 15333 }, { label: "335cm / Burgundy", price: 15333 }, { label: "365cm / Black", price: 17016 }, { label: "365cm / Olive", price: 17016 }, { label: "365cm / Ocean Green", price: 17016 }, { label: "365cm / Beige", price: 17016 }, { label: "365cm / Burgundy", price: 17016 }, { label: "100cm (foot petal) / Black", price: 3874 }, { label: "100cm (foot petal) / Olive", price: 3874 }, { label: "100cm (foot petal) / Ocean Green", price: 3874 }, { label: "100cm (foot petal) / Beige", price: 3874 }, { label: "100cm (foot petal) / Burgundy", price: 3874 }],
     lead: "8 to 10 weeks",
     sizeImg: { "100cm (foot petal) / Black": "assets/products/sf15-v1.webp", "100cm (foot petal) / Olive": "assets/products/sf15-v1.webp", "100cm (foot petal) / Ocean Green": "assets/products/sf15-v1.webp", "100cm (foot petal) / Beige": "assets/products/sf15-v1.webp", "100cm (foot petal) / Burgundy": "assets/products/sf15-v1.webp", "260cm / Black": "assets/products/sf15-v2.webp", "260cm / Olive": "assets/products/sf15-v2.webp", "260cm / Ocean Green": "assets/products/sf15-v2.webp", "260cm / Beige": "assets/products/sf15-v2.webp", "260cm / Burgundy": "assets/products/sf15-v2.webp", "300cm / Black": "assets/products/sf15-v3.webp", "300cm / Olive": "assets/products/sf15-v3.webp", "300cm / Ocean Green": "assets/products/sf15-v3.webp", "300cm / Beige": "assets/products/sf15-v3.webp", "300cm / Burgundy": "assets/products/sf15-v3.webp", "335cm / Black": "assets/products/sf15-v3.webp", "335cm / Olive": "assets/products/sf15-v3.webp", "335cm / Ocean Green": "assets/products/sf15-v3.webp", "335cm / Beige": "assets/products/sf15-v3.webp", "335cm / Burgundy": "assets/products/sf15-v3.webp", "365cm / Black": "assets/products/sf15-v3.webp", "365cm / Olive": "assets/products/sf15-v3.webp", "365cm / Ocean Green": "assets/products/sf15-v3.webp", "365cm / Beige": "assets/products/sf15-v3.webp", "365cm / Burgundy": "assets/products/sf15-v3.webp" },
     desc: "Real leather in black, olive and ocean green, from a 100cm footstool up to full-length seating. Leather that will look better in five years than it does today.",
@@ -954,9 +954,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "25", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf16", name: "Down-Filled Modular Sectional", cat: "Living Room", room: "Living Room", price: 3496, was: 3884, memberPrice: 3146, sku: "SH-10220", tag: "Sale", ph: "", img: "assets/products/sf16.webp",
+  { id: "sf16", name: "Down-Filled Modular Sectional", cat: "Living Room", room: "Living Room", price: 5886, memberPrice: 5297, sku: "SH-10220", tag: "New", ph: "", img: "assets/products/sf16.webp",
     imgs: ["assets/products/sf16.webp", "assets/products/sf16-2.webp", "assets/products/sf16-3.webp", "assets/products/sf16-4.webp", "assets/products/sf16-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 3496 }, { label: "120cm", price: 5297 }, { label: "270cm", price: 12407 }, { label: "300cm", price: 13787 }, { label: "282cm + 150cm Chaise", price: 14407 }, { label: "330cm", price: 15236 }, { label: "360cm", price: 16686 }, { label: "310cm + 150cm Chaise", price: 17236 }, { label: "338cm + 150cm Chaise", price: 18107 }, { label: "360cm + 150cm Chaise", price: 18686 }],
+    sizes: [{ label: "120cm", price: 5886 }, { label: "270cm", price: 13786 }, { label: "300cm", price: 15319 }, { label: "282cm + 150cm Chaise", price: 16008 }, { label: "330cm", price: 16929 }, { label: "360cm", price: 18540 }, { label: "310cm + 150cm Chaise", price: 19151 }, { label: "338cm + 150cm Chaise", price: 20119 }, { label: "360cm + 150cm Chaise", price: 20762 }, { label: "Foot Pedal", price: 3884 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf16-v1.webp", "120cm": "assets/products/sf16-v2.webp", "270cm": "assets/products/sf16-v3.webp", "300cm": "assets/products/sf16-v3.webp", "282cm + 150cm Chaise": "assets/products/sf16-v4.webp", "330cm": "assets/products/sf16-v3.webp", "360cm": "assets/products/sf16-v3.webp", "310cm + 150cm Chaise": "assets/products/sf16-v4.webp", "338cm + 150cm Chaise": "assets/products/sf16-v4.webp", "360cm + 150cm Chaise": "assets/products/sf16-v4.webp" },
     desc: "Down-filled cushions on a modular sectional, up to 360cm with a 150cm chaise. Soft enough that people stop sitting and start lying down.",
@@ -969,9 +969,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "10", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf17", name: "Premium Velvet Chaise Sofa", cat: "Living Room", room: "Living Room", price: 3690, was: 4100, memberPrice: 3321, sku: "SH-10221", tag: "Sale", ph: "", img: "assets/products/sf17.webp",
+  { id: "sf17", name: "Premium Velvet Chaise Sofa", cat: "Living Room", room: "Living Room", price: 8606, memberPrice: 7745, sku: "SH-10221", tag: "New", ph: "", img: "assets/products/sf17.webp",
     imgs: ["assets/products/sf17.webp", "assets/products/sf17-2.webp", "assets/products/sf17-3.webp", "assets/products/sf17-4.webp", "assets/products/sf17-5.webp"],
-    sizes: [{ label: "Foot Petal", price: 3690 }, { label: "Single Arcmchair", price: 4499 }, { label: "200cm", price: 7745 }, { label: "220cm", price: 8900 }, { label: "240cm", price: 9417 }, { label: "260cm", price: 9990 }, { label: "280cm + Chaise", price: 12700 }, { label: "300cm + Chaise", price: 13599 }, { label: "320cm + Chaise", price: 13980 }],
+    sizes: [{ label: "200cm", price: 8606 }, { label: "220cm", price: 9889 }, { label: "240cm", price: 10463 }, { label: "260cm", price: 11100 }, { label: "280cm + Chaise", price: 14111 }, { label: "300cm + Chaise", price: 15110 }, { label: "320cm + Chaise", price: 15533 }, { label: "Foot Petal", price: 4100 }, { label: "Single Arcmchair", price: 4999 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Petal": "assets/products/sf17-v1.webp", "Single Arcmchair": "assets/products/sf17-v2.webp", "200cm": "assets/products/sf17-v3.webp", "220cm": "assets/products/sf17-v3.webp", "240cm": "assets/products/sf17-v3.webp", "260cm": "assets/products/sf17-v3.webp", "280cm + Chaise": "assets/products/sf17-v4.webp", "300cm + Chaise": "assets/products/sf17-v4.webp", "320cm + Chaise": "assets/products/sf17-v4.webp" },
     desc: "Premium velvet on a timber frame, in widths to 320cm with chaise versions. The armchair and footstool match for a full setting.",
@@ -984,9 +984,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "9", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf18", name: "Two-Tone Cotton Sofa Collection", cat: "Living Room", room: "Living Room", price: 3746, was: 4162, memberPrice: 3371, sku: "SH-10222", tag: "Sale", ph: "", img: "assets/products/sf18.webp",
+  { id: "sf18", name: "Two-Tone Cotton Sofa Collection", cat: "Living Room", room: "Living Room", price: 4751, memberPrice: 4276, sku: "SH-10222", tag: "New", ph: "", img: "assets/products/sf18.webp",
     imgs: ["assets/products/sf18.webp", "assets/products/sf18-2.webp", "assets/products/sf18-3.webp", "assets/products/sf18-4.webp", "assets/products/sf18-5.webp"],
-    sizes: [{ label: "Dusty Grey + Ivory / Foot Petal", price: 3746 }, { label: "Dusty Grey + Ivory / 120cm", price: 4276 }, { label: "Dusty Grey + Ivory / 180cm", price: 6062 }, { label: "Dusty Grey + Ivory / 285cm", price: 10661 }, { label: "Dusty Grey + Ivory / 360cm", price: 15223 }, { label: "Dusty Grey + Ivory / 285cm + 180cm Chaise", price: 15818 }, { label: "Dusty Grey + Ivory / 360cm + 180cm Chaise", price: 16083 }, { label: "Dusty Grey + Ivory / 435cm + 180cm Chaise", price: 19653 }],
+    sizes: [{ label: "Dusty Grey + Ivory / 120cm", price: 4751 }, { label: "Dusty Grey + Ivory / 180cm", price: 6736 }, { label: "Dusty Grey + Ivory / 285cm", price: 11846 }, { label: "Dusty Grey + Ivory / 360cm", price: 16914 }, { label: "Dusty Grey + Ivory / 285cm + 180cm Chaise", price: 17576 }, { label: "Dusty Grey + Ivory / 360cm + 180cm Chaise", price: 17870 }, { label: "Dusty Grey + Ivory / 435cm + 180cm Chaise", price: 21837 }, { label: "Dusty Grey + Ivory / Foot Petal", price: 4162 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Dusty Grey + Ivory / Foot Petal": "assets/products/sf18-v1.webp", "Dusty Grey + Ivory / 120cm": "assets/products/sf18-v1.webp", "Dusty Grey + Ivory / 180cm": "assets/products/sf18-v2.webp", "Dusty Grey + Ivory / 285cm": "assets/products/sf18-v2.webp", "Dusty Grey + Ivory / 360cm": "assets/products/sf18-v2.webp", "Dusty Grey + Ivory / 285cm + 180cm Chaise": "assets/products/sf18-v3.webp", "Dusty Grey + Ivory / 360cm + 180cm Chaise": "assets/products/sf18-v3.webp", "Dusty Grey + Ivory / 435cm + 180cm Chaise": "assets/products/sf18-v3.webp" },
     desc: "Dusty grey paired with ivory, in cotton, from 120cm to 285cm. The two-tone treatment stops a large sofa reading as a single heavy block.",
@@ -999,9 +999,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf19", name: "Floating Ash Timber & Leather Sofa", cat: "Living Room", room: "Living Room", price: 3857, was: 4286, memberPrice: 3471, sku: "SH-10223", tag: "Sale", ph: "", img: "assets/products/sf19.webp",
+  { id: "sf19", name: "Floating Ash Timber & Leather Sofa", cat: "Living Room", room: "Living Room", price: 13889, memberPrice: 12500, sku: "SH-10223", tag: "New", ph: "", img: "assets/products/sf19.webp",
     imgs: ["assets/products/sf19.webp", "assets/products/sf19-2.webp", "assets/products/sf19-3.webp", "assets/products/sf19-4.webp", "assets/products/sf19-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 3857 }, { label: "Singe Armchair", price: 5285 }, { label: "230cm", price: 12500 }, { label: "260cm", price: 13237 }, { label: "290cm", price: 14189 }, { label: "320cm", price: 14999 }],
+    sizes: [{ label: "230cm", price: 13889 }, { label: "260cm", price: 14708 }, { label: "290cm", price: 15766 }, { label: "320cm", price: 16666 }, { label: "Foot Pedal", price: 4286 }, { label: "Singe Armchair", price: 5872 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf19-v1.webp", "Singe Armchair": "assets/products/sf19-v2.webp", "230cm": "assets/products/sf19-v3.webp", "260cm": "assets/products/sf19-v3.webp", "290cm": "assets/products/sf19-v3.webp", "320cm": "assets/products/sf19-v3.webp" },
     desc: "Leather seating that appears to float on a premium ash timber base, in widths to 320cm. The detail is in the gap between frame and cushion.",
@@ -1014,9 +1014,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "6", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf20", name: "Sculptural Curved Sofa", cat: "Living Room", room: "Living Room", price: 3880, was: 4311, memberPrice: 3492, sku: "SH-10224", tag: "Sale", ph: "", img: "assets/products/sf20.webp",
+  { id: "sf20", name: "Sculptural Curved Sofa", cat: "Living Room", room: "Living Room", price: 4311, memberPrice: 3880, sku: "SH-10224", tag: "New", ph: "", img: "assets/products/sf20.webp",
     imgs: ["assets/products/sf20.webp", "assets/products/sf20-2.webp", "assets/products/sf20-3.webp", "assets/products/sf20-4.webp", "assets/products/sf20-5.webp"],
-    sizes: [{ label: "90cm", price: 3880 }, { label: "210cm", price: 6680 }, { label: "240cm", price: 8580 }],
+    sizes: [{ label: "90cm", price: 4311 }, { label: "210cm", price: 7422 }, { label: "240cm", price: 9533 }],
     lead: "8 to 10 weeks",
     sizeImg: { "90cm": "assets/products/sf20-v1.webp", "210cm": "assets/products/sf20-v2.webp", "240cm": "assets/products/sf20-v2.webp" },
     desc: "A curved, sculptural shape in three sizes, from a 90cm loveseat to a 240cm three seater. Looks considered from every angle, which matters in an open-plan room.",
@@ -1029,9 +1029,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf21", name: "Wide-Cushion Velvet Sofa", cat: "Living Room", room: "Living Room", price: 3917, was: 4352, memberPrice: 3525, sku: "SH-10225", tag: "Sale", ph: "", img: "assets/products/sf21.webp",
+  { id: "sf21", name: "Wide-Cushion Velvet Sofa", cat: "Living Room", room: "Living Room", price: 9830, memberPrice: 8847, sku: "SH-10225", tag: "New", ph: "", img: "assets/products/sf21.webp",
     imgs: ["assets/products/sf21.webp", "assets/products/sf21-2.webp", "assets/products/sf21-3.webp", "assets/products/sf21-4.webp", "assets/products/sf21-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 3917 }, { label: "170cm", price: 8847 }, { label: "190cm", price: 9389 }, { label: "220cm", price: 10319 }, { label: "250cm", price: 11119 }, { label: "280cm", price: 11913 }, { label: "310cm", price: 12449 }, { label: "340cm", price: 13149 }],
+    sizes: [{ label: "170cm", price: 9830 }, { label: "190cm", price: 10432 }, { label: "220cm", price: 11466 }, { label: "250cm", price: 12354 }, { label: "280cm", price: 13237 }, { label: "310cm", price: 13832 }, { label: "340cm", price: 14610 }, { label: "Foot Pedal", price: 4352 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf21-v1.webp", "170cm": "assets/products/sf21-v2.webp", "190cm": "assets/products/sf21-v2.webp", "220cm": "assets/products/sf21-v2.webp", "250cm": "assets/products/sf21-v2.webp", "280cm": "assets/products/sf21-v2.webp", "310cm": "assets/products/sf21-v2.webp", "340cm": "assets/products/sf21-v2.webp" },
     desc: "Luxuriously wide cushions in velvet, from 170cm to 340cm. Fewer, bigger cushions means fewer seams and a cleaner line.",
@@ -1044,9 +1044,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf22", name: "Colour-Block Sofa Collection", cat: "Living Room", room: "Living Room", price: 3941, was: 4379, memberPrice: 3547, sku: "SH-10226", tag: "Sale", ph: "", img: "assets/products/sf22.webp",
+  { id: "sf22", name: "Colour-Block Sofa Collection", cat: "Living Room", room: "Living Room", price: 6964, memberPrice: 6268, sku: "SH-10226", tag: "New", ph: "", img: "assets/products/sf22.webp",
     imgs: ["assets/products/sf22.webp", "assets/products/sf22-2.webp", "assets/products/sf22-3.webp", "assets/products/sf22-4.webp", "assets/products/sf22-5.webp"],
-    sizes: [{ label: "Single Seater / Yellow", price: 3941 }, { label: "Single Seater / White", price: 3941 }, { label: "160cm / Yellow", price: 6268 }, { label: "160cm / White", price: 6268 }, { label: "200cm / Yellow", price: 7349 }, { label: "200cm / White", price: 7349 }, { label: "230cm / Yellow", price: 8875 }, { label: "230cm / White", price: 8875 }],
+    sizes: [{ label: "160cm / Yellow", price: 6964 }, { label: "160cm / White", price: 6964 }, { label: "200cm / Yellow", price: 8166 }, { label: "200cm / White", price: 8166 }, { label: "230cm / Yellow", price: 9861 }, { label: "230cm / White", price: 9861 }, { label: "Single Seater / Yellow", price: 4379 }, { label: "Single Seater / White", price: 4379 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Single Seater / Yellow": "assets/products/sf22-v1.webp", "Single Seater / White": "assets/products/sf22-v2.webp", "160cm / Yellow": "assets/products/sf22-v3.webp", "160cm / White": "assets/products/sf22-v4.webp", "200cm / Yellow": "assets/products/sf22-v3.webp", "200cm / White": "assets/products/sf22-v4.webp", "230cm / Yellow": "assets/products/sf22-v3.webp", "230cm / White": "assets/products/sf22-v4.webp" },
     desc: "An unusual shape in yellow or white, from a single seater to 200cm. For a room that wants some personality rather than another beige three seater.",
@@ -1059,9 +1059,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf23", name: "Modular Leather & Ash Sofa", cat: "Living Room", room: "Living Room", price: 3990, was: 4433, memberPrice: 3591, sku: "SH-10227", tag: "Sale", ph: "", img: "assets/products/sf23.webp",
+  { id: "sf23", name: "Modular Leather & Ash Sofa", cat: "Living Room", room: "Living Room", price: 11663, memberPrice: 10497, sku: "SH-10227", tag: "New", ph: "", img: "assets/products/sf23.webp",
     imgs: ["assets/products/sf23.webp", "assets/products/sf23-2.webp", "assets/products/sf23-3.webp", "assets/products/sf23-4.webp", "assets/products/sf23-5.webp"],
-    sizes: [{ label: "Foot Pedal", price: 3990 }, { label: "Single Armchair", price: 5399 }, { label: "210cm", price: 10497 }, { label: "280cm", price: 13555 }, { label: "360cm", price: 15500 }],
+    sizes: [{ label: "210cm", price: 11663 }, { label: "280cm", price: 15061 }, { label: "360cm", price: 17222 }, { label: "Foot Pedal", price: 4433 }, { label: "Single Armchair", price: 5999 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal": "assets/products/sf23-v1.webp", "Single Armchair": "assets/products/sf23-v2.webp", "210cm": "assets/products/sf23-v3.webp", "280cm": "assets/products/sf23-v4.webp", "360cm": "assets/products/sf23-v4.webp" },
     desc: "Leather modules on an ash timber frame, up to 360cm, arranged how you like. Armchair and footstool available separately.",
@@ -1074,9 +1074,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "5", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf24", name: "Leather Sofa in Four Colours", cat: "Living Room", room: "Living Room", price: 4064, was: 4516, memberPrice: 3658, sku: "SH-10228", tag: "Sale", ph: "", img: "assets/products/sf24.webp",
+  { id: "sf24", name: "Leather Sofa in Four Colours", cat: "Living Room", room: "Living Room", price: 8939, memberPrice: 8045, sku: "SH-10228", tag: "New", ph: "", img: "assets/products/sf24.webp",
     imgs: ["assets/products/sf24.webp", "assets/products/sf24-2.webp", "assets/products/sf24-3.webp", "assets/products/sf24-4.webp", "assets/products/sf24-5.webp"],
-    sizes: [{ label: "Foot Pedal / Green", price: 4064 }, { label: "Foot Pedal / Beige", price: 4064 }, { label: "Foot Pedal / Navy", price: 4064 }, { label: "Foot Pedal / Grey", price: 4064 }, { label: "145cm / Green", price: 8045 }, { label: "145cm / Beige", price: 8045 }, { label: "145cm / Navy", price: 8045 }, { label: "145cm / Grey", price: 8045 }, { label: "215cm / Green", price: 9072 }, { label: "215cm / Beige", price: 9072 }, { label: "215cm / Navy", price: 9072 }, { label: "215cm / Grey", price: 9072 }, { label: "260cm / Green", price: 12460 }, { label: "260cm / Beige", price: 12460 }, { label: "260cm / Navy", price: 12460 }, { label: "260cm / Grey", price: 12460 }, { label: "300cm / Green", price: 15219 }, { label: "300cm / Beige", price: 15219 }, { label: "300cm / Navy", price: 15219 }, { label: "300cm / Grey", price: 15219 }, { label: "310cm + 190cm Chaise / Green", price: 18219 }, { label: "310cm + 190cm Chaise / Beige", price: 18219 }, { label: "310cm + 190cm Chaise / Navy", price: 18219 }, { label: "310cm + 190cm Chaise / Grey", price: 18219 }],
+    sizes: [{ label: "145cm / Green", price: 8939 }, { label: "145cm / Beige", price: 8939 }, { label: "145cm / Navy", price: 8939 }, { label: "145cm / Grey", price: 8939 }, { label: "215cm / Green", price: 10080 }, { label: "215cm / Beige", price: 10080 }, { label: "215cm / Navy", price: 10080 }, { label: "215cm / Grey", price: 10080 }, { label: "260cm / Green", price: 13844 }, { label: "260cm / Beige", price: 13844 }, { label: "260cm / Navy", price: 13844 }, { label: "260cm / Grey", price: 13844 }, { label: "300cm / Green", price: 16910 }, { label: "300cm / Beige", price: 16910 }, { label: "300cm / Navy", price: 16910 }, { label: "300cm / Grey", price: 16910 }, { label: "310cm + 190cm Chaise / Green", price: 20243 }, { label: "310cm + 190cm Chaise / Beige", price: 20243 }, { label: "310cm + 190cm Chaise / Navy", price: 20243 }, { label: "310cm + 190cm Chaise / Grey", price: 20243 }, { label: "Foot Pedal / Green", price: 4516 }, { label: "Foot Pedal / Beige", price: 4516 }, { label: "Foot Pedal / Navy", price: 4516 }, { label: "Foot Pedal / Grey", price: 4516 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Foot Pedal / Green": "assets/products/sf24-v1.webp", "Foot Pedal / Beige": "assets/products/sf24-v1.webp", "Foot Pedal / Navy": "assets/products/sf24-v1.webp", "Foot Pedal / Grey": "assets/products/sf24-v1.webp", "145cm / Green": "assets/products/sf24-v2.webp", "145cm / Beige": "assets/products/sf24-v2.webp", "145cm / Navy": "assets/products/sf24-v2.webp", "145cm / Grey": "assets/products/sf24-v2.webp", "215cm / Green": "assets/products/sf24-v3.webp", "215cm / Beige": "assets/products/sf24-v3.webp", "215cm / Navy": "assets/products/sf24-v3.webp", "215cm / Grey": "assets/products/sf24-v3.webp", "260cm / Green": "assets/products/sf24-v3.webp", "260cm / Beige": "assets/products/sf24-v3.webp", "260cm / Navy": "assets/products/sf24-v3.webp", "260cm / Grey": "assets/products/sf24-v3.webp", "300cm / Green": "assets/products/sf24-v3.webp", "300cm / Beige": "assets/products/sf24-v3.webp", "300cm / Navy": "assets/products/sf24-v3.webp", "300cm / Grey": "assets/products/sf24-v3.webp", "310cm + 190cm Chaise / Green": "assets/products/sf24-v4.webp", "310cm + 190cm Chaise / Beige": "assets/products/sf24-v4.webp", "310cm + 190cm Chaise / Navy": "assets/products/sf24-v4.webp", "310cm + 190cm Chaise / Grey": "assets/products/sf24-v4.webp" },
     desc: "Leather in green, beige, navy or grey, at 145cm, 215cm or 260cm. The colour range is wider than most leather sofas offer.",
@@ -1089,9 +1089,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "24", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf25", name: "Italian-Style Leather Sectional", cat: "Living Room", room: "Living Room", price: 4112, was: 4569, memberPrice: 3701, sku: "SH-10229", tag: "Sale", ph: "", img: "assets/products/sf25.webp",
+  { id: "sf25", name: "Italian-Style Leather Sectional", cat: "Living Room", room: "Living Room", price: 4569, memberPrice: 4112, sku: "SH-10229", tag: "New", ph: "", img: "assets/products/sf25.webp",
     imgs: ["assets/products/sf25.webp", "assets/products/sf25-2.webp", "assets/products/sf25-3.webp", "assets/products/sf25-4.webp", "assets/products/sf25-5.webp"],
-    sizes: [{ label: "Charcoal Grey / 105cm", price: 4112 }, { label: "Green / 105cm", price: 4112 }, { label: "Tan/Orange / 105cm", price: 4112 }, { label: "Charcoal Grey / 165cm", price: 6178 }, { label: "Green / 165cm", price: 6178 }, { label: "Tan/Orange / 165cm", price: 6178 }, { label: "Charcoal Grey / 215cm", price: 7140 }, { label: "Green / 215cm", price: 7140 }, { label: "Tan/Orange / 215cm", price: 7140 }, { label: "Charcoal Grey / 280cm", price: 10239 }, { label: "Green / 280cm", price: 10239 }, { label: "Tan/Orange / 280cm", price: 10239 }, { label: "Charcoal Grey / 250cm + Chaise", price: 14138 }, { label: "Green / 250cm + Chaise", price: 14138 }, { label: "Tan/Orange / 250cm + Chaise", price: 14138 }],
+    sizes: [{ label: "Charcoal Grey / 105cm", price: 4569 }, { label: "Green / 105cm", price: 4569 }, { label: "Tan/Orange / 105cm", price: 4569 }, { label: "Charcoal Grey / 165cm", price: 6864 }, { label: "Green / 165cm", price: 6864 }, { label: "Tan/Orange / 165cm", price: 6864 }, { label: "Charcoal Grey / 215cm", price: 7933 }, { label: "Green / 215cm", price: 7933 }, { label: "Tan/Orange / 215cm", price: 7933 }, { label: "Charcoal Grey / 280cm", price: 11377 }, { label: "Green / 280cm", price: 11377 }, { label: "Tan/Orange / 280cm", price: 11377 }, { label: "Charcoal Grey / 250cm + Chaise", price: 15709 }, { label: "Green / 250cm + Chaise", price: 15709 }, { label: "Tan/Orange / 250cm + Chaise", price: 15709 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Charcoal Grey / 105cm": "assets/products/sf25-v1.webp", "Green / 105cm": "assets/products/sf25-v1.webp", "Tan/Orange / 105cm": "assets/products/sf25-v1.webp", "Charcoal Grey / 165cm": "assets/products/sf25-v2.webp", "Green / 165cm": "assets/products/sf25-v2.webp", "Tan/Orange / 165cm": "assets/products/sf25-v2.webp", "Charcoal Grey / 215cm": "assets/products/sf25-v3.webp", "Green / 215cm": "assets/products/sf25-v3.webp", "Tan/Orange / 215cm": "assets/products/sf25-v3.webp", "Charcoal Grey / 280cm": "assets/products/sf25-v3.webp", "Green / 280cm": "assets/products/sf25-v3.webp", "Tan/Orange / 280cm": "assets/products/sf25-v3.webp", "Charcoal Grey / 250cm + Chaise": "assets/products/sf25-v4.webp", "Green / 250cm + Chaise": "assets/products/sf25-v4.webp", "Tan/Orange / 250cm + Chaise": "assets/products/sf25-v4.webp" },
     desc: "A sectional in charcoal grey or grey leather, from 105cm to 280cm, with the restrained lines of Italian design.",
@@ -1104,9 +1104,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "15", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf26", name: "Bouclé Sofa with Footstool", cat: "Living Room", room: "Living Room", price: 4215, was: 4683, memberPrice: 3794, sku: "SH-10230", tag: "Sale", ph: "", img: "assets/products/sf26.webp",
+  { id: "sf26", name: "Bouclé Sofa with Footstool", cat: "Living Room", room: "Living Room", price: 4683, memberPrice: 4215, sku: "SH-10230", tag: "New", ph: "", img: "assets/products/sf26.webp",
     imgs: ["assets/products/sf26.webp", "assets/products/sf26-2.webp", "assets/products/sf26-3.webp", "assets/products/sf26-4.webp", "assets/products/sf26-5.webp"],
-    sizes: [{ label: "90cm x 60cm", price: 4215 }, { label: "90cm x 90cm", price: 4253 }, { label: "90cm x 90cm + Right Armrest", price: 4529 }, { label: "90cm x 90cm + Left Armrest", price: 4529 }, { label: "90cm x 90cm + Backrest", price: 4529 }, { label: "90cm x 60cm + Backrest", price: 4529 }, { label: "180cm", price: 7557 }, { label: "180cm + Foot Pedal", price: 10373 }, { label: "240cm", price: 10873 }, { label: "240cm + Foot Pedal", price: 12487 }, { label: "270cm + Foot Pedal", price: 13175 }],
+    sizes: [{ label: "90cm x 60cm", price: 4683 }, { label: "90cm x 90cm", price: 4726 }, { label: "90cm x 90cm + Right Armrest", price: 5032 }, { label: "90cm x 90cm + Left Armrest", price: 5032 }, { label: "90cm x 90cm + Backrest", price: 5032 }, { label: "90cm x 60cm + Backrest", price: 5032 }, { label: "180cm", price: 8397 }, { label: "240cm", price: 12081 }, { label: "180cm + Foot Pedal", price: 11526 }, { label: "240cm + Foot Pedal", price: 13874 }, { label: "270cm + Foot Pedal", price: 14639 }],
     lead: "8 to 10 weeks",
     sizeImg: { "90cm x 60cm": "assets/products/sf26-v1.webp", "90cm x 90cm": "assets/products/sf26-v2.webp", "90cm x 90cm + Right Armrest": "assets/products/sf26-v3.webp", "90cm x 90cm + Left Armrest": "assets/products/sf26-v4.webp", "90cm x 90cm + Backrest": "assets/products/sf26-v5.webp", "90cm x 60cm + Backrest": "assets/products/sf26-v6.webp", "180cm": "assets/products/sf26-v7.webp", "180cm + Foot Pedal": "assets/products/sf26-v8.webp", "240cm": "assets/products/sf26-v7.webp", "240cm + Foot Pedal": "assets/products/sf26-v8.webp", "270cm + Foot Pedal": "assets/products/sf26-v8.webp" },
     desc: "Bouclé on a timber frame, at 180cm, 240cm or 270cm, with or without the matching footstool. There is also a 90 by 90cm corner piece.",
@@ -1119,9 +1119,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Bouclé", "Options": "11", "Room": "Living / Indoor" },
     care: "Vacuum gently with a brush head and blot spills rather than rubbing, so the loops aren't pulled. Snagged loops should be trimmed, never tugged." },
 
-  { id: "sf27", name: "Curved Leather Sofa", cat: "Living Room", room: "Living Room", price: 4238, was: 4709, memberPrice: 3814, sku: "SH-10231", tag: "Sale", ph: "", img: "assets/products/sf27.webp",
+  { id: "sf27", name: "Curved Leather Sofa", cat: "Living Room", room: "Living Room", price: 8837, memberPrice: 7953, sku: "SH-10231", tag: "New", ph: "", img: "assets/products/sf27.webp",
     imgs: ["assets/products/sf27.webp", "assets/products/sf27-2.webp", "assets/products/sf27-3.webp", "assets/products/sf27-4.webp", "assets/products/sf27-5.webp"],
-    sizes: [{ label: "Single Seater", price: 4238 }, { label: "150cm", price: 7953 }, { label: "170cm", price: 8397 }, { label: "200cm", price: 8765 }, { label: "230cm", price: 9695 }],
+    sizes: [{ label: "150cm", price: 8837 }, { label: "170cm", price: 9330 }, { label: "200cm", price: 9739 }, { label: "230cm", price: 10772 }, { label: "Single Seater", price: 4709 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Single Seater": "assets/products/sf27-v1.webp", "150cm": "assets/products/sf27-v2.webp", "170cm": "assets/products/sf27-v2.webp", "200cm": "assets/products/sf27-v2.webp", "230cm": "assets/products/sf27-v2.webp" },
     desc: "Leather with a curved back on a timber frame, from a single seater to 230cm. High-density foam keeps the curve from collapsing over time.",
@@ -1134,9 +1134,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "5", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf28", name: "Classic Leather Sofa", cat: "Living Room", room: "Living Room", price: 4797, was: 5330, memberPrice: 4317, sku: "SH-10232", tag: "Sale", ph: "", img: "assets/products/sf28.webp",
+  { id: "sf28", name: "Classic Leather Sofa", cat: "Living Room", room: "Living Room", price: 5330, memberPrice: 4797, sku: "SH-10232", tag: "New", ph: "", img: "assets/products/sf28.webp",
     imgs: ["assets/products/sf28.webp", "assets/products/sf28-2.webp", "assets/products/sf28-3.webp", "assets/products/sf28-4.webp", "assets/products/sf28-5.webp"],
-    sizes: [{ label: "86cm", price: 4797 }, { label: "136cm", price: 7189 }, { label: "186cm", price: 10730 }, { label: "235cm", price: 13297 }],
+    sizes: [{ label: "86cm", price: 5330 }, { label: "136cm", price: 7988 }, { label: "186cm", price: 11922 }, { label: "235cm", price: 14774 }],
     lead: "8 to 10 weeks",
     sizeImg: { "86cm": "assets/products/sf28-v1.webp", "136cm": "assets/products/sf28-v2.webp", "186cm": "assets/products/sf28-v3.webp", "235cm": "assets/products/sf28-v3.webp" },
     desc: "A classic leather sofa in four sizes, from an 86cm chair to a 235cm three seater, on a timber frame.",
@@ -1149,9 +1149,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf29", name: "Curved Velvet Modular Sofa", cat: "Living Room", room: "Living Room", price: 5450, was: 6056, memberPrice: 4905, sku: "SH-10233", tag: "Sale", ph: "", img: "assets/products/sf29.webp",
+  { id: "sf29", name: "Curved Velvet Modular Sofa", cat: "Living Room", room: "Living Room", price: 12643, memberPrice: 11379, sku: "SH-10233", tag: "New", ph: "", img: "assets/products/sf29.webp",
     imgs: ["assets/products/sf29.webp", "assets/products/sf29-2.webp", "assets/products/sf29-3.webp", "assets/products/sf29-4.webp", "assets/products/sf29-5.webp"],
-    sizes: [{ label: "Occasional Chair", price: 5487 }, { label: "Single Armchair", price: 5450 }, { label: "160cm", price: 11379 }, { label: "170cm", price: 12490 }, { label: "180cm", price: 12745 }, { label: "210cm", price: 13400 }, { label: "220xcm", price: 14129 }, { label: "240cm", price: 14880 }, { label: "260cm", price: 15500 }, { label: "280cm", price: 16497 }, { label: "320cm", price: 17670 }],
+    sizes: [{ label: "160cm", price: 12643 }, { label: "170cm", price: 13878 }, { label: "180cm", price: 14161 }, { label: "210cm", price: 14889 }, { label: "220xcm", price: 15699 }, { label: "240cm", price: 16533 }, { label: "260cm", price: 17222 }, { label: "280cm", price: 18330 }, { label: "320cm", price: 19633 }, { label: "Occasional Chair", price: 6097 }, { label: "Single Armchair", price: 6056 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Occasional Chair": "assets/products/sf29-v1.webp", "Single Armchair": "assets/products/sf29-v2.webp", "160cm": "assets/products/sf29-v3.webp", "170cm": "assets/products/sf29-v3.webp", "180cm": "assets/products/sf29-v3.webp", "210cm": "assets/products/sf29-v3.webp", "220xcm": "assets/products/sf29-v3.webp", "240cm": "assets/products/sf29-v3.webp", "260cm": "assets/products/sf29-v3.webp", "280cm": "assets/products/sf29-v3.webp", "320cm": "assets/products/sf29-v3.webp" },
     desc: "Velvet, curved and modular, in widths from 160cm to 320cm, with an armchair and an occasional chair that match. The widest choice of sizes we carry.",
@@ -1164,9 +1164,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "11", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf30", name: "Velvet & Linen Sofa", cat: "Living Room", room: "Living Room", price: 5130, was: 5700, memberPrice: 4617, sku: "SH-10234", tag: "Sale", ph: "", img: "assets/products/sf30.webp",
+  { id: "sf30", name: "Velvet & Linen Sofa", cat: "Living Room", room: "Living Room", price: 5700, memberPrice: 5130, sku: "SH-10234", tag: "New", ph: "", img: "assets/products/sf30.webp",
     imgs: ["assets/products/sf30.webp", "assets/products/sf30-2.webp", "assets/products/sf30-3.webp", "assets/products/sf30-4.webp", "assets/products/sf30-5.webp"],
-    sizes: [{ label: "120cm", price: 5130 }, { label: "180cm", price: 7819 }, { label: "210cm", price: 9677 }, { label: "260cm", price: 12889 }],
+    sizes: [{ label: "120cm", price: 5700 }, { label: "180cm", price: 8688 }, { label: "210cm", price: 10752 }, { label: "260cm", price: 14321 }],
     lead: "8 to 10 weeks",
     sizeImg: { "120cm": "assets/products/sf30-v1.webp", "180cm": "assets/products/sf30-v2.webp", "210cm": "assets/products/sf30-v2.webp", "260cm": "assets/products/sf30-v3.webp" },
     desc: "Velvet and linen together on a timber frame, in four sizes. Two textures in one piece, which stops a big sofa looking flat.",
@@ -1179,9 +1179,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "4", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf31", name: "Leather Sofa & Armchair", cat: "Living Room", room: "Living Room", price: 5747, was: 6386, memberPrice: 5172, sku: "SH-10235", tag: "Sale", ph: "", img: "assets/products/sf31.webp",
+  { id: "sf31", name: "Leather Sofa & Armchair", cat: "Living Room", room: "Living Room", price: 10687, memberPrice: 9618, sku: "SH-10235", tag: "New", ph: "", img: "assets/products/sf31.webp",
     imgs: ["assets/products/sf31.webp", "assets/products/sf31-2.webp", "assets/products/sf31-3.webp", "assets/products/sf31-4.webp", "assets/products/sf31-5.webp"],
-    sizes: [{ label: "Chair", price: 5747 }, { label: "160cm", price: 9618 }, { label: "200cm", price: 12114 }, { label: "240cm", price: 13852 }, { label: "280cm", price: 15480 }],
+    sizes: [{ label: "160cm", price: 10687 }, { label: "200cm", price: 13460 }, { label: "240cm", price: 15391 }, { label: "280cm", price: 17200 }, { label: "Chair", price: 6386 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Chair": "assets/products/sf31-v1.webp", "160cm": "assets/products/sf31-v2.webp", "200cm": "assets/products/sf31-v2.webp", "240cm": "assets/products/sf31-v2.webp", "280cm": "assets/products/sf31-v2.webp" },
     desc: "Leather on a timber frame, from a single chair to 280cm, with high-density foam that holds its shape.",
@@ -1194,9 +1194,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "5", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf32", name: "Everyday Fabric Sofa", cat: "Living Room", room: "Living Room", price: 5480, was: 6089, memberPrice: 4932, sku: "SH-10236", tag: "Sale", ph: "", img: "assets/products/sf32.webp",
+  { id: "sf32", name: "Everyday Fabric Sofa", cat: "Living Room", room: "Living Room", price: 6089, memberPrice: 5480, sku: "SH-10236", tag: "New", ph: "", img: "assets/products/sf32.webp",
     imgs: ["assets/products/sf32.webp", "assets/products/sf32-2.webp", "assets/products/sf32-3.webp", "assets/products/sf32-4.webp", "assets/products/sf32-5.webp"],
-    sizes: [{ label: "80cm", price: 5480 }, { label: "210cm", price: 8680 }, { label: "240cm", price: 10980 }],
+    sizes: [{ label: "80cm", price: 6089 }, { label: "210cm", price: 9644 }, { label: "240cm", price: 12200 }],
     lead: "8 to 10 weeks",
     sizeImg: { "80cm": "assets/products/sf32-v1.webp", "210cm": "assets/products/sf32-v2.webp", "240cm": "assets/products/sf32-v2.webp" },
     desc: "A plain, well-made fabric sofa in three sizes, including an 80cm chair. The sensible choice for a first home or a second living room.",
@@ -1209,9 +1209,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf33", name: "Curved Lounge Sofa in Six Colours", cat: "Living Room", room: "Living Room", price: 5489, was: 6099, memberPrice: 4940, sku: "SH-10237", tag: "Sale", ph: "", img: "assets/products/sf33.webp",
+  { id: "sf33", name: "Curved Lounge Sofa in Six Colours", cat: "Living Room", room: "Living Room", price: 6099, memberPrice: 5489, sku: "SH-10237", tag: "New", ph: "", img: "assets/products/sf33.webp",
     imgs: ["assets/products/sf33.webp", "assets/products/sf33-2.webp", "assets/products/sf33-3.webp", "assets/products/sf33-4.webp", "assets/products/sf33-5.webp"],
-    sizes: [{ label: "Brown / 150cm", price: 5489 }, { label: "Green / 150cm", price: 5489 }, { label: "Pink / 150cm", price: 5489 }, { label: "White / 150cm", price: 5489 }, { label: "Brown / 200cm", price: 6477 }, { label: "Green / 200cm", price: 6477 }, { label: "Pink / 200cm", price: 6477 }, { label: "White / 200cm", price: 6477 }],
+    sizes: [{ label: "Brown / 150cm", price: 6099 }, { label: "Green / 150cm", price: 6099 }, { label: "Pink / 150cm", price: 6099 }, { label: "White / 150cm", price: 6099 }, { label: "Brown / 200cm", price: 7197 }, { label: "Green / 200cm", price: 7197 }, { label: "Pink / 200cm", price: 7197 }, { label: "White / 200cm", price: 7197 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Brown / 150cm": "assets/products/sf33-v1.webp", "Green / 150cm": "assets/products/sf33-v2.webp", "Pink / 150cm": "assets/products/sf33-v3.webp", "White / 150cm": "assets/products/sf33-v4.webp", "Brown / 200cm": "assets/products/sf33-v5.webp", "Green / 200cm": "assets/products/sf33-v6.webp", "Pink / 200cm": "assets/products/sf33-v7.webp", "White / 200cm": "assets/products/sf33-v8.webp" },
     desc: "A curved lounge sofa on a timber frame, in brown, green, pink, white and more, at 150cm or 200cm. The colour choice is unusually broad.",
@@ -1224,9 +1224,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf34", name: "Tan Leather Sofa", cat: "Living Room", room: "Living Room", price: 6009, was: 6677, memberPrice: 5408, sku: "SH-10238", tag: "Sale", ph: "", img: "assets/products/sf34.webp",
+  { id: "sf34", name: "Tan Leather Sofa", cat: "Living Room", room: "Living Room", price: 6677, memberPrice: 6009, sku: "SH-10238", tag: "New", ph: "", img: "assets/products/sf34.webp",
     imgs: ["assets/products/sf34.webp", "assets/products/sf34-2.webp", "assets/products/sf34-3.webp", "assets/products/sf34-4.webp", "assets/products/sf34-5.webp"],
-    sizes: [{ label: "130cm / Tan", price: 6009 }, { label: "190cm / Tan", price: 8521 }, { label: "272cm / Tan", price: 10905 }, { label: "298cm / Tan", price: 11722 }, { label: "326cm / Tan", price: 12162 }, { label: "253cm / Tan", price: 13166 }, { label: "353cm / Tan", price: 13166 }],
+    sizes: [{ label: "130cm / Tan", price: 6677 }, { label: "190cm / Tan", price: 9468 }, { label: "272cm / Tan", price: 12117 }, { label: "298cm / Tan", price: 13024 }, { label: "326cm / Tan", price: 13513 }, { label: "253cm / Tan", price: 14629 }, { label: "353cm / Tan", price: 14629 }],
     lead: "8 to 10 weeks",
     sizeImg: { "130cm / Tan": "assets/products/sf34-v1.webp", "190cm / Tan": "assets/products/sf34-v2.webp", "272cm / Tan": "assets/products/sf34-v3.webp", "298cm / Tan": "assets/products/sf34-v4.webp", "253cm / Tan": "assets/products/sf34-v5.webp", "353cm / Tan": "assets/products/sf34-v4.webp" },
     desc: "Tan leather on timber, in seven widths from 130cm to 353cm. Tan is the leather that warms a room rather than darkening it.",
@@ -1239,9 +1239,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "7", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf35", name: "Leather Sofa with Long Chaise", cat: "Living Room", room: "Living Room", price: 6068, was: 6742, memberPrice: 5461, sku: "SH-10239", tag: "Sale", ph: "", img: "assets/products/sf35.webp",
+  { id: "sf35", name: "Leather Sofa with Long Chaise", cat: "Living Room", room: "Living Room", price: 6742, memberPrice: 6068, sku: "SH-10239", tag: "New", ph: "", img: "assets/products/sf35.webp",
     imgs: ["assets/products/sf35.webp", "assets/products/sf35-2.webp", "assets/products/sf35-3.webp", "assets/products/sf35-4.webp", "assets/products/sf35-5.webp"],
-    sizes: [{ label: "190cm", price: 6068 }, { label: "260cm", price: 7854 }, { label: "260cm + 165cm Chaise", price: 9138 }, { label: "330cm", price: 9780 }, { label: "330cm + 165cm Chaise", price: 10564 }, { label: "400cm + 165cm Chaise", price: 11524 }],
+    sizes: [{ label: "190cm", price: 6742 }, { label: "260cm", price: 8727 }, { label: "260cm + 165cm Chaise", price: 10153 }, { label: "330cm", price: 10867 }, { label: "330cm + 165cm Chaise", price: 11738 }, { label: "400cm + 165cm Chaise", price: 12804 }],
     lead: "8 to 10 weeks",
     sizeImg: { "190cm": "assets/products/sf35-v1.webp", "260cm": "assets/products/sf35-v1.webp", "260cm + 165cm Chaise": "assets/products/sf35-v2.webp", "330cm": "assets/products/sf35-v1.webp", "330cm + 165cm Chaise": "assets/products/sf35-v3.webp", "400cm + 165cm Chaise": "assets/products/sf35-v3.webp" },
     desc: "Leather seating with a 165cm chaise, in overall lengths to 400cm. For the room with a long wall and nothing on it.",
@@ -1254,9 +1254,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "6", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf36", name: "Full-Grain Look Leather Sofa", cat: "Living Room", room: "Living Room", price: 6468, was: 7187, memberPrice: 5821, sku: "SH-10240", tag: "Sale", ph: "", img: "assets/products/sf36.webp",
+  { id: "sf36", name: "Full-Grain Look Leather Sofa", cat: "Living Room", room: "Living Room", price: 7187, memberPrice: 6468, sku: "SH-10240", tag: "New", ph: "", img: "assets/products/sf36.webp",
     imgs: ["assets/products/sf36.webp", "assets/products/sf36-2.webp", "assets/products/sf36-3.webp", "assets/products/sf36-4.webp", "assets/products/sf36-5.webp"],
-    sizes: [{ label: "120cm / Tan", price: 6468 }, { label: "120cm / Black", price: 6468 }, { label: "120cm / Light Grey", price: 6468 }, { label: "120cm / Grey", price: 6468 }, { label: "120cm / Charcoal Grey", price: 6468 }, { label: "120cm / Chocolate", price: 6468 }, { label: "180cm / Tan", price: 8310 }, { label: "180cm / Black", price: 8310 }, { label: "180cm / Light Grey", price: 8310 }, { label: "180cm / Grey", price: 8310 }, { label: "180cm / Charcoal Grey", price: 8310 }, { label: "180cm / Chocolate", price: 8310 }, { label: "200cm / Tan", price: 8804 }, { label: "200cm / Black", price: 8804 }, { label: "200cm / Light Grey", price: 8804 }, { label: "200cm / Grey", price: 8804 }, { label: "200cm / Charcoal Grey", price: 8804 }, { label: "200cm / Chocolate", price: 8804 }, { label: "220cm / Tan", price: 10780 }, { label: "220cm / Black", price: 10780 }, { label: "220cm / Light Grey", price: 10780 }, { label: "220cm / Grey", price: 10780 }, { label: "220cm / Charcoal Grey", price: 10780 }, { label: "220cm / Chocolate", price: 10780 }, { label: "240cm / Tan", price: 12050 }, { label: "240cm / Black", price: 12050 }, { label: "240cm / Light Grey", price: 12050 }, { label: "240cm / Grey", price: 12050 }, { label: "240cm / Charcoal Grey", price: 12050 }, { label: "240cm / Chocolate", price: 12050 }, { label: "260cm / Tan", price: 13034 }, { label: "260cm / Black", price: 13034 }, { label: "260cm / Light Grey", price: 13034 }, { label: "260cm / Grey", price: 13034 }, { label: "260cm / Charcoal Grey", price: 13034 }, { label: "260cm / Chocolate", price: 13034 }, { label: "280cm / Tan", price: 14306 }, { label: "280cm / Black", price: 14306 }, { label: "280cm / Light Grey", price: 14306 }, { label: "280cm / Grey", price: 14306 }, { label: "280cm / Charcoal Grey", price: 14306 }, { label: "280cm / Chocolate", price: 14306 }],
+    sizes: [{ label: "120cm / Tan", price: 7187 }, { label: "120cm / Black", price: 7187 }, { label: "120cm / Light Grey", price: 7187 }, { label: "120cm / Grey", price: 7187 }, { label: "120cm / Charcoal Grey", price: 7187 }, { label: "120cm / Chocolate", price: 7187 }, { label: "180cm / Tan", price: 9233 }, { label: "180cm / Black", price: 9233 }, { label: "180cm / Light Grey", price: 9233 }, { label: "180cm / Grey", price: 9233 }, { label: "180cm / Charcoal Grey", price: 9233 }, { label: "180cm / Chocolate", price: 9233 }, { label: "200cm / Tan", price: 9782 }, { label: "200cm / Black", price: 9782 }, { label: "200cm / Light Grey", price: 9782 }, { label: "200cm / Grey", price: 9782 }, { label: "200cm / Charcoal Grey", price: 9782 }, { label: "200cm / Chocolate", price: 9782 }, { label: "220cm / Tan", price: 11978 }, { label: "220cm / Black", price: 11978 }, { label: "220cm / Light Grey", price: 11978 }, { label: "220cm / Grey", price: 11978 }, { label: "220cm / Charcoal Grey", price: 11978 }, { label: "220cm / Chocolate", price: 11978 }, { label: "240cm / Tan", price: 13389 }, { label: "240cm / Black", price: 13389 }, { label: "240cm / Light Grey", price: 13389 }, { label: "240cm / Grey", price: 13389 }, { label: "240cm / Charcoal Grey", price: 13389 }, { label: "240cm / Chocolate", price: 13389 }, { label: "260cm / Tan", price: 14482 }, { label: "260cm / Black", price: 14482 }, { label: "260cm / Light Grey", price: 14482 }, { label: "260cm / Grey", price: 14482 }, { label: "260cm / Charcoal Grey", price: 14482 }, { label: "260cm / Chocolate", price: 14482 }, { label: "280cm / Tan", price: 15896 }, { label: "280cm / Black", price: 15896 }, { label: "280cm / Light Grey", price: 15896 }, { label: "280cm / Grey", price: 15896 }, { label: "280cm / Charcoal Grey", price: 15896 }, { label: "280cm / Chocolate", price: 15896 }],
     lead: "8 to 10 weeks",
     sizeImg: { "120cm / Tan": "assets/products/sf36-v1.webp", "120cm / Black": "assets/products/sf36-v2.webp", "120cm / Charcoal Grey": "assets/products/sf36-v3.webp", "120cm / Chocolate": "assets/products/sf36-v4.webp", "180cm / Tan": "assets/products/sf36-v1.webp", "180cm / Black": "assets/products/sf36-v2.webp", "180cm / Charcoal Grey": "assets/products/sf36-v3.webp", "180cm / Chocolate": "assets/products/sf36-v4.webp", "200cm / Tan": "assets/products/sf36-v1.webp", "200cm / Black": "assets/products/sf36-v2.webp", "200cm / Charcoal Grey": "assets/products/sf36-v3.webp", "200cm / Chocolate": "assets/products/sf36-v4.webp", "220cm / Tan": "assets/products/sf36-v1.webp", "220cm / Black": "assets/products/sf36-v2.webp", "220cm / Charcoal Grey": "assets/products/sf36-v3.webp", "220cm / Chocolate": "assets/products/sf36-v4.webp", "240cm / Tan": "assets/products/sf36-v1.webp", "240cm / Black": "assets/products/sf36-v2.webp", "240cm / Charcoal Grey": "assets/products/sf36-v3.webp", "240cm / Chocolate": "assets/products/sf36-v4.webp", "260cm / Tan": "assets/products/sf36-v1.webp", "260cm / Black": "assets/products/sf36-v2.webp", "260cm / Charcoal Grey": "assets/products/sf36-v3.webp", "260cm / Chocolate": "assets/products/sf36-v4.webp", "280cm / Tan": "assets/products/sf36-v1.webp", "280cm / Black": "assets/products/sf36-v2.webp", "280cm / Charcoal Grey": "assets/products/sf36-v3.webp", "280cm / Chocolate": "assets/products/sf36-v4.webp" },
     desc: "Tan leather in eight widths from 120cm to 280cm, so it fits a snug or a formal lounge equally.",
@@ -1269,9 +1269,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "42", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf37", name: "Velvet Sofa in Five Sizes", cat: "Living Room", room: "Living Room", price: 7047, was: 7830, memberPrice: 6342, sku: "SH-10241", tag: "Sale", ph: "", img: "assets/products/sf37.webp",
+  { id: "sf37", name: "Velvet Sofa in Five Sizes", cat: "Living Room", room: "Living Room", price: 7830, memberPrice: 7047, sku: "SH-10241", tag: "New", ph: "", img: "assets/products/sf37.webp",
     imgs: ["assets/products/sf37.webp", "assets/products/sf37-2.webp", "assets/products/sf37-3.webp", "assets/products/sf37-4.webp", "assets/products/sf37-5.webp"],
-    sizes: [{ label: "White / 210cm", price: 7047 }, { label: "Green / 210cm", price: 7047 }, { label: "Black / 210cm", price: 7047 }, { label: "White / 240cm", price: 7974 }, { label: "Green / 240cm", price: 7974 }, { label: "Black / 240cm", price: 7974 }, { label: "White / 270cm", price: 8554 }, { label: "Green / 270cm", price: 8554 }, { label: "Black / 270cm", price: 8554 }, { label: "White / 300cm", price: 9256 }, { label: "Green / 300cm", price: 9256 }, { label: "Black / 300cm", price: 9256 }, { label: "White / 330cm", price: 9667 }, { label: "Green / 330cm", price: 9667 }, { label: "Black / 330cm", price: 9667 }],
+    sizes: [{ label: "White / 210cm", price: 7830 }, { label: "Green / 210cm", price: 7830 }, { label: "Black / 210cm", price: 7830 }, { label: "White / 240cm", price: 8860 }, { label: "Green / 240cm", price: 8860 }, { label: "Black / 240cm", price: 8860 }, { label: "White / 270cm", price: 9504 }, { label: "Green / 270cm", price: 9504 }, { label: "Black / 270cm", price: 9504 }, { label: "White / 300cm", price: 10284 }, { label: "Green / 300cm", price: 10284 }, { label: "Black / 300cm", price: 10284 }, { label: "White / 330cm", price: 10741 }, { label: "Green / 330cm", price: 10741 }, { label: "Black / 330cm", price: 10741 }],
     lead: "8 to 10 weeks",
     sizeImg: { "White / 210cm": "assets/products/sf37-v1.webp", "Green / 210cm": "assets/products/sf37-v2.webp", "Black / 210cm": "assets/products/sf37-v3.webp", "White / 240cm": "assets/products/sf37-v1.webp", "Green / 240cm": "assets/products/sf37-v2.webp", "Black / 240cm": "assets/products/sf37-v3.webp", "White / 270cm": "assets/products/sf37-v1.webp", "Green / 270cm": "assets/products/sf37-v2.webp", "Black / 270cm": "assets/products/sf37-v3.webp", "White / 300cm": "assets/products/sf37-v1.webp", "Green / 300cm": "assets/products/sf37-v2.webp", "Black / 300cm": "assets/products/sf37-v3.webp", "White / 330cm": "assets/products/sf37-v1.webp", "Green / 330cm": "assets/products/sf37-v2.webp", "Black / 330cm": "assets/products/sf37-v3.webp" },
     desc: "Velvet over high-density foam, in white or green, from 210cm to 330cm. Large sizes only, for rooms that can take them.",
@@ -1284,9 +1284,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "15", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf38", name: "Sectional Sofa Modules", cat: "Living Room", room: "Living Room", price: 7328, was: 8142, memberPrice: 6595, sku: "SH-10242", tag: "Sale", ph: "", img: "assets/products/sf38.webp",
+  { id: "sf38", name: "Sectional Sofa Modules", cat: "Living Room", room: "Living Room", price: 8142, memberPrice: 7328, sku: "SH-10242", tag: "New", ph: "", img: "assets/products/sf38.webp",
     imgs: ["assets/products/sf38.webp", "assets/products/sf38-2.webp", "assets/products/sf38-3.webp", "assets/products/sf38-4.webp", "assets/products/sf38-5.webp"],
-    sizes: [{ label: "80cm", price: 7328 }, { label: "80cm (A)", price: 7328 }, { label: "120cm", price: 8997 }, { label: "120cm (A)", price: 8997 }, { label: "160cm", price: 10446 }, { label: "160cm (A)", price: 10446 }, { label: "200cm", price: 13776 }, { label: "200cm (A)", price: 13776 }],
+    sizes: [{ label: "80cm", price: 8142 }, { label: "80cm (A)", price: 8142 }, { label: "120cm", price: 9997 }, { label: "120cm (A)", price: 9997 }, { label: "160cm", price: 11607 }, { label: "160cm (A)", price: 11607 }, { label: "200cm", price: 15307 }, { label: "200cm (A)", price: 15307 }],
     lead: "8 to 10 weeks",
     sizeImg: { "80cm": "assets/products/sf38-v1.webp", "80cm (A)": "assets/products/sf38-v2.webp", "120cm": "assets/products/sf38-v3.webp", "120cm (A)": "assets/products/sf38-v4.webp", "160cm": "assets/products/sf38-v3.webp", "160cm (A)": "assets/products/sf38-v4.webp", "200cm": "assets/products/sf38-v3.webp", "200cm (A)": "assets/products/sf38-v4.webp" },
     desc: "Buy the modules and build the shape: 80cm, 120cm, 160cm and 200cm pieces in two arrangements. The flexible answer to an awkward room.",
@@ -1299,9 +1299,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf39", name: "Oversized Beige Sofa", cat: "Living Room", room: "Living Room", price: 7921, was: 8801, memberPrice: 7129, sku: "SH-10243", tag: "Sale", ph: "", img: "assets/products/sf39.webp",
+  { id: "sf39", name: "Oversized Beige Sofa", cat: "Living Room", room: "Living Room", price: 8801, memberPrice: 7921, sku: "SH-10243", tag: "New", ph: "", img: "assets/products/sf39.webp",
     imgs: ["assets/products/sf39.webp", "assets/products/sf39-2.webp", "assets/products/sf39-3.webp", "assets/products/sf39-4.webp", "assets/products/sf39-5.webp"],
-    sizes: [{ label: "Beige / 240cm", price: 7921 }, { label: "Beige / 270cm", price: 8435 }, { label: "Beige / 300cm", price: 8997 }, { label: "Beige / 330cm", price: 9434 }, { label: "Beige / 360cm", price: 10234 }],
+    sizes: [{ label: "Beige / 240cm", price: 8801 }, { label: "Beige / 270cm", price: 9372 }, { label: "Beige / 300cm", price: 9997 }, { label: "Beige / 330cm", price: 10482 }, { label: "Beige / 360cm", price: 11371 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Beige / 240cm": "assets/products/sf39-v1.webp", "Beige / 270cm": "assets/products/sf39-v1.webp", "Beige / 300cm": "assets/products/sf39-v1.webp", "Beige / 330cm": "assets/products/sf39-v1.webp", "Beige / 360cm": "assets/products/sf39-v1.webp" },
     desc: "Beige, and very large: 240cm to 360cm. A sofa for a room where a normal three seater would look lost.",
@@ -1314,9 +1314,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "5", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf40", name: "Linen Sofa with Timber Frame", cat: "Living Room", room: "Living Room", price: 7487, was: 8319, memberPrice: 6738, sku: "SH-10244", tag: "Sale", ph: "", img: "assets/products/sf40.webp",
+  { id: "sf40", name: "Linen Sofa with Timber Frame", cat: "Living Room", room: "Living Room", price: 8319, memberPrice: 7487, sku: "SH-10244", tag: "New", ph: "", img: "assets/products/sf40.webp",
     imgs: ["assets/products/sf40.webp", "assets/products/sf40-2.webp", "assets/products/sf40-3.webp", "assets/products/sf40-4.webp", "assets/products/sf40-5.webp"],
-    sizes: [{ label: "160cm", price: 7487 }, { label: "210cm", price: 9480 }, { label: "260cm", price: 11565 }],
+    sizes: [{ label: "160cm", price: 8319 }, { label: "210cm", price: 10533 }, { label: "260cm", price: 12850 }],
     lead: "8 to 10 weeks",
     sizeImg: { "160cm": "assets/products/sf40-v1.webp", "210cm": "assets/products/sf40-v1.webp", "260cm": "assets/products/sf40-v1.webp" },
     desc: "Linen over a timber frame with high-density foam, in three sizes. Linen creases, softens and looks better for it.",
@@ -1329,9 +1329,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Linen", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head and blot spills at once. Linen softens and creases with use, which is part of its character. Keep out of harsh direct sun." },
 
-  { id: "sf41", name: "Bouclé Sofa in Ten Sizes", cat: "Living Room", room: "Living Room", price: 7600, was: 8444, memberPrice: 6840, sku: "SH-10245", tag: "Sale", ph: "", img: "assets/products/sf41.webp",
+  { id: "sf41", name: "Bouclé Sofa in Ten Sizes", cat: "Living Room", room: "Living Room", price: 8444, memberPrice: 7600, sku: "SH-10245", tag: "New", ph: "", img: "assets/products/sf41.webp",
     imgs: ["assets/products/sf41.webp", "assets/products/sf41-2.webp", "assets/products/sf41-3.webp", "assets/products/sf41-4.webp", "assets/products/sf41-5.webp"],
-    sizes: [{ label: "120cm", price: 7600 }, { label: "180cm", price: 11277 }, { label: "220cm", price: 13200 }, { label: "240cm", price: 14219 }, { label: "260cm", price: 16329 }, { label: "280cm", price: 17889 }, { label: "300cm", price: 18700 }, { label: "330cm", price: 21599 }, { label: "360cm", price: 24440 }, { label: "390cm", price: 24999 }],
+    sizes: [{ label: "120cm", price: 8444 }, { label: "180cm", price: 12530 }, { label: "220cm", price: 14667 }, { label: "240cm", price: 15799 }, { label: "260cm", price: 18143 }, { label: "280cm", price: 19877 }, { label: "300cm", price: 20778 }, { label: "330cm", price: 23999 }, { label: "360cm", price: 27156 }, { label: "390cm", price: 27777 }],
     lead: "8 to 10 weeks",
     sizeImg: { "120cm": "assets/products/sf41-v1.webp", "180cm": "assets/products/sf41-v1.webp", "220cm": "assets/products/sf41-v1.webp", "240cm": "assets/products/sf41-v2.webp", "260cm": "assets/products/sf41-v2.webp", "280cm": "assets/products/sf41-v2.webp", "300cm": "assets/products/sf41-v3.webp", "330cm": "assets/products/sf41-v3.webp", "360cm": "assets/products/sf41-v3.webp", "390cm": "assets/products/sf41-v3.webp" },
     desc: "Bouclé on a timber frame in ten widths from 120cm to 390cm, which is the broadest size range in the range.",
@@ -1344,9 +1344,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Bouclé", "Options": "10", "Room": "Living / Indoor" },
     care: "Vacuum gently with a brush head and blot spills rather than rubbing, so the loops aren't pulled. Snagged loops should be trimmed, never tugged." },
 
-  { id: "sf42", name: "Large Leather Lounge Sofa", cat: "Living Room", room: "Living Room", price: 8124, was: 9027, memberPrice: 7312, sku: "SH-10246", tag: "Sale", ph: "", img: "assets/products/sf42.webp",
+  { id: "sf42", name: "Large Leather Lounge Sofa", cat: "Living Room", room: "Living Room", price: 9027, memberPrice: 8124, sku: "SH-10246", tag: "New", ph: "", img: "assets/products/sf42.webp",
     imgs: ["assets/products/sf42.webp", "assets/products/sf42-2.webp", "assets/products/sf42-3.webp", "assets/products/sf42-4.webp", "assets/products/sf42-5.webp"],
-    sizes: [{ label: "230cm", price: 8124 }, { label: "260cm", price: 9670 }, { label: "290cm", price: 10052 }, { label: "320cm", price: 11314 }],
+    sizes: [{ label: "230cm", price: 9027 }, { label: "260cm", price: 10744 }, { label: "290cm", price: 11169 }, { label: "320cm", price: 12571 }],
     lead: "8 to 10 weeks",
     sizeImg: { "230cm": "assets/products/sf42-v1.webp", "260cm": "assets/products/sf42-v1.webp", "290cm": "assets/products/sf42-v1.webp", "320cm": "assets/products/sf42-v1.webp" },
     desc: "Leather on timber in four large sizes, 230cm to 320cm, for a lounge that seats everyone at once.",
@@ -1359,9 +1359,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "4", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf43", name: "Curved Bouclé Sofa", cat: "Living Room", room: "Living Room", price: 7956, was: 8840, memberPrice: 7160, sku: "SH-10247", tag: "Sale", ph: "", img: "assets/products/sf43.webp",
+  { id: "sf43", name: "Curved Bouclé Sofa", cat: "Living Room", room: "Living Room", price: 8840, memberPrice: 7956, sku: "SH-10247", tag: "New", ph: "", img: "assets/products/sf43.webp",
     imgs: ["assets/products/sf43.webp", "assets/products/sf43-2.webp", "assets/products/sf43-3.webp", "assets/products/sf43-4.webp", "assets/products/sf43-5.webp"],
-    sizes: [{ label: "170cm", price: 7956 }, { label: "210cm", price: 9421 }, { label: "240cm", price: 10998 }],
+    sizes: [{ label: "170cm", price: 8840 }, { label: "210cm", price: 10468 }, { label: "240cm", price: 12220 }],
     lead: "8 to 10 weeks",
     sizeImg: { "170cm": "assets/products/sf43-v1.webp", "210cm": "assets/products/sf43-v1.webp", "240cm": "assets/products/sf43-v1.webp" },
     desc: "A curved bouclé sofa in three sizes. The combination of curve and texture is what makes it feel expensive.",
@@ -1374,9 +1374,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Bouclé", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum gently with a brush head and blot spills rather than rubbing, so the loops aren't pulled. Snagged loops should be trimmed, never tugged." },
 
-  { id: "sf44", name: "Down-Filled Pull Sofa", cat: "Living Room", room: "Living Room", price: 8342, was: 9269, memberPrice: 7508, sku: "SH-10248", tag: "Sale", ph: "", img: "assets/products/sf44.webp",
+  { id: "sf44", name: "Down-Filled Pull Sofa", cat: "Living Room", room: "Living Room", price: 9773, memberPrice: 8796, sku: "SH-10248", tag: "New", ph: "", img: "assets/products/sf44.webp",
     imgs: ["assets/products/sf44.webp", "assets/products/sf44-2.webp", "assets/products/sf44-3.webp", "assets/products/sf44-4.webp", "assets/products/sf44-5.webp"],
-    sizes: [{ label: "125cm (Single Seater)", price: 8342 }, { label: "145cm", price: 8796 }, { label: "175cm", price: 9476 }, { label: "205cm", price: 10388 }, { label: "225cm", price: 13222 }, { label: "265cm", price: 15220 }, { label: "325cm", price: 17830 }, { label: "385cm", price: 19678 }],
+    sizes: [{ label: "145cm", price: 9773 }, { label: "175cm", price: 10529 }, { label: "205cm", price: 11542 }, { label: "225cm", price: 14691 }, { label: "265cm", price: 16911 }, { label: "325cm", price: 19811 }, { label: "385cm", price: 21864 }, { label: "125cm (Single Seater)", price: 9269 }],
     lead: "8 to 10 weeks",
     sizeImg: { "125cm (Single Seater)": "assets/products/sf44-v1.webp", "145cm": "assets/products/sf44-v2.webp", "175cm": "assets/products/sf44-v2.webp", "205cm": "assets/products/sf44-v2.webp", "225cm": "assets/products/sf44-v2.webp", "265cm": "assets/products/sf44-v2.webp", "325cm": "assets/products/sf44-v2.webp", "385cm": "assets/products/sf44-v2.webp" },
     desc: "Down and cotton filling in widths from a 125cm single seater to 385cm. Soft rather than firm, and it shows: these cushions need plumping.",
@@ -1389,9 +1389,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf45", name: "Single-Armrest Chaise Sofa", cat: "Living Room", room: "Living Room", price: 9192, was: 10213, memberPrice: 8273, sku: "SH-10249", tag: "Sale", ph: "", img: "assets/products/sf45.webp",
+  { id: "sf45", name: "Single-Armrest Chaise Sofa", cat: "Living Room", room: "Living Room", price: 10213, memberPrice: 9192, sku: "SH-10249", tag: "New", ph: "", img: "assets/products/sf45.webp",
     imgs: ["assets/products/sf45.webp", "assets/products/sf45-2.webp", "assets/products/sf45-3.webp", "assets/products/sf45-4.webp", "assets/products/sf45-5.webp"],
-    sizes: [{ label: "300cm (Double Armrest)", price: 9192 }, { label: "280cm (Double Armrest)", price: 9576 }, { label: "300cm (Single Armrest)", price: 9424 }, { label: "320cm (Single Armrest)", price: 9782 }, { label: "320cm (Double Armrest)", price: 10282 }, { label: "340cm (Single Armrest)", price: 10166 }, { label: "365cm (Single Armrest)", price: 10872 }, { label: "405cm (Single Armrest)", price: 11692 }],
+    sizes: [{ label: "300cm (Double Armrest)", price: 10213 }, { label: "280cm (Double Armrest)", price: 10640 }, { label: "320cm (Double Armrest)", price: 11424 }, { label: "300cm (Single Armrest)", price: 10471 }, { label: "320cm (Single Armrest)", price: 10869 }, { label: "340cm (Single Armrest)", price: 11296 }, { label: "365cm (Single Armrest)", price: 12080 }, { label: "405cm (Single Armrest)", price: 12991 }],
     lead: "8 to 10 weeks",
     sizeImg: { "300cm (Double Armrest)": "assets/products/sf45-v1.webp", "280cm (Double Armrest)": "assets/products/sf45-v1.webp", "300cm (Single Armrest)": "assets/products/sf45-v2.webp", "320cm (Single Armrest)": "assets/products/sf45-v2.webp", "320cm (Double Armrest)": "assets/products/sf45-v1.webp", "340cm (Single Armrest)": "assets/products/sf45-v2.webp", "365cm (Single Armrest)": "assets/products/sf45-v3.webp", "405cm (Single Armrest)": "assets/products/sf45-v3.webp" },
     desc: "A single-armrest design in leather and linen, from 300cm to 365cm, so one end stays open for stretching out.",
@@ -1404,9 +1404,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "8", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf46", name: "Four-Colour Fabric Sofa", cat: "Living Room", room: "Living Room", price: 9250, was: 10278, memberPrice: 8325, sku: "SH-10250", tag: "Sale", ph: "", img: "assets/products/sf46.webp",
+  { id: "sf46", name: "Four-Colour Fabric Sofa", cat: "Living Room", room: "Living Room", price: 10278, memberPrice: 9250, sku: "SH-10250", tag: "New", ph: "", img: "assets/products/sf46.webp",
     imgs: ["assets/products/sf46.webp", "assets/products/sf46-2.webp", "assets/products/sf46-3.webp", "assets/products/sf46-4.webp", "assets/products/sf46-5.webp"],
-    sizes: [{ label: "260cm / Grey", price: 9250 }, { label: "260cm / Light Grey", price: 9250 }, { label: "260cm / Off White", price: 9250 }, { label: "260cm / Emerald Green", price: 9250 }, { label: "280cm / Grey", price: 10190 }, { label: "280cm / Light Grey", price: 10190 }, { label: "280cm / Off White", price: 10190 }, { label: "280cm / Emerald Green", price: 10190 }],
+    sizes: [{ label: "260cm / Grey", price: 10278 }, { label: "260cm / Light Grey", price: 10278 }, { label: "260cm / Off White", price: 10278 }, { label: "260cm / Emerald Green", price: 10278 }, { label: "280cm / Grey", price: 11322 }, { label: "280cm / Light Grey", price: 11322 }, { label: "280cm / Off White", price: 11322 }, { label: "280cm / Emerald Green", price: 11322 }],
     lead: "8 to 10 weeks",
     sizeImg: { "260cm / Grey": "assets/products/sf46-v1.webp", "260cm / Light Grey": "assets/products/sf46-v2.webp", "260cm / Off White": "assets/products/sf46-v3.webp", "260cm / Emerald Green": "assets/products/sf46-v4.webp", "280cm / Grey": "assets/products/sf46-v1.webp", "280cm / Light Grey": "assets/products/sf46-v2.webp", "280cm / Off White": "assets/products/sf46-v3.webp", "280cm / Emerald Green": "assets/products/sf46-v4.webp" },
     desc: "Fabric at 260cm or 280cm, in grey, light grey, off white or emerald green. Emerald is the one worth being brave about.",
@@ -1419,9 +1419,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "8", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf47", name: "Two-Colour Lounge Sofa", cat: "Living Room", room: "Living Room", price: 9259, was: 10288, memberPrice: 8333, sku: "SH-10251", tag: "Sale", ph: "", img: "assets/products/sf47.webp",
+  { id: "sf47", name: "Two-Colour Lounge Sofa", cat: "Living Room", room: "Living Room", price: 10288, memberPrice: 9259, sku: "SH-10251", tag: "New", ph: "", img: "assets/products/sf47.webp",
     imgs: ["assets/products/sf47.webp", "assets/products/sf47-2.webp", "assets/products/sf47-3.webp", "assets/products/sf47-4.webp", "assets/products/sf47-5.webp"],
-    sizes: [{ label: "220cm / White", price: 9259 }, { label: "220cm / Green", price: 9259 }, { label: "280cm / White", price: 10176 }, { label: "280cm / Green", price: 10176 }, { label: "320cm / White", price: 10971 }, { label: "320cm / Green", price: 10971 }],
+    sizes: [{ label: "220cm / White", price: 10288 }, { label: "220cm / Green", price: 10288 }, { label: "280cm / White", price: 11307 }, { label: "280cm / Green", price: 11307 }, { label: "320cm / White", price: 12190 }, { label: "320cm / Green", price: 12190 }],
     lead: "8 to 10 weeks",
     sizeImg: { "220cm / White": "assets/products/sf47-v1.webp", "220cm / Green": "assets/products/sf47-v2.webp", "280cm / White": "assets/products/sf47-v1.webp", "280cm / Green": "assets/products/sf47-v2.webp", "320cm / White": "assets/products/sf47-v1.webp", "320cm / Green": "assets/products/sf47-v2.webp" },
     desc: "White or green, at 220cm, 280cm or 320cm. Large, simple and easy to live with.",
@@ -1434,9 +1434,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "6", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf48", name: "Extended Leather Sofa", cat: "Living Room", room: "Living Room", price: 9000, was: 10000, memberPrice: 8100, sku: "SH-10252", tag: "Sale", ph: "", img: "assets/products/sf48.webp",
+  { id: "sf48", name: "Extended Leather Sofa", cat: "Living Room", room: "Living Room", price: 10000, memberPrice: 9000, sku: "SH-10252", tag: "New", ph: "", img: "assets/products/sf48.webp",
     imgs: ["assets/products/sf48.webp", "assets/products/sf48-2.webp", "assets/products/sf48-3.webp", "assets/products/sf48-4.webp", "assets/products/sf48-5.webp"],
-    sizes: [{ label: "190cm", price: 9000 }, { label: "210cm", price: 9585 }, { label: "230cm", price: 11150 }, { label: "260cm", price: 12059 }, { label: "290cm", price: 12745 }, { label: "320cm", price: 14039 }, { label: "330cm", price: 14489 }, { label: "370cm", price: 15449 }, { label: "410cm", price: 16400 }],
+    sizes: [{ label: "190cm", price: 10000 }, { label: "210cm", price: 10650 }, { label: "230cm", price: 12389 }, { label: "260cm", price: 13399 }, { label: "290cm", price: 14161 }, { label: "320cm", price: 15599 }, { label: "330cm", price: 16099 }, { label: "370cm", price: 17166 }, { label: "410cm", price: 18222 }],
     lead: "8 to 10 weeks",
     sizeImg: { "190cm": "assets/products/sf48-v1.webp", "210cm": "assets/products/sf48-v1.webp", "230cm": "assets/products/sf48-v1.webp", "260cm": "assets/products/sf48-v2.webp", "290cm": "assets/products/sf48-v2.webp", "320cm": "assets/products/sf48-v2.webp", "330cm": "assets/products/sf48-v2.webp", "370cm": "assets/products/sf48-v3.webp", "410cm": "assets/products/sf48-v3.webp" },
     desc: "Leather on a timber frame in nine widths, 190cm all the way to 410cm. The longest sofa in the range.",
@@ -1449,9 +1449,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "9", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf49", name: "Three-Colour Statement Sofa", cat: "Living Room", room: "Living Room", price: 9628, was: 10698, memberPrice: 8665, sku: "SH-10253", tag: "Sale", ph: "", img: "assets/products/sf49.webp",
+  { id: "sf49", name: "Three-Colour Statement Sofa", cat: "Living Room", room: "Living Room", price: 10698, memberPrice: 9628, sku: "SH-10253", tag: "New", ph: "", img: "assets/products/sf49.webp",
     imgs: ["assets/products/sf49.webp", "assets/products/sf49-2.webp", "assets/products/sf49-3.webp", "assets/products/sf49-4.webp", "assets/products/sf49-5.webp"],
-    sizes: [{ label: "Ivory / 280cm", price: 9628 }, { label: "Red / 280cm", price: 9628 }, { label: "Green / 280cm", price: 9628 }, { label: "Ivory / 320cm", price: 10737 }, { label: "Red / 320cm", price: 10737 }, { label: "Green / 320cm", price: 10737 }, { label: "Ivory / 350cm", price: 11846 }, { label: "Red / 350cm", price: 11846 }, { label: "Green / 350cm", price: 11846 }],
+    sizes: [{ label: "Ivory / 280cm", price: 10698 }, { label: "Red / 280cm", price: 10698 }, { label: "Green / 280cm", price: 10698 }, { label: "Ivory / 320cm", price: 11930 }, { label: "Red / 320cm", price: 11930 }, { label: "Green / 320cm", price: 11930 }, { label: "Ivory / 350cm", price: 13162 }, { label: "Red / 350cm", price: 13162 }, { label: "Green / 350cm", price: 13162 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Ivory / 280cm": "assets/products/sf49-v1.webp", "Red / 280cm": "assets/products/sf49-v2.webp", "Green / 280cm": "assets/products/sf49-v3.webp", "Ivory / 320cm": "assets/products/sf49-v1.webp", "Red / 320cm": "assets/products/sf49-v2.webp", "Green / 320cm": "assets/products/sf49-v3.webp", "Ivory / 350cm": "assets/products/sf49-v1.webp", "Red / 350cm": "assets/products/sf49-v2.webp", "Green / 350cm": "assets/products/sf49-v3.webp" },
     desc: "Ivory, red or green, at 280cm to 350cm. Red is rarely offered at this size, and it transforms a room.",
@@ -1464,9 +1464,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "9", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf50", name: "Curved Sofa in Three Colours", cat: "Living Room", room: "Living Room", price: 9432, was: 10480, memberPrice: 8489, sku: "SH-10254", tag: "Sale", ph: "", img: "assets/products/sf50.webp",
+  { id: "sf50", name: "Curved Sofa in Three Colours", cat: "Living Room", room: "Living Room", price: 10480, memberPrice: 9432, sku: "SH-10254", tag: "New", ph: "", img: "assets/products/sf50.webp",
     imgs: ["assets/products/sf50.webp", "assets/products/sf50-2.webp", "assets/products/sf50-3.webp", "assets/products/sf50-4.webp", "assets/products/sf50-5.webp"],
-    sizes: [{ label: "Charcoal Grey / 200cm", price: 9432 }, { label: "Beige / 200cm", price: 9432 }, { label: "Peach / 200cm", price: 9432 }, { label: "Charcoal Grey / 300cm", price: 10559 }, { label: "Beige / 300cm", price: 10559 }, { label: "Peach / 300cm", price: 10559 }],
+    sizes: [{ label: "Charcoal Grey / 200cm", price: 10480 }, { label: "Beige / 200cm", price: 10480 }, { label: "Peach / 200cm", price: 10480 }, { label: "Charcoal Grey / 300cm", price: 11732 }, { label: "Beige / 300cm", price: 11732 }, { label: "Peach / 300cm", price: 11732 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Charcoal Grey / 200cm": "assets/products/sf50-v1.webp", "Beige / 200cm": "assets/products/sf50-v2.webp", "Peach / 200cm": "assets/products/sf50-v3.webp", "Charcoal Grey / 300cm": "assets/products/sf50-v1.webp", "Beige / 300cm": "assets/products/sf50-v2.webp", "Peach / 300cm": "assets/products/sf50-v3.webp" },
     desc: "A curved sofa in charcoal grey, beige or peach, at 200cm or 300cm. Peach is softer in a room than it sounds on paper.",
@@ -1479,9 +1479,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "6", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf51", name: "Lambswool Sofa", cat: "Living Room", room: "Living Room", price: 9680, was: 10756, memberPrice: 8712, sku: "SH-10255", tag: "Sale", ph: "", img: "assets/products/sf51.webp",
+  { id: "sf51", name: "Lambswool Sofa", cat: "Living Room", room: "Living Room", price: 10756, memberPrice: 9680, sku: "SH-10255", tag: "New", ph: "", img: "assets/products/sf51.webp",
     imgs: ["assets/products/sf51.webp", "assets/products/sf51-2.webp", "assets/products/sf51-3.webp", "assets/products/sf51-4.webp", "assets/products/sf51-5.webp"],
-    sizes: [{ label: "180cm", price: 9680 }, { label: "210cm", price: 11180 }, { label: "260cm", price: 14110 }, { label: "280cm", price: 14987 }],
+    sizes: [{ label: "180cm", price: 10756 }, { label: "210cm", price: 12422 }, { label: "260cm", price: 15678 }, { label: "280cm", price: 16652 }],
     lead: "8 to 10 weeks",
     sizeImg: { "180cm": "assets/products/sf51-v1.webp", "210cm": "assets/products/sf51-v1.webp", "260cm": "assets/products/sf51-v1.webp", "280cm": "assets/products/sf51-v1.webp" },
     desc: "Lambswool on a timber frame, in four sizes. Warm underhand in a way that flat-weave fabric never is.",
@@ -1494,9 +1494,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "4", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf52", name: "Two-Tone Wide Sofa", cat: "Living Room", room: "Living Room", price: 10259, was: 11399, memberPrice: 9233, sku: "SH-10256", tag: "Sale", ph: "", img: "assets/products/sf52.webp",
+  { id: "sf52", name: "Two-Tone Wide Sofa", cat: "Living Room", room: "Living Room", price: 11399, memberPrice: 10259, sku: "SH-10256", tag: "New", ph: "", img: "assets/products/sf52.webp",
     imgs: ["assets/products/sf52.webp", "assets/products/sf52-2.webp", "assets/products/sf52-3.webp", "assets/products/sf52-4.webp", "assets/products/sf52-5.webp"],
-    sizes: [{ label: "240cm / Blue", price: 10259 }, { label: "240cm / Beige", price: 10259 }, { label: "260cm / Blue", price: 10939 }, { label: "260cm / Beige", price: 10939 }],
+    sizes: [{ label: "240cm / Blue", price: 11399 }, { label: "240cm / Beige", price: 11399 }, { label: "260cm / Blue", price: 12154 }, { label: "260cm / Beige", price: 12154 }],
     lead: "8 to 10 weeks",
     sizeImg: { "240cm / Blue": "assets/products/sf52-v1.webp", "240cm / Beige": "assets/products/sf52-v2.webp", "260cm / Blue": "assets/products/sf52-v1.webp", "260cm / Beige": "assets/products/sf52-v2.webp" },
     desc: "Blue or beige at 240cm and 260cm. Wide, low and straightforward.",
@@ -1509,9 +1509,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "4", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf53", name: "Configurable Leather Sofa", cat: "Living Room", room: "Living Room", price: 10550, was: 11722, memberPrice: 9495, sku: "SH-10257", tag: "Sale", ph: "", img: "assets/products/sf53.webp",
+  { id: "sf53", name: "Configurable Leather Sofa", cat: "Living Room", room: "Living Room", price: 11722, memberPrice: 10550, sku: "SH-10257", tag: "New", ph: "", img: "assets/products/sf53.webp",
     imgs: ["assets/products/sf53.webp", "assets/products/sf53-2.webp", "assets/products/sf53-3.webp", "assets/products/sf53-4.webp", "assets/products/sf53-5.webp"],
-    sizes: [{ label: "A / Brown", price: 10550 }, { label: "A / Light Grey", price: 10550 }, { label: "A / Charcoal Grey", price: 10550 }, { label: "B / Brown", price: 14600 }, { label: "B / Light Grey", price: 14600 }, { label: "B / Charcoal Grey", price: 14600 }, { label: "C1 / Brown", price: 17900 }, { label: "C2 / Brown", price: 17900 }, { label: "C1 / Light Grey", price: 17900 }, { label: "C1 / Charcoal Grey", price: 17900 }, { label: "C2 / Light Grey", price: 17900 }, { label: "C2 / Charcoal Grey", price: 17900 }, { label: "D1 / Brown", price: 21000 }, { label: "D1 / Light Grey", price: 21000 }, { label: "D2 / Brown", price: 21000 }, { label: "D1 / Charcoal Grey", price: 21000 }, { label: "D2 / Light Grey", price: 21000 }, { label: "D2 / Charcoal Grey", price: 21000 }],
+    sizes: [{ label: "A / Brown", price: 11722 }, { label: "A / Light Grey", price: 11722 }, { label: "A / Charcoal Grey", price: 11722 }, { label: "B / Brown", price: 16222 }, { label: "B / Light Grey", price: 16222 }, { label: "B / Charcoal Grey", price: 16222 }, { label: "C1 / Brown", price: 19889 }, { label: "C2 / Brown", price: 19889 }, { label: "C1 / Light Grey", price: 19889 }, { label: "C1 / Charcoal Grey", price: 19889 }, { label: "C2 / Light Grey", price: 19889 }, { label: "C2 / Charcoal Grey", price: 19889 }, { label: "D1 / Brown", price: 23333 }, { label: "D1 / Light Grey", price: 23333 }, { label: "D2 / Brown", price: 23333 }, { label: "D1 / Charcoal Grey", price: 23333 }, { label: "D2 / Light Grey", price: 23333 }, { label: "D2 / Charcoal Grey", price: 23333 }],
     lead: "8 to 10 weeks",
     sizeImg: { "A / Brown": "assets/products/sf53-v1.webp", "A / Light Grey": "assets/products/sf53-v1.webp", "A / Charcoal Grey": "assets/products/sf53-v1.webp", "B / Brown": "assets/products/sf53-v2.webp", "B / Light Grey": "assets/products/sf53-v2.webp", "B / Charcoal Grey": "assets/products/sf53-v2.webp", "C1 / Brown": "assets/products/sf53-v3.webp", "C2 / Brown": "assets/products/sf53-v4.webp", "C1 / Light Grey": "assets/products/sf53-v3.webp", "C1 / Charcoal Grey": "assets/products/sf53-v3.webp", "C2 / Light Grey": "assets/products/sf53-v4.webp", "C2 / Charcoal Grey": "assets/products/sf53-v4.webp", "D1 / Brown": "assets/products/sf53-v5.webp", "D1 / Light Grey": "assets/products/sf53-v5.webp", "D2 / Brown": "assets/products/sf53-v6.webp", "D1 / Charcoal Grey": "assets/products/sf53-v5.webp", "D2 / Light Grey": "assets/products/sf53-v6.webp", "D2 / Charcoal Grey": "assets/products/sf53-v6.webp" },
     desc: "Leather in three configurations, A, B and C, across brown, light grey and charcoal. Pick the layout, then the colour.",
@@ -1524,9 +1524,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Leather", "Options": "18", "Room": "Living / Indoor" },
     care: "Dust with a dry cloth and wipe spills straight away with a barely damp one. Keep it out of direct sun and away from heaters, which dry the hide and crack it. Condition once or twice a year." },
 
-  { id: "sf54", name: "Velvet Sofa, White or Green", cat: "Living Room", room: "Living Room", price: 10190, was: 11322, memberPrice: 9171, sku: "SH-10258", tag: "Sale", ph: "", img: "assets/products/sf54.webp",
+  { id: "sf54", name: "Velvet Sofa, White or Green", cat: "Living Room", room: "Living Room", price: 11322, memberPrice: 10190, sku: "SH-10258", tag: "New", ph: "", img: "assets/products/sf54.webp",
     imgs: ["assets/products/sf54.webp", "assets/products/sf54-2.webp", "assets/products/sf54-3.webp", "assets/products/sf54-4.webp", "assets/products/sf54-5.webp"],
-    sizes: [{ label: "180cm / White", price: 10190 }, { label: "180cm / Green", price: 10190 }, { label: "180cm / Pink", price: 10190 }, { label: "230cm / Pink", price: 10690 }, { label: "260cm / Pink", price: 10690 }, { label: "290cm / Pink", price: 10690 }, { label: "230cm / White", price: 11690 }, { label: "230cm / Green", price: 11690 }, { label: "260cm / White", price: 12690 }, { label: "260cm / Green", price: 12690 }, { label: "290cm / White", price: 13690 }, { label: "290cm / Green", price: 13690 }],
+    sizes: [{ label: "180cm / White", price: 11322 }, { label: "180cm / Green", price: 11322 }, { label: "180cm / Pink", price: 11322 }, { label: "230cm / Pink", price: 11878 }, { label: "260cm / Pink", price: 11878 }, { label: "290cm / Pink", price: 11878 }, { label: "230cm / White", price: 12989 }, { label: "230cm / Green", price: 12989 }, { label: "260cm / White", price: 14100 }, { label: "260cm / Green", price: 14100 }, { label: "290cm / White", price: 15211 }, { label: "290cm / Green", price: 15211 }],
     lead: "8 to 10 weeks",
     sizeImg: { "180cm / White": "assets/products/sf54-v1.webp", "180cm / Green": "assets/products/sf54-v2.webp", "180cm / Pink": "assets/products/sf54-v3.webp", "230cm / Pink": "assets/products/sf54-v3.webp", "260cm / Pink": "assets/products/sf54-v3.webp", "290cm / Pink": "assets/products/sf54-v3.webp", "230cm / White": "assets/products/sf54-v1.webp", "230cm / Green": "assets/products/sf54-v2.webp", "260cm / White": "assets/products/sf54-v1.webp", "260cm / Green": "assets/products/sf54-v2.webp", "290cm / White": "assets/products/sf54-v1.webp", "290cm / Green": "assets/products/sf54-v2.webp" },
     desc: "Velvet at 180cm, 230cm or 260cm, in white or green. Velvet at a size that suits an ordinary room rather than a ballroom.",
@@ -1539,9 +1539,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "12", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf55", name: "Curved Fabric Sofa", cat: "Living Room", room: "Living Room", price: 10200, was: 11333, memberPrice: 9180, sku: "SH-10259", tag: "Sale", ph: "", img: "assets/products/sf55.webp",
+  { id: "sf55", name: "Curved Fabric Sofa", cat: "Living Room", room: "Living Room", price: 11333, memberPrice: 10200, sku: "SH-10259", tag: "New", ph: "", img: "assets/products/sf55.webp",
     imgs: ["assets/products/sf55.webp", "assets/products/sf55-2.webp", "assets/products/sf55-3.webp", "assets/products/sf55-4.webp", "assets/products/sf55-5.webp"],
-    sizes: [{ label: "180cm", price: 10200 }, { label: "210cm", price: 10890 }, { label: "240cm", price: 12297 }],
+    sizes: [{ label: "180cm", price: 11333 }, { label: "210cm", price: 12100 }, { label: "240cm", price: 13663 }],
     lead: "8 to 10 weeks",
     sizeImg: { "180cm": "assets/products/sf55-v1.webp", "210cm": "assets/products/sf55-v1.webp", "240cm": "assets/products/sf55-v1.webp" },
     desc: "A curved fabric sofa on a timber frame with high-density foam, in three sizes.",
@@ -1554,9 +1554,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf56", name: "Oversized Bouclé Sofa", cat: "Living Room", room: "Living Room", price: 10800, was: 12000, memberPrice: 9720, sku: "SH-10260", tag: "Sale", ph: "", img: "assets/products/sf56.webp",
+  { id: "sf56", name: "Oversized Bouclé Sofa", cat: "Living Room", room: "Living Room", price: 12000, memberPrice: 10800, sku: "SH-10260", tag: "New", ph: "", img: "assets/products/sf56.webp",
     imgs: ["assets/products/sf56.webp", "assets/products/sf56-2.webp", "assets/products/sf56-3.webp", "assets/products/sf56-4.webp", "assets/products/sf56-5.webp"],
-    sizes: [{ label: "Navy Blue / 280cm", price: 10800 }, { label: "Snow Beige / 280cm", price: 10800 }, { label: "Navy Blue / 310cm", price: 11870 }, { label: "Snow Beige / 310cm", price: 11870 }, { label: "Navy Blue / 420cm", price: 12590 }, { label: "Snow Beige / 420cm", price: 12590 }],
+    sizes: [{ label: "Navy Blue / 280cm", price: 12000 }, { label: "Snow Beige / 280cm", price: 12000 }, { label: "Navy Blue / 310cm", price: 13189 }, { label: "Snow Beige / 310cm", price: 13189 }, { label: "Navy Blue / 420cm", price: 13989 }, { label: "Snow Beige / 420cm", price: 13989 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Navy Blue / 280cm": "assets/products/sf56-v1.webp", "Snow Beige / 280cm": "assets/products/sf56-v2.webp", "Navy Blue / 310cm": "assets/products/sf56-v1.webp", "Snow Beige / 310cm": "assets/products/sf56-v2.webp", "Navy Blue / 420cm": "assets/products/sf56-v1.webp", "Snow Beige / 420cm": "assets/products/sf56-v2.webp" },
     desc: "Bouclé in navy blue or snow beige, at 280cm, 310cm or 420cm. Very large, very soft.",
@@ -1569,7 +1569,7 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Bouclé", "Options": "6", "Room": "Living / Indoor" },
     care: "Vacuum gently with a brush head and blot spills rather than rubbing, so the loops aren't pulled. Snagged loops should be trimmed, never tugged." },
 
-  { id: "sf57", name: "Feather-Filled Sofa in Four Colours", cat: "Living Room", room: "Living Room", price: 12271, was: 14271, memberPrice: 11044, sku: "SH-10261", tag: "Sale", ph: "", img: "assets/products/sf57.webp",
+  { id: "sf57", name: "Feather-Filled Sofa in Four Colours", cat: "Living Room", room: "Living Room", price: 12271, memberPrice: 11044, sku: "SH-10261", tag: "New", ph: "", img: "assets/products/sf57.webp",
     imgs: ["assets/products/sf57.webp", "assets/products/sf57-2.webp", "assets/products/sf57-3.webp", "assets/products/sf57-4.webp", "assets/products/sf57-5.webp"],
     sizes: [{ label: "Grey / 280cm", price: 12271 }, { label: "Blue / 280cm", price: 12271 }, { label: "Tan / 280cm", price: 12271 }, { label: "Chocolate / 280cm", price: 12271 }, { label: "Grey / 300cm", price: 12703 }, { label: "Blue / 300cm", price: 12703 }, { label: "Tan / 300cm", price: 12703 }, { label: "Chocolate / 300cm", price: 12703 }, { label: "Grey / 330cm", price: 15404 }, { label: "Blue / 330cm", price: 15404 }, { label: "Tan / 330cm", price: 15404 }, { label: "Chocolate / 330cm", price: 15404 }],
     lead: "8 to 10 weeks",
@@ -1584,9 +1584,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "12", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf58", name: "Rounded Velvet Sofa", cat: "Living Room", room: "Living Room", price: 13447, was: 14941, memberPrice: 12102, sku: "SH-10262", tag: "Sale", ph: "", img: "assets/products/sf58.webp",
+  { id: "sf58", name: "Rounded Velvet Sofa", cat: "Living Room", room: "Living Room", price: 14941, memberPrice: 13447, sku: "SH-10262", tag: "New", ph: "", img: "assets/products/sf58.webp",
     imgs: ["assets/products/sf58.webp", "assets/products/sf58-2.webp", "assets/products/sf58-3.webp", "assets/products/sf58-4.webp", "assets/products/sf58-5.webp"],
-    sizes: [{ label: "Chocolate / 180cm", price: 13447 }, { label: "Mocha / 180cm", price: 13447 }, { label: "Grey / 180cm", price: 13447 }, { label: "Chocolate / 200cm", price: 13790 }, { label: "Mocha / 200cm", price: 13790 }, { label: "Grey / 200cm", price: 13790 }],
+    sizes: [{ label: "Chocolate / 180cm", price: 14941 }, { label: "Mocha / 180cm", price: 14941 }, { label: "Grey / 180cm", price: 14941 }, { label: "Chocolate / 200cm", price: 15322 }, { label: "Mocha / 200cm", price: 15322 }, { label: "Grey / 200cm", price: 15322 }],
     lead: "8 to 10 weeks",
     sizeImg: { "Chocolate / 180cm": "assets/products/sf58-v1.webp", "Mocha / 180cm": "assets/products/sf58-v2.webp", "Grey / 180cm": "assets/products/sf58-v3.webp", "Chocolate / 200cm": "assets/products/sf58-v1.webp", "Mocha / 200cm": "assets/products/sf58-v2.webp", "Grey / 200cm": "assets/products/sf58-v3.webp" },
     desc: "Velvet in chocolate, mocha or grey, at 180cm or 200cm, with softly rounded arms and back.",
@@ -1599,9 +1599,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Velvet", "Options": "6", "Room": "Living / Indoor" },
     care: "Vacuum with a brush head to lift the pile. Blot spills, never rub, since rubbing crushes the nap. Keep out of direct sun, which fades velvet faster than any other upholstery." },
 
-  { id: "sf59", name: "Extra-Large Lounge Sofa", cat: "Living Room", room: "Living Room", price: 14047, was: 15608, memberPrice: 12642, sku: "SH-10263", tag: "Sale", ph: "", img: "assets/products/sf59.webp",
+  { id: "sf59", name: "Extra-Large Lounge Sofa", cat: "Living Room", room: "Living Room", price: 15608, memberPrice: 14047, sku: "SH-10263", tag: "New", ph: "", img: "assets/products/sf59.webp",
     imgs: ["assets/products/sf59.webp", "assets/products/sf59-2.webp", "assets/products/sf59-3.webp", "assets/products/sf59-4.webp", "assets/products/sf59-5.webp"],
-    sizes: [{ label: "320cm x 245cm", price: 14047 }, { label: "370cm x 245m", price: 15390 }, { label: "420cm x 245cm", price: 17690 }],
+    sizes: [{ label: "320cm x 245cm", price: 15608 }, { label: "370cm x 245m", price: 17100 }, { label: "420cm x 245cm", price: 19656 }],
     lead: "8 to 10 weeks",
     sizeImg: { "320cm x 245cm": "assets/products/sf59-v1.webp", "370cm x 245m": "assets/products/sf59-v1.webp", "420cm x 245cm": "assets/products/sf59-v1.webp" },
     desc: "320, 370 or 420cm across and 245cm deep. This is a sofa for a room you could park a car in, and it will swallow a family whole.",
@@ -1614,9 +1614,9 @@ const PRODUCTS = [
     specs: { "Type": "Sofa", "Upholstery": "Upholstery fabric", "Options": "3", "Room": "Living / Indoor" },
     care: "Vacuum regularly and blot spills immediately with a clean cloth. Rotate and plump the cushions so they wear evenly. Professional cleaning for anything stubborn." },
 
-  { id: "sf60", name: "Long Leather Sofa", cat: "Living Room", room: "Living Room", price: 14800, was: 16444, memberPrice: 13320, sku: "SH-10264", tag: "Sale", ph: "", img: "assets/products/sf60.webp",
+  { id: "sf60", name: "Long Leather Sofa", cat: "Living Room", room: "Living Room", price: 16444, memberPrice: 14800, sku: "SH-10264", tag: "New", ph: "", img: "assets/products/sf60.webp",
     imgs: ["assets/products/sf60.webp", "assets/products/sf60-2.webp", "assets/products/sf60-3.webp", "assets/products/sf60-4.webp", "assets/products/sf60-5.webp"],
-    sizes: [{ label: "260cm", price: 14800 }, { label: "280cm", price: 15747 }, { label: "300cm", price: 16665 }, { label: "320cm", price: 17817 }, { label: "335cm", price: 18489 }, { label: "345cm", price: 18945 }, { label: "360cm", price: 19590 }],
+    sizes: [{ label: "260cm", price: 16444 }, { label: "280cm", price: 17497 }, { label: "300cm", price: 18517 }, { label: "320cm", price: 19797 }, { label: "335cm", price: 20543 }, { label: "345cm", price: 21050 }, { label: "360cm", price: 21767 }],
     lead: "8 to 10 weeks",
     sizeImg: { "260cm": "assets/products/sf60-v1.webp", "280cm": "assets/products/sf60-v1.webp", "300cm": "assets/products/sf60-v1.webp", "320cm": "assets/products/sf60-v1.webp", "335cm": "assets/products/sf60-v1.webp", "345cm": "assets/products/sf60-v1.webp", "360cm": "assets/products/sf60-v1.webp" },
     desc: "Leather on a timber frame in seven lengths from 260cm to 360cm, all of them long.",
@@ -15438,3 +15438,45 @@ const REVIEWS = [
   { rating: 4, title: "Vaporiser I adore", body: "Cool to touch, no water needed and the ceramic finish is gorgeous. Fills the whole room with a subtle scent.", who: "Ruby N. · Perth, WA" },
   { rating: 5, title: "Gift card delivered instantly", body: "Sent a last-minute gift card and it landed in my sister's inbox looking so elegant. She loved choosing her own pieces.", who: "Hannah C. · Wollongong, NSW" }
 ];
+
+/* ============================================================
+   RECURRING SALE — 10% off all sofas every Tue, Thu & Saturday
+   (Australian time). Runs in the browser only: it discounts the
+   sofa prices in memory and adds an announcement-bar notice.
+   The Netlify checkout function applies the SAME rule server-side
+   so the charged price always matches. Build scripts (Node) skip
+   it (no `window`), so the trusted catalogue + Google feed keep
+   regular prices. To change: edit SALE below.
+   ============================================================ */
+var SALE = { pct: 10, days: [2, 4, 6], label: "Sofa Sale" };   // days: 0=Sun … 6=Sat
+function saleDayIndex() {
+  try {
+    return { Sun: 0, Mon: 1, Tue: 2, Wed: 3, Thu: 4, Fri: 5, Sat: 6 }[
+      new Date().toLocaleDateString("en-US", { timeZone: "Australia/Adelaide", weekday: "short" })];
+  } catch (e) { return new Date().getDay(); }
+}
+function saleOnToday() { return SALE.days.indexOf(saleDayIndex()) !== -1; }
+function isSaleItem(p) { return !!p && /^sf\d+$/.test(p.id || ""); }
+
+(function applyRecurringSale() {
+  if (typeof document === "undefined") return;          // browser only — build scripts (no document) skip
+  try {
+    if (typeof ANNOUNCEMENTS !== "undefined" && Array.isArray(ANNOUNCEMENTS)) {
+      ANNOUNCEMENTS.unshift(saleOnToday()
+        ? "🛋️ SOFA SALE ON NOW — 10% off every sofa today, ends midnight ✦"
+        : "🛋️ SOFA SALE every Tuesday, Thursday &amp; Saturday — 10% off all sofas");
+    }
+  } catch (e) {}
+  if (!saleOnToday()) return;
+  var f = 1 - SALE.pct / 100;
+  (typeof PRODUCTS !== "undefined" ? PRODUCTS : []).forEach(function (p) {
+    if (!isSaleItem(p) || p.was) return;
+    p.was = p.price;
+    p.price = Math.round(p.price * f);
+    if (p.memberPrice) p.memberPrice = Math.round(p.memberPrice * f);
+    if (Array.isArray(p.sizes)) p.sizes.forEach(function (s) {
+      if (s && typeof s.price === "number") s.price = Math.round(s.price * f);
+    });
+    p.tag = "Sale";
+  });
+})();
