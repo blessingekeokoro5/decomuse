@@ -423,6 +423,8 @@
         return;
       }
       document.title = p.name + ", Samira Home Decor";
+      // Self-referencing canonical for this specific product (SEO: each product = its own URL)
+      (function(){ let l = document.querySelector('link[rel="canonical"]'); if (!l){ l = document.createElement("link"); l.rel = "canonical"; document.head.appendChild(l); } l.href = "https://samirahomedecor.com.au/product.html?id=" + p.id; })();
       // Normalise plain-string sizes -> {label, price} so the gallery/size template (which expects objects) doesn't throw
       if (p.sizes && p.sizes.length && typeof p.sizes[0] === "string") {
         p.sizes = p.sizes.map(s => ({ label: s, price: p.price }));
