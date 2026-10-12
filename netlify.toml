@@ -30,6 +30,32 @@
   status = 301
   force = true
 
+# Old brand: permanently redirect the retired decomuse.com.au to the new site,
+# so Google drops the old DecoMuse pages and stops attributing them to Samira.
+[[redirects]]
+  from = "https://decomuse.com.au/*"
+  to = "https://samirahomedecor.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://decomuse.com.au/*"
+  to = "https://samirahomedecor.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.decomuse.com.au/*"
+  to = "https://samirahomedecor.com.au/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://www.decomuse.com.au/*"
+  to = "https://samirahomedecor.com.au/:splat"
+  status = 301
+  force = true
+
 # Friendly alias: POST /api/create-checkout-session
 # -> /.netlify/functions/create-checkout-session
 [[redirects]]
