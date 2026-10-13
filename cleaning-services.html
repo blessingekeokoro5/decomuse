@@ -351,7 +351,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       <li class="doc primary">
         <div class="doc-ico" aria-hidden="true">PDF</div>
         <div><h3>Client onboarding form</h3><p>Tell us about you, your home, access, pets and the clean you need. Sign it and email it back to start your booking.</p><span class="who">Start here</span></div>
-        <div class="doc-actions"><a class="btn btn-gold btn-sm" href="#onboarding-online">Fill online</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Onboarding-Form.pdf?v=2" download>Download PDF</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Onboarding-Form.pdf?v=2" target="_blank" rel="noopener">View</a></div>
+        <div class="doc-actions"><a class="btn btn-gold btn-sm" id="fillOnlineBtn" href="#onboarding-online">Fill online</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Onboarding-Form.pdf?v=2" download>Download PDF</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Onboarding-Form.pdf?v=2" target="_blank" rel="noopener">View</a></div>
       </li>
       <li class="doc">
         <div class="doc-ico" aria-hidden="true">PDF</div>
@@ -378,7 +378,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
   </div>
 </section>
 
-<section class="sec res" id="onboarding-online" aria-labelledby="onb-title">
+<section class="sec res hidden" id="onboarding-online" aria-labelledby="onb-title">
   <div class="wrap">
     <div class="sec-head">
       <h2 id="onb-title">Start online — client onboarding</h2>
@@ -818,6 +818,17 @@ document.getElementById("reviewForm").addEventListener("submit", e => {
   if (!f.checkValidity()) { setStatus(st, "err", "Choose a star rating and fill in your name, suburb and review."); f.reportValidity(); return; }
   send(f, "Samira Home Decor — Cleaning review", st, "Review sent. Thank you for taking the time to share it.");
 });
+
+/* Reveal the onboarding form only when "Fill online" is clicked, then scroll to it */
+document.getElementById("fillOnlineBtn").addEventListener("click", e => {
+  e.preventDefault();
+  const sec = document.getElementById("onboarding-online");
+  sec.classList.remove("hidden");
+  sec.scrollIntoView({ behavior: "smooth", block: "start" });
+  const first = sec.querySelector("input, select, textarea");
+  if (first) setTimeout(() => first.focus({ preventScroll: true }), 400);
+});
+if (location.hash === "#onboarding-online") document.getElementById("onboarding-online").classList.remove("hidden");
 
 /* Online onboarding form → branded email to the business */
 document.getElementById("onboardForm").addEventListener("submit", e => {
