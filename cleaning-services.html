@@ -1,0 +1,681 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cleaning Services | Samira Home Decor</title>
+<meta name="description" content="Residential and commercial cleaning by Samira Home Decor. Standard, deep, spring, move-in, end-of-lease and post-renovation cleans, plus office, retail and short-stay cleaning.">
+<link rel="canonical" href="https://samirahomedecor.com.au/cleaning-services.html">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0B1F3A; --navy-2:#14365F; --navy-deep:#061525;
+  --gold:#C6A15B; --gold-soft:#F3EAD6; --gold-ink:#A9843C;
+  --ink:#0B1F3A; --muted:#6E675C; --line:#E6DCC9; --tint:#F4EFE6; --white:#FFFFFF;
+  --serif:"Playfair Display", Georgia, "Times New Roman", serif;
+  --sans:"Jost", "Segoe UI", system-ui, sans-serif;
+  --wrap:1120px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 16px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:var(--navy-2)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 16px}
+@media (min-width:760px){.wrap{padding:0 32px}}
+h1,h2,h3{font-family:var(--serif);font-weight:600;color:var(--navy);margin:0;line-height:1.08;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,4.2vw,2.9rem)}
+h3{font-size:1.5rem}
+p{margin:0}
+.lede{color:var(--muted);font-size:1.075rem;max-width:62ch;margin-top:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 .98rem/1 var(--sans);padding:14px 22px;border-radius:999px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;transition:background .15s,color .15s,border-color .15s}
+.btn-gold{background:var(--gold);color:var(--navy-deep)}
+.btn-gold:hover{background:#D7B262}
+.btn-line{border-color:rgba(255,255,255,.55);color:#fff;background:transparent}
+.btn-line:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-2)}
+.btn-quiet{border-color:var(--line);color:var(--navy);background:#fff}
+.btn-quiet:hover{border-color:var(--navy)}
+.btn-sm{padding:10px 16px;font-size:.9rem}
+section{scroll-margin-top:76px}
+.sec{padding:84px 0}
+.sec-head{margin-bottom:36px}
+
+/* header */
+.top{position:sticky;top:0;z-index:20;background:var(--navy);border-bottom:3px solid var(--gold)}
+.top .wrap{display:flex;align-items:center;gap:18px;height:68px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;margin-right:auto}
+.brand svg{width:42px;height:42px;flex:none}
+.brand b{display:block;font:700 1.25rem/1 var(--serif);letter-spacing:.06em}
+.brand small{display:block;color:var(--gold);font-size:.72rem;letter-spacing:.32em;margin-top:4px}
+.nav{display:none;gap:22px}
+.nav a{color:#E7ECF4;text-decoration:none;font-weight:500;font-size:.95rem}
+.nav a:hover{color:var(--gold)}
+@media (min-width:980px){.nav{display:flex}}
+.top .btn{padding:11px 18px;font-size:.9rem}
+
+/* hero */
+.hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:40px;padding-top:72px;padding-bottom:80px}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.25fr .9fr;align-items:end;padding-top:96px;padding-bottom:96px}}
+.hero h1{color:#fff;font-size:clamp(2.7rem,7vw,5.2rem);font-weight:500;line-height:.98}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lede{color:#C9D3E3;font-size:1.15rem;margin-top:22px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.facts{border-left:2px solid var(--gold);padding-left:24px;display:grid;gap:18px}
+.facts div{display:grid;gap:2px}
+.facts strong{font:600 1.35rem/1.2 var(--serif);color:#fff}
+.facts span{color:#B7C3D6;font-size:.95rem}
+.hero-shine{position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;border:1px solid rgba(198,161,91,.25);pointer-events:none}
+.hero-shine::after{content:"";position:absolute;inset:40px;border-radius:50%;border:1px solid rgba(198,161,91,.15)}
+
+/* steps */
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:28px;counter-reset:s}
+@media (min-width:760px){.steps{grid-template-columns:repeat(4,1fr);gap:24px}}
+.steps li{counter-increment:s;border-top:1px solid var(--line);padding-top:18px}
+.steps li::before{content:counter(s);display:block;font:500 2.6rem/1 var(--serif);color:var(--gold);margin-bottom:10px}
+.steps h3{font-size:1.3rem;margin-bottom:6px}
+.steps p{color:var(--muted);font-size:.96rem}
+.steps a{font-weight:600}
+
+/* residential price finder */
+.res{background:var(--tint)}
+.finder{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-bottom:22px}
+.finder > span{font-weight:600;color:var(--navy);margin-right:4px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font:600 .92rem/1 var(--sans);padding:11px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.ledger{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.row{display:grid;gap:10px 24px;padding:24px;border-top:1px solid var(--line);align-items:center}
+.row:first-child{border-top:0}
+@media (min-width:860px){.row{grid-template-columns:1.1fr 1.6fr 150px 170px}}
+.row h3{font-size:1.55rem}
+.row .tag{display:inline-block;margin-top:6px;font-size:.8rem;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);padding:3px 10px;border-radius:999px}
+.row p{color:var(--muted);font-size:.95rem}
+.price{font:600 2rem/1 var(--serif);color:var(--navy)}
+.price small{display:block;font:500 .82rem/1.4 var(--sans);color:var(--muted);margin-top:6px}
+.row .btn{justify-self:start}
+@media (min-width:860px){.row .btn{justify-self:end}}
+.price-note{margin-top:16px;color:var(--muted);font-size:.92rem}
+
+.extras{display:grid;gap:24px;margin-top:40px}
+@media (min-width:860px){.extras{grid-template-columns:1.4fr 1fr}}
+.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:28px}
+.panel h3{margin-bottom:8px}
+.addons{columns:2;column-gap:24px;list-style:none;padding:0;margin:16px 0 0;color:var(--ink);font-size:.95rem}
+.addons li{break-inside:avoid;padding:5px 0 5px 20px;position:relative}
+.addons li::before{content:"";position:absolute;left:2px;top:13px;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+@media (max-width:520px){.addons{columns:1}}
+.big{font:600 2.3rem/1 var(--serif);color:var(--navy)}
+.agents{display:grid;gap:14px;margin-top:14px}
+.agents div{display:flex;justify-content:space-between;gap:16px;border-top:1px solid var(--line);padding-top:12px}
+.agents b{font:600 1.3rem/1 var(--serif);color:var(--navy);white-space:nowrap}
+.agents span{color:var(--muted);font-size:.95rem}
+
+/* commercial */
+.com-grid{display:grid;gap:0;border-top:1px solid var(--line)}
+@media (min-width:760px){.com-grid{grid-template-columns:1fr 1fr;column-gap:48px}}
+.com-item{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:24px 0;border-bottom:1px solid var(--line)}
+.com-item svg{width:40px;height:40px;color:var(--gold)}
+.com-item h3{font-size:1.35rem;margin-bottom:4px}
+.com-item p{color:var(--muted);font-size:.95rem}
+.com-cta{display:flex;flex-wrap:wrap;gap:16px;align-items:center;justify-content:space-between;margin-top:32px;background:var(--gold-soft);border-radius:14px;padding:24px 28px}
+.com-cta p{color:var(--navy);font-weight:500;max-width:60ch}
+
+/* documents */
+.docs{background:var(--navy);color:#fff}
+.docs h2{color:#fff}
+.docs .lede{color:#C9D3E3}
+.doc-list{list-style:none;margin:0;padding:0;border-top:1px solid rgba(255,255,255,.18)}
+.doc{display:grid;grid-template-columns:52px 1fr;gap:14px 18px;padding:22px 0;border-bottom:1px solid rgba(255,255,255,.18);align-items:center}
+@media (min-width:860px){.doc{grid-template-columns:52px 1fr auto}}
+.doc-ico{width:48px;height:58px;border-radius:6px;background:#fff;position:relative;display:grid;place-items:center;color:var(--navy);font:700 .7rem/1 var(--sans);letter-spacing:.04em}
+.doc-ico::after{content:"";position:absolute;right:0;top:0;border-style:solid;border-width:0 14px 14px 0;border-color:transparent var(--navy) var(--gold) transparent}
+.doc h3{color:#fff;font-size:1.45rem}
+.doc p{color:#B7C3D6;font-size:.95rem;margin-top:4px;max-width:62ch}
+.doc .who{display:inline-block;margin-top:8px;font-size:.8rem;font-weight:600;color:var(--navy-deep);background:var(--gold);padding:3px 10px;border-radius:999px}
+.doc .who.alt{background:rgba(255,255,255,.14);color:#E7ECF4}
+.doc-actions{grid-column:2;display:flex;gap:10px;flex-wrap:wrap}
+@media (min-width:860px){.doc-actions{grid-column:auto}}
+.docs .btn-quiet{background:transparent;color:#fff;border-color:rgba(255,255,255,.4)}
+.docs .btn-quiet:hover{border-color:#fff}
+.doc.primary{background:rgba(198,161,91,.12);margin:0 -16px;padding:26px 16px;border-radius:12px;border-bottom-color:transparent}
+.send{margin-top:30px;color:#C9D3E3;font-size:.98rem}
+.send a{color:var(--gold);font-weight:600}
+
+/* booking */
+.book-grid{display:grid;gap:28px}
+@media (min-width:940px){.book-grid{grid-template-columns:380px 1fr;gap:40px;align-items:start}}
+.cal{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px}
+.cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.cal-head h3{font-size:1.45rem}
+.cal-nav{display:flex;gap:6px}
+.cal-nav button{width:38px;height:38px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--navy);cursor:pointer;font-size:1.1rem}
+.cal-nav button:disabled{opacity:.35;cursor:default}
+.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;text-align:center}
+.cal-grid .dow{font-size:.78rem;font-weight:600;color:var(--muted);padding:6px 0}
+.day{aspect-ratio:1;border:0;border-radius:10px;background:transparent;font:600 .95rem/1 var(--sans);color:var(--ink);cursor:pointer}
+.day:hover:not(:disabled){background:var(--gold-soft)}
+.day:disabled{color:#B9C0CC;cursor:default;text-decoration:line-through;text-decoration-color:#D5DAE2}
+.day.today{box-shadow:inset 0 0 0 1.5px var(--gold)}
+.day[aria-pressed="true"]{background:var(--navy);color:#fff}
+.cal-sel{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:.95rem;color:var(--muted)}
+.cal-sel b{color:var(--navy)}
+.slots{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.form{display:grid;gap:16px}
+.form .two{display:grid;gap:16px}
+@media (min-width:620px){.form .two{grid-template-columns:1fr 1fr}}
+label{display:grid;gap:6px;font-weight:600;font-size:.92rem;color:var(--navy)}
+label .opt{font-weight:400;color:var(--muted)}
+input,select,textarea{font:400 1rem/1.4 var(--sans);color:var(--ink);background:var(--tint);border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--navy-2);background:#fff}
+textarea{min-height:110px;resize:vertical}
+.check{display:flex;gap:10px;align-items:flex-start;font-weight:500;color:var(--ink)}
+.check input{width:20px;height:20px;margin-top:2px;flex:none;accent-color:var(--navy)}
+.form-note{font-size:.88rem;color:var(--muted)}
+.status{display:none;border-radius:10px;padding:14px 16px;font-weight:500}
+.status.ok{display:block;background:#E8F3EC;color:#1D5B34}
+.status.err{display:block;background:#FBEAEA;color:#8A2323}
+.status.info{display:block;background:var(--gold-soft);color:var(--navy)}
+.hidden{display:none!important}
+.embed{border:1px solid var(--line);border-radius:14px;overflow:hidden;min-height:700px}
+.embed iframe{width:100%;height:760px;border:0}
+
+/* reviews */
+.rev{background:var(--tint)}
+.rev-grid{display:grid;gap:28px}
+@media (min-width:940px){.rev-grid{grid-template-columns:1.2fr 1fr;gap:40px;align-items:start}}
+.rev-list{display:grid;gap:16px}
+.review{background:#fff;border-left:3px solid var(--gold);border-radius:0 12px 12px 0;padding:22px 24px}
+.review q{display:block;font:500 1.35rem/1.35 var(--serif);color:var(--navy);quotes:none}
+.review footer{margin-top:12px;color:var(--muted);font-size:.92rem}
+.stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
+.empty{background:#fff;border:1.5px dashed #C7CEDA;border-radius:14px;padding:32px}
+.empty h3{margin-bottom:8px}
+.empty p{color:var(--muted)}
+.empty .btn{margin-top:18px}
+.rate{display:flex;flex-direction:row-reverse;justify-content:flex-end;gap:4px}
+.rate input{position:absolute;opacity:0;width:1px;height:1px}
+.rate label{font-size:1.9rem;line-height:1;color:#C7CEDA;cursor:pointer}
+.rate input:checked ~ label,.rate label:hover,.rate label:hover ~ label{color:var(--gold)}
+.rate input:focus-visible + label{outline:3px solid var(--gold);outline-offset:2px;border-radius:4px}
+fieldset{border:0;margin:0;padding:0}
+legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
+
+/* good to know */
+.know{display:grid;gap:0;border-top:1px solid var(--line)}
+@media (min-width:760px){.know{grid-template-columns:repeat(2,1fr);column-gap:48px}}
+.know div{padding:22px 0;border-bottom:1px solid var(--line)}
+.know h3{font-size:1.3rem;margin-bottom:6px}
+.know p{color:var(--muted);font-size:.96rem}
+
+/* footer */
+.foot{background:var(--navy-deep);color:#B7C3D6;padding:48px 0 32px;border-top:3px solid var(--gold)}
+.foot .wrap{display:grid;gap:24px}
+@media (min-width:760px){.foot .wrap{grid-template-columns:1.2fr 1fr 1fr}}
+.foot a{color:#fff;text-decoration:none}
+.foot a:hover{color:var(--gold)}
+.foot h3{color:#fff;font-size:1.2rem;margin-bottom:8px}
+.foot p{font-size:.95rem}
+.foot .legal{grid-column:1/-1;border-top:1px solid rgba(255,255,255,.12);padding-top:20px;font-size:.85rem}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Samira Home Decor home">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="#0B1F3A" stroke="#C6A15B" stroke-width="3"/><circle cx="32" cy="32" r="25" fill="none" stroke="#C6A15B" stroke-width="1"/><path d="M20 23 L32 15 L44 23" fill="none" stroke="#C6A15B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="32" y="45" text-anchor="middle" font-family="Georgia,serif" font-style="italic" font-weight="700" font-size="28" fill="#C6A15B">S</text></svg>
+      <span><b>SAMIRA HOME DECOR</b><small>CLEANING SERVICES</small></span>
+    </a>
+    <nav class="nav" aria-label="Cleaning page sections">
+      <a href="#residential">Residential</a>
+      <a href="#commercial">Commercial</a>
+      <a href="#documents">Forms &amp; documents</a>
+      <a href="#reviews">Reviews</a>
+      <a href="index.html">Back to shop</a>
+    </nav>
+    <a class="btn btn-gold" href="#book">Book a clean</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="hero-title">
+  <div class="hero-shine" aria-hidden="true"></div>
+  <div class="wrap">
+    <div>
+      <h1 id="hero-title">A home that feels <em>freshly styled</em>, every time you walk in.</h1>
+      <p class="lede">Residential and commercial cleaning from Samira Home Decor. One careful cleaner, clear prices and a checklist for every clean type, so you always know what you're getting.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-gold" href="#book">Book a clean</a>
+        <a class="btn btn-line" href="#documents">Get the onboarding form</a>
+      </div>
+    </div>
+    <div class="facts">
+      <div><strong>Owner-operated</strong><span>Samira cleans your home herself.</span></div>
+      <div><strong>Clear, fixed prices</strong><span>From $230 per clean. No GST charged.</span></div>
+      <div><strong>Your products or ours</strong><span>Use your own cleaning agents at no charge, or ours for $25.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="how-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="how-title">How booking works</h2>
+      <p class="lede">Four steps from first enquiry to a sparkling home.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Request a date</h3><p>Pick a day and time window in the <a href="#book">booking calendar</a> below.</p></li>
+      <li><h3>Complete your form</h3><p>Download the <a href="#documents">onboarding form</a>, fill it in on screen or print it, and email it back.</p></li>
+      <li><h3>Receive your quote</h3><p>We send your itemised quote. Pay the 20% deposit to lock in your booking.</p></li>
+      <li><h3>Enjoy a clean home</h3><p>We arrive on the day, work through your checklist and send your invoice.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="sec res" id="residential" aria-labelledby="res-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="res-title">Residential cleaning</h2>
+      <p class="lede">Choose your home size to see the price and estimated time for each type of clean.</p>
+    </div>
+
+    <div class="finder" role="group" aria-label="Home size">
+      <span>Home size</span>
+      <div class="chips" id="sizeChips">
+        <button class="chip" type="button" data-size="0" aria-pressed="false">Studio / 1 bed</button>
+        <button class="chip" type="button" data-size="1" aria-pressed="false">2 bed</button>
+        <button class="chip" type="button" data-size="2" aria-pressed="true">3 bed</button>
+        <button class="chip" type="button" data-size="3" aria-pressed="false">4 bed</button>
+        <button class="chip" type="button" data-size="4" aria-pressed="false">5 bed</button>
+        <button class="chip" type="button" data-size="5" aria-pressed="false">6+ bed</button>
+      </div>
+    </div>
+
+    <div class="ledger" id="ledger" aria-live="polite"></div>
+    <p class="price-note">Prices are per visit in Australian dollars. Times are a guide for one cleaner; longer cleans may be split across two visits. Post-renovation and 6+ bedroom homes are confirmed after a walk-through or photos.</p>
+
+    <div class="extras">
+      <div class="panel">
+        <h3>Add-on services</h3>
+        <p><span class="big">$80</span> <span style="color:var(--muted)">for every 2 add-ons you choose</span></p>
+        <ul class="addons">
+          <li>Inside oven</li><li>Inside fridge / freezer</li><li>Interior windows and tracks</li>
+          <li>Exterior windows (ground level)</li><li>Balcony / patio</li><li>Laundry (wash, dry, fold)</li>
+          <li>Ironing</li><li>Change bed linen</li><li>Wall spot-cleaning</li>
+          <li>Blinds and skirting boards</li><li>Carpet steam clean</li>
+        </ul>
+      </div>
+      <div class="panel">
+        <h3>Cleaning agents</h3>
+        <div class="agents">
+          <div><span>Samira cleaning agents, supplied by us</span><b>$25</b></div>
+          <div><span>Have your own? We're happy to use them</span><b>No charge</b></div>
+        </div>
+        <h3 style="margin-top:24px">Regular clean savings</h3>
+        <div class="agents">
+          <div><span>Monthly standard clean</span><b>5% off</b></div>
+          <div><span>Fortnightly standard clean</span><b>10% off</b></div>
+          <div><span>Weekly standard clean</span><b>15% off</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="commercial" aria-labelledby="com-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="com-title">Commercial cleaning</h2>
+      <p class="lede">Small and medium sites, cleaned before or after your trading hours. Every commercial job is quoted after a free site visit.</p>
+    </div>
+    <div class="com-grid">
+      <div class="com-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="6" y="8" width="28" height="26" rx="2"/><path d="M12 14h4M24 14h4M12 20h4M24 20h4M17 34v-7h6v7"/></svg><div><h3>Office and workspace</h3><p>Desks, kitchens, bathrooms, meeting rooms and floors, on a schedule that suits your team.</p></div></div>
+      <div class="com-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 15l3-8h22l3 8M6 15h28v19H6zM6 15c0 3 2.5 4 4.5 4S15 18 15 15c0 3 2.5 4 5 4s5-1 5-4c0 3 2 4 4.5 4S34 18 34 15"/><path d="M16 34v-8h8v8"/></svg><div><h3>Retail and showrooms</h3><p>Shopfronts, display areas, change rooms and glass, so customers walk into a spotless space.</p></div></div>
+      <div class="com-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 32V18l14-10 14 10v14z"/><path d="M14 32v-8h12v8M27 12V7h4v8"/></svg><div><h3>Short-stay and Airbnb turnovers</h3><p>Between-guest cleans with linen change and restocking checks, ready for the next check-in.</p></div></div>
+      <div class="com-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="8" y="5" width="24" height="30" rx="2"/><path d="M14 11h12M14 17h12M14 23h12M18 35v-6h4v6"/></svg><div><h3>Strata and common areas</h3><p>Foyers, stairwells, lifts, bin rooms and shared spaces for apartment buildings.</p></div></div>
+      <div class="com-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 34h28M9 34V20l8-6 8 6v14M25 22h6v12M17 14V8M13 8h8"/></svg><div><h3>Builders and post-construction</h3><p>Fine dust and residue removal so new or renovated spaces are ready for handover.</p></div></div>
+      <div class="com-item"><svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M8 34V16l12-9 12 9v18H8z"/><circle cx="20" cy="22" r="4"/><path d="M20 26v8"/></svg><div><h3>Real estate and property managers</h3><p>Vacate, pre-sale and pre-lease presentation cleans, matched to your agency's checklist.</p></div></div>
+    </div>
+    <div class="com-cta">
+      <p>Tell us about your site and we'll arrange a free visit and a written quote.</p>
+      <a class="btn btn-navy" href="#book" data-type="Commercial cleaning (quote request)">Request a commercial quote</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec docs" id="documents" aria-labelledby="docs-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="docs-title">Forms and documents</h2>
+      <p class="lede">Everything you need before and after your clean. Each document can be filled in on screen and saved, or printed and completed by hand.</p>
+    </div>
+    <ul class="doc-list">
+      <li class="doc primary">
+        <div class="doc-ico" aria-hidden="true">PDF</div>
+        <div><h3>Client onboarding form</h3><p>Tell us about you, your home, access, pets and the clean you need. Sign it and email it back to start your booking.</p><span class="who">Start here</span></div>
+        <div class="doc-actions"><a class="btn btn-gold btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Onboarding-Form.pdf" download>Download form</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Onboarding-Form.pdf" target="_blank" rel="noopener">View</a></div>
+      </li>
+      <li class="doc">
+        <div class="doc-ico" aria-hidden="true">PDF</div>
+        <div><h3>Quote and price guide</h3><p>Full price tables for every clean type, add-ons, worked examples and the quote you accept to confirm your booking.</p><span class="who alt">Pricing</span></div>
+        <div class="doc-actions"><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Quote.pdf" download>Download</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Quote.pdf" target="_blank" rel="noopener">View</a></div>
+      </li>
+      <li class="doc">
+        <div class="doc-ico" aria-hidden="true">PDF</div>
+        <div><h3>Cleaning checklist</h3><p>Room-by-room tasks showing exactly what's included in a standard, deep, spring, move-in, end-of-lease and post-renovation clean.</p><span class="who alt">What's included</span></div>
+        <div class="doc-actions"><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Checklist.pdf" download>Download</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Cleaning-Checklist.pdf" target="_blank" rel="noopener">View</a></div>
+      </li>
+      <li class="doc">
+        <div class="doc-ico" aria-hidden="true">PDF</div>
+        <div><h3>Sample invoice</h3><p>See how your invoice is laid out, how your deposit is deducted and the ways you can pay.</p><span class="who alt">Payments</span></div>
+        <div class="doc-actions"><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Invoice.pdf" download>Download</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Invoice.pdf" target="_blank" rel="noopener">View</a></div>
+      </li>
+      <li class="doc">
+        <div class="doc-ico" aria-hidden="true">PDF</div>
+        <div><h3>Key register</h3><p>How we look after your keys: tagged by number only, signed for when received and returned, and stored securely.</p><span class="who alt">Keys and access</span></div>
+        <div class="doc-actions"><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Key-Register.pdf" download>Download</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Home-Decor-Key-Register.pdf" target="_blank" rel="noopener">View</a></div>
+      </li>
+    </ul>
+    <p class="send">Finished your form or quote? Email it to <a href="mailto:hello@samirahomedecor.com.au?subject=Completed%20cleaning%20documents">hello@samirahomedecor.com.au</a>. A saved PDF, a scan or clear photos of each page are all fine.</p>
+  </div>
+</section>
+
+<section class="sec" id="book" aria-labelledby="book-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="book-title">Book a clean</h2>
+      <p class="lede">Choose a preferred date and time window, then tell us a little about the job. We'll confirm by email within one business day.</p>
+    </div>
+
+    <div id="embedBooking" class="embed hidden"></div>
+
+    <div class="book-grid" id="customBooking">
+      <div class="cal" aria-labelledby="calTitle">
+        <div class="cal-head">
+          <h3 id="calTitle">Month</h3>
+          <div class="cal-nav">
+            <button type="button" id="calPrev" aria-label="Previous month">&#8249;</button>
+            <button type="button" id="calNext" aria-label="Next month">&#8250;</button>
+          </div>
+        </div>
+        <div class="cal-grid" id="calGrid" role="grid"></div>
+        <div class="cal-sel">
+          <p id="calChosen">Choose a date to continue.</p>
+          <div class="slots" role="group" aria-label="Arrival window">
+            <button class="chip" type="button" data-slot="Morning (8am–12pm)" aria-pressed="true">Morning 8–12</button>
+            <button class="chip" type="button" data-slot="Afternoon (12pm–4pm)" aria-pressed="false">Afternoon 12–4</button>
+            <button class="chip" type="button" data-slot="Flexible" aria-pressed="false">Flexible</button>
+          </div>
+        </div>
+      </div>
+
+      <form class="form" id="bookingForm" name="cleaning-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <input type="hidden" name="form-name" value="cleaning-booking">
+        <input type="hidden" name="preferred_date" id="fDate">
+        <input type="hidden" name="arrival_window" id="fSlot" value="Morning (8am–12pm)">
+        <p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
+        <div class="two">
+          <label>Full name<input name="name" autocomplete="name" required></label>
+          <label>Mobile<input name="mobile" type="tel" autocomplete="tel" required></label>
+        </div>
+        <div class="two">
+          <label>Email<input name="email" type="email" autocomplete="email" required></label>
+          <label>Suburb and postcode<input name="suburb" autocomplete="address-level2" required></label>
+        </div>
+        <div class="two">
+          <label>Type of clean
+            <select name="clean_type" id="fType" required>
+              <optgroup label="Residential">
+                <option>Standard / regular clean</option><option>Deep clean</option><option>Spring clean</option>
+                <option>Move-in clean</option><option>End-of-lease / bond clean</option><option>Post-renovation clean</option>
+              </optgroup>
+              <optgroup label="Commercial">
+                <option>Commercial cleaning (quote request)</option><option>Office and workspace</option><option>Retail and showrooms</option>
+                <option>Short-stay and Airbnb turnovers</option><option>Strata and common areas</option>
+                <option>Builders and post-construction</option><option>Real estate and property managers</option>
+              </optgroup>
+              <option>Not sure yet, please help me choose</option>
+            </select>
+          </label>
+          <label>Home or site size
+            <select name="size" id="fSize">
+              <option>Studio / 1 bedroom</option><option>2 bedrooms</option><option selected>3 bedrooms</option>
+              <option>4 bedrooms</option><option>5 bedrooms</option><option>6+ bedrooms</option><option>Commercial site</option>
+            </select>
+          </label>
+        </div>
+        <label>How often?
+          <select name="frequency"><option>One-off</option><option>Weekly</option><option>Fortnightly</option><option>Monthly</option></select>
+        </label>
+        <label>Anything we should know? <span class="opt">Optional</span><textarea name="notes" placeholder="Add-ons you'd like, pets at home, access details or questions"></textarea></label>
+        <label class="check"><input type="checkbox" name="pets_secured" value="Yes" required> I understand all pets must be removed from the residence area and secured in a locked place before cleaning starts.</label>
+        <p class="form-note">This is a booking request. Your date is confirmed once we receive your onboarding form and 20% deposit. Deposits are non-refundable for cancellations with less than 24 hours' notice.</p>
+        <div><button class="btn btn-navy" type="submit">Send booking request</button></div>
+        <p class="status" id="bookStatus" role="status"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec rev" id="reviews" aria-labelledby="rev-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="rev-title">Client reviews</h2>
+      <p class="lede">Real feedback from the people whose homes and workplaces we clean.</p>
+    </div>
+    <div class="rev-grid">
+      <div class="rev-list" id="revList"></div>
+      <form class="form panel" id="reviewForm" name="cleaning-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+        <h3>Share your experience</h3>
+        <input type="hidden" name="form-name" value="cleaning-review">
+        <p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
+        <fieldset>
+          <legend>Your rating</legend>
+          <div class="rate">
+            <input type="radio" id="r5" name="rating" value="5" required><label for="r5" title="5 stars">&#9733;</label>
+            <input type="radio" id="r4" name="rating" value="4"><label for="r4" title="4 stars">&#9733;</label>
+            <input type="radio" id="r3" name="rating" value="3"><label for="r3" title="3 stars">&#9733;</label>
+            <input type="radio" id="r2" name="rating" value="2"><label for="r2" title="2 stars">&#9733;</label>
+            <input type="radio" id="r1" name="rating" value="1"><label for="r1" title="1 star">&#9733;</label>
+          </div>
+        </fieldset>
+        <div class="two">
+          <label>First name<input name="name" autocomplete="given-name" required></label>
+          <label>Suburb<input name="suburb" required></label>
+        </div>
+        <label>Your review<textarea name="review" required></textarea></label>
+        <label class="check"><input type="checkbox" name="publish_ok" value="Yes"> You can show my first name, suburb and review on this page.</label>
+        <div><button class="btn btn-navy" type="submit">Send review</button></div>
+        <p class="status" id="revStatus" role="status"></p>
+        <a class="btn btn-quiet hidden" id="googleReview" href="#" target="_blank" rel="noopener">Review us on Google</a>
+      </form>
+    </div>
+  </div>
+</section>
+
+<section class="sec" aria-labelledby="know-title">
+  <div class="wrap">
+    <div class="sec-head"><h2 id="know-title">Good to know</h2></div>
+    <div class="know">
+      <div><h3>Booking deposit</h3><p>A 20% deposit (minimum $50) secures your booking and comes off your final bill. It's non-refundable if you cancel or reschedule with less than 24 hours' notice.</p></div>
+      <div><h3>Pet safety</h3><p>Please remove all pets from the residence area and secure them in a locked place, such as a closed room, crate or secure yard, before your clean starts.</p></div>
+      <div><h3>Satisfaction guarantee</h3><p>Let us know within 24 hours if something was missed and we'll come back to fix it at no charge. End-of-lease cleans are covered for 72 hours.</p></div>
+      <div><h3>No GST</h3><p>Samira Home Decor is not registered for GST, so no GST is added to your price. You'll receive an invoice for every clean.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div><h3>Samira Home Decor</h3><p>Residential and commercial cleaning, cared for like our own home.</p></div>
+    <div><h3>Contact</h3><p>Email: <a href="mailto:hello@samirahomedecor.com.au">hello@samirahomedecor.com.au</a></p><p style="margin-top:8px">Check out our website: <a href="https://www.samirahomedecor.com.au">www.samirahomedecor.com.au</a></p></div>
+    <div><h3>Quick links</h3><p><a href="#book">Book a clean</a><br><a href="#documents">Onboarding form</a><br><a href="#reviews">Leave a review</a><br><a href="index.html">Back to the shop</a></p></div>
+    <p class="legal">Samira Home Decor &nbsp;|&nbsp; ABN 41 991 812 955 &nbsp;|&nbsp; Prices in AUD, no GST charged.</p>
+  </div>
+</footer>
+
+<script>
+/* ===================== SETTINGS: edit these ===================== */
+const SETTINGS = {
+  email: "hello@samirahomedecor.com.au",
+  // Paste a Calendly, Google Calendar appointment or Square booking link here to show it instead of the request calendar.
+  bookingEmbedUrl: "",
+  minDaysAhead: 1,        // earliest bookable day (1 = tomorrow)
+  maxDaysAhead: 90,       // how far ahead clients can choose
+  closedWeekdays: [],     // days you don't work: 0 = Sunday ... 6 = Saturday, e.g. [0]
+  closedDates: [],        // specific days off, e.g. ["2026-12-25", "2026-12-26"]
+  googleReviewUrl: ""     // your Google Business "Ask for reviews" link
+};
+/* Add real client reviews here after they agree to be published, e.g.
+   { name: "Jane", suburb: "Glenelg", rating: 5, text: "..." } */
+const REVIEWS = [];
+/* =============================================================== */
+
+const SIZES = ["Studio / 1 bed","2 bedrooms","3 bedrooms","4 bedrooms","5 bedrooms","6+ bedrooms"];
+const CLEANS = [
+  {name:"Standard / regular clean", short:"Standard clean", tag:"Most booked", desc:"Kitchen, bathrooms, bedrooms and living areas, with dusting, vacuuming and mopping.", prices:[230,280,350,380,420,null], hours:["2–3","3–4","4–5","5–6","6–7",null]},
+  {name:"Deep clean", short:"Deep clean", tag:"Best first visit", desc:"Everything in a standard clean, plus a detailed scrub, cupboard fronts, skirting boards and light fittings.", prices:[380,430,500,530,570,null], hours:["4–5","5–6","6–8","8–9","9–10",null]},
+  {name:"Spring clean", short:"Spring clean", desc:"A seasonal refresh of high and low areas that a regular clean doesn't reach.", prices:[350,400,470,500,540,null], hours:["3.5–4.5","4.5–5.5","5.5–7","7–8","8–9",null]},
+  {name:"Move-in clean", short:"Move-in clean", desc:"A deep clean of an empty home, including inside cupboards and drawers, before you unpack.", prices:[410,460,530,560,600,null], hours:["4–5","5–6.5","6.5–8","8–9.5","9–10.5",null]},
+  {name:"End-of-lease / bond clean", short:"End-of-lease clean", desc:"A move-out clean with the oven, interior windows and wall marks included, matched to your agent's checklist.", prices:[480,530,600,630,670,null], hours:["5–6","6–8","8–10","10–11","11–13",null]},
+  {name:"Post-renovation clean", short:"Post-renovation clean", from:true, desc:"Fine dust and residue removal after building work. Confirmed after a walk-through.", prices:[580,630,700,730,770,null], hours:["6+","8+","10+","11+","12+",null]}
+];
+let size = 2;
+
+function renderLedger(){
+  const el = document.getElementById("ledger");
+  el.innerHTML = CLEANS.map(c => {
+    const p = c.prices[size], h = c.hours[size];
+    const price = p == null ? `<div class="price">Custom<small>Quoted after a walk-through</small></div>`
+      : `<div class="price">${c.from ? "from " : ""}$${p}<small>about ${h} hours</small></div>`;
+    return `<div class="row">
+      <div><h3>${c.short}</h3>${c.tag ? `<span class="tag">${c.tag}</span>` : ""}</div>
+      <p>${c.desc}</p>
+      ${price}
+      <a class="btn btn-quiet btn-sm" href="#book" data-type="${c.name}">Book this clean</a>
+    </div>`;
+  }).join("");
+}
+document.getElementById("sizeChips").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  size = +b.dataset.size;
+  document.querySelectorAll("#sizeChips .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  renderLedger();
+});
+renderLedger();
+
+/* Preselect clean type and size when a "Book" button is used */
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-type]"); if (!a) return;
+  const sel = document.getElementById("fType");
+  [...sel.options].forEach(o => { if (o.text === a.dataset.type) sel.value = o.value; });
+  const fs = document.getElementById("fSize");
+  if (a.closest("#ledger")) fs.selectedIndex = size;
+  else if (a.dataset.type.startsWith("Commercial")) fs.selectedIndex = 6;
+});
+
+/* Booking: embedded scheduler or request calendar */
+if (SETTINGS.bookingEmbedUrl) {
+  const box = document.getElementById("embedBooking");
+  box.innerHTML = `<iframe src="${SETTINGS.bookingEmbedUrl}" title="Book a clean with Samira Home Decor" loading="lazy"></iframe>`;
+  box.classList.remove("hidden");
+  document.getElementById("customBooking").classList.add("hidden");
+}
+
+const today = new Date(); today.setHours(0,0,0,0);
+const minDate = new Date(today); minDate.setDate(minDate.getDate() + SETTINGS.minDaysAhead);
+const maxDate = new Date(today); maxDate.setDate(maxDate.getDate() + SETTINGS.maxDaysAhead);
+let view = new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+let chosen = null;
+const iso = d => `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}-${String(d.getDate()).padStart(2,"0")}`;
+const nice = d => d.toLocaleDateString("en-AU", {weekday:"long", day:"numeric", month:"long", year:"numeric"});
+
+function renderCal(){
+  document.getElementById("calTitle").textContent = view.toLocaleDateString("en-AU", {month:"long", year:"numeric"});
+  const grid = document.getElementById("calGrid");
+  let html = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"].map(d => `<div class="dow" role="columnheader">${d}</div>`).join("");
+  const first = (new Date(view.getFullYear(), view.getMonth(), 1).getDay() + 6) % 7;
+  const days = new Date(view.getFullYear(), view.getMonth() + 1, 0).getDate();
+  for (let i = 0; i < first; i++) html += `<div></div>`;
+  for (let d = 1; d <= days; d++) {
+    const dt = new Date(view.getFullYear(), view.getMonth(), d);
+    const off = dt < minDate || dt > maxDate || SETTINGS.closedWeekdays.includes(dt.getDay()) || SETTINGS.closedDates.includes(iso(dt));
+    const sel = chosen && iso(chosen) === iso(dt);
+    html += `<button type="button" class="day${iso(dt) === iso(today) ? " today" : ""}" data-d="${iso(dt)}" ${off ? "disabled" : ""} aria-pressed="${!!sel}" aria-label="${nice(dt)}${off ? ", unavailable" : ""}">${d}</button>`;
+  }
+  grid.innerHTML = html;
+  document.getElementById("calPrev").disabled = view <= new Date(minDate.getFullYear(), minDate.getMonth(), 1);
+  document.getElementById("calNext").disabled = new Date(view.getFullYear(), view.getMonth() + 1, 1) > maxDate;
+}
+document.getElementById("calGrid").addEventListener("click", e => {
+  const b = e.target.closest(".day"); if (!b || b.disabled) return;
+  const [y, m, d] = b.dataset.d.split("-").map(Number);
+  chosen = new Date(y, m - 1, d);
+  document.getElementById("fDate").value = nice(chosen);
+  document.getElementById("calChosen").innerHTML = `Preferred date: <b>${nice(chosen)}</b>`;
+  renderCal();
+});
+document.getElementById("calPrev").onclick = () => { view.setMonth(view.getMonth() - 1); renderCal(); };
+document.getElementById("calNext").onclick = () => { view.setMonth(view.getMonth() + 1); renderCal(); };
+document.querySelector(".slots").addEventListener("click", e => {
+  const b = e.target.closest(".chip"); if (!b) return;
+  document.querySelectorAll(".slots .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
+  document.getElementById("fSlot").value = b.dataset.slot;
+});
+renderCal();
+
+/* Form sending: Netlify Forms when hosted on Netlify, otherwise opens an email */
+function setStatus(el, cls, msg){ el.className = "status " + cls; el.textContent = msg; }
+async function send(form, subject, statusEl, okMsg){
+  const data = new FormData(form);
+  try {
+    const r = await fetch("/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:new URLSearchParams(data).toString()});
+    if (!r.ok) throw new Error("not sent");
+    setStatus(statusEl, "ok", okMsg); form.reset(); return true;
+  } catch (err) {
+    const body = [...data.entries()].filter(([k,v]) => v && k !== "form-name" && k !== "bot-field").map(([k,v]) => `${k.replace(/_/g," ")}: ${v}`).join("\n");
+    window.location.href = `mailto:${SETTINGS.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus(statusEl, "info", "Your email app has opened with your details filled in. Press send to finish.");
+    return false;
+  }
+}
+document.getElementById("bookingForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, st = document.getElementById("bookStatus");
+  if (!chosen) { setStatus(st, "err", "Choose a preferred date in the calendar."); return; }
+  if (!f.checkValidity()) { setStatus(st, "err", "Fill in your name, mobile, email and suburb, and tick the pet safety box."); f.reportValidity(); return; }
+  send(f, "Cleaning booking request", st, "Booking request sent. We'll confirm your date by email within one business day.").then(ok => {
+    if (ok) { chosen = null; document.getElementById("calChosen").textContent = "Choose a date to continue."; renderCal(); }
+  });
+});
+
+/* Reviews */
+function renderReviews(){
+  const el = document.getElementById("revList");
+  if (!REVIEWS.length) {
+    el.innerHTML = `<div class="empty"><h3>Be one of our first reviewers</h3><p>Our cleaning service is new, so there are no reviews to show yet. If we've cleaned for you, we'd love to hear how it went.</p></div>`;
+    return;
+  }
+  el.innerHTML = REVIEWS.map(r => `<blockquote class="review"><span class="stars" aria-label="${r.rating} out of 5 stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</span><q>${r.text}</q><footer>${r.name}, ${r.suburb}</footer></blockquote>`).join("");
+}
+renderReviews();
+if (SETTINGS.googleReviewUrl) { const g = document.getElementById("googleReview"); g.href = SETTINGS.googleReviewUrl; g.classList.remove("hidden"); }
+document.getElementById("reviewForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const f = e.target, st = document.getElementById("revStatus");
+  if (!f.checkValidity()) { setStatus(st, "err", "Choose a star rating and fill in your name, suburb and review."); f.reportValidity(); return; }
+  send(f, "Cleaning review", st, "Review sent. Thank you for taking the time to share it.");
+});
+</script>
+</body>
+</html>

@@ -224,6 +224,7 @@ function buildHeader() {
                   <li><a href="personal-shopping.html">Home Décor Personal Shopper</a></li>
                   <li><a href="vacation-rentals.html">Vacation Rentals</a></li>
                   <li><a href="interior-design.html">Interior Design</a></li>
+                  <li><a href="cleaning-services.html">Cleaning Services</a></li>
                 </ul>
               </div>
               <div class="mega-col">
@@ -260,7 +261,8 @@ function buildHeader() {
     { label: "Property Styling & Staging", href: "property-styling-staging.html" },
     { label: "Home Décor Personal Shopper", href: "personal-shopping.html" },
     { label: "Vacation Rentals", href: "vacation-rentals.html" },
-    { label: "Interior Design", href: "interior-design.html" }
+    { label: "Interior Design", href: "interior-design.html" },
+    { label: "Cleaning Services", href: "cleaning-services.html" }
   ];
   const socials = SAMIRA.socials || {};
   const socialLinks = [];
