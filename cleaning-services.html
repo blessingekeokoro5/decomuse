@@ -411,8 +411,8 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
         <div class="cal-sel">
           <p id="calChosen">Choose a date to continue.</p>
           <div class="slots" role="group" aria-label="Arrival window">
-            <button class="chip" type="button" data-slot="Morning (8am–12pm)" aria-pressed="true">Morning 8–12</button>
-            <button class="chip" type="button" data-slot="Afternoon (12pm–4pm)" aria-pressed="false">Afternoon 12–4</button>
+            <button class="chip" type="button" data-slot="Morning (9am–12pm)" aria-pressed="true">Morning 9–12</button>
+            <button class="chip" type="button" data-slot="Afternoon (1pm–4pm)" aria-pressed="false">Afternoon 1–4</button>
             <button class="chip" type="button" data-slot="Flexible" aria-pressed="false">Flexible</button>
           </div>
         </div>
@@ -421,7 +421,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       <form class="form" id="bookingForm" name="cleaning-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="cleaning-booking">
         <input type="hidden" name="preferred_date" id="fDate">
-        <input type="hidden" name="arrival_window" id="fSlot" value="Morning (8am–12pm)">
+        <input type="hidden" name="arrival_window" id="fSlot" value="Morning (9am–12pm)">
         <p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
         <div class="two">
           <label>Full name<input name="name" autocomplete="name" required></label>
