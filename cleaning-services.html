@@ -634,21 +634,22 @@ const REVIEWS = [
 
 const SIZES = ["Studio / 1 bed","2 bedrooms","3 bedrooms","4 bedrooms","5 bedrooms","6+ bedrooms"];
 const CLEANS = [
-  {name:"Standard / regular clean", short:"Standard clean", tag:"Most booked", desc:"Kitchen, bathrooms, bedrooms and living areas, with dusting, vacuuming and mopping.", prices:[230,280,350,380,420,null], hours:["2–3","3–4","4–5","5–6","6–7",null]},
-  {name:"Deep clean", short:"Deep clean", tag:"Best first visit", desc:"Everything in a standard clean, plus a detailed scrub, cupboard fronts, skirting boards and light fittings.", prices:[380,430,500,530,570,null], hours:["4–5","5–6","6–8","8–9","9–10",null]},
-  {name:"Spring clean", short:"Spring clean", desc:"A seasonal refresh of high and low areas that a regular clean doesn't reach.", prices:[350,400,470,500,540,null], hours:["3.5–4.5","4.5–5.5","5.5–7","7–8","8–9",null]},
-  {name:"Move-in clean", short:"Move-in clean", desc:"A deep clean of an empty home, including inside cupboards and drawers, before you unpack.", prices:[410,460,530,560,600,null], hours:["4–5","5–6.5","6.5–8","8–9.5","9–10.5",null]},
-  {name:"End-of-lease / bond clean", short:"End-of-lease clean", desc:"A move-out clean with the oven, interior windows and wall marks included, matched to your agent's checklist.", prices:[480,530,600,630,670,null], hours:["5–6","6–8","8–10","10–11","11–13",null]},
-  {name:"Post-renovation clean", short:"Post-renovation clean", from:true, desc:"Fine dust and residue removal after building work. Confirmed after a walk-through.", prices:[580,630,700,730,770,null], hours:["6+","8+","10+","11+","12+",null]}
+  {name:"Standard / regular clean", short:"Standard clean", tag:"Most booked", desc:"Kitchen, bathrooms, bedrooms and living areas, with dusting, vacuuming and mopping.", prices:[230,280,350,380,420,null], time:"about 2 hours"},
+  {name:"Deep clean", short:"Deep clean", tag:"Best first visit", desc:"Everything in a standard clean, plus a detailed scrub, cupboard fronts, skirting boards and light fittings.", prices:[380,430,500,530,570,null], time:"about 3 hours"},
+  {name:"Spring clean", short:"Spring clean", desc:"A seasonal refresh of high and low areas that a regular clean doesn't reach.", prices:[350,400,470,500,540,null], time:"about 3 hours"},
+  {name:"Move-in clean", short:"Move-in clean", desc:"A deep clean of an empty home, including inside cupboards and drawers, before you unpack.", prices:[410,460,530,560,600,null], time:"about 3 hours"},
+  {name:"End-of-lease / bond clean", short:"End-of-lease clean", desc:"A move-out clean with the oven, interior windows and wall marks included, matched to your agent's checklist.", prices:[480,530,600,630,670,null], time:"about 4–5 hours"},
+  {name:"Post-renovation clean", short:"Post-renovation clean", custom:true, desc:"Fine dust and residue removal after building work. Price and timing confirmed after a walk-through.", prices:[null,null,null,null,null,null], time:"1–3 days (varies)"}
 ];
 let size = 2;
 
 function renderLedger(){
   const el = document.getElementById("ledger");
   el.innerHTML = CLEANS.map(c => {
-    const p = c.prices[size], h = c.hours[size];
-    const price = p == null ? `<div class="price">Custom<small>Quoted after a walk-through</small></div>`
-      : `<div class="price">${c.from ? "from " : ""}$${p}<small>about ${h} hours</small></div>`;
+    const p = c.prices[size];
+    const price = (c.custom || p == null)
+      ? `<div class="price">Custom<small>${c.time}</small></div>`
+      : `<div class="price">$${p}<small>${c.time}</small></div>`;
     return `<div class="row">
       <div><h3>${c.short}</h3>${c.tag ? `<span class="tag">${c.tag}</span>` : ""}</div>
       <p>${c.desc}</p>
