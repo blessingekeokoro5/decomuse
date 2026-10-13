@@ -638,12 +638,23 @@ renderCal();
 function setStatus(el, cls, msg){ el.className = "status " + cls; el.textContent = msg; }
 async function send(form, subject, statusEl, okMsg){
   const data = new FormData(form);
+  // Build a clean label:value list for the branded email (skip plumbing fields)
+  const fields = [...data.entries()]
+    .filter(([k, v]) => v && k !== "form-name" && k !== "bot-field")
+    .map(([k, v]) => [k.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()), v]);
+  const replyto = (data.get("email") || "").toString().trim();
+  const name = (data.get("name") || "").toString().trim();
+  // 1) Branded Brevo notification to the business (+ customer confirmation when an email is given)
   try {
-    const r = await fetch("/", {method:"POST", headers:{"Content-Type":"application/x-www-form-urlencoded"}, body:new URLSearchParams(data).toString()});
-    if (!r.ok) throw new Error("not sent");
-    setStatus(statusEl, "ok", okMsg); form.reset(); return true;
+    const r = await fetch("/.netlify/functions/send-submission", {
+      method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({ subject, fields, replyto, name })
+    });
+    if (r.ok) { const j = await r.json().catch(() => ({})); if (j && j.ok) { setStatus(statusEl, "ok", okMsg); form.reset(); return true; } }
+    throw new Error("fallback");
   } catch (err) {
-    const body = [...data.entries()].filter(([k,v]) => v && k !== "form-name" && k !== "bot-field").map(([k,v]) => `${k.replace(/_/g," ")}: ${v}`).join("\n");
+    // 2) Fallback: open the client's email app, pre-addressed to the business
+    const body = fields.map(([k, v]) => `${k}: ${v}`).join("\n");
     window.location.href = `mailto:${SETTINGS.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     setStatus(statusEl, "info", "Your email app has opened with your details filled in. Press send to finish.");
     return false;
@@ -654,7 +665,7 @@ document.getElementById("bookingForm").addEventListener("submit", e => {
   const f = e.target, st = document.getElementById("bookStatus");
   if (!chosen) { setStatus(st, "err", "Choose a preferred date in the calendar."); return; }
   if (!f.checkValidity()) { setStatus(st, "err", "Fill in your name, mobile, email and suburb, and tick the pet safety box."); f.reportValidity(); return; }
-  send(f, "Cleaning booking request", st, "Booking request sent. We'll confirm your date by email within one business day.").then(ok => {
+  send(f, "Samira Home Decor — Cleaning booking request", st, "Booking request sent. We'll confirm your date by email within one business day.").then(ok => {
     if (ok) { chosen = null; document.getElementById("calChosen").textContent = "Choose a date to continue."; renderCal(); }
   });
 });
@@ -674,7 +685,7 @@ document.getElementById("reviewForm").addEventListener("submit", e => {
   e.preventDefault();
   const f = e.target, st = document.getElementById("revStatus");
   if (!f.checkValidity()) { setStatus(st, "err", "Choose a star rating and fill in your name, suburb and review."); f.reportValidity(); return; }
-  send(f, "Cleaning review", st, "Review sent. Thank you for taking the time to share it.");
+  send(f, "Samira Home Decor — Cleaning review", st, "Review sent. Thank you for taking the time to share it.");
 });
 </script>
 </body>
