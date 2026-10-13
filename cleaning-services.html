@@ -538,7 +538,9 @@ const SETTINGS = {
 };
 /* Add real client reviews here after they agree to be published, e.g.
    { name: "Jane", suburb: "Glenelg", rating: 5, text: "..." } */
-const REVIEWS = [];
+const REVIEWS = [
+  { name: "Jacinta Melville", suburb: "", rating: 5, text: "I'm beyond impressed with the cleaning service provided by Samira Home Decor. From start to finish, the experience was seamless, professional, and genuinely refreshing. My home was left spotless, beautifully organised, and smelling amazing. The attention to detail was exceptional — every corner, surface, and space looked brand new. You can tell they take pride in their work. I'm a very happy customer and will definitely be booking again. Highly recommend Samira Home Decor for anyone wanting a premium cleaning experience." }
+];
 /* =============================================================== */
 
 const SIZES = ["Studio / 1 bed","2 bedrooms","3 bedrooms","4 bedrooms","5 bedrooms","6+ bedrooms"];
@@ -677,7 +679,7 @@ function renderReviews(){
     el.innerHTML = `<div class="empty"><h3>Be one of our first reviewers</h3><p>Our cleaning service is new, so there are no reviews to show yet. If we've cleaned for you, we'd love to hear how it went.</p></div>`;
     return;
   }
-  el.innerHTML = REVIEWS.map(r => `<blockquote class="review"><span class="stars" aria-label="${r.rating} out of 5 stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</span><q>${r.text}</q><footer>${r.name}, ${r.suburb}</footer></blockquote>`).join("");
+  el.innerHTML = REVIEWS.map(r => `<blockquote class="review"><span class="stars" aria-label="${r.rating} out of 5 stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</span><q>${r.text}</q><footer>${r.name}${r.suburb ? ", " + r.suburb : ""}</footer></blockquote>`).join("");
 }
 renderReviews();
 if (SETTINGS.googleReviewUrl) { const g = document.getElementById("googleReview"); g.href = SETTINGS.googleReviewUrl; g.classList.remove("hidden"); }
