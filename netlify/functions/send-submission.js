@@ -121,22 +121,53 @@ exports.handler = async (event) => {
 
     // ---- 2) Customer confirmation (branded) — best effort ----
     if (isEmail(replyto)) {
-      const custHtml = wrap(`
-        ${brandHeader("We've received your message ✦", "")}
-        <p style="color:#5a5049;line-height:1.7;margin-top:20px">Hi${name ? " " + esc(name) : ""},</p>
-        <p style="color:#5a5049;line-height:1.7">Thank you for reaching out to <strong>Samira Home Decor</strong>. We've received your message and a member of our Australian-based team will get back to you <strong>within 2 business hours</strong> (during business days).</p>
-        <p style="color:#5a5049;line-height:1.7">In the meantime, feel free to keep exploring our collection.</p>
-        <div style="text-align:center;margin:24px 0">
-          <a href="${SITE_URL}/shop.html" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Browse the shop</a>
-        </div>
-        <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">If you didn't contact us, you can ignore this email.<br>Warm regards, The Samira Home Decor team 💛</p>
-      `);
+      // Optional itemised summary (e.g. a cleaning quote estimate) to show the customer
+      let summary = Array.isArray(data.summary) ? data.summary : [];
+      summary = summary.filter((p) => Array.isArray(p) && p[0] != null && String(p[1] == null ? "" : p[1]).trim() !== "");
+
+      let custHtml, custSubject;
+      if (summary.length) {
+        // Quote / estimate style confirmation: show the breakdown
+        const sRows = summary.map(([k, v], i) => {
+          const isTotal = /total/i.test(String(k));
+          return `<tr>
+            <td style="padding:10px 14px 10px 0;border-bottom:1px solid #eee;color:${isTotal ? "#0B1F3A" : "#8a7f77"};font-size:${isTotal ? "15px" : "13px"};${isTotal ? "font-weight:bold;" : ""}vertical-align:top;white-space:nowrap">${esc(k)}</td>
+            <td style="padding:10px 0;border-bottom:1px solid #eee;color:#0B1F3A;font-size:${isTotal ? "16px" : "14px"};${isTotal ? "font-weight:bold;" : ""}text-align:right;white-space:pre-wrap">${esc(v)}</td>
+          </tr>`;
+        }).join("");
+        custSubject = data.customerSubject || "Your cleaning estimate — Samira Home Decor";
+        custHtml = wrap(`
+          ${brandHeader(data.customerHeading || "Your cleaning estimate ✦", "")}
+          <p style="color:#5a5049;line-height:1.7;margin-top:20px">Hi${name ? " " + esc(name) : ""},</p>
+          <p style="color:#5a5049;line-height:1.7">${esc(data.customerLead || "Thank you for your enquiry. Here's your estimated quote based on the details you gave us:")}</p>
+          <table role="presentation" width="100%" style="margin-top:14px;border-collapse:collapse">${sRows}</table>
+          <div style="background:#F6EEE8;border-radius:12px;padding:14px 18px;margin-top:18px;font-size:13px;color:#5a5049;line-height:1.6">
+            This is an <strong>estimate only</strong> and not a final invoice. Your final price and time are confirmed when you book — a member of our Adelaide team will be in touch <strong>within 2 business hours</strong> (on business days) to confirm your quote and lock in a date.
+          </div>
+          <div style="text-align:center;margin:24px 0">
+            <a href="${SITE_URL}/cleaning-services.html#book" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Book your clean</a>
+          </div>
+          <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">Questions? Just reply to this email or call 0451 609 398.<br>Warm regards, The Samira Home Decor team 💛</p>
+        `);
+      } else {
+        custSubject = "We've received your message — Samira Home Decor";
+        custHtml = wrap(`
+          ${brandHeader("We've received your message ✦", "")}
+          <p style="color:#5a5049;line-height:1.7;margin-top:20px">Hi${name ? " " + esc(name) : ""},</p>
+          <p style="color:#5a5049;line-height:1.7">Thank you for reaching out to <strong>Samira Home Decor</strong>. We've received your message and a member of our Australian-based team will get back to you <strong>within 2 business hours</strong> (during business days).</p>
+          <p style="color:#5a5049;line-height:1.7">In the meantime, feel free to keep exploring our collection.</p>
+          <div style="text-align:center;margin:24px 0">
+            <a href="${SITE_URL}/shop.html" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Browse the shop</a>
+          </div>
+          <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">If you didn't contact us, you can ignore this email.<br>Warm regards, The Samira Home Decor team 💛</p>
+        `);
+      }
       try {
         await sendBrevo({
           sender: { name: SENDER_NAME, email: SENDER_EMAIL },
           to: [{ email: replyto, name: name || undefined }],
           replyTo: { email: BUSINESS_EMAIL, name: SENDER_NAME },
-          subject: "We've received your message — Samira Home Decor",
+          subject: custSubject,
           htmlContent: custHtml,
         });
       } catch (e) { /* confirmation is best-effort; business copy already sent */ }
