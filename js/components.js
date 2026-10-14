@@ -741,6 +741,107 @@ function initEnquire() {
   });
 }
 
+/* ---- Newsletter popup (timed, once per visitor) → 10% welcome code ---- */
+function buildNewsletterPopup() {
+  return `
+  <style id="nl-pop-css">
+    .nl-pop{position:fixed;inset:0;background:rgba(6,21,37,.6);display:none;align-items:center;justify-content:center;z-index:10000;padding:18px}
+    .nl-pop.open{display:flex}
+    .nl-card{position:relative;background:#fff;border-radius:16px;overflow:hidden;max-width:760px;width:100%;display:grid;grid-template-columns:1fr;box-shadow:0 30px 80px rgba(0,0,0,.45);max-height:92vh}
+    @media(min-width:640px){.nl-card{grid-template-columns:1fr 1fr}}
+    .nl-img{display:none;background:url('assets/hero.jpg') center/cover no-repeat;min-height:420px}
+    @media(min-width:640px){.nl-img{display:block}}
+    .nl-body{padding:38px 32px;display:flex;align-items:center;overflow:auto}
+    .nl-x{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;background:rgba(11,31,58,.06);border-radius:50%;font-size:1.5rem;line-height:1;color:#0B1F3A;cursor:pointer;z-index:2}
+    .nl-x:hover{background:rgba(11,31,58,.12)}
+    .nl-body h2{font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;line-height:1.15;color:#14365F;margin:0 0 10px}
+    .nl-rule{width:54px;height:2px;background:#C6A15B;margin:0 0 16px}
+    .nl-body p{color:#5a5049;font-size:.98rem;line-height:1.6;margin:0 0 16px}
+    .nl-body input[type=email]{width:100%;padding:13px 15px;border:1.5px solid #d9cfc0;border-radius:10px;font-size:1rem;margin-bottom:12px;box-sizing:border-box}
+    .nl-body button[type=submit]{width:100%;background:#C6A15B;color:#0B1F3A;border:0;border-radius:30px;padding:14px;font-weight:bold;font-size:1rem;cursor:pointer}
+    .nl-body button[type=submit]:hover{background:#b8934c}
+    .nl-fine{font-size:.74rem!important;color:#8a7f77!important;margin:12px 0 0!important}
+    .nl-status{font-size:.85rem!important;margin:8px 0 0!important}
+    .nl-status.err{color:#b23b3b!important}.nl-status.ok{color:#2e7d52!important}
+    .nl-thanks .nl-happy{font-weight:bold;color:#14365F}
+    .nl-shop{margin-top:8px;background:#14365F!important;color:#fff!important}
+  </style>
+  <div class="nl-pop" id="nlPop" aria-hidden="true">
+    <div class="nl-card" role="dialog" aria-modal="true" aria-label="Subscribe for 10% off your first order">
+      <button class="nl-x" id="nlClose" type="button" aria-label="Close">&times;</button>
+      <div class="nl-img"></div>
+      <div class="nl-body">
+        <div id="nlFormWrap">
+          <h2>A welcome gift before you go</h2>
+          <div class="nl-rule"></div>
+          <p>Join our list for design news and early access — and receive <strong>10% off</strong> your first order.</p>
+          <form id="nlSubscribe" novalidate>
+            <input type="email" name="email" placeholder="Your email address" autocomplete="email" required>
+            <button type="submit">Send me my code</button>
+            <p class="nl-fine">*We email thoughtfully. Unsubscribe anytime. T&amp;Cs apply.</p>
+            <p class="nl-status" id="nlStatus" role="status"></p>
+          </form>
+        </div>
+        <div class="nl-thanks" id="nlThanks" hidden>
+          <h2>Thank you for subscribing</h2>
+          <div class="nl-rule"></div>
+          <p>An email is on its way with your <strong>10% off</strong> code — we've also applied it to your cart automatically.</p>
+          <p class="nl-happy">Happy shopping!</p>
+          <button type="button" class="nl-shop" onclick="location.href='shop.html'">Start shopping</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function initNewsletterPopup() {
+  const pop = document.getElementById("nlPop");
+  if (!pop) return;
+  let done = false;
+  try { done = localStorage.getItem("shd_news") || localStorage.getItem("dm_coupon") === "WELCOME10"; } catch (e) {}
+  // Don't interrupt people who are buying
+  const page = (document.body.getAttribute("data-page") || location.pathname || "").toLowerCase();
+  const skip = /cart|checkout|order-confirmed|account|admin/.test(page);
+  if (done || skip) return;
+
+  const close = (mark) => { pop.classList.remove("open"); pop.setAttribute("aria-hidden", "true"); if (mark) { try { localStorage.setItem("shd_news", mark); } catch (e) {} } };
+  const open = () => { pop.classList.add("open"); pop.setAttribute("aria-hidden", "false"); };
+
+  document.getElementById("nlClose").addEventListener("click", () => close("dismissed"));
+  pop.addEventListener("click", (e) => { if (e.target === pop) close("dismissed"); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && pop.classList.contains("open")) close("dismissed"); });
+
+  const timer = setTimeout(open, 60000); // 60s after landing
+
+  document.getElementById("nlSubscribe").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target, st = document.getElementById("nlStatus");
+    const email = (new FormData(form).get("email") || "").toString().trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { st.className = "nl-status err"; st.textContent = "Please enter a valid email address."; return; }
+    st.className = "nl-status"; st.textContent = "Sending your code…";
+    // Apply the WELCOME10 coupon (cart.js already recognises it as 10% off)
+    try { localStorage.setItem("dm_coupon", "WELCOME10"); localStorage.setItem("shd_news", "subscribed"); } catch (e2) {}
+    window._coupon = "WELCOME10";
+    try {
+      await fetch("/.netlify/functions/send-submission", {
+        method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify({
+          subject: "New newsletter subscriber — 10% welcome",
+          fields: [["Email", email], ["Source", "Welcome popup"], ["Code issued", "WELCOME10 (10% off first order)"]],
+          replyto: email, name: "",
+          welcomeCode: "WELCOME10", discountLabel: "10% off your first order",
+          customerSubject: "Your 10% welcome code — Samira Home Decor",
+        }),
+      });
+    } catch (e3) { /* code still works on-site even if the email send hiccups */ }
+    document.getElementById("nlFormWrap").hidden = true;
+    document.getElementById("nlThanks").hidden = false;
+  });
+
+  // Stop the timer if they navigate away quickly
+  window.addEventListener("pagehide", () => clearTimeout(timer), { once: true });
+}
+
 /* ---- Inject on load ---- */
 function injectComponents() {
   const h = document.getElementById("site-header");
@@ -753,6 +854,7 @@ function injectComponents() {
   document.body.insertAdjacentHTML("beforeend", buildCountryModal());
   document.body.insertAdjacentHTML("beforeend", buildEnquire());
   document.body.insertAdjacentHTML("beforeend", buildMemberBanner());
+  document.body.insertAdjacentHTML("beforeend", buildNewsletterPopup());
   injectFavicon();
   wireNav();
   rotateAnnouncements();
@@ -763,6 +865,7 @@ function injectComponents() {
   initMemberModal();
   initFlashBar();
   initEnquire();
+  initNewsletterPopup();
 }
 
 /* ---- Favicon (injected on every page), D&M house mark ---- */
