@@ -146,6 +146,7 @@ section{scroll-margin-top:76px}
 .row .tag{display:inline-block;margin-top:6px;font-size:.8rem;font-weight:600;color:var(--gold-ink);background:var(--gold-soft);padding:3px 10px;border-radius:999px}
 .row p{color:var(--muted);font-size:.95rem}
 .price{font:600 2rem/1 var(--serif);color:var(--navy)}
+.price .est-tag{display:block;font:600 .62rem/1 var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--gold-ink);margin-bottom:5px}
 .price small{display:block;font:500 .82rem/1.4 var(--sans);color:var(--muted);margin-top:6px}
 .row .btn{justify-self:start}
 @media (min-width:860px){.row .btn{justify-self:end}}
@@ -355,7 +356,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
   <div class="wrap">
     <div class="sec-head">
       <h2 id="res-title">Residential cleaning</h2>
-      <p class="lede">Choose your home size to see the price and estimated time for each type of clean.</p>
+      <p class="lede">Choose your home size to see an estimated price and time for each type of clean.</p>
     </div>
 
     <div class="finder" role="group" aria-label="Home size">
@@ -371,7 +372,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
     </div>
 
     <div class="ledger" id="ledger" aria-live="polite"></div>
-    <p class="price-note">Prices are per visit in Australian dollars. Times are a guide for one cleaner; longer cleans may be split across two visits. Post-renovation and 6+ bedroom homes are confirmed after a walk-through or photos.</p>
+    <p class="price-note"><strong>Prices and times shown are estimates only.</strong> They are a guide per visit in Australian dollars for one cleaner; longer cleans may be split across two visits. Your <strong>final price and time are confirmed when you book</strong> (and after a walk-through or photos for post-renovation and 6+ bedroom homes).</p>
 
     <div class="extras">
       <div class="panel">
@@ -744,8 +745,8 @@ function renderLedger(){
   el.innerHTML = CLEANS.map(c => {
     const p = c.prices[size];
     const price = (c.custom || p == null)
-      ? `<div class="price">Custom<small>${c.time}</small></div>`
-      : `<div class="price">$${p}<small>${c.time}</small></div>`;
+      ? `<div class="price"><span class="est-tag">Estimate</span>Custom<small>${c.time}</small></div>`
+      : `<div class="price"><span class="est-tag">Estimate</span>$${p}<small>${c.time}</small></div>`;
     return `<div class="row">
       <div><h3>${c.short}</h3>${c.tag ? `<span class="tag">${c.tag}</span>` : ""}</div>
       <p>${c.desc}</p>
