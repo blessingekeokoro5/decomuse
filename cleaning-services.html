@@ -96,8 +96,10 @@ section{scroll-margin-top:76px}
 
 /* hero */
 .hero{background:var(--navy);color:#fff;position:relative;overflow:hidden}
-.hero .wrap{display:grid;gap:40px;padding-top:72px;padding-bottom:80px}
-@media (min-width:900px){.hero .wrap{grid-template-columns:1.25fr .9fr;align-items:end;padding-top:96px;padding-bottom:96px}}
+.hero .wrap{display:grid;gap:36px;padding-top:72px;padding-bottom:80px}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr;column-gap:56px;row-gap:46px;align-items:center;padding-top:92px;padding-bottom:84px}}
+.hero-photo{padding:8px;border:1px solid rgba(198,161,91,.45);border-radius:22px;background:linear-gradient(160deg,rgba(198,161,91,.18),rgba(198,161,91,0))}
+.hero-photo img{display:block;width:100%;max-height:560px;object-fit:cover;border-radius:16px;box-shadow:0 26px 54px rgba(0,0,0,.38)}
 .hero h1{color:#fff;font-size:clamp(2.7rem,7vw,5.2rem);font-weight:500;line-height:.98}
 .hero h1 em{font-style:italic;color:var(--gold)}
 .hero p.lede{color:#C9D3E3;font-size:1.15rem;margin-top:22px}
@@ -110,6 +112,7 @@ section{scroll-margin-top:76px}
 .trust-strip li{color:#E7DEC9;font-size:.98rem;font-weight:500;letter-spacing:.2px;display:flex;align-items:center;gap:9px}
 .trust-strip .ti{display:inline-flex;align-items:center;justify-content:center;width:20px;height:20px;border-radius:50%;background:var(--gold);color:var(--navy-deep);font-size:.72rem;font-weight:700}
 .facts{border-left:2px solid var(--gold);padding-left:24px;display:grid;gap:18px}
+@media (min-width:900px){.hero .facts{grid-column:1 / -1;border-left:none;border-top:1px solid rgba(198,161,91,.35);padding-left:0;padding-top:30px;grid-template-columns:repeat(3,1fr);gap:30px}}
 .facts div{display:grid;gap:2px}
 .facts strong{font:600 1.35rem/1.2 var(--serif);color:#fff}
 .facts span{color:#B7C3D6;font-size:.95rem}
@@ -308,6 +311,9 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
         <a class="btn btn-line" href="#documents">Get the onboarding form</a>
       </div>
       <p class="hero-call">Serving Adelaide and surrounding suburbs. Prefer to talk? Call <a href="tel:+61451609398">0451 609 398</a>.</p>
+    </div>
+    <div class="hero-photo">
+      <img src="assets/cleaning-hero.jpg?v=1" width="572" height="740" loading="eager" decoding="async" alt="Samira Home Decor cleaner wiping down a bright kitchen bench in an Adelaide home">
     </div>
     <div class="facts">
       <div><strong>Clean spaces, happy homes</strong><span>Thorough cleans that leave your home fresh and cared for.</span></div>
