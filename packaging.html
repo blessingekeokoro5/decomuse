@@ -34,6 +34,21 @@
     .kit-card figcaption { padding: 13px 15px; }
     .kit-card strong { display: block; font-size: 0.92rem; color: var(--ink); }
     .kit-card small { color: var(--muted); font-size: 0.8rem; line-height: 1.45; display: block; margin-top: 3px; }
+    /* click-to-enlarge */
+    .kit-shot { position: relative; }
+    .kit-shot img { cursor: zoom-in; transition: transform .3s ease; }
+    .kit-card:hover .kit-shot img { transform: scale(1.04); }
+    .kit-shot:not(.no-img)::before { content: ""; position: absolute; bottom: 10px; right: 10px; width: 30px; height: 30px; border-radius: 50%; background: rgba(11,31,58,.8) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='10' cy='10' r='6'/%3E%3Cline x1='14.5' y1='14.5' x2='21' y2='21'/%3E%3C/svg%3E") center/16px no-repeat; opacity: 0; transition: opacity .25s ease; pointer-events: none; z-index: 2; }
+    .kit-card:hover .kit-shot:not(.no-img)::before { opacity: 1; }
+    .kit-shot img:focus-visible { outline: 2px solid var(--gold, #C6A15B); outline-offset: 2px; }
+    .lightbox { position: fixed; inset: 0; background: rgba(6,21,37,.93); display: none; align-items: center; justify-content: center; flex-direction: column; z-index: 9999; padding: 24px; }
+    .lightbox.open { display: flex; }
+    .lightbox img { max-width: min(92vw, 1100px); max-height: 80vh; width: auto; height: auto; object-fit: contain; border-radius: 10px; background: #fff; box-shadow: 0 24px 70px rgba(0,0,0,.55); }
+    .lightbox .lb-cap { color: #fff; margin-top: 16px; text-align: center; max-width: 680px; }
+    .lightbox .lb-cap strong { display: block; font-size: 1.1rem; }
+    .lightbox .lb-cap span { color: #C9D3E3; font-size: .9rem; }
+    .lb-close { position: absolute; top: 16px; right: 20px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,.15); color: #fff; font-size: 1.7rem; line-height: 1; cursor: pointer; }
+    .lb-close:hover { background: rgba(255,255,255,.28); }
   </style>
 </head>
 <body data-page="packaging.html">
@@ -370,6 +385,13 @@
     initReveal();
   </script>
 
+  <!-- Lightbox for enlarging packaging-kit photos -->
+  <div class="lightbox" id="kitLightbox" role="dialog" aria-modal="true" aria-label="Enlarged packaging photo">
+    <button type="button" class="lb-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
+    <div class="lb-cap"><strong></strong><span></span></div>
+  </div>
+
   <script>
     // the same kits the hamper builder offers
     (function () {
@@ -377,10 +399,53 @@
       if (!el || typeof PACKAGING_KITS === "undefined") return;
       el.innerHTML = PACKAGING_KITS.map(function (k) {
         return '<figure class="kit-card">' +
-          '<div class="kit-shot">' + (k.img ? '<img src="' + k.img + '" alt="' + k.name + '" loading="lazy" onerror="this.closest(\'.kit-shot\').classList.add(\'no-img\');this.remove()">' : '') + '</div>' +
+          '<div class="kit-shot">' + (k.img ? '<img src="' + k.img + '" alt="' + k.name + '" title="Click to enlarge" tabindex="0" loading="lazy" onerror="this.closest(\'.kit-shot\').classList.add(\'no-img\');this.remove()">' : '') + '</div>' +
           '<figcaption><strong>' + k.name + '</strong><small>' + k.note + '</small></figcaption>' +
           '</figure>';
       }).join("");
+    })();
+
+    // Click (or Enter/Space) a kit photo to view it enlarged in a lightbox
+    (function () {
+      var grid = document.getElementById("kitGrid");
+      var lb = document.getElementById("kitLightbox");
+      if (!grid || !lb) return;
+      var lbImg = lb.querySelector("img");
+      var lbStrong = lb.querySelector(".lb-cap strong");
+      var lbSpan = lb.querySelector(".lb-cap span");
+      function open(img) {
+        var fig = img.closest(".kit-card");
+        var s = fig ? fig.querySelector("strong") : null;
+        var n = fig ? fig.querySelector("small") : null;
+        lbImg.src = img.currentSrc || img.src;
+        lbImg.alt = img.alt || "";
+        lbStrong.textContent = s ? s.textContent : (img.alt || "");
+        lbSpan.textContent = n ? n.textContent : "";
+        lb.classList.add("open");
+        document.body.style.overflow = "hidden";
+        lb.querySelector(".lb-close").focus();
+      }
+      function close() {
+        lb.classList.remove("open");
+        lbImg.removeAttribute("src");
+        document.body.style.overflow = "";
+      }
+      grid.addEventListener("click", function (e) {
+        var img = e.target.closest(".kit-shot img");
+        if (img) open(img);
+      });
+      grid.addEventListener("keydown", function (e) {
+        if ((e.key === "Enter" || e.key === " ") && e.target.closest(".kit-shot img")) {
+          e.preventDefault();
+          open(e.target.closest(".kit-shot img"));
+        }
+      });
+      lb.addEventListener("click", function (e) {
+        if (e.target === lb || e.target.classList.contains("lb-close")) close();
+      });
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && lb.classList.contains("open")) close();
+      });
     })();
   </script>
 </body>
