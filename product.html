@@ -86,6 +86,24 @@
     .ar-steps { text-align: left; max-width: 380px; margin: 8px auto 0; color: var(--body); font-size: 0.9rem; line-height: 1.7; }
     .ar-fine { color: var(--muted); font-size: 0.78rem; margin-top: 16px; }
     model-viewer { width: 100%; height: 340px; background: var(--cream-2); border-radius: 12px; }
+    /* AI "See it in your room" */
+    .roomai h3 { margin-bottom: 4px; }
+    .rai-drop { display: flex; align-items: center; gap: 14px; width: 100%; box-sizing: border-box; padding: 18px; margin: 10px 0 6px; border: 1.5px dashed var(--gold, #C6A15B); border-radius: 12px; background: var(--cream-2, #f6eee8); cursor: pointer; text-align: left; }
+    .rai-drop:hover { background: #efe6d8; }
+    .rai-up { font-size: 1.4rem; color: var(--ink, #0B1F3A); flex: 0 0 auto; }
+    .rai-cta { display: flex; flex-direction: column; line-height: 1.3; }
+    .rai-cta strong { color: var(--ink, #0B1F3A); }
+    .rai-cta small { color: var(--muted, #6E675C); font-size: 0.8rem; }
+    .rai-stage { margin-top: 10px; }
+    .rai-loading { text-align: center; padding: 26px 10px; }
+    .rai-loading p { color: var(--body, #5a5049); font-size: 0.95rem; margin-top: 12px; line-height: 1.5; }
+    .rai-loading small { color: var(--muted, #6E675C); }
+    .rai-spin { width: 40px; height: 40px; margin: 0 auto; border: 3px solid #e6dcc9; border-top-color: var(--gold, #C6A15B); border-radius: 50%; animation: raispin 0.9s linear infinite; }
+    @keyframes raispin { to { transform: rotate(360deg); } }
+    .rai-ready { font-size: 1rem; margin: 4px 0 8px; }
+    .rai-result img { width: 100%; border-radius: 12px; display: block; }
+    .rai-err { color: #b23b3b; background: #fbeeee; border-radius: 10px; padding: 12px 14px; font-size: 0.9rem; }
+    .rai-again { margin-top: 14px; }
     .pdp-thumbs { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; margin-top: 10px; }
     .pdp-thumbs .ph { aspect-ratio: 1/1; border-radius: 8px; cursor: pointer; }
     /* Show full image (incl. infographic text) instead of cropping */
@@ -489,7 +507,7 @@
       const toolsHtml = showTools ? `
         <div class="pdp-tools">
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="View dimensions" onclick="openDims('${p.id}')">${RULER_IC}</button><span class="pdp-tool-label">Dimensions</span></div>
-          ${SHOW_AR ? `<div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="See it in your room" onclick="openRoomView('${p.id}')">${CUBE_IC}</button><span class="pdp-tool-label">In your room</span></div>` : ""}
+          <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="See it in your room" onclick="openRoomView('${p.id}')">${CUBE_IC}</button><span class="pdp-tool-label">In your room</span></div>
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="360 degree view" onclick="openSpin('${p.id}')">${SPIN_IC}</button><span class="pdp-tool-label">360° view</span></div>
           <div class="pdp-tool-wrap"><button class="pdp-tool" type="button" aria-label="Scan to view on a phone" onclick="openScan('${p.id}')">${QR_IC}</button><span class="pdp-tool-label">Scan</span></div>
         </div>` : "";
@@ -679,19 +697,70 @@
           <p class="ar-fine">Tap the AR icon (bottom-right of the 3D view) on a supported phone to place this piece in your room.</p>`);
         return;
       }
-      const qr = "https://api.qrserver.com/v1/create-qr-code/?size=380x380&margin=8&data=" + encodeURIComponent(url);
-      openTool(`<div class="ar-body">
-        <div class="ar-phone">📱</div>
-        <h3>See how it looks in your room!</h3>
-        <p class="th-sub">Scan the QR code with your phone and select "See it in your room". 3D imagery is indicative only.</p>
-        <img class="ar-qr" src="${qr}" alt="Scan to view ${p.name} on your phone" onerror="this.style.display='none'">
-        <div class="ar-steps">
-          <div>1. Open your phone camera and point it at the code above.</div>
-          <div>2. Tap the link to open the piece on your phone.</div>
-          <div>3. Tap <strong>See in your room</strong> to place it with your camera.</div>
-        </div>
-        <p class="ar-fine">*Requires an AR-supported device & browser. We recommend iOS 12 or later with Safari, or Android 7.0 or later with Chrome.</p>
-      </div>`);
+      // No 3D model → AI "see it in your room" (upload a photo, get a styled preview)
+      openRoomAI(p);
+    }
+
+    /* ---- 2b. See it in your room (AI preview from a room photo) ---- */
+    function openRoomAI(p){
+      openTool(`
+        <div class="roomai">
+          <h3>See It in Your Room</h3>
+          <p class="th-sub">Upload a photo of your room to generate a styled, lifelike preview with <strong>${p.name}</strong>.</p>
+          <label class="rai-drop" id="raiDrop">
+            <input type="file" accept="image/*" id="raiFile" hidden>
+            <span class="rai-up" aria-hidden="true">⬆</span>
+            <span class="rai-cta"><strong>Take a photo of your room…</strong><small>JPG / PNG · up to 8 MB</small></span>
+          </label>
+          <p class="ar-fine">For best results, use a well-lit photo taken straight on (landscape works best).</p>
+          <div class="rai-stage" id="raiStage" aria-live="polite"></div>
+        </div>`);
+      const fileInput = document.getElementById("raiFile");
+      const stage = document.getElementById("raiStage");
+      const reset = () => { stage.innerHTML = ""; fileInput.value = ""; };
+      fileInput.addEventListener("change", () => {
+        const f = fileInput.files && fileInput.files[0];
+        if (!f) return;
+        if (f.size > 8 * 1024 * 1024) { stage.innerHTML = `<p class="rai-err">That photo is over 8 MB — please choose a smaller one.</p>`; return; }
+        stage.innerHTML = `<div class="rai-loading"><div class="rai-spin"></div><p>Creating your room preview…<br><small>This can take 10–20 seconds.</small></p></div>`;
+        downscaleImg(f, 1280, async (dataUrl) => {
+          try {
+            const productImg = location.origin + "/" + String(p.img || "").replace(/^\//, "");
+            const r = await fetch("/.netlify/functions/room-preview", {
+              method: "POST", headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({ room: dataUrl, productImg, productName: p.name }),
+            });
+            const j = await r.json().catch(() => ({}));
+            if (j && j.ok && j.image) {
+              stage.innerHTML = `
+                <p class="rai-ready"><strong>Your room preview is ready</strong></p>
+                <div class="rai-result"><img src="${j.image}" alt="${p.name} shown in your room"></div>
+                <p class="ar-fine">Note: this preview is AI-generated for visualisation only. Colour, scale and details may vary from the final product — always refer to the product photos, dimensions and specifications before purchasing. Your photo isn't stored.</p>
+                <button class="btn btn--ghost rai-again" type="button">Try another photo</button>`;
+            } else {
+              stage.innerHTML = `<p class="rai-err">${(j && j.error) || "We couldn't create your preview. Please try another photo."}</p>
+                <button class="btn btn--ghost rai-again" type="button">Try again</button>`;
+            }
+            const again = stage.querySelector(".rai-again"); if (again) again.addEventListener("click", reset);
+          } catch (e) {
+            stage.innerHTML = `<p class="rai-err">Something went wrong. Please try again.</p>`;
+          }
+        });
+      });
+    }
+
+    // Downscale a chosen image to maxDim (keeps the upload small & fast) → JPEG data URL
+    function downscaleImg(file, maxDim, cb){
+      const img = new Image(), rd = new FileReader();
+      rd.onload = () => { img.onload = () => {
+        let w = img.width, h = img.height;
+        if (w > h && w > maxDim) { h = Math.round(h * maxDim / w); w = maxDim; }
+        else if (h >= w && h > maxDim) { w = Math.round(w * maxDim / h); h = maxDim; }
+        const c = document.createElement("canvas"); c.width = w; c.height = h;
+        c.getContext("2d").drawImage(img, 0, 0, w, h);
+        try { cb(c.toDataURL("image/jpeg", 0.85)); } catch (e) { cb(rd.result); }
+      }; img.onerror = () => cb(rd.result); img.src = rd.result; };
+      rd.readAsDataURL(file);
     }
 
     /* ---- 3. 360° spin ---- */
