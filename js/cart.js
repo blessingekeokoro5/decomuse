@@ -274,7 +274,10 @@ function productCard(p) {
         <div class="price">${p.sizes && p.sizes.length ? "from " : ""}${money(p.price)}${was}</div>
         ${p.dontPay ? `<div class="dont-pay"><span class="dp-tag">Don't Pay</span> <s>${money(p.dontPay)}</s><button class="dp-info" type="button" aria-label="Why?" onclick="showDontPayInfo(event)">ⓘ</button></div>` : ""}
         ${p.memberPrice ? `<div class="member-price">✦ Members ${money(p.memberPrice)}</div>` : ""}
-        ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}`}
+        ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
+        ${p.lead
+          ? `<div style="display:inline-block;font-size:.7rem;font-weight:600;color:#8a7f77;background:#F4EFE6;padding:3px 9px;border-radius:20px;margin-top:6px" title="Made to order">⏳ Made to order · ${p.lead}</div>`
+          : `<div style="display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2px;color:#0B1F3A;background:#E0C992;padding:3px 9px;border-radius:20px;margin-top:6px" title="In stock, ready to ship">✓ Ready to ship · a few days</div>`}`}
         <div class="card-actions">
           <button class="card-act ${isWishlisted(p.id) ? "on" : ""}" type="button" data-wish="${p.id}" aria-pressed="${isWishlisted(p.id)}" aria-label="Save ${p.name} to your wishlist"
                   title="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}<span>${isWishlisted(p.id) ? "Saved" : "Save"}</span></button>

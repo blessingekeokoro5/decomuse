@@ -42,7 +42,7 @@ const MEGA_MENU = [
   {
     key: "living", label: "Living Room",
     columns: [
-      { title: "Shop", links: ["Shop All Living Room", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Shop", links: ["Shop All Living Room", "Ready to Ship", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Furniture", links: ["Sofas & Seating", "Coffee & Side Tables", "TV Units", "Bookshelves"] },
       { title: "Soft Furnishings", links: ["Rugs", "Cushions", "Throws", "Curtains"] },
       { title: "Accents", links: ["Lighting", "Mirrors", "Wall Art", "Vases"] },
@@ -52,7 +52,7 @@ const MEGA_MENU = [
   {
     key: "home", label: "Home Décor",
     columns: [
-      { title: "Shop", links: ["Shop All Home Décor", "New Arrivals", "Bestsellers", "On Sale"] },
+      { title: "Shop", links: ["Shop All Home Décor", "Ready to Ship", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Decorative", links: ["Vases", "Wall Art", "Sculptures & Objects", "Ceramics"] },
       { title: "Ambience", links: ["Candles", "Reed Diffusers", "Faux Greenery"] },
       { title: "Finishing Touches", links: ["Mirrors", "Photo Frames", "Trays & Bowls"] }
@@ -15411,6 +15411,7 @@ const ANNOUNCEMENTS = [
   "✦ Free shipping on orders over $3,500, Australia-wide",
   "🌏 We ship to Australia, NZ, UK, USA, Canada &amp; Nigeria",
   "🌸 New décor finds added weekly",
+  "⚡ In a hurry? Look for Ready to Ship pieces, delivered in a few days",
   "💝 Members save 10% on their first order, join free",
   "⭐ Loved by 500+ Australian homes · 4.9★ average review",
   "🎁 Build your own luxury hamper, gifting made effortless",

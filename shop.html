@@ -42,6 +42,7 @@
   <section class="section">
     <div class="container">
       <div class="pills" id="shopPills"></div>
+      <div class="avail-toggle" id="availToggle" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 2px"></div>
       <div class="shop-bar">
         <span id="shopCount" class="shop-count"></span>
         <label class="shop-sort">Sort
@@ -84,9 +85,9 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=21"></script>
-  <script src="js/components.js?v=40"></script>
-  <script src="js/cart.js?v=16"></script>
+  <script src="js/data.js?v=22"></script>
+  <script src="js/components.js?v=41"></script>
+  <script src="js/cart.js?v=17"></script>
   <script src="js/main.js?v=3"></script>
   <script>
     const CATS = ["All", "Home Décor", "Furniture", "Kitchen & Dining", "Bedroom & Bath", "Health & Wellness", "Fragrance", "Lifestyle", "Gifts", "Travel Essentials"];
@@ -98,7 +99,21 @@
     };
     let currentCat = "All";
     let searchQuery = "";
+    let availFilter = ""; // "", "ready" or "made"
     const PAGE_SIZE = 12;
+
+    const AVAIL = [
+      { v: "", label: "All availability" },
+      { v: "ready", label: "✓ Ready to ship (a few days)" },
+      { v: "made", label: "⏳ Made to order" },
+    ];
+    function renderAvailToggle() {
+      const el = document.getElementById("availToggle");
+      if (!el) return;
+      el.innerHTML = AVAIL.map(a =>
+        `<button class="pill ${a.v === availFilter ? 'active' : ''}" onclick="setAvail('${a.v}')">${a.label}</button>`).join("");
+    }
+    function setAvail(v) { availFilter = v; renderAvailToggle(); filterShop(currentCat); }
     let shopList = [];
     let shopShown = 0;
 
@@ -132,6 +147,9 @@
         const q = searchQuery.toLowerCase();
         list = list.filter(p => (p.name + " " + p.cat + " " + (p.desc || "")).toLowerCase().includes(q));
       }
+      // Availability: ready-to-ship (no lead time) vs made-to-order (has a lead time)
+      if (availFilter === "ready") list = list.filter(p => !p.lead && p.cat !== "Packaging");
+      else if (availFilter === "made") list = list.filter(p => !!p.lead);
       shopList = applyShopFilters(list);
       shopShown = Math.min(PAGE_SIZE, list.length);
       paintShop();
@@ -146,6 +164,9 @@
     const wanted = params.get("cat");
     searchQuery = (params.get("q") || "").trim();
     if (wanted && CATS.includes(wanted)) currentCat = wanted;
+    const wantAvail = (params.get("avail") || "").toLowerCase();
+    if (wantAvail === "ready" || wantAvail === "made") availFilter = wantAvail;
+    renderAvailToggle();
     renderShopControls(function () { filterShop(currentCat); });
     filterShop(currentCat);
     initReveal();

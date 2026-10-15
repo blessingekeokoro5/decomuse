@@ -165,7 +165,9 @@ function buildHeader() {
     "gift cards": "gift-cards.html",
     "request a bulk quote": "packaging.html#bulk",
     "on sale": "sale.html",
-    "shop all dining": "dining.html"
+    "shop all dining": "dining.html",
+    "ready to ship": "shop.html?avail=ready",
+    "made to order": "shop.html?avail=made"
   };
   const linkHref = (cat, col, l) => {
     const direct = LINK_PAGES[String(l).toLowerCase()];
@@ -401,6 +403,7 @@ function buildHeader() {
 function buildFooter() {
   const shopLinks = [
     { t: "Shop All", h: "shop.html" },
+    { t: "Ready to Ship", h: "shop.html?avail=ready" },
     { t: "New Arrivals", h: "shop.html" },
     { t: "On Sale", h: "sale.html" },
     { t: "Gift Cards", h: "gift-cards.html" },
