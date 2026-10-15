@@ -235,6 +235,23 @@ function bnplBadge(price) {
     + `<span class="bnpl-tag bnpl-ap">afterpay</span><span class="bnpl-tag bnpl-zip">zip</span><span class="bnpl-tag bnpl-klarna">Klarna</span></div>`;
 }
 
+/* Estimated delivery date for ready-to-ship items (computed live so it never goes stale).
+   Rolls off weekends to the next business day. */
+function estArrival(days) {
+  const d = new Date();
+  d.setDate(d.getDate() + (days || 10));
+  const g = d.getDay();
+  if (g === 0) d.setDate(d.getDate() + 1);        // Sun -> Mon
+  else if (g === 6) d.setDate(d.getDate() + 2);   // Sat -> Mon
+  try { return d.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }); }
+  catch (e) { return d.toDateString(); }
+}
+/* Show a "Get it by" line for ready-to-ship Luxo furniture */
+function arrivalLine(p) {
+  if (p.lead || p.supplier !== "Luxo Living") return "";
+  return `<div style="font-size:.72rem;color:#5a5049;margin-top:5px">🚚 Get it by <strong style="color:#0B1F3A">${estArrival(10)}</strong></div>`;
+}
+
 /* ---- Product card markup ---- */
 function productCard(p) {
   if (p.comingSoon) {
@@ -277,7 +294,8 @@ function productCard(p) {
         ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
         ${p.lead
           ? `<div style="display:inline-block;font-size:.7rem;font-weight:600;color:#8a7f77;background:#F4EFE6;padding:3px 9px;border-radius:20px;margin-top:6px" title="Made to order">⏳ Made to order · ${p.lead}</div>`
-          : `<div style="display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2px;color:#0B1F3A;background:#E0C992;padding:3px 9px;border-radius:20px;margin-top:6px" title="In stock, ready to ship">✓ Ready to ship · a few days</div>`}`}
+          : `<div style="display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2px;color:#0B1F3A;background:#E0C992;padding:3px 9px;border-radius:20px;margin-top:6px" title="In stock, ready to ship">✓ Ready to ship · a few days</div>`}
+        ${arrivalLine(p)}`}
         <div class="card-actions">
           <button class="card-act ${isWishlisted(p.id) ? "on" : ""}" type="button" data-wish="${p.id}" aria-pressed="${isWishlisted(p.id)}" aria-label="Save ${p.name} to your wishlist"
                   title="Save to wishlist" onclick="toggleWishlist('${p.id}', this)">${IC.heart}<span>${isWishlisted(p.id) ? "Saved" : "Save"}</span></button>
