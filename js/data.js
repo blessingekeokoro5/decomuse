@@ -15417,6 +15417,140 @@ const PRODUCTS = [
     supplier: "Luxo Living",
     desc: "Your kitchen just got comfier Settle into the Haleo Curved Bouclé Barstool and experience the perfect balance of modern design and inviting warmth. Wrapped in plush bouclé with softly contoured lines, it transforms your kitchen bench into a space made for relaxed Australian living—where everyday moments feel a touch more luxurious. Curved comfort at the perfect height With a supportive arched backrest and a 66.5cm seat height, Haleo makes long brekkies and late-night chats feel easy.",
     specs: { "Type": "Dining & kitchen > Dining > Bar Stools" } },
+
+  /* ===== Luxo Living — batch 5: TV units, coffee & console tables ===== */
+  { id: "lx49", name: "Gabrielle Modern TV Unit in Black", cat: "Living Room", room: "Living Room", price: 681, memberPrice: 613, sku: "SH-11297", tag: "New", ph: "", img: "assets/products/lx49.webp",
+    imgs: ["assets/products/lx49.webp", "assets/products/lx49-2.webp", "assets/products/lx49-3.webp", "assets/products/lx49-4.webp", "assets/products/lx49-5.webp"],
+    supplier: "Luxo Living",
+    desc: "A Living Room Upgrade That Does More Picture a TV unit that pulls the whole room together rather than adding to the clutter. The Gabrielle Modern TV Unit in Black combines sculptural design with smart storage in one practical piece, leaving your living area cleaner and calmer. Bold Look, Smarter Storage Layered curved detailing and a striking black finish give Gabrielle a refined modern edge in your entertainment space.",
+    specs: { "Type": "Living Room > Storage > TV Units & Entertainment Units" } },
+
+  { id: "lx50", name: "Vivienne 4 Door Fluted TV Unit in Oak", cat: "Living Room", room: "Living Room", price: 637, memberPrice: 573, sku: "SH-11298", tag: "New", ph: "", img: "assets/products/lx50.webp",
+    imgs: ["assets/products/lx50.webp", "assets/products/lx50-2.webp", "assets/products/lx50-3.webp", "assets/products/lx50-4.webp", "assets/products/lx50-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Bring Order to Your Living Room Swap clutter for calm with a living room that finally feels polished. The Vivienne 4 Door Fluted TV Unit in Oak gives you a clean, design-led look while hiding away the bits and pieces that tend to pile up around the TV. Statement Style That Works Hard With its sculptural fluted front and warm oak finish, Vivienne helps your space feel more refined and pulled together.",
+    specs: { "Type": "Living Room > Storage > TV Units & Entertainment Units" } },
+
+  { id: "lx51", name: "Melanie Slimline TV Unit in Black", cat: "Living Room", room: "Living Room", price: 703, memberPrice: 633, sku: "SH-11299", tag: "New", ph: "", img: "assets/products/lx51.webp",
+    imgs: ["assets/products/lx51.webp", "assets/products/lx51-2.webp", "assets/products/lx51-3.webp", "assets/products/lx51-4.webp", "assets/products/lx51-5.webp"],
+    supplier: "Luxo Living",
+    desc: "A Sleek Home for Screen Time Bring a calm, organised feel back to your living room. In a black finish, the Melanie Slimline TV Unit pulls your entertainment setup together with a streamlined look, practical storage and a low-profile design that keeps the space polished rather than cluttered. More Storage, Less Visual Mess Remotes, charging cables, gaming gear and everyday bits and pieces all have somewhere to go.",
+    specs: { "Type": "Living Room > Storage > TV Units & Entertainment Units" } },
+
+  { id: "lx52", name: "Galya Adjustable Entertainment Storage TV Unit in Teak", cat: "Living Room", room: "Living Room", price: 450, memberPrice: 405, sku: "SH-11300", tag: "New", ph: "", img: "assets/products/lx52.webp",
+    imgs: ["assets/products/lx52.webp", "assets/products/lx52-2.webp", "assets/products/lx52-3.webp", "assets/products/lx52-4.webp", "assets/products/lx52-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Galya Extendable Storage TV Unit - Teak Bring warmth and functionality to your living room with the Galya Extendable Storage TV Unit in Teak. This sleek and modern entertainment unit is designed to grow with your space, featuring an extendable length from 203cm to 269cm. The rich teak finish adds a timeless elegance, making it a versatile piece for both contemporary and classic interiors.",
+    specs: { "Type": "Living Room > Storage > TV Units & Entertainment Units" } },
+
+  { id: "lx53", name: "Nicole 120cm Coffee Table with Organic Curve in Walnut", cat: "Living Room", room: "Living Room", price: 230, memberPrice: 207, sku: "SH-11301", tag: "New", ph: "", img: "assets/products/lx53.webp",
+    imgs: ["assets/products/lx53.webp", "assets/products/lx53-2.webp", "assets/products/lx53-3.webp", "assets/products/lx53-4.webp", "assets/products/lx53-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Bring rich warmth and modern style into your living room with the Nicole 120cm Oval Coffee Table with organic curve in Walnut. Designed with smooth curves and a deep walnut finish, this table creates a statement piece that blends seamlessly with both contemporary and timeless interiors. Backed by Living’s 3-year warranty, it’s a centrepiece you can enjoy for years to come. Features Organic oval shape – sculptural silhouette that enhances both modern and classic spaces.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx54", name: "Adina 80cm Organic Curve Coffee Table in Travertine Look", cat: "Living Room", room: "Living Room", price: 406, memberPrice: 365, sku: "SH-11302", tag: "New", ph: "", img: "assets/products/lx54.webp",
+    imgs: ["assets/products/lx54.webp", "assets/products/lx54-2.webp", "assets/products/lx54-3.webp", "assets/products/lx54-4.webp", "assets/products/lx54-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Organic Stone Meets Polished Steel Make a contemporary statement with the Adina 80cm Organic Curve Coffee Table in Travertine Look. Its free-form sintered stone top flows in soft, asymmetric curves, creating a sculptural silhouette that looks different from every angle. A polished stainless-steel cylindrical base brings a striking material contrast, reflecting the surrounding space while giving Adina a clean, contemporary presence.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx55", name: "Naya Round Mother of Pearl Coffee Table in Mocha Cream", cat: "Living Room", room: "Living Room", price: 934, memberPrice: 841, sku: "SH-11303", tag: "New", ph: "", img: "assets/products/lx55.webp",
+    imgs: ["assets/products/lx55.webp", "assets/products/lx55-2.webp", "assets/products/lx55-3.webp", "assets/products/lx55-4.webp", "assets/products/lx55-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Turn Your Living Room into a Calm Escape Picture a coffee table that quietly anchors your space while adding a soft shimmer every time the light changes. The Naya Round Mother of Pearl Coffee Table in Mocha Cream brings a warm modern feel to your lounge making everyday moments on the sofa feel a little more styled and special. Warm Tones Modern Shape With its 106cm round top and subtle checkered mocha cream pattern Naya creates a generous practical surface that still feels light and elegant.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx56", name: "Verena Round Porcelain Coffee Table Set with Walnut Base", cat: "Living Room", room: "Living Room", price: 769, memberPrice: 692, sku: "SH-11304", tag: "New", ph: "", img: "assets/products/lx56.webp",
+    imgs: ["assets/products/lx56.webp", "assets/products/lx56-2.webp", "assets/products/lx56-3.webp", "assets/products/lx56-4.webp", "assets/products/lx56-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Versatile 2-Piece Nesting Design for Modern Living The Verena Round Porcelain Coffee Table Set with Walnut Base is engineered specifically for living rooms and lounge areas where versatile surface space and clean design are essential. Featuring a 2-piece nesting configuration , this coffee table set provides dual surface levels that can be grouped together or styled separately, delivering functional everyday utility without crowding your floor plan.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx57", name: "Valdor Signature Concrete Console Table in Travertine", cat: "Living Room", room: "Living Room", price: 725, memberPrice: 653, sku: "SH-11305", tag: "New", ph: "", img: "assets/products/lx57.webp",
+    imgs: ["assets/products/lx57.webp", "assets/products/lx57-2.webp", "assets/products/lx57-3.webp", "assets/products/lx57-4.webp", "assets/products/lx57-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Transform Your Hallway into a Feature Elevate your entryway with sculptural designer furniture. The Valdor Signature Concrete Console Table in Travertine brings high-end stone aesthetics with a soft cloud-like top and bold rounded base that transforms your home from the moment you enter. Stone-Look Beauty, Everyday Durability The travertine-inspired finish and solid concrete construction deliver both style and substance. Built to handle real life, from styling vases and art to holding keys and daily essentials.",
+    specs: { "Type": "Living Room > Storage > Hallway Furniture" } },
+
+  { id: "lx58", name: "Watson 2 Drawers Console Table Steel Legs White", cat: "Living Room", room: "Living Room", price: 307, memberPrice: 276, sku: "SH-11306", tag: "New", ph: "", img: "assets/products/lx58.webp",
+    imgs: ["assets/products/lx58.webp", "assets/products/lx58-2.webp", "assets/products/lx58-3.webp", "assets/products/lx58-4.webp", "assets/products/lx58-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Watson 2 Drawers Console Table with Steel Legs Are you looking for the sleekest yet most functional console table for your home? Look no further than our store. We have the most elegant model you’ve ever seen. Our Watson 2 drawers console table with steel legs promises to fit into the most compact spaces and create a stunning look. You will never have to worry about misplacing your keys, wallet, and other little essentials when you can store them safely in our console.",
+    specs: { "Type": "Dining & kitchen > Dining > Storage Buffets" } },
+
+  /* ===== Luxo Living — batch 6: dining + outdoor (fills thin pages) ===== */
+  { id: "lx59", name: "Anders 180cm Oval Wooden Dining Table in Walnut", cat: "Kitchenware", room: "Kitchenware", price: 901, memberPrice: 811, sku: "SH-11307", tag: "New", ph: "", img: "assets/products/lx59.webp",
+    imgs: ["assets/products/lx59.webp", "assets/products/lx59-2.webp", "assets/products/lx59-3.webp", "assets/products/lx59-4.webp", "assets/products/lx59-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Centralised Pedestal Architecture for Unobstructed Floor Plans The Anders 180cm Oval Wooden Dining Table in Walnut offers a space-optimizing solution for modern residential floor plans. By replacing traditional perimeter legs with a heavy-duty centralised pedestal base, this oval dining table maximizes under-table clearance and ensures unobstructed legroom for all users.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx60", name: "Xander 120cm Fluted Outdoor Concrete Dining Table in Ivory", cat: "Kitchenware", room: "Kitchenware", price: 1319, memberPrice: 1187, sku: "SH-11308", tag: "New", ph: "", img: "assets/products/lx60.webp",
+    imgs: ["assets/products/lx60.webp", "assets/products/lx60-2.webp", "assets/products/lx60-3.webp", "assets/products/lx60-4.webp", "assets/products/lx60-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Make every meal or gathering feel special with the Xander Round Outdoor Concrete Dining Table in elegant Ivory Waxed. Designed with a sleek round shape and crafted from a durable concrete and fibreglass blend, it delivers both style and strength. Perfect for indoor and outdoor use, this 4-seater table is ideal for patios, balconies, courtyards, or small dining spaces, and doubles beautifully as a foyer table or coffee table.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Concrete Tables" } },
+
+  { id: "lx61", name: "Gabi 120cm Marble Look Dining Table in Oak", cat: "Kitchenware", room: "Kitchenware", price: 791, memberPrice: 712, sku: "SH-11309", tag: "New", ph: "", img: "assets/products/lx61.webp",
+    imgs: ["assets/products/lx61.webp", "assets/products/lx61-2.webp", "assets/products/lx61-3.webp", "assets/products/lx61-4.webp", "assets/products/lx61-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Make everyday meals feel a little special with elegance Imagine your dining nook instantly lifting with the calm sophistication of a marble-look top and a sculptural base. The Gabi 120cm Marble Look Dining Table is the smart way to add both aesthetic appeal and functionality to compact spaces, bringing luxe style without the stress or upkeep of real stone. Dine big even in a smaller space Round, welcoming, and just the right size, Gabi comfortably seats four for weeknight dinners or Saturday brunch.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx62", name: "Gigi 180cm Oval Wooden Dining Table in Oak", cat: "Kitchenware", room: "Kitchenware", price: 923, memberPrice: 831, sku: "SH-11310", tag: "New", ph: "", img: "assets/products/lx62.webp",
+    imgs: ["assets/products/lx62.webp", "assets/products/lx62-2.webp", "assets/products/lx62-3.webp", "assets/products/lx62-4.webp", "assets/products/lx62-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Make Every Meal Feel Special Imagine your dining space instantly feeling more open, warm, and inviting. The Gigi 180cm Oval Wooden Dining Table, a beautifully crafted oak dining table, brings smooth curves and a refined timber look to your home, with a design that feels stylish yet effortless. If you’ve been craving a centrepiece that elevates everyday dinners and weekend catch-ups, the Gigi dining table is the clever solution.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx63", name: "Marciana 6 Seater Fluted Pillar Dining Table in Natural", cat: "Kitchenware", room: "Kitchenware", price: 670, memberPrice: 603, sku: "SH-11311", tag: "New", ph: "", img: "assets/products/lx63.webp",
+    imgs: ["assets/products/lx63.webp", "assets/products/lx63-2.webp", "assets/products/lx63-3.webp", "assets/products/lx63-4.webp", "assets/products/lx63-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Marciana 8 Seater Fluted Oval Dining Table Add style and function to your dining area with the Marciana 8 Seater Fluted Oval Dining Table ina natural wood finish. This table features a smooth surface veneer and a unique fluted design that makes it a standout in your dining space . It comfortably seats up to eight people, making it perfect for family dinners, special occasions, or creating the perfect setting for your next gathering.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx64", name: "Marta 120cm 4 Seater Round Dining Table in Walnut", cat: "Kitchenware", room: "Kitchenware", price: 406, memberPrice: 365, sku: "SH-11312", tag: "New", ph: "", img: "assets/products/lx64.webp",
+    imgs: ["assets/products/lx64.webp", "assets/products/lx64-2.webp", "assets/products/lx64-3.webp", "assets/products/lx64-4.webp", "assets/products/lx64-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Premium Curved Engineering for Fluid Traffic Flow and Everyday Dining The Marta 120cm Round Dining Table in Walnut is purpose-built to comfortably seat 4 people within a space-saving 120cm footprint—making it the ultimate dining solution for small apartments and compact dining nooks. By eliminating rigid corners and traditional outer legs, this 4 seater round dining table maximizes under-table clearance so all 4 diners enjoy unobstructed legroom without crowding your floor plan.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx65", name: "Evone 4 Seater Stone Outdoor Dining Set in Natural", cat: "Outdoor", room: "Outdoor", price: 1154, memberPrice: 1039, sku: "SH-11313", tag: "New", ph: "", img: "assets/products/lx65.webp",
+    imgs: ["assets/products/lx65.webp", "assets/products/lx65-2.webp", "assets/products/lx65-3.webp", "assets/products/lx65-4.webp", "assets/products/lx65-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Everyday dinners that feel like a holiday Imagine stepping outside to an outdoor space that looks styled and stays that way. The Evone 4-Seater Stone Outdoor Dining set in green combines a sleek stone tabletop with a sturdy aluminium frame, creating a smart upgrade to your outdoor dining furniture. Designed to withstand Aussie weather, this set offers both durability and easy living for your outdoor dining experience.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Dining Sets" } },
+
+  { id: "lx66", name: "Casara 7 Piece Outdoor Dining Set in White & Beige", cat: "Outdoor", room: "Outdoor", price: 2210, memberPrice: 1989, sku: "SH-11314", tag: "New", ph: "", img: "assets/products/lx66.webp",
+    imgs: ["assets/products/lx66.webp", "assets/products/lx66-2.webp", "assets/products/lx66-3.webp", "assets/products/lx66-4.webp", "assets/products/lx66-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Make the backyard your favourite dining room Imagine long lazy lunches that roll into starlit dinners without leaving home. The Casara 7 Piece Outdoor Dining Set turns your patio into a welcoming space for easy entertaining, with a smart aluminium frame and a timber look table top that laughs off Aussie weather. If you’ve been dreaming of a stylish outdoor dining set that’s comfy, durable and low maintenance, Casara is the clever choice.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Dining Sets" } },
+
+  { id: "lx67", name: "Tavari 6 Seater Curved Outdoor Dining Set in Light Grey", cat: "Outdoor", room: "Outdoor", price: 2485, memberPrice: 2237, sku: "SH-11315", tag: "New", ph: "", img: "assets/products/lx67.webp",
+    imgs: ["assets/products/lx67.webp", "assets/products/lx67-2.webp", "assets/products/lx67-3.webp", "assets/products/lx67-4.webp", "assets/products/lx67-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Tavari 6-Seater Curved Outdoor Dining Set in White and Light Grey Make your backyard the best place to gather with the Tavari 6-Seater Wicker Outdoor Dining Set . Strong, stylish, and comfortable, this set comes with an extra long 208cm gives you plenty of space to enjoy meals, parties, or quiet evenings with family and friends. Built with an aluminium frame, handwoven wicker, and soft cushions, Tavari is made from high quality materials that last.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Dining Sets" } },
+
+  { id: "lx68", name: "Vellora 4 Seater Wicker Outdoor Dining Set in Natural", cat: "Outdoor", room: "Outdoor", price: 1561, memberPrice: 1405, sku: "SH-11316", tag: "New", ph: "", img: "assets/products/lx68.webp",
+    imgs: ["assets/products/lx68.webp", "assets/products/lx68-2.webp", "assets/products/lx68-3.webp", "assets/products/lx68-4.webp", "assets/products/lx68-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Easy alfresco moments made beautiful Imagine your balcony or patio instantly feeling like a relaxed resort. The Vellora 4 Seater Wicker Outdoor Dining Set brings smart, durable design together with coastal style, so weeknight dinners and sunny weekend catch-ups feel effortless. Comfort that welcomes everyone in With gently curved chair backs and armrests plus plush cushions, Vellora makes long lunches and late-night chats comfortable from the first sit.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Dining Sets" } },
+
+  { id: "lx69", name: "Cabria 9 Piece Sintered Stone Outdoor Dining Set in Beige", cat: "Outdoor", room: "Outdoor", price: 2320, memberPrice: 2088, sku: "SH-11317", tag: "New", ph: "", img: "assets/products/lx69.webp",
+    imgs: ["assets/products/lx69.webp", "assets/products/lx69-2.webp", "assets/products/lx69-3.webp", "assets/products/lx69-4.webp", "assets/products/lx69-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Outdoor dining made effortless Imagine summer lunches that stretch into sunset without a single worry about spills, scuffs or sudden weather. The Cabria 9 piece sintered stone outdoor dining set brings style and smarts together, giving you a beautifully easy place to gather, relax and enjoy. This sintered stone outdoor dining set looks luxe and lives tough, so you can spend less time fussing and more time feasting.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Dining Sets" } },
+
+  { id: "lx70", name: "Colleen 8 Seater Timber Outdoor Dining Set in Beige", cat: "Outdoor", room: "Outdoor", price: 2958, memberPrice: 2662, sku: "SH-11318", tag: "New", ph: "", img: "assets/products/lx70.webp",
+    imgs: ["assets/products/lx70.webp", "assets/products/lx70-2.webp", "assets/products/lx70-3.webp", "assets/products/lx70-4.webp", "assets/products/lx70-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Extendable Acacia Timber Outdoor Dining Setting with Rope Chairs Transform your patio or alfresco area into an effortless entertaining hub. The Colleen 8 Seater Timber Outdoor Dining Set in Beige pairs a warm, solid acacia timber table with woven synthetic rope chairs, bringing modern resort-style elegance to long lunches and weekend barbecues.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Dining Sets" } },
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
