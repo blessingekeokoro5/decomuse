@@ -15125,6 +15125,79 @@ const PRODUCTS = [
     specs: { "Type": "Console Table", "Colour": "Oak", "Material": "MDF with oak laminated paper finish, MDF with matte lacquer finish, Particleboard with lam" },
     dims: { w: 120, d: 35, h: 80, unit: "cm", printed: true },
     care: "Wipe clean with a soft, dry or barely damp cloth and dry straight away. Use coasters and felt pads, lift rather than drag when moving it, and keep it out of direct sun." },
+
+  /* ===== Luxo Living — trade supplier, ready to ship ===== */
+  { id: "lx01", name: "Aviva Spill Resistant Fabric Ottoman in Light Beige", cat: "Living Room", room: "Living Room", price: 516, memberPrice: 464, sku: "SH-11249", tag: "New", ph: "", img: "assets/products/lx01.webp",
+    imgs: ["assets/products/lx01.webp", "assets/products/lx01-2.webp", "assets/products/lx01-3.webp", "assets/products/lx01-4.webp", "assets/products/lx01-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Oversized Light Beige Square Ottoman in Spill-Resistant Fabric Create an inviting sanctuary in your lounge with ultimate comfort and stress-free maintenance. Upholstered in premium OEKO-TEX STANDARD 100 certified spill-resistant fabric , the Aviva Spill Resistant Fabric Ottoman in Light Beige offers a soft, linen-look texture engineered to repel liquid mishaps while adding contemporary warmth to your living space.",
+    specs: { "Type": "Living Room > Sofas & Seating > Stools & Ottomans" } },
+
+  { id: "lx02", name: "Rita 4 Seater Electric Recliner Sofa in Light Taupe Brown", cat: "Living Room", room: "Living Room", price: 4267, memberPrice: 3840, sku: "SH-11250", tag: "New", ph: "", img: "assets/products/lx02.webp",
+    imgs: ["assets/products/lx02.webp", "assets/products/lx02-2.webp", "assets/products/lx02-3.webp", "assets/products/lx02-4.webp", "assets/products/lx02-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Four Seats, 62cm Deep, Powered at Both Ends Seat depth matters if you like to sit right back. The Rita 4 Seater Electric Recliner Sofa in Light Taupe Brown has 62cm-deep seats, which is deep enough to sit back into with your legs up rather than perching on the front edge. The left and right seats recline by button ; the middle two stay upright, so someone can sit normally beside a person who's fully stretched out. The middle module has a manual three-position headrest, and USB and USB-C ports are built in.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx03", name: "Talor 2 Seater Modular Curved Velvet Sofa in Cream White", cat: "Living Room", room: "Living Room", price: 1671, memberPrice: 1504, sku: "SH-11251", tag: "New", ph: "", img: "assets/products/lx03.webp",
+    imgs: ["assets/products/lx03.webp", "assets/products/lx03-2.webp", "assets/products/lx03-3.webp", "assets/products/lx03-4.webp", "assets/products/lx03-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Settle Into the Flexible Comfort of a Modular Sofa Imagine sinking into a sofa that feels like it’s been shaped just for you. The Talor Modular Curved Sofa wraps you in soft, performance velvet and deep cushioning, turning your lounge room into a calm, cosy retreat at the end of a long day. Deep Comfort in a 2 Seater Modular Curved Sofa With its elegant curved silhouette and generous seat depth, the Talor Two Seater is made for proper lounging – feet up, movie on, and drink within reach.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx04", name: "Vornell 6 Seater Performance Velvet Modular Chaise Sofa in Deep Mocha Brown", cat: "Living Room", room: "Living Room", price: 4091, memberPrice: 3682, sku: "SH-11252", tag: "New", ph: "", img: "assets/products/lx04.webp",
+    imgs: ["assets/products/lx04.webp", "assets/products/lx04-2.webp", "assets/products/lx04-3.webp", "assets/products/lx04-4.webp", "assets/products/lx04-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Turn your lounge into the comfy heart of home Imagine a sofa big enough for everyone – kids, friends, pets – without it feeling cramped or cluttered. The Vornell Performance Modular 6 Seater Corner Sofa in deep mocha brown wraps your living room in plush comfort, with a practical performance fabric that’s ready for real Australian living. Ultimate corner comfort With its generous 301 x 301cm footprint and deep 70cm seating, this Vornell configuration creates a true corner retreat where everyone gets a good spot.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx05", name: "Margot Oval Fluted Coffee Table with Storage in Natural", cat: "Living Room", room: "Living Room", price: 626, memberPrice: 563, sku: "SH-11253", tag: "New", ph: "", img: "assets/products/lx05.webp",
+    imgs: ["assets/products/lx05.webp", "assets/products/lx05-2.webp", "assets/products/lx05-3.webp", "assets/products/lx05-4.webp", "assets/products/lx05-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Beautiful from Every Angle. Storage from Both Sides. Bring texture, softness and clever storage to your living room with the Margot Oval Fluted Coffee Table in Natural . Its generous oval profile is wrapped in vertical fluted detailing, creating a sculptural centrepiece that looks considered from every angle. Two concealed drawers are positioned on opposite sides of the table, keeping remotes, coasters and everyday essentials neatly out of sight while remaining easy to reach from either side of your living space.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx06", name: "Fiona 120cm Curved Sintered Stone Coffee Table in Walnut", cat: "Living Room", room: "Living Room", price: 505, memberPrice: 455, sku: "SH-11254", tag: "New", ph: "", img: "assets/products/lx06.webp",
+    imgs: ["assets/products/lx06.webp", "assets/products/lx06-2.webp", "assets/products/lx06-3.webp", "assets/products/lx06-4.webp", "assets/products/lx06-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Sculptural Curves, Made for Everyday Living Make a statement with the Fiona 120cm Curved Sintered Stone Coffee Table in Walnut. Defined by its flowing organic profile and sculptural curved base, Fiona brings a softer, architectural presence to contemporary living spaces. A travertine-look sintered stone top adds beautiful natural-inspired texture while offering the durability needed for everyday life.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx07", name: "Daria 80cm Organic Curve Coffee Table in Travertine", cat: "Living Room", room: "Living Room", price: 406, memberPrice: 365, sku: "SH-11255", tag: "New", ph: "", img: "assets/products/lx07.webp",
+    imgs: ["assets/products/lx07.webp", "assets/products/lx07-2.webp", "assets/products/lx07-3.webp", "assets/products/lx07-4.webp", "assets/products/lx07-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Organic Form, Sculptural Presence Bring a softer statement to your living room with the Daria 80cm Organic Curve Coffee Table in Travertine . Inspired by the flowing shape of a flower, its distinctive curved tabletop creates a sculptural silhouette that changes as you move around the room. A travertine-look sintered stone surface brings warm, natural stone-inspired character to the design while offering the durability needed for everyday living.",
+    specs: { "Type": "Living Room > Tables > Coffee Tables" } },
+
+  { id: "lx08", name: "Matias 220cm Storage TV Unit in Oak", cat: "Living Room", room: "Living Room", price: 736, memberPrice: 662, sku: "SH-11256", tag: "New", ph: "", img: "assets/products/lx08.webp",
+    imgs: ["assets/products/lx08.webp", "assets/products/lx08-2.webp", "assets/products/lx08-3.webp", "assets/products/lx08-4.webp", "assets/products/lx08-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Make Your Living Room Feel More Polished Imagine a lounge room that finally feels organised, calm and pulled together. The Matias 220cm Storage TV Unit in Oak gives your entertainment area a design-led look while hiding away the everyday clutter that usually steals the spotlight. More Space, Less Clutter With its generous 220cm width, Matias is made for larger TVs and spacious living zones that need more than a basic stand.",
+    specs: { "Type": "Living Room > Storage > TV Units & Entertainment Units" } },
+
+  { id: "lx09", name: "Rowena 220cm Storage TV Unit in Oak", cat: "Living Room", room: "Living Room", price: 593, memberPrice: 534, sku: "SH-11257", tag: "New", ph: "", img: "assets/products/lx09.webp",
+    imgs: ["assets/products/lx09.webp", "assets/products/lx09-2.webp", "assets/products/lx09-3.webp", "assets/products/lx09-4.webp", "assets/products/lx09-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Your Living Room Just Got Smarter Imagine finally having a place for everything that usually clutters your entertainment area. The Rowena 220cm Storage TV Unit brings clean lines, hidden storage and a warm oak finish together, so your living room feels calmer, neater and more considered. Storage That Works Behind the Scenes From gaming gear and remotes to books, chargers and those bits you never know where to put, this TV unit keeps it all tucked away without sacrificing style.",
+    specs: { "Type": "Living Room > Storage > TV Units & Entertainment Units" } },
+
+  { id: "lx10", name: "Roux Round Mother of Pearl Console Table in Mocha Cream", cat: "Living Room", room: "Living Room", price: 1088, memberPrice: 979, sku: "SH-11258", tag: "New", ph: "", img: "assets/products/lx10.webp",
+    imgs: ["assets/products/lx10.webp", "assets/products/lx10-2.webp", "assets/products/lx10-3.webp", "assets/products/lx10-4.webp", "assets/products/lx10-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Elevate Your Entryway with the Roux Artisan Mother of Pearl Console Table The Roux Mother of Pearl Console Table brings instant designer style to your entryway, hallway, or living room. Its handcrafted mother of pearl inlay and mocha cream finish create a subtle shimmer that catches the light and elevates any space. Premium Entryway Furniture Australia Designed for sophisticated Australian living, this luxury mother of pearl console table in mocha cream brings timeless elegance to your entryway.",
+    specs: { "Type": "Living Room > Storage > Hallway Furniture" } },
+
+  { id: "lx11", name: "Sasha Arched Boucle Dining Chair in Black (Set of 2)", cat: "Kitchenware", room: "Kitchenware", price: 219, memberPrice: 197, sku: "SH-11259", tag: "New", ph: "", img: "assets/products/lx11.webp",
+    imgs: ["assets/products/lx11.webp", "assets/products/lx11-2.webp", "assets/products/lx11-3.webp", "assets/products/lx11-4.webp", "assets/products/lx11-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Bring Soft Style to Every Meal Imagine your dining area feeling sharper, cosier and instantly more polished the moment you pull up a chair. The Sasha Arched Boucle Dining Chair in Black blends rich texture with a sculptural silhouette, giving you an easy way to refresh everyday dining with comfort and character. Sharing the signature arched styling seen in the Gilles Dining Chair , Sasha brings a generously proportioned silhouette designed to feel spacious, inviting and easy to style.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Chairs" } },
+
+  { id: "lx12", name: "Audrey Curved Boucle Barstool Set of 2 in Cream White", cat: "Kitchenware", room: "Kitchenware", price: 219, memberPrice: 197, sku: "SH-11260", tag: "New", ph: "", img: "assets/products/lx12.webp",
+    imgs: ["assets/products/lx12.webp", "assets/products/lx12-2.webp", "assets/products/lx12-3.webp", "assets/products/lx12-4.webp", "assets/products/lx12-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Want Stylish Barstools That Are Actually Comfortable? It’s easy to find a nice-looking barstool, but comfort is often lacking. The Audrey Boucle Barstool Set fixes that—giving you both comfort and design in one practical package. Whether it’s breakfast or cocktails, these stools make every seat feel like the best in the house. Luxe Looks, Everyday Function Covered in plush cream white boucle and padded with thick foam, these barstools bring a soft, elevated feel to your home bar or kitchen counter.",
+    specs: { "Type": "Dining & kitchen > Dining > Bar Stools" } },
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
