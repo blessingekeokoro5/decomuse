@@ -65,50 +65,62 @@ const wrap = (inner, maxw) =>
 function welcomeHtml(name, code, discountLabel) {
   const S = SITE_URL;
   const A = S + "/assets/";
+  // SYS_Samira brand palette
+  const NAVY = "#0B1F3A", MID = "#061525", GOLD = "#C6A15B", CHAMP = "#E0C992",
+        IVORY = "#F4EFE6", CREAM = "#E8DCC8", TAUPE = "#A89886", BODY = "#4B4540";
   const gBtn = (url, label, dark) =>
-    `<a href="${url}" style="display:inline-block;background:${dark ? "#14365F" : "#C6A15B"};color:${dark ? "#fff" : "#0B1F3A"};text-decoration:none;padding:12px 26px;border-radius:30px;font-weight:bold;font-size:14px">${esc(label)}</a>`;
+    `<a href="${url}" style="display:inline-block;background:${dark ? NAVY : GOLD};color:${dark ? "#fff" : NAVY};text-decoration:none;padding:12px 26px;border-radius:30px;font-weight:bold;font-size:14px">${esc(label)}</a>`;
   const card = (img, title, sub, url) =>
-    `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;background:#F6EEE8;border-radius:14px;overflow:hidden;margin:0 0 12px">
+    `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;background:${IVORY};border-radius:14px;overflow:hidden;margin:0 0 12px">
       <tr>
         <td width="150" style="padding:0"><img src="${img}" width="150" alt="${esc(title)}" style="display:block;width:150px;height:140px;object-fit:cover"></td>
         <td style="padding:14px 16px;vertical-align:middle">
-          <div style="font:bold 17px Georgia,serif;color:#0B1F3A">${esc(title)}</div>
-          <div style="color:#6E675C;font-size:12.5px;margin:4px 0 11px;line-height:1.5">${esc(sub)}</div>
+          <div style="font:bold 17px Georgia,serif;color:${NAVY}">${esc(title)}</div>
+          <div style="color:${TAUPE};font-size:12.5px;margin:4px 0 11px;line-height:1.5">${esc(sub)}</div>
           ${gBtn(url, "Shop now", true)}
         </td>
       </tr>
     </table>`;
   const review = (stars, text, who) =>
-    `<div style="background:#fff;border:1px solid #E6DCC9;border-radius:12px;padding:16px 18px;margin:0 0 12px;text-align:center">
-      <div style="color:#C6A15B;font-size:17px;letter-spacing:2px">${"★".repeat(stars)}</div>
-      <div style="color:#0B1F3A;font-size:14px;margin:7px 0 4px">${esc(text)}</div>
-      <div style="color:#8a7f77;font-size:12px;font-weight:bold">${esc(who)}</div>
+    `<div style="background:#fff;border:1px solid ${CREAM};border-radius:12px;padding:16px 18px;margin:0 0 12px;text-align:center">
+      <div style="color:${GOLD};font-size:17px;letter-spacing:2px">${"★".repeat(stars)}</div>
+      <div style="color:${NAVY};font-size:14px;margin:7px 0 4px">${esc(text)}</div>
+      <div style="color:${TAUPE};font-size:12px;font-weight:bold">${esc(who)}</div>
     </div>`;
   const trust = (emoji, label, sub) =>
     `<td width="20%" style="padding:4px;text-align:center;vertical-align:top">
       <div style="font-size:22px;line-height:1">${emoji}</div>
       <div style="color:#fff;font-size:11px;font-weight:bold;margin-top:7px;line-height:1.3">${esc(label)}</div>
-      <div style="color:#B7C3D6;font-size:9.5px;line-height:1.35;margin-top:3px">${esc(sub)}</div>
+      <div style="color:${CHAMP};font-size:9.5px;line-height:1.35;margin-top:3px">${esc(sub)}</div>
     </td>`;
-  const soc = (url, label) => `<a href="${url}" style="color:#C6A15B;text-decoration:none;font-size:12px;white-space:nowrap">${esc(label)}</a>`;
-  const pay = (name, color) => `<span style="display:inline-block;background:#fff;color:${color};font-weight:bold;font-size:11px;padding:6px 10px;border-radius:5px;margin:3px">${esc(name)}</span>`;
+  const soc = (url, label) => `<a href="${url}" style="color:${GOLD};text-decoration:none;font-size:12px;white-space:nowrap">${esc(label)}</a>`;
+  const pay = (nm, color) => `<span style="display:inline-block;background:#fff;color:${color};font-weight:bold;font-size:11px;padding:6px 10px;border-radius:5px;margin:3px">${esc(nm)}</span>`;
 
   return wrap(`
-    ${brandHeader("Welcome to Samira Home Decor ✦", "Your " + discountLabel)}
+    <!-- brand header -->
+    <div style="text-align:center;padding:20px 0 12px">
+      <div style="font-family:Georgia,serif;font-size:27px;font-weight:bold;color:${NAVY}">Samira Home Decor</div>
+      <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:${TAUPE};margin-top:4px">Home décor for every house</div>
+    </div>
+    <!-- welcome banner -->
+    <div style="background:${NAVY};border-radius:14px;padding:24px;text-align:center;border-bottom:4px solid ${GOLD}">
+      <div style="font:22px Georgia,serif;color:#fff">Welcome to Samira Home Decor ✦</div>
+      <div style="color:${CHAMP};margin-top:7px;font-size:14px">Your ${esc(discountLabel)}</div>
+    </div>
     <!-- hero photo -->
     <img src="${A}hero.jpg" width="100%" alt="Samira Home Decor styled living space" style="display:block;width:100%;border-radius:14px;margin-top:16px">
     <!-- code -->
-    <p style="color:#5a5049;line-height:1.7;margin-top:22px">Hi${name ? " " + esc(name) : " there"},</p>
-    <p style="color:#5a5049;line-height:1.7">Thanks for joining the <strong>Samira Home Decor</strong> community. To help you get started, here's your exclusive <strong>${esc(discountLabel)}</strong> code:</p>
+    <p style="color:${BODY};line-height:1.7;margin-top:22px">Hi${name ? " " + esc(name) : " there"},</p>
+    <p style="color:${BODY};line-height:1.7">Thanks for joining the <strong>Samira Home Decor</strong> community. To help you get started, here's your exclusive <strong>${esc(discountLabel)}</strong> code:</p>
     <div style="text-align:center;margin:18px 0">
-      <div style="display:inline-block;background:#F6EEE8;border:2px dashed #C6A15B;border-radius:12px;padding:16px 34px;font:bold 26px/1 Georgia,serif;letter-spacing:4px;color:#14365F">${esc(code)}</div>
+      <div style="display:inline-block;background:${IVORY};border:2px dashed ${GOLD};border-radius:12px;padding:16px 34px;font:bold 26px/1 Georgia,serif;letter-spacing:4px;color:${NAVY}">${esc(code)}</div>
     </div>
     <div style="text-align:center;margin:18px 0">${gBtn(S + "/shop.html", "Claim your discount now")}</div>
-    <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">Enter <strong>${esc(code)}</strong> at checkout to apply it to your first order. Applies to your items (excludes shipping). One use per customer · T&amp;Cs apply.</p>
+    <p style="color:${TAUPE};font-size:12px;text-align:center;line-height:1.6">Enter <strong>${esc(code)}</strong> at checkout to apply it to your first order. Applies to your items (excludes shipping). One use per customer · T&amp;Cs apply.</p>
     <!-- subscriber perks -->
-    <div style="background:#F6EEE8;border-radius:14px;padding:18px 22px;margin:22px 0">
-      <div style="font:bold 17px Georgia,serif;color:#0B1F3A;text-align:center;margin-bottom:10px">As a subscriber, you'll also enjoy</div>
-      <ul style="color:#5a5049;font-size:14px;line-height:1.9;margin:0;padding-left:20px">
+    <div style="background:${IVORY};border-radius:14px;padding:18px 22px;margin:22px 0">
+      <div style="font:bold 17px Georgia,serif;color:${NAVY};text-align:center;margin-bottom:10px">As a subscriber, you'll also enjoy</div>
+      <ul style="color:${BODY};font-size:14px;line-height:1.9;margin:0;padding-left:20px">
         <li>Early access to new collections</li>
         <li>Exclusive offers and member-only events</li>
         <li>Styling ideas to elevate your spaces</li>
@@ -116,31 +128,31 @@ function welcomeHtml(name, code, discountLabel) {
       </ul>
     </div>
     <!-- category cards -->
-    <div style="font:bold 20px Georgia,serif;color:#0B1F3A;text-align:center;margin:26px 0 16px">Design the space you deserve</div>
+    <div style="font:bold 20px Georgia,serif;color:${NAVY};text-align:center;margin:26px 0 16px">Design the space you deserve</div>
     ${card(A + "hero-slide-1.jpg", "Living room bliss", "Sofas, lounges & coffee tables", S + "/living-room.html")}
     ${card(A + "cat-home-decor.jpg", "Home décor accents", "Vases, mirrors, wall art & candles", S + "/home-decor.html")}
     ${card(A + "about-collective.jpg", "Dining delights", "Tables, chairs & console sets", S + "/dining.html")}
     ${card(A + "hero-slide-7.jpg", "Bedroom sanctuary", "Styling and finishing touches", S + "/bedroom.html")}
-    <p style="text-align:center;color:#5a5049;font-size:14px;line-height:1.7;margin:22px 0">Cheers to creating a home you'll love,<br><strong>— The Samira Home Decor Team</strong></p>
+    <p style="text-align:center;color:${BODY};font-size:14px;line-height:1.7;margin:22px 0">Cheers to creating a home you'll love,<br><strong>— The Samira Home Decor Team</strong></p>
     <!-- reviews -->
-    <div style="font:bold 19px Georgia,serif;color:#0B1F3A;text-align:center;margin:26px 0 4px">What people say about us</div>
-    <p style="text-align:center;color:#8a7f77;font-size:13px;margin:0 0 16px">Real words from our shoppers</p>
+    <div style="font:bold 19px Georgia,serif;color:${NAVY};text-align:center;margin:26px 0 4px">What people say about us</div>
+    <p style="text-align:center;color:${TAUPE};font-size:13px;margin:0 0 16px">Real words from our shoppers</p>
     ${review(5, "Beautiful pieces and so well packaged — my living room feels brand new.", "Amara T.")}
     ${review(5, "Gorgeous quality and quick, friendly service. Will shop again!", "Jade M.")}
     <!-- referral: Share the savings -->
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;background:#F6EEE8;border-radius:14px;overflow:hidden;margin:22px 0">
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:separate;background:${IVORY};border-radius:14px;overflow:hidden;margin:22px 0">
       <tr>
-        <td width="160" style="padding:0"><img src="${A}about-studio.png" width="160" alt="Refer a friend" style="display:block;width:160px;height:172px;object-fit:cover"></td>
+        <td width="160" style="padding:0"><img src="${A}products/bt01-5.webp" width="160" alt="Samira Home Decor product" style="display:block;width:160px;height:172px;object-fit:cover"></td>
         <td style="padding:16px 18px;vertical-align:middle">
-          <div style="font:bold 19px Georgia,serif;color:#14365F">Share the savings</div>
-          <div style="font-weight:bold;color:#14365F;font-size:14px;margin:3px 0">Give $50, Get $50</div>
-          <div style="color:#6E675C;font-size:12.5px;margin:4px 0 12px;line-height:1.5">Give your friend $50 off their first order and get 1000 points for each successful referral.</div>
+          <div style="font:bold 19px Georgia,serif;color:${NAVY}">Share the savings</div>
+          <div style="font-weight:bold;color:${GOLD};font-size:14px;margin:3px 0">Give $50, Get $50</div>
+          <div style="color:${TAUPE};font-size:12.5px;margin:4px 0 12px;line-height:1.5">Give your friend $50 off their first order and get 1000 points for each successful referral.</div>
           ${gBtn(S + "/refer-a-friend.html", "Refer a friend")}
         </td>
       </tr>
     </table>
     <!-- trust row (navy band, icon columns) -->
-    <div style="background:#14365F;border-radius:14px;padding:20px 8px;margin:22px 0;border-bottom:4px solid #C6A15B">
+    <div style="background:${NAVY};border-radius:14px;padding:20px 8px;margin:22px 0;border-bottom:4px solid ${GOLD}">
       <div style="color:#fff;text-align:center;font:bold 15px Georgia,serif;margin-bottom:14px">Shop with confidence @ Samira Home Decor</div>
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
         ${trust("🎧", "Here to help", "Message us any time")}
@@ -151,22 +163,22 @@ function welcomeHtml(name, code, discountLabel) {
       </tr></table>
     </div>
     <!-- footer (navy band) -->
-    <div style="background:#14365F;border-radius:14px;padding:26px 22px;text-align:center">
-      <div style="font-family:Georgia,serif;font-size:21px;letter-spacing:2px;color:#fff">Samira Home Decor</div>
+    <div style="background:${MID};border-radius:14px;padding:26px 22px;text-align:center">
+      <div style="font-family:Georgia,serif;font-size:21px;letter-spacing:1px;color:#fff">Samira Home Decor</div>
       <div style="margin:12px 0 10px">
-        ${soc("https://www.instagram.com/samirahomedecor", "Instagram")} ·
-        ${soc("https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr", "Facebook")} ·
-        ${soc("https://www.tiktok.com/@sys_samira", "TikTok")} ·
+        ${soc("https://www.instagram.com/samirahomedecor", "Instagram")} <span style="color:${TAUPE}">·</span>
+        ${soc("https://www.facebook.com/share/17aCKqQ3ns/?mibextid=wwXIfr", "Facebook")} <span style="color:${TAUPE}">·</span>
+        ${soc("https://www.tiktok.com/@sys_samira", "TikTok")} <span style="color:${TAUPE}">·</span>
         ${soc("https://www.youtube.com/@sys_samira", "YouTube")}
       </div>
-      <div style="color:#B7C3D6;font-size:11px;margin-bottom:14px">© ${new Date().getFullYear()} Samira Home Decor. All rights reserved.</div>
+      <div style="color:${TAUPE};font-size:11px;margin-bottom:14px">© ${new Date().getFullYear()} Samira Home Decor. All rights reserved.</div>
       <div>
         ${pay("VISA", "#1a1f71")}${pay("Mastercard", "#c8102e")}${pay("AMEX", "#2e77bb")}${pay("afterpay", "#111111")}${pay("Zip", "#6a3fb5")}
       </div>
     </div>
     <!-- unsubscribe strip -->
-    <div style="text-align:center;color:#8a7f77;font-size:11px;line-height:1.8;padding:14px 8px">
-      No longer want to receive these emails? <a href="mailto:hello@samirahomedecor.com.au?subject=Unsubscribe" style="color:#8a7f77">Unsubscribe</a>.<br>
+    <div style="text-align:center;color:${TAUPE};font-size:11px;line-height:1.8;padding:14px 8px">
+      No longer want to receive these emails? <a href="mailto:hello@samirahomedecor.com.au?subject=Unsubscribe" style="color:${TAUPE}">Unsubscribe</a>.<br>
       Samira Home Decor · Australia · You subscribed at samirahomedecor.com.au
     </div>
   `, 600);
