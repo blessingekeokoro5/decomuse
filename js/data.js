@@ -15271,6 +15271,79 @@ const PRODUCTS = [
     supplier: "Luxo Living",
     desc: "Give Your Living Room That Calm Designer Feel Create a serene, designer-inspired sanctuary in your home with the Ravo 4 Seater Modular Sofa Set in Light Beige. This premium beige modular lounge is designed to make your living space feel lighter, softer, and more inviting from the moment you step inside. Combining an airy, modern aesthetic with superior comfort, this 4 seater sofa is the ultimate choice for those seeking both style and versatility.",
     specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  /* ===== Luxo Living — batch 3: armchairs, beds, dining (ready to ship) ===== */
+  { id: "lx25", name: "Nerida Boucle Swivel Dining Chair in Cream White", cat: "Living Room", room: "Living Room", price: 285, memberPrice: 257, sku: "SH-11273", tag: "New", ph: "", img: "assets/products/lx25.webp",
+    imgs: ["assets/products/lx25.webp", "assets/products/lx25-2.webp", "assets/products/lx25-3.webp", "assets/products/lx25-4.webp", "assets/products/lx25-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Cream Boucle Dining Chair That Swivels a Full 360 Degrees The Nerida Boucle Swivel Dining Chair in Cream White turns, which changes how a dining chair behaves in a room. Getting up doesn't mean shuffling the chair backwards and scraping the floor — you turn and stand. Sitting sideways to talk to someone doesn't mean twisting your back. And once the meal is over, you can turn, stand and push the chair back in at the table.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Chairs" } },
+
+  { id: "lx26", name: "Giselle Boucle Swivel Accent Chair in Cream White", cat: "Living Room", room: "Living Room", price: 417, memberPrice: 375, sku: "SH-11274", tag: "New", ph: "", img: "assets/products/lx26.webp",
+    imgs: ["assets/products/lx26.webp", "assets/products/lx26-2.webp", "assets/products/lx26-3.webp", "assets/products/lx26-4.webp", "assets/products/lx26-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Cream Boucle Swivel Chair That Arrives Ready to Sit In The Giselle Boucle Swivel Accent Chair in Cream White turns up fully assembled — no allen key, no instruction sheet, no chair that wobbles because one bolt never quite tightened. You unbox it, carry it to the corner, and sit down. The shape is worth the trip: a sculptural curved backrest that wraps rather than sits flat behind you, upholstered in boucle , a looped fabric with enough texture that a plain cream chair reads as a considered one.",
+    specs: { "Type": "Living Room > Sofas & Seating > Occasional Chairs" } },
+
+  { id: "lx27", name: "Ohio Curved Boucle Dining Chair Set of 2 in Cream & Oak", cat: "Living Room", room: "Living Room", price: 252, memberPrice: 227, sku: "SH-11275", tag: "New", ph: "", img: "assets/products/lx27.webp",
+    imgs: ["assets/products/lx27.webp", "assets/products/lx27-2.webp", "assets/products/lx27-3.webp", "assets/products/lx27-4.webp", "assets/products/lx27-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Soft curves and warm tones for effortless everyday dining Add comfort and calm to your dining space with the Ohio Bouclé Dining Chair Set in Cream with Oak finish legs. Upholstered in soft cream bouclé and designed with a modern curved backrest and armrests, these chairs offer a blend of relaxed elegance and everyday function in your dining room . The warm oak-toned base pairs beautifully with neutral interiors, making them an ideal choice for contemporary Australian homes.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Chairs" } },
+
+  { id: "lx28", name: "Lunari Bouclé Curved Accent Chair in Beige", cat: "Living Room", room: "Living Room", price: 439, memberPrice: 395, sku: "SH-11276", tag: "New", ph: "", img: "assets/products/lx28.webp",
+    imgs: ["assets/products/lx28.webp", "assets/products/lx28-2.webp", "assets/products/lx28-3.webp", "assets/products/lx28-4.webp", "assets/products/lx28-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Curve appeal comfort you can feel Imagine sinking into a cosy corner that looks as good as it feels. The Lunari Bouclé Curved Accent Chair wraps you in soft texture and smooth curves, bringing instant warmth and style to your space without the fuss. It is the smart little upgrade that makes every sit-down feel special.",
+    specs: { "Type": "Living Room > Sofas & Seating > Occasional Chairs" } },
+
+  { id: "lx29", name: "Brent Queen Gas Lift Bed in Cream White", cat: "Bedroom", room: "Bedroom", price: 791, memberPrice: 712, sku: "SH-11277", tag: "New", ph: "", img: "assets/products/lx29.webp",
+    imgs: ["assets/products/lx29.webp", "assets/products/lx29-2.webp", "assets/products/lx29-3.webp", "assets/products/lx29-4.webp", "assets/products/lx29-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Wake Up to a Calm, Clutter-Free Sanctuary Imagine lifting your mattress with one smooth, effortless motion to reveal a hidden storage oasis. The Brent Queen Gas Lift Bed in Cream White is the ultimate lifestyle upgrade, turning your bedroom into an organised retreat. Wrapped in on-trend bouclé, this bed combines high-end texture with the serious storage smarts required for modern Australian living. Smart Storage Wrapped in Soft Bouclé Style Reclaim your wardrobe space and eliminate under-bed clutter for good.",
+    specs: { "Type": "Bedroom > Bed frames > Queen" } },
+
+  { id: "lx30", name: "Nikias King Boucle Fabric Bed Frame in Cream White", cat: "Bedroom", room: "Bedroom", price: 758, memberPrice: 682, sku: "SH-11278", tag: "New", ph: "", img: "assets/products/lx30.webp",
+    imgs: ["assets/products/lx30.webp", "assets/products/lx30-2.webp", "assets/products/lx30-3.webp", "assets/products/lx30-4.webp", "assets/products/lx30-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Elevate your bedroom into a luxurious sanctuary with the Nikias Tufted Bouclé King Bed Frame. Designed to offer the perfect blend of style and comfort, this king-size bed features a plush tufted headboard wrapped in premium bouclé fabric, delivering a cloud-like sensation that invites relaxation. Built with a solid wood frame for exceptional durability and backed by a 5-year warranty, the Nikias bed frame promises long-lasting support and elegance.",
+    specs: { "Type": "Bedroom > Bed frames > King" } },
+
+  { id: "lx31", name: "Maren King Storage Bed Base Set in Light Warm Beige", cat: "Bedroom", room: "Bedroom", price: 813, memberPrice: 732, sku: "SH-11279", tag: "New", ph: "", img: "assets/products/lx31.webp",
+    imgs: ["assets/products/lx31.webp", "assets/products/lx31-2.webp", "assets/products/lx31-3.webp", "assets/products/lx31-4.webp", "assets/products/lx31-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Smart Storage Style for Your King Bedroom Imagine your bedroom feeling calm and clutter-free every single night. The Maren King Storage Bed Base Set in Light Warm Beige gives you that sophisticated boutique hotel look, combined with clever hidden storage that quietly tidies up the chaos of everyday life. It’s the ultimate foundation for a master suite that prioritizes both relaxation and organization.",
+    specs: { "Type": "Bedroom > Bed frames > King" } },
+
+  { id: "lx32", name: "Mara King Velvet Gas Lift Storage Bed Frame in Cream White", cat: "Bedroom", room: "Bedroom", price: 1132, memberPrice: 1019, sku: "SH-11280", tag: "New", ph: "", img: "assets/products/lx32.webp",
+    imgs: ["assets/products/lx32.webp", "assets/products/lx32-2.webp", "assets/products/lx32-3.webp", "assets/products/lx32-4.webp", "assets/products/lx32-5.webp"],
+    supplier: "Luxo Living",
+    desc: "A Luxury King-Sized Storage Bed Solution for Modern Australian Homes The Mara King Velvet Gas Lift Bed is the ultimate fusion of boutique hotel aesthetics and high-performance organisation. Wrapped in a crisp, elegant cream white velvet, this frame provides a bright, sophisticated anchor for your bedroom while offering a massive internal storage footprint.",
+    specs: { "Type": "Bedroom > Bed frames > King" } },
+
+  { id: "lx33", name: "Aeris 180cm Marble Look Dining Table With Wood Base in Oak", cat: "Kitchenware", room: "Kitchenware", price: 879, memberPrice: 791, sku: "SH-11281", tag: "New", ph: "", img: "assets/products/lx33.webp",
+    imgs: ["assets/products/lx33.webp", "assets/products/lx33-2.webp", "assets/products/lx33-3.webp", "assets/products/lx33-4.webp", "assets/products/lx33-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Luxe dining made easy Imagine weeknight dinners and long Sunday lunches feeling a little more effortless. The Aeris 180cm Marble Look Dining Table With Wood Base brings the elegant look of marble with the smarts of a durable, easy-care surface—so you can focus on good food and better company. Everyday luxe without the worry With a hard-wearing sintered stone top and a warm timber-look base, Aeris gives you the designer feel you love without the maintenance stress.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx34", name: "Faunus 200cm 8 Seater Dining Table in Natural", cat: "Kitchenware", room: "Kitchenware", price: 824, memberPrice: 742, sku: "SH-11282", tag: "New", ph: "", img: "assets/products/lx34.webp",
+    imgs: ["assets/products/lx34.webp", "assets/products/lx34-2.webp", "assets/products/lx34-3.webp", "assets/products/lx34-4.webp", "assets/products/lx34-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Faunus 8 Seater Dining Table with Pillar Legs – Natural Upgrade your dining space with the Faunus 8 Seater Dining Table with Pillar Legs, a statement piece from Luxo Living’s designer table collection. Designed for both elegance and durability, this designer luxe dining table is crafted from high-quality engineered wood with a smooth veneer finish, ensuring long-lasting beauty. Its oval shape and fluted pillar legs add a striking, contemporary touch to any dining area.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
+
+  { id: "lx35", name: "Nola Chenille Fabric Dining Chair in Warm Ivory", cat: "Kitchenware", room: "Kitchenware", price: 296, memberPrice: 266, sku: "SH-11283", tag: "New", ph: "", img: "assets/products/lx35.webp",
+    imgs: ["assets/products/lx35.webp", "assets/products/lx35-2.webp", "assets/products/lx35-3.webp", "assets/products/lx35-4.webp", "assets/products/lx35-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Ivory Chenille Dining Chair with Wraparound Arms The Nola Chenille Fabric Dining Chair in Warm Ivory is built for the part of dinner that happens after the plates are cleared. Wraparound arms curve out of the frame rather than being bolted on, so there's somewhere to rest your elbows through a second coffee, and the broad padded seat over high-density foam gives you room to shift position instead of sitting to attention.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Chairs" } },
+
+  { id: "lx36", name: "Eisha Velvet Dining Chair in Deep Mocha Brown (Set of 2)", cat: "Kitchenware", room: "Kitchenware", price: 362, memberPrice: 326, sku: "SH-11284", tag: "New", ph: "", img: "assets/products/lx36.webp",
+    imgs: ["assets/products/lx36.webp", "assets/products/lx36-2.webp", "assets/products/lx36-3.webp", "assets/products/lx36-4.webp", "assets/products/lx36-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Dress your dining in everyday luxury Imagine sitting down to a meal that feels a little more special every time. The Eisha Velvet Dining Chair set of 2 wraps you in soft velvet, comfy foam and effortless style, turning busy weeknight dinners and long Sunday lunches into moments you’ll actually want to linger over. Comfort you can sink into style you can show off With a supportive metal frame fully upholstered in plush velvet , Eisha blends modern lines with a welcoming feel.",
+    specs: { "Type": "Dining & kitchen > Dining > Dining Chairs" } },
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
