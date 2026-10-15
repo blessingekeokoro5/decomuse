@@ -15344,6 +15344,79 @@ const PRODUCTS = [
     supplier: "Luxo Living",
     desc: "Dress your dining in everyday luxury Imagine sitting down to a meal that feels a little more special every time. The Eisha Velvet Dining Chair set of 2 wraps you in soft velvet, comfy foam and effortless style, turning busy weeknight dinners and long Sunday lunches into moments you’ll actually want to linger over. Comfort you can sink into style you can show off With a supportive metal frame fully upholstered in plush velvet , Eisha blends modern lines with a welcoming feel.",
     specs: { "Type": "Dining & kitchen > Dining > Dining Chairs" } },
+
+  /* ===== Luxo Living — batch 4: outdoor, buffets, bedside, bar stools (ready to ship) ===== */
+  { id: "lx37", name: "Lola 5 Seater Timber Outdoor Lounge Set in Beige", cat: "Outdoor", room: "Outdoor", price: 1792, memberPrice: 1613, sku: "SH-11285", tag: "New", ph: "", img: "assets/products/lx37.webp",
+    imgs: ["assets/products/lx37.webp", "assets/products/lx37-2.webp", "assets/products/lx37-3.webp", "assets/products/lx37-4.webp", "assets/products/lx37-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Solid Acacia Wood Outdoor Lounge Setting with Nested Coffee Tables Turn your patio, deck, or balcony into an inviting open-air retreat. The Lola 5 Seater Timber Outdoor Lounge Set in Beige pairs natural solid acacia wood with warm, comfortable cushioning and a clever nested table design, creating a stylish focal point for casual entertaining.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Sofas & Lounges" } },
+
+  { id: "lx38", name: "Reuben 6 Seater Outdoor Lounge Set in Beige", cat: "Outdoor", room: "Outdoor", price: 3189, memberPrice: 2870, sku: "SH-11286", tag: "New", ph: "", img: "assets/products/lx38.webp",
+    imgs: ["assets/products/lx38.webp", "assets/products/lx38-2.webp", "assets/products/lx38-3.webp", "assets/products/lx38-4.webp", "assets/products/lx38-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Modern Aluminium Outdoor Corner Lounge Set with Ceramic Glass Table Transform your patio, balcony, or backyard into a sophisticated outdoor living area. The Reuben 6 Seater Outdoor Lounge Set in Beige combines a sleek powder-coated aluminium frame in a warm neutral beige with a durable ceramic tempered glass coffee table, bringing subtle contemporary elegance and resort-style relaxation to your home.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Sofas & Lounges" } },
+
+  { id: "lx39", name: "Bayo 6-Seater Aluminium Outdoor Set in Grey", cat: "Outdoor", room: "Outdoor", price: 1297, memberPrice: 1167, sku: "SH-11287", tag: "New", ph: "", img: "assets/products/lx39.webp",
+    imgs: ["assets/products/lx39.webp", "assets/products/lx39-2.webp", "assets/products/lx39-3.webp", "assets/products/lx39-4.webp", "assets/products/lx39-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Bayo 6 Seater Aluminium Outdoor Furniture Set Something that you can be proud of, our Bayo 6 Seater Aluminium Outdoor Furniture Set is designed for you to enjoy lounging outdoors! This outdoor furniture set promises a comfortable seating for up to 6 people. It is absolutely a crowd pleaser when having a party in your garden. Along with its thick 15cm seat and back cushion, it’s ready to serve you all day! Features: Comfortable seating for up to 6 people , perfect for relaxed patio seating and outdoor entertaining.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Sofas & Lounges" } },
+
+  { id: "lx40", name: "Brujas 4 Seater Wicker Outdoor Lounge Set in Light Beige", cat: "Outdoor", room: "Outdoor", price: 1484, memberPrice: 1336, sku: "SH-11288", tag: "New", ph: "", img: "assets/products/lx40.webp",
+    imgs: ["assets/products/lx40.webp", "assets/products/lx40-2.webp", "assets/products/lx40-3.webp", "assets/products/lx40-4.webp", "assets/products/lx40-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Brujas 4 Seater Wicker Outdoor Sofa Set Find the perfect outdoor sofa set for your lounge setting! Brujas 4 Seater Wicker Sofa Set is a perfect blend of style, comfort, and durability, designed to elevate your outdoor space. Crafted with meticulous attention to detail, this set effortlessly combines contemporary aesthetics with functional features to create an inviting seating arrangement.",
+    specs: { "Type": "Outdoor > Outdoor furniture > Outdoor Sofas & Lounges" } },
+
+  { id: "lx41", name: "Adrian 100cm Storage Sideboard in Black", cat: "Living Room", room: "Living Room", price: 505, memberPrice: 455, sku: "SH-11289", tag: "New", ph: "", img: "assets/products/lx41.webp",
+    imgs: ["assets/products/lx41.webp", "assets/products/lx41-2.webp", "assets/products/lx41-3.webp", "assets/products/lx41-4.webp", "assets/products/lx41-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Storage That Makes Your Space Feel Sorted Imagine walking into your dining room, hallway or living area and seeing everything tucked away and organised. The Adrian 100cm Storage Sideboard in Black brings that calm, put-together feeling. It pairs practical storage with a striking textured front and a bold black finish that sharpens the look of the room. Goodbye Clutter, Hello Style From dinnerware and table linen to everyday bits and pieces, Adrian helps you hide the mess without giving up on good looks.",
+    specs: { "Type": "Living Room > Storage > Sideboards & Buffets" } },
+
+  { id: "lx42", name: "Maris Storage Buffet in Oak", cat: "Living Room", room: "Living Room", price: 670, memberPrice: 603, sku: "SH-11290", tag: "New", ph: "", img: "assets/products/lx42.webp",
+    imgs: ["assets/products/lx42.webp", "assets/products/lx42-2.webp", "assets/products/lx42-3.webp", "assets/products/lx42-4.webp", "assets/products/lx42-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Modern Oak Storage Buffet with Concealed 3-Door Design Keep your home tidy, organised, and beautifully styled. The Maris Storage Buffet in Oak combines clean contemporary lines with generous concealed storage, providing a low-profile solution for decluttering dining rooms, living areas, or entryways.",
+    specs: { "Type": "Dining & kitchen > Dining > Storage Buffets" } },
+
+  { id: "lx43", name: "Viola 227cm Sintered Stone Storage Buffet in Natural", cat: "Living Room", room: "Living Room", price: 1451, memberPrice: 1306, sku: "SH-11291", tag: "New", ph: "", img: "assets/products/lx43.webp",
+    imgs: ["assets/products/lx43.webp", "assets/products/lx43-2.webp", "assets/products/lx43-3.webp", "assets/products/lx43-4.webp", "assets/products/lx43-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Bring Order to Grand Spaces Imagine walking into your dining or living area and seeing everything feel polished, spacious, and beautifully organised. The Viola 227cm Sintered Stone Storage Buffet in Natural is a statement piece that conceals everyday clutter, elevates your home, and delivers storage that works as hard as you do. With its extra-long 227cm design, the Viola Storage Buffet suits larger dining and living spaces with a clean, architectural profile.",
+    specs: { "Type": "Dining & kitchen > Dining > Storage Buffets" } },
+
+  { id: "lx44", name: "Melina 3 Drawer Fluted Bedside Table in Walnut", cat: "Bedroom", room: "Bedroom", price: 571, memberPrice: 514, sku: "SH-11292", tag: "New", ph: "", img: "assets/products/lx44.webp",
+    imgs: ["assets/products/lx44.webp", "assets/products/lx44-2.webp", "assets/products/lx44-3.webp", "assets/products/lx44-4.webp", "assets/products/lx44-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Wide Walnut Bedside Table with Fluted Detail and Soft-Close Storage The Melina 3 Drawer Fluted Bedside Table in Walnut measures a generous 70cm across, enough for a lamp, your phone on charge, a book and a glass of water side by side rather than stacked. Vertical fluting catches the light across the drawer fronts, while softly rounded corners keep the warm walnut profile contemporary rather than boxy. Behind the fronts sit three deep drawers for chargers, books, reading glasses and sleep essentials.",
+    specs: { "Type": "Bedroom > Bedside tables > White Bedside Tables" } },
+
+  { id: "lx45", name: "Tamara 3 Drawer Bedside Table in Walnut", cat: "Bedroom", room: "Bedroom", price: 494, memberPrice: 445, sku: "SH-11293", tag: "New", ph: "", img: "assets/products/lx45.webp",
+    imgs: ["assets/products/lx45.webp", "assets/products/lx45-2.webp", "assets/products/lx45-3.webp", "assets/products/lx45-4.webp", "assets/products/lx45-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Curved Walnut Bedside Table with Handleless Soft-Close Drawers The Tamara 3 Drawer Bedside Table in Walnut does away with knobs and pulls entirely. Integrated handles are cut into the drawer fronts, leaving an unbroken curved face, while the warm walnut tone keeps the whole piece rich and calm. Three drawers hold books, chargers, skincare and reading glasses, and the tabletop stays deep enough for a lamp and a glass of water side by side.",
+    specs: { "Type": "Bedroom > Bedside tables" } },
+
+  { id: "lx46", name: "Hamish 2 Drawer Fluted Bedside Table in White", cat: "Bedroom", room: "Bedroom", price: 164, memberPrice: 148, sku: "SH-11294", tag: "New", ph: "", img: "assets/products/lx46.webp",
+    imgs: ["assets/products/lx46.webp", "assets/products/lx46-2.webp", "assets/products/lx46-3.webp", "assets/products/lx46-4.webp", "assets/products/lx46-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Fluted style tidy nights Imagine your bedroom feeling calm and clutter free every night. The Hamish 50cm 2 Drawer Fluted Bedside Table in white gives you a stylish spot for your book phone and glass of water while hiding away the rest in smooth push open drawers. Compact design big bedroom upgrade This clever little bedside makes the most of its 50cm size offering generous storage without taking over your room.",
+    specs: { "Type": "Bedroom > Bedside tables > White Bedside Tables" } },
+
+  { id: "lx47", name: "Jeremi High Back Linen Bar Stool Set of 2 in Wheat Oak", cat: "Kitchenware", room: "Kitchenware", price: 340, memberPrice: 306, sku: "SH-11295", tag: "New", ph: "", img: "assets/products/lx47.webp",
+    imgs: ["assets/products/lx47.webp", "assets/products/lx47-2.webp", "assets/products/lx47-3.webp", "assets/products/lx47-4.webp", "assets/products/lx47-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Jeremi Linen Upholstered High-Back Bar Stool (Set of 2) – Wheat Oak Elevate your kitchen or bar area with the Jeremi Linen Upholstered High-Back Bar Stool (Set of 2), a perfect blend of designer luxe aesthetics and everyday comfort. Featuring wheat-coloured linen upholstery and hot-printed oak steel legs, these stylish stools add a sophisticated touch to any modern or contemporary space.",
+    specs: { "Type": "Dining & kitchen > Dining > Bar Stools" } },
+
+  { id: "lx48", name: "Haleo Curved Boucle Fabric Barstool in Cream White (Set of 2)", cat: "Kitchenware", room: "Kitchenware", price: 406, memberPrice: 365, sku: "SH-11296", tag: "New", ph: "", img: "assets/products/lx48.webp",
+    imgs: ["assets/products/lx48.webp", "assets/products/lx48-2.webp", "assets/products/lx48-3.webp", "assets/products/lx48-4.webp", "assets/products/lx48-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Your kitchen just got comfier Settle into the Haleo Curved Bouclé Barstool and experience the perfect balance of modern design and inviting warmth. Wrapped in plush bouclé with softly contoured lines, it transforms your kitchen bench into a space made for relaxed Australian living—where everyday moments feel a touch more luxurious. Curved comfort at the perfect height With a supportive arched backrest and a 66.5cm seat height, Haleo makes long brekkies and late-night chats feel easy.",
+    specs: { "Type": "Dining & kitchen > Dining > Bar Stools" } },
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
