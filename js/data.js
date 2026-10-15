@@ -15198,6 +15198,79 @@ const PRODUCTS = [
     supplier: "Luxo Living",
     desc: "Want Stylish Barstools That Are Actually Comfortable? It’s easy to find a nice-looking barstool, but comfort is often lacking. The Audrey Boucle Barstool Set fixes that—giving you both comfort and design in one practical package. Whether it’s breakfast or cocktails, these stools make every seat feel like the best in the house. Luxe Looks, Everyday Function Covered in plush cream white boucle and padded with thick foam, these barstools bring a soft, elevated feel to your home bar or kitchen counter.",
     specs: { "Type": "Dining & kitchen > Dining > Bar Stools" } },
+
+  /* ===== Luxo Living sofas — batch 2, ready to ship ===== */
+  { id: "lx13", name: "Parisa 3 Seater Tufted Velvet Sofa in Beige", cat: "Living Room", room: "Living Room", price: 1077, memberPrice: 969, sku: "SH-11261", tag: "New", ph: "", img: "assets/products/lx13.webp",
+    imgs: ["assets/products/lx13.webp", "assets/products/lx13-2.webp", "assets/products/lx13-3.webp", "assets/products/lx13-4.webp", "assets/products/lx13-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Spacious 3-Seater Comfort for Modern Living The Parisa 3 Seater Tufted Velvet Sofa in Beige is engineered specifically for living rooms and open-plan spaces where comfortable seating and sleek design are essential. At 230 cm wide , this 3-seater sofa comfortably accommodates three adults without overcrowding your room layout, delivering functional daily seating and an elevated interior look.",
+    specs: { "Type": "Living Room > Sofas & Seating" } },
+
+  { id: "lx14", name: "Pippa 4 Seater Electric Recliner Sofa in Light Taupe Brown", cat: "Living Room", room: "Living Room", price: 4179, memberPrice: 3761, sku: "SH-11262", tag: "New", ph: "", img: "assets/products/lx14.webp",
+    imgs: ["assets/products/lx14.webp", "assets/products/lx14-2.webp", "assets/products/lx14-3.webp", "assets/products/lx14-4.webp", "assets/products/lx14-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Four Seats, Powered Recliners at Both Ends The Pippa 4 Seater Electric Recliner Sofa in Light Taupe Brown puts electric recliners on the left and right seats , so two people can stretch out while the middle two stay upright. That suits a room where half the household is watching a film and the other half is eating dinner. The headrests are manual, not powered: they have three positions and are adjusted by hand rather than by button. Pippa seats four across a 310cm width, with each seat 77cm wide.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx15", name: "Norah 5 Seater Boucle Sofa Set with Armless Chairs in Chocolate Brown", cat: "Living Room", room: "Living Room", price: 2045, memberPrice: 1841, sku: "SH-11263", tag: "New", ph: "", img: "assets/products/lx15.webp",
+    imgs: ["assets/products/lx15.webp", "assets/products/lx15-2.webp", "assets/products/lx15-3.webp", "assets/products/lx15-4.webp", "assets/products/lx15-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Transform your living room into a stylish, cosy retreat with the Norah 5-Seater Boucle Sofa Set. This chocolate brown boucle sofa blends modern elegance with everyday comfort, featuring a solid wood frame and high-density fresh foam cushions for lasting support. Perfect for gatherings or relaxing evenings, it offers generous seating and arrives fully assembled — ready to enjoy. Comes with a warranty for peace of mind.",
+    specs: { "Type": "Living Room > Sofas & Seating" } },
+
+  { id: "lx16", name: "Rendon 3 Seater Performance Boucle Sofa in Cream White", cat: "Living Room", room: "Living Room", price: 1649, memberPrice: 1484, sku: "SH-11264", tag: "New", ph: "", img: "assets/products/lx16.webp",
+    imgs: ["assets/products/lx16.webp", "assets/products/lx16-2.webp", "assets/products/lx16-3.webp", "assets/products/lx16-4.webp", "assets/products/lx16-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Sink Into Sculptural Comfort Imagine coming home, kicking off your shoes, and melting straight into a sofa that feels like a warm hug. The Rendon 3 Seater Bouclé Sofa wraps your living room in soft curves and cosy texture, turning everyday lounging into a little luxury. With its pristine Cream White hue and sophisticated silhouette, the Rendon is the ultimate hero piece for any modern Australian home.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx17", name: "Janelle 191cm Curved Boucle 3 Seater Sofa in Cream White", cat: "Living Room", room: "Living Room", price: 1264, memberPrice: 1138, sku: "SH-11265", tag: "New", ph: "", img: "assets/products/lx17.webp",
+    imgs: ["assets/products/lx17.webp", "assets/products/lx17-2.webp", "assets/products/lx17-3.webp", "assets/products/lx17-4.webp", "assets/products/lx17-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Janelle 191cm Boucle 3-Seater Curved Sofa - Cream White Upgrade your home with the luxurious Janelle Bouclé 3-Seater Curved Sofa, designed to offer ultimate comfort and style. This spacious 191cm wide 3-seater lounge is perfect for modern, contemporary, and minimalist interiors. Upholstered in premium cream-white bouclé fabric, it provides both softness and elegance.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx18", name: "Brisol 3.5 Seater Velvet Curved Sofa in Cream White", cat: "Living Room", room: "Living Room", price: 1451, memberPrice: 1306, sku: "SH-11266", tag: "New", ph: "", img: "assets/products/lx18.webp",
+    imgs: ["assets/products/lx18.webp", "assets/products/lx18-2.webp", "assets/products/lx18-3.webp", "assets/products/lx18-4.webp", "assets/products/lx18-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Sophisticated Curves for Relaxed Australian Living Imagine sinking into a generous 3.5 seater sofa designed to embrace your room with its soft, organic lines. The Brisol Velvet Curved Sofa in Cream White wraps your living space in contemporary luxe, while the durable performance velvet fabric quietly takes care of the everyday bumps, spills, and family life.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx19", name: "Monica 4-Seater Electric Recliner Sofa in Light Greige", cat: "Living Room", room: "Living Room", price: 4223, memberPrice: 3801, sku: "SH-11267", tag: "New", ph: "", img: "assets/products/lx19.webp",
+    imgs: ["assets/products/lx19.webp", "assets/products/lx19-2.webp", "assets/products/lx19-3.webp", "assets/products/lx19-4.webp", "assets/products/lx19-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Four Seats, Two of Them Powered Recliners The Monica 4-Seater Electric Recliner Sofa in Light Greige reclines at both ends while the two middle seats stay upright. Two people can stretch right out with powered footrests and headrests , while anyone eating dinner or reading sits normally beside them. On a fully reclining sofa, everybody's committed to the same position. USB and USB-C ports are built in, so phones charge from the arm. Monica is built from three modules, each with an 83cm seat width.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx20", name: "Anica 3 Seater Boucle Sofa Bed in Cream White", cat: "Living Room", room: "Living Room", price: 747, memberPrice: 672, sku: "SH-11268", tag: "New", ph: "", img: "assets/products/lx20.webp",
+    imgs: ["assets/products/lx20.webp", "assets/products/lx20-2.webp", "assets/products/lx20-3.webp", "assets/products/lx20-4.webp", "assets/products/lx20-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Anica 3 Seater Boucle Sofa Bed – Cream White The Anica Three-Seater Boucle Sofa Bed in Cream White is a stunning accent to the interior design of any house. Select multipurpose furniture to maximize available space when decorating a studio or efficiency apartment. Since it is made specifically for these kinds of scenarios, the Anica 3-Seat Boucle Sofa Bed is the ideal addition to your home. This multipurpose sofa offers more than just comfortable seating.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx21", name: "Talven 5 Seater Modular Curved Boucle Sofa in Cream White", cat: "Living Room", room: "Living Room", price: 2782, memberPrice: 2504, sku: "SH-11269", tag: "New", ph: "", img: "assets/products/lx21.webp",
+    imgs: ["assets/products/lx21.webp", "assets/products/lx21-2.webp", "assets/products/lx21-3.webp", "assets/products/lx21-4.webp", "assets/products/lx21-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Sink Into Sculptural Comfort Imagine the whole family piling onto one seriously comfy sofa that actually fits everyone without feeling bulky. The Talven 5 Seater Modular Curved Bouclé Sofa wraps your living room in soft, sculptural curves and lounge-all-day comfort, turning movie nights and lazy Sundays into a luxury experience. In a pristine Cream White , it creates a bright, airy focal point that elevates any modern interior.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx22", name: "Corina 4 Seater Modular Boucle Sofa in Cream White", cat: "Living Room", room: "Living Room", price: 2650, memberPrice: 2385, sku: "SH-11270", tag: "New", ph: "", img: "assets/products/lx22.webp",
+    imgs: ["assets/products/lx22.webp", "assets/products/lx22-2.webp", "assets/products/lx22-3.webp", "assets/products/lx22-4.webp", "assets/products/lx22-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Corina 4 Seater Modular Boucle Sofa - Cream White If you have been looking for the best modular sofas you can get your hands on, you've come to the right place. Please look at our Corina 4-seater modular boucle sofa in cream white. Designed in separate components, this four-seater sofa can effortlessly come together as a whole in any shape you desire to befit the structure of your room.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx23", name: "Millie 3 Seater Spill-Resistant Modular Sofa in Light Beige", cat: "Living Room", room: "Living Room", price: 1363, memberPrice: 1227, sku: "SH-11271", tag: "New", ph: "", img: "assets/products/lx23.webp",
+    imgs: ["assets/products/lx23.webp", "assets/products/lx23-2.webp", "assets/products/lx23-3.webp", "assets/products/lx23-4.webp", "assets/products/lx23-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Transform your home with the Millie 3-Seater Fabric Modular Sofa in light beige – the ultimate blend of comfort, style, and flexibility. This modern modular sofa is perfect for family lounging or entertaining, offering deep seating and a soft linen finish that works beautifully in both classic and contemporary living spaces. Wrapped in premium stain resistant fabric, this beige fabric sofa is soft to the touch yet durable enough for everyday life.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
+
+  { id: "lx24", name: "Ravo Slipcover 4 Seater Modular Sofa Set in Light Beige", cat: "Living Room", room: "Living Room", price: 1957, memberPrice: 1761, sku: "SH-11272", tag: "New", ph: "", img: "assets/products/lx24.webp",
+    imgs: ["assets/products/lx24.webp", "assets/products/lx24-2.webp", "assets/products/lx24-3.webp", "assets/products/lx24-4.webp", "assets/products/lx24-5.webp"],
+    supplier: "Luxo Living",
+    desc: "Give Your Living Room That Calm Designer Feel Create a serene, designer-inspired sanctuary in your home with the Ravo 4 Seater Modular Sofa Set in Light Beige. This premium beige modular lounge is designed to make your living space feel lighter, softer, and more inviting from the moment you step inside. Combining an airy, modern aesthetic with superior comfort, this 4 seater sofa is the ultimate choice for those seeking both style and versatility.",
+    specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
 ];
 
 /* ---- Coming-soon placeholders ---------------------------------
