@@ -144,9 +144,9 @@ function welcomeHtml(name, code, discountLabel) {
       <tr>
         <td width="160" style="padding:0"><img src="${A}products/bt01-5.webp" width="160" alt="Samira Home Decor product" style="display:block;width:160px;height:172px;object-fit:cover"></td>
         <td style="padding:16px 18px;vertical-align:middle">
-          <div style="font:bold 19px Georgia,serif;color:${NAVY}">Share the savings</div>
-          <div style="font-weight:bold;color:${GOLD};font-size:14px;margin:3px 0">Give $50, Get $50</div>
-          <div style="color:${TAUPE};font-size:12.5px;margin:4px 0 12px;line-height:1.5">Give your friend $50 off their first order and get 1000 points for each successful referral.</div>
+          <div style="font:bold 19px Georgia,serif;color:${NAVY}">Refer a friend, get 40% off</div>
+          <div style="font-weight:bold;color:${GOLD};font-size:14px;margin:3px 0">40% off your next order</div>
+          <div style="color:${TAUPE};font-size:12.5px;margin:4px 0 12px;line-height:1.5">When your friend books a service or makes their first purchase, you get 40% off your next service or order.</div>
           ${gBtn(S + "/refer-a-friend.html", "Refer a friend")}
         </td>
       </tr>
