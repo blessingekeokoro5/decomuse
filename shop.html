@@ -87,7 +87,7 @@
 
   <script src="js/data.js?v=27"></script>
   <script src="js/components.js?v=41"></script>
-  <script src="js/cart.js?v=19"></script>
+  <script src="js/cart.js?v=20"></script>
   <script src="js/main.js?v=3"></script>
   <script>
     const CATS = ["All", "Home Décor", "Furniture", "Kitchen & Dining", "Bedroom & Bath", "Health & Wellness", "Fragrance", "Lifestyle", "Gifts", "Travel Essentials"];
@@ -147,8 +147,8 @@
         const q = searchQuery.toLowerCase();
         list = list.filter(p => (p.name + " " + p.cat + " " + (p.desc || "")).toLowerCase().includes(q));
       }
-      // Availability: ready-to-ship (no lead time) vs made-to-order (has a lead time)
-      if (availFilter === "ready") list = list.filter(p => !p.lead && p.cat !== "Packaging");
+      // Availability: ready-to-ship = Luxo Living (fast dispatch); made-to-order = has a lead time
+      if (availFilter === "ready") list = list.filter(p => p.supplier === "Luxo Living" && !p.lead);
       else if (availFilter === "made") list = list.filter(p => !!p.lead);
       shopList = applyShopFilters(list);
       shopShown = Math.min(PAGE_SIZE, list.length);
