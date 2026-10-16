@@ -752,7 +752,7 @@ function buildNewsletterPopup() {
     .nl-pop.open{display:flex}
     .nl-card{position:relative;background:#fff;border-radius:16px;overflow:hidden;max-width:760px;width:100%;display:grid;grid-template-columns:1fr;box-shadow:0 30px 80px rgba(0,0,0,.45);max-height:92vh}
     @media(min-width:640px){.nl-card{grid-template-columns:1fr 1fr}}
-    .nl-img{display:none;background:url('assets/hero.jpg') center/cover no-repeat;min-height:420px}
+    .nl-img{display:none;background:url('assets/products/bt01-5.webp') center/cover no-repeat;min-height:420px}
     @media(min-width:640px){.nl-img{display:block}}
     .nl-body{padding:38px 32px;display:flex;align-items:center;overflow:auto}
     .nl-x{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;background:rgba(11,31,58,.06);border-radius:50%;font-size:1.5rem;line-height:1;color:#0B1F3A;cursor:pointer;z-index:2}
