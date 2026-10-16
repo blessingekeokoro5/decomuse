@@ -499,7 +499,8 @@
       // Furniture viewer tools (below the image): dimensions · 3D in-room · 360°
       // Set SHOW_AR to true once real 3D models (assets/models/<id>.glb/.usdz) exist to bring back the "In your room" icon.
       const SHOW_AR = false;
-      const showTools = p.cat === "Furniture" || !!p.dims || !!p.spin360 || !!p.model3d;
+      const ROOMY = ["Furniture", "Living Room", "Bedroom", "Office", "Outdoor", "Kitchenware", "Home Décor", "Bathroom"];
+      const showTools = ROOMY.includes(p.cat) || ROOMY.includes(p.room) || !!p.dims || !!p.spin360 || !!p.model3d;
       const RULER_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="8" width="20" height="8" rx="1.5"/><path d="M6.5 8v3M10 8v4M13.5 8v3M17 8v4"/></svg>';
       const CUBE_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 2.5v9m0 0l8-4.5m-8 4.5L4 7"/></svg>';
       const SPIN_IC = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h4V4"/><path d="M21 16h-4v4"/><path d="M6.5 8.5a7 7 0 0 1 11.9 2"/><path d="M17.5 15.5a7 7 0 0 1-11.9-2"/></svg>';
