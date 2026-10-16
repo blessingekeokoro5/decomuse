@@ -41,6 +41,11 @@ exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return json(200, {});
   if (event.httpMethod !== "POST") return json(405, { ok: false, error: "Method Not Allowed" });
 
+  // Temporary diagnostic: POST {"diag":true} to see what this live build sees
+  if ((event.body || "").indexOf('"diag"') > -1) {
+    return json(200, { build: "diag-1", keyPresent: !!GEMINI_API_KEY, keyLen: (GEMINI_API_KEY || "").length, envKeys: Object.keys(process.env).filter(k => /GEMINI|BREVO/i.test(k)) });
+  }
+
   if (!GEMINI_API_KEY) {
     return json(200, { ok: false, error: "Room preview isn't switched on yet. Please check back soon." });
   }
