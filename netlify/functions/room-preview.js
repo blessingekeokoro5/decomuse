@@ -15,7 +15,7 @@
    Cost: ~US$0.04 per generated image. Nothing is stored.
    ============================================================ */
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
+const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GEMINI || "";
 const MODEL = "gemini-2.5-flash-image"; // image-capable (Nano Banana)
 
 function json(statusCode, obj) {
@@ -40,11 +40,6 @@ function parseDataUrl(s) {
 exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return json(200, {});
   if (event.httpMethod !== "POST") return json(405, { ok: false, error: "Method Not Allowed" });
-
-  // Temporary diagnostic: POST {"diag":true} to see what this live build sees
-  if ((event.body || "").indexOf('"diag"') > -1) {
-    return json(200, { build: "diag-1", keyPresent: !!GEMINI_API_KEY, keyLen: (GEMINI_API_KEY || "").length, envKeys: Object.keys(process.env).filter(k => /GEMINI|BREVO/i.test(k)) });
-  }
 
   if (!GEMINI_API_KEY) {
     return json(200, { ok: false, error: "Room preview isn't switched on yet. Please check back soon." });
@@ -127,4 +122,3 @@ exports.handler = async (event) => {
   }
 };
 
-// redeploy touch 1792112405 to pick up GEMINI_API_KEY
