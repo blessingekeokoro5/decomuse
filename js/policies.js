@@ -161,6 +161,7 @@ const POLICIES = {
 
       <h3>6. The Samira Stylera &amp; images</h3>
       <p>Photos uploaded to the Samira Stylera tool are processed to generate styling recommendations. In the current version, images are processed in your browser and are not stored on our servers.</p>
+      <p>Our "See It in Your Room" preview on product pages sends the room photo you upload, together with the product image, to a third-party AI image provider (Google) solely to generate your preview. We do not store your uploaded photo or the generated image on our servers, and the preview is for visualisation only.</p>
 
       <h3>7. Access, correction &amp; complaints</h3>
       <p>You may request access to, or correction of, the personal information we hold about you by contacting us. If you have a privacy concern, contact us first and we'll work to resolve it. You may also contact the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>.</p>
