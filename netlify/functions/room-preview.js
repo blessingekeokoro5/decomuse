@@ -121,3 +121,5 @@ exports.handler = async (event) => {
     return json(200, { ok: false, error: "Something went wrong creating your preview. Please try again." });
   }
 };
+
+// redeploy touch 1792112405 to pick up GEMINI_API_KEY
