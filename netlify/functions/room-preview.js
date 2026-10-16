@@ -102,7 +102,7 @@ exports.handler = async (event) => {
 
     if (!res.ok) {
       const detail = await res.text().catch(() => "");
-      if (res.status === 429) return json(200, { ok: false, error: "We're a little busy right now — please try again in a moment." });
+      if (res.status === 429) return json(200, { ok: false, error: "We're a little busy right now — please try again in a moment.", detail: detail.slice(0, 500) });
       return json(200, { ok: false, error: "We couldn't create your preview this time. Please try another photo.", detail: detail.slice(0, 300) });
     }
 
