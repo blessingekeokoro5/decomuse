@@ -42,7 +42,6 @@
   <section class="section">
     <div class="container">
       <div class="pills" id="shopPills"></div>
-      <div class="avail-toggle" id="availToggle" style="display:flex;gap:8px;flex-wrap:wrap;margin:12px 0 2px"></div>
       <div class="shop-bar">
         <span id="shopCount" class="shop-count"></span>
         <label class="shop-sort">Sort
@@ -88,7 +87,7 @@
   <script src="js/data.js?v=27"></script>
   <script src="js/components.js?v=42"></script>
   <script src="js/cart.js?v=20"></script>
-  <script src="js/main.js?v=3"></script>
+  <script src="js/main.js?v=4"></script>
   <script>
     const CATS = ["All", "Home Décor", "Furniture", "Kitchen & Dining", "Bedroom & Bath", "Health & Wellness", "Fragrance", "Lifestyle", "Gifts", "Travel Essentials"];
     const CAT_GROUPS = {
@@ -99,21 +98,7 @@
     };
     let currentCat = "All";
     let searchQuery = "";
-    let availFilter = ""; // "", "ready" or "made"
     const PAGE_SIZE = 12;
-
-    const AVAIL = [
-      { v: "", label: "All availability" },
-      { v: "ready", label: "✓ Ready to ship (a few days)" },
-      { v: "made", label: "⏳ Made to order" },
-    ];
-    function renderAvailToggle() {
-      const el = document.getElementById("availToggle");
-      if (!el) return;
-      el.innerHTML = AVAIL.map(a =>
-        `<button class="pill ${a.v === availFilter ? 'active' : ''}" onclick="setAvail('${a.v}')">${a.label}</button>`).join("");
-    }
-    function setAvail(v) { availFilter = v; renderAvailToggle(); filterShop(currentCat); }
     let shopList = [];
     let shopShown = 0;
 
@@ -147,16 +132,14 @@
         const q = searchQuery.toLowerCase();
         list = list.filter(p => (p.name + " " + p.cat + " " + (p.desc || "")).toLowerCase().includes(q));
       }
-      // Availability: ready-to-ship = Luxo Living (fast dispatch); made-to-order = has a lead time
-      if (availFilter === "ready") list = list.filter(p => p.supplier === "Luxo Living" && !p.lead);
-      else if (availFilter === "made") list = list.filter(p => !!p.lead);
+      // Price, availability (Ready to ship / Made to order) and sort come from the shared controls
       shopList = applyShopFilters(list);
-      shopShown = Math.min(PAGE_SIZE, list.length);
+      shopShown = Math.min(PAGE_SIZE, shopList.length);
       paintShop();
       const c = document.getElementById("shopCount");
-      if (c) c.textContent = `${list.length} ${list.length === 1 ? "piece" : "pieces"}`;
-      document.getElementById("shopEmpty").style.display = list.length ? "none" : "block";
-      document.getElementById("shopGrid").style.display = list.length ? "grid" : "none";
+      if (c) c.textContent = `${shopList.length} ${shopList.length === 1 ? "piece" : "pieces"}`;
+      document.getElementById("shopEmpty").style.display = shopList.length ? "none" : "block";
+      document.getElementById("shopGrid").style.display = shopList.length ? "grid" : "none";
     }
 
     // Honour ?cat= from mega-menu; map loosely to our demo categories
@@ -164,9 +147,11 @@
     const wanted = params.get("cat");
     searchQuery = (params.get("q") || "").trim();
     if (wanted && CATS.includes(wanted)) currentCat = wanted;
+    // Nav "Ready to Ship" link (?avail=ready) pre-selects the shared Availability control
     const wantAvail = (params.get("avail") || "").toLowerCase();
-    if (wantAvail === "ready" || wantAvail === "made") availFilter = wantAvail;
-    renderAvailToggle();
+    if ((wantAvail === "ready" || wantAvail === "made") && typeof shopView === "function" && typeof saveShopView === "function") {
+      const sv = shopView(); sv.stock = wantAvail; saveShopView(sv);
+    }
     renderShopControls(function () { filterShop(currentCat); });
     filterShop(currentCat);
     initReveal();

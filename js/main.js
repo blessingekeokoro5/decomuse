@@ -429,7 +429,8 @@ function renderShopControls(repaint) {
     <label class="shop-tool">Availability
       <select id="shopStock">
         <option value="all">All items</option>
-        <option value="in">In stock</option>
+        <option value="ready">✓ Ready to ship</option>
+        <option value="made">⏳ Made to order</option>
       </select>
     </label>
     <label class="shop-tool">Sort
@@ -495,7 +496,10 @@ function applyShopFilters(list) {
   // Match the price the card actually shows, not the member price.
   if (isFinite(min)) out = out.filter(p => (p.price || p.memberPrice || 0) >= min);
   if (isFinite(max)) out = out.filter(p => (p.price || p.memberPrice || 0) <= max);
-  if (v.stock === "in") out = out.filter(p => !p.comingSoon);
+  // Availability: ready-to-ship = Luxo Living (fast dispatch) within this category; made-to-order = has a lead time
+  if (v.stock === "ready") out = out.filter(p => p.supplier === "Luxo Living" && !p.lead);
+  else if (v.stock === "made") out = out.filter(p => !!p.lead);
+  else if (v.stock === "in") out = out.filter(p => !p.comingSoon); // legacy value
   updateDeliveryNote(out);
   if (v.sort === "price-asc") out.sort((a, b) => (a.price || 0) - (b.price || 0));
   else if (v.sort === "price-desc") out.sort((a, b) => (b.price || 0) - (a.price || 0));
