@@ -35,6 +35,13 @@ exports.handler = async (event) => {
   const list = await brevo("contacts/lists/" + LIST_ID, "GET");
   out.list = list.ok ? { name: list.data.name, total: list.data.totalSubscribers, blacklisted: list.data.totalBlacklisted } : { error: list.status, detail: list.data };
 
+  // 1b) the contact itself
+  const email = (event.queryStringParameters && event.queryStringParameters.email) || "blessingekeokoro5@gmail.com";
+  const contact = await brevo("contacts/" + encodeURIComponent(email), "GET");
+  out.contact = contact.ok
+    ? { email: contact.data.email, emailBlacklisted: contact.data.emailBlacklisted, listIds: contact.data.listIds, listUnsubscribed: contact.data.listUnsubscribed }
+    : { error: contact.status, detail: contact.data };
+
   // 2) verified senders
   const senders = await brevo("senders", "GET");
   out.senders = senders.ok ? (senders.data.senders || []).map(s => ({ email: s.email, active: s.active })) : { error: senders.status, detail: senders.data };
