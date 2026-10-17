@@ -12,7 +12,6 @@
    Schedule: Wednesday 22:30 UTC  ≈ Thursday ~9am Adelaide.
    ============================================================ */
 
-const { schedule } = require("@netlify/functions");
 const vm = require("vm");
 
 const BREVO_API_KEY = process.env.BREVO_API_KEY || "";
@@ -165,4 +164,4 @@ const run = async () => {
   }
 };
 
-exports.handler = schedule("30 22 * * 3", run);
+exports.handler = run; // scheduled via netlify.toml ([functions."weekly-email"] schedule)
