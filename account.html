@@ -125,6 +125,9 @@
   <script>
     let accMode = "signup";
     if (location.hash === "#login") accMode = "login";
+    // Passwordless (one-time code) login state
+    let authStep = "email";   // "email" | "code"
+    let authEmail = "", authName = "";
 
     function render() {
       const acc = getAccount();
@@ -155,48 +158,151 @@
       initReveal();
     }
 
-    function setMode(m){ accMode = m; render(); }
+    function setMode(m){ accMode = m; authStep = "email"; render(); }
 
     function renderForm() {
       const el = document.getElementById("accForm");
-      const eye = `<button type="button" class="pw-toggle" aria-label="Show password" onclick="togglePw(this)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></button>`;
       const legal = `<p class="auth-legal">By continuing with Google, Apple or email you agree to our <a href="policy.html?doc=terms">Terms &amp; Privacy Policy</a>, and to receiving marketing communications from us. Unsubscribe at any time.</p>`;
+      if (authStep === "code") { renderCodeStep(el); return; }
       if (accMode === "signup") {
         el.innerHTML = `
           <div style="background:var(--blush);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px;font-size:0.9rem;color:var(--rose-deep)">
             🎉 Join free and get <strong>10% off your first order</strong> plus member perks.
           </div>
-          <form onsubmit="return doSignup(event)">
-            <div class="field"><label>Full name</label><input id="suName" required></div>
-            <div class="field"><label>Email</label><input id="suEmail" type="email" required></div>
-            <div class="field"><label>Create a password</label><div class="pw-wrap"><input id="suPass" type="password" required>${eye}</div></div>
-            <button type="submit" class="btn btn--primary btn--block">Create my account &amp; get 10% off</button>
+          <form onsubmit="return requestCode(event)">
+            <div class="field"><label>Full name</label><input id="suName" autocomplete="name" required></div>
+            <div class="field"><label>Email</label><input id="authEmailInput" type="email" autocomplete="email" required></div>
+            <button type="submit" class="btn btn--primary btn--block" id="authSendBtn">Email me a login code</button>
+            <p class="form-note" style="text-align:center;margin-top:12px">No password needed — we'll email you a one-time code to sign in.</p>
           </form>
           ${legal}`;
       } else {
         el.innerHTML = `
-          <form onsubmit="return doLogin(event)">
-            <div class="field"><label>Email</label><input id="liEmail" type="email" required></div>
-            <div class="field"><label>Password</label><div class="pw-wrap"><input id="liPass" type="password" required>${eye}</div></div>
-            <a class="forgot-link" href="#" onclick="forgotPw();return false;">Forgot password?</a>
-            <button type="submit" class="btn btn--primary btn--block">Sign in</button>
-            <p class="form-note" style="text-align:center;margin-top:12px">New here? <a href="#" onclick="setMode('signup');return false;">Create an account</a> for 10% off.</p>
+          <form onsubmit="return requestCode(event)">
+            <div class="field"><label>Email</label><input id="authEmailInput" type="email" autocomplete="email" required></div>
+            <button type="submit" class="btn btn--primary btn--block" id="authSendBtn">Email me a login code</button>
+            <p class="form-note" style="text-align:center;margin-top:12px">No password needed — we'll email you a one-time code. New here? <a href="#" onclick="setMode('signup');return false;">Create an account</a> for 10% off.</p>
           </form>
           ${legal}`;
       }
     }
 
-    // Show/hide password
-    function togglePw(btn) {
-      const input = btn.parentElement.querySelector("input");
-      const show = input.type === "password";
-      input.type = show ? "text" : "password";
-      btn.setAttribute("aria-label", show ? "Hide password" : "Show password");
-      btn.style.color = show ? "var(--rose-deep)" : "";
+    function renderCodeStep(el) {
+      el.innerHTML = `
+        <div style="background:var(--blush);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:20px;font-size:0.9rem;color:var(--rose-deep)">
+          ✉️ We've emailed a 6-digit code to <strong>${authEmail}</strong>. Enter it below to sign in. It expires in 10 minutes.
+        </div>
+        <form onsubmit="return verifyCode(event)">
+          <div class="field"><label>6-digit code</label>
+            <input id="authCodeInput" inputmode="numeric" autocomplete="one-time-code" maxlength="6" pattern="\\d{6}" required
+                   style="letter-spacing:.34em;font-size:1.3rem;text-align:center;font-family:'Jost',monospace"></div>
+          <button type="submit" class="btn btn--primary btn--block" id="authVerifyBtn">Verify &amp; sign in</button>
+          <div id="authMsg" style="font-size:0.86rem;margin-top:10px;text-align:center"></div>
+          <p class="form-note" style="text-align:center;margin-top:12px">
+            <a href="#" onclick="resendCode();return false;">Resend code</a> &nbsp;·&nbsp;
+            <a href="#" onclick="backToEmail();return false;">Use a different email</a>
+          </p>
+        </form>`;
     }
-    function forgotPw() {
-      const email = prompt("Enter your account email and we'll send you a reset link:");
-      if (email) showToast("If an account exists for " + email + ", a reset link is on its way ✉️");
+
+    function authSetMsg(cls, msg) {
+      const m = document.getElementById("authMsg");
+      if (m) { m.style.color = cls === "err" ? "var(--rose-deep)" : "var(--muted)"; m.textContent = msg; }
+    }
+
+    // Step 1 — send a one-time code to the shopper's email
+    async function requestCode(e) {
+      e.preventDefault();
+      const email = (document.getElementById("authEmailInput").value || "").trim();
+      if (!/.+@.+\..+/.test(email)) { showToast("Please enter a valid email"); return false; }
+      const nameEl = document.getElementById("suName");
+      authName = nameEl ? (nameEl.value || "").trim() : "";
+      authEmail = email;
+      const btn = document.getElementById("authSendBtn");
+      if (btn) { btn.disabled = true; btn.textContent = "Sending code…"; }
+      try {
+        const r = await fetch("/.netlify/functions/auth-request-code", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, name: authName }),
+        });
+        const j = await r.json().catch(() => ({}));
+        if (r.status === 429) { showToast("Too many codes requested — please wait a few minutes."); resetSendBtn(); return false; }
+        if (r.status === 503) { showToast("Login by email isn't available right now. Please try again later."); resetSendBtn(); return false; }
+        if (!r.ok || !j.ok) throw new Error("fail");
+        authStep = "code"; renderForm();
+        setTimeout(() => { const c = document.getElementById("authCodeInput"); if (c) c.focus(); }, 50);
+      } catch (err) {
+        showToast("Couldn't send the code. Please try again.");
+        resetSendBtn();
+      }
+      return false;
+    }
+    function resetSendBtn() { const b = document.getElementById("authSendBtn"); if (b) { b.disabled = false; b.textContent = "Email me a login code"; } }
+
+    // Step 2 — verify the code and sign in
+    async function verifyCode(e) {
+      e.preventDefault();
+      const code = (document.getElementById("authCodeInput").value || "").trim();
+      if (!/^\d{6}$/.test(code)) { authSetMsg("err", "Enter the 6-digit code from your email."); return false; }
+      const btn = document.getElementById("authVerifyBtn");
+      if (btn) { btn.disabled = true; btn.textContent = "Verifying…"; }
+      try {
+        const r = await fetch("/.netlify/functions/auth-verify-code", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: authEmail, code }),
+        });
+        const j = await r.json().catch(() => ({}));
+        if (r.status === 401) { authSetMsg("err", "That code isn't right" + (typeof j.remaining === "number" ? ` — ${j.remaining} attempt(s) left.` : ".")); resetVerifyBtn(); return false; }
+        if (r.status === 400 && (j.error === "expired" || j.error === "no_code")) { authSetMsg("err", "That code has expired. Please request a new one."); resetVerifyBtn(); return false; }
+        if (r.status === 429) { authSetMsg("err", "Too many attempts. Please request a new code."); resetVerifyBtn(); return false; }
+        if (!r.ok || !j.ok) throw new Error("fail");
+        try { localStorage.setItem("shd_auth_token", j.token || ""); } catch (_) {}
+        finishLogin(j.email || authEmail, j.name || authName);
+      } catch (err) {
+        authSetMsg("err", "Couldn't verify right now. Please try again.");
+        resetVerifyBtn();
+      }
+      return false;
+    }
+    function resetVerifyBtn() { const b = document.getElementById("authVerifyBtn"); if (b) { b.disabled = false; b.textContent = "Verify & sign in"; } }
+
+    async function resendCode() {
+      if (!authEmail) { backToEmail(); return; }
+      try {
+        const r = await fetch("/.netlify/functions/auth-request-code", {
+          method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: authEmail, name: authName }),
+        });
+        if (r.status === 429) { showToast("Please wait a moment before requesting another code."); return; }
+        if (!r.ok) throw new Error("fail");
+        showToast("New code sent ✉️");
+      } catch (e) { showToast("Couldn't resend the code. Please try again."); }
+    }
+    function backToEmail() { authStep = "email"; renderForm(); }
+
+    // Build (or reload) the verified member account after a successful code check
+    function finishLogin(email, name) {
+      const existing = getAccount() || {};
+      const sameUser = existing.email && existing.email.toLowerCase() === String(email).toLowerCase();
+      const base = sameUser ? existing : {};
+      const acc = Object.assign({}, base, {
+        email,
+        name: name || base.name || "",
+        provider: "Email",
+        verified: true,
+        member: true,
+        memberSince: base.memberSince || todayAU(),
+        coupon: base.coupon || "WELCOME10",
+        memberNo: base.memberNo || genMemberNo(),
+        orders: base.orders || [],
+        points: base.points || 0,
+        vouchers: base.vouchers || [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }],
+      });
+      saveAccount(acc);
+      try { localStorage.setItem("dm_member", "1"); } catch (_) {}
+      authStep = "email";
+      showToast("You're signed in ✦");
+      render();
     }
 
     // ---- Continue with Google / Apple ----
@@ -232,31 +338,6 @@
         try { localStorage.setItem("dm_member", "1"); } catch (err) {}
         showToast("Signed in with Google 🎉"); render();
       } catch (e) { showToast("Google sign-in could not be completed"); }
-    }
-
-    function doSignup(e) {
-      e.preventDefault();
-      const name = document.getElementById("suName").value.trim();
-      const email = document.getElementById("suEmail").value.trim();
-      saveAccount({ name, email, member: true, memberSince: todayAU(), coupon: "WELCOME10", memberNo: genMemberNo(), orders: [],
-        points: 0, vouchers: [{ code: genVoucherCode(), amount: 10, label: "Welcome voucher" }] });
-      try { localStorage.setItem("dm_member","1"); } catch(err){}
-      showToast("Welcome to Samira Home Decor! Your 10% code is ready 🎉");
-      render();
-      return false;
-    }
-    function doLogin(e) {
-      e.preventDefault();
-      const email = document.getElementById("liEmail").value.trim();
-      const existing = getAccount();
-      // Demo: log into existing account, or create a lightweight member on the fly
-      const acc = (existing && existing.email) ? existing
-        : { name: "", email, member: true, memberSince: todayAU(), coupon: "WELCOME10" };
-      acc.email = email;
-      saveAccount(acc);
-      showToast("Welcome back! 👋");
-      render();
-      return false;
     }
 
     function renderDashboard(acc) {
