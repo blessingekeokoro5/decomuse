@@ -3,6 +3,7 @@
   <g fill="none" stroke="#0B1F3A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M11 35 L37 11 L63 35"/>
     <path d="M16 32 V63 H58 V32"/>
+    <path d="M49 22.5 L49 14 L53 14 L53 25.5"/>
   </g>
   <g fill="none" stroke="#C6A15B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
     <rect x="29.5" y="40" width="15" height="15"/>

@@ -96,7 +96,7 @@ const TIKTOK_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="20" heig
 const YOUTUBE_SVG = '<svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7c-.2-.9-.9-1.5-1.7-1.7C19.4 5.2 12 5.2 12 5.2s-7.4 0-8.9.4c-.8.2-1.5.8-1.7 1.7C1 8.8 1 12 1 12s0 3.2.4 4.7c.2.9.9 1.5 1.7 1.7 1.5.4 8.9.4 8.9.4s7.4 0 8.9-.4c.8-.2 1.5-.8 1.7-1.7.4-1.5.4-4.7.4-4.7zM9.8 15.3V8.7l5.7 3.3-5.7 3.3z"/></svg>';
 
 /* ---- Logo loader: try common formats before falling back to the drawn mark ---- */
-const LOGO_SRCS = ["assets/logo.svg?v=2", "assets/logo.png", "assets/logo.jpg", "assets/logo.jpeg", "assets/logo.webp"];
+const LOGO_SRCS = ["assets/logo.svg?v=3", "assets/logo.png", "assets/logo.jpg", "assets/logo.jpeg", "assets/logo.webp"];
 function nextLogo(img) {
   const i = (+img.dataset.i || 0) + 1;
   if (i < LOGO_SRCS.length) { img.dataset.i = i; img.src = LOGO_SRCS[i]; }
@@ -325,12 +325,13 @@ function buildHeader() {
     <div class="container nav-utility">
       <button class="nav-toggle" id="navToggle" aria-label="Menu">${IC.menu}</button>
       <a class="brand" href="index.html" aria-label="Samira Home Decor home">
-        <img class="brand-logo-full" src="assets/logo.svg?v=2" data-i="0" alt="Samira Home Decor, Style Your Space by Samira" onerror="nextLogo(this)">
+        <img class="brand-logo-full" src="assets/logo.svg?v=3" data-i="0" alt="Samira Home Decor, Style Your Space by Samira" onerror="nextLogo(this)">
         <span class="brand-mark">
           <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <!-- house -->
+            <!-- house + chimney -->
             <path d="M10 33 L32 12 L54 33"/>
             <path d="M15 30 V53 H49 V30"/>
+            <path d="M43 22.5 L43 14 L47 14 L47 25.5"/>
             <!-- window (gold) -->
             <rect x="24.5" y="35" width="15" height="15" stroke="#C6A15B"/>
             <path d="M32 35 V50 M24.5 42.5 H39.5" stroke="#C6A15B"/>
