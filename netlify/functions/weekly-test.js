@@ -61,6 +61,11 @@ exports.handler = async (event) => {
       recipients: { listIds: [LIST_ID] },
     });
     out.campaignCreate = { status: create.status, ok: create.ok, detail: create.ok ? { id: create.data.id } : create.data };
+    // ?send=1 → actually send this campaign now (real inbox test)
+    if (create.ok && (event.queryStringParameters && event.queryStringParameters.send === "1")) {
+      const send = await brevo("emailCampaigns/" + create.data.id + "/sendNow", "POST");
+      out.sendNow = { status: send.status, ok: send.ok, detail: send.data };
+    }
   } catch (e) { out.campaignCreate = { error: e.message }; }
 
   out.verdict = "see fields above";
