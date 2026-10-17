@@ -80,7 +80,7 @@ function buildHtml(featured) {
       <div style="font-family:Georgia,serif;font-size:27px;font-weight:bold;color:${NAVY}">Samira Home Decor</div>
       <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:${TAUPE};margin-top:4px">Home décor for every house</div>
     </div>
-    <img src="${SITE_URL}/assets/hero.jpg" width="100%" alt="Styled living space" style="display:block;width:100%;border-radius:14px">
+    <img src="${SITE_URL}/assets/cat-home-decor.jpg" width="100%" alt="Styled living space" style="display:block;width:100%;border-radius:14px">
     <div style="background:${NAVY};border-radius:0 0 14px 14px;padding:22px;text-align:center;border-bottom:4px solid ${GOLD};margin-top:-6px">
       <div style="font:22px Georgia,serif;color:#fff">New week, fresh ideas for your home</div>
       <div style="color:${CHAMP};margin:6px 0 14px;font-size:14px">A handful of pieces we're loving right now</div>

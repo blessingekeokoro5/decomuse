@@ -108,7 +108,7 @@ function welcomeHtml(name, code, discountLabel) {
       <div style="color:${CHAMP};margin-top:7px;font-size:14px">Your ${esc(discountLabel)}</div>
     </div>
     <!-- hero photo -->
-    <img src="${A}hero.jpg" width="100%" alt="Samira Home Decor styled living space" style="display:block;width:100%;border-radius:14px;margin-top:16px">
+    <img src="${A}cat-home-decor.jpg" width="100%" alt="Samira Home Decor styled living space" style="display:block;width:100%;border-radius:14px;margin-top:16px">
     <!-- code -->
     <p style="color:${BODY};line-height:1.7;margin-top:22px">Hi${name ? " " + esc(name) : " there"},</p>
     <p style="color:${BODY};line-height:1.7">Thanks for joining the <strong>Samira Home Decor</strong> community. To help you get started, here's your exclusive <strong>${esc(discountLabel)}</strong> code:</p>
