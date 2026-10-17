@@ -652,10 +652,11 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
         <p class="cal-note" style="margin:10px 0 0;font-size:.82rem;color:var(--muted)">Closed Sundays — we're not available for cleaning on Sundays.</p>
         <div class="cal-sel">
           <p id="calChosen">Choose a date to continue.</p>
-          <div class="slots" role="group" aria-label="Arrival window">
-            <button class="chip" type="button" data-slot="Morning (9am–12pm)" aria-pressed="true">Morning 9–12</button>
-            <button class="chip" type="button" data-slot="Afternoon (1pm–4pm)" aria-pressed="false">Afternoon 1–4</button>
-            <button class="chip" type="button" data-slot="Flexible" aria-pressed="false">Flexible</button>
+          <p class="slots-label" style="margin:4px 0 8px;font-size:.82rem;color:var(--muted)">Start time (slots are 3 hours apart)</p>
+          <div class="slots" role="group" aria-label="Start time">
+            <button class="chip" type="button" data-slot="9:00 AM" aria-pressed="true">9:00 AM</button>
+            <button class="chip" type="button" data-slot="12:00 PM" aria-pressed="false">12:00 PM</button>
+            <button class="chip" type="button" data-slot="3:00 PM" aria-pressed="false">3:00 PM</button>
           </div>
         </div>
       </div>
@@ -663,7 +664,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       <form class="form" id="bookingForm" name="cleaning-booking" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <input type="hidden" name="form-name" value="cleaning-booking">
         <input type="hidden" name="preferred_date" id="fDate">
-        <input type="hidden" name="arrival_window" id="fSlot" value="Morning (9am–12pm)">
+        <input type="hidden" name="arrival_window" id="fSlot" value="9:00 AM">
         <p class="hidden"><label>Leave this empty <input name="bot-field"></label></p>
         <div class="two">
           <label>Full name<input name="name" autocomplete="name" required></label>
