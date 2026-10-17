@@ -757,7 +757,7 @@ function buildNewsletterPopup() {
     .nl-body{padding:38px 32px;display:flex;align-items:center;overflow:auto}
     .nl-x{position:absolute;top:10px;right:12px;width:36px;height:36px;border:0;background:rgba(11,31,58,.06);border-radius:50%;font-size:1.5rem;line-height:1;color:#0B1F3A;cursor:pointer;z-index:2}
     .nl-x:hover{background:rgba(11,31,58,.12)}
-    .nl-body h2{font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;line-height:1.15;color:#14365F;margin:0 0 10px}
+    .nl-body h2{font-family:Georgia,'Times New Roman',serif;font-size:1.7rem;line-height:1.15;color:#0B1F3A;margin:0 0 10px}
     .nl-rule{width:54px;height:2px;background:#C6A15B;margin:0 0 16px}
     .nl-body p{color:#5a5049;font-size:.98rem;line-height:1.6;margin:0 0 16px}
     .nl-body input[type=email]{width:100%;padding:13px 15px;border:1.5px solid #d9cfc0;border-radius:10px;font-size:1rem;margin-bottom:12px;box-sizing:border-box}
@@ -766,8 +766,8 @@ function buildNewsletterPopup() {
     .nl-fine{font-size:.74rem!important;color:#8a7f77!important;margin:12px 0 0!important}
     .nl-status{font-size:.85rem!important;margin:8px 0 0!important}
     .nl-status.err{color:#b23b3b!important}.nl-status.ok{color:#2e7d52!important}
-    .nl-thanks .nl-happy{font-weight:bold;color:#14365F}
-    .nl-shop{margin-top:8px;background:#14365F!important;color:#fff!important}
+    .nl-thanks .nl-happy{font-weight:bold;color:#0B1F3A}
+    .nl-shop{margin-top:8px;background:#0B1F3A!important;color:#fff!important}
   </style>
   <div class="nl-pop" id="nlPop" aria-hidden="true">
     <div class="nl-card" role="dialog" aria-modal="true" aria-label="Subscribe for 10% off your first order">
