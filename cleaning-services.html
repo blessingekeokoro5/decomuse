@@ -138,6 +138,8 @@ section{scroll-margin-top:76px}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{font:600 .92rem/1 var(--sans);padding:11px 16px;border-radius:999px;border:1.5px solid var(--line);background:#fff;color:var(--navy);cursor:pointer}
 .chip[aria-pressed="true"]{background:var(--navy);border-color:var(--navy);color:#fff}
+.chip[disabled]{opacity:.5;cursor:not-allowed;background:#F3F1EC;color:#9AA0AC;border-color:var(--line);text-decoration:line-through;text-decoration-color:#C9CDd5}
+.chip[disabled]:after{content:" · booked";text-decoration:none;font-weight:500;font-size:.78em;letter-spacing:.02em}
 .ledger{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .row{display:grid;gap:10px 24px;padding:24px;border-top:1px solid var(--line);align-items:center}
 .row:first-child{border-top:0}
@@ -1054,11 +1056,37 @@ document.getElementById("calGrid").addEventListener("click", e => {
   document.getElementById("fDate").value = nice(chosen);
   document.getElementById("calChosen").innerHTML = `Preferred date: <b>${nice(chosen)}</b>`;
   renderCal();
+  loadSlots(iso(chosen));
 });
+
+/* Ask the backend which start-time slots are already taken for this date, grey them out,
+   and make sure the selected slot is one that's still free. */
+async function loadSlots(dateIso){
+  const chips = [...document.querySelectorAll(".slots .chip")];
+  chips.forEach(c => { c.disabled = false; });
+  let taken = [];
+  try {
+    const r = await fetch("/.netlify/functions/booking-availability?date=" + encodeURIComponent(dateIso));
+    if (r.ok) { const j = await r.json(); if (j && j.ok && Array.isArray(j.taken)) taken = j.taken; }
+  } catch (e) { /* fail open — leave all slots selectable */ }
+  chips.forEach(c => { if (taken.includes(c.dataset.slot)) c.disabled = true; });
+  // If the currently selected slot is now taken (or none picked), move to the first free one.
+  const current = chips.find(c => c.getAttribute("aria-pressed") === "true" && !c.disabled);
+  if (!current) {
+    const free = chips.find(c => !c.disabled);
+    chips.forEach(c => c.setAttribute("aria-pressed", c === free));
+    document.getElementById("fSlot").value = free ? free.dataset.slot : "";
+  }
+  const note = document.querySelector(".slots-label");
+  const allBooked = chips.every(c => c.disabled);
+  if (note) note.textContent = allBooked
+    ? "Fully booked on this date — please choose another day."
+    : "Start time (slots are 3 hours apart)";
+}
 document.getElementById("calPrev").onclick = () => { view.setMonth(view.getMonth() - 1); renderCal(); };
 document.getElementById("calNext").onclick = () => { view.setMonth(view.getMonth() + 1); renderCal(); };
 document.querySelector(".slots").addEventListener("click", e => {
-  const b = e.target.closest(".chip"); if (!b) return;
+  const b = e.target.closest(".chip"); if (!b || b.disabled) return;
   document.querySelectorAll(".slots .chip").forEach(x => x.setAttribute("aria-pressed", x === b));
   document.getElementById("fSlot").value = b.dataset.slot;
 });
@@ -1090,13 +1118,47 @@ async function send(form, subject, statusEl, okMsg){
     return false;
   }
 }
-document.getElementById("bookingForm").addEventListener("submit", e => {
+document.getElementById("bookingForm").addEventListener("submit", async e => {
   e.preventDefault();
   const f = e.target, st = document.getElementById("bookStatus");
   if (!chosen) { setStatus(st, "err", "Choose a preferred date in the calendar."); return; }
+  const slot = (document.getElementById("fSlot").value || "").trim();
+  if (!slot) { setStatus(st, "err", "Choose an available start time for this date."); return; }
   if (!f.checkValidity()) { setStatus(st, "err", "Fill in your name, mobile, email and suburb, and tick the pet safety box."); f.reportValidity(); return; }
-  send(f, "Samira Home Decor — Cleaning booking request", st, "Booking request sent. We'll confirm your date by email within one business day.").then(ok => {
-    if (ok) { chosen = null; document.getElementById("calChosen").textContent = "Choose a date to continue."; renderCal(); }
+
+  const data = new FormData(f);
+  setStatus(st, "info", "Checking that your time slot is still available…");
+  // 1) Reserve the slot (holds it as pending so no one else can take it).
+  try {
+    const r = await fetch("/.netlify/functions/booking-create", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        date: iso(chosen), slot,
+        name: (data.get("name") || "").toString(),
+        mobile: (data.get("mobile") || "").toString(),
+        email: (data.get("email") || "").toString(),
+        suburb: (data.get("suburb") || "").toString(),
+        clean_type: (data.get("clean_type") || "").toString(),
+        notes: (data.get("notes") || "").toString(),
+      }),
+    });
+    const j = await r.json().catch(() => ({}));
+    if (r.status === 409) {
+      setStatus(st, "err", "Sorry — that start time was just booked by someone else. Please pick another time or date.");
+      loadSlots(iso(chosen));
+      return;
+    }
+    if (!r.ok || !j.ok) throw new Error("reserve_failed");
+  } catch (err) {
+    setStatus(st, "err", "We couldn't hold that slot just now. Please try again in a moment, or call us on 0451 609 398.");
+    return;
+  }
+
+  // 2) Slot held — send the branded confirmation/notification emails.
+  send(f, "Samira Home Decor — Cleaning booking request", st, "Booking request received. Your time slot is held and we'll confirm it by email within one business day.").then(ok => {
+    chosen = null;
+    document.getElementById("calChosen").textContent = "Choose a date to continue.";
+    renderCal();
   });
 });
 

@@ -75,6 +75,7 @@
 
       <div class="admin-tabs" id="adminTabs">
         <button class="active" data-tab="base">Customer base</button>
+        <button data-tab="bookings">Cleaning bookings</button>
         <button data-tab="forms">Client forms</button>
         <button data-tab="empforms">Employee forms</button>
         <button data-tab="send">Send forms</button>
@@ -92,6 +93,26 @@
           <button class="btn btn--outline btn--sm" onclick="clearDB()" style="color:var(--rose-deep)">Clear all</button>
         </div>
         <div id="dbTableWrap"></div>
+      </div>
+
+      <!-- Cleaning bookings -->
+      <div id="tabBookings" hidden>
+        <div class="admin-note">Live cleaning bookings from the website calendar. A <b>pending</b> booking already holds its time slot so no one else can take it. <b>Confirm</b> to lock it in, or <b>Cancel</b> to free the slot. Confirming/cancelling here does not email the client — let them know as you normally would.</div>
+        <div id="bookGate" class="admin-formcard" style="max-width:480px">
+          <h3>Unlock bookings</h3>
+          <p class="admin-note" style="margin-top:0">Paste your booking access key (the <b>BOOKING_ADMIN_TOKEN</b> you set in Netlify) to view bookings on this device.</p>
+          <div class="field"><label>Booking access key</label><input id="bookToken" type="password" autocomplete="off"></div>
+          <button class="btn btn--dark btn--sm" onclick="saveBookToken()">Unlock</button>
+          <div id="bookGateMsg" style="font-size:0.86rem;margin-top:10px"></div>
+        </div>
+        <div id="bookWrap" hidden>
+          <div class="admin-toolbar">
+            <span class="admin-count" id="bookCount"></span>
+            <button class="btn btn--outline btn--sm" onclick="loadBookings()">Refresh</button>
+            <button class="btn btn--outline btn--sm" onclick="forgetBookToken()">Lock</button>
+          </div>
+          <div id="bookTableWrap"></div>
+        </div>
       </div>
 
       <!-- Client forms -->
@@ -238,11 +259,88 @@
       document.querySelectorAll("#adminTabs button").forEach(b => b.classList.toggle("active", b === btn));
       const tab = btn.dataset.tab;
       document.getElementById("tabBase").hidden = tab !== "base";
+      document.getElementById("tabBookings").hidden = tab !== "bookings";
       document.getElementById("tabForms").hidden = tab !== "forms";
       document.getElementById("tabEmpforms").hidden = tab !== "empforms";
       document.getElementById("tabSend").hidden = tab !== "send";
       document.getElementById("tabSettings").hidden = tab !== "settings";
+      if (tab === "bookings") initBookings();
     });
+
+    /* ===== Cleaning bookings ===== */
+    const BOOK_FN = "/.netlify/functions/booking-admin";
+    function bookToken() { try { return localStorage.getItem("shd_book_token") || ""; } catch (e) { return ""; } }
+    function initBookings() {
+      const has = !!bookToken();
+      document.getElementById("bookGate").hidden = has;
+      document.getElementById("bookWrap").hidden = !has;
+      if (has) loadBookings();
+    }
+    function saveBookToken() {
+      const v = (document.getElementById("bookToken").value || "").trim();
+      const msg = document.getElementById("bookGateMsg");
+      if (!v) { msg.style.color = "var(--rose-deep)"; msg.textContent = "Paste your booking access key first."; return; }
+      try { localStorage.setItem("shd_book_token", v); } catch (e) {}
+      document.getElementById("bookToken").value = "";
+      initBookings();
+    }
+    function forgetBookToken() {
+      try { localStorage.removeItem("shd_book_token"); } catch (e) {}
+      initBookings();
+    }
+    function esc(s) { return String(s == null ? "" : s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+    async function loadBookings() {
+      const wrap = document.getElementById("bookTableWrap");
+      const count = document.getElementById("bookCount");
+      wrap.innerHTML = "<p class='admin-note'>Loading…</p>";
+      let res, j;
+      try {
+        res = await fetch(BOOK_FN, { headers: { "x-admin-token": bookToken() } });
+        j = await res.json().catch(() => ({}));
+      } catch (e) { wrap.innerHTML = "<p class='admin-note'>Couldn't reach the server. Try again.</p>"; return; }
+      if (res.status === 401) { wrap.innerHTML = "<p class='admin-note'>That access key was rejected. <a href='#' onclick='forgetBookToken();return false'>Enter it again</a>.</p>"; return; }
+      if (res.status === 503) { wrap.innerHTML = "<p class='admin-note'>Bookings aren't configured yet — set <b>BOOKING_ADMIN_TOKEN</b> in Netlify and redeploy.</p>"; return; }
+      if (!res.ok || !j.ok) { wrap.innerHTML = "<p class='admin-note'>Couldn't load bookings.</p>"; return; }
+      const list = j.bookings || [];
+      // Upcoming first; past bookings (before today) shown but muted.
+      const todayIso = new Date().toISOString().slice(0, 10);
+      count.textContent = list.length + (list.length === 1 ? " booking" : " bookings");
+      if (!list.length) { wrap.innerHTML = "<p class='admin-note'>No bookings yet.</p>"; return; }
+      const rows = list.map(b => {
+        const past = b.date < todayIso;
+        const statusPill = b.status === "confirmed"
+          ? "<span style='color:#1f7a3d;font-weight:600'>Confirmed</span>"
+          : "<span style='color:#b06a00;font-weight:600'>Pending</span>";
+        const actions = b.status === "confirmed"
+          ? `<button class="btn btn--outline btn--sm" onclick="bookAction('cancel','${b.date}','${esc(b.slot)}')" style="color:var(--rose-deep)">Cancel</button>`
+          : `<button class="btn btn--dark btn--sm" onclick="bookAction('confirm','${b.date}','${esc(b.slot)}')">Confirm</button>
+             <button class="btn btn--outline btn--sm" onclick="bookAction('cancel','${b.date}','${esc(b.slot)}')" style="color:var(--rose-deep)">Cancel</button>`;
+        return `<tr style="${past ? 'opacity:.55' : ''}">
+          <td>${esc(b.date)}${past ? " <small>(past)</small>" : ""}</td>
+          <td>${esc(b.slot)}</td>
+          <td>${esc(b.name)}<br><small>${esc(b.suburb)}</small></td>
+          <td>${esc(b.clean_type)}</td>
+          <td><a href="tel:${esc(b.mobile)}">${esc(b.mobile)}</a><br><small><a href="mailto:${esc(b.email)}">${esc(b.email)}</a></small></td>
+          <td>${statusPill}</td>
+          <td style="white-space:nowrap">${actions}</td>
+        </tr>`;
+      }).join("");
+      wrap.innerHTML = `<div style="overflow-x:auto"><table class="db-table"><thead><tr>
+        <th>Date</th><th>Time</th><th>Client</th><th>Clean</th><th>Contact</th><th>Status</th><th>Action</th>
+      </tr></thead><tbody>${rows}</tbody></table></div>`;
+    }
+    async function bookAction(action, date, slot) {
+      if (action === "cancel" && !confirm("Cancel this booking and free the slot?")) return;
+      try {
+        const res = await fetch(BOOK_FN, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "x-admin-token": bookToken() },
+          body: JSON.stringify({ action, date, slot }),
+        });
+        if (!res.ok) { alert("Couldn't update that booking. Please refresh and try again."); return; }
+      } catch (e) { alert("Couldn't reach the server. Please try again."); return; }
+      loadBookings();
+    }
 
     /* ===== Customer base ===== */
     function fieldVal(rec, re) { const f = (rec.fields || []).find(x => re.test(x[0])); return f ? f[1] : ""; }
