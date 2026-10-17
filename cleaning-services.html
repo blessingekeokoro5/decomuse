@@ -649,6 +649,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
           </div>
         </div>
         <div class="cal-grid" id="calGrid" role="grid"></div>
+        <p class="cal-note" style="margin:10px 0 0;font-size:.82rem;color:var(--muted)">Closed Sundays — we're not available for cleaning on Sundays.</p>
         <div class="cal-sel">
           <p id="calChosen">Choose a date to continue.</p>
           <div class="slots" role="group" aria-label="Arrival window">
@@ -826,7 +827,7 @@ const SETTINGS = {
   bookingEmbedUrl: "",
   minDaysAhead: 1,        // earliest bookable day (1 = tomorrow)
   maxDaysAhead: 90,       // how far ahead clients can choose
-  closedWeekdays: [],     // days you don't work: 0 = Sunday ... 6 = Saturday, e.g. [0]
+  closedWeekdays: [0],    // days you don't work: 0 = Sunday ... 6 = Saturday — closed Sundays
   closedDates: [],        // specific days off, e.g. ["2026-12-25", "2026-12-26"]
   googleReviewUrl: ""     // your Google Business "Ask for reviews" link
 };
