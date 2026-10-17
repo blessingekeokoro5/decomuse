@@ -450,7 +450,7 @@ function renderShopControls(repaint) {
         </button>`).join("")}
     </div>`;
   bar.appendChild(wrap);
-  bar.querySelector("#shopStock").value = v.stock;
+  // Availability always starts at "All items" (not restored from storage) so it never hides a category.
   bar.querySelector("#shopSort").value = v.sort;
 
   const push = () => {
@@ -496,10 +496,11 @@ function applyShopFilters(list) {
   // Match the price the card actually shows, not the member price.
   if (isFinite(min)) out = out.filter(p => (p.price || p.memberPrice || 0) >= min);
   if (isFinite(max)) out = out.filter(p => (p.price || p.memberPrice || 0) <= max);
-  // Availability: ready-to-ship = Luxo Living (fast dispatch) within this category; made-to-order = has a lead time
-  if (v.stock === "ready") out = out.filter(p => p.supplier === "Luxo Living" && !p.lead);
-  else if (v.stock === "made") out = out.filter(p => !!p.lead);
-  else if (v.stock === "in") out = out.filter(p => !p.comingSoon); // legacy value
+  // Availability is read LIVE from the dropdown (not persisted) so it never "sticks" and hides a category.
+  const stockEl = document.getElementById("shopStock");
+  const stock = stockEl ? stockEl.value : "all";
+  if (stock === "ready") out = out.filter(p => !p.lead && p.cat !== "Packaging");
+  else if (stock === "made") out = out.filter(p => !!p.lead);
   updateDeliveryNote(out);
   if (v.sort === "price-asc") out.sort((a, b) => (a.price || 0) - (b.price || 0));
   else if (v.sort === "price-desc") out.sort((a, b) => (b.price || 0) - (a.price || 0));

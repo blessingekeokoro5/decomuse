@@ -86,16 +86,21 @@
 
   <script src="js/data.js?v=27"></script>
   <script src="js/components.js?v=42"></script>
-  <script src="js/cart.js?v=20"></script>
-  <script src="js/main.js?v=4"></script>
+  <script src="js/cart.js?v=21"></script>
+  <script src="js/main.js?v=5"></script>
   <script>
-    const CATS = ["All", "Home Décor", "Furniture", "Kitchen & Dining", "Bedroom & Bath", "Health & Wellness", "Fragrance", "Lifestyle", "Gifts", "Travel Essentials"];
+    const CATS = ["All", "Living Room", "Home Décor", "Home Fragrance", "Dining", "Bedroom & Bath", "Kitchenware", "Outdoor", "Office", "Lifestyle", "Gifts"];
     const CAT_GROUPS = {
-      "Kitchen & Dining": ["Kitchenware"],
+      "Living Room": ["Living Room", "Furniture"],
       "Bedroom & Bath": ["Bedroom", "Bathroom"],
-      "Furniture": ["Furniture", "Living Room", "Office"],
-      "Gifts": ["Gifts", "Packaging"]
+      "Kitchenware": ["Kitchenware"],
+      "Dining": ["Dining"],
+      "Outdoor": ["Outdoor"],
+      "Office": ["Office"]
     };
+    // Home Fragrance & Gifts aren't a catalogue category — they're keyword views across Home Décor
+    const FRAGRANCE_RE = /candle|diffuser|oil burner|incense|reed|fragrance|scent|aroma|vaporiser|perfume/i;
+    const GIFT_RE = /candle|diffuser|vase|trinket|jewell|photo frame|keepsake|gift|coaster|bookend|ornament|sculpture/i;
     let currentCat = "All";
     let searchQuery = "";
     const PAGE_SIZE = 12;
@@ -119,15 +124,25 @@
 
     function renderPills() {
       document.getElementById("shopPills").innerHTML = CATS.map(c =>
-        `<button class="pill ${c === currentCat ? 'active' : ''}" onclick="filterShop('${c.replace(/'/g,"\\'")}')">${c}</button>`).join("");
+        `<button class="pill ${c === currentCat ? 'active' : ''}" onclick="pickCat('${c.replace(/'/g,"\\'")}')">${c}</button>`).join("");
+    }
+    // Clicking a category pill clears the availability filter so the category always shows
+    function pickCat(cat) {
+      const s = document.getElementById("shopStock");
+      if (s) s.value = "all";
+      filterShop(cat);
     }
     function filterShop(cat) {
       currentCat = cat;
       renderPills();
-      // A pill can stand for more than one catalogue category.
-      const members = CAT_GROUPS[cat] || [cat];
-      let list = cat === "All" ? PRODUCTS.slice()
-        : PRODUCTS.filter(p => members.includes(p.cat) || members.includes(p.room));
+      let list;
+      if (cat === "All") list = PRODUCTS.slice();
+      else if (cat === "Home Fragrance") list = PRODUCTS.filter(p => FRAGRANCE_RE.test(p.name));
+      else if (cat === "Gifts") list = PRODUCTS.filter(p => GIFT_RE.test(p.name));
+      else {
+        const members = CAT_GROUPS[cat] || [cat];
+        list = PRODUCTS.filter(p => members.includes(p.cat) || members.includes(p.room));
+      }
       if (searchQuery) {
         const q = searchQuery.toLowerCase();
         list = list.filter(p => (p.name + " " + p.cat + " " + (p.desc || "")).toLowerCase().includes(q));
@@ -147,12 +162,13 @@
     const wanted = params.get("cat");
     searchQuery = (params.get("q") || "").trim();
     if (wanted && CATS.includes(wanted)) currentCat = wanted;
-    // Nav "Ready to Ship" link (?avail=ready) pre-selects the shared Availability control
-    const wantAvail = (params.get("avail") || "").toLowerCase();
-    if ((wantAvail === "ready" || wantAvail === "made") && typeof shopView === "function" && typeof saveShopView === "function") {
-      const sv = shopView(); sv.stock = wantAvail; saveShopView(sv);
-    }
     renderShopControls(function () { filterShop(currentCat); });
+    // Nav "Ready to Ship" link (?avail=ready) pre-selects the Availability dropdown for this visit
+    const wantAvail = (params.get("avail") || "").toLowerCase();
+    if (wantAvail === "ready" || wantAvail === "made") {
+      const s = document.getElementById("shopStock");
+      if (s) s.value = wantAvail;
+    }
     filterShop(currentCat);
     initReveal();
   </script>

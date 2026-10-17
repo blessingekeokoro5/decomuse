@@ -292,9 +292,7 @@ function productCard(p) {
         ${p.freeship ? `<div class="freeship-tag">🚚 Free shipping</div>` : ""}
         ${p.lead
           ? `<div style="display:inline-block;font-size:.7rem;font-weight:600;color:#8a7f77;background:#F4EFE6;padding:3px 9px;border-radius:20px;margin-top:6px" title="Made to order">⏳ Made to order · ${p.lead}</div>`
-          : (p.supplier === "Luxo Living"
-            ? `<div style="display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2px;color:#0B1F3A;background:#E0C992;padding:3px 9px;border-radius:20px;margin-top:6px" title="In stock, ready to ship">✓ Ready to ship · a few days</div>`
-            : "")}
+          : `<div style="display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.2px;color:#0B1F3A;background:#E0C992;padding:3px 9px;border-radius:20px;margin-top:6px" title="In stock, ready to ship">✓ Ready to ship · a few days</div>`}
         ${arrivalLine(p)}`}
         <div class="card-actions">
           <button class="card-act ${isWishlisted(p.id) ? "on" : ""}" type="button" data-wish="${p.id}" aria-pressed="${isWishlisted(p.id)}" aria-label="Save ${p.name} to your wishlist"
