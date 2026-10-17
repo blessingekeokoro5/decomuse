@@ -192,6 +192,22 @@ async function sendBrevo(payload) {
   });
 }
 
+// Add / update a subscriber in Brevo contacts (and the newsletter list, if BREVO_LIST_ID is set).
+async function addBrevoContact(email, attributes) {
+  if (!BREVO_API_KEY || !isEmail(email)) return;
+  const listId = parseInt(process.env.BREVO_LIST_ID || "0", 10);
+  const body = { email, updateEnabled: true };
+  if (attributes) body.attributes = attributes;
+  if (listId) body.listIds = [listId];
+  try {
+    await fetch("https://api.brevo.com/v3/contacts", {
+      method: "POST",
+      headers: { "api-key": BREVO_API_KEY, "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify(body),
+    });
+  } catch (e) { /* best effort */ }
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return jsonResponse(200, {});
   if (event.httpMethod !== "POST") return jsonResponse(405, { error: "Method Not Allowed" });
@@ -244,6 +260,8 @@ exports.handler = async (event) => {
 
     // ---- 2) Customer confirmation (branded) — best effort ----
     if (isEmail(replyto) && data.welcomeCode) {
+      // New newsletter subscriber → save to Brevo contacts/list for the weekly email
+      await addBrevoContact(replyto, { FIRSTNAME: name || "", SOURCE: "Welcome popup" });
       // Rich welcome email for newsletter subscribers
       try {
         await sendBrevo({
