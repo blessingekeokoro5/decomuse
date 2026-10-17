@@ -1,16 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 74" width="300" height="74" role="img" aria-label="Style Your Space by Samira — Samira Home Decor">
-  <!-- House + star mark -->
-  <g fill="none" stroke="#0B1F3A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M12 34 L37 11 L62 34"/>
-    <path d="M17 33 V62 H57 V33"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 74" width="300" height="74" role="img" aria-label="Samira Home Decor — Style Your Space by Samira">
+  <!-- House mark with window (matches the SYS packaging logo) -->
+  <g fill="none" stroke="#0B1F3A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M11 35 L37 11 L63 35"/>
+    <path d="M16 32 V63 H58 V32"/>
   </g>
-  <!-- 4-point gold star -->
-  <path d="M37 30 L40 39.5 L49.5 42.5 L40 45.5 L37 55 L34 45.5 L24.5 42.5 L34 39.5 Z" fill="#C6A15B"/>
+  <g fill="none" stroke="#C6A15B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="29.5" y="40" width="15" height="15"/>
+    <path d="M37 40 V55 M29.5 47.5 H44.5"/>
+  </g>
   <!-- Wordmark -->
-  <text x="80" y="40" font-family="'Playfair Display', Georgia, serif" font-size="25" font-weight="600" fill="#0B1F3A" letter-spacing="0.5">Style Your Space</text>
+  <text x="82" y="40" font-family="'Playfair Display', Georgia, serif" font-size="25" font-weight="600" fill="#0B1F3A" letter-spacing="0.5">Style Your Space</text>
   <g>
-    <line x1="80" y1="55" x2="103" y2="55" stroke="#C6A15B" stroke-width="1.2"/>
-    <text x="150" y="60" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="15" font-style="italic" fill="#C6A15B" letter-spacing="0.8">by Samira</text>
-    <line x1="197" y1="55" x2="220" y2="55" stroke="#C6A15B" stroke-width="1.2"/>
+    <line x1="82" y1="55" x2="105" y2="55" stroke="#C6A15B" stroke-width="1.2"/>
+    <text x="152" y="60" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="15" font-style="italic" fill="#C6A15B" letter-spacing="0.8">by Samira</text>
+    <line x1="199" y1="55" x2="222" y2="55" stroke="#C6A15B" stroke-width="1.2"/>
   </g>
 </svg>
