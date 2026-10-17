@@ -87,4 +87,4 @@
 
 # Weekly subscriber email (scheduled function) — Wed 22:30 UTC ≈ Thu ~9am Adelaide
 [functions."weekly-email"]
-  schedule = "14 5 * * *"
+  schedule = "30 22 * * 3"
