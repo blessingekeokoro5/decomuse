@@ -28,6 +28,8 @@ exports.handler = async (event) => {
   if (token !== "shd-weekly-diag") return json(403, { error: "forbidden" });
 
   const out = { hasKey: !!KEY, listId: LIST_ID, sender: SENDER_EMAIL };
+  const acct = await brevo("account", "GET");
+  out.account = acct.ok ? { plan: acct.data.plan, company: acct.data.companyName, address: acct.data.address } : { error: acct.status, detail: acct.data };
   if (!KEY) return json(200, { ...out, verdict: "BREVO_API_KEY missing" });
   if (!LIST_ID) return json(200, { ...out, verdict: "BREVO_LIST_ID not set" });
 
