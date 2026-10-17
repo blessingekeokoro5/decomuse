@@ -165,3 +165,7 @@ const run = async () => {
 };
 
 exports.handler = run; // scheduled via netlify.toml ([functions."weekly-email"] schedule)
+
+module.exports.buildHtml = buildHtml;
+module.exports.pickFeatured = pickFeatured;
+module.exports.loadProducts = loadProducts;
