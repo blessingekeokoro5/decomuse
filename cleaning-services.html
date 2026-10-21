@@ -972,7 +972,7 @@ renderLedger();
         <p class="qo-deposit">Post-renovation &amp; 6+ bedroom homes are quoted after a quick walk-through or photos.</p>`;
     } else {
       totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v">${money(q.total)}</span></div>
-        <p class="qo-deposit">20% deposit to book: <strong style="color:#fff">${money(q.deposit)}</strong> (min $50)</p>`;
+        <p class="qo-deposit">20% deposit to book: <strong style="color:#fff">${money(q.deposit)}</strong></p>`;
     }
 
     out.innerHTML = `<span class="est-pill">Estimate</span>
@@ -1001,7 +1001,7 @@ renderLedger();
     if (q.spareUnits) rows.push(["Spare units (" + q.spareUnits + ")", "+" + money(q.spareCost) + " ($200 each)"]);
     if (q.discount) rows.push([Math.round(q.freqPct * 100) + "% regular-clean saving", "−" + money(q.discount)]);
     rows.push(["Estimated total", q.custom ? "Custom (quoted after a walk-through)" : money(q.total)]);
-    if (q.deposit != null) rows.push(["Deposit to book (20%, min $50)", money(q.deposit)]);
+    if (q.deposit != null) rows.push(["Deposit to book (20%)", money(q.deposit)]);
     return rows;
   }
 
