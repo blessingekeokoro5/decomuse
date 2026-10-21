@@ -317,6 +317,10 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
 .qo-deposit{color:#B7C3D6;font-size:.84rem;margin-top:6px;text-align:right}
 .qo-note{background:rgba(255,255,255,.08);border-radius:10px;padding:11px 14px;margin-top:16px;font-size:.8rem;color:#C9D3E3;line-height:1.55}
 .quote-out .est-pill{display:inline-block;font:600 .62rem/1 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--navy);background:var(--gold);padding:5px 9px;border-radius:20px;margin-bottom:12px}
+.quote-out .qo-brand{display:flex;align-items:center;gap:9px;margin-bottom:10px}
+.quote-out .qo-brand svg{width:26px;height:26px;flex:none}
+.quote-out .qo-brand b{font:700 .98rem/1.1 var(--serif);color:#fff;letter-spacing:.02em}
+.quote-out .qo-brand small{display:block;color:var(--gold);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-top:3px}
 /* Request a call back modal */
 #callbackLink{cursor:pointer}
 .cb-overlay{position:fixed;inset:0;background:rgba(6,21,37,.72);display:flex;align-items:flex-start;justify-content:center;z-index:9999;padding:24px 16px;overflow:auto}
@@ -956,8 +960,12 @@ renderLedger();
     }
 
     out.innerHTML = `<span class="est-pill">Estimate</span>
-      <h3>Your estimate</h3>
-      <div class="qo-sub">Based on your selections · AUD, no GST</div>
+      <div class="qo-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 33 L32 12 L54 33"/><path d="M15 30 V53 H49 V30"/><path d="M43 22.5 L43 14 L47 14 L47 25.5"/><rect x="24.5" y="35" width="15" height="15"/><path d="M32 35 V50 M24.5 42.5 H39.5"/></svg>
+        <span><b>Samira Home Decor</b><small>Cleaning Services</small></span>
+      </div>
+      <h3>Your ${q.c.short} estimate</h3>
+      <div class="qo-sub">Samira cleaning service estimate for your selected clean · AUD, no GST</div>
       ${lines.join("")}
       ${totalBlock}
       <div class="qo-note">This is an estimate only, not a final invoice. Your final price and time are confirmed when you book. Submit it and we'll follow up within 2 business hours.</div>`;
