@@ -513,6 +513,16 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
           <legend style="font-weight:600;color:var(--navy);margin-bottom:4px">Add-ons <span class="opt" style="font-weight:400">$80 per 2 — optional</span></legend>
           <div class="quote-addons" id="qAddons"></div>
         </fieldset>
+        <label>Spare units to clean (same visit) <span class="opt">Optional · discounted $200 each</span>
+          <select name="spare_units" id="qSpare">
+            <option value="0">None</option>
+            <option value="1">1 spare unit (+$200)</option>
+            <option value="2">2 spare units (+$400)</option>
+            <option value="3">3 spare units (+$600)</option>
+            <option value="4">4 spare units (+$800)</option>
+            <option value="5">5 spare units (+$1,000)</option>
+          </select>
+        </label>
 
         <h3 style="margin-top:8px">Your details</h3>
         <div class="two">
@@ -904,6 +914,7 @@ renderLedger();
   const sizeSel = document.getElementById("qSize");
   const freqSel = document.getElementById("qFreq");
   const agentsSel = document.getElementById("qAgents");
+  const spareSel = document.getElementById("qSpare");
   const addonsBox = document.getElementById("qAddons");
   const out = document.getElementById("quoteOut");
   const form = document.getElementById("quoteForm");
@@ -930,12 +941,14 @@ renderLedger();
     const chosen = [...addonsBox.querySelectorAll(".q-addon:checked")].map(x => x.value);
     const addonCost = Math.ceil(chosen.length / 2) * 80;      // $80 per 2 add-ons
     const agents = +agentsSel.value;                          // 0 or 25
+    const spareUnits = parseInt(spareSel && spareSel.value || "0", 10) || 0;
+    const spareCost = spareUnits * 200;                       // discounted $200 per spare unit
     const freqPct = +freqSel.value;                           // 0 / .05 / .10 / .15
-    const discount = custom ? 0 : Math.round(base * freqPct);
-    const subtotal = custom ? (addonCost + agents) : (base + addonCost + agents);
+    const discount = custom ? 0 : Math.round(base * freqPct); // frequency saving applies to the base clean
+    const subtotal = custom ? (addonCost + agents + spareCost) : (base + addonCost + agents + spareCost);
     const total = custom ? null : (subtotal - discount);
     const deposit = total == null ? null : Math.max(50, Math.round(total * 0.2));
-    return { c, sizeIdx, base, custom, chosen, addonCost, agents, freqPct, discount, subtotal, total, deposit };
+    return { c, sizeIdx, base, custom, chosen, addonCost, agents, spareUnits, spareCost, freqPct, discount, subtotal, total, deposit };
   }
 
   function render() {
@@ -950,6 +963,7 @@ renderLedger();
     }
     if (q.chosen.length) lines.push(`<div class="qo-line"><span class="ql-k">Add-ons (${q.chosen.length})</span><span>+${money(q.addonCost)}</span></div>`);
     if (q.agents) lines.push(`<div class="qo-line"><span class="ql-k">Samira cleaning agents</span><span>+${money(q.agents)}</span></div>`);
+    if (q.spareUnits) lines.push(`<div class="qo-line"><span class="ql-k">Spare units (${q.spareUnits}) · $200 each</span><span>+${money(q.spareCost)}</span></div>`);
     if (q.discount) lines.push(`<div class="qo-line disc"><span class="ql-k">${Math.round(q.freqPct * 100)}% regular-clean saving</span><span>−${money(q.discount)}</span></div>`);
 
     let totalBlock;
@@ -984,13 +998,14 @@ renderLedger();
     if (q.chosen.length) rows.push(["Add-ons (" + q.chosen.length + ")", "+" + money(q.addonCost) + " — " + q.chosen.join(", ")]);
     if (q.agents) rows.push(["Cleaning agents", "+" + money(q.agents) + " (supplied by us)"]);
     else rows.push(["Cleaning agents", "Own (no charge)"]);
+    if (q.spareUnits) rows.push(["Spare units (" + q.spareUnits + ")", "+" + money(q.spareCost) + " ($200 each)"]);
     if (q.discount) rows.push([Math.round(q.freqPct * 100) + "% regular-clean saving", "−" + money(q.discount)]);
     rows.push(["Estimated total", q.custom ? "Custom (quoted after a walk-through)" : money(q.total)]);
     if (q.deposit != null) rows.push(["Deposit to book (20%, min $50)", money(q.deposit)]);
     return rows;
   }
 
-  [typeSel, sizeSel, freqSel, agentsSel].forEach(el => el.addEventListener("change", render));
+  [typeSel, sizeSel, freqSel, agentsSel, spareSel].forEach(el => el && el.addEventListener("change", render));
   addonsBox.addEventListener("change", render);
   render();
 
