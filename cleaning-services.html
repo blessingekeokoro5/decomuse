@@ -457,6 +457,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
           <li>Exterior windows (ground level)</li><li>Balcony / patio</li><li>Laundry (wash, dry, fold)</li>
           <li>Ironing</li><li>Change bed linen</li><li>Wall spot-cleaning</li>
           <li>Blinds and skirting boards</li><li>Carpet steam clean</li>
+          <li>Air conditioner / split system</li><li>Ceiling fans</li>
         </ul>
       </div>
       <div class="panel">
@@ -910,7 +911,8 @@ renderLedger();
 
   const ADDONS = ["Inside oven", "Inside fridge / freezer", "Interior windows & tracks",
     "Exterior windows (ground)", "Balcony / patio", "Laundry (wash, dry, fold)", "Ironing",
-    "Change bed linen", "Wall spot-cleaning", "Blinds & skirting boards", "Carpet steam clean"];
+    "Change bed linen", "Wall spot-cleaning", "Blinds & skirting boards", "Carpet steam clean",
+    "Air conditioner / split system", "Ceiling fans"];
 
   // Build the selects from the same CLEANS/SIZES data used by the price table
   typeSel.innerHTML = CLEANS.map((c, i) => `<option value="${i}">${c.short}</option>`).join("");
