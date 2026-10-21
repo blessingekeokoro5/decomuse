@@ -103,6 +103,22 @@ function sofaSaleToday() {
 }
 const SOFA_SALE_PCT = 10;
 
+// Black Friday → Cyber Monday: 15% off Luxo Living items (id lxNN), Adelaide time.
+// Auto-runs each year (4th Friday of November through the following Monday).
+// Mirrors the browser logic in js/data.js so the charged price always matches.
+const BLACK_FRIDAY_PCT = 15;
+function blackFridayOn() {
+  try {
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Australia/Adelaide" }));
+    const y = now.getFullYear();
+    let fridays = 0, day = 1;
+    for (; day <= 30; day++) { if (new Date(y, 10, day).getDay() === 5 && ++fridays === 4) break; }
+    const start = new Date(y, 10, day, 0, 0, 0);
+    const end = new Date(y, 10, day + 3, 23, 59, 59); // +3 days = Cyber Monday
+    return now >= start && now <= end;
+  } catch (e) { return false; }
+}
+
 /* Resolve one cart line to a trusted { name, unitPrice, qty, weight }.
    Throws if the line can't be justified from the catalogue. */
 function resolveLine(raw) {
@@ -147,6 +163,8 @@ function resolveLine(raw) {
 
   // Recurring sofa sale (Tue/Thu/Sat AU time) — apply to the trusted price.
   if (/^sf\d+$/.test(id) && sofaSaleToday()) unitPrice = round2(unitPrice * (1 - SOFA_SALE_PCT / 100));
+  // Black Friday → Cyber Monday: 15% off Luxo Living items (id lxNN).
+  if (/^lx\d+$/.test(id) && blackFridayOn()) unitPrice = round2(unitPrice * (1 - BLACK_FRIDAY_PCT / 100));
 
   const variant = [raw.colour, size].filter(Boolean).map(String).join(", ");
   return {

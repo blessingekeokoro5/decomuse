@@ -15907,3 +15907,51 @@ function isSaleItem(p) { return !!p && /^sf\d+$/.test(p.id || ""); }
     p.tag = "Sale";
   });
 })();
+
+/* ============================================================
+   BLACK FRIDAY → CYBER MONDAY — 15% off Luxo Living furniture
+   (Adelaide time). Auto-runs every year: from the 4th Friday of
+   November (Black Friday) through the following Monday (Cyber
+   Monday), inclusive. Browser-only: it discounts Luxo prices in
+   memory and adds an announcement-bar notice. The Netlify checkout
+   function applies the SAME rule server-side so the charged price
+   always matches. Build scripts (Node, no document) keep regular
+   prices. To change the rate: edit BLACK_FRIDAY.pct.
+   ============================================================ */
+var BLACK_FRIDAY = { pct: 15 };
+function blackFridayRange(year) {
+  // 4th Friday of November = Black Friday; +3 days = Cyber Monday.
+  var fridays = 0, day = 1;
+  for (; day <= 30; day++) { if (new Date(year, 10, day).getDay() === 5 && ++fridays === 4) break; }
+  return { start: new Date(year, 10, day, 0, 0, 0), end: new Date(year, 10, day + 3, 23, 59, 59) };
+}
+function blackFridayOn() {
+  var now;
+  try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "Australia/Adelaide" })); }
+  catch (e) { now = new Date(); }
+  var r = blackFridayRange(now.getFullYear());
+  return now >= r.start && now <= r.end;
+}
+function isBlackFridayItem(p) { return !!p && /^lx\d+$/.test(p.id || ""); }
+
+(function applyBlackFriday() {
+  if (typeof document === "undefined") return;            // browser only
+  var on = blackFridayOn();
+  try {
+    if (on && typeof ANNOUNCEMENTS !== "undefined" && Array.isArray(ANNOUNCEMENTS)) {
+      ANNOUNCEMENTS.unshift("🛍️ BLACK FRIDAY — 15% off all Luxo Living furniture, now through Cyber Monday ✦");
+    }
+  } catch (e) {}
+  if (!on) return;
+  var f = 1 - BLACK_FRIDAY.pct / 100;
+  (typeof PRODUCTS !== "undefined" ? PRODUCTS : []).forEach(function (p) {
+    if (!isBlackFridayItem(p) || p.was) return;
+    p.was = p.price;
+    p.price = Math.round(p.price * f);
+    if (p.memberPrice) p.memberPrice = Math.round(p.memberPrice * f);
+    if (Array.isArray(p.sizes)) p.sizes.forEach(function (s) {
+      if (s && typeof s.price === "number") s.price = Math.round(s.price * f);
+    });
+    p.tag = "Black Friday";
+  });
+})();

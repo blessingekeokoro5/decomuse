@@ -269,7 +269,7 @@ function productCard(p) {
       </div>
     </article>`;
   }
-  const tag = p.tag ? `<span class="tag ${/sale/i.test(p.tag) ? 'sale' : ''}">${p.tag}</span>` : "";
+  const tag = p.tag ? `<span class="tag ${/sale|black friday/i.test(p.tag) ? 'sale' : ''}">${p.tag}</span>` : "";
   const hot = sellingFast(p) ? `<span class="badge-hot">⚡ Selling fast</span>` : "";
   const was = p.was ? `<small>${money(p.was)}</small>` : "";
   return `
