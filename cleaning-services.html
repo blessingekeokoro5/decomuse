@@ -999,6 +999,8 @@ renderLedger();
     const d = new FormData(form);
     const email = (d.get("email") || "").toString().trim();
     const name = (d.get("name") || "").toString().trim();
+    const q = compute();
+    const cleanName = q.c.short;                 // e.g. "Deep clean"
     const summary = summaryRows();
     // Business notification fields: contact details + the full estimate breakdown
     const fields = [
@@ -1007,11 +1009,11 @@ renderLedger();
       ["Notes", d.get("notes")],
     ].filter(([, v]) => v != null && String(v).trim() !== "");
     const payload = {
-      subject: "Samira Home Decor — Cleaning quote estimate request",
+      subject: "Samira Home Decor — " + cleanName + " quote estimate request",
       fields, replyto: email, name, summary,
-      customerSubject: "Your cleaning estimate — Samira Home Decor",
-      customerHeading: "Your cleaning estimate ✦",
-      customerLead: "Thanks " + (name || "there") + "! Here's your estimated quote based on the details you chose. It's an estimate only — we'll be in touch to confirm and book.",
+      customerSubject: "Your " + cleanName + " estimate — Samira Home Decor Cleaning Services",
+      customerHeading: "Your " + cleanName + " estimate ✦",
+      customerLead: "Thanks " + (name || "there") + "! Here's your Samira Home Decor cleaning service estimate for your selected " + cleanName.toLowerCase() + ", based on the details you chose. It's an estimate only — we'll be in touch to confirm and book.",
     };
     try {
       const r = await fetch("/.netlify/functions/send-submission", {
