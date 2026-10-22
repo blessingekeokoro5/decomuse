@@ -583,6 +583,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
         <p class="form-note">You'll get your estimate by email straight away. It's an estimate only — your final price and time are confirmed when you book.</p>
         <div><button class="btn btn-navy" type="submit">Email me this estimate</button></div>
         <p class="status" id="quoteStatus" role="status"></p>
+        <p class="form-note" style="text-align:center;margin-top:6px">Having trouble with your estimate? <a href="https://wa.me/61451609398?text=Hi%2C%20I%20need%20help%20with%20my%20cleaning%20quote." target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;text-decoration:underline">Chat with us on WhatsApp</a> and we'll sort it out.</p>
       </form>
 
       <aside class="quote-out" id="quoteOut" aria-live="polite"></aside>
@@ -982,7 +983,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
     </div>
     <div class="wa-replies">
       <a class="wa-reply" href="https://wa.me/61451609398?text=Hi%2C%20I'm%20already%20a%20customer%20and%20have%20a%20question." target="_blank" rel="noopener">I'm already a customer</a>
-      <a class="wa-reply" href="https://wa.me/61451609398?text=Hi%2C%20I'd%20like%20a%20quote%20for%20a%20clean." target="_blank" rel="noopener">I need a quote</a>
+      <a class="wa-reply" href="#estimate">I need a quote</a>
       <a class="wa-reply" href="https://wa.me/61451609398?text=Hi%2C%20I'm%20just%20browsing%20%E2%80%94%20can%20you%20tell%20me%20more%3F" target="_blank" rel="noopener">Just browsing</a>
     </div>
   </div>
@@ -1000,6 +1001,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
   function closePop() { pop.hidden = true; }
   launch.addEventListener("click", function () { pop.hidden ? openPop() : closePop(); });
   if (x) x.addEventListener("click", function (e) { e.stopPropagation(); closePop(); });
+  pop.querySelectorAll(".wa-reply").forEach(function (r) { r.addEventListener("click", closePop); });
   try { if (!sessionStorage.getItem("wa_seen")) { setTimeout(function () { openPop(); try { sessionStorage.setItem("wa_seen", "1"); } catch (e) {} }, 1600); } }
   catch (e) { setTimeout(openPop, 1600); }
 })();
