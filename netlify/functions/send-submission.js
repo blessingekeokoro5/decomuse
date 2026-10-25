@@ -46,11 +46,13 @@ const esc = (s) => String(s == null ? "" : s)
 const isEmail = (s) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(s || ""));
 
 // Shared branded header: blue banner + gold accent bar — matches the order email
-function brandHeader(title, subtitle) {
+function brandHeader(title, subtitle, brand, tagline) {
+  const name = brand || SENDER_NAME;
+  const tag = tagline || "Home décor for every house";
   return `
     <div style="text-align:center;padding:22px 0 6px">
-      <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#14365F">Samira Home Decor</div>
-      <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">Home décor for every house</div>
+      <div style="font-family:Georgia,serif;font-size:28px;font-weight:bold;letter-spacing:3px;color:#14365F">${esc(name)}</div>
+      <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#8a7f77">${esc(tag)}</div>
     </div>
     <div style="background:#14365F;color:#fff;border-radius:14px;padding:24px 28px;text-align:center;border-bottom:4px solid #C6A15B">
       <div style="font-size:22px;font-family:Georgia,serif">${esc(title)}</div>
@@ -217,6 +219,7 @@ exports.handler = async (event) => {
 
   try {
     const data = JSON.parse(event.body || "{}");
+    const brand = data.brandName || SENDER_NAME;           // lets a section (e.g. cleaning) override the letterhead name
     const subject = data.subject || "New website enquiry — Samira Home Decor";
     let fields = Array.isArray(data.fields) ? data.fields : [];
     // Accept either [[k,v]...] or a plain object {k:v}
@@ -235,7 +238,7 @@ exports.handler = async (event) => {
       </tr>`).join("");
 
     const bizHtml = wrap(`
-      ${brandHeader("New website submission", subject)}
+      ${brandHeader("New website submission", subject, data.brandName, data.brandTagline)}
       <table role="presentation" width="100%" style="margin-top:20px;border-collapse:collapse">${rows}</table>
       <div style="background:#F6EEE8;border-radius:12px;padding:14px 18px;margin-top:20px;font-size:13px;color:#5a5049;line-height:1.6">
         📩 ${replyto ? `Reply straight to this email to respond to <strong>${esc(replyto)}</strong>.` : "Submitted via the Samira Home Decor website."}
@@ -287,9 +290,9 @@ exports.handler = async (event) => {
             <td style="padding:10px 0;border-bottom:1px solid #eee;color:#0B1F3A;font-size:${isTotal ? "16px" : "14px"};${isTotal ? "font-weight:bold;" : ""}text-align:right;white-space:pre-wrap">${esc(v)}</td>
           </tr>`;
         }).join("");
-        custSubject = data.customerSubject || "Your cleaning estimate — Samira Home Decor";
+        custSubject = data.customerSubject || ("Your cleaning estimate — " + brand);
         custHtml = wrap(`
-          ${brandHeader(data.customerHeading || "Your cleaning estimate ✦", "")}
+          ${brandHeader(data.customerHeading || "Your cleaning estimate ✦", "", data.brandName, data.brandTagline)}
           <p style="color:#5a5049;line-height:1.7;margin-top:20px">Hi${name ? " " + esc(name) : ""},</p>
           <p style="color:#5a5049;line-height:1.7">${esc(data.customerLead || "Thank you for your enquiry. Here's your estimated quote based on the details you gave us:")}</p>
           <table role="presentation" width="100%" style="margin-top:14px;border-collapse:collapse">${sRows}</table>
@@ -299,19 +302,19 @@ exports.handler = async (event) => {
           <div style="text-align:center;margin:24px 0">
             <a href="${SITE_URL}/cleaning-services.html#book" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Book your clean</a>
           </div>
-          <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">Questions? Just reply to this email or call 0451 609 398.<br>Warm regards, The Samira Home Decor team 💛</p>
+          <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">Questions? Just reply to this email or call 0451 609 398.<br>Warm regards, The ${esc(brand)} team 💛</p>
         `);
       } else {
-        custSubject = "We've received your message — Samira Home Decor";
+        custSubject = "We've received your message — " + brand;
         custHtml = wrap(`
-          ${brandHeader("We've received your message ✦", "")}
+          ${brandHeader("We've received your message ✦", "", data.brandName, data.brandTagline)}
           <p style="color:#5a5049;line-height:1.7;margin-top:20px">Hi${name ? " " + esc(name) : ""},</p>
-          <p style="color:#5a5049;line-height:1.7">Thank you for reaching out to <strong>Samira Home Decor</strong>. We've received your message and a member of our Australian-based team will get back to you <strong>within 2 business hours</strong> (during business days).</p>
+          <p style="color:#5a5049;line-height:1.7">Thank you for reaching out to <strong>${esc(brand)}</strong>. We've received your message and a member of our Australian-based team will get back to you <strong>within 2 business hours</strong> (during business days).</p>
           <p style="color:#5a5049;line-height:1.7">In the meantime, feel free to keep exploring our collection.</p>
           <div style="text-align:center;margin:24px 0">
             <a href="${SITE_URL}/shop.html" style="background:#C6A15B;color:#fff;text-decoration:none;padding:13px 28px;border-radius:30px;font-weight:bold">Browse the shop</a>
           </div>
-          <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">If you didn't contact us, you can ignore this email.<br>Warm regards, The Samira Home Decor team 💛</p>
+          <p style="color:#8a7f77;font-size:12px;text-align:center;line-height:1.6">If you didn't contact us, you can ignore this email.<br>Warm regards, The ${esc(brand)} team 💛</p>
         `);
       }
       try {

@@ -93,6 +93,10 @@
       <div class="hero-slide" style="background-image:url('assets/hero-3.jpg')"></div>
     </div>
     <div class="container hero-grid">
+      <a id="bfBanner" href="shop.html?avail=ready" style="display:none;grid-column:1/-1;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(90deg,#0B1F3A,#13294a);color:#fff;border:1px solid #C6A15B;border-radius:12px;padding:12px 18px;margin-bottom:22px;text-decoration:none;font:500 1rem/1.35 var(--font-body,inherit)">
+        🛍️ <b style="color:#C6A15B;letter-spacing:.04em">BLACK FRIDAY</b> <span>— 15% off all Luxo Living furniture · now through Cyber Monday</span>
+        <span style="margin-left:auto;background:#C6A15B;color:#0B1F3A;font-weight:700;padding:7px 15px;border-radius:999px;white-space:nowrap">Shop now →</span>
+      </a>
       <div class="reveal">
         <h1 class="hero-title">Australia's home décor store</h1>
         <p class="hero-sub">Discover over 1,000 beautifully curated pieces in furniture, lighting, décor, bedding and gifts, thoughtfully selected to bring warmth, style and soft-life luxury into your home. Delivered across Australia and select regions. Want a personalised touch? Our styling services help you create a space that feels uniquely yours.</p>
@@ -294,6 +298,8 @@
   <script src="js/cart.js?v=22"></script>
   <script src="js/main.js?v=5"></script>
   <script>
+    // Black Friday → Cyber Monday hero banner (auto, Adelaide time, from js/data.js)
+    try { if (typeof blackFridayOn === "function" && blackFridayOn()) { var _bf = document.getElementById("bfBanner"); if (_bf) _bf.style.display = "flex"; } } catch (e) {}
     // Featured products (first 4 with tags) + reviews
     // Hero slideshow, crossfades through ALL .hero-slide photos (any number)
     (function heroSlideshow() {
