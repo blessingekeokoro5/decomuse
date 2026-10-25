@@ -39,7 +39,7 @@ exports.handler = async (event) => {
 
   let store;
   try { store = getStore("cleaning-bookings"); }
-  catch (e) { return json(500, { error: "storage_unavailable" }); }
+  catch (e) { return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e) }); }
 
   // ---- List all bookings ----
   if (event.httpMethod === "GET") {
