@@ -11,24 +11,23 @@
    Returns: { ok:true, image:"data:image/png;base64,..." }
      or     { ok:false, error:"..." }  (friendly message for the UI)
 
-   Required env var (set in Netlify):  GEMINI_API_KEY
+   Credentials: GEMINI_API_KEY + GOOGLE_GEMINI_BASE_URL are injected by the
+   Netlify AI Gateway (or use your own GEMINI_API_KEY if set in Netlify).
    Cost: ~US$0.04 per generated image. Nothing is stored.
    ============================================================ */
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GEMINI || "";
 const MODEL = "gemini-2.5-flash-image"; // image-capable (Nano Banana)
 
 function json(statusCode, obj) {
-  return {
-    statusCode,
+  return new Response(JSON.stringify(obj), {
+    status: statusCode,
     headers: {
       "Content-Type": "application/json",
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "Content-Type",
       "Access-Control-Allow-Methods": "POST, OPTIONS",
     },
-    body: JSON.stringify(obj),
-  };
+  });
 }
 
 // Split a data URL into { mime, data(base64) }
@@ -37,16 +36,19 @@ function parseDataUrl(s) {
   return m ? { mime: m[1], data: m[2] } : null;
 }
 
-exports.handler = async (event) => {
-  if (event.httpMethod === "OPTIONS") return json(200, {});
-  if (event.httpMethod !== "POST") return json(405, { ok: false, error: "Method Not Allowed" });
+export default async (req) => {
+  if (req.method === "OPTIONS") return json(200, {});
+  if (req.method !== "POST") return json(405, { ok: false, error: "Method Not Allowed" });
+
+  const GEMINI_API_KEY = process.env.GEMINI_API_KEY || process.env.GEMINI || "";
+  const GEMINI_BASE_URL = (process.env.GOOGLE_GEMINI_BASE_URL || "https://generativelanguage.googleapis.com").replace(/\/$/, "");
 
   if (!GEMINI_API_KEY) {
     return json(200, { ok: false, error: "Room preview isn't switched on yet. Please check back soon." });
   }
 
   let body;
-  try { body = JSON.parse(event.body || "{}"); } catch (e) { return json(400, { ok: false, error: "Bad request." }); }
+  try { body = JSON.parse((await req.text()) || "{}"); } catch (e) { return json(400, { ok: false, error: "Bad request." }); }
 
   const room = parseDataUrl(body.room);
   if (!room) return json(400, { ok: false, error: "Please upload a room photo (JPG or PNG)." });
@@ -84,14 +86,14 @@ exports.handler = async (event) => {
   const parts = [{ text: prompt }, { inline_data: { mime_type: room.mime, data: room.data } }];
   if (productPart) parts.push(productPart);
 
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+  const url = `${GEMINI_BASE_URL}/v1beta/models/${MODEL}:generateContent`;
 
   try {
     const ac = new AbortController();
     const t = setTimeout(() => ac.abort(), 9200); // stay under Netlify's sync 10s limit
     const res = await fetch(url, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: { "Content-Type": "application/json", "x-goog-api-key": GEMINI_API_KEY },
       body: JSON.stringify({
         contents: [{ parts }],
         generationConfig: { responseModalities: ["IMAGE"] },
