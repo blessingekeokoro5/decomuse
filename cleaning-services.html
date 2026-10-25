@@ -981,10 +981,16 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
         <div class="wa-meta">Samira · <span class="wa-online">We'll reply as soon as we can</span></div>
       </div>
     </div>
-    <div class="wa-replies">
+    <div class="wa-replies" id="waMain">
       <a class="wa-reply" href="https://wa.me/61451609398?text=Hi%2C%20I'm%20already%20a%20customer%20and%20have%20a%20question." target="_blank" rel="noopener">I'm already a customer</a>
       <a class="wa-reply" href="#estimate">I need a quote</a>
-      <a class="wa-reply" href="https://wa.me/61451609398?text=Hi%2C%20I'm%20just%20browsing%20%E2%80%94%20can%20you%20tell%20me%20more%3F" target="_blank" rel="noopener">Just browsing</a>
+      <button type="button" class="wa-reply" id="waBrowse">Just browsing</button>
+    </div>
+    <div class="wa-replies" id="waBrowseOpts" hidden>
+      <a class="wa-reply" href="#residential">See cleaning services &amp; prices</a>
+      <a class="wa-reply" href="index.html">Shop home décor</a>
+      <a class="wa-reply" href="https://wa.me/61451609398?text=Hi%2C%20I'm%20just%20browsing%20%E2%80%94%20can%20you%20tell%20me%20more%3F" target="_blank" rel="noopener">Chat on WhatsApp</a>
+      <button type="button" class="wa-reply wa-back" id="waBack">&larr; Back</button>
     </div>
   </div>
   <button class="wa-launch" id="waLaunch" type="button" aria-label="Chat with a representative on WhatsApp — we'll reply as soon as we can">
@@ -997,11 +1003,17 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
   var launch = document.getElementById("waLaunch"), pop = document.getElementById("waPop"), x = document.getElementById("waPopX");
   if (!launch || !pop) return;
   var badge = document.querySelector("#waWidget .wa-badge");
-  function openPop() { pop.hidden = false; if (badge) badge.style.display = "none"; }
+  var waMain = document.getElementById("waMain"), waBrowseOpts = document.getElementById("waBrowseOpts");
+  var waBrowse = document.getElementById("waBrowse"), waBack = document.getElementById("waBack");
+  function showMain() { if (waMain) waMain.hidden = false; if (waBrowseOpts) waBrowseOpts.hidden = true; }
+  function openPop() { pop.hidden = false; if (badge) badge.style.display = "none"; showMain(); }
   function closePop() { pop.hidden = true; }
   launch.addEventListener("click", function () { pop.hidden ? openPop() : closePop(); });
   if (x) x.addEventListener("click", function (e) { e.stopPropagation(); closePop(); });
-  pop.querySelectorAll(".wa-reply").forEach(function (r) { r.addEventListener("click", closePop); });
+  if (waBrowse) waBrowse.addEventListener("click", function () { waMain.hidden = true; waBrowseOpts.hidden = false; });
+  if (waBack) waBack.addEventListener("click", showMain);
+  // Only the actual links close the popup — the toggle buttons just switch the menu
+  pop.querySelectorAll("a.wa-reply").forEach(function (r) { r.addEventListener("click", closePop); });
   try { if (!sessionStorage.getItem("wa_seen")) { setTimeout(function () { openPop(); try { sessionStorage.setItem("wa_seen", "1"); } catch (e) {} }, 1600); } }
   catch (e) { setTimeout(openPop, 1600); }
 })();
