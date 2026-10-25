@@ -39,7 +39,10 @@ exports.handler = async (event) => {
 
   let store;
   try { store = getStore("cleaning-bookings"); }
-  catch (e) { return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e) }); }
+  catch (e) {
+    const envKeys = Object.keys(process.env).filter(k => /NETLIFY|SITE|BLOB|DEPLOY/i.test(k));
+    return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e), env: envKeys });
+  }
 
   // ---- List all bookings ----
   if (event.httpMethod === "GET") {
