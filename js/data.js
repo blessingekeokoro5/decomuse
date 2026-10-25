@@ -15939,7 +15939,7 @@ function isBlackFridayItem(p) { return !!p && /^lx\d+$/.test(p.id || ""); }
   var on = blackFridayOn();
   try {
     if (on && typeof ANNOUNCEMENTS !== "undefined" && Array.isArray(ANNOUNCEMENTS)) {
-      ANNOUNCEMENTS.unshift("🛍️ BLACK FRIDAY — 15% off all Luxo Living furniture, now through Cyber Monday ✦");
+      ANNOUNCEMENTS.unshift("🛍️ BLACK FRIDAY — 15% off selected furniture, now through Cyber Monday ✦");
     }
   } catch (e) {}
   if (!on) return;

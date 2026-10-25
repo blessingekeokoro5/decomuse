@@ -195,8 +195,8 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=28"></script>
-  <script src="js/components.js?v=46"></script>
+  <script src="js/data.js?v=29"></script>
+  <script src="js/components.js?v=47"></script>
   <script src="js/cart.js?v=22"></script>
   <script src="js/main.js?v=5"></script>
   <script>
@@ -683,88 +683,6 @@
         body = `<h3>Dimensions</h3><p class="th-sub">${p.name}</p><p>Detailed dimensions for this piece are being added. In the meantime, please <a href="contact.html">contact us</a> for exact sizing.</p>`;
       }
       openTool(body);
-    }
-
-    /* ---- 2. See it in your room (3D / AR) ---- */
-    function openRoomView(id){
-      const p = findProd(id); if (!p) return;
-      const url = location.origin + "/ar.html?id=" + p.id;
-      // Real AR when a 3D model is supplied; otherwise the QR "see in your room" flow.
-      if (p.model3d){
-        if (!window.customElements || !customElements.get("model-viewer")){
-          const s = document.createElement("script");
-          s.type = "module"; s.src = "https://cdn.jsdelivr.net/npm/@google/model-viewer@3.5.0/dist/model-viewer.min.js";
-          document.head.appendChild(s);
-        }
-        openTool(`<h3>See it in your room</h3><p class="th-sub">${p.name}</p>
-          <model-viewer src="${p.model3d}" ${p.modelUsdz ? `ios-src="${p.modelUsdz}"` : ""} camera-controls auto-rotate ar ar-modes="scene-viewer webxr quick-look" alt="${p.name} in 3D"></model-viewer>
-          <p class="ar-fine">Tap the AR icon (bottom-right of the 3D view) on a supported phone to place this piece in your room.</p>`);
-        return;
-      }
-      // No 3D model → AI "see it in your room" (upload a photo, get a styled preview)
-      openRoomAI(p);
-    }
-
-    /* ---- 2b. See it in your room (AI preview from a room photo) ---- */
-    function openRoomAI(p){
-      openTool(`
-        <div class="roomai">
-          <h3>See It in Your Room</h3>
-          <p class="th-sub">Upload a photo of your room to generate a styled, lifelike preview with <strong>${p.name}</strong>.</p>
-          <label class="rai-drop" id="raiDrop">
-            <input type="file" accept="image/*" id="raiFile" hidden>
-            <span class="rai-up" aria-hidden="true">⬆</span>
-            <span class="rai-cta"><strong>Take a photo of your room…</strong><small>JPG / PNG · up to 8 MB</small></span>
-          </label>
-          <p class="ar-fine">For best results, use a well-lit photo taken straight on (landscape works best).</p>
-          <div class="rai-stage" id="raiStage" aria-live="polite"></div>
-        </div>`);
-      const fileInput = document.getElementById("raiFile");
-      const stage = document.getElementById("raiStage");
-      const reset = () => { stage.innerHTML = ""; fileInput.value = ""; };
-      fileInput.addEventListener("change", () => {
-        const f = fileInput.files && fileInput.files[0];
-        if (!f) return;
-        if (f.size > 8 * 1024 * 1024) { stage.innerHTML = `<p class="rai-err">That photo is over 8 MB — please choose a smaller one.</p>`; return; }
-        stage.innerHTML = `<div class="rai-loading"><div class="rai-spin"></div><p>Creating your room preview…<br><small>This can take 10–20 seconds.</small></p></div>`;
-        downscaleImg(f, 1280, async (dataUrl) => {
-          try {
-            const productImg = location.origin + "/" + String(p.img || "").replace(/^\//, "");
-            const r = await fetch("/.netlify/functions/room-preview", {
-              method: "POST", headers: { "Content-Type": "application/json" },
-              body: JSON.stringify({ room: dataUrl, productImg, productName: p.name }),
-            });
-            const j = await r.json().catch(() => ({}));
-            if (j && j.ok && j.image) {
-              stage.innerHTML = `
-                <p class="rai-ready"><strong>Your room preview is ready</strong></p>
-                <div class="rai-result"><img src="${j.image}" alt="${p.name} shown in your room"></div>
-                <p class="ar-fine">Note: this preview is AI-generated for visualisation only. Colour, scale and details may vary from the final product — always refer to the product photos, dimensions and specifications before purchasing. Your photo isn't stored.</p>
-                <button class="btn btn--ghost rai-again" type="button">Try another photo</button>`;
-            } else {
-              stage.innerHTML = `<p class="rai-err">${(j && j.error) || "We couldn't create your preview. Please try another photo."}</p>
-                <button class="btn btn--ghost rai-again" type="button">Try again</button>`;
-            }
-            const again = stage.querySelector(".rai-again"); if (again) again.addEventListener("click", reset);
-          } catch (e) {
-            stage.innerHTML = `<p class="rai-err">Something went wrong. Please try again.</p>`;
-          }
-        });
-      });
-    }
-
-    // Downscale a chosen image to maxDim (keeps the upload small & fast) → JPEG data URL
-    function downscaleImg(file, maxDim, cb){
-      const img = new Image(), rd = new FileReader();
-      rd.onload = () => { img.onload = () => {
-        let w = img.width, h = img.height;
-        if (w > h && w > maxDim) { h = Math.round(h * maxDim / w); w = maxDim; }
-        else if (h >= w && h > maxDim) { w = Math.round(w * maxDim / h); h = maxDim; }
-        const c = document.createElement("canvas"); c.width = w; c.height = h;
-        c.getContext("2d").drawImage(img, 0, 0, w, h);
-        try { cb(c.toDataURL("image/jpeg", 0.85)); } catch (e) { cb(rd.result); }
-      }; img.onerror = () => cb(rd.result); img.src = rd.result; };
-      rd.readAsDataURL(file);
     }
 
     /* ---- 3. 360° spin ---- */

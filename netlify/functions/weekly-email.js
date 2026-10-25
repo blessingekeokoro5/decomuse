@@ -72,6 +72,12 @@ function buildHtml(featured) {
     ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0">${rows.join("")}</table>`
     : "";
 
+  // Hero is a featured product photo (falls back to a styled room if none)
+  const heroP = featured[0];
+  const heroImg = heroP ? (SITE_URL + "/" + String(heroP.img).replace(/^\//, "")) : (SITE_URL + "/assets/cat-home-decor.jpg");
+  const heroAlt = heroP ? esc(heroP.name) : "Styled home";
+  const heroHref = heroP ? (SITE_URL + "/product.html?id=" + encodeURIComponent(heroP.id)) : (SITE_URL + "/shop.html");
+
   const inner = `
     <div style="background:${NAVY};color:${CHAMP};text-align:center;padding:12px 16px;border-radius:12px;font-size:13px;font-weight:bold">
       THE SAMIRA WEEKLY · ${esc(today)}
@@ -80,7 +86,7 @@ function buildHtml(featured) {
       <div style="font-family:Georgia,serif;font-size:27px;font-weight:bold;color:${NAVY}">Samira Home Decor</div>
       <div style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:${TAUPE};margin-top:4px">Home décor for every house</div>
     </div>
-    <img src="${SITE_URL}/assets/cat-home-decor.jpg" width="100%" alt="Styled living space" style="display:block;width:100%;border-radius:14px">
+    <a href="${heroHref}" style="text-decoration:none"><img src="${heroImg}" width="100%" alt="${heroAlt}" style="display:block;width:100%;height:360px;object-fit:cover;border-radius:14px"></a>
     <div style="background:${NAVY};border-radius:0 0 14px 14px;padding:22px;text-align:center;border-bottom:4px solid ${GOLD};margin-top:-6px">
       <div style="font:22px Georgia,serif;color:#fff">New week, fresh ideas for your home</div>
       <div style="color:${CHAMP};margin:6px 0 14px;font-size:14px">A handful of pieces we're loving right now</div>

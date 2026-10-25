@@ -20,7 +20,7 @@ const POLICY_ORDER = [
 
 const FAQ_ITEMS = [
   { q: "Where do you ship from and how long does it take?",
-    a: "All home-décor products are dispatched from our Melbourne warehouse. Orders are usually processed within 1 to 2 business days. Standard delivery within Australia typically takes 3 to 8 business days depending on your location; larger furniture items may take longer and are quoted at checkout." },
+    a: "All home-décor products are dispatched from our Sydney warehouse. Orders are usually processed within 1 to 2 business days. Standard delivery within Australia typically takes 3 to 8 business days depending on your location; larger furniture items may take longer and are quoted at checkout." },
   { q: "Do you ship internationally?",
     a: "Yes, we ship worldwide, including Australia, New Zealand, USA, Canada, the Netherlands, Morocco, China, Germany, Switzerland and the UAE. International delivery times and costs vary by destination and are calculated at checkout. Any import duties or taxes are the responsibility of the customer." },
   { q: "How do I track my order?",
@@ -51,10 +51,10 @@ const POLICIES = {
     intro: "This policy explains how we ship, fulfil, deliver and track Samira Home Decor orders. It should be read together with our Terms & Conditions and Returns & Refund Policy.",
     body: `
       <h3>1. Dispatch &amp; processing</h3>
-      <p>All Samira Home Decor home-décor products are shipped from our <strong>Melbourne warehouse</strong>. Orders are generally processed and dispatched within <strong>1 to 2 business days</strong> of payment being received and cleared. During sale periods and holidays, processing may take a little longer.</p>
+      <p>All Samira Home Decor home-décor products are shipped from our <strong>Sydney warehouse</strong>. Orders are generally processed and dispatched within <strong>1 to 2 business days</strong> of payment being received and cleared. During sale periods and holidays, processing may take a little longer.</p>
 
       <h3>2. Shipping &amp; fulfilment</h3>
-      <p>Once your order is placed, our team picks, packs and fulfils it from our Melbourne warehouse with care. Our shipping &amp; fulfilment standards:</p>
+      <p>Once your order is placed, our team picks, packs and fulfils it from our Sydney warehouse with care. Our shipping &amp; fulfilment standards:</p>
       <ul>
         <li><strong>Handling time:</strong> most orders are packed and handed to the carrier within 1 to 2 business days; made-to-order and bulky furniture items may take longer and are noted at checkout.</li>
         <li><strong>Carriers:</strong> we dispatch via trusted carriers including Australia Post and Aramex, and specialist couriers for large or fragile furniture.</li>
@@ -161,7 +161,6 @@ const POLICIES = {
 
       <h3>6. The Samira Stylera &amp; images</h3>
       <p>Photos uploaded to the Samira Stylera tool are processed to generate styling recommendations. In the current version, images are processed in your browser and are not stored on our servers.</p>
-      <p>Our "See It in Your Room" preview on product pages sends the room photo you upload, together with the product image, to a third-party AI image provider (Google) solely to generate your preview. We do not store your uploaded photo or the generated image on our servers, and the preview is for visualisation only.</p>
 
       <h3>7. Access, correction &amp; complaints</h3>
       <p>You may request access to, or correction of, the personal information we hold about you by contacting us. If you have a privacy concern, contact us first and we'll work to resolve it. You may also contact the Office of the Australian Information Commissioner (OAIC) at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener">oaic.gov.au</a>.</p>

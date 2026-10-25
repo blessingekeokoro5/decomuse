@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="canonical" href="https://samirahomedecor.com.au/track.html">
   <title>Track Your Order, Samira Home Decor</title>
-  <meta name="description" content="Track your Samira Home Decor order using your order number, email or phone. Follow your pieces from our Melbourne warehouse to your door, Australia-wide.">
+  <meta name="description" content="Track your Samira Home Decor order using your order number, email or phone. Follow your pieces from our Sydney warehouse to your door, Australia-wide.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -46,7 +46,7 @@
       <div class="breadcrumb"><a href="index.html">Home</a> / Track your order</div>
       <span class="eyebrow">📦 Order tracking</span>
       <h1>Track your order</h1>
-      <p>Enter your order number, email or phone used at checkout, and follow your pieces from our Melbourne warehouse to your door.</p>
+      <p>Enter your order number, email or phone used at checkout, and follow your pieces from our Sydney warehouse to your door.</p>
     </div>
   </section>
 
@@ -77,8 +77,8 @@
   </section>
 
   <div id="site-footer"></div>
-  <script src="js/data.js?v=28"></script>
-  <script src="js/components.js?v=46"></script>
+  <script src="js/data.js?v=29"></script>
+  <script src="js/components.js?v=47"></script>
   <script src="js/cart.js?v=22"></script>
   <script src="js/main.js?v=5"></script>
   <script>
@@ -105,8 +105,8 @@
 
     const STEPS = [
       { key: "placed",   title: "Order placed",                 note: "We received your order and payment." },
-      { key: "packed",   title: "Packed with care",             note: "Your pieces were hand-packed at our Melbourne warehouse." },
-      { key: "shipped",  title: "Shipped from Melbourne",       note: "Handed to the courier for delivery." },
+      { key: "packed",   title: "Packed with care",             note: "Your pieces were hand-packed at our Sydney warehouse." },
+      { key: "shipped",  title: "Shipped from Sydney",       note: "Handed to the courier for delivery." },
       { key: "transit",  title: "In transit",                   note: "On its way across Australia." },
       { key: "out",      title: "Out for delivery",             note: "With your local driver today." },
       { key: "delivered",title: "Delivered",                    note: "Enjoy, we'd love to see it styled!" }
@@ -135,7 +135,7 @@
         <div class="form-card reveal">
           <span class="eyebrow">${stage >= STEPS.length - 1 ? "Delivered ✓" : "In progress"}</span>
           <h2 style="font-size:1.8rem;margin-bottom:4px">Order ${orderNo}</h2>
-          <p style="color:var(--muted);margin-bottom:18px">Shipping to ${state}, Australia · from our Melbourne warehouse</p>
+          <p style="color:var(--muted);margin-bottom:18px">Shipping to ${state}, Australia · from our Sydney warehouse</p>
           <div class="track-summary">
             <div class="track-stat"><div class="l">Status</div><div class="v">${STEPS[stage].title}</div></div>
             <div class="track-stat"><div class="l">Est. delivery</div><div class="v">${eta}</div></div>

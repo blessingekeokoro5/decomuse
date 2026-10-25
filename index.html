@@ -94,7 +94,7 @@
     </div>
     <div class="container hero-grid">
       <a id="bfBanner" href="shop.html?avail=ready" style="display:none;grid-column:1/-1;align-items:center;gap:12px;flex-wrap:wrap;background:linear-gradient(90deg,#0B1F3A,#13294a);color:#fff;border:1px solid #C6A15B;border-radius:12px;padding:12px 18px;margin-bottom:22px;text-decoration:none;font:500 1rem/1.35 var(--font-body,inherit)">
-        🛍️ <b style="color:#C6A15B;letter-spacing:.04em">BLACK FRIDAY</b> <span>— 15% off all Luxo Living furniture · now through Cyber Monday</span>
+        🛍️ <b style="color:#C6A15B;letter-spacing:.04em">BLACK FRIDAY</b> <span>— 15% off selected furniture · now through Cyber Monday</span>
         <span style="margin-left:auto;background:#C6A15B;color:#0B1F3A;font-weight:700;padding:7px 15px;border-radius:999px;white-space:nowrap">Shop now →</span>
       </a>
       <div class="reveal">
@@ -258,9 +258,31 @@
         <div class="score">4.9 / 5 · loved by 500+ Australian homes</div>
       </div>
     </div>
-    <div class="review-marquee reveal">
-      <div class="review-track" id="reviewsGrid"></div>
+    <div class="container">
+      <div class="revc reveal">
+        <div class="revc-card" id="revcCard" aria-live="polite"></div>
+        <div class="revc-nav">
+          <button class="revc-arrow" id="revcPrev" type="button" aria-label="Previous review">&#8249;</button>
+          <div class="revc-dots" id="revcDots"></div>
+          <button class="revc-arrow" id="revcNext" type="button" aria-label="Next review">&#8250;</button>
+        </div>
+      </div>
     </div>
+    <style>
+      .revc{max-width:720px;margin:0 auto;text-align:center}
+      .revc-card{background:#fff;border-radius:22px;padding:42px 32px 34px;box-shadow:0 20px 54px -26px rgba(11,31,58,.35);position:relative;min-height:230px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+      .revc-quote{font-family:Georgia,serif;font-size:4.4rem;line-height:.5;color:#E3DACB;height:28px}
+      .revc-stars{color:#C6A15B;letter-spacing:3px;margin:6px 0 14px}
+      .revc-body{font-style:italic;font-size:1.16rem;line-height:1.75;color:#2C2623;max-width:560px;margin:0}
+      .revc-who{margin-top:20px;font-weight:600;color:#8a7f77;font-size:.95rem}
+      .revc-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:22px}
+      .revc-dots{display:flex;gap:8px;align-items:center}
+      .revc-dot{width:9px;height:9px;border-radius:50%;background:#d9cfc2;border:0;padding:0;cursor:pointer;transition:all .2s}
+      .revc-dot.active{background:#0B1F3A;width:26px;border-radius:99px}
+      .revc-arrow{width:42px;height:42px;border-radius:50%;border:1.5px solid #d9cfc2;background:#fff;color:#0B1F3A;font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+      .revc-arrow:hover{border-color:#0B1F3A;background:#0B1F3A;color:#fff}
+      @media(max-width:560px){.revc-body{font-size:1.04rem}.revc-card{padding:32px 20px}}
+    </style>
   </section>
 
   <section class="section help-band help-band--slim">
@@ -293,8 +315,8 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=28"></script>
-  <script src="js/components.js?v=46"></script>
+  <script src="js/data.js?v=29"></script>
+  <script src="js/components.js?v=47"></script>
   <script src="js/cart.js?v=22"></script>
   <script src="js/main.js?v=5"></script>
   <script>
@@ -316,16 +338,29 @@
     })();
 
     renderProducts("featuredGrid", PRODUCTS.filter(p => p.tag).slice(0, 4));
-    const reviewCard = r => `
-      <article class="testi">
-        <div class="stars">${"★".repeat(r.rating)}${"☆".repeat(5 - r.rating)}</div>
-        <h3>${r.title}</h3>
-        <p>“${r.body}”</p>
-        <div class="who">${r.who}</div>
-      </article>`;
-    // Render the set twice so the marquee loops seamlessly (translateX -50%).
-    const shuffled = REVIEWS.slice().sort(() => Math.random() - 0.5);
-    document.getElementById("reviewsGrid").innerHTML = shuffled.map(reviewCard).join("") + shuffled.map(reviewCard).join("");
+    // Testimonial carousel (one at a time, dots + arrows, auto-advance)
+    (function () {
+      const reviews = REVIEWS.slice().sort(() => Math.random() - 0.5);
+      const card = document.getElementById("revcCard"), dots = document.getElementById("revcDots");
+      const prev = document.getElementById("revcPrev"), next = document.getElementById("revcNext");
+      if (!card || !reviews.length) return;
+      let idx = 0, timer;
+      function render() {
+        const r = reviews[idx];
+        card.innerHTML =
+          '<div class="revc-quote">“</div>' +
+          '<div class="revc-stars">' + "★".repeat(r.rating) + '</div>' +
+          '<p class="revc-body">' + r.body + '</p>' +
+          '<div class="revc-who">' + r.who + '</div>';
+        dots.innerHTML = reviews.map((_, i) => '<button class="revc-dot' + (i === idx ? ' active' : '') + '" data-i="' + i + '" aria-label="Review ' + (i + 1) + '"></button>').join("");
+      }
+      function go(i) { idx = (i + reviews.length) % reviews.length; render(); }
+      function auto() { clearInterval(timer); timer = setInterval(() => go(idx + 1), 6000); }
+      prev.addEventListener("click", () => { go(idx - 1); auto(); });
+      next.addEventListener("click", () => { go(idx + 1); auto(); });
+      dots.addEventListener("click", (e) => { const b = e.target.closest(".revc-dot"); if (b) { go(+b.dataset.i); auto(); } });
+      render(); auto();
+    })();
 
     // Sale countdown banner (Winter Décor Refresh), reads SAMIRA.campaign
     (function () {

@@ -274,6 +274,19 @@ textarea{min-height:110px;resize:vertical}
 .review footer{margin-top:12px;color:var(--muted);font-size:.88rem;font-weight:600}
 .rev-formwrap{max-width:620px;margin:0 auto}
 @media (prefers-reduced-motion:reduce){.rev-track.scroll{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+.revc{max-width:720px;margin:0 auto 30px;text-align:center}
+.revc-card{background:#fff;border-radius:22px;padding:40px 30px 30px;box-shadow:0 20px 54px -26px rgba(11,31,58,.35);position:relative;min-height:220px;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.revc-quote{font-family:var(--serif);font-size:4.2rem;line-height:.5;color:#E3DACB;height:26px}
+.revc-stars{color:var(--gold);letter-spacing:3px;margin:6px 0 14px}
+.revc-body{font-style:italic;font-size:1.14rem;line-height:1.75;color:var(--ink);max-width:560px;margin:0}
+.revc-who{margin-top:18px;font-weight:600;color:var(--muted);font-size:.95rem}
+.revc-nav{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:20px}
+.revc-dots{display:flex;gap:8px;align-items:center}
+.revc-dot{width:9px;height:9px;border-radius:50%;background:#d9cfc2;border:0;padding:0;cursor:pointer;transition:all .2s}
+.revc-dot.active{background:var(--navy);width:26px;border-radius:99px}
+.revc-arrow{width:42px;height:42px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:var(--navy);font-size:1.4rem;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.revc-arrow:hover{border-color:var(--navy);background:var(--navy);color:#fff}
+@media(max-width:560px){.revc-body{font-size:1.02rem}.revc-card{padding:30px 18px}}
 .stars{color:var(--gold);letter-spacing:2px;font-size:1.05rem}
 .empty{background:#fff;border:1.5px dashed #C7CEDA;border-radius:14px;padding:32px}
 .empty h3{margin-bottom:8px}
@@ -873,7 +886,14 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       <h2 id="rev-title">Client reviews</h2>
       <p class="lede">Real feedback from the people whose homes and workplaces we clean.</p>
     </div>
-    <div class="rev-marquee"><div class="rev-viewport"><div class="rev-track" id="revList"></div></div></div>
+    <div class="revc" id="revCarousel">
+      <div class="revc-card" id="revcCard" aria-live="polite"></div>
+      <div class="revc-nav" id="revcNav">
+        <button class="revc-arrow" id="revcPrev" type="button" aria-label="Previous review">&#8249;</button>
+        <div class="revc-dots" id="revcDots"></div>
+        <button class="revc-arrow" id="revcNext" type="button" aria-label="Next review">&#8250;</button>
+      </div>
+    </div>
     <div class="rev-formwrap">
       <form class="form panel" id="reviewForm" name="cleaning-review" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
         <h3>Share your experience</h3>
@@ -1400,21 +1420,33 @@ document.getElementById("bookingForm").addEventListener("submit", async e => {
   });
 });
 
-/* Reviews */
-function renderReviews(){
-  const track = document.getElementById("revList");
+/* Reviews carousel (one at a time, dots + arrows, auto-advance) */
+(function(){
+  const card = document.getElementById("revcCard"), dots = document.getElementById("revcDots");
+  const prev = document.getElementById("revcPrev"), next = document.getElementById("revcNext"), nav = document.getElementById("revcNav");
+  if (!card) return;
   if (!REVIEWS.length) {
-    track.className = "rev-track";
-    track.innerHTML = `<div class="empty"><h3>Be one of our first reviewers</h3><p>Our cleaning service is new, so there are no reviews to show yet. If we've cleaned for you, we'd love to hear how it went.</p></div>`;
+    if (nav) nav.style.display = "none";
+    card.innerHTML = `<h3 style="margin:0 0 8px">Be one of our first reviewers</h3><p style="color:var(--muted)">Our cleaning service is new, so there are no reviews to show yet. If we've cleaned for you, we'd love to hear how it went.</p>`;
     return;
   }
-  const card = r => `<blockquote class="review"><span class="stars" aria-label="${r.rating} out of 5 stars">${"★".repeat(r.rating)}</span><q>${r.text}</q><footer>${r.name}${r.suburb ? ", " + r.suburb : ""}</footer></blockquote>`;
-  const cards = REVIEWS.map(card).join("");
-  const scroll = REVIEWS.length >= 3;                 // enough cards to loop smoothly
-  track.className = "rev-track" + (scroll ? " scroll" : "");
-  track.innerHTML = scroll ? cards + cards : cards;   // duplicate for a seamless marquee
-}
-renderReviews();
+  let idx = 0, timer;
+  function render(){
+    const r = REVIEWS[idx];
+    card.innerHTML =
+      '<div class="revc-quote">“</div>' +
+      '<div class="revc-stars" aria-label="' + r.rating + ' out of 5 stars">' + "★".repeat(r.rating) + '</div>' +
+      '<p class="revc-body">' + r.text + '</p>' +
+      '<div class="revc-who">' + r.name + (r.suburb ? ", " + r.suburb : "") + '</div>';
+    dots.innerHTML = REVIEWS.map((_, i) => '<button class="revc-dot' + (i === idx ? ' active' : '') + '" data-i="' + i + '" aria-label="Review ' + (i + 1) + '"></button>').join("");
+  }
+  function go(i){ idx = (i + REVIEWS.length) % REVIEWS.length; render(); }
+  function auto(){ clearInterval(timer); timer = setInterval(() => go(idx + 1), 6000); }
+  prev.addEventListener("click", () => { go(idx - 1); auto(); });
+  next.addEventListener("click", () => { go(idx + 1); auto(); });
+  dots.addEventListener("click", (e) => { const b = e.target.closest(".revc-dot"); if (b) { go(+b.dataset.i); auto(); } });
+  render(); auto();
+})();
 if (SETTINGS.googleReviewUrl) { const g = document.getElementById("googleReview"); g.href = SETTINGS.googleReviewUrl; g.classList.remove("hidden"); }
 document.getElementById("reviewForm").addEventListener("submit", e => {
   e.preventDefault();
