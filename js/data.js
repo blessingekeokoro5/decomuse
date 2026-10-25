@@ -15330,7 +15330,7 @@ const PRODUCTS = [
   { id: "lx34", name: "Faunus 200cm 8 Seater Dining Table in Natural", cat: "Kitchenware", room: "Kitchenware", price: 824, memberPrice: 742, sku: "SH-11282", tag: "New", ph: "", img: "assets/products/lx34.webp",
     imgs: ["assets/products/lx34.webp", "assets/products/lx34-2.webp", "assets/products/lx34-3.webp", "assets/products/lx34-4.webp", "assets/products/lx34-5.webp"],
     supplier: "Luxo Living",
-    desc: "Faunus 8 Seater Dining Table with Pillar Legs – Natural Upgrade your dining space with the Faunus 8 Seater Dining Table with Pillar Legs, a statement piece from Luxo Living’s designer table collection. Designed for both elegance and durability, this designer luxe dining table is crafted from high-quality engineered wood with a smooth veneer finish, ensuring long-lasting beauty. Its oval shape and fluted pillar legs add a striking, contemporary touch to any dining area.",
+    desc: "Faunus 8 Seater Dining Table with Pillar Legs – Natural Upgrade your dining space with the Faunus 8 Seater Dining Table with Pillar Legs, a statement piece from our designer table collection. Designed for both elegance and durability, this designer luxe dining table is crafted from high-quality engineered wood with a smooth veneer finish, ensuring long-lasting beauty. Its oval shape and fluted pillar legs add a striking, contemporary touch to any dining area.",
     specs: { "Type": "Dining & kitchen > Dining > Dining Tables" } },
 
   { id: "lx35", name: "Nola Chenille Fabric Dining Chair in Warm Ivory", cat: "Kitchenware", room: "Kitchenware", price: 296, memberPrice: 266, sku: "SH-11283", tag: "New", ph: "", img: "assets/products/lx35.webp",
