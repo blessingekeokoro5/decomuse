@@ -5,10 +5,48 @@
    ============================================================ */
 
 const ROOM_TYPES = [
-  { key: "living", label: "Living room", palette: "Warm neutrals", vibe: "Layered & inviting" },
-  { key: "bedroom", label: "Bedroom", palette: "Soft blush & oat", vibe: "Calm & restful" },
-  { key: "dining", label: "Dining space", palette: "Earthy & natural", vibe: "Gathered & warm" }
+  { key: "living", label: "Living room / lounge", palette: "Warm neutrals", vibe: "Layered & inviting",
+    rooms: ["living"], cats: ["Living Room", "Furniture"],
+    pieces: [/\bsofa\b|lounge suite|modular|sectional|recliner/i, /coffee table/i, /armchair|accent chair|boucl[eé] chair|occasional chair|lounge chair|reading chair/i, /\brug\b/i, /floor lamp|table lamp|\blamp\b|pendant/i, /cushion|throw\b/i, /tv unit|tv cabinet|console table|sideboard|entertainment/i, /wall art|artwork|framed print|\bmirror\b|\bvase\b/i] },
+  { key: "bedroom", label: "Bedroom", palette: "Soft blush & oat", vibe: "Calm & restful",
+    rooms: ["bedroom"], cats: ["Bedroom", "Bedroom & Bath"],
+    pieces: [/\bbed\b|bed frame|bedhead|headboard/i, /bedside|nightstand/i, /dresser|tallboy|chest of drawers|\bdrawers\b/i, /\brug\b/i, /table lamp|\blamp\b/i, /cushion|throw|quilt|duvet|blanket|bed linen/i, /\bmirror\b/i, /\bvase\b|candle|diffuser/i] },
+  { key: "dining", label: "Dining room", palette: "Earthy & natural", vibe: "Gathered & warm",
+    rooms: ["dining"], cats: ["Dining", "Kitchenware"],
+    pieces: [/dining table/i, /dining chair|dining bench/i, /sideboard|buffet|server/i, /pendant|chandelier/i, /\brug\b/i, /\bvase\b|centrepiece|\bbowl\b|candle/i, /bar stool/i] },
+  { key: "kitchen", label: "Kitchen", palette: "Fresh & bright", vibe: "Functional & warm",
+    rooms: ["kitchen", "kitchenware"], cats: ["Kitchenware"],
+    pieces: [/bar stool|counter stool/i, /canister|\bjar\b|storage|container/i, /\bboard\b|platter|serving/i, /cookware|\bpan\b|\bpot\b|utensil/i, /\bvase\b|\bbowl\b/i, /pendant|\blamp\b/i] },
+  { key: "bathroom", label: "Bathroom", palette: "Spa & serene", vibe: "Clean & calm",
+    rooms: ["bathroom"], cats: ["Bathroom", "Bedroom & Bath"],
+    pieces: [/towel/i, /bath mat|\bmat\b/i, /\bmirror\b/i, /soap|dispenser|caddy|storage|basket/i, /candle|diffuser|reed/i, /\bvase\b|\btray\b/i] },
+  { key: "office", label: "Home office", palette: "Focused & refined", vibe: "Productive & calm",
+    rooms: ["office"], cats: ["Office"],
+    pieces: [/\bdesk\b/i, /office chair|ergonomic chair|task chair|desk chair/i, /bookcase|bookshelf|shelf|shelving/i, /desk lamp|\blamp\b/i, /storage|organiser|\bdrawer\b|filing/i, /wall art|artwork|\bmirror\b|\bplant\b/i] },
+  { key: "outdoor", label: "Outdoor / patio", palette: "Relaxed & natural", vibe: "Alfresco & easy",
+    rooms: ["outdoor"], cats: ["Outdoor"],
+    pieces: [/outdoor (lounge|sofa|setting|set)|patio/i, /outdoor dining|dining set/i, /\bchair\b/i, /planter|\bpot\b|\bplant\b/i, /cushion|throw/i, /\brug\b|lantern/i] }
 ];
+
+/* Pick a varied set of shoppable pieces that actually suit the chosen room type */
+function pickForRoom(profile) {
+  const picks = [], used = new Set();
+  const shoppable = (typeof PRODUCTS !== "undefined" ? PRODUCTS : []).filter(p => p && p.price != null && p.cat !== "Packaging");
+  const text = p => (p.name + " " + (p.cat || "") + " " + (p.room || ""));
+  // one product per piece type → a real spread (sofa, coffee table, rug, lamp…)
+  (profile.pieces || []).forEach(re => {
+    const p = shoppable.find(x => !used.has(x.id) && re.test(text(x)));
+    if (p) { picks.push(p); used.add(p.id); }
+  });
+  // top up from the room's own category / room
+  const inRoom = shoppable.filter(x => !used.has(x.id) &&
+    ((x.room && (profile.rooms || []).some(r => String(x.room).toLowerCase().includes(r))) ||
+     (x.cat && (profile.cats || []).includes(x.cat))));
+  for (const p of inRoom) { if (picks.length >= 8) break; picks.push(p); used.add(p.id); }
+  // final fallback so there's never an empty result
+  if (picks.length < 4) for (const p of shoppable) { if (picks.length >= 6) break; if (!used.has(p.id)) { picks.push(p); used.add(p.id); } }
+  return picks.slice(0, 8);
+}
 
 let uploadedImage = null;
 
@@ -62,35 +100,41 @@ function showPreview() {
     <div class="upload-preview reveal">
       <img src="${uploadedImage}" alt="Your room">
     </div>
-    <div style="text-align:center;margin-top:24px">
-      <button class="btn btn--primary" onclick="analyseRoom()">✦ Analyse my room</button>
-      <button class="btn btn--outline" onclick="resetStylist()" style="margin-left:8px">Upload another</button>
+    <div style="max-width:380px;margin:22px auto 0;text-align:center">
+      <label for="roomType" style="display:block;font-weight:600;margin-bottom:8px">Which room is this?</label>
+      <select id="roomType" style="width:100%;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;font-family:var(--font-body);font-size:0.98rem;background:#fff;color:var(--ink)">
+        ${ROOM_TYPES.map(r => `<option value="${r.key}">${r.label}</option>`).join("")}
+      </select>
+      <p style="color:var(--muted);font-size:0.82rem;margin:8px 0 0">Tell us the room so the picks suit it (sofa &amp; coffee table for a lounge, bed &amp; bedsides for a bedroom, and so on).</p>
+      <div style="margin-top:18px">
+        <button class="btn btn--primary" onclick="analyseRoom()">✦ Analyse my room</button>
+        <button class="btn btn--outline" onclick="resetStylist()" style="margin-left:8px">Upload another</button>
+      </div>
     </div>`;
   initReveal();
 }
 
 function analyseRoom() {
   const stage = document.getElementById("stylistStage");
+  // Read the chosen room BEFORE we replace the stage (which removes the select)
+  const sel = document.getElementById("roomType");
+  const key = sel ? sel.value : "living";
+  const room = ROOM_TYPES.find(r => r.key === key) || ROOM_TYPES[0];
+
   stage.innerHTML = `
     <div class="analyzing">
       <div class="spinner"></div>
       <h3>Reading your space…</h3>
-      <p style="color:var(--muted)">Detecting palette, proportions and style cues</p>
+      <p style="color:var(--muted)">Matching pieces to your ${room.label.toLowerCase()}</p>
     </div>`;
 
-  // Pick a room profile pseudo-randomly from the image data length (deterministic-ish, no Math.random needed)
-  const seed = uploadedImage ? uploadedImage.length : 0;
-  const room = ROOM_TYPES[seed % ROOM_TYPES.length];
-
-  setTimeout(() => showResults(room), 1900);
+  setTimeout(() => showResults(room), 1600);
 }
 
 function showResults(room) {
   const stage = document.getElementById("stylistStage");
-  // Recommend products matching the detected room, fall back to tagged pieces
-  let recs = PRODUCTS.filter(p => p.room && p.room.includes(room.key));
-  if (recs.length < 4) recs = recs.concat(PRODUCTS.filter(p => !recs.includes(p)));
-  recs = recs.slice(0, 6);
+  // Recommend a varied set of real pieces that suit the chosen room
+  const recs = pickForRoom(room);
 
   stage.innerHTML = `
     <div class="reveal">

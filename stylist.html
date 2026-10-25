@@ -171,7 +171,7 @@
   <script src="js/components.js?v=47"></script>
   <script src="js/cart.js?v=23"></script>
   <script src="js/main.js?v=5"></script>
-  <script src="js/stylist.js"></script>
+  <script src="js/stylist.js?v=2"></script>
   <script>
     /* ===== Samira Stylera chat, conversational décor & gift advisor ===== */
     const MUSE_CHIPS = ["Gift for her under $200", "Gift for him under $200", "Under $100",
@@ -307,6 +307,19 @@
     }
     function renderLiveStart() {
       const w = document.getElementById("liveWrap"); if (!w) return;
+      const acc = (typeof getAccount === "function") ? getAccount() : null;
+      if (!(acc && acc.email)) {
+        w.innerHTML = `<div class="live-start">
+          <div style="font-size:2.2rem">✦</div>
+          <h3 style="margin:8px 0 6px">Live styling is for members</h3>
+          <p style="color:var(--muted);max-width:440px;margin:0 auto 16px">Log in or create a free Samira Home Decor account to start a live styling session with the Samira Stylera.</p>
+          <div class="btn-row" style="justify-content:center">
+            <a class="btn btn--primary" href="account.html">Log in / Create account</a>
+            <a class="btn btn--outline" href="shop.html">Browse the shop</a>
+          </div>
+        </div>`;
+        return;
+      }
       w.innerHTML = liveStartHtml();
       const b = document.getElementById("liveStartBtn"); if (b) b.addEventListener("click", startLive);
     }
