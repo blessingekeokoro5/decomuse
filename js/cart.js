@@ -235,8 +235,8 @@ function bnplBadge(price) {
     + `<span class="bnpl-tag bnpl-ap">afterpay</span><span class="bnpl-tag bnpl-zip">zip</span><span class="bnpl-tag bnpl-klarna">Klarna</span></div>`;
 }
 
-/* Estimated delivery date for ready-to-ship Luxo items — counts BUSINESS days
-   (same basis as Luxo Living's own "Get it by" date), computed live so it stays current. */
+/* Estimated delivery date for ready-to-ship items — counts BUSINESS days,
+   computed live so it stays current. */
 function estArrival(bizDays) {
   let n = bizDays || 6;
   const d = new Date();
@@ -244,9 +244,9 @@ function estArrival(bizDays) {
   try { return d.toLocaleDateString("en-AU", { weekday: "long", day: "numeric", month: "long" }); }
   catch (e) { return d.toDateString(); }
 }
-/* Show a "Get it by" line for ready-to-ship Luxo furniture */
+/* Show a "Get it by" line for ready-to-ship furniture */
 function arrivalLine(p) {
-  if (p.lead || p.supplier !== "Luxo Living") return "";
+  if (p.lead || !p.fastShip) return "";
   return `<div style="font-size:.72rem;color:#5a5049;margin-top:5px">🚚 Get it by <strong style="color:#0B1F3A">${estArrival(6)}</strong></div>`;
 }
 

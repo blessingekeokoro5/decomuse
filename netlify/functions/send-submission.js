@@ -63,7 +63,7 @@ function brandHeader(title, subtitle, brand, tagline) {
 const wrap = (inner, maxw) =>
   `<div style="font-family:Arial,Helvetica,sans-serif;max-width:${maxw || 560}px;margin:0 auto;color:#0B1F3A;padding:8px">${inner}</div>`;
 
-// Rich, Luxo-style welcome email for new newsletter subscribers (rebranded to Samira Home Decor)
+// Rich welcome email for new newsletter subscribers (rebranded to Samira Home Decor)
 function welcomeHtml(name, code, discountLabel) {
   const S = SITE_URL;
   const A = S + "/assets/";

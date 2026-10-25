@@ -39,7 +39,7 @@ async function loadProducts() {
 
 function pickFeatured(PRODUCTS, n) {
   const withImg = PRODUCTS.filter(p => p && p.img && p.price && p.cat !== "Packaging");
-  const ready = withImg.filter(p => p.supplier === "Luxo Living" && !p.lead);
+  const ready = withImg.filter(p => p.fastShip && !p.lead);
   const news = withImg.filter(p => /new/i.test(p.tag || ""));
   let pool = ready.length >= n ? ready : (news.length >= n ? news : withImg);
   pool = pool.slice().sort(() => Math.random() - 0.5);
