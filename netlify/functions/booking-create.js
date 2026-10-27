@@ -30,6 +30,12 @@ const CORS = {
 };
 const json = (code, obj) => ({ statusCode: code, headers: CORS, body: JSON.stringify(obj) });
 
+function openStore(name) {
+  const siteID = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+  const token = process.env.NETLIFY_FUNCTIONS_TOKEN || process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+  return (siteID && token) ? getStore({ name, siteID, token }) : getStore(name);
+}
+
 const isEmail = (s) => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(s || "").trim());
 const clean = (s, max = 400) => String(s == null ? "" : s).trim().slice(0, max);
 
@@ -63,7 +69,7 @@ exports.handler = async (event) => {
   };
 
   let store;
-  try { store = getStore("cleaning-bookings"); }
+  try { store = openStore("cleaning-bookings"); }
   catch (e) { return json(500, { error: "storage_unavailable" }); }
 
   // Optimistic-concurrency loop: read, check the slot is free, write only if

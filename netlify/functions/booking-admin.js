@@ -30,6 +30,14 @@ const CORS = {
 };
 const json = (code, obj) => ({ statusCode: code, headers: CORS, body: JSON.stringify(obj) });
 
+// Netlify isn't auto-injecting the Blobs context here, so configure it manually
+// from the runtime env (SITE_ID + the function token Netlify provides).
+function openStore(name) {
+  const siteID = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+  const token = process.env.NETLIFY_FUNCTIONS_TOKEN || process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+  return (siteID && token) ? getStore({ name, siteID, token }) : getStore(name);
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return json(200, {});
 
@@ -38,11 +46,8 @@ exports.handler = async (event) => {
   if (sent !== TOKEN) return json(401, { error: "unauthorized" });
 
   let store;
-  try { store = getStore("cleaning-bookings"); }
-  catch (e) {
-    const envKeys = Object.keys(process.env).filter(k => /NETLIFY|SITE|BLOB|DEPLOY/i.test(k));
-    return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e), env: envKeys });
-  }
+  try { store = openStore("cleaning-bookings"); }
+  catch (e) { return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e) }); }
 
   // ---- List all bookings ----
   if (event.httpMethod === "GET") {

@@ -24,6 +24,12 @@ const CORS = {
 };
 const json = (code, obj) => ({ statusCode: code, headers: CORS, body: JSON.stringify(obj) });
 
+function openStore(name) {
+  const siteID = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
+  const token = process.env.NETLIFY_FUNCTIONS_TOKEN || process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+  return (siteID && token) ? getStore({ name, siteID, token }) : getStore(name);
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return json(200, {});
   if (event.httpMethod !== "GET") return json(405, { error: "Method Not Allowed" });
@@ -33,7 +39,7 @@ exports.handler = async (event) => {
 
   let taken = [];
   try {
-    const store = getStore("cleaning-bookings");
+    const store = openStore("cleaning-bookings");
     const day = await store.get(date, { type: "json" });
     if (day && day.slots) {
       taken = Object.keys(day.slots).filter((s) => {
