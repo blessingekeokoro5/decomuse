@@ -31,21 +31,12 @@ const CORS = {
 const json = (code, obj) => ({ statusCode: code, headers: CORS, body: JSON.stringify(obj) });
 
 // Netlify isn't auto-injecting the Blobs context here, so configure it manually
-// from the runtime env (SITE_ID + the function token Netlify provides).
+// from the runtime env: SITE_ID (provided automatically) + a Netlify access
+// token supplied via NETLIFY_BLOBS_TOKEN.
 function openStore(name) {
   const siteID = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
   const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
   return (siteID && token) ? getStore({ name, siteID, token }) : getStore(name);
-}
-
-// TEMP diagnostic: report which Blobs-related vars the runtime can see.
-function envDiag() {
-  return {
-    SITE_ID: !!(process.env.SITE_ID || process.env.NETLIFY_SITE_ID),
-    NETLIFY_BLOBS_TOKEN_len: (process.env.NETLIFY_BLOBS_TOKEN || "").length,
-    NETLIFY_API_TOKEN_len: (process.env.NETLIFY_API_TOKEN || "").length,
-    names: Object.keys(process.env).filter((k) => /BLOB|TOKEN|SITE|NETLIFY/i.test(k)).sort(),
-  };
 }
 
 exports.handler = async (event) => {
@@ -57,7 +48,7 @@ exports.handler = async (event) => {
 
   let store;
   try { store = openStore("cleaning-bookings"); }
-  catch (e) { return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e), env: envDiag() }); }
+  catch (e) { return json(500, { error: "storage_unavailable" }); }
 
   // ---- List all bookings ----
   if (event.httpMethod === "GET") {
@@ -73,7 +64,7 @@ exports.handler = async (event) => {
         }
       }
     } catch (e) {
-      return json(500, { error: "read_failed", detail: String((e && e.message) || e) });
+      return json(500, { error: "read_failed" });
     }
     out.sort((a, b) => (a.date + a.slot).localeCompare(b.date + b.slot));
     return json(200, { ok: true, bookings: out });
