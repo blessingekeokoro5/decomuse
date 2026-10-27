@@ -462,15 +462,15 @@ function buildFooter() {
         </div>
 
         <div class="footer-colstack">
-          ${col("My Account", accountLinks)}
           ${col("Help &amp; Support", helpLinks)}
-          ${col("About us", aboutLinks)}
+          ${col("Our policies", policyLinks)}
+          ${col("Suppliers &amp; Trade", tradeLinks)}
         </div>
 
         <div class="footer-colstack">
+          ${col("My Account", accountLinks)}
           ${col("Shop", shopLinks)}
-          ${col("Our policies", policyLinks)}
-          ${col("Suppliers &amp; Trade", tradeLinks)}
+          ${col("About us", aboutLinks)}
         </div>
 
         <div class="footer-rail">
