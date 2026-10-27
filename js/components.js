@@ -496,7 +496,11 @@ function buildFooter() {
           </div>
 
           <div class="fr-office">
-            <strong>Head Office (No Showroom)</strong>
+            <strong>Office</strong>
+            Samira Home Decor<br>Klemzig, SA 5087
+          </div>
+          <div class="fr-office">
+            <strong>Mail</strong>
             PO Box 109, Klemzig,<br>SA 5087, Australia
           </div>
 
