@@ -1324,6 +1324,7 @@ renderLedger();
       ["Name", name], ["Mobile", state.mobile], ["Email", email], ["Suburb", state.suburb],
       ...summary, ["Frequency", FREQ_LABEL[state.freqPct] || "One-off"],
       ["Pets secured", state.petsSecured ? "Yes" : ""], ["Notes", state.notes],
+      ["Customer reference", (typeof getCustomerRef === "function" ? getCustomerRef() : "")],
     ].filter(([, v]) => v != null && String(v).trim() !== "");
     const payload = {
       subject: "Samira Cleaning Services — " + cleanName + " quote estimate request",
@@ -1442,6 +1443,7 @@ async function send(form, subject, statusEl, okMsg){
   const fields = [...data.entries()]
     .filter(([k, v]) => v && k !== "form-name" && k !== "bot-field")
     .map(([k, v]) => [k.replace(/_/g, " ").replace(/\b\w/g, c => c.toUpperCase()), v]);
+  try { if (typeof getCustomerRef === "function") fields.push(["Customer reference", getCustomerRef()]); } catch (e) {}
   const replyto = (data.get("email") || "").toString().trim();
   const name = (data.get("name") || "").toString().trim();
   // 1) Branded Brevo notification to the business (+ customer confirmation when an email is given)

@@ -124,6 +124,19 @@ async function deliverForm(data, subject) {
 function initForms() {
   // Booking / contact / review / application forms
   document.querySelectorAll("form[data-demo-form]").forEach(form => {
+    // Show the shopper their reference and include it automatically for faster help
+    try {
+      if (typeof getCustomerRef === "function" && !form.querySelector(".cust-ref-note")) {
+        const ref = getCustomerRef();
+        const sb = form.querySelector('button[type="submit"]');
+        const note = document.createElement("p");
+        note.className = "cust-ref-note form-note";
+        note.style.cssText = "margin-top:10px;font-size:.82rem;opacity:.85";
+        note.innerHTML = 'Your customer reference <strong>#' + ref + '</strong> is added automatically for a faster reply.';
+        if (sb && sb.parentNode) sb.parentNode.insertBefore(note, sb); else form.appendChild(note);
+      }
+    } catch (e) {}
+
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       const success = form.querySelector(".form-success");
@@ -131,6 +144,7 @@ function initForms() {
       if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = "Sending…"; }
 
       const data = collectForm(form);
+      try { if (typeof getCustomerRef === "function") data.push(["Customer reference", getCustomerRef()]); } catch (e) {}
       const subject = formSubject(form);
       let ok = true;
       try { ok = await deliverForm(data, subject); } catch (err) { ok = false; }
@@ -506,7 +520,22 @@ function applyShopFilters(list) {
   else if (v.sort === "price-desc") out.sort((a, b) => (b.price || 0) - (a.price || 0));
   else if (v.sort === "name") out.sort((a, b) => a.name.localeCompare(b.name));
   else if (v.sort === "name-desc") out.sort((a, b) => b.name.localeCompare(a.name));
+  else out = interleaveByCat(out); // "featured": round-robin across categories so "All" shows a mix, not one category first
   return out;
+}
+
+/* Round-robin products across their categories so a mixed "All" view
+   doesn't lead with one whole category. Each category keeps its own order. */
+function interleaveByCat(list) {
+  const groups = {}, order = [];
+  for (const p of list) { if (!groups[p.cat]) { groups[p.cat] = []; order.push(p.cat); } groups[p.cat].push(p); }
+  if (order.length < 2) return list;
+  const result = []; let added = true;
+  while (added) {
+    added = false;
+    for (const c of order) { const g = groups[c]; if (g.length) { result.push(g.shift()); added = true; } }
+  }
+  return result;
 }
 
 function applyGridCols(gridId) {

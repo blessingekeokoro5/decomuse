@@ -524,9 +524,8 @@ function buildFooter() {
 /* Customer reference — a stable per-shopper code (like Temple & Webster's).
    Generated once per browser, stored locally, shown in the footer so a shopper
    can quote it when they contact us. Format: NN-NN-NN-NN-NN-N. */
-function setCustomerRef() {
-  const el = document.getElementById("custRef");
-  if (!el) return;
+// Returns the shopper's stable reference, generating & storing it on first use.
+function getCustomerRef() {
   let ref = "";
   try { ref = localStorage.getItem("shd_cust_ref") || ""; } catch (e) {}
   if (!/^\d{2}(-\d{2}){4}-\d$/.test(ref)) {
@@ -535,7 +534,11 @@ function setCustomerRef() {
     ref = `${d[0]}${d[1]}-${d[2]}${d[3]}-${d[4]}${d[5]}-${d[6]}${d[7]}-${d[8]}${d[9]}-${d[10]}`;
     try { localStorage.setItem("shd_cust_ref", ref); } catch (e) {}
   }
-  el.textContent = ref;
+  return ref;
+}
+function setCustomerRef() {
+  const el = document.getElementById("custRef");
+  if (el) el.textContent = getCustomerRef();
 }
 
 function buildFloating() {
