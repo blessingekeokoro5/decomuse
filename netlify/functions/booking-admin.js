@@ -38,6 +38,16 @@ function openStore(name) {
   return (siteID && token) ? getStore({ name, siteID, token }) : getStore(name);
 }
 
+// TEMP diagnostic: report which Blobs-related vars the runtime can see.
+function envDiag() {
+  return {
+    SITE_ID: !!(process.env.SITE_ID || process.env.NETLIFY_SITE_ID),
+    NETLIFY_BLOBS_TOKEN_len: (process.env.NETLIFY_BLOBS_TOKEN || "").length,
+    NETLIFY_API_TOKEN_len: (process.env.NETLIFY_API_TOKEN || "").length,
+    names: Object.keys(process.env).filter((k) => /BLOB|TOKEN|SITE|NETLIFY/i.test(k)).sort(),
+  };
+}
+
 exports.handler = async (event) => {
   if (event.httpMethod === "OPTIONS") return json(200, {});
 
@@ -47,7 +57,7 @@ exports.handler = async (event) => {
 
   let store;
   try { store = openStore("cleaning-bookings"); }
-  catch (e) { return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e) }); }
+  catch (e) { return json(500, { error: "storage_unavailable", detail: String((e && e.message) || e), env: envDiag() }); }
 
   // ---- List all bookings ----
   if (event.httpMethod === "GET") {
