@@ -497,7 +497,7 @@ function buildFooter() {
 
           <div class="fr-office">
             <strong>Office</strong>
-            Samira Home Decor<br>Klemzig, SA 5087
+            Samira Home Decor and Cleaning Services<br>Klemzig, SA 5087
           </div>
           <div class="fr-office">
             <strong>Mail</strong>
