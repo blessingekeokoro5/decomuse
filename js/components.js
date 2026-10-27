@@ -415,6 +415,7 @@ function buildFooter() {
   ];
   const tradeLinks = [
     { t: "Become a Supplier", h: "become-a-supplier.html" },
+    { t: "Supplier Sign In", h: "supplier-signin.html" },
     { t: "Trade & Commercial", h: "trade.html" }
   ];
   const aboutLinks = [
@@ -500,6 +501,7 @@ function buildFooter() {
             PO Box 109, Klemzig,<br>SA 5087, Australia
           </div>
 
+          <p class="fr-ref">Your customer reference #:<br><strong class="fr-brand" id="custRef">&mdash;</strong></p>
           <p class="fr-copy">&copy; ${SAMIRA.est} <strong class="fr-brand">Samira Home Decor</strong> &middot; Proudly Australian ${SAMIRA.flag}</p>
           <span class="fr-app">📱 <strong class="fr-brand">Samira Home Decor</strong> app &mdash; coming soon</span>
         </div>
@@ -517,6 +519,23 @@ function buildFooter() {
       </div>
     </div>
   </footer>`;
+}
+
+/* Customer reference — a stable per-shopper code (like Temple & Webster's).
+   Generated once per browser, stored locally, shown in the footer so a shopper
+   can quote it when they contact us. Format: NN-NN-NN-NN-NN-N. */
+function setCustomerRef() {
+  const el = document.getElementById("custRef");
+  if (!el) return;
+  let ref = "";
+  try { ref = localStorage.getItem("shd_cust_ref") || ""; } catch (e) {}
+  if (!/^\d{2}(-\d{2}){4}-\d$/.test(ref)) {
+    const d = [];
+    for (let i = 0; i < 11; i++) d.push(Math.floor(Math.random() * 10));
+    ref = `${d[0]}${d[1]}-${d[2]}${d[3]}-${d[4]}${d[5]}-${d[6]}${d[7]}-${d[8]}${d[9]}-${d[10]}`;
+    try { localStorage.setItem("shd_cust_ref", ref); } catch (e) {}
+  }
+  el.textContent = ref;
 }
 
 function buildFloating() {
@@ -834,7 +853,7 @@ function injectComponents() {
   const h = document.getElementById("site-header");
   const f = document.getElementById("site-footer");
   if (h) h.innerHTML = buildHeader();
-  if (f) f.innerHTML = buildFooter();
+  if (f) { f.innerHTML = buildFooter(); setCustomerRef(); }
   document.body.insertAdjacentHTML("beforeend", buildFloating());
   document.body.insertAdjacentHTML("beforeend", buildMemberModal());
   document.body.insertAdjacentHTML("beforeend", buildSearchOverlay());

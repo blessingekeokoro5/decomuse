@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://samirahomedecor.com.au/supplier-signin.html">
+  <title>Supplier Sign In, Samira Home Decor</title>
+  <meta name="description" content="Sign in to the Samira Home Decor supplier portal to manage your products, orders and wholesale account. New supplier? Apply to become a Samira Home Decor stockist partner.">
+  <meta name="robots" content="noindex, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Samira Home Decor">
+  <meta property="og:image" content="https://samirahomedecor.com.au/assets/hero.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+  <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/styles.css?v=43">
+</head>
+<body data-page="supplier-signin.html">
+  <div id="site-header"></div>
+
+  <section class="page-banner">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> / <a href="become-a-supplier.html">Suppliers</a> / Supplier sign in</div>
+      <span class="eyebrow">Supplier portal</span>
+      <h1>Supplier sign in</h1>
+      <p>Welcome back. Sign in to manage your products, orders and wholesale account with Samira Home Decor.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="max-width:460px">
+      <div class="form-card reveal">
+        <form id="supplierSignin" novalidate>
+          <div class="field"><label>Supplier email</label><input id="supEmail" type="email" autocomplete="username" required placeholder="you@yourbrand.com"></div>
+          <div class="field"><label>Password</label><input id="supPw" type="password" autocomplete="current-password" required placeholder="Your portal password"></div>
+          <button type="submit" class="btn btn--primary btn--block">Sign in</button>
+          <div id="supMsg" class="admin-note" style="display:none;margin-top:16px"></div>
+          <p class="form-note" style="text-align:center;margin-top:14px">Trouble signing in? Email <a href="mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20access">hello@samirahomedecor.com.au</a> and we'll help.</p>
+        </form>
+      </div>
+
+      <div class="reveal" style="margin-top:22px;text-align:center;background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:22px 24px">
+        <h3 style="margin:0 0 6px;font-size:1.15rem">Not a supplier yet?</h3>
+        <p style="margin:0 0 14px;color:var(--body);font-size:0.95rem">Make beautiful home décor, furniture or lifestyle pieces? Partner with us and reach thousands of Australian homes.</p>
+        <a class="btn btn--dark btn--sm" href="become-a-supplier.html">Become a supplier →</a>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="js/data.js?v=31"></script>
+  <script src="js/components.js?v=58"></script>
+  <script src="js/cart.js?v=23"></script>
+  <script src="js/main.js?v=5"></script>
+  <script>
+    /* Supplier accounts are activated manually after approval — there is no public
+       self-serve login yet, so we guide approved suppliers to get in touch rather
+       than fake an authentication result. */
+    (function () {
+      var form = document.getElementById("supplierSignin");
+      if (!form) return;
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var email = (document.getElementById("supEmail").value || "").trim();
+        var pw = (document.getElementById("supPw").value || "").trim();
+        var msg = document.getElementById("supMsg");
+        if (!email || !pw) {
+          msg.style.display = "block";
+          msg.innerHTML = "Please enter your supplier email and password.";
+          return;
+        }
+        msg.style.display = "block";
+        msg.innerHTML = "Supplier accounts are activated by our team after approval. If you're an approved supplier and can't get in, email <a href='mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20access%20for%20" + encodeURIComponent(email) + "'>hello@samirahomedecor.com.au</a> from this address and we'll set up your access.";
+      });
+    })();
+  </script>
+</body>
+</html>

@@ -1131,6 +1131,8 @@ a.bk-type-link:hover { border-color: var(--rose); background: var(--blush); }
 .fr-office { color: #cbb9ad; font-size: 0.88rem; line-height: 1.6; margin-top: 22px; }
 .fr-office strong { color: #fff; display: block; margin-bottom: 4px; font-weight: 600; }
 .fr-copy { color: #8f7f76; font-size: 0.82rem; margin: 18px 0 0; }
+.fr-ref { color: #8f7f76; font-size: 0.82rem; line-height: 1.6; margin: 22px 0 0; }
+.fr-ref .fr-brand { letter-spacing: 0.04em; }
 .fr-brand { color: #fff; font-weight: 600; }
 .fr-app { display: inline-block; margin-top: 14px; background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 8px 12px; font-size: 0.78rem; color: #cbb9ad; }
