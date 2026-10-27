@@ -344,7 +344,14 @@
       }, 5000);
     })();
 
-    renderProducts("featuredGrid", PRODUCTS.filter(p => p.tag).slice(0, 4));
+    // Featured "edit": pick one tagged product from different categories for a varied mix
+    (function () {
+      const tagged = PRODUCTS.filter(p => p.tag && !p.comingSoon);
+      const seen = new Set(), pick = [];
+      for (const p of tagged) { if (!seen.has(p.cat)) { seen.add(p.cat); pick.push(p); } if (pick.length === 4) break; }
+      if (pick.length < 4) for (const p of tagged) { if (pick.indexOf(p) === -1) { pick.push(p); if (pick.length === 4) break; } }
+      renderProducts("featuredGrid", pick);
+    })();
     // Testimonial carousel (one at a time, dots + arrows, auto-advance)
     (function () {
       const reviews = REVIEWS.slice().sort(() => Math.random() - 0.5);
