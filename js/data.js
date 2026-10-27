@@ -44,8 +44,8 @@ const MEGA_MENU = [
     columns: [
       { title: "Shop", links: ["Shop All Living Room", "Ready to Ship", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Furniture", links: ["Sofas & Seating", "Coffee & Side Tables", "TV Units", "Bookshelves"] },
-      { title: "Soft Furnishings", links: ["Rugs", "Cushions", "Throws", "Curtains"] },
-      { title: "Accents", links: ["Lighting", "Mirrors", "Wall Art", "Vases"] },
+      { title: "Soft Furnishings", links: ["Rugs", "Cushions", "Throws"] },
+      { title: "Accents", links: ["Lighting", "Mirrors", "Vases"] },
       { title: "Dining", page: "dining.html", links: ["Shop All Dining", "Dining Chairs", "Bar & Counter Stools", "Dining Tables", "Console Tables"] }
     ]
   },
@@ -53,7 +53,7 @@ const MEGA_MENU = [
     key: "home", label: "Home Décor",
     columns: [
       { title: "Shop", links: ["Shop All Home Décor", "Ready to Ship", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Decorative", links: ["Vases", "Wall Art", "Sculptures & Objects", "Ceramics"] },
+      { title: "Decorative", links: ["Vases", "Sculptures & Objects", "Ceramics"] },
       { title: "Ambience", links: ["Candles", "Reed Diffusers", "Faux Greenery"] },
       { title: "Finishing Touches", links: ["Mirrors", "Photo Frames", "Trays & Bowls"] }
     ]
@@ -63,15 +63,15 @@ const MEGA_MENU = [
     columns: [
       { title: "Shop", links: ["Shop All Bedroom", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Bedding", links: ["Bed Linen", "Quilt Covers", "Blankets"] },
-      { title: "Furniture", links: ["Bedside Tables", "Dressers", "Headboards"] },
-      { title: "Lighting & Décor", links: ["Lamps", "Mirrors", "Wall Art"] }
+      { title: "Furniture", links: ["Bedside Tables", "Dressers"] },
+      { title: "Lighting & Décor", links: ["Lamps", "Mirrors"] }
     ]
   },
   {
     key: "bathroom", label: "Bathroom",
     columns: [
       { title: "Shop", links: ["Shop All Bathroom", "New Arrivals", "Bestsellers", "On Sale"] },
-      { title: "Textiles", links: ["Towels", "Bath Mats", "Robes"] },
+      { title: "Textiles", links: ["Towels", "Robes"] },
       { title: "Storage", links: ["Baskets", "Vanity Trays", "Caddies"] },
       { title: "Accessories", links: ["Soap Dispensers", "Tumblers", "Candles", "Diffusers"] }
     ]
@@ -82,7 +82,7 @@ const MEGA_MENU = [
       { title: "Shop", links: ["Shop All Office", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Furniture", links: ["Desks", "Office Chairs", "Shelving"] },
       { title: "Desktop", links: ["Desk Organisers", "Stationery", "Lamps"] },
-      { title: "Décor", links: ["Wall Art", "Plants & Planters", "Candles"] }
+      { title: "Décor", links: ["Candles"] }
     ]
   },
   {
@@ -118,7 +118,7 @@ const MEGA_MENU = [
       { title: "Shop", links: ["Shop All Lifestyle", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Home Fragrances", links: ["Room Sprays", "Essential Oils", "Fragrance Gift Sets"] },
       { title: "Everyday", links: ["Textiles & Linen", "Stationery", "Travel Essentials"] },
-      { title: "Self & Home", links: ["Wellness Kits & Essentials", "Gifts Under $100"] }
+      { title: "Self & Home", links: ["Gifts Under $100"] }
     ]
   }
 ];
