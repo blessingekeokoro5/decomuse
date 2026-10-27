@@ -49,19 +49,75 @@
     .lightbox .lb-cap span { color: #C9D3E3; font-size: .9rem; }
     .lb-close { position: absolute; top: 16px; right: 20px; width: 44px; height: 44px; border: 0; border-radius: 50%; background: rgba(255,255,255,.15); color: #fff; font-size: 1.7rem; line-height: 1; cursor: pointer; }
     .lb-close:hover { background: rgba(255,255,255,.28); }
+    /* Rotating packaging hero */
+    .pk-hero { background: #eef4f1; transition: background .6s ease; overflow: hidden; }
+    .pk-hero-inner { display: grid; grid-template-columns: 1.05fr 1fr; gap: 34px; align-items: center; min-height: 440px; padding: 44px 0; }
+    .pk-hero-copy { max-width: 540px; }
+    .pk-tag { display: inline-block; background: rgba(11,31,58,.09); color: var(--navy); font: 600 .7rem/1 var(--font-body); letter-spacing: .14em; text-transform: uppercase; padding: 9px 15px; border-radius: 999px; margin-bottom: 20px; }
+    .pk-hero-copy h1 { font-family: var(--font-head); font-size: clamp(2rem, 4.6vw, 3.15rem); line-height: 1.08; color: var(--ink); margin: 0 0 14px; }
+    .pk-hero-copy p { color: var(--body); font-size: 1.02rem; line-height: 1.6; margin: 0 0 24px; max-width: 470px; }
+    .pk-hero-art { display: flex; align-items: center; justify-content: center; }
+    .pk-hero-art img { width: 100%; max-width: 440px; border-radius: 18px; object-fit: cover; aspect-ratio: 4/3; box-shadow: 0 24px 60px rgba(0,0,0,.14); background: #fff; }
+    .pk-dots { display: flex; gap: 8px; justify-content: center; padding: 0 0 22px; }
+    .pk-dots button { width: 9px; height: 9px; border-radius: 50%; border: 0; background: rgba(11,31,58,.22); cursor: pointer; padding: 0; transition: width .2s, background .2s; }
+    .pk-dots button.on { background: var(--navy); width: 24px; border-radius: 999px; }
+    .pk-fade { animation: pkfade .6s ease; }
+    @keyframes pkfade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    @media (max-width: 800px) {
+      .pk-hero-inner { grid-template-columns: 1fr; text-align: center; min-height: 0; padding: 30px 0; gap: 20px; }
+      .pk-hero-copy { margin: 0 auto; }
+      .pk-hero-art { order: -1; }
+      .pk-hero-art img { max-width: 300px; }
+    }
+    /* Clickable packaging photo tiles */
+    .pk-tile { display: block; text-decoration: none; background: #fff; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow-sm); transition: transform .15s ease, box-shadow .15s ease; }
+    .pk-tile:hover { transform: translateY(-3px); box-shadow: 0 16px 34px rgba(0,0,0,.12); }
+    .pk-tile-img { position: relative; display: block; aspect-ratio: 4/3; background: linear-gradient(135deg, #0B1F3A, #2a4d75); overflow: hidden; }
+    .pk-tile-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+    .pk-tile-img::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgba(11,31,58,.62), rgba(11,31,58,0) 58%); }
+    .pk-tile-label { position: absolute; left: 15px; bottom: 12px; z-index: 1; color: #fff; font-family: var(--font-head); font-size: 1.15rem; line-height: 1.12; text-shadow: 0 1px 8px rgba(0,0,0,.45); margin: 0; }
+    .pk-tile-text { display: block; padding: 12px 16px 16px; color: var(--body); font-size: .9rem; line-height: 1.5; }
+    .pk-tile-cta { display: inline-block; margin: 0 16px 16px; color: var(--navy); font-weight: 600; font-size: .86rem; }
   </style>
 </head>
 <body data-page="packaging.html">
   <div id="site-header"></div>
 
-  <!-- Collection hero, add the photo at assets/collections/packaging.png -->
-  <section class="collection-hero">
-    <img class="collection-hero-img" src="assets/collections/packaging.png" alt="Packaging collection" onerror="this.remove()">
-    <div class="collection-hero-box">
-      <div class="coll-script">Pouches · Boxes · Kits</div>
-      <h1 class="coll-title">Packaging</h1>
+  <!-- Rotating packaging hero -->
+  <section class="pk-hero" id="pkHero">
+    <div class="pk-hero-inner container">
+      <div class="pk-hero-copy">
+        <span class="pk-tag" id="pkTag">New · Design your own</span>
+        <h1 id="pkTitle">Your brand on every pack</h1>
+        <p id="pkText">Custom-printed pouches, boxes and labels — made to order from low minimums.</p>
+        <a class="btn btn--primary btn--pill" id="pkCta" href="#custom-enquiry">Get a quote →</a>
+      </div>
+      <div class="pk-hero-art"><img id="pkImg" src="assets/products/foodpouch-1.webp" alt="Samira Home Decor custom packaging" onerror="this.style.visibility='hidden'"></div>
     </div>
+    <div class="pk-dots" id="pkDots"></div>
   </section>
+  <script>
+  (function(){
+    var SLIDES=[
+      {tag:"New · Design your own", title:"Your brand on every pack", text:"Custom-printed pouches, boxes and labels — made to order from low minimums.", cta:"Get a quote →", href:"#custom-enquiry", img:"assets/products/foodpouch-1.webp", bg:"#eef4f1"},
+      {tag:"For food vendors", title:"Retail-ready food packaging", text:"Food-safe stand-up pouches, coffee bags and kraft packs that look beautiful on the shelf.", cta:"Explore the range →", href:"#packaging-range", img:"assets/products/foodpouch-2.webp", bg:"#efeaf6"},
+      {tag:"Elevate your brand", title:"From concept to finished pack", text:"We help you choose the right style, add your branding and bring it to life.", cta:"Enquire about custom →", href:"#custom-enquiry", img:"assets/products/foodpouch-3.webp", bg:"#f7ede8"}
+    ];
+    var hero=document.getElementById("pkHero"); if(!hero) return;
+    var tag=document.getElementById("pkTag"),title=document.getElementById("pkTitle"),text=document.getElementById("pkText"),cta=document.getElementById("pkCta"),img=document.getElementById("pkImg"),dots=document.getElementById("pkDots");
+    var i=0,timer;
+    function render(n){ var s=SLIDES[n]; hero.style.background=s.bg;
+      tag.textContent=s.tag; title.textContent=s.title; text.textContent=s.text; cta.textContent=s.cta; cta.setAttribute("href",s.href);
+      img.style.visibility=""; img.onerror=function(){this.style.visibility="hidden";}; img.src=s.img; img.alt=s.title;
+      var copy=hero.querySelector(".pk-hero-copy"); copy.classList.remove("pk-fade"); void copy.offsetWidth; copy.classList.add("pk-fade");
+      for(var k=0;k<dots.children.length;k++){ dots.children[k].classList.toggle("on", k===n); }
+    }
+    for(var n=0;n<SLIDES.length;n++){ (function(idx){ var b=document.createElement("button"); b.type="button"; b.setAttribute("aria-label","Slide "+(idx+1)); b.addEventListener("click",function(){ i=idx; render(i); restart(); }); dots.appendChild(b); })(n); }
+    function next(){ i=(i+1)%SLIDES.length; render(i); }
+    function restart(){ clearInterval(timer); timer=setInterval(next,6000); }
+    render(0); restart();
+  })();
+  </script>
 
 
   <!-- Signature packaging -->
@@ -127,18 +183,18 @@
         <p>Retail-ready, food-safe packaging for coffee, snacks, pantry and more. Every style can be ordered as plain stock or custom printed with your branding, from low minimums. Enquire for retail &amp; wholesale pricing.</p>
       </div>
       <div class="grid grid-3">
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🧍</div><h3>Stand-up pouches</h3><p>Resealable zipper pouches that stand on the shelf, for coffee, snacks, tea, powders and pet treats.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">📦</div><h3>Flat-bottom (box) pouches</h3><p>A premium box-bottom shape with four printable panels, ideal for coffee beans, granola and nuts.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">☕</div><h3>Coffee bags with valve</h3><p>A one-way degassing valve keeps freshly roasted coffee fresh without trapping gas.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🟫</div><h3>Kraft paper pouches</h3><p>A natural, earthy kraft look for granola, flour, dried goods and eco-minded brands.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🪟</div><h3>Window pouches</h3><p>A clear window shows off the product, perfect for lollies, nuts, baked goods and samples.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🧴</div><h3>Spout pouches</h3><p>A pour-and-reseal spout for sauces, juices, purées and other liquids.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">✉️</div><h3>Flat sachets</h3><p>Slim three-side-seal sachets for samples, spices and single servings.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🫙</div><h3>Vacuum seal bags</h3><p>Airtight bags for meat, cheese, meal prep and sous-vide.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🌱</div><h3>Compostable pouches</h3><p>Home or industrial compostable films for eco-conscious brands.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🪙</div><h3>Mylar / foil bags</h3><p>High-barrier foil for long shelf life, with light and moisture protection.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🍞</div><h3>Gusseted side-seal bags</h3><p>Side-gusset bags for bread, bakery and bulk dry goods.</p></div></div>
-        <div class="card reveal"><div class="card-body"><div class="service-icon">🌾</div><h3>Rice &amp; grain bags</h3><p>Sturdy bags for rice, grains, flour and bulk pantry staples.</p></div></div>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/foodpouch-1.webp" alt="Stand-up pouches" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Stand-up pouches</span></span><span class="pk-tile-text">Resealable zipper pouches that stand on the shelf — coffee, snacks, tea, powders &amp; pet treats.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-flatbottom.webp" alt="Flat-bottom pouches" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Flat-bottom (box) pouches</span></span><span class="pk-tile-text">A premium box-bottom shape with four printable panels — coffee beans, granola &amp; nuts.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/foodpouch-3.webp" alt="Coffee bags with valve" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Coffee bags with valve</span></span><span class="pk-tile-text">A one-way degassing valve keeps freshly roasted coffee fresh without trapping gas.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/foodpouch-2.webp" alt="Kraft paper pouches" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Kraft paper pouches</span></span><span class="pk-tile-text">A natural, earthy kraft look for granola, flour, dried goods and eco-minded brands.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-window.webp" alt="Window pouches" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Window pouches</span></span><span class="pk-tile-text">A clear window shows off the product — lollies, nuts, baked goods &amp; samples.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-spout.webp" alt="Spout pouches" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Spout pouches</span></span><span class="pk-tile-text">A pour-and-reseal spout for sauces, juices, purées and other liquids.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-sachet.webp" alt="Flat sachets" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Flat sachets</span></span><span class="pk-tile-text">Slim three-side-seal sachets for samples, spices and single servings.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-vacuum.webp" alt="Vacuum seal bags" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Vacuum seal bags</span></span><span class="pk-tile-text">Airtight bags for meat, cheese, meal prep and sous-vide.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-compostable.webp" alt="Compostable pouches" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Compostable pouches</span></span><span class="pk-tile-text">Home or industrial compostable films for eco-conscious brands.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-mylar.webp" alt="Mylar foil bags" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Mylar / foil bags</span></span><span class="pk-tile-text">High-barrier foil for long shelf life, with light and moisture protection.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-gusset.webp" alt="Gusseted side-seal bags" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Gusseted side-seal bags</span></span><span class="pk-tile-text">Side-gusset bags for bread, bakery and bulk dry goods.</span><span class="pk-tile-cta">Enquire →</span></a>
+        <a class="pk-tile reveal" href="#custom-enquiry"><span class="pk-tile-img"><img src="assets/products/pk-rice.webp" alt="Rice and grain bags" loading="lazy" onerror="this.remove()"><span class="pk-tile-label">Rice &amp; grain bags</span></span><span class="pk-tile-text">Sturdy bags for rice, grains, flour and bulk pantry staples.</span><span class="pk-tile-cta">Enquire →</span></a>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:30px">
         <a class="btn btn--primary btn--pill" href="#custom-enquiry">Start a custom packaging enquiry →</a>
