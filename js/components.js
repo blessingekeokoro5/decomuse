@@ -408,7 +408,6 @@ function buildFooter() {
     { t: "Gift Hamper Maker", h: "hamper-maker.html" }
   ];
   const helpLinks = [
-    { t: "Help Centre", h: "support.html" },
     { t: "Track Delivery", h: "track.html" },
     { t: "Report a Problem", h: "contact.html" },
     { t: "Return an Item", h: "returns.html" },
