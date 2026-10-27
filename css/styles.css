@@ -1155,7 +1155,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .news-form input:focus { outline: none; }
 .news-form button { background: none; border: none; color: var(--rose-soft); cursor: pointer; font-size: 1.2rem; }
 .socials { display: flex; gap: 10px; }
-.socials a { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.08); display: grid; place-items: center; color: #cbb9ad; }
+.socials a { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.12); display: grid; place-items: center; color: #fff; }
 .socials a:hover { background: var(--rose); color: #fff; }
 .socials a svg { width: 20px; height: 20px; display: block; }
 /* App-style cart page */
