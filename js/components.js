@@ -477,13 +477,10 @@ function buildFooter() {
           <div class="pay-row">
             <span class="pay-badge pay-visa">VISA</span>
             <span class="pay-badge pay-mc"><span class="mc-c1"></span><span class="mc-c2"></span></span>
-            <span class="pay-badge pay-amex">AMEX</span>
             <span class="pay-badge pay-paypal"><span class="p1">Pay</span><span class="p2">Pal</span></span>
-            <span class="pay-badge pay-applepay">Apple&nbsp;Pay</span>
-            <span class="pay-badge pay-gpay"><span class="g-b">G</span>&nbsp;Pay</span>
             <span class="pay-badge pay-afterpay">afterpay</span>
             <span class="pay-badge pay-zip">zip</span>
-            <span class="pay-badge pay-klarna">Klarna</span>
+            <span class="pay-badge pay-amex">AMEX</span>
           </div>
 
           <h4 style="margin-top:24px">Follow us on</h4>
