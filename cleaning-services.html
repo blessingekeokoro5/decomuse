@@ -7,12 +7,12 @@
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-JX43NY5BPC');</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Samira Cleaning Services | Adelaide Residential &amp; Commercial</title>
-<meta name="description" content="Residential and commercial cleaning in Adelaide by Samira Cleaning Services. Standard, deep, spring, move-in, end-of-lease and post-renovation cleans, plus office, retail and short-stay cleaning. Book online or request a quote.">
+<meta name="description" content="Residential and commercial cleaning in Adelaide by Samira Cleaning Services. Standard, deep, spring, move-in and end-of-lease cleans, plus office, retail and short-stay cleaning. Book online or request a quote.">
 <link rel="canonical" href="https://samirahomedecor.com.au/cleaning-services.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Samira Cleaning Services">
 <meta property="og:title" content="Samira Cleaning Services | Adelaide Residential &amp; Commercial">
-<meta property="og:description" content="Residential and commercial cleaning in Adelaide. Standard, deep, spring, move-in, end-of-lease and post-renovation cleans, plus office, retail and short-stay. Book online or request a quote.">
+<meta property="og:description" content="Residential and commercial cleaning in Adelaide. Standard, deep, spring, move-in and end-of-lease cleans, plus office, retail and short-stay. Book online or request a quote.">
 <meta property="og:url" content="https://samirahomedecor.com.au/cleaning-services.html">
 <meta property="og:image" content="https://samirahomedecor.com.au/assets/hero-slide-6.jpg">
 <meta name="twitter:card" content="summary_large_image">
@@ -545,7 +545,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
     </div>
 
     <div class="ledger" id="ledger" aria-live="polite"></div>
-    <p class="price-note"><strong>Prices and times shown are estimates only.</strong> They are a guide per visit in Australian dollars for one cleaner; longer cleans may be split across two visits. Your <strong>final price and time are confirmed when you book</strong> (and after a walk-through or photos for post-renovation and 6+ bedroom homes).</p>
+    <p class="price-note"><strong>Prices and times shown are estimates only.</strong> They are a guide per visit in Australian dollars for one cleaner; longer cleans may be split across two visits. Your <strong>final price and time are confirmed when you book</strong> (and after a site visit or photos for office and 6+ bedroom jobs).</p>
 
     <div class="extras">
       <div class="panel">
@@ -618,7 +618,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       </li>
       <li class="doc">
         <div class="doc-ico" aria-hidden="true">PDF</div>
-        <div><h3>Cleaning checklist</h3><p>Room-by-room tasks showing exactly what's included in a standard, deep, spring, move-in, end-of-lease and post-renovation clean.</p><span class="who alt">What's included</span></div>
+        <div><h3>Cleaning checklist</h3><p>Room-by-room tasks showing exactly what's included in a standard, deep, spring, move-in and end-of-lease clean.</p><span class="who alt">What's included</span></div>
         <div class="doc-actions"><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Cleaning-Services-Checklist.pdf?v=10" download>Download</a><a class="btn btn-quiet btn-sm" href="cleaning-documents/Samira-Cleaning-Services-Checklist.pdf?v=10" target="_blank" rel="noopener">View</a></div>
       </li>
       <li class="doc">
@@ -688,7 +688,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       <div class="two">
         <label>Type of clean
           <select name="clean_type">
-            <option>Standard / regular clean</option><option>Deep clean</option><option>Spring clean</option><option>Move-in clean</option><option>End-of-lease / bond clean</option><option>Post-renovation clean</option>
+            <option>Standard / regular clean</option><option>Deep clean</option><option>Spring clean</option><option>Move-in clean</option><option>End-of-lease / bond clean</option><option>Office clean</option>
             <option>Not sure yet, please help me choose</option>
           </select>
         </label>
@@ -783,7 +783,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
           <label>Type of clean
             <select name="clean_type" id="fType" required>
               <option>Standard / regular clean</option><option>Deep clean</option><option>Spring clean</option>
-              <option>Move-in clean</option><option>End-of-lease / bond clean</option><option>Post-renovation clean</option>
+              <option>Move-in clean</option><option>End-of-lease / bond clean</option><option>Office clean</option>
               <option>Not sure yet, please help me choose</option>
             </select>
           </label>
@@ -1078,7 +1078,7 @@ const CLEANS = [
   {name:"Spring clean", short:"Spring clean", desc:"A seasonal refresh of high and low areas that a regular clean doesn't reach.", prices:[350,400,470,500,540,null], time:"about 3 hours"},
   {name:"Move-in clean", short:"Move-in clean", desc:"A deep clean of an empty home, including inside cupboards and drawers, before you unpack.", prices:[410,460,530,560,600,null], time:"about 3 hours"},
   {name:"End-of-lease / bond clean", short:"End-of-lease clean", desc:"A move-out clean with the oven, interior windows and wall marks included, matched to your agent's checklist.", prices:[480,530,600,630,670,null], time:"about 4–5 hours"},
-  {name:"Post-renovation clean", short:"Post-renovation clean", custom:true, desc:"Fine dust and residue removal after building work. Price and timing confirmed after a walk-through.", prices:[null,null,null,null,null,null], time:"1–3 days (varies)"}
+  {name:"Office / commercial clean", short:"Office clean", custom:true, desc:"Offices, retail and other commercial spaces, cleaned before or after your trading hours. Price confirmed after a quick site visit.", prices:[null,null,null,null,null,null], time:"quoted per site"}
 ];
 let size = 2;
 
@@ -1238,7 +1238,7 @@ renderLedger();
     if (q.cbd) lines.push(`<div class="qo-line"><span class="ql-k">Adelaide CBD parking</span><span>+${money(q.cbd)}</span></div>`);
     if (q.discount) lines.push(`<div class="qo-line disc"><span class="ql-k">${Math.round(q.freqPct * 100)}% regular-clean saving</span><span>−${money(q.discount)}</span></div>`);
     let totalBlock;
-    if (q.custom) totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v" style="font-size:1.2rem">Custom</span></div><p class="qo-deposit">Post-renovation &amp; 6+ bedroom homes are quoted after a quick walk-through or photos.</p>`;
+    if (q.custom) totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v" style="font-size:1.2rem">Custom</span></div><p class="qo-deposit">Office &amp; 6+ bedroom jobs are quoted after a quick site visit or photos.</p>`;
     else totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v">${money(q.total)}</span></div><p class="qo-deposit">20% deposit to book: <strong style="color:#fff">${money(q.deposit)}</strong></p>`;
     out.innerHTML = `<span class="est-pill">Your estimate</span>
       <div class="qo-brand"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 33 L32 12 L54 33"/><path d="M15 30 V53 H49 V30"/><path d="M43 22.5 L43 14 L47 14 L47 25.5"/><rect x="24.5" y="35" width="15" height="15"/><path d="M32 35 V50 M24.5 42.5 H39.5"/></svg><span><b>Samira</b><small>Cleaning Services</small></span></div>
