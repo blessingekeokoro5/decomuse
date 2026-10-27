@@ -178,7 +178,7 @@ const POLICIES = {
     intro: "These Terms & Conditions govern your use of the Samira Home Decor website and your purchase of our products and services. By using our site or placing an order, you agree to these terms.",
     body: `
       <h3>1. About us</h3>
-      <p>This website is operated by Samira Home Decor and Cleaning Services (ABN 41 991 812 955), an Australian home, lifestyle and fragrance business. In these terms, "we", "us" and "our" refer to Samira Home Decor and Cleaning Services.</p>
+      <p>This website is operated by Samira Home Decor and Cleaning Services (ABN 41 991 812 955), an Australian home and lifestyle business. In these terms, "we", "us" and "our" refer to Samira Home Decor and Cleaning Services.</p>
 
       <h3>2. Pricing &amp; GST</h3>
       <p>All prices are in Australian Dollars (AUD) and include GST where applicable, unless stated otherwise. We may update prices, products and promotions at any time. Sale discounts (such as Spend &amp; Save) apply per their stated terms.</p>
