@@ -504,8 +504,8 @@ function buildFooter() {
             PO Box 109, Klemzig,<br>SA 5087, Australia
           </div>
 
-          <p class="fr-copy">&copy; ${SAMIRA.est} Samira Home Decor &middot; Proudly Australian ${SAMIRA.flag}</p>
-          <span class="fr-app">📱 Samira Home Decor app &mdash; coming soon</span>
+          <p class="fr-copy">&copy; ${SAMIRA.est} <strong class="fr-brand">Samira Home Decor</strong> &middot; Proudly Australian ${SAMIRA.flag}</p>
+          <span class="fr-app">📱 <strong class="fr-brand">Samira Home Decor</strong> app &mdash; coming soon</span>
         </div>
       </div>
 
