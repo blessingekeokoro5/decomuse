@@ -1117,6 +1117,8 @@ em { font-style: italic; color: var(--rose-deep); }
   padding: 15px 20px; color: #fff; font-weight: 600; font-size: 0.98rem; margin-bottom: 22px; transition: background .15s; }
 .fh-help-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
 .fh-help-btn .fh-chev { font-size: 1.3rem; line-height: 1; color: var(--rose-soft); }
+.fh-policies { margin: 6px 0 22px; }
+.fh-policies h4 { margin-bottom: 12px; }
 .fh-legal { color: #8f7f76; font-size: 0.8rem; line-height: 1.65; max-width: 330px; margin: 0; }
 .fh-legal a { color: #cbb9ad; text-decoration: underline; }
 .fh-legal a:hover { color: #fff; }
