@@ -90,7 +90,7 @@ const MEGA_MENU = [
     columns: [
       { title: "Shop", links: ["Shop All Outdoor", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Furniture", links: ["Outdoor Lounges", "Dining Sets", "Chairs"] },
-      { title: "Garden", links: ["Planters & Pots", "Faux Plants"] },
+      { title: "Garden", links: ["Faux Plants"] },
       { title: "Comfort", links: ["Outdoor Cushions", "Outdoor Rugs", "Throws"] }
     ]
   },
@@ -99,7 +99,7 @@ const MEGA_MENU = [
     columns: [
       { title: "Shop", links: ["Shop All Kitchenware", "New Arrivals", "Bestsellers", "On Sale"] },
       { title: "Cook & Bake", links: ["Cookware", "Bakeware", "Utensils", "Chopping Boards"] },
-      { title: "Dine", links: ["Dinnerware", "Glassware", "Cutlery", "Serveware"] },
+      { title: "Dine", links: ["Dinnerware", "Glassware", "Serveware"] },
       { title: "Prep & Store", links: ["Storage & Canisters", "Kitchen Linen", "Coffee & Tea"] }
     ]
   },
