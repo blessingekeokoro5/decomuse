@@ -1132,7 +1132,9 @@ renderLedger();
     { v: 25, t: "Please supply Samira's", d: "+$25" }
   ];
   const FREQ_LABEL = { 0: "One-off", 0.05: "Monthly (5% off)", 0.1: "Fortnightly (10% off)", 0.15: "Weekly (15% off)" };
-  const STEPS = ["type", "freq", "size", "agents", "addons", "extras", "details"];
+  const STEP_FULL = ["type", "freq", "size", "agents", "addons", "extras", "details"];
+  const STEP_CUSTOM = ["type", "freq", "agents", "details"]; // Office/commercial is quoted after a site visit — skip bedrooms/add-ons/extras
+  const stepsList = () => (CLEANS[state.typeIdx] && CLEANS[state.typeIdx].custom) ? STEP_CUSTOM : STEP_FULL;
   let step = 0;
 
   const state = { typeIdx: 0, sizeIdx: 2, freqPct: 0, agents: 0, addons: [], spareUnits: 0, cbd: false, petsSecured: false, name: "", mobile: "", email: "", suburb: "", notes: "" };
@@ -1167,7 +1169,7 @@ renderLedger();
   }
 
   function stepHTML() {
-    const key = STEPS[step];
+    const key = stepsList()[step];
     if (key === "type") {
       const opts = CLEANS.map((c, i) => ({ v: i, t: c.short, d: c.custom ? "Custom quote" : "from " + money(minPrice(c)) }));
       return `<h3 class="calc-q">What kind of clean do you need?</h3><p class="calc-help">Choose the clean that best fits your home.</p>` + cards(opts, o => +o.v === state.typeIdx);
@@ -1203,7 +1205,7 @@ renderLedger();
   }
 
   function wireStep() {
-    const key = STEPS[step];
+    const key = stepsList()[step];
     body.querySelectorAll(".calc-opt").forEach(btn => btn.addEventListener("click", () => {
       const v = btn.dataset.v;
       if (key === "type") state.typeIdx = +v;
@@ -1251,10 +1253,10 @@ renderLedger();
   function renderStep() {
     body.innerHTML = stepHTML();
     wireStep();
-    label.textContent = "Step " + (step + 1) + " of " + STEPS.length;
-    fill.style.width = Math.round(((step + 1) / STEPS.length) * 100) + "%";
+    label.textContent = "Step " + (step + 1) + " of " + stepsList().length;
+    fill.style.width = Math.round(((step + 1) / stepsList().length) * 100) + "%";
     backBtn.disabled = step === 0;
-    const last = step === STEPS.length - 1;
+    const last = step === stepsList().length - 1;
     nextBtn.hidden = last;
     submitBtn.hidden = !last;
     out.hidden = !last;
@@ -1262,7 +1264,7 @@ renderLedger();
   }
 
   nextBtn.addEventListener("click", () => {
-    if (step < STEPS.length - 1) {
+    if (step < stepsList().length - 1) {
       step++; renderStep();
       const sec = document.getElementById("estimate");
       if (sec) window.scrollTo({ top: sec.offsetTop - 16, behavior: "smooth" });
@@ -1292,7 +1294,7 @@ renderLedger();
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const st = document.getElementById("quoteStatus");
-    if (step !== STEPS.length - 1) return;
+    if (step !== stepsList().length - 1) return;
     if (!state.name.trim() || !state.mobile.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(state.email.trim())) {
       setStatus(st, "err", "Please add your name, mobile and a valid email so we can send your estimate.");
       return;
