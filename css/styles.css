@@ -1037,6 +1037,8 @@ em { font-style: italic; color: var(--rose-deep); }
 .bk-type.active { border-color: var(--rose); background: var(--blush); }
 .bk-type-ic { font-size: 1.5rem; }
 .bk-type strong { font-size: 0.82rem; font-weight: 500; }
+a.bk-type-link { text-decoration: none; }
+a.bk-type-link:hover { border-color: var(--rose); background: var(--blush); }
 .bk-place { margin-top: 12px; font-size: 0.9rem; color: var(--body); background: var(--cream); border-radius: var(--radius-sm); padding: 12px 14px; }
 .bk-slots { display: grid; grid-template-columns: repeat(auto-fill, minmax(84px, 1fr)); gap: 8px; }
 .bk-slot { padding: 11px; border: 1.5px solid var(--line); border-radius: var(--radius-sm); background: #fff; cursor: pointer;

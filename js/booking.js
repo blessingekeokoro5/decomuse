@@ -7,7 +7,9 @@
 const MEETING_TYPES = [
   { key: "styling",  icon: "🛋️", label: "Property Styling / Staging",   place: "One of our stylists visits your property, within our service areas." },
   { key: "interior", icon: "🎨", label: "Interior Design Consultation", place: "A full in-home interior design consult to plan your whole space." },
-  { key: "vacation", icon: "🏝️", label: "Vacation Rental Styling",      place: "An in-home consult to style and furnish your short-stay or Airbnb." }
+  { key: "vacation", icon: "🏝️", label: "Vacation Rental Styling",      place: "An in-home consult to style and furnish your short-stay or Airbnb." },
+  // Cleaning has its own booking system (fixed prices + live availability), so this tile links there.
+  { key: "cleaning", icon: "🧼", label: "Cleaning Services",            href: "cleaning-services.html#book" }
 ];
 
 const BK_DAYS = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
@@ -56,8 +58,11 @@ function renderBooking(host) {
       <div class="bk-main">
         <div class="bk-step-label">1 · Choose a service</div>
         <div class="bk-types">
-          ${MEETING_TYPES.map(m => `
-            <button type="button" class="bk-type ${m.key === bk.type ? "active" : ""}" data-type="${m.key}">
+          ${MEETING_TYPES.map(m => m.href
+            ? `<a class="bk-type bk-type-link" href="${m.href}">
+              <span class="bk-type-ic">${m.icon}</span><strong>${m.label}</strong>
+            </a>`
+            : `<button type="button" class="bk-type ${m.key === bk.type ? "active" : ""}" data-type="${m.key}">
               <span class="bk-type-ic">${m.icon}</span><strong>${m.label}</strong>
             </button>`).join("")}
         </div>
@@ -101,7 +106,7 @@ function renderBooking(host) {
 }
 
 function wireBooking(host) {
-  host.querySelectorAll(".bk-type").forEach(b => b.addEventListener("click", () => {
+  host.querySelectorAll("button.bk-type").forEach(b => b.addEventListener("click", () => {
     bk.type = b.dataset.type;
     host.querySelectorAll(".bk-type").forEach(x => x.classList.toggle("active", x === b));
     document.getElementById("bkAddrWrap").style.display = (bk.type === "inhome" || bk.type === "interior") ? "block" : "none";
