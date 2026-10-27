@@ -34,7 +34,7 @@ const json = (code, obj) => ({ statusCode: code, headers: CORS, body: JSON.strin
 // from the runtime env (SITE_ID + the function token Netlify provides).
 function openStore(name) {
   const siteID = process.env.SITE_ID || process.env.NETLIFY_SITE_ID;
-  const token = process.env.NETLIFY_FUNCTIONS_TOKEN || process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
+  const token = process.env.NETLIFY_BLOBS_TOKEN || process.env.NETLIFY_API_TOKEN;
   return (siteID && token) ? getStore({ name, siteID, token }) : getStore(name);
 }
 
