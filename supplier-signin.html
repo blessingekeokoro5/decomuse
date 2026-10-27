@@ -18,105 +18,134 @@
   <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
   <link rel="stylesheet" href="css/styles.css?v=43">
   <style>
-    .sp-portal { min-height: 100vh; display: grid; grid-template-columns: 1.05fr 1fr; background: var(--cream, #f6f1ea); }
-    .sp-aside { position: relative; background: var(--espresso, #2a211c); color: #efe6dc; padding: 56px 54px; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; }
-    .sp-aside::after { content: ""; position: absolute; right: -120px; bottom: -120px; width: 340px; height: 340px; border-radius: 50%; border: 1.5px solid rgba(214,181,129,0.28); }
-    .sp-aside::before { content: ""; position: absolute; right: -60px; bottom: -60px; width: 220px; height: 220px; border-radius: 50%; border: 1.5px solid rgba(214,181,129,0.18); }
-    .sp-brand { display: flex; align-items: baseline; gap: 10px; }
-    .sp-brand b { font-family: var(--font-head, serif); font-size: 1.5rem; letter-spacing: 0.04em; color: #fff; }
-    .sp-brand small { font-size: 0.62rem; letter-spacing: 0.26em; text-transform: uppercase; color: var(--rose-soft, #d6b581); }
-    .sp-aside-mid h2 { font-family: var(--font-head, serif); color: #fff; font-size: 2.1rem; line-height: 1.15; margin: 0 0 16px; }
-    .sp-aside-mid p { color: #cdbfb2; font-size: 0.98rem; max-width: 380px; margin: 0 0 24px; }
-    .sp-benefits { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
-    .sp-benefits li { display: flex; align-items: flex-start; gap: 10px; color: #e3d8cd; font-size: 0.95rem; }
-    .sp-benefits li span { color: var(--rose-soft, #d6b581); font-weight: 600; }
-    .sp-aside-foot { font-size: 0.82rem; color: #9b8b7f; position: relative; z-index: 1; }
-    .sp-aside-foot a { color: #cdbfb2; text-decoration: underline; }
+    .sp-top { background: var(--espresso, #2a211c); padding: 14px 24px; }
+    .sp-top-in { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .sp-logo { display: flex; align-items: baseline; gap: 10px; text-decoration: none; }
+    .sp-logo b { font-family: var(--font-head, serif); font-size: 1.35rem; letter-spacing: 0.05em; color: #fff; }
+    .sp-logo small { font-size: 0.6rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--rose-soft, #d6b581); }
+    .sp-top a.sp-store { color: #cdbfb2; font-size: 0.84rem; text-decoration: none; }
+    .sp-top a.sp-store:hover { color: #fff; }
 
-    .sp-main { display: flex; align-items: center; justify-content: center; padding: 48px 28px; }
-    .sp-card { width: 100%; max-width: 400px; }
-    .sp-back { display: inline-block; font-size: 0.85rem; color: var(--muted, #8a7d72); margin-bottom: 26px; }
-    .sp-back:hover { color: var(--ink, #2a211c); }
-    .sp-card h1 { font-family: var(--font-head, serif); font-size: 1.9rem; margin: 0 0 6px; color: var(--ink, #2a211c); }
-    .sp-card .sp-sub { color: var(--body, #5f554c); font-size: 0.95rem; margin: 0 0 26px; }
-    .sp-field { margin-bottom: 16px; }
-    .sp-field label { display: block; font-size: 0.78rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted, #8a7d72); margin-bottom: 6px; }
-    .sp-field input { width: 100%; border: 1.5px solid var(--line, #e4dcd2); border-radius: var(--radius-sm, 10px); padding: 13px 14px; font-family: var(--font-body, sans-serif); font-size: 0.98rem; background: #fff; color: var(--ink, #2a211c); }
+    /* Hero with overlaid sign-in card */
+    .sp-hero { position: relative; min-height: 560px; display: flex; align-items: center;
+      background: #4a2a30 url('assets/hero.jpg') center/cover no-repeat; padding: 50px 24px; }
+    .sp-hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(20,12,14,0.55) 0%, rgba(20,12,14,0.25) 45%, rgba(20,12,14,0) 70%); }
+    .sp-hero-in { position: relative; width: 100%; max-width: 1200px; margin: 0 auto; }
+
+    .sp-card { background: #fff; border-radius: var(--radius, 16px); box-shadow: 0 24px 60px rgba(0,0,0,0.28);
+      width: 100%; max-width: 360px; padding: 32px 30px; }
+    .sp-card h1 { font-family: var(--font-head, serif); font-size: 1.7rem; margin: 0 0 20px; color: var(--ink, #2a211c); }
+    .sp-field { margin-bottom: 14px; }
+    .sp-field label { display: block; font-size: 0.74rem; letter-spacing: 0.05em; text-transform: uppercase; color: var(--muted, #8a7d72); margin-bottom: 6px; }
+    .sp-field input { width: 100%; border: 1.5px solid var(--line, #e4dcd2); border-radius: var(--radius-sm, 10px);
+      padding: 12px 14px; font-family: var(--font-body, sans-serif); font-size: 0.98rem; background: #fff; color: var(--ink, #2a211c); }
     .sp-field input:focus { outline: none; border-color: var(--gold, #c9a86a); }
-    .sp-row { display: flex; align-items: center; justify-content: space-between; margin: 4px 0 22px; font-size: 0.88rem; }
-    .sp-remember { display: flex; align-items: center; gap: 8px; color: var(--body, #5f554c); cursor: pointer; }
+    .sp-remember { display: flex; align-items: center; gap: 8px; font-size: 0.86rem; color: var(--body, #5f554c); margin: 6px 0 18px; cursor: pointer; }
     .sp-remember input { width: 16px; height: 16px; accent-color: var(--rose, #b98a6a); }
-    .sp-forgot { color: var(--rose-deep, #9a6a4a); }
+    .sp-forgot { display: inline-block; margin-top: 12px; font-size: 0.84rem; color: var(--rose-deep, #9a6a4a); }
     .sp-forgot:hover { text-decoration: underline; }
-    .sp-msg { display: none; margin-top: 18px; font-size: 0.9rem; line-height: 1.55; background: var(--cream, #f3ece3); border: 1px solid var(--line, #e4dcd2); border-radius: var(--radius-sm, 10px); padding: 14px 16px; color: var(--body, #5f554c); }
+    .sp-or { display: flex; align-items: center; gap: 12px; margin: 20px 0; color: var(--muted, #8a7d72); font-size: 0.8rem; }
+    .sp-or::before, .sp-or::after { content: ""; flex: 1; height: 1px; background: var(--line, #e4dcd2); }
+    .sp-msg { display: none; margin-top: 14px; font-size: 0.88rem; line-height: 1.5; background: var(--cream, #f3ece3);
+      border: 1px solid var(--line, #e4dcd2); border-radius: var(--radius-sm, 10px); padding: 12px 14px; color: var(--body, #5f554c); }
     .sp-msg a { color: var(--rose-deep, #9a6a4a); text-decoration: underline; }
-    .sp-divider { display: flex; align-items: center; gap: 14px; margin: 28px 0; color: var(--muted, #8a7d72); font-size: 0.8rem; }
-    .sp-divider::before, .sp-divider::after { content: ""; flex: 1; height: 1px; background: var(--line, #e4dcd2); }
-    .sp-new { text-align: center; }
-    .sp-new p { color: var(--body, #5f554c); font-size: 0.92rem; margin: 0 0 12px; }
 
-    @media (max-width: 860px) {
-      .sp-portal { grid-template-columns: 1fr; }
-      .sp-aside { padding: 34px 28px; gap: 26px; }
-      .sp-aside::after, .sp-aside::before { display: none; }
-      .sp-aside-mid h2 { font-size: 1.7rem; }
-      .sp-benefits { display: none; }
-      .sp-aside-foot { display: none; }
+    /* Content sections */
+    .sp-section { max-width: 920px; margin: 0 auto; padding: 60px 24px 10px; text-align: center; }
+    .sp-eyebrow { display: inline-block; font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--rose-deep, #9a6a4a);
+      font-weight: 500; position: relative; padding: 0 44px; margin-bottom: 20px; }
+    .sp-eyebrow::before, .sp-eyebrow::after { content: ""; position: absolute; top: 50%; width: 30px; height: 1px; background: var(--line, #d8cfc4); }
+    .sp-eyebrow::before { left: 0; } .sp-eyebrow::after { right: 0; }
+    .sp-section > p { color: var(--body, #5f554c); font-size: 1rem; line-height: 1.7; max-width: 760px; margin: 0 auto 16px; }
+    .sp-grid { max-width: 920px; margin: 10px auto 0; padding: 0 24px 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 34px 48px; text-align: center; }
+    .sp-grid h3 { font-family: var(--font-head, serif); font-size: 1.18rem; color: var(--ink, #2a211c); margin: 0 0 10px; }
+    .sp-grid p { color: var(--body, #5f554c); font-size: 0.94rem; line-height: 1.65; margin: 0; }
+
+    .sp-foot { background: var(--cream, #f3ece3); border-top: 1px solid var(--line, #e4dcd2); text-align: center; padding: 22px 24px; color: var(--muted, #8a7d72); font-size: 0.84rem; line-height: 1.6; }
+    .sp-foot a { color: var(--rose-deep, #9a6a4a); }
+
+    @media (max-width: 680px) {
+      .sp-hero { min-height: 0; padding: 36px 20px; }
+      .sp-hero::before { background: rgba(20,12,14,0.45); }
+      .sp-card { max-width: 100%; }
+      .sp-grid { grid-template-columns: 1fr; gap: 28px; }
     }
   </style>
 </head>
 <body>
-  <div class="sp-portal">
-    <aside class="sp-aside">
-      <a class="sp-brand" href="index.html" aria-label="Samira Home Decor home">
-        <b>SAMIRA</b><small>Supplier Portal</small>
-      </a>
-      <div class="sp-aside-mid">
-        <h2>Welcome back, partner.</h2>
-        <p>Sign in to manage your products, orders, stock and wholesale account with Samira Home Decor.</p>
-        <ul class="sp-benefits">
-          <li><span>✓</span> Manage your product listings &amp; stock</li>
-          <li><span>✓</span> View and fulfil orders</li>
-          <li><span>✓</span> Track payments &amp; wholesale terms</li>
-          <li><span>✓</span> Reach thousands of Australian homes</li>
-        </ul>
-      </div>
-      <div class="sp-aside-foot">
-        Need help with portal access? Email <a href="mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20access">hello@samirahomedecor.com.au</a>
-      </div>
-    </aside>
+  <div class="sp-top">
+    <div class="sp-top-in">
+      <a class="sp-logo" href="index.html" aria-label="Samira Home Decor home"><b>SAMIRA</b><small>Supplier Portal</small></a>
+      <a class="sp-store" href="index.html">← Back to the store</a>
+    </div>
+  </div>
 
-    <main class="sp-main">
+  <section class="sp-hero">
+    <div class="sp-hero-in">
       <div class="sp-card">
-        <a class="sp-back" href="index.html">← Back to the store</a>
-        <h1>Supplier sign in</h1>
-        <p class="sp-sub">Enter your supplier account details to continue.</p>
-
+        <h1>Sign in</h1>
         <form id="supplierSignin" novalidate>
           <div class="sp-field">
-            <label for="supEmail">Supplier email</label>
-            <input id="supEmail" type="email" autocomplete="username" required placeholder="you@yourbrand.com">
+            <label for="supUser">Username or email</label>
+            <input id="supUser" type="text" autocomplete="username" required placeholder="Username or email">
           </div>
           <div class="sp-field">
             <label for="supPw">Password</label>
-            <input id="supPw" type="password" autocomplete="current-password" required placeholder="Your portal password">
+            <input id="supPw" type="password" autocomplete="current-password" required placeholder="Password">
           </div>
-          <div class="sp-row">
-            <label class="sp-remember"><input type="checkbox" id="supRemember"> Remember me</label>
-            <a class="sp-forgot" href="mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20password%20reset">Forgot password?</a>
-          </div>
+          <label class="sp-remember"><input type="checkbox" id="supRemember"> Remember me</label>
           <button type="submit" class="btn btn--primary btn--block">Sign in</button>
+          <a class="sp-forgot" href="mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20access%20help">Forgot your username or password?</a>
           <div id="supMsg" class="sp-msg"></div>
+          <div class="sp-or">or</div>
+          <a class="btn btn--dark btn--block" href="become-a-supplier.html">Become a supplier</a>
         </form>
-
-        <div class="sp-divider">New to Samira Home Decor?</div>
-        <div class="sp-new">
-          <p>Make beautiful home décor, furniture or lifestyle pieces? Partner with us.</p>
-          <a class="btn btn--dark btn--block" href="become-a-supplier.html">Become a supplier →</a>
-        </div>
       </div>
-    </main>
-  </div>
+    </div>
+  </section>
+
+  <section class="sp-section">
+    <span class="sp-eyebrow">Making supply easy</span>
+    <p>Welcome to your one-stop portal for building a successful partnership with Samira Home Decor. The supplier portal gives you clarity and control over the whole process — process customer orders, prepare your dispatch documents, and keep your products and stock up to date, all in one place.</p>
+    <p>Not a supplier yet? If you make beautiful home décor, furniture or lifestyle pieces, we'd love to hear from you — <a href="become-a-supplier.html">get in touch</a>. We're always looking to grow our range and would love to partner with you.</p>
+  </section>
+
+  <section>
+    <div class="sp-section" style="padding-bottom:0">
+      <span class="sp-eyebrow">Why partner with us</span>
+    </div>
+    <div class="sp-grid">
+      <div>
+        <h3>Curated, not crowded</h3>
+        <p>We stock a considered range of quality home, lifestyle and fragrance pieces — so your products are seen, styled and championed, not lost in a catalogue of thousands.</p>
+      </div>
+      <div>
+        <h3>Focused on home &amp; lifestyle</h3>
+        <p>Home décor, furniture, fragrance, wellness and gifting are all we do. We're a category specialist, which means engaged shoppers and the right audience for your brand.</p>
+      </div>
+      <div>
+        <h3>We reach Australian homes</h3>
+        <p>Through our website, email and social channels we put your pieces in front of real Australian home shoppers who are actively looking to style their space.</p>
+      </div>
+      <div>
+        <h3>We champion your brand</h3>
+        <p>Your pieces are photographed in context, beautifully merchandised and promoted across our channels, with consistent, on-brand messaging throughout.</p>
+      </div>
+      <div>
+        <h3>Easy to work with</h3>
+        <p>Clear communication, fair wholesale terms and a simple onboarding process. We make it easy to list, dispatch and keep your stock up to date.</p>
+      </div>
+      <div>
+        <h3>A genuine, long-term partnership</h3>
+        <p>Samira Home Decor is a proudly Australian business based in Adelaide. We're here for the long run and we grow when our partners do.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="sp-foot">
+    Samira Home Decor and Cleaning Services &middot; PO Box 109, Klemzig, SA 5087, Australia<br>
+    &copy; 2026 Samira Home Decor. All rights reserved. &middot; <a href="index.html">Back to the store</a>
+  </footer>
 
   <script>
     /* Supplier accounts are activated manually after approval — there is no public
@@ -127,15 +156,15 @@
       if (!form) return;
       form.addEventListener("submit", function (e) {
         e.preventDefault();
-        var email = (document.getElementById("supEmail").value || "").trim();
+        var user = (document.getElementById("supUser").value || "").trim();
         var pw = (document.getElementById("supPw").value || "").trim();
         var msg = document.getElementById("supMsg");
         msg.style.display = "block";
-        if (!email || !pw) {
-          msg.innerHTML = "Please enter your supplier email and password.";
+        if (!user || !pw) {
+          msg.innerHTML = "Please enter your username / email and password.";
           return;
         }
-        msg.innerHTML = "Supplier accounts are activated by our team after approval. If you're an approved supplier and can't get in, email <a href='mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20access%20for%20" + encodeURIComponent(email) + "'>hello@samirahomedecor.com.au</a> from this address and we'll set up your access.";
+        msg.innerHTML = "Supplier accounts are activated by our team after approval. If you're an approved supplier and can't get in, email <a href='mailto:hello@samirahomedecor.com.au?subject=Supplier%20portal%20access'>hello@samirahomedecor.com.au</a> and we'll set up your access.";
       });
     })();
   </script>
