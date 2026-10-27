@@ -1156,6 +1156,7 @@ em { font-style: italic; color: var(--rose-deep); }
 .socials { display: flex; gap: 10px; }
 .socials a { width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,0.08); display: grid; place-items: center; color: #cbb9ad; }
 .socials a:hover { background: var(--rose); color: #fff; }
+.socials a svg { width: 20px; height: 20px; display: block; }
 /* App-style cart page */
 .cart-app { max-width: 720px; margin: 0 auto; padding-bottom: 20px; }
 .cart-express { border: 1px solid var(--line); border-radius: 14px; padding: 16px; margin-bottom: 26px; background: var(--cream-2); }
