@@ -63,7 +63,7 @@ exports.handler = async (event) => {
         }
       }
     } catch (e) {
-      return json(500, { error: "read_failed" });
+      return json(500, { error: "read_failed", detail: String((e && e.message) || e) });
     }
     out.sort((a, b) => (a.date + a.slot).localeCompare(b.date + b.slot));
     return json(200, { ok: true, bookings: out });
