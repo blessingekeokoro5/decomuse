@@ -1077,13 +1077,13 @@ const CLEANS = [
   {name:"Spring clean", short:"Spring clean", desc:"A seasonal refresh of high and low areas that a regular clean doesn't reach.", prices:[350,400,470,500,540,null], time:"about 3 hours"},
   {name:"Move-in clean", short:"Move-in clean", desc:"A deep clean of an empty home, including inside cupboards and drawers, before you unpack.", prices:[410,460,530,560,600,null], time:"about 3 hours"},
   {name:"End-of-lease / bond clean", short:"End-of-lease clean", desc:"A move-out clean with the oven, interior windows and wall marks included, matched to your agent's checklist.", prices:[480,530,600,630,670,null], time:"about 4–5 hours"},
-  {name:"Office / commercial clean", short:"Office clean", custom:true, desc:"Offices, retail and other commercial spaces, cleaned before or after your trading hours. Price confirmed after a quick site visit.", prices:[null,null,null,null,null,null], time:"quoted per site"}
+  {name:"Office / commercial clean", short:"Office clean", office:true, desc:"Offices, retail and workspaces, cleaned before or after your trading hours. Small and medium have set prices; large is quoted after a site visit.", prices:[null,null,null,null,null,null], time:"per visit"}
 ];
 let size = 2;
 
 function renderLedger(){
   const el = document.getElementById("ledger");
-  el.innerHTML = CLEANS.map(c => {
+  el.innerHTML = CLEANS.filter(c => !c.office).map(c => {
     const p = c.prices[size];
     const price = (c.custom || p == null)
       ? `<div class="price"><span class="est-tag">Estimate</span>Custom<small>${c.time}</small></div>`
@@ -1131,12 +1131,23 @@ renderLedger();
     { v: 25, t: "Please supply Samira's", d: "+$25" }
   ];
   const FREQ_LABEL = { 0: "One-off", 0.05: "Monthly (5% off)", 0.1: "Fortnightly (10% off)", 0.15: "Weekly (15% off)" };
+  const OFFICE_SIZES = [
+    { t: "Small office", d: "$280 · small space / 1 level", price: 280 },
+    { t: "Medium office", d: "$420 · standard", price: 420 },
+    { t: "Large office", d: "Custom — quoted after a site inspection", price: null }
+  ];
   const STEP_FULL = ["type", "freq", "size", "agents", "addons", "extras", "details"];
-  const STEP_CUSTOM = ["type", "freq", "agents", "details"]; // Office/commercial is quoted after a site visit — skip bedrooms/add-ons/extras
-  const stepsList = () => (CLEANS[state.typeIdx] && CLEANS[state.typeIdx].custom) ? STEP_CUSTOM : STEP_FULL;
+  const STEP_CUSTOM = ["type", "freq", "agents", "details"];
+  const STEP_OFFICE = ["type", "officesize", "freq", "agents", "details"]; // Office: size tier instead of bedrooms, no residential add-ons
+  const stepsList = () => {
+    const c = CLEANS[state.typeIdx];
+    if (c && c.office) return STEP_OFFICE;
+    if (c && c.custom) return STEP_CUSTOM;
+    return STEP_FULL;
+  };
   let step = 0;
 
-  const state = { typeIdx: 0, sizeIdx: 2, freqPct: 0, agents: 0, addons: [], spareUnits: 0, cbd: false, petsSecured: false, name: "", mobile: "", email: "", suburb: "", notes: "" };
+  const state = { typeIdx: 0, sizeIdx: 2, officeSize: 1, freqPct: 0, agents: 0, addons: [], spareUnits: 0, cbd: false, petsSecured: false, name: "", mobile: "", email: "", suburb: "", notes: "" };
 
   const money = (n) => "$" + Math.round(n).toLocaleString("en-AU");
   const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
@@ -1145,8 +1156,9 @@ renderLedger();
   function compute() {
     const c = CLEANS[state.typeIdx] || CLEANS[0];
     const sizeIdx = state.sizeIdx;
-    const base = c.prices[sizeIdx];
-    const custom = c.custom || base == null;
+    const office = !!c.office;
+    const base = office ? OFFICE_SIZES[state.officeSize].price : c.prices[sizeIdx];
+    const custom = office ? (base == null) : (c.custom || base == null);
     const chosen = state.addons.slice();
     const addonCost = Math.ceil(chosen.length / 2) * 80;      // $80 per 2 add-ons
     const agents = +state.agents;                             // 0 or 25
@@ -1170,8 +1182,8 @@ renderLedger();
   function stepHTML() {
     const key = stepsList()[step];
     if (key === "type") {
-      const opts = CLEANS.map((c, i) => ({ v: i, t: c.short, d: c.custom ? "Custom quote" : "from " + money(minPrice(c)) }));
-      return `<h3 class="calc-q">What kind of clean do you need?</h3><p class="calc-help">Choose the clean that best fits your home.</p>` + cards(opts, o => +o.v === state.typeIdx);
+      const opts = CLEANS.map((c, i) => ({ v: i, t: c.short, d: c.office ? "from $280" : (c.custom ? "Custom quote" : "from " + money(minPrice(c))) }));
+      return `<h3 class="calc-q">What kind of clean do you need?</h3><p class="calc-help">Choose the clean that best fits your space.</p>` + cards(opts, o => +o.v === state.typeIdx);
     }
     if (key === "freq") {
       return `<h3 class="calc-q">How often would you like your home cleaned?</h3><p class="calc-help">Regular cleans come with a saving.</p>` + cards(FREQ, o => +o.v === state.freqPct);
@@ -1179,6 +1191,10 @@ renderLedger();
     if (key === "size") {
       const opts = SIZES.map((s, i) => ({ v: i, t: s }));
       return `<h3 class="calc-q">How big is your home?</h3><p class="calc-help">Pick the closest match — this sets your base price.</p>` + cards(opts, o => +o.v === state.sizeIdx);
+    }
+    if (key === "officesize") {
+      const opts = OFFICE_SIZES.map((o, i) => ({ v: i, t: o.t, d: o.d }));
+      return `<h3 class="calc-q">How big is the space?</h3><p class="calc-help">Small and medium have set prices; large is quoted after a site inspection.</p>` + cards(opts, o => +o.v === state.officeSize);
     }
     if (key === "agents") {
       return `<h3 class="calc-q">Whose cleaning products should we use?</h3><p class="calc-help">Use your own at no charge, or we can bring ours.</p>` + cards(AGENTS, o => +o.v === +state.agents);
@@ -1210,6 +1226,7 @@ renderLedger();
       if (key === "type") state.typeIdx = +v;
       else if (key === "freq") state.freqPct = +v;
       else if (key === "size") state.sizeIdx = +v;
+      else if (key === "officesize") state.officeSize = +v;
       else if (key === "agents") state.agents = +v;
       else if (key === "extras") state.spareUnits = +v;
       else if (key === "addons") {
@@ -1230,8 +1247,10 @@ renderLedger();
     const q = compute();
     const lines = [];
     lines.push(`<div class="qo-line"><span class="ql-k">Clean type</span><span>${q.c.short}</span></div>`);
-    if (!q.c.custom) lines.push(`<div class="qo-line"><span class="ql-k">Home size</span><span>${SIZES[q.sizeIdx]}</span></div>`);
+    if (q.c.office) lines.push(`<div class="qo-line"><span class="ql-k">Office size</span><span>${OFFICE_SIZES[state.officeSize].t}</span></div>`);
+    else if (!q.c.custom) lines.push(`<div class="qo-line"><span class="ql-k">Home size</span><span>${SIZES[q.sizeIdx]}</span></div>`);
     if (q.custom) lines.push(`<div class="qo-line"><span class="ql-k">Base clean</span><span>Custom</span></div>`);
+    else if (q.c.office) lines.push(`<div class="qo-line"><span class="ql-k">Office clean · per visit</span><span>${money(q.base)}</span></div>`);
     else lines.push(`<div class="qo-line"><span class="ql-k">Base clean · ${q.c.time}</span><span>${money(q.base)}</span></div>`);
     if (q.chosen.length) lines.push(`<div class="qo-line"><span class="ql-k">Add-ons (${q.chosen.length})</span><span>+${money(q.addonCost)}</span></div>`);
     if (q.agents) lines.push(`<div class="qo-line"><span class="ql-k">Samira cleaning agents</span><span>+${money(q.agents)}</span></div>`);
@@ -1276,8 +1295,9 @@ renderLedger();
   function summaryRows() {
     const q = compute();
     const rows = [["Clean type", q.c.short]];
-    if (!q.c.custom) rows.push(["Home size", SIZES[q.sizeIdx]]);
-    rows.push(["Base clean", q.custom ? "Custom (quoted after a site visit)" : money(q.base) + " · " + q.c.time]);
+    if (q.c.office) rows.push(["Office size", OFFICE_SIZES[state.officeSize].t]);
+    else if (!q.c.custom) rows.push(["Home size", SIZES[q.sizeIdx]]);
+    rows.push(["Base clean", q.custom ? "Custom (quoted after a site inspection)" : money(q.base) + (q.c.office ? " · per visit" : " · " + q.c.time)]);
     if (q.chosen.length) rows.push(["Add-ons (" + q.chosen.length + ")", "+" + money(q.addonCost) + " — " + q.chosen.join(", ")]);
     rows.push(["Cleaning agents", q.agents ? "+" + money(q.agents) + " (supplied by us)" : "Own (no charge)"]);
     if (q.spareUnits) rows.push(["Spare units (" + q.spareUnits + ")", "+" + money(q.spareCost) + " ($200 each)"]);
