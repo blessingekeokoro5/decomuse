@@ -1231,7 +1231,7 @@ renderLedger();
     const q = compute();
     const lines = [];
     lines.push(`<div class="qo-line"><span class="ql-k">Clean type</span><span>${q.c.short}</span></div>`);
-    lines.push(`<div class="qo-line"><span class="ql-k">Home size</span><span>${SIZES[q.sizeIdx]}</span></div>`);
+    if (!q.c.custom) lines.push(`<div class="qo-line"><span class="ql-k">Home size</span><span>${SIZES[q.sizeIdx]}</span></div>`);
     if (q.custom) lines.push(`<div class="qo-line"><span class="ql-k">Base clean</span><span>Custom</span></div>`);
     else lines.push(`<div class="qo-line"><span class="ql-k">Base clean · ${q.c.time}</span><span>${money(q.base)}</span></div>`);
     if (q.chosen.length) lines.push(`<div class="qo-line"><span class="ql-k">Add-ons (${q.chosen.length})</span><span>+${money(q.addonCost)}</span></div>`);
@@ -1276,11 +1276,9 @@ renderLedger();
 
   function summaryRows() {
     const q = compute();
-    const rows = [
-      ["Clean type", q.c.short],
-      ["Home size", SIZES[q.sizeIdx]],
-      ["Base clean", q.custom ? "Custom (quoted after a walk-through)" : money(q.base) + " · " + q.c.time],
-    ];
+    const rows = [["Clean type", q.c.short]];
+    if (!q.c.custom) rows.push(["Home size", SIZES[q.sizeIdx]]);
+    rows.push(["Base clean", q.custom ? "Custom (quoted after a site visit)" : money(q.base) + " · " + q.c.time]);
     if (q.chosen.length) rows.push(["Add-ons (" + q.chosen.length + ")", "+" + money(q.addonCost) + " — " + q.chosen.join(", ")]);
     rows.push(["Cleaning agents", q.agents ? "+" + money(q.agents) + " (supplied by us)" : "Own (no charge)"]);
     if (q.spareUnits) rows.push(["Spare units (" + q.spareUnits + ")", "+" + money(q.spareCost) + " ($200 each)"]);
