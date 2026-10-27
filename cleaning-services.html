@@ -340,6 +340,38 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
 .quote-out .qo-brand svg{width:26px;height:26px;flex:none}
 .quote-out .qo-brand b{font:700 .98rem/1.1 var(--serif);color:#fff;letter-spacing:.02em}
 .quote-out .qo-brand small{display:block;color:var(--gold);font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;margin-top:3px}
+/* Step-by-step calculator */
+.calc{max-width:720px;margin:0 auto}
+.calc-progress{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.calc-progress span{font:600 .72rem/1 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.calc-track{flex:1;height:6px;border-radius:999px;background:var(--line);overflow:hidden}
+.calc-track i{display:block;height:100%;width:14%;background:var(--gold);border-radius:999px;transition:width .3s ease}
+.calc-form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 26px}
+@media(max-width:520px){.calc-form{padding:22px 16px}}
+.calc-q{font:600 1.35rem/1.25 var(--serif);color:var(--navy);margin:0 0 4px}
+.calc-help{color:var(--muted);font-size:.92rem;margin:0 0 20px}
+.calc-opts{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.calc-opts.single{grid-template-columns:1fr}
+@media(max-width:520px){.calc-opts{grid-template-columns:1fr}}
+.calc-opt{display:flex;flex-direction:column;align-items:flex-start;gap:3px;text-align:left;background:#fff;border:1.6px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s,background .15s;font-family:var(--sans)}
+.calc-opt:hover{border-color:var(--gold)}
+.calc-opt.sel{border-color:var(--navy);background:var(--tint);box-shadow:inset 0 0 0 1px var(--navy)}
+.calc-opt .co-t{font-weight:600;color:var(--navy);font-size:.98rem}
+.calc-opt .co-d{color:var(--muted);font-size:.82rem}
+.calc-sub{font-weight:600;color:var(--navy);margin:18px 0 10px}
+.calc-check{display:flex;align-items:flex-start;gap:10px;margin-top:16px;font-size:.92rem;color:var(--ink);cursor:pointer;line-height:1.4}
+.calc-check input{width:18px;height:18px;min-width:18px;margin-top:1px;accent-color:var(--navy)}
+.calc-field{display:block;margin-bottom:14px}
+.calc-field>span{display:block;font-weight:600;color:var(--navy);font-size:.9rem;margin-bottom:5px}
+.calc-field input,.calc-field textarea{width:100%;border:1.5px solid var(--line);border-radius:10px;padding:12px 14px;font:inherit;font-size:.98rem;color:var(--ink);background:#fff}
+.calc-field textarea{min-height:84px;resize:vertical}
+.calc-field input:focus,.calc-field textarea:focus{outline:none;border-color:var(--gold)}
+.calc-two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:520px){.calc-two{grid-template-columns:1fr}}
+.calc-nav{display:flex;justify-content:space-between;gap:12px;margin-top:22px}
+.calc-nav .btn{min-width:130px}
+#calcBack[disabled]{opacity:.4;pointer-events:none}
+.calc .quote-out{position:static;margin-top:22px}
 /* Request a call back modal */
 #callbackLink,.js-callback{cursor:pointer}
 /* FAQ */
@@ -550,66 +582,19 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
       <h2 id="est-title">Get an instant quote estimate</h2>
       <p class="lede">Build your clean below to see an estimated price, then send it to your inbox. We'll follow up to confirm and lock in a date — final price and time are confirmed when you book.</p>
     </div>
-    <div class="quote-wrap">
-      <form class="form panel" id="quoteForm" novalidate>
-        <div class="two">
-          <label>Type of clean
-            <select name="clean_type" id="qType"></select>
-          </label>
-          <label>Home size
-            <select name="size" id="qSize"></select>
-          </label>
-        </div>
-        <div class="two">
-          <label>How often?
-            <select name="frequency" id="qFreq">
-              <option value="0">One-off</option>
-              <option value="0.05">Monthly (5% off)</option>
-              <option value="0.10">Fortnightly (10% off)</option>
-              <option value="0.15">Weekly (15% off)</option>
-            </select>
-          </label>
-          <label>Cleaning agents
-            <select name="cleaning_agents" id="qAgents">
-              <option value="0">I'll provide my own (no charge)</option>
-              <option value="25">Please supply Samira's (+$25)</option>
-            </select>
-          </label>
-        </div>
-        <fieldset style="border:0;padding:0;margin:0">
-          <legend style="font-weight:600;color:var(--navy);margin-bottom:4px">Add-ons <span class="opt" style="font-weight:400">$80 per 2 — optional</span></legend>
-          <div class="quote-addons" id="qAddons"></div>
-        </fieldset>
-        <label>Spare units to clean (same visit) <span class="opt">Optional · discounted $200 each</span>
-          <select name="spare_units" id="qSpare">
-            <option value="0">None</option>
-            <option value="1">1 spare unit (+$200)</option>
-            <option value="2">2 spare units (+$400)</option>
-            <option value="3">3 spare units (+$600)</option>
-            <option value="4">4 spare units (+$800)</option>
-            <option value="5">5 spare units (+$1,000)</option>
-          </select>
-        </label>
-        <label class="check" style="margin-top:2px"><input type="checkbox" name="cbd_parking" id="qCbd" value="30"> Adelaide CBD — no parking available (adds a $30 city parking fee)</label>
-
-        <h3 style="margin-top:8px">Your details</h3>
-        <div class="two">
-          <label>Full name<input name="name" autocomplete="name" required></label>
-          <label>Mobile<input name="mobile" type="tel" autocomplete="tel" required></label>
-        </div>
-        <div class="two">
-          <label>Email<input name="email" type="email" autocomplete="email" required></label>
-          <label>Suburb<input name="suburb" autocomplete="address-level2"></label>
-        </div>
-        <label>Anything else we should know? <span class="opt">Optional</span><textarea name="notes" placeholder="Pets, access, preferred dates, add-on details…"></textarea></label>
-        <label class="check"><input type="checkbox" name="pets_secured" value="Yes"> I understand any pets must be secured in a locked place before the clean (if applicable).</label>
-        <p class="form-note">You'll get your estimate by email straight away. It's an estimate only — your final price and time are confirmed when you book.</p>
-        <div><button class="btn btn-navy" type="submit">Email me this estimate</button></div>
+    <div class="calc" id="calc">
+      <div class="calc-progress"><span id="calcLabel">Step 1 of 7</span><div class="calc-track"><i id="calcFill"></i></div></div>
+      <form id="quoteForm" class="calc-form" novalidate>
+        <div id="calcBody"></div>
         <p class="status" id="quoteStatus" role="status"></p>
-        <p class="form-note" style="text-align:center;margin-top:6px">Having trouble with your estimate? <a href="https://wa.me/61451609398?text=Hi%2C%20I%20need%20help%20with%20my%20cleaning%20quote." target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;text-decoration:underline">Chat with us on WhatsApp</a> and we'll sort it out.</p>
+        <div class="calc-nav">
+          <button type="button" class="btn btn-quiet" id="calcBack">← Back</button>
+          <button type="button" class="btn btn-navy" id="calcNext">Continue</button>
+          <button type="submit" class="btn btn-navy" id="calcSubmit" hidden>Email me this estimate</button>
+        </div>
+        <p class="form-note" style="text-align:center;margin-top:12px">Having trouble? <a href="https://wa.me/61451609398?text=Hi%2C%20I%20need%20help%20with%20my%20cleaning%20quote." target="_blank" rel="noopener" style="color:var(--navy);font-weight:600;text-decoration:underline">Chat with us on WhatsApp</a> and we'll sort it out.</p>
       </form>
-
-      <aside class="quote-out" id="quoteOut" aria-live="polite"></aside>
+      <aside class="quote-out" id="quoteOut" aria-live="polite" hidden></aside>
     </div>
   </div>
 </section>
@@ -1120,90 +1105,173 @@ document.getElementById("sizeChips").addEventListener("click", e => {
 });
 renderLedger();
 
-/* ---- Instant quote estimator ---------------------------------- */
+/* ---- Instant quote estimator (step-by-step calculator) -------- */
 (function () {
-  const typeSel = document.getElementById("qType");
-  const sizeSel = document.getElementById("qSize");
-  const freqSel = document.getElementById("qFreq");
-  const agentsSel = document.getElementById("qAgents");
-  const spareSel = document.getElementById("qSpare");
-  const cbdChk = document.getElementById("qCbd");
-  const addonsBox = document.getElementById("qAddons");
+  const body = document.getElementById("calcBody");
   const out = document.getElementById("quoteOut");
   const form = document.getElementById("quoteForm");
-  if (!typeSel || !out || !form) return;
+  const backBtn = document.getElementById("calcBack");
+  const nextBtn = document.getElementById("calcNext");
+  const submitBtn = document.getElementById("calcSubmit");
+  const label = document.getElementById("calcLabel");
+  const fill = document.getElementById("calcFill");
+  if (!body || !form || !out) return;
 
   const ADDONS = ["Inside oven", "Inside fridge / freezer", "Interior windows & tracks",
     "Exterior windows (ground)", "Balcony / patio", "Laundry (wash, dry, fold)", "Ironing",
     "Change bed linen", "Wall spot-cleaning", "Blinds & skirting boards", "Carpet steam clean",
     "Air conditioner / split system", "Ceiling fans"];
+  const FREQ = [
+    { v: 0,    t: "One-off",     d: "A single clean" },
+    { v: 0.05, t: "Monthly",     d: "Save 5%" },
+    { v: 0.10, t: "Fortnightly", d: "Save 10%" },
+    { v: 0.15, t: "Weekly",      d: "Save 15%" }
+  ];
+  const AGENTS = [
+    { v: 0,  t: "I'll provide my own", d: "No charge" },
+    { v: 25, t: "Please supply Samira's", d: "+$25" }
+  ];
+  const FREQ_LABEL = { 0: "One-off", 0.05: "Monthly (5% off)", 0.1: "Fortnightly (10% off)", 0.15: "Weekly (15% off)" };
+  const STEPS = ["type", "freq", "size", "agents", "addons", "extras", "details"];
+  let step = 0;
 
-  // Build the selects from the same CLEANS/SIZES data used by the price table
-  typeSel.innerHTML = CLEANS.map((c, i) => `<option value="${i}">${c.short}</option>`).join("");
-  sizeSel.innerHTML = SIZES.map((s, i) => `<option value="${i}"${i === 2 ? " selected" : ""}>${s}</option>`).join("");
-  addonsBox.innerHTML = ADDONS.map((a, i) =>
-    `<label><input type="checkbox" class="q-addon" value="${a}" id="qa${i}">${a}</label>`).join("");
+  const state = { typeIdx: 0, sizeIdx: 2, freqPct: 0, agents: 0, addons: [], spareUnits: 0, cbd: false, petsSecured: false, name: "", mobile: "", email: "", suburb: "", notes: "" };
 
   const money = (n) => "$" + Math.round(n).toLocaleString("en-AU");
+  const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/"/g, "&quot;");
+  const minPrice = (c) => { for (const p of c.prices) if (p != null) return p; return null; };
 
   function compute() {
-    const c = CLEANS[+typeSel.value] || CLEANS[0];
-    const sizeIdx = +sizeSel.value;
+    const c = CLEANS[state.typeIdx] || CLEANS[0];
+    const sizeIdx = state.sizeIdx;
     const base = c.prices[sizeIdx];
     const custom = c.custom || base == null;
-    const chosen = [...addonsBox.querySelectorAll(".q-addon:checked")].map(x => x.value);
+    const chosen = state.addons.slice();
     const addonCost = Math.ceil(chosen.length / 2) * 80;      // $80 per 2 add-ons
-    const agents = +agentsSel.value;                          // 0 or 25
-    const spareUnits = parseInt(spareSel && spareSel.value || "0", 10) || 0;
+    const agents = +state.agents;                             // 0 or 25
+    const spareUnits = state.spareUnits;
     const spareCost = spareUnits * 200;                       // discounted $200 per spare unit
-    const cbd = (cbdChk && cbdChk.checked) ? 30 : 0;          // Adelaide CBD, no parking
-    const freqPct = +freqSel.value;                           // 0 / .05 / .10 / .15
-    const discount = custom ? 0 : Math.round(base * freqPct); // frequency saving applies to the base clean
+    const cbd = state.cbd ? 30 : 0;                           // Adelaide CBD, no parking
+    const freqPct = +state.freqPct;                           // 0 / .05 / .10 / .15
+    const discount = custom ? 0 : Math.round(base * freqPct);
     const subtotal = custom ? (addonCost + agents + spareCost + cbd) : (base + addonCost + agents + spareCost + cbd);
     const total = custom ? null : (subtotal - discount);
     const deposit = total == null ? null : Math.round(total * 0.2);
     return { c, sizeIdx, base, custom, chosen, addonCost, agents, spareUnits, spareCost, cbd, freqPct, discount, subtotal, total, deposit };
   }
 
-  function render() {
+  function cards(opts, isSel) {
+    return `<div class="calc-opts${opts.length < 3 ? " single" : ""}">` + opts.map(o =>
+      `<button type="button" class="calc-opt${isSel(o) ? " sel" : ""}" data-v="${esc(o.v)}"><span class="co-t">${o.t}</span>${o.d ? `<span class="co-d">${o.d}</span>` : ""}</button>`
+    ).join("") + `</div>`;
+  }
+
+  function stepHTML() {
+    const key = STEPS[step];
+    if (key === "type") {
+      const opts = CLEANS.map((c, i) => ({ v: i, t: c.short, d: c.custom ? "Custom quote" : "from " + money(minPrice(c)) }));
+      return `<h3 class="calc-q">What kind of clean do you need?</h3><p class="calc-help">Choose the clean that best fits your home.</p>` + cards(opts, o => +o.v === state.typeIdx);
+    }
+    if (key === "freq") {
+      return `<h3 class="calc-q">How often would you like your home cleaned?</h3><p class="calc-help">Regular cleans come with a saving.</p>` + cards(FREQ, o => +o.v === state.freqPct);
+    }
+    if (key === "size") {
+      const opts = SIZES.map((s, i) => ({ v: i, t: s }));
+      return `<h3 class="calc-q">How big is your home?</h3><p class="calc-help">Pick the closest match — this sets your base price.</p>` + cards(opts, o => +o.v === state.sizeIdx);
+    }
+    if (key === "agents") {
+      return `<h3 class="calc-q">Whose cleaning products should we use?</h3><p class="calc-help">Use your own at no charge, or we can bring ours.</p>` + cards(AGENTS, o => +o.v === +state.agents);
+    }
+    if (key === "addons") {
+      const opts = ADDONS.map(a => ({ v: a, t: a }));
+      return `<h3 class="calc-q">Anything you'd like extra attention on?</h3><p class="calc-help">Select everything that applies — $80 for every 2 add-ons. Skip if none.</p>` + cards(opts, o => state.addons.includes(o.v));
+    }
+    if (key === "extras") {
+      const spareOpts = [0, 1, 2, 3, 4, 5].map(n => ({ v: n, t: n === 0 ? "None" : n + (n === 1 ? " spare unit" : " spare units"), d: n === 0 ? "" : "+" + money(n * 200) }));
+      return `<h3 class="calc-q">Any spare units or city parking?</h3><p class="calc-help">Optional extras for your visit.</p>`
+        + `<div class="calc-sub">Spare units to clean (same visit) · $200 each</div>` + cards(spareOpts, o => +o.v === state.spareUnits)
+        + `<label class="calc-check"><input type="checkbox" id="xCbd"${state.cbd ? " checked" : ""}> Adelaide CBD — no free parking nearby (adds a $30 city parking fee)</label>`;
+    }
+    // details
+    return `<h3 class="calc-q">Where should we send your estimate?</h3><p class="calc-help">We'll email it straight away — it's an estimate only.</p>`
+      + `<div class="calc-two"><label class="calc-field"><span>Full name *</span><input id="xName" autocomplete="name" value="${esc(state.name)}"></label>`
+      + `<label class="calc-field"><span>Mobile *</span><input id="xMobile" type="tel" autocomplete="tel" value="${esc(state.mobile)}"></label></div>`
+      + `<div class="calc-two"><label class="calc-field"><span>Email *</span><input id="xEmail" type="email" autocomplete="email" value="${esc(state.email)}"></label>`
+      + `<label class="calc-field"><span>Suburb</span><input id="xSuburb" autocomplete="address-level2" value="${esc(state.suburb)}"></label></div>`
+      + `<label class="calc-field"><span>Anything else we should know? <span class="opt" style="font-weight:400;color:var(--muted)">Optional</span></span><textarea id="xNotes" placeholder="Pets, access, preferred dates, add-on details…">${esc(state.notes)}</textarea></label>`
+      + `<label class="calc-check"><input type="checkbox" id="xPets"${state.petsSecured ? " checked" : ""}> I understand any pets must be secured in a locked place before the clean (if applicable).</label>`;
+  }
+
+  function wireStep() {
+    const key = STEPS[step];
+    body.querySelectorAll(".calc-opt").forEach(btn => btn.addEventListener("click", () => {
+      const v = btn.dataset.v;
+      if (key === "type") state.typeIdx = +v;
+      else if (key === "freq") state.freqPct = +v;
+      else if (key === "size") state.sizeIdx = +v;
+      else if (key === "agents") state.agents = +v;
+      else if (key === "extras") state.spareUnits = +v;
+      else if (key === "addons") {
+        const i = state.addons.indexOf(v);
+        if (i >= 0) state.addons.splice(i, 1); else state.addons.push(v);
+      }
+      if (key === "addons") btn.classList.toggle("sel");
+      else if (key === "extras") body.querySelectorAll(".calc-opt").forEach(b => b.classList.toggle("sel", +b.dataset.v === state.spareUnits));
+      else body.querySelectorAll(".calc-opt").forEach(b => b.classList.toggle("sel", b === btn));
+    }));
+    const cbd = document.getElementById("xCbd"); if (cbd) cbd.addEventListener("change", () => { state.cbd = cbd.checked; });
+    const bind = (id, k) => { const el = document.getElementById(id); if (el) el.addEventListener("input", () => { state[k] = el.value; }); };
+    bind("xName", "name"); bind("xMobile", "mobile"); bind("xEmail", "email"); bind("xSuburb", "suburb"); bind("xNotes", "notes");
+    const pets = document.getElementById("xPets"); if (pets) pets.addEventListener("change", () => { state.petsSecured = pets.checked; });
+  }
+
+  function renderOut() {
     const q = compute();
     const lines = [];
     lines.push(`<div class="qo-line"><span class="ql-k">Clean type</span><span>${q.c.short}</span></div>`);
     lines.push(`<div class="qo-line"><span class="ql-k">Home size</span><span>${SIZES[q.sizeIdx]}</span></div>`);
-    if (q.custom) {
-      lines.push(`<div class="qo-line"><span class="ql-k">Base clean</span><span>Custom</span></div>`);
-    } else {
-      lines.push(`<div class="qo-line"><span class="ql-k">Base clean · ${q.c.time}</span><span>${money(q.base)}</span></div>`);
-    }
+    if (q.custom) lines.push(`<div class="qo-line"><span class="ql-k">Base clean</span><span>Custom</span></div>`);
+    else lines.push(`<div class="qo-line"><span class="ql-k">Base clean · ${q.c.time}</span><span>${money(q.base)}</span></div>`);
     if (q.chosen.length) lines.push(`<div class="qo-line"><span class="ql-k">Add-ons (${q.chosen.length})</span><span>+${money(q.addonCost)}</span></div>`);
     if (q.agents) lines.push(`<div class="qo-line"><span class="ql-k">Samira cleaning agents</span><span>+${money(q.agents)}</span></div>`);
     if (q.spareUnits) lines.push(`<div class="qo-line"><span class="ql-k">Spare units (${q.spareUnits}) · $200 each</span><span>+${money(q.spareCost)}</span></div>`);
     if (q.cbd) lines.push(`<div class="qo-line"><span class="ql-k">Adelaide CBD parking</span><span>+${money(q.cbd)}</span></div>`);
     if (q.discount) lines.push(`<div class="qo-line disc"><span class="ql-k">${Math.round(q.freqPct * 100)}% regular-clean saving</span><span>−${money(q.discount)}</span></div>`);
-
     let totalBlock;
-    if (q.custom) {
-      totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v" style="font-size:1.2rem">Custom</span></div>
-        <p class="qo-deposit">Post-renovation &amp; 6+ bedroom homes are quoted after a quick walk-through or photos.</p>`;
-    } else {
-      totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v">${money(q.total)}</span></div>
-        <p class="qo-deposit">20% deposit to book: <strong style="color:#fff">${money(q.deposit)}</strong></p>`;
-    }
-
-    out.innerHTML = `<span class="est-pill">Estimate</span>
-      <div class="qo-brand">
-        <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 33 L32 12 L54 33"/><path d="M15 30 V53 H49 V30"/><path d="M43 22.5 L43 14 L47 14 L47 25.5"/><rect x="24.5" y="35" width="15" height="15"/><path d="M32 35 V50 M24.5 42.5 H39.5"/></svg>
-        <span><b>Samira</b><small>Cleaning Services</small></span>
-      </div>
+    if (q.custom) totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v" style="font-size:1.2rem">Custom</span></div><p class="qo-deposit">Post-renovation &amp; 6+ bedroom homes are quoted after a quick walk-through or photos.</p>`;
+    else totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v">${money(q.total)}</span></div><p class="qo-deposit">20% deposit to book: <strong style="color:#fff">${money(q.deposit)}</strong></p>`;
+    out.innerHTML = `<span class="est-pill">Your estimate</span>
+      <div class="qo-brand"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 33 L32 12 L54 33"/><path d="M15 30 V53 H49 V30"/><path d="M43 22.5 L43 14 L47 14 L47 25.5"/><rect x="24.5" y="35" width="15" height="15"/><path d="M32 35 V50 M24.5 42.5 H39.5"/></svg><span><b>Samira</b><small>Cleaning Services</small></span></div>
       <h3>Your ${q.c.short} estimate</h3>
       <div class="qo-sub">Samira cleaning service estimate for your selected clean · AUD, no GST</div>
-      ${lines.join("")}
-      ${totalBlock}
-      <div class="qo-note">This is an estimate only, not a final invoice. Your final price and time are confirmed when you book. Submit it and we'll follow up within 2 business hours.</div>
-      <div class="qo-note">Adelaide CBD: where there's no free or available parking nearby, a <strong style="color:#fff">$30 parking fee</strong> applies. We'll confirm if it applies to your address when we book you in.</div>`;
+      ${lines.join("")}${totalBlock}
+      <div class="qo-note">This is an estimate only, not a final invoice. Your final price and time are confirmed when you book. Submit it and we'll follow up within 2 business hours.</div>`;
   }
 
-  // Build the label:value summary used in the emails
+  function renderStep() {
+    body.innerHTML = stepHTML();
+    wireStep();
+    label.textContent = "Step " + (step + 1) + " of " + STEPS.length;
+    fill.style.width = Math.round(((step + 1) / STEPS.length) * 100) + "%";
+    backBtn.disabled = step === 0;
+    const last = step === STEPS.length - 1;
+    nextBtn.hidden = last;
+    submitBtn.hidden = !last;
+    out.hidden = !last;
+    if (last) renderOut();
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (step < STEPS.length - 1) {
+      step++; renderStep();
+      const sec = document.getElementById("estimate");
+      if (sec) window.scrollTo({ top: sec.offsetTop - 16, behavior: "smooth" });
+    }
+  });
+  backBtn.addEventListener("click", () => { if (step > 0) { step--; renderStep(); } });
+
+  renderStep();
+
   function summaryRows() {
     const q = compute();
     const rows = [
@@ -1212,8 +1280,7 @@ renderLedger();
       ["Base clean", q.custom ? "Custom (quoted after a walk-through)" : money(q.base) + " · " + q.c.time],
     ];
     if (q.chosen.length) rows.push(["Add-ons (" + q.chosen.length + ")", "+" + money(q.addonCost) + " — " + q.chosen.join(", ")]);
-    if (q.agents) rows.push(["Cleaning agents", "+" + money(q.agents) + " (supplied by us)"]);
-    else rows.push(["Cleaning agents", "Own (no charge)"]);
+    rows.push(["Cleaning agents", q.agents ? "+" + money(q.agents) + " (supplied by us)" : "Own (no charge)"]);
     if (q.spareUnits) rows.push(["Spare units (" + q.spareUnits + ")", "+" + money(q.spareCost) + " ($200 each)"]);
     if (q.cbd) rows.push(["Adelaide CBD parking", "+" + money(q.cbd)]);
     if (q.discount) rows.push([Math.round(q.freqPct * 100) + "% regular-clean saving", "−" + money(q.discount)]);
@@ -1222,25 +1289,22 @@ renderLedger();
     return rows;
   }
 
-  [typeSel, sizeSel, freqSel, agentsSel, spareSel, cbdChk].forEach(el => el && el.addEventListener("change", render));
-  addonsBox.addEventListener("change", render);
-  render();
-
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const st = document.getElementById("quoteStatus");
-    if (!form.checkValidity()) { setStatus(st, "err", "Please add your name, mobile and email so we can send your estimate."); form.reportValidity(); return; }
-    const d = new FormData(form);
-    const email = (d.get("email") || "").toString().trim();
-    const name = (d.get("name") || "").toString().trim();
+    if (step !== STEPS.length - 1) return;
+    if (!state.name.trim() || !state.mobile.trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(state.email.trim())) {
+      setStatus(st, "err", "Please add your name, mobile and a valid email so we can send your estimate.");
+      return;
+    }
+    const email = state.email.trim(), name = state.name.trim();
     const q = compute();
-    const cleanName = q.c.short;                 // e.g. "Deep clean"
+    const cleanName = q.c.short;
     const summary = summaryRows();
-    // Business notification fields: contact details + the full estimate breakdown
     const fields = [
-      ["Name", name], ["Mobile", d.get("mobile")], ["Email", email], ["Suburb", d.get("suburb")],
-      ...summary, ["Frequency", freqSel.options[freqSel.selectedIndex].text],
-      ["Notes", d.get("notes")],
+      ["Name", name], ["Mobile", state.mobile], ["Email", email], ["Suburb", state.suburb],
+      ...summary, ["Frequency", FREQ_LABEL[state.freqPct] || "One-off"],
+      ["Pets secured", state.petsSecured ? "Yes" : ""], ["Notes", state.notes],
     ].filter(([, v]) => v != null && String(v).trim() !== "");
     const payload = {
       subject: "Samira Cleaning Services — " + cleanName + " quote estimate request",
@@ -1259,8 +1323,8 @@ renderLedger();
       if (r.ok) { const j = await r.json().catch(() => ({})); if (j && j.ok) { setStatus(st, "ok", "Done! Your estimate is on its way to " + email + ". We'll follow up within 2 business hours."); return; } }
       throw new Error("fallback");
     } catch (err) {
-      const body = summary.map(([k, v]) => `${k}: ${v}`).join("\n");
-      window.location.href = `mailto:${SETTINGS.email}?subject=${encodeURIComponent("Cleaning quote estimate")}&body=${encodeURIComponent("Name: " + name + "\nMobile: " + d.get("mobile") + "\nEmail: " + email + "\n\n" + body)}`;
+      const bodyTxt = summary.map(([k, v]) => `${k}: ${v}`).join("\n");
+      window.location.href = `mailto:${SETTINGS.email}?subject=${encodeURIComponent("Cleaning quote estimate")}&body=${encodeURIComponent("Name: " + name + "\nMobile: " + state.mobile + "\nEmail: " + email + "\n\n" + bodyTxt)}`;
       setStatus(st, "info", "Your email app has opened with your estimate. Press send and we'll follow up.");
     }
   });
