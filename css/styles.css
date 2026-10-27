@@ -1105,6 +1105,39 @@ em { font-style: italic; color: var(--rose-deep); }
 .site-footer h4 { color: var(--rose-soft); font-family: var(--font-body); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 18px; font-weight: 500; }
 .site-footer .fcol a { color: #cbb9ad; display: block; padding: 5px 0; font-size: 0.9rem; }
 .site-footer .fcol a:hover { color: #fff; }
+
+/* Reorganised footer — help intro / link columns / right rail */
+.footer-main { display: grid; grid-template-columns: 1.55fr 1fr 1fr 1.25fr; gap: 36px; }
+.footer-help .fh-title { font-family: var(--font-head); color: var(--rose-soft); font-size: 1.7rem; line-height: 1.15; margin: 0 0 18px; font-weight: 600; }
+.footer-help .fh-avail { color: #cbb9ad; font-size: 0.92rem; line-height: 1.5; margin: 0 0 20px; }
+.footer-help .fh-avail strong { color: #fff; font-weight: 600; }
+.footer-help .fh-avail span { color: #8f7f76; font-size: 0.82rem; }
+.fh-help-btn { display: flex; align-items: center; justify-content: space-between; gap: 12px; max-width: 320px;
+  background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); border-radius: 12px;
+  padding: 15px 20px; color: #fff; font-weight: 600; font-size: 0.98rem; margin-bottom: 22px; transition: background .15s; }
+.fh-help-btn:hover { background: rgba(255,255,255,0.12); color: #fff; }
+.fh-help-btn .fh-chev { font-size: 1.3rem; line-height: 1; color: var(--rose-soft); }
+.fh-legal { color: #8f7f76; font-size: 0.8rem; line-height: 1.65; max-width: 330px; margin: 0; }
+.fh-legal a { color: #cbb9ad; text-decoration: underline; }
+.fh-legal a:hover { color: #fff; }
+.footer-colstack { display: flex; flex-direction: column; gap: 28px; }
+.footer-rail h4 { margin-bottom: 12px; }
+.footer-rail .pay-row { justify-content: flex-start; }
+.footer-rail .socials { display: flex; gap: 10px; margin: 4px 0 4px; }
+.fr-office { color: #cbb9ad; font-size: 0.88rem; line-height: 1.6; margin-top: 22px; }
+.fr-office strong { color: #fff; display: block; margin-bottom: 4px; font-weight: 600; }
+.fr-copy { color: #8f7f76; font-size: 0.82rem; margin: 18px 0 0; }
+.fr-app { display: inline-block; margin-top: 14px; background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.14); border-radius: 8px; padding: 8px 12px; font-size: 0.78rem; color: #cbb9ad; }
+@media (max-width: 900px) {
+  .footer-main { grid-template-columns: 1fr 1fr; gap: 30px 24px; }
+  .footer-help { grid-column: span 2; }
+}
+@media (max-width: 560px) {
+  .footer-main { grid-template-columns: 1fr; }
+  .footer-help { grid-column: span 1; }
+}
+
 .footer-contact { font-size: 0.9rem; color: #b3a197; margin-top: 8px; }
 .footer-contact strong { color: #ddccc2; font-weight: 400; }
 .footer-contact .fc-row { display: flex; align-items: center; gap: 8px; padding: 5px 0; }

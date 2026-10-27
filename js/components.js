@@ -394,51 +394,47 @@ function buildHeader() {
 }
 
 function buildFooter() {
+  const accountLinks = [
+    { t: "My Details", h: "account.html" },
+    { t: "My Orders", h: "track.html" },
+    { t: "My Communications", h: "account.html" },
+    { t: "Samira Stylera", h: "stylist.html" }
+  ];
   const shopLinks = [
     { t: "Shop All", h: "shop.html" },
     { t: "Ready to Ship", h: "shop.html?avail=ready" },
-    { t: "New Arrivals", h: "shop.html" },
     { t: "On Sale", h: "sale.html" },
     { t: "Gift Cards", h: "gift-cards.html" },
     { t: "Gift Hamper Maker", h: "hamper-maker.html" }
   ];
-  const samiraLinks = [
-    { t: "About Us", h: "about.html" },
+  const helpLinks = [
+    { t: "Help Centre", h: "support.html" },
+    { t: "Track Delivery", h: "track.html" },
+    { t: "Report a Problem", h: "contact.html" },
+    { t: "Return an Item", h: "returns.html" },
+    { t: "Frequent Questions", h: "policy.html?doc=faq" }
+  ];
+  const tradeLinks = [
+    { t: "Become a Supplier", h: "become-a-supplier.html" },
+    { t: "Trade & Commercial", h: "trade.html" }
+  ];
+  const aboutLinks = [
+    { t: "About Samira Home Decor", h: "about.html" },
     { t: "Property Styling & Design", h: "staging.html" },
     { t: "Portfolio", h: "portfolio.html" },
     { t: "The Edit, Journal", h: "blog.html" },
-    { t: "Assistance & Contact", h: "support.html" },
-    { t: "Contact us", h: "contact.html" },
-    { t: "Store locator", h: "store-locator.html" },
-    { t: "Samira Stylera", h: "stylist.html" }
-  ];
-  const infoLinks = [
-    { t: "Frequent Questions", h: "policy.html?doc=faq" },
-    { t: "Trade & Commercial", h: "trade.html" },
-    { t: "Become a supplier", h: "become-a-supplier.html" },
     { t: "Careers", h: "careers.html" },
-    { t: "Customer reviews", h: "index.html#reviews" },
-    { t: "Delivery & Shipping", h: "policy.html?doc=delivery" },
-    { t: "Track your order", h: "track.html" }
+    { t: "Store locator", h: "store-locator.html" }
   ];
   const policyLinks = [
-    { t: "General Conditions", h: "policy.html?doc=terms" },
-    { t: "Lodge a Return", h: "returns.html" },
-    { t: "Returns & Warranty", h: "policy.html?doc=returns" },
-    { t: "Delivery & Shipping", h: "policy.html?doc=delivery" },
-    { t: "Privacy Policy", h: "policy.html?doc=privacy" },
-    { t: "Cookies Policy", h: "policy.html?doc=privacy" }
+    { t: "Returns (Change of Mind)", h: "policy.html?doc=returns" },
+    { t: "Free Shipping", h: "policy.html?doc=delivery" },
+    { t: "Promotion Terms", h: "policy.html?doc=terms" },
+    { t: "Warranties", h: "policy.html?doc=returns" },
+    { t: "Website Terms", h: "policy.html?doc=terms" },
+    { t: "Online Shopping Terms", h: "policy.html?doc=terms" },
+    { t: "Privacy Policy", h: "policy.html?doc=privacy" }
   ];
-  const occasionLinks = [
-    { t: "On Sale", h: "sale.html" },
-    { t: "Gift Hampers", h: "hampers.html" },
-    { t: "Corporate Gifting", h: "corporate-gifting.html" },
-    { t: "Gift Cards", h: "gift-cards.html" },
-    { t: "Christmas", h: "hampers.html" },
-    { t: "Valentine's Day", h: "hampers.html" },
-    { t: "Mother's Day", h: "hampers.html" }
-  ];
-  const payments = ["Visa","Mastercard","Amex","PayPal","Apple Pay","Google Pay","Afterpay","Klarna","Zip"];
   const col = (title, links) => `<div class="fcol"><h4>${title}</h4>${links.map(l => `<a href="${l.h}">${l.t}</a>`).join("")}</div>`;
 
   return `
@@ -457,72 +453,67 @@ function buildFooter() {
     </div>
 
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="fb-name">Style Your Space by Samira</div>
-          <div class="fb-tag">Home décor for every house</div>
-          <p>Objects worth living with. Australia's curated home, lifestyle &amp; fragrance store, décor, fragrance, wellness, everyday essentials &amp; beautiful gifting.</p>
-          <div class="fc-row" style="color:#ddccc2;margin-top:14px"><span class="fc-ic">${SAMIRA.flag}</span> <strong>${SAMIRA.location}</strong></div>
-          <div class="socials" style="margin-top:16px">
+      <div class="footer-main">
+        <div class="footer-help">
+          <h3 class="fh-title">Questions?<br>We're here to help</h3>
+          <p class="fh-avail">We're available <strong>Monday to Friday, 9am&ndash;5pm</strong><br><span>(All times ACST, Adelaide)</span></p>
+          <a class="fh-help-btn" href="support.html"><span>Help Centre</span><span class="fh-chev">&rsaquo;</span></a>
+          <p class="fh-legal">By using our website, you agree to our <a href="policy.html?doc=terms">Terms</a> and, by providing us with your information, you are agreeing to our <a href="policy.html?doc=privacy">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="footer-colstack">
+          ${col("My Account", accountLinks)}
+          ${col("Suppliers &amp; Trade", tradeLinks)}
+          ${col("About us", aboutLinks)}
+        </div>
+
+        <div class="footer-colstack">
+          ${col("Help &amp; Support", helpLinks)}
+          ${col("Shop", shopLinks)}
+          ${col("Our policies", policyLinks)}
+        </div>
+
+        <div class="footer-rail">
+          <h4>Payment options</h4>
+          <div class="pay-row">
+            <span class="pay-badge pay-visa">VISA</span>
+            <span class="pay-badge pay-mc"><span class="mc-c1"></span><span class="mc-c2"></span></span>
+            <span class="pay-badge pay-amex">AMEX</span>
+            <span class="pay-badge pay-paypal"><span class="p1">Pay</span><span class="p2">Pal</span></span>
+            <span class="pay-badge pay-applepay">Apple&nbsp;Pay</span>
+            <span class="pay-badge pay-gpay"><span class="g-b">G</span>&nbsp;Pay</span>
+            <span class="pay-badge pay-afterpay">afterpay</span>
+            <span class="pay-badge pay-zip">zip</span>
+            <span class="pay-badge pay-klarna">Klarna</span>
+          </div>
+
+          <h4 style="margin-top:24px">Follow us on</h4>
+          <div class="socials">
             <a href="${SAMIRA.socials.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${IC.facebook}</a>
             <a href="${SAMIRA.socials.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${IC.instagram}</a>
             <a href="${SAMIRA.socials.tiktok}" target="_blank" rel="noopener" aria-label="TikTok">${TIKTOK_SVG}</a>
             <a href="${SAMIRA.socials.youtube}" target="_blank" rel="noopener" aria-label="YouTube">${YOUTUBE_SVG}</a>
           </div>
-        </div>
 
-        ${col("Samira Home Decor", samiraLinks)}
-        ${col("Information of interest", infoLinks)}
-        ${col("Our policies", policyLinks)}
-        ${col("Shop & occasions", occasionLinks)}
+          <div class="fr-office">
+            <strong>Head Office (No Showroom)</strong>
+            PO Box 109, Klemzig,<br>SA 5087, Australia
+          </div>
 
-        <div class="fcol footer-trust">
-          <h4>Rating &amp; trust</h4>
-          <div class="ft-stars">★★★★★</div>
-          <div class="ft-score">4.9 / 5</div>
-          <a class="ft-reviews" href="index.html#reviews">Read our customer reviews →</a>
-          <a class="ft-admin" href="admin.html" title="Admin sign-in">🔒 Admin dashboard</a>
-        </div>
-      </div>
-
-      <div class="app-soon">
-        <div class="app-soon-copy">
-          <span class="app-badge">📱 Coming soon</span>
-          <h4>The Samira Home Decor app is on its way</h4>
-          <p>Shop, style and get inspired on the go. Got an idea or a feature you'd love? Tell us, we're building it for you.</p>
-        </div>
-        <form class="app-soon-form" data-demo-form data-subject="Samira Home Decor App, suggestion" data-success-msg="Thank you! Your app suggestion has been sent, we really appreciate it. 💛">
-          <input type="email" placeholder="Your email (optional)" aria-label="Email">
-          <textarea placeholder="Your suggestion for the Samira Home Decor app…" aria-label="App suggestion" required></textarea>
-          <button type="submit" class="btn btn--primary">Send suggestion</button>
-          <div class="form-success"></div>
-        </form>
-      </div>
-
-      <div class="pay-wrap">
-        <div class="pay-safe">🔒 Guaranteed Safe &amp; Secure Checkout</div>
-        <div class="pay-row">
-          <span class="pay-badge pay-stripe">Powered by Stripe</span>
-          <span class="pay-badge pay-visa">VISA</span>
-          <span class="pay-badge pay-mc"><span class="mc-c1"></span><span class="mc-c2"></span></span>
-          <span class="pay-badge pay-amex">AMEX</span>
-          <span class="pay-badge pay-paypal"><span class="p1">Pay</span><span class="p2">Pal</span></span>
-          <span class="pay-badge pay-applepay">Apple&nbsp;Pay</span>
-          <span class="pay-badge pay-gpay"><span class="g-b">G</span>&nbsp;Pay</span>
-          <span class="pay-badge pay-afterpay">afterpay</span>
-          <span class="pay-badge pay-zip">zip</span>
-          <span class="pay-badge pay-klarna">Klarna</span>
+          <p class="fr-copy">&copy; ${SAMIRA.est} Samira Home Decor &middot; Proudly Australian ${SAMIRA.flag}</p>
+          <span class="fr-app">📱 Samira Home Decor app &mdash; coming soon</span>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <span>© ${SAMIRA.est} Samira Home Decor. All rights reserved · Proudly Australian ${SAMIRA.flag}</span>
         <span class="footer-bottom-links">
           <a href="policy.html?doc=delivery">Delivery &amp; Shipping</a> ·
           <a href="policy.html?doc=returns">Returns</a> ·
           <a href="policy.html?doc=privacy">Privacy</a> ·
-          <a href="policy.html?doc=terms">Terms</a>
+          <a href="policy.html?doc=terms">Terms</a> ·
+          <a href="index.html#reviews">Customer reviews</a>
         </span>
+        <a class="ft-admin" href="admin.html" title="Admin sign-in">🔒 Admin dashboard</a>
       </div>
     </div>
   </footer>`;
