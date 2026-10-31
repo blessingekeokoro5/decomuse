@@ -543,6 +543,24 @@ function setCustomerRef() {
   if (el) el.textContent = getCustomerRef();
 }
 
+/* On mobile/tablet each footer link group collapses under its heading;
+   tapping the heading opens it. Desktop keeps the columns open. */
+function initFooterAccordion() {
+  const small = () => window.matchMedia("(max-width: 900px)").matches;
+  document.querySelectorAll(".site-footer .fcol h4").forEach(h => {
+    h.setAttribute("role", "button");
+    h.setAttribute("tabindex", "0");
+    h.setAttribute("aria-expanded", "false");
+    const toggle = () => {
+      if (!small()) return;
+      const open = h.parentElement.classList.toggle("open");
+      h.setAttribute("aria-expanded", open ? "true" : "false");
+    };
+    h.addEventListener("click", toggle);
+    h.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+  });
+}
+
 function buildFloating() {
   return `
     <div class="float-left">
@@ -858,7 +876,7 @@ function injectComponents() {
   const h = document.getElementById("site-header");
   const f = document.getElementById("site-footer");
   if (h) h.innerHTML = buildHeader();
-  if (f) { f.innerHTML = buildFooter(); setCustomerRef(); }
+  if (f) { f.innerHTML = buildFooter(); setCustomerRef(); initFooterAccordion(); }
   document.body.insertAdjacentHTML("beforeend", buildFloating());
   document.body.insertAdjacentHTML("beforeend", buildMemberModal());
   document.body.insertAdjacentHTML("beforeend", buildSearchOverlay());
