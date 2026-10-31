@@ -15273,7 +15273,7 @@ const PRODUCTS = [
     specs: { "Type": "Living Room > Sofas & Seating > Sofas & Lounges" } },
 
   /* ===== Ready to ship — batch 3: armchairs, beds, dining (ready to ship) ===== */
-  { id: "lx25", name: "Nerida Boucle Swivel Dining Chair in Cream White", cat: "Living Room", room: "Living Room", price: 285, memberPrice: 257, sku: "SH-11273", tag: "New", ph: "", img: "assets/products/lx25.webp",
+  { id: "lx25", name: "Nerida Boucle Swivel Dining Chair in Cream White", cat: "Dining", room: "Dining", price: 285, memberPrice: 257, sku: "SH-11273", tag: "New", ph: "", img: "assets/products/lx25.webp",
     imgs: ["assets/products/lx25.webp", "assets/products/lx25-2.webp", "assets/products/lx25-3.webp", "assets/products/lx25-4.webp", "assets/products/lx25-5.webp"],
     fastShip: true,
     desc: "Cream Boucle Dining Chair That Swivels a Full 360 Degrees The Nerida Boucle Swivel Dining Chair in Cream White turns, which changes how a dining chair behaves in a room. Getting up doesn't mean shuffling the chair backwards and scraping the floor — you turn and stand. Sitting sideways to talk to someone doesn't mean twisting your back. And once the meal is over, you can turn, stand and push the chair back in at the table.",
@@ -15285,7 +15285,7 @@ const PRODUCTS = [
     desc: "Cream Boucle Swivel Chair That Arrives Ready to Sit In The Giselle Boucle Swivel Accent Chair in Cream White turns up fully assembled — no allen key, no instruction sheet, no chair that wobbles because one bolt never quite tightened. You unbox it, carry it to the corner, and sit down. The shape is worth the trip: a sculptural curved backrest that wraps rather than sits flat behind you, upholstered in boucle , a looped fabric with enough texture that a plain cream chair reads as a considered one.",
     specs: { "Type": "Living Room > Sofas & Seating > Occasional Chairs" } },
 
-  { id: "lx27", name: "Ohio Curved Boucle Dining Chair Set of 2 in Cream & Oak", cat: "Living Room", room: "Living Room", price: 252, memberPrice: 227, sku: "SH-11275", tag: "New", ph: "", img: "assets/products/lx27.webp",
+  { id: "lx27", name: "Ohio Curved Boucle Dining Chair Set of 2 in Cream & Oak", cat: "Dining", room: "Dining", price: 252, memberPrice: 227, sku: "SH-11275", tag: "New", ph: "", img: "assets/products/lx27.webp",
     imgs: ["assets/products/lx27.webp", "assets/products/lx27-2.webp", "assets/products/lx27-3.webp", "assets/products/lx27-4.webp", "assets/products/lx27-5.webp"],
     fastShip: true,
     desc: "Soft curves and warm tones for effortless everyday dining Add comfort and calm to your dining space with the Ohio Bouclé Dining Chair Set in Cream with Oak finish legs. Upholstered in soft cream bouclé and designed with a modern curved backrest and armrests, these chairs offer a blend of relaxed elegance and everyday function in your dining room . The warm oak-toned base pairs beautifully with neutral interiors, making them an ideal choice for contemporary Australian homes.",

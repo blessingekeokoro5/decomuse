@@ -88,14 +88,14 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=34"></script>
+  <script src="js/data.js?v=35"></script>
   <script src="js/components.js?v=67"></script>
   <script src="js/cart.js?v=23"></script>
   <script src="js/main.js?v=8"></script>
   <script>
     const ROOM = "Office"; // products with cat: "Office" (or room: "Office") in js/data.js appear here
     function paintRoom() {
-      let list = applyShopFilters(applySubFilter(PRODUCTS.filter(p => p.cat === ROOM || p.room === ROOM)));
+      let list = applyShopFilters(applySubFilter(PRODUCTS.filter(p => p.cat === ROOM || (p.room === ROOM && !["Living Room","Home Décor","Dining","Bedroom","Bathroom","Kitchenware","Outdoor","Office","Lifestyle"].includes(p.cat)))));
       applyGridCols("roomGrid");
       renderProducts("roomGrid", list);
       const c = document.getElementById("roomCount");

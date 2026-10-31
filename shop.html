@@ -84,7 +84,7 @@
 
   <div id="site-footer"></div>
 
-  <script src="js/data.js?v=34"></script>
+  <script src="js/data.js?v=35"></script>
   <script src="js/components.js?v=67"></script>
   <script src="js/cart.js?v=23"></script>
   <script src="js/main.js?v=8"></script>
@@ -141,7 +141,11 @@
       else if (cat === "Gifts") list = PRODUCTS.filter(p => GIFT_RE.test(p.name));
       else {
         const members = CAT_GROUPS[cat] || [cat];
-        list = PRODUCTS.filter(p => members.includes(p.cat) || members.includes(p.room));
+        // Match on category; only fall back to the product's "room" when its own
+        // category has no tab of its own (so Dining chairs, filed under Dining but
+        // tagged room "Living Room", stay out of Living Room).
+        const OWN_TAB = new Set(["Living Room", "Home Décor", "Dining", "Bedroom", "Bathroom", "Kitchenware", "Outdoor", "Office", "Lifestyle"]);
+        list = PRODUCTS.filter(p => members.includes(p.cat) || (members.includes(p.room) && !OWN_TAB.has(p.cat)));
       }
       if (searchQuery) list = searchProducts(list, searchQuery);
       // Price, availability (Ready to ship / Made to order) and sort come from the shared controls
