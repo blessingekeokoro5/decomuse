@@ -1077,7 +1077,7 @@ a.bk-type-link:hover { border-color: var(--rose); background: var(--blush); }
 .news-bar { border-bottom: 1px solid rgba(255,255,255,0.1); padding: 26px 0; margin-bottom: 40px; }
 .news-bar-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .news-copy { display: flex; align-items: center; gap: 16px; }
-.news-badge { background: var(--rose); color: #fff; border-radius: 999px; padding: 8px 16px; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; flex: none; }
+.news-badge { background: var(--rose); color: #0B1F3A !important; font-weight: 700; border-radius: 999px; padding: 8px 16px; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap; flex: none; }
 .news-copy strong { display: block; color: #fff; font-family: var(--font-head); font-size: 1.25rem; font-weight: 600; }
 .news-copy span { color: #b3a197; font-size: 0.88rem; }
 .news-form2 { display: flex; gap: 10px; flex: 1; max-width: 460px; min-width: 260px; }
