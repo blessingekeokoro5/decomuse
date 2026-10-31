@@ -11,9 +11,5 @@
   </g>
   <!-- Wordmark -->
   <text x="82" y="40" font-family="'Playfair Display', Georgia, serif" font-size="25" font-weight="600" fill="#0B1F3A" letter-spacing="0.5">Style Your Space</text>
-  <g>
-    <line x1="140" y1="56" x2="164" y2="56" stroke="#C6A15B" stroke-width="1.2"/>
-    <text x="202" y="61" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="15" font-style="italic" fill="#C6A15B" letter-spacing="0.8">by Samira</text>
-    <line x1="240" y1="56" x2="264" y2="56" stroke="#C6A15B" stroke-width="1.2"/>
-  </g>
+  <text x="202" y="61" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="16" font-style="italic" font-weight="600" fill="#0B1F3A" letter-spacing="0.8">by Samira</text>
 </svg>
