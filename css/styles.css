@@ -932,9 +932,11 @@ em { font-style: italic; color: var(--rose-deep); }
 .reviews-summary .score { color: var(--muted); font-size: 0.95rem; margin-top: 8px; }
 
 /* ---- Stats ---- */
-.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center; }
-.stat .num { font-family: var(--font-head); font-size: 2.8rem; color: var(--rose-deep); font-weight: 600; line-height: 1; }
-.stat .lbl { color: var(--muted); font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 8px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; text-align: center;
+  background: #0B1F3A; border-radius: 18px; padding: 36px 24px; border-bottom: 3px solid #C6A15B; box-shadow: 0 14px 34px rgba(11,31,58,0.18); }
+.stat + .stat { border-left: 1px solid rgba(255,255,255,0.14); }
+.stat .num { font-family: var(--font-head); font-size: 2.6rem; color: #C6A15B; font-weight: 600; line-height: 1; white-space: nowrap; }
+.stat .lbl { color: #fff; font-size: 0.78rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; margin-top: 10px; }
 
 /* ---- Split feature ---- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
@@ -1411,7 +1413,9 @@ a.bk-type-link:hover { border-color: var(--rose); background: var(--blush); }
   .grid-3 { grid-template-columns: repeat(2, 1fr); }
   .split { grid-template-columns: 1fr; gap: 32px; }
   .split.reverse .media { order: 0; }
-  .stats { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .stats { grid-template-columns: repeat(2, 1fr); gap: 30px 16px; padding: 28px 16px; }
+  .stat:nth-child(odd) { border-left: none; }
+  .stat .num { font-size: 1.9rem; }
   .contact-forest { padding: 40px; }
   .nav-cats { display: none; }
   .mega-inner { grid-template-columns: 1fr; }
