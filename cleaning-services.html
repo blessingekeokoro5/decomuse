@@ -435,7 +435,7 @@ legend{font-weight:600;font-size:.92rem;color:var(--navy);margin-bottom:6px}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html" aria-label="Samira Cleaning Services home">
-      <svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 33 L32 12 L54 33"/><path d="M15 30 V53 H49 V30"/><path d="M43 22.5 L43 14 L47 14 L47 25.5"/><rect x="24.5" y="35" width="15" height="15"/><path d="M32 35 V50 M24.5 42.5 H39.5"/></svg>
+      <svg viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 94 V45 L46 5 L54 13"/><path d="M20 94 V52 L62 9 L96 43 V94"/><path d="M20 94 H96"/><path d="M51 30 V40"/><path d="M43 47 C43 39.5 59 39.5 59 47 Z"/><path d="M37 78 H57 L54 93 H40 Z"/><path d="M47 78 C39 72 34 64 37 57 C44 61 47 69 47 78 Z"/><path d="M47 78 C49 67 54 61 61 60 C61 68 55 74 47 78 Z"/><path d="M47 78 C46 70 47 63 51 58"/><path d="M67 70 H83 L80 93 H70 Z"/><path d="M75 70 C70 63 67 56 66 49 C71 54 74 61 75 70 Z"/><path d="M75 70 C75 61 77 53 80 46 C81 54 79 62 75 70 Z"/><path d="M75 70 C79 63 84 58 89 56 C87 62 82 67 75 70 Z"/><path d="M75 70 C72 66 68 63 63 62"/></svg>
       <span><b>SAMIRA</b><small>CLEANING SERVICES</small></span>
     </a>
     <nav class="nav" aria-label="Cleaning page sections">
@@ -1261,7 +1261,7 @@ renderLedger();
     if (q.custom) totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v" style="font-size:1.2rem">Custom</span></div><p class="qo-deposit">Office &amp; 6+ bedroom jobs are quoted after a quick site visit or photos.</p>`;
     else totalBlock = `<div class="qo-total"><span class="qt-k">Estimated total</span><span class="qt-v">${money(q.total)}</span></div><p class="qo-deposit">20% deposit to book: <strong style="color:#fff">${money(q.deposit)}</strong></p>`;
     out.innerHTML = `<span class="est-pill">Your estimate</span>
-      <div class="qo-brand"><svg viewBox="0 0 64 64" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M10 33 L32 12 L54 33"/><path d="M15 30 V53 H49 V30"/><path d="M43 22.5 L43 14 L47 14 L47 25.5"/><rect x="24.5" y="35" width="15" height="15"/><path d="M32 35 V50 M24.5 42.5 H39.5"/></svg><span><b>Samira</b><small>Cleaning Services</small></span></div>
+      <div class="qo-brand"><svg viewBox="0 0 100 100" aria-hidden="true" fill="none" stroke="#C6A15B" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 94 V45 L46 5 L54 13"/><path d="M20 94 V52 L62 9 L96 43 V94"/><path d="M20 94 H96"/><path d="M51 30 V40"/><path d="M43 47 C43 39.5 59 39.5 59 47 Z"/><path d="M37 78 H57 L54 93 H40 Z"/><path d="M47 78 C39 72 34 64 37 57 C44 61 47 69 47 78 Z"/><path d="M47 78 C49 67 54 61 61 60 C61 68 55 74 47 78 Z"/><path d="M47 78 C46 70 47 63 51 58"/><path d="M67 70 H83 L80 93 H70 Z"/><path d="M75 70 C70 63 67 56 66 49 C71 54 74 61 75 70 Z"/><path d="M75 70 C75 61 77 53 80 46 C81 54 79 62 75 70 Z"/><path d="M75 70 C79 63 84 58 89 56 C87 62 82 67 75 70 Z"/><path d="M75 70 C72 66 68 63 63 62"/></svg><span><b>Samira</b><small>Cleaning Services</small></span></div>
       <h3>Your ${q.c.short} estimate</h3>
       <div class="qo-sub">Samira cleaning service estimate for your selected clean · AUD, no GST</div>
       ${lines.join("")}${totalBlock}

@@ -328,14 +328,9 @@ function buildHeader() {
       <a class="brand" href="index.html" aria-label="Samira Home Decor home">
         <img class="brand-logo-full" src="assets/logo.svg?v=6" data-i="0" alt="Samira Home Decor, Style Your Space by Samira" onerror="nextLogo(this)">
         <span class="brand-mark">
-          <svg class="brand-logo-svg" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-            <!-- house + chimney -->
-            <path d="M10 33 L32 12 L54 33"/>
-            <path d="M15 30 V53 H49 V30"/>
-            <path d="M43 22.5 L43 14 L47 14 L47 25.5"/>
-            <!-- window (gold) -->
-            <rect x="24.5" y="35" width="15" height="15" stroke="#C6A15B"/>
-            <path d="M32 35 V50 M24.5 42.5 H39.5" stroke="#C6A15B"/>
+          <svg class="brand-logo-svg" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+            <!-- house mark: double roof, pendant lamp, two potted plants -->
+            <path d="M6 94 V45 L46 5 L54 13"/><path d="M20 94 V52 L62 9 L96 43 V94"/><path d="M20 94 H96"/><path d="M51 30 V40"/><path d="M43 47 C43 39.5 59 39.5 59 47 Z"/><path d="M37 78 H57 L54 93 H40 Z"/><path d="M47 78 C39 72 34 64 37 57 C44 61 47 69 47 78 Z"/><path d="M47 78 C49 67 54 61 61 60 C61 68 55 74 47 78 Z"/><path d="M47 78 C46 70 47 63 51 58"/><path d="M67 70 H83 L80 93 H70 Z"/><path d="M75 70 C70 63 67 56 66 49 C71 54 74 61 75 70 Z"/><path d="M75 70 C75 61 77 53 80 46 C81 54 79 62 75 70 Z"/><path d="M75 70 C79 63 84 58 89 56 C87 62 82 67 75 70 Z"/><path d="M75 70 C72 66 68 63 63 62"/>
           </svg>
         </span>
         <span class="brand-text">
