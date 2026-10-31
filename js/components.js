@@ -543,6 +543,38 @@ function setCustomerRef() {
   if (el) el.textContent = getCustomerRef();
 }
 
+/* Visit tracking for the "come back" reminder email. Only runs for
+   visitors whose email we already have (they subscribed, or are logged
+   in); anonymous visitors send nothing. The server only updates people
+   who are already Brevo subscribers. Throttled: product views every
+   5 min at most, other pages every 6 hours. */
+function knownEmail() {
+  try {
+    const s = localStorage.getItem("shd_sub_email");
+    if (s) return s;
+    const a = (typeof getAccount === "function") ? getAccount() : null;
+    return (a && a.email) || "";
+  } catch (e) { return ""; }
+}
+function syncVisit(productView) {
+  const email = knownEmail();
+  if (!email) return;
+  let last = 0;
+  try { last = +localStorage.getItem("shd_visit_ts") || 0; } catch (e) {}
+  if (Date.now() - last < (productView ? 5 * 60 * 1000 : 6 * 60 * 60 * 1000)) return;
+  let viewed = [];
+  try { viewed = JSON.parse(localStorage.getItem("dm_recent") || "[]").slice(0, 3); } catch (e) {}
+  try { localStorage.setItem("shd_visit_ts", String(Date.now())); } catch (e) {}
+  try {
+    fetch("/.netlify/functions/track-visit", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, viewed }), keepalive: true,
+    }).catch(() => {});
+  } catch (e) {}
+}
+// General page visits (product pages report their own view instead)
+window.addEventListener("load", () => { if (!document.getElementById("pdpWrap")) syncVisit(false); });
+
 /* Each footer link group collapses under its heading at every screen
    size; clicking or tapping the heading opens it. */
 function initFooterAccordion() {
@@ -847,7 +879,7 @@ function initNewsletterPopup() {
     if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { st.className = "nl-status err"; st.textContent = "Please enter a valid email address."; return; }
     st.className = "nl-status"; st.textContent = "Sending your code…";
     // Apply the WELCOME10 coupon (cart.js already recognises it as 10% off)
-    try { localStorage.setItem("dm_coupon", "WELCOME10"); localStorage.setItem("shd_news", "subscribed"); } catch (e2) {}
+    try { localStorage.setItem("dm_coupon", "WELCOME10"); localStorage.setItem("shd_news", "subscribed"); localStorage.setItem("shd_sub_email", email); } catch (e2) {}
     window._coupon = "WELCOME10";
     try {
       await fetch("/.netlify/functions/send-submission", {

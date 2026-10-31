@@ -160,16 +160,34 @@ function initForms() {
     });
   });
 
-  // Newsletter (footer), emails you only if an endpoint is set, else just confirms
+  // Newsletter (footer): same flow as the welcome popup — adds the shopper to
+  // the Brevo list, emails their WELCOME10 code, applies it, and remembers the
+  // email so the "come back" reminder can include what they browsed.
   document.querySelectorAll("form[data-newsletter]").forEach(form => {
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const email = (form.querySelector("input") || {}).value || "";
-      if (typeof SAMIRA !== "undefined" && SAMIRA.formEndpoint) {
-        deliverForm([["Newsletter subscriber", email]], "Samira Home Decor, New newsletter subscriber");
-      }
+      const email = ((form.querySelector("input") || {}).value || "").trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { showToast("Please enter a valid email address"); return; }
+      try {
+        localStorage.setItem("shd_sub_email", email);
+        localStorage.setItem("shd_news", "subscribed");
+        localStorage.setItem("dm_coupon", "WELCOME10");
+      } catch (e2) {}
+      window._coupon = "WELCOME10";
       form.reset();
-      showToast("You're on the list, welcome to The Edit ✦");
+      showToast("You're on the list ✦ Your 10% code WELCOME10 is on its way");
+      try {
+        await fetch("/.netlify/functions/send-submission", {
+          method: "POST", headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify({
+            subject: "New newsletter subscriber — 10% welcome",
+            fields: [["Email", email], ["Source", "Footer sign-up"], ["Code issued", "WELCOME10 (10% off first order)"]],
+            replyto: email, name: "",
+            welcomeCode: "WELCOME10", discountLabel: "10% off your first order",
+            customerSubject: "Your 10% welcome code — Samira Home Decor",
+          }),
+        });
+      } catch (e3) { /* code still works on-site even if the email send hiccups */ }
     });
   });
 }
