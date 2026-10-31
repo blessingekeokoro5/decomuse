@@ -85,9 +85,9 @@
   <div id="site-footer"></div>
 
   <script src="js/data.js?v=34"></script>
-  <script src="js/components.js?v=65"></script>
+  <script src="js/components.js?v=66"></script>
   <script src="js/cart.js?v=23"></script>
-  <script src="js/main.js?v=7"></script>
+  <script src="js/main.js?v=8"></script>
   <script>
     const CATS = ["All", "Living Room", "Home Décor", "Home Fragrance", "Dining", "Bedroom & Bath", "Kitchenware", "Outdoor", "Office", "Lifestyle", "Gifts"];
     const CAT_GROUPS = {
@@ -143,10 +143,7 @@
         const members = CAT_GROUPS[cat] || [cat];
         list = PRODUCTS.filter(p => members.includes(p.cat) || members.includes(p.room));
       }
-      if (searchQuery) {
-        const q = searchQuery.toLowerCase();
-        list = list.filter(p => (p.name + " " + p.cat + " " + (p.desc || "")).toLowerCase().includes(q));
-      }
+      if (searchQuery) list = searchProducts(list, searchQuery);
       // Price, availability (Ready to ship / Made to order) and sort come from the shared controls
       shopList = applyShopFilters(list);
       shopShown = Math.min(PAGE_SIZE, shopList.length);

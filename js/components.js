@@ -1109,6 +1109,32 @@ function buildSearchOverlay() {
   </div>`;
 }
 
+/* Product search shared by the search overlay and shop.html?q=.
+   Matches whole words (plural-tolerant) in the product NAME, its product
+   type (last breadcrumb segment only) and category, so "sofa" finds sofas
+   rather than every coffee table whose description mentions a sofa.
+   Descriptions are only searched when nothing matches by name/type. */
+const SEARCH_SYNONYMS = {
+  sofa: ["couch", "sectional", "settee"], couch: ["sofa", "sectional", "settee"],
+  sectional: ["sofa", "couch"], settee: ["sofa", "couch"],
+  lamp: ["light"], rug: ["runner"],
+};
+function searchProducts(list, query) {
+  const words = String(query || "").toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 1);
+  if (!words.length) return list;
+  const stem = w => (w.length > 4 && /(ch|sh|x|ss)es$/.test(w)) ? w.slice(0, -2)
+    : (w.length > 3 && w.endsWith("s") && !w.endsWith("ss")) ? w.slice(0, -1) : w;
+  const forms = w => { const s = stem(w); return [s].concat(SEARCH_SYNONYMS[s] || []); };
+  const has = (text, f) => new RegExp("(^|[^a-z0-9])" + f.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + "(e?s)?([^a-z0-9]|$)", "i").test(text);
+  const matches = text => words.every(w => forms(w).some(f => has(text, f)));
+  const typeOf = p => { const t = p.specs && (p.specs.Type || p.specs.type); return t ? String(t).split(">").pop() : ""; };
+  const strong = list.filter(p => matches([p.name, typeOf(p), p.cat].join(" | ")));
+  if (!strong.length) return list.filter(p => matches(p.name + " | " + (p.desc || "")));
+  // Rank: product type matches (it IS a cushion) above a name that merely mentions the word.
+  const score = p => (matches(typeOf(p)) ? 2 : 0) + (matches(p.name) ? 1 : 0);
+  return strong.map((p, i) => [score(p), i, p]).sort((a, b) => b[0] - a[0] || a[1] - b[1]).map(x => x[2]);
+}
+
 function initSearch() {
   const overlay = document.getElementById("searchOverlay");
   const input = document.getElementById("searchInput");
@@ -1181,7 +1207,7 @@ function initSearch() {
     q = q.trim().toLowerCase();
     const list = !q
       ? PRODUCTS.filter(p => p.tag).slice(0, 5)
-      : PRODUCTS.filter(p => p.name.toLowerCase().includes(q) || p.cat.toLowerCase().includes(q));
+      : searchProducts(PRODUCTS, q);
     if (!q) {
       results.innerHTML = `<div class="search-hint">Popular right now</div>` + itemsHTML(list);
     } else if (!list.length) {

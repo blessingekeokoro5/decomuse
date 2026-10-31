@@ -538,7 +538,9 @@ function applyShopFilters(list) {
   else if (v.sort === "price-desc") out.sort((a, b) => (b.price || 0) - (a.price || 0));
   else if (v.sort === "name") out.sort((a, b) => a.name.localeCompare(b.name));
   else if (v.sort === "name-desc") out.sort((a, b) => b.name.localeCompare(a.name));
-  else out = interleaveByCat(out); // "featured": round-robin across categories so "All" shows a mix, not one category first
+  // "featured": round-robin across categories so "All" shows a mix, not one category first.
+  // Search results keep their relevance order instead.
+  else if (!new URLSearchParams(location.search).get("q")) out = interleaveByCat(out);
   return out;
 }
 
