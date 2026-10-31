@@ -185,11 +185,22 @@
 
   <section class="section bg-cream2" id="relatedSection" style="display:none">
     <div class="container">
-      <h2 style="margin-bottom:22px">You may also like</h2>
+      <h2 style="margin-bottom:22px">You might also like</h2>
       <div class="rel-carousel">
         <button class="rel-arrow prev" aria-label="Previous" onclick="scrollRel(-1)">‹</button>
         <div class="rel-track" id="relatedGrid"></div>
         <button class="rel-arrow next" aria-label="Next" onclick="scrollRel(1)">›</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="recentSection" style="display:none">
+    <div class="container">
+      <h2 style="margin-bottom:22px">Recently viewed products</h2>
+      <div class="rel-carousel">
+        <button class="rel-arrow prev" aria-label="Previous" onclick="scrollTrack('recentGrid',-1)">‹</button>
+        <div class="rel-track" id="recentGrid"></div>
+        <button class="rel-arrow next" aria-label="Next" onclick="scrollTrack('recentGrid',1)">›</button>
       </div>
     </div>
   </section>
@@ -607,6 +618,18 @@
       related = related.slice(0, 10);
       document.getElementById("relatedSection").style.display = "block";
       renderProducts("relatedGrid", related);
+
+      // Recently viewed: show the previous list (excluding this product), then record this view
+      try {
+        let recent = JSON.parse(localStorage.getItem("dm_recent") || "[]");
+        const toShow = recent.filter(rid => rid !== p.id).map(findProd).filter(Boolean).slice(0, 10);
+        if (toShow.length) {
+          document.getElementById("recentSection").style.display = "block";
+          renderProducts("recentGrid", toShow);
+        }
+        const updated = [p.id].concat(recent.filter(rid => rid !== p.id)).slice(0, 12);
+        localStorage.setItem("dm_recent", JSON.stringify(updated));
+      } catch (e) {}
     }
     function shareWhatsApp(name) {
       const url = location.href;
@@ -625,6 +648,7 @@
       else prompt("Copy this link:", url);
     }
     function scrollRel(dir){ const t = document.getElementById("relatedGrid"); if (t) t.scrollBy({ left: dir * 280, behavior: "smooth" }); }
+    function scrollTrack(gid, dir){ const t = document.getElementById(gid); if (t) t.scrollBy({ left: dir * 280, behavior: "smooth" }); }
     function setPdpQty(d){ pdpQty = Math.max(1, pdpQty + d); document.getElementById("pdpQty").textContent = pdpQty; }
 
     /* ============ Furniture viewer tools ============ */
