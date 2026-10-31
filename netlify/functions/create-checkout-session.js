@@ -119,6 +119,18 @@ function blackFridayOn() {
   } catch (e) { return false; }
 }
 
+// Halloween: 15% off every priced catalogue product except Packaging,
+// 31 Oct – 2 Nov inclusive (Adelaide time), every year. Takes priority over
+// the sofa sale and Black Friday (no stacking). Mirrors js/data.js.
+const HALLOWEEN_PCT = 15;
+function halloweenOn() {
+  try {
+    const now = new Date(new Date().toLocaleString("en-US", { timeZone: "Australia/Adelaide" }));
+    const y = now.getFullYear();
+    return now >= new Date(y, 9, 31, 0, 0, 0) && now <= new Date(y, 10, 2, 23, 59, 59);
+  } catch (e) { return false; }
+}
+
 /* Resolve one cart line to a trusted { name, unitPrice, qty, weight }.
    Throws if the line can't be justified from the catalogue. */
 function resolveLine(raw) {
@@ -161,10 +173,16 @@ function resolveLine(raw) {
   let unitPrice = p.price;
   if (size && Object.prototype.hasOwnProperty.call(p.sizes, size)) unitPrice = p.sizes[size];
 
-  // Recurring sofa sale (Tue/Thu/Sat AU time) — apply to the trusted price.
-  if (/^sf\d+$/.test(id) && sofaSaleToday()) unitPrice = round2(unitPrice * (1 - SOFA_SALE_PCT / 100));
-  // Black Friday → Cyber Monday: 15% off ready-to-ship items (id lxNN).
-  if (/^lx\d+$/.test(id) && blackFridayOn()) unitPrice = round2(unitPrice * (1 - BLACK_FRIDAY_PCT / 100));
+  if (p.cat !== "Packaging" && halloweenOn()) {
+    // Halloween: 15% off storewide; replaces the other promos rather than stacking.
+    // Whole dollars, exactly as js/data.js rounds the price the shopper sees.
+    unitPrice = Math.round(unitPrice * (1 - HALLOWEEN_PCT / 100));
+  } else {
+    // Recurring sofa sale (Tue/Thu/Sat AU time) — apply to the trusted price.
+    if (/^sf\d+$/.test(id) && sofaSaleToday()) unitPrice = round2(unitPrice * (1 - SOFA_SALE_PCT / 100));
+    // Black Friday → Cyber Monday: 15% off ready-to-ship items (id lxNN).
+    if (/^lx\d+$/.test(id) && blackFridayOn()) unitPrice = round2(unitPrice * (1 - BLACK_FRIDAY_PCT / 100));
+  }
 
   const variant = [raw.colour, size].filter(Boolean).map(String).join(", ");
   return {

@@ -15867,6 +15867,48 @@ const REVIEWS = [
 ];
 
 /* ============================================================
+   HALLOWEEN SALE — 15% off every priced shop product (Adelaide
+   time), 31 Oct to 2 Nov inclusive, repeating every year. Packaging
+   (price on enquiry) and gift cards are excluded. Runs BEFORE the
+   sofa sale so Halloween takes priority and discounts never stack
+   (the sofa sale skips anything already marked down). The Netlify
+   checkout applies the same rule server-side. Browser-only, like
+   the other sales. To change: edit HALLOWEEN below.
+   ============================================================ */
+var HALLOWEEN = { pct: 15, startMonth: 9, startDay: 31, endMonth: 10, endDay: 2 };   // months 0-based: 9=Oct, 10=Nov
+function halloweenOn() {
+  var now;
+  try { now = new Date(new Date().toLocaleString("en-US", { timeZone: "Australia/Adelaide" })); }
+  catch (e) { now = new Date(); }
+  var y = now.getFullYear();
+  var start = new Date(y, HALLOWEEN.startMonth, HALLOWEEN.startDay, 0, 0, 0);
+  var end = new Date(y, HALLOWEEN.endMonth, HALLOWEEN.endDay, 23, 59, 59);
+  return now >= start && now <= end;
+}
+function isHalloweenItem(p) { return !!p && typeof p.price === "number" && p.cat !== "Packaging"; }
+
+(function applyHalloween() {
+  if (typeof document === "undefined") return;            // browser only
+  if (!halloweenOn()) return;
+  try {
+    if (typeof ANNOUNCEMENTS !== "undefined" && Array.isArray(ANNOUNCEMENTS)) {
+      ANNOUNCEMENTS.unshift("🎃 HALLOWEEN SALE — 15% off storewide, now until Sunday 2 Nov ✦");
+    }
+  } catch (e) {}
+  var f = 1 - HALLOWEEN.pct / 100;
+  (typeof PRODUCTS !== "undefined" ? PRODUCTS : []).forEach(function (p) {
+    if (!isHalloweenItem(p) || p.was) return;
+    p.was = p.price;
+    p.price = Math.round(p.price * f);
+    if (p.memberPrice) p.memberPrice = Math.round(p.memberPrice * f);
+    if (Array.isArray(p.sizes)) p.sizes.forEach(function (s) {
+      if (s && typeof s.price === "number") s.price = Math.round(s.price * f);
+    });
+    p.tag = "Halloween Sale";
+  });
+})();
+
+/* ============================================================
    RECURRING SALE — 10% off all sofas every Tue, Thu & Saturday
    (Australian time). Runs in the browser only: it discounts the
    sofa prices in memory and adds an announcement-bar notice.
@@ -15888,7 +15930,8 @@ function isSaleItem(p) { return !!p && /^sf\d+$/.test(p.id || ""); }
 (function applyRecurringSale() {
   if (typeof document === "undefined") return;          // browser only — build scripts (no document) skip
   try {
-    if (typeof ANNOUNCEMENTS !== "undefined" && Array.isArray(ANNOUNCEMENTS)) {
+    // During Halloween sofas are already 15% off, so the 10% sofa message would mislead.
+    if (typeof ANNOUNCEMENTS !== "undefined" && Array.isArray(ANNOUNCEMENTS) && !halloweenOn()) {
       ANNOUNCEMENTS.unshift(saleOnToday()
         ? "🛋️ SOFA SALE ON NOW — 10% off every sofa today, ends midnight ✦"
         : "🛋️ SOFA SALE every Tuesday, Thursday &amp; Saturday — 10% off all sofas");
