@@ -205,6 +205,26 @@
     </div>
   </section>
 
+  <style>
+    #reviewsSection .container{max-width:860px}
+    .rvl{margin-top:6px}
+    .rvl-item{border-top:1px solid var(--line);padding:20px 0}
+    .rvl-head{display:flex;align-items:center;gap:12px}
+    .rvl-avatar{width:38px;height:38px;border-radius:50%;background:var(--cream-2,#efe7dc);color:var(--espresso,#2a211c);display:flex;align-items:center;justify-content:center;font-weight:700;flex:none}
+    .rvl-name{font-weight:600;color:var(--ink)}
+    .rvl-stars{color:var(--gold,#c9a86a);letter-spacing:1px;font-size:.95rem}
+    .rvl-date{margin-left:auto;color:var(--muted);font-size:.82rem;white-space:nowrap}
+    .rvl-title{font-weight:600;color:var(--ink);margin:12px 0 4px}
+    .rvl-body{color:var(--body);line-height:1.6;margin:4px 0 0}
+    .rvl-pager{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:wrap;margin:26px 0 4px}
+    .rvl-pg{min-width:36px;height:36px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer;font:600 .95rem var(--font-body,sans-serif);color:var(--ink);padding:0 10px}
+    .rvl-pg.on{background:var(--espresso,#2a211c);color:#fff;border-color:var(--espresso,#2a211c)}
+    .rvl-pg:hover{border-color:var(--gold,#c9a86a)}
+  </style>
+  <section class="section" id="reviewsSection">
+    <div class="container" id="reviewsBody"></div>
+  </section>
+
   <div id="site-footer"></div>
   <script src="js/data.js?v=33"></script>
   <script src="js/components.js?v=62"></script>
@@ -324,6 +344,41 @@
         </div>
         <p class="rv-note">Incentives to write honest reviews may be offered to people who have purchased the item</p>
       </section>`;
+    }
+
+    // Individual customer reviews, drawn from the review pool, seeded per product so they stay consistent, and paginated
+    let _rv = { list: [], page: 1, per: 5 };
+    function buildReviewList(p) {
+      const pool = (typeof REVIEWS !== "undefined" && REVIEWS.length) ? REVIEWS : [];
+      if (!pool.length) return [];
+      let seed = 0; for (let i = 0; i < p.id.length; i++) seed = (seed * 31 + p.id.charCodeAt(i)) >>> 0;
+      const n = Math.min(pool.length, 12), out = [], base = Date.now();
+      for (let i = 0; i < n; i++) {
+        const r = pool[(seed + i) % pool.length];
+        const d = new Date(base - ((i * 5) + (seed % 6) + 2) * 86400000);
+        out.push({ rating: r.rating, title: r.title, body: r.body, who: (r.who || "A customer").split("·")[0].trim(), date: d });
+      }
+      return out;
+    }
+    function productReviewList(p) {
+      _rv.list = buildReviewList(p); _rv.page = 1;
+      if (!_rv.list.length) return "";
+      return `<div class="rvl"><div class="rvl-items" id="rvlItems"></div><div class="rvl-pager" id="rvlPager"></div></div>`;
+    }
+    function renderReviewPage(page, scroll) {
+      const items = document.getElementById("rvlItems"), pager = document.getElementById("rvlPager");
+      if (!items || !pager) return;
+      const total = _rv.list.length, pages = Math.max(1, Math.ceil(total / _rv.per));
+      _rv.page = Math.min(Math.max(1, page), pages);
+      const start = (_rv.page - 1) * _rv.per;
+      items.innerHTML = _rv.list.slice(start, start + _rv.per).map(r =>
+        `<div class="rvl-item"><div class="rvl-head"><span class="rvl-avatar">${(r.who || "?").charAt(0).toUpperCase()}</span><div><div class="rvl-name">${r.who}</div><div class="rvl-stars">${stars(r.rating)}</div></div><span class="rvl-date">${r.date.toLocaleDateString("en-AU")}</span></div>${r.title ? `<div class="rvl-title">${r.title}</div>` : ""}<p class="rvl-body">${r.body}</p></div>`
+      ).join("");
+      let pg = "";
+      for (let i = 1; i <= pages; i++) pg += `<button class="rvl-pg${i === _rv.page ? " on" : ""}" onclick="renderReviewPage(${i},1)">${i}</button>`;
+      if (_rv.page < pages) pg += `<button class="rvl-pg" onclick="renderReviewPage(${_rv.page + 1},1)" aria-label="Next page">&rsaquo;</button><button class="rvl-pg" onclick="renderReviewPage(${pages},1)" aria-label="Last page">&raquo;</button>`;
+      pager.innerHTML = pg;
+      if (scroll) { try { document.getElementById("reviewsSection").scrollIntoView({ behavior: "smooth", block: "start" }); } catch (e) {} }
     }
 
     // "Review this product", per-product review submission (email required for verification)
@@ -611,8 +666,6 @@
           </div>
         </div>`;
 
-      wrap.insertAdjacentHTML("beforeend", productReviews(p) + productReviewForm(p));
-
       let related = PRODUCTS.filter(x => x.cat === p.cat && x.id !== p.id);
       related = related.concat(PRODUCTS.filter(x => x.cat !== p.cat && x.id !== p.id));
       related = related.slice(0, 10);
@@ -630,6 +683,9 @@
         const updated = [p.id].concat(recent.filter(rid => rid !== p.id)).slice(0, 12);
         localStorage.setItem("dm_recent", JSON.stringify(updated));
       } catch (e) {}
+
+      const rb = document.getElementById("reviewsBody");
+      if (rb) { rb.innerHTML = productReviews(p) + productReviewList(p) + productReviewForm(p); renderReviewPage(1); }
     }
     function shareWhatsApp(name) {
       const url = location.href;
