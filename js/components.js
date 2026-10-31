@@ -543,16 +543,14 @@ function setCustomerRef() {
   if (el) el.textContent = getCustomerRef();
 }
 
-/* On mobile/tablet each footer link group collapses under its heading;
-   tapping the heading opens it. Desktop keeps the columns open. */
+/* Each footer link group collapses under its heading at every screen
+   size; clicking or tapping the heading opens it. */
 function initFooterAccordion() {
-  const small = () => window.matchMedia("(max-width: 900px)").matches;
   document.querySelectorAll(".site-footer .fcol h4").forEach(h => {
     h.setAttribute("role", "button");
     h.setAttribute("tabindex", "0");
     h.setAttribute("aria-expanded", "false");
     const toggle = () => {
-      if (!small()) return;
       const open = h.parentElement.classList.toggle("open");
       h.setAttribute("aria-expanded", open ? "true" : "false");
     };
